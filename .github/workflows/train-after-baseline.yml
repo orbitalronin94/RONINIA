@@ -144,9 +144,9 @@ jobs:
 
       - name: Continue training for another 5,000 steps from parent
         env:
-          OMP_NUM_THREADS: "1"
-          MKL_NUM_THREADS: "1"
-          OPENBLAS_NUM_THREADS: "1"
+          OMP_NUM_THREADS: "2"
+          MKL_NUM_THREADS: "2"
+          OPENBLAS_NUM_THREADS: "2"
           OMP_PROC_BIND: CLOSE
           OMP_PLACES: CORES
           PARENT_RUN_ID: ${{ steps.chain.outputs.parent_run_id }}
@@ -155,8 +155,8 @@ jobs:
           set -euo pipefail
           python - <<'PY'
           import runpy, sys, torch
-          torch.set_num_threads(1)
-          torch.set_num_interop_threads(1)
+          torch.set_num_threads(2)
+          torch.set_num_interop_threads(2)
           sys.argv = [
               "scripts/train.py",
               "--config", "configs/ronin-10m-speed-256.json",
@@ -165,8 +165,8 @@ jobs:
               "--resume", "parent-artifact/checkpoint-parent.pt",
               "--output-dir", "runs/ronin-10m-chain",
               "--steps", "5000",
-              "--threads", "1",
-              "--batch-size", "2",
+              "--threads", "2",
+              "--batch-size", "4",
               "--learning-rate", "1e-4",
               "--warmup-steps", "0",
               "--min-lr-ratio", "1.0",
@@ -190,14 +190,14 @@ jobs:
           checkpoints = list(out.glob("checkpoint-*.pt"))
           if not checkpoints:
               raise SystemExit("No checkpoints produced")
-          latest = max(checkpoints, key=lambda p: int(re.search(r"checkpoint-(\\d+)", p.name).group(1)))
+          latest = max(checkpoints, key=lambda p: int(re.search(r"checkpoint-(\d+)", p.name).group(1)))
           shutil.copy2(latest, out / "checkpoint-parent.pt")
           meta = {
               "generation": int(os.environ["GENERATION"]),
               "parent_run_id": int(os.environ["PARENT_RUN_ID"]),
               "token_cache_run_id": int(os.environ["TOKEN_CACHE_RUN_ID"]),
               "latest_checkpoint": latest.name,
-              "cumulative_steps": int(re.search(r"checkpoint-(\\d+)", latest.name).group(1)),
+              "cumulative_steps": int(re.search(r"checkpoint-(\d+)", latest.name).group(1)),
           }
           (out / "lineage.json").write_text(json.dumps(meta, indent=2) + chr(10))
           print(json.dumps(meta, indent=2))
