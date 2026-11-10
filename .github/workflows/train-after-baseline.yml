@@ -1,4 +1,4 @@
-name: RONIN-10M — manual 5k continuation (no cache)
+name: RONIN-10M — manual 5k continuation (reuse token cache)
 
 on:
   workflow_dispatch:
@@ -170,6 +170,7 @@ jobs:
         env:
           PARENT_RUN_ID: ${{ steps.chain.outputs.parent_run_id }}
           GENERATION: ${{ steps.chain.outputs.generation }}
+          TOKEN_CACHE_RUN_ID: ${{ inputs.token_cache_run_id }}
         run: |
           set -euo pipefail
           python - <<'PY'
