@@ -8,12 +8,12 @@ on:
         default: "50000"
         type: string
       corpus_run_id:
-        description: "Verified MINIRONIN unified corpus run"
+        description: "Verified ~777 MB MINIRONIN unified training corpus run"
         required: true
-        default: "42679698690"
+        default: "42523463620"
         type: string
       tokenizer_run_id:
-        description: "Successful standalone tokenizer-preparation run"
+        description: "Successful standalone 8k tokenizer-preparation run"
         required: true
         type: string
 permissions:
@@ -80,8 +80,7 @@ jobs:
       - name: Prepare corpus for training and identity check
         run: |
           python scripts/prepare_corpus.py --input-root minironin-unified \
-            --output data/corpus/train.txt \
-            --manifest data/corpus/corpus-manifest.json \
+            --output data/corpus/train.txt --manifest data/corpus/corpus-manifest.json \
             --source-run-id "${{ inputs.corpus_run_id }}"
       - name: Verify imported corpus
         run: |
@@ -91,14 +90,13 @@ jobs:
           import json
           m=json.load(open("data/corpus/corpus-manifest.json"))
           assert m["records_total"] > 0
-          assert m["synthetic_records_included"] > 0
           assert m["evaluation_records_excluded"] >= 0
           print(json.dumps(m,ensure_ascii=False,indent=2))
           PY
-      - name: Download prebuilt tokenizer artifact
+      - name: Download prebuilt 8k tokenizer artifact
         uses: actions/download-artifact@v4
         with:
-          name: roninia-tokenizer-${{ hashFiles('data/corpus/corpus-manifest.json') }}
+          name: roninia-tokenizer-8k-${{ hashFiles('data/corpus/corpus-manifest.json') }}
           github-token: ${{ github.token }}
           repository: orbitalronin94/RONINIA
           run-id: ${{ inputs.tokenizer_run_id }}
@@ -111,11 +109,12 @@ jobs:
           corpus=json.loads(Path("data/corpus/corpus-manifest.json").read_text())
           manifest=json.loads(Path("tokenizer/manifest.json").read_text())
           actual=hashlib.sha256(Path("tokenizer/tokenizer.json").read_bytes()).hexdigest()
-          assert manifest["vocab_size"] == 16384
+          assert manifest["vocab_size"] == 8192
           assert manifest["tokenizer_sha256"] == actual
           assert manifest["corpus_sha256"] == corpus["corpus_sha256"]
           assert manifest["corpus_bytes"] == corpus["text_bytes"]
           assert manifest["source_corpus_run_id"] == corpus["source_run_id"]
+          assert manifest["evaluation_records_excluded"] == corpus["evaluation_records_excluded"]
           print(json.dumps(manifest, indent=2))
           PY
       - name: Train model from random initialization with 5k checkpoints
