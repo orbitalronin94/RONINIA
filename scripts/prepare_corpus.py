@@ -41,10 +41,10 @@ def main():
                         try: record=json.loads(line)
                         except json.JSONDecodeError: continue
                         if not isinstance(record,dict): continue
-                        if record.get("synthetic") is True:
-                            synthetic+=1; included_synthetic+=1
                         if is_eval(record):
                             evaluation+=1; skipped_eval+=1; continue
+                        if record.get("synthetic") is True:
+                            synthetic+=1; included_synthetic+=1
                         text=record.get("text","")
                         if not isinstance(text,str) or not text.strip():
                             # Preserve structured QA rows if an upstream record has no rendered text.
