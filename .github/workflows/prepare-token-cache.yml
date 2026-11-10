@@ -4,6 +4,7 @@ on:
   pull_request:
     paths:
       - ".github/workflows/prepare-token-cache.yml"
+      - ".github/workflows/train-after-baseline.yml"
       - "scripts/tokenize_corpus.py"
       - "scripts/prepare_corpus.py"
   push:
