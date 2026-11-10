@@ -89,8 +89,37 @@ jobs:
           assert m["evaluation_records_excluded"] >= 0
           print(json.dumps(m,ensure_ascii=False,indent=2))
           PY
-      - name: Train new BPE tokenizer (16,384)
-        run: python scripts/train_tokenizer.py --input data/corpus/train.txt --output tokenizer
+      - name: Restore tokenizer cache for this exact corpus
+        id: tokenizer-cache
+        uses: actions/cache@v4
+        with:
+          path: tokenizer/
+          key: roninia-tokenizer-v1-${{ hashFiles('data/corpus/corpus-manifest.json') }}
+      - name: Train BPE tokenizer with streaming progress
+        if: steps.tokenizer-cache.outputs.cache-hit != 'true'
+        timeout-minutes: 180
+        run: |
+          python scripts/train_tokenizer.py --input data/corpus/train.txt --output tokenizer \
+            --progress-every-mib 256
+      - name: Verify tokenizer and corpus identity
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          manifest=json.loads(Path("tokenizer/manifest.json").read_text())
+          actual=hashlib.sha256(Path("tokenizer/tokenizer.json").read_bytes()).hexdigest()
+          assert manifest["vocab_size"] == 16384
+          assert manifest["tokenizer_sha256"] == actual
+          print(json.dumps(manifest, indent=2))
+          PY
+      - name: Upload reusable tokenizer artifact
+        if: steps.tokenizer-cache.outputs.cache-hit != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: roninia-tokenizer-${{ hashFiles('data/corpus/corpus-manifest.json') }}
+          path: tokenizer/
+          if-no-files-found: error
+          retention-days: 90
       - name: Train model from random initialization with 5k checkpoints
         run: |
           python scripts/train.py --config configs/ronin-10m.json --corpus data/corpus/train.txt \
