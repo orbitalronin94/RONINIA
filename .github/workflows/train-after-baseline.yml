@@ -1,4 +1,4 @@
-name: RONIN-10M — manual 5k continuation (reuse token cache)
+name: RONIN-10M — 10k cumulative benchmark continuation (reuse token cache)
 
 on:
   workflow_dispatch:
@@ -142,7 +142,7 @@ jobs:
           python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
           python -m pip install numpy tokenizers
 
-      - name: Continue training for another 5,000 steps from parent
+      - name: Continue training for 5,000 steps (10,000 cumulative)
         env:
           OMP_NUM_THREADS: "2"
           MKL_NUM_THREADS: "2"
@@ -200,7 +200,7 @@ jobs:
               "cumulative_steps": int(re.search(r"checkpoint-(\d+)", latest.name).group(1)),
           }
           (out / "lineage.json").write_text(json.dumps(meta, indent=2) + chr(10))
-          print(json.dumps(meta, indent=2))
+          assert meta["cumulative_steps"] == 10000, meta\n          print(json.dumps(meta, indent=2))
           PY
 
       - name: Upload child checkpoint and lineage
