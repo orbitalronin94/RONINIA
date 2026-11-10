@@ -46,7 +46,7 @@ def main():
     ap.add_argument("--tokenizer", type=Path, required=True)
     ap.add_argument("--holdout", type=Path, required=True)
     ap.add_argument("--output-dir", type=Path, required=True)
-    ap.add_argument("--threads", type=int, default=2)
+    ap.add_argument("--expected-steps", type=int, default=5000)\n    ap.add_argument("--threads", type=int, default=2)
     ap.add_argument("--max-new-tokens", type=int, default=32)
     ap.add_argument("--max-new-bytes", type=int, default=128)
     args = ap.parse_args()
@@ -116,7 +116,7 @@ def main():
     diary = {
         "schema_version": 1,
         "benchmark": "MINIRONIN inference holdout v1 (100 inference-only questions)",
-        "label": "RONIN-10M-checkpoint-5000",
+        "label": f"RONIN-10M-checkpoint-{completed_steps}",
         "completed_steps": completed_steps,
         "seed": SEED,
         "parameter_count": model.parameter_count(),
@@ -133,9 +133,9 @@ def main():
         "rag": {"enabled": False},
         "created_at": datetime.now(timezone.utc).isoformat(),
         "results": results,
-        "note": "Checkpoint 5000 comparison. Rubrics included; no automatic quality score is claimed.",
+        "note": f"Checkpoint {completed_steps} comparison. Rubrics included; no automatic quality score is claimed.",
     }
-    out = args.output_dir / "checkpoint-5000-holdout-100.json"
+    out = args.output_dir / f"checkpoint-{completed_steps}-holdout-100.json"
     out.write_text(json.dumps(diary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     manifest = {
         "checkpoint": args.checkpoint.name, "checkpoint_sha256": checkpoint_sha,
