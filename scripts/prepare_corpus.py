@@ -49,10 +49,10 @@ def main():
                             # Preserve structured QA rows if an upstream record has no rendered text.
                             q=record.get("question") or record.get("prompt") or record.get("input")
                             ans=record.get("answer") or record.get("target") or record.get("completion")
-                            text=f"Pregunta: {q}\\nRespuesta: {ans}" if q is not None and ans is not None else ""
+                            text=f"Pregunta: {q}\nRespuesta: {ans}" if q is not None and ans is not None else ""
                     text=" ".join(text.split())
                     if len(text)<20: continue
-                    payload=(text+"\\n").encode("utf-8")
+                    payload=(text+"\n").encode("utf-8")
                     out.write(payload.decode("utf-8")); file_hash.update(payload); corpus_hash.update(payload)
                     byte_count+=len(payload); count+=1
             total+=count
@@ -65,7 +65,7 @@ def main():
         "evaluation_records_excluded":skipped_eval,"text_bytes":byte_count,
         "corpus_sha256":corpus_hash.hexdigest()}
     a.manifest.parent.mkdir(parents=True,exist_ok=True)
-    a.manifest.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+    a.manifest.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print(json.dumps({k:manifest[k] for k in ("source_run_id","files_total","records_total",
         "synthetic_records_excluded","evaluation_records_excluded","text_bytes","corpus_sha256")},indent=2))
 if __name__=="__main__": main()
