@@ -69,7 +69,7 @@ jobs:
       - name: Convert source rows to clean text; exclude synthetic and evaluation
         run: |
           python scripts/prepare_corpus.py --input-root minironin-unified \
-            --output data/corpus/train.txt --manifest data/corpus/corpus-manifest.json
+            --output data/corpus/train.txt --manifest data/corpus/corpus-manifest.json \\\n            --source-run-id "${{ inputs.corpus_run_id }}"
       - name: Verify imported corpus
         env:
           CORPUS_RUN_ID: ${{ inputs.corpus_run_id }}
