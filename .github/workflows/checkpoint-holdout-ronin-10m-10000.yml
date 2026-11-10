@@ -1,11 +1,16 @@
 name: RONIN-10M — 10k inference holdout (same 100-question benchmark)
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/checkpoint-holdout-ronin-10m-10000.yml'
   workflow_dispatch:
     inputs:
       train_run_id:
         description: "Successful training run ID (artifact ronin-10m-chain-RUN_ID)"
         required: true
+        default: "42902793379"
         type: string
       tokenizer_run_id:
         description: "Run ID containing the exact tokenizer artifact"
@@ -24,6 +29,9 @@ concurrency:
 jobs:
   holdout:
     runs-on: ubuntu-latest
+    env:
+      TRAIN_RUN_ID: ${{ github.event.inputs.train_run_id || '42902793379' }}
+      TOKENIZER_RUN_ID: ${{ github.event.inputs.tokenizer_run_id || '42849436025' }}
     timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
@@ -31,7 +39,7 @@ jobs:
       - name: Validate source training run
         env:
           GH_TOKEN: ${{ github.token }}
-          TRAIN_RUN_ID: ${{ inputs.train_run_id }}
+          TRAIN_RUN_ID: ${{ env.TRAIN_RUN_ID }}
         run: |
           set -euo pipefail
           [[ "$TRAIN_RUN_ID" =~ ^[0-9]+$ ]]
@@ -43,10 +51,10 @@ jobs:
       - name: Download 10k checkpoint artifact
         uses: actions/download-artifact@v4
         with:
-          name: ronin-10m-chain-${{ inputs.train_run_id }}
+          name: ronin-10m-chain-${{ env.TRAIN_RUN_ID }}
           github-token: ${{ github.token }}
           repository: orbitalronin94/RONINIA
-          run-id: ${{ inputs.train_run_id }}
+          run-id: ${{ env.TRAIN_RUN_ID }}
           path: trained
 
       - name: Verify checkpoint and lineage
@@ -60,7 +68,10 @@ jobs:
           test -n "$sums"
           (cd "$(dirname "$sums")" && sha256sum -c SHA256SUMS)
           echo "path=$checkpoint" >> "$GITHUB_OUTPUT"
-          sha256sum "$checkpoint"
+          actual="$(sha256sum "$checkpoint" | cut -d' ' -f1)"
+          expected="b82df8b5d06171a9e6db6157d4036854ea445a84f8462b731c4d6d9892e3e172"
+          test "$actual" = "$expected"
+          echo "Verified checkpoint-10000.pt SHA-256: $actual"
           python - "$checkpoint" <<'PY'
           import sys, torch
           p=torch.load(sys.argv[1], map_location="cpu", weights_only=False)
@@ -74,7 +85,7 @@ jobs:
           name: roninia-tokenizer-8k-0f83e1bf4ca6aa7c08cb412d3bf48a5a7de961d012fd4abfe6f648e7ed029617
           github-token: ${{ github.token }}
           repository: orbitalronin94/RONINIA
-          run-id: ${{ inputs.tokenizer_run_id }}
+          run-id: ${{ env.TOKENIZER_RUN_ID }}
           path: tokenizer
 
       - name: Download immutable 100-question holdout
