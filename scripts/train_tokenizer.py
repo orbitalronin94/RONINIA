@@ -87,7 +87,7 @@ def main():
         "corpus_bytes": a.input.stat().st_size,
     }
     (a.output / "manifest.json").write_text(
-        json.dumps(manifest, indent=2) + "\\n", encoding="utf-8"
+        json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
     )
     print(json.dumps(manifest, indent=2), flush=True)
 
