@@ -7,7 +7,13 @@ on:
         required: true
         default: "50000"
         type: string
+      corpus_run_id:
+        description: "Verified MINIRONIN unified corpus run"
+        required: true
+        default: "42679698690"
+        type: string
 permissions:
+  actions: read
   contents: read
 concurrency:
   group: roninia-10m-from-scratch
@@ -21,26 +27,68 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Download prepared library artifact
-        uses: dawidd6/action-download-artifact@v6
+      - name: Validate training inputs
+        env:
+          STEPS: ${{ inputs.steps }}
+          CORPUS_RUN_ID: ${{ inputs.corpus_run_id }}
+        run: |
+          set -euo pipefail
+          [[ "$STEPS" =~ ^[1-9][0-9]*$ ]]
+          [[ "$CORPUS_RUN_ID" =~ ^[0-9]+$ ]]
+          test "$STEPS" -le 50000
+      - name: Verify source MINIRONIN corpus run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CORPUS_RUN_ID: ${{ inputs.corpus_run_id }}
+        run: |
+          set -euo pipefail
+          run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/MINIRONIN/actions/runs/$CORPUS_RUN_ID")"
+          test "$(jq -r .status <<<"$run")" = "completed"
+          test "$(jq -r .conclusion <<<"$run")" = "success"
+          test "$(jq -r .head_branch <<<"$run")" = "main"
+          echo "Verified MINIRONIN source run $CORPUS_RUN_ID"
+      - name: Download full MINIRONIN corpus artifact directly
+        uses: actions/download-artifact@v4
         with:
-          workflow: import-minironin-libraries.yml
-          name: roninia-corpus
-          path: data/corpus
-          repo: orbitalronin94/RONINIA
-          github_token: ${{ github.token }}
-          workflow_conclusion: success
-          if_no_artifact_found: fail
+          name: minironin-unified-train-corpus-${{ inputs.corpus_run_id }}
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/MINIRONIN
+          run-id: ${{ inputs.corpus_run_id }}
+          path: minironin-unified
+      - name: Verify source artifact and disk capacity
+        run: |
+          set -euo pipefail
+          test -s minironin-unified/train.jsonl.gz
+          test -s minironin-unified/sources.json
+          test -s minironin-unified/quality-report.json
+          test -s minironin-unified/SHA256SUMS
+          (cd minironin-unified && sha256sum -c SHA256SUMS)
+          available=$(df --output=avail -k . | tail -1 | tr -d ' ')
+          echo "Available disk: ${available} KiB"
+          test "$available" -gt 3000000
       - name: Install CPU dependencies
         run: |
           python -m pip install --upgrade pip
           python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
           python -m pip install tokenizers numpy
+      - name: Prepare corpus (include synthetic, exclude evaluation)
+        run: |
+          python scripts/prepare_corpus.py --input-root minironin-unified \
+            --output data/corpus/train.txt \
+            --manifest data/corpus/corpus-manifest.json \
+            --source-run-id "${{ inputs.corpus_run_id }}"
       - name: Verify imported corpus
         run: |
           test -s data/corpus/train.txt
           test -s data/corpus/corpus-manifest.json
-          python -c 'import json; m=json.load(open("data/corpus/corpus-manifest.json")); assert m["records_total"]>0; print(m["records_total"], m["synthetic_records_included"], m["text_bytes"], m["corpus_sha256"])'
+          python - <<'PY'
+          import json
+          m=json.load(open("data/corpus/corpus-manifest.json"))
+          assert m["records_total"] > 0
+          assert m["synthetic_records_included"] > 0
+          assert m["evaluation_records_excluded"] >= 0
+          print(json.dumps(m,ensure_ascii=False,indent=2))
+          PY
       - name: Train new BPE tokenizer (16,384)
         run: python scripts/train_tokenizer.py --input data/corpus/train.txt --output tokenizer
       - name: Train model from random initialization with 5k checkpoints
