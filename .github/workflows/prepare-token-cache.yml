@@ -6,6 +6,12 @@ on:
       - ".github/workflows/prepare-token-cache.yml"
       - "scripts/tokenize_corpus.py"
       - "scripts/prepare_corpus.py"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/prepare-token-cache.yml"
+      - "scripts/tokenize_corpus.py"
+      - "scripts/prepare_corpus.py"
   workflow_dispatch:
     inputs:
       corpus_run_id:
@@ -35,7 +41,7 @@ jobs:
       - run: python -m py_compile scripts/prepare_corpus.py scripts/tokenize_corpus.py scripts/train.py
 
   prepare:
-    if: github.event_name == 'workflow_dispatch'
+    if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 360
     steps:
@@ -44,10 +50,19 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Resolve source run IDs
+        id: source
+        env:
+          CORPUS_INPUT: ${{ inputs.corpus_run_id }}
+          TOKENIZER_INPUT: ${{ inputs.tokenizer_run_id }}
+        run: |
+          echo "corpus_run_id=${CORPUS_INPUT:-42523463620}" >> "$GITHUB_OUTPUT"
+          echo "tokenizer_run_id=${TOKENIZER_INPUT:-42849436025}" >> "$GITHUB_OUTPUT"
+
       - name: Verify source corpus run
         env:
           GH_TOKEN: ${{ github.token }}
-          CORPUS_RUN_ID: ${{ inputs.corpus_run_id }}
+          CORPUS_RUN_ID: ${{ steps.source.outputs.corpus_run_id }}
         run: |
           set -euo pipefail
           [[ "$CORPUS_RUN_ID" =~ ^[0-9]+$ ]]
@@ -59,10 +74,10 @@ jobs:
       - name: Download source corpus
         uses: actions/download-artifact@v4
         with:
-          name: minironin-unified-train-corpus-${{ inputs.corpus_run_id }}
+          name: minironin-unified-train-corpus-${{ steps.source.outputs.corpus_run_id }}
           github-token: ${{ github.token }}
           repository: orbitalronin94/MINIRONIN
-          run-id: ${{ inputs.corpus_run_id }}
+          run-id: ${{ steps.source.outputs.corpus_run_id }}
           path: minironin-unified
 
       - name: Verify source artifact and prepare train-only text
@@ -77,7 +92,7 @@ jobs:
           test "$available" -gt 3000000
           python scripts/prepare_corpus.py --input-root minironin-unified \
             --output data/corpus/train.txt --manifest data/corpus/corpus-manifest.json \
-            --source-run-id "${{ inputs.corpus_run_id }}"
+            --source-run-id "${{ steps.source.outputs.corpus_run_id }}"
           test -s data/corpus/train.txt
 
       - name: Install tokenizer dependencies
@@ -91,7 +106,7 @@ jobs:
           name: roninia-tokenizer-8k-${{ hashFiles('data/corpus/corpus-manifest.json') }}
           github-token: ${{ github.token }}
           repository: orbitalronin94/RONINIA
-          run-id: ${{ inputs.tokenizer_run_id }}
+          run-id: ${{ steps.source.outputs.tokenizer_run_id }}
           path: tokenizer
 
       - name: Verify tokenizer and build uint16 token cache
