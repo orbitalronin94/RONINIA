@@ -48,8 +48,10 @@ def evaluate(model, data, context, batches=16, batch_size=2):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", type=Path, required=True)
-    ap.add_argument("--corpus", type=Path, required=True)
-    ap.add_argument("--tokenizer", type=Path, required=True)
+    ap.add_argument("--corpus", type=Path)
+    ap.add_argument("--tokenizer", type=Path)
+    ap.add_argument("--tokens", type=Path, help="Reusable uint16 token cache")
+    ap.add_argument("--token-manifest", type=Path, help="Manifest for a reusable token cache")
     ap.add_argument("--output-dir", type=Path, default=Path("runs/ronin-10m"))
     ap.add_argument("--steps", type=int, default=50000)
     ap.add_argument("--batch-size", type=int, default=4)
@@ -67,21 +69,44 @@ def main():
     random.seed(20261110)
     torch.manual_seed(20261110)
     config = ModelConfig.load(args.config)
-    tokenizer = Tokenizer.from_file(str(args.tokenizer))
-    eos_id = tokenizer.token_to_id("<|eos|>")
-    if eos_id is None:
-        raise SystemExit("Tokenizer is missing <|eos|>")
-
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    token_cache = args.output_dir / "corpus-tokens.u16"
-    token_count = 0
-    with token_cache.open("wb") as binary, args.corpus.open(encoding="utf-8") as corpus:
-        for line in corpus:
-            if line.strip():
-                ids = tokenizer.encode(line.strip()).ids
-                if ids:
-                    np.asarray(ids + [eos_id], dtype=np.uint16).tofile(binary)
-                    token_count += len(ids) + 1
+    generated_token_cache = args.tokens is None
+    if generated_token_cache:
+        if args.corpus is None or args.tokenizer is None or args.token_manifest is not None:
+            raise SystemExit("provide --corpus and --tokenizer, or --tokens with --token-manifest")
+        tokenizer = Tokenizer.from_file(str(args.tokenizer))
+        if tokenizer.get_vocab_size() != config.vocab_size:
+            raise SystemExit("tokenizer vocabulary size does not match model config")
+        eos_id = tokenizer.token_to_id("<|eos|>")
+        if eos_id is None:
+            raise SystemExit("Tokenizer is missing <|eos|>")
+        token_cache = args.output_dir / "corpus-tokens.u16"
+        token_count = 0
+        with token_cache.open("wb") as binary, args.corpus.open(encoding="utf-8") as corpus:
+            for line in corpus:
+                if line.strip():
+                    ids = tokenizer.encode(line.strip()).ids
+                    if ids:
+                        np.asarray(ids + [eos_id], dtype=np.uint16).tofile(binary)
+                        token_count += len(ids) + 1
+        tokenizer_sha256 = sha256_file(args.tokenizer)
+        corpus_sha256 = sha256_file(args.corpus)
+    else:
+        if args.corpus is not None or args.tokenizer is not None or args.token_manifest is None:
+            raise SystemExit("pretokenized mode requires --tokens and --token-manifest only")
+        token_cache = args.tokens
+        manifest = json.loads(args.token_manifest.read_text(encoding="utf-8"))
+        if manifest.get("schema") != "roninia-token-cache-v1" or manifest.get("dtype") != "uint16":
+            raise SystemExit("unsupported token cache manifest")
+        if manifest.get("vocab_size") != config.vocab_size:
+            raise SystemExit("token cache vocabulary does not match model config")
+        if sha256_file(token_cache) != manifest.get("tokens_sha256"):
+            raise SystemExit("token cache SHA-256 mismatch")
+        token_count = manifest.get("token_count")
+        if not isinstance(token_count, int) or token_count * 2 != token_cache.stat().st_size:
+            raise SystemExit("token cache size/count mismatch")
+        tokenizer_sha256 = manifest["tokenizer_sha256"]
+        corpus_sha256 = manifest["corpus_sha256"]
 
     if token_count < (config.context_length + 2) * 2:
         raise SystemExit("Corpus too small for train/validation windows")
@@ -163,8 +188,8 @@ def main():
                 "config": config.__dict__,
                 "parameter_count": model.parameter_count(),
                 "completed_steps": step,
-                "tokenizer_sha256": sha256_file(args.tokenizer),
-                "corpus_sha256": sha256_file(args.corpus),
+                "tokenizer_sha256": tokenizer_sha256,
+                "corpus_sha256": corpus_sha256,
                 "token_count": token_count,
                 "train_tokens": len(train_data),
                 "validation_tokens": len(val_data),
@@ -185,7 +210,8 @@ def main():
             )
             print(json.dumps(summary), flush=True)
 
-    token_cache.unlink(missing_ok=True)
+    if generated_token_cache:
+        token_cache.unlink(missing_ok=True)
     print(json.dumps({
         "completed_steps": args.steps,
         "parameters": model.parameter_count(),
