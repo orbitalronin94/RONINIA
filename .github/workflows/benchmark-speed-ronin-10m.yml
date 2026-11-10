@@ -1,5 +1,10 @@
 name: RONIN-10M — CPU speed benchmark (200 steps x configuration)
 on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/benchmark_speed.py"
+      - ".github/workflows/benchmark-speed-ronin-10m.yml"
   pull_request:
     paths:
       - "scripts/benchmark_speed.py"
