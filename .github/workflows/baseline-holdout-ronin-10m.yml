@@ -1,0 +1,121 @@
+name: RONIN-10M — step-0 baseline inference holdout
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/baseline_holdout.py"
+      - ".github/workflows/baseline-holdout-ronin-10m.yml"
+  workflow_dispatch:
+    inputs:
+      tokenizer_run_id:
+        description: "Successful run that published the exact 8k tokenizer artifact"
+        required: true
+        default: "42849436025"
+        type: string
+
+permissions:
+  actions: read
+  contents: read
+
+concurrency:
+  group: roninia-step-0-baseline-holdout
+  cancel-in-progress: false
+
+jobs:
+  baseline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      TOKENIZER_RUN_ID: ${{ inputs.tokenizer_run_id || '42849436025' }}
+      TOKENIZER_ARTIFACT_NAME: roninia-tokenizer-8k-0f83e1bf4ca6aa7c08cb412d3bf48a5a7de961d012fd4abfe6f648e7ed029617
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate tokenizer source run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          [[ "$TOKENIZER_RUN_ID" =~ ^[0-9]+$ ]]
+          run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/RONINIA/actions/runs/$TOKENIZER_RUN_ID")"
+          test "$(jq -r .status <<<"$run")" = "completed"
+          test "$(jq -r .conclusion <<<"$run")" = "success"
+          test "$(jq -r .head_branch <<<"$run")" = "main"
+          echo "Verified tokenizer source run $TOKENIZER_RUN_ID"
+      - name: Download exact 8k tokenizer artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.TOKENIZER_ARTIFACT_NAME }}
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/RONINIA
+          run-id: ${{ env.TOKENIZER_RUN_ID }}
+          path: tokenizer
+      - name: Verify tokenizer manifest and vocabulary
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          manifest=json.loads(Path("tokenizer/manifest.json").read_text())
+          digest=hashlib.sha256(Path("tokenizer/tokenizer.json").read_bytes()).hexdigest()
+          assert manifest["vocab_size"] == 8192
+          assert manifest["tokenizer_sha256"] == digest
+          assert manifest["source_corpus_run_id"] == "42523463620"
+          print(json.dumps(manifest, indent=2))
+          PY
+      - name: Download immutable 100-question inference-only holdout
+        run: |
+          set -euo pipefail
+          mkdir -p benchmarks
+          curl --fail --silent --show-error --location \
+            https://raw.githubusercontent.com/orbitalronin94/MINIRONIN/main/benchmarks/inference-holdout-v1.jsonl \
+            -o benchmarks/inference-holdout-v1.jsonl
+          test "$(grep -cve '^$' benchmarks/inference-holdout-v1.jsonl)" -eq 100
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          rows=[json.loads(x) for x in Path("benchmarks/inference-holdout-v1.jsonl").read_text().splitlines() if x.strip()]
+          assert len(rows)==100
+          assert len({x["id"] for x in rows})==100
+          assert all(x.get("split")=="inference_only" for x in rows)
+          print("100 unique inference-only questions verified.")
+          PY
+      - name: Install CPU dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
+          python -m pip install tokenizers numpy
+      - name: Generate step-0 checkpoint and baseline answers
+        run: |
+          python scripts/baseline_holdout.py \
+            --config configs/ronin-10m.json \
+            --tokenizer tokenizer/tokenizer.json \
+            --holdout benchmarks/inference-holdout-v1.jsonl \
+            --output-dir runs/baseline-step-0 \
+            --threads 2 --max-new-tokens 32 --max-new-bytes 128
+      - name: Verify reproducibility manifest
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root=Path("runs/baseline-step-0")
+          manifest=json.loads((root/"manifest.json").read_text())
+          diary=json.loads((root/"baseline-holdout-100.json").read_text())
+          digest=hashlib.sha256((root/"checkpoint-step-0.pt").read_bytes()).hexdigest()
+          assert manifest["checkpoint_sha256"] == digest
+          assert diary["checkpoint_sha256"] == digest
+          assert diary["completed_steps"] == 0 and diary["holdout_count"] == 100
+          assert diary["tokenizer_sha256"] == manifest["tokenizer_sha256"]
+          print(json.dumps(manifest, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ronin-10m-step-0-baseline-holdout-100
+          path: |
+            runs/baseline-step-0/
+            tokenizer/manifest.json
+            benchmarks/inference-holdout-v1.jsonl
+          if-no-files-found: error
+          retention-days: 90
