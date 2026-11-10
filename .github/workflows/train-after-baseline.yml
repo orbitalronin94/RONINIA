@@ -3,15 +3,10 @@ name: RONIN-10M — manual 5k continuation (no cache)
 on:
   workflow_dispatch:
     inputs:
-      corpus_run_id:
-        description: "Verified MINIRONIN unified corpus run"
+      token_cache_run_id:
+        description: "Successful run containing the already-tokenized uint16 corpus cache"
         required: true
-        default: "42523463620"
-        type: string
-      tokenizer_run_id:
-        description: "Successful standalone 8k tokenizer run"
-        required: true
-        default: "42849436025"
+        default: "42890884432"
         type: string
       parent_run_id:
         description: "Successful 5k training run whose checkpoint becomes this run's parent"
@@ -61,83 +56,29 @@ jobs:
             echo "initial=false" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Verify source corpus run
-        env:
-          GH_TOKEN: ${{ github.token }}
-          CORPUS_RUN_ID: ${{ inputs.corpus_run_id }}
-        run: |
-          set -euo pipefail
-          [[ "$CORPUS_RUN_ID" =~ ^[0-9]+$ ]]
-          run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/MINIRONIN/actions/runs/$CORPUS_RUN_ID")"
-          test "$(jq -r .status <<<"$run")" = "completed"
-          test "$(jq -r .conclusion <<<"$run")" = "success"
-          test "$(jq -r .head_branch <<<"$run")" = "main"
-
-      - name: Download and prepare source corpus
+      - name: Download existing pretokenized corpus cache
         uses: actions/download-artifact@v4
         with:
-          name: minironin-unified-train-corpus-${{ inputs.corpus_run_id }}
-          github-token: ${{ github.token }}
-          repository: orbitalronin94/MINIRONIN
-          run-id: ${{ inputs.corpus_run_id }}
-          path: minironin-unified
-
-      - name: Verify source corpus and build train text
-        run: |
-          set -euo pipefail
-          test -s minironin-unified/train.jsonl.gz
-          test -s minironin-unified/sources.json
-          test -s minironin-unified/quality-report.json
-          test -s minironin-unified/SHA256SUMS
-          (cd minironin-unified && sha256sum -c SHA256SUMS)
-          available=$(df --output=avail -k . | tail -1 | tr -d ' ')
-          test "$available" -gt 3000000
-          python scripts/prepare_corpus.py --input-root minironin-unified \
-            --output data/corpus/train.txt --manifest data/corpus/corpus-manifest.json \
-            --source-run-id "${{ inputs.corpus_run_id }}"
-          test -s data/corpus/train.txt
-
-      - name: Install tokenizer and training dependencies
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install tokenizers numpy
-          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
-
-      - name: Download reusable 8k tokenizer
-        uses: actions/download-artifact@v4
-        with:
-          name: roninia-tokenizer-8k-${{ hashFiles('data/corpus/corpus-manifest.json') }}
+          name: roninia-token-cache-${{ inputs.token_cache_run_id }}
           github-token: ${{ github.token }}
           repository: orbitalronin94/RONINIA
-          run-id: ${{ inputs.tokenizer_run_id }}
-          path: tokenizer
+          run-id: ${{ inputs.token_cache_run_id }}
+          path: token-cache
 
-      - name: Verify tokenizer and tokenize corpus in this run
+      - name: Verify existing token cache (no corpus preparation or tokenization)
         run: |
           set -euo pipefail
-          test -s tokenizer/tokenizer.json
-          test -s tokenizer/manifest.json
+          test -s token-cache/corpus-tokens.u16
+          test -s token-cache/token-manifest.json
+          test -s token-cache/SHA256SUMS
+          (cd token-cache && sha256sum -c SHA256SUMS)
           python - <<'PY'
-          import hashlib, json
+          import json
           from pathlib import Path
-          corpus = json.loads(Path("data/corpus/corpus-manifest.json").read_text())
-          tok = json.loads(Path("tokenizer/manifest.json").read_text())
-          actual = hashlib.sha256(Path("tokenizer/tokenizer.json").read_bytes()).hexdigest()
-          assert tok["vocab_size"] == 8192
-          assert tok["tokenizer_sha256"] == actual
-          assert tok["corpus_sha256"] == corpus["corpus_sha256"]
-          assert tok["corpus_bytes"] == corpus["text_bytes"]
-          assert str(tok["source_corpus_run_id"]) == str(corpus["source_run_id"])
-          assert tok["evaluation_records_excluded"] == corpus["evaluation_records_excluded"]
+          manifest = json.loads(Path("token-cache/token-manifest.json").read_text())
+          assert manifest.get("vocab_size") == 8192, manifest
+          print("Reusing pretokenized cache:", Path("token-cache/corpus-tokens.u16").stat().st_size, "bytes")
           PY
-          mkdir -p token-cache
-          python scripts/tokenize_corpus.py \
-            --corpus data/corpus/train.txt \
-            --tokenizer tokenizer/tokenizer.json \
-            --corpus-manifest data/corpus/corpus-manifest.json \
-            --output token-cache/corpus-tokens.u16 \
-            --manifest token-cache/token-manifest.json
-          (cd token-cache && sha256sum corpus-tokens.u16 token-manifest.json > SHA256SUMS)
 
       - name: Verify parent training run
         env:
@@ -229,8 +170,6 @@ jobs:
         env:
           PARENT_RUN_ID: ${{ steps.chain.outputs.parent_run_id }}
           GENERATION: ${{ steps.chain.outputs.generation }}
-          CORPUS_RUN_ID: ${{ inputs.corpus_run_id }}
-          TOKENIZER_RUN_ID: ${{ inputs.tokenizer_run_id }}
         run: |
           set -euo pipefail
           python - <<'PY'
@@ -245,8 +184,7 @@ jobs:
           meta = {
               "generation": int(os.environ["GENERATION"]),
               "parent_run_id": int(os.environ["PARENT_RUN_ID"]),
-              "corpus_run_id": int(os.environ["CORPUS_RUN_ID"]),
-              "tokenizer_run_id": int(os.environ["TOKENIZER_RUN_ID"]),
+              "token_cache_run_id": int(os.environ["TOKEN_CACHE_RUN_ID"]),
               "latest_checkpoint": latest.name,
               "cumulative_steps": int(re.search(r"checkpoint-(\\d+)", latest.name).group(1)),
           }
