@@ -6,7 +6,7 @@ def test_all_vocab_rows_are_active_and_tied():
     m=RoninLM(ModelConfig())
     assert m.token_embedding.weight.shape==(16384,288)
     assert m.lm_head.weight.data_ptr()==m.token_embedding.weight.data_ptr()
-    assert 9_000_000 < m.parameter_count() < 11_000_000
+    assert m.parameter_count() == 9_864_000
 
 def test_forward_and_loss():
     m=RoninLM(ModelConfig())
