@@ -4,12 +4,12 @@ from pathlib import Path
 
 @dataclass(frozen=True)
 class ModelConfig:
-    vocab_size: int = 16384
+    vocab_size: int = 8192
     context_length: int = 512
     n_layers: int = 6
     d_model: int = 288
     n_heads: int = 8
-    d_ff: int = 864
+    d_ff: int = 1536
     dropout: float = 0.0
     layer_norm_eps: float = 1e-5
     tie_embeddings: bool = True
