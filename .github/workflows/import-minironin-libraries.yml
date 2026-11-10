@@ -1,11 +1,11 @@
-name: RONINIA — import MINIRONIN full synthetic-inclusive corpus
+name: RONINIA — import MINIRONIN 777 MB training corpus
 on:
   workflow_dispatch:
     inputs:
       corpus_run_id:
         description: "Verified successful MINIRONIN unified-corpus run on main"
         required: true
-        default: "42679698690"
+        default: "42523463620"
         type: string
 permissions:
   actions: read
@@ -70,6 +70,7 @@ jobs:
           m=json.load(open("data/corpus/corpus-manifest.json"))
           assert m["source_run_id"] == int(os.environ["CORPUS_RUN_ID"])
           assert m["records_total"] > 0
+          assert m["evaluation_records_excluded"] >= 0
           print(json.dumps(m,ensure_ascii=False,indent=2))
           PY
       - uses: actions/upload-artifact@v4

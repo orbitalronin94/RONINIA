@@ -34,6 +34,7 @@ jobs:
           from roninia.model import RoninLM
           m=RoninLM(ModelConfig.load("configs/ronin-10m.json"))
           print(f"trainable_parameters={m.parameter_count():,}")
-          assert m.token_embedding.num_embeddings == 16384
+          assert m.token_embedding.num_embeddings == 8192
+          assert m.parameter_count() == 9_831_168
           assert m.lm_head.weight.data_ptr() == m.token_embedding.weight.data_ptr()
           PY
