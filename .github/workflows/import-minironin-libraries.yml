@@ -59,7 +59,7 @@ jobs:
           df -h .
           available=$(df --output=avail -k . | tail -1 | tr -d ' ')
           test "$available" -gt 3000000 || { echo "Insufficient runner disk for unified corpus"; exit 1; }
-      - name: Convert source rows to clean text; exclude synthetic and evaluation
+      - name: Convert source rows to clean text; include synthetic and exclude evaluation
         run: python scripts/prepare_corpus.py --input-root minironin-unified --output data/corpus/train.txt --manifest data/corpus/corpus-manifest.json --source-run-id "${{ inputs.corpus_run_id }}"
       - name: Verify imported corpus
         env:
