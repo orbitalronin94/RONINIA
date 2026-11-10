@@ -19,7 +19,7 @@ def main():
     ap.add_argument("--manifest", type=Path, default=Path("data/corpus/corpus-manifest.json"))
     a=ap.parse_args()
     files=sorted(p for p in a.input_root.rglob("*") if p.is_file() and
-        (p.suffix in {".txt",".jsonl",".json"} or p.name.endswith(".jsonl.gz")))
+        (p.suffix in {".txt",".jsonl"} or p.name.endswith(".jsonl.gz")))
     if not files: raise SystemExit(f"No supported files under {a.input_root}")
     a.output.parent.mkdir(parents=True, exist_ok=True)
     total=0; byte_count=0; corpus_hash=hashlib.sha256(); entries=[]
@@ -32,7 +32,7 @@ def main():
                     line=line.strip()
                     if not line: continue
                     try:
-                        value=json.loads(line) if p.suffix in {".jsonl",".json"} or p.name.endswith(".jsonl.gz") else line
+                        value=json.loads(line) if p.suffix == ".jsonl" or p.name.endswith(".jsonl.gz") else line
                         text=extract(value) or (value if isinstance(value,str) else "")
                     except json.JSONDecodeError: text=line
                     text=" ".join(text.split())
