@@ -1,0 +1,39 @@
+name: RONIN-10M — validate architecture
+on:
+  push:
+    branches: [main]
+    paths: ["src/**","configs/**","tests/**","pyproject.toml",".github/workflows/validate-ronin-10m.yml"]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install CPU dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
+          python -m pip install tokenizers pytest
+      - name: Compile
+        run: python -m compileall -q src scripts tests
+      - name: Test model and active vocabulary
+        run: pytest -q
+      - name: Record exact parameter count
+        run: |
+          PYTHONPATH=src python - <<'PY'
+          from roninia.config import ModelConfig
+          from roninia.model import RoninLM
+          m=RoninLM(ModelConfig.load("configs/ronin-10m.json"))
+          print(f"trainable_parameters={m.parameter_count():,}")
+          assert m.token_embedding.num_embeddings == 16384
+          assert m.lm_head.weight.data_ptr() == m.token_embedding.weight.data_ptr()
+          PY
