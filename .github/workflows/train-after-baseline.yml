@@ -136,6 +136,12 @@ jobs:
           Path("configs/ronin-10m-speed-256.json").write_text(json.dumps(config, indent=2) + chr(10))
           PY
 
+      - name: Install CPU training dependencies (no corpus processing)
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
+          python -m pip install numpy tokenizers
+
       - name: Continue training for another 5,000 steps from parent
         env:
           OMP_NUM_THREADS: "1"
