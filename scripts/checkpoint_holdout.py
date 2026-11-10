@@ -59,8 +59,8 @@ def main():
 
     payload = torch.load(args.checkpoint, map_location="cpu", weights_only=False)
     completed_steps = int(payload.get("completed_steps", -1))
-    if completed_steps != 5000:
-        raise SystemExit(f"expected checkpoint at 5000 steps, got {completed_steps}")
+    if completed_steps != args.expected_steps:
+        raise SystemExit(f"expected checkpoint at {args.expected_steps} steps, got {completed_steps}")
     config = ModelConfig(**payload["config"])
     config.validate()
     tokenizer = Tokenizer.from_file(str(args.tokenizer))
