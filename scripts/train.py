@@ -48,13 +48,15 @@ def main():
     ap.add_argument("--tokenizer", type=Path, required=True)
     ap.add_argument("--output-dir", type=Path, default=Path("runs/ronin-10m"))
     ap.add_argument("--steps", type=int, default=50000)
-    ap.add_argument("--batch-size", type=int, default=2)
+    ap.add_argument("--batch-size", type=int, default=4)
     ap.add_argument("--threads", type=int, default=2)
     ap.add_argument("--learning-rate", type=float, default=3e-4)
+    ap.add_argument("--warmup-steps", type=int, default=2000)
+    ap.add_argument("--min-lr-ratio", type=float, default=0.1)
     ap.add_argument("--checkpoint-every", type=int, default=5000)
     ap.add_argument("--eval-batches", type=int, default=16)
     args = ap.parse_args()
-    if min(args.steps, args.batch_size, args.threads, args.checkpoint_every, args.eval_batches) <= 0:
+    if min(args.steps, args.batch_size, args.threads, args.checkpoint_every, args.eval_batches) <= 0 or args.warmup_steps < 0 or not 0 < args.min_lr_ratio <= 1:
         raise SystemExit("steps, batch-size, threads, checkpoint-every and eval-batches must be positive")
 
     torch.set_num_threads(args.threads)
@@ -92,9 +94,32 @@ def main():
         raise SystemExit("Insufficient tokens after deterministic 99/1 train-validation split")
 
     model = RoninLM(config)
+    # Keep decay off biases, normalization parameters and the tied token embedding.
+    decay, no_decay = [], []
+    for name, parameter in model.named_parameters():
+        if not parameter.requires_grad:
+            continue
+        if parameter.ndim < 2 or name.endswith("bias") or "norm" in name.lower() or "embedding" in name.lower() or "tok_emb" in name.lower():
+            no_decay.append(parameter)
+        else:
+            decay.append(parameter)
     optimizer = torch.optim.AdamW(
-        model.parameters(), lr=args.learning_rate, betas=(0.9, 0.95), weight_decay=0.1
+        [
+            {"params": decay, "weight_decay": 0.1},
+            {"params": no_decay, "weight_decay": 0.0},
+        ],
+        lr=args.learning_rate, betas=(0.9, 0.95), eps=1e-8
     )
+
+    warmup_steps = min(args.warmup_steps, max(0, args.steps - 1))
+    def lr_factor(step):
+        if warmup_steps and step < warmup_steps:
+            return max(1e-8, float(step + 1) / warmup_steps)
+        decay_steps = max(1, args.steps - warmup_steps)
+        progress = min(1.0, max(0.0, (step - warmup_steps) / decay_steps))
+        cosine = 0.5 * (1.0 + np.cos(np.pi * progress))
+        return args.min_lr_ratio + (1.0 - args.min_lr_ratio) * float(cosine)
+    scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_factor)
     model.train()
     history = []
     checkpoints = []
@@ -110,9 +135,10 @@ def main():
         loss.backward()
         torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
         optimizer.step()
+        scheduler.step()
 
         if step == 1 or step % 100 == 0:
-            record = {"step": step, "train_loss": float(loss.detach())}
+            record = {"step": step, "train_loss": float(loss.detach()), "learning_rate": optimizer.param_groups[0]["lr"]}
             history.append(record)
             print(json.dumps(record), flush=True)
 
@@ -125,6 +151,11 @@ def main():
             payload = {
                 "model_state_dict": model.state_dict(),
                 "optimizer_state_dict": optimizer.state_dict(),
+                "scheduler_state_dict": scheduler.state_dict(),
+                "optimizer": "AdamW", "betas": [0.9, 0.95],
+                "weight_decay": 0.1, "no_decay_parameter_tensors": len(no_decay),
+                "warmup_steps": warmup_steps, "min_lr_ratio": args.min_lr_ratio,
+                "batch_size": args.batch_size, "peak_learning_rate": args.learning_rate,
                 "config": config.__dict__,
                 "parameter_count": model.parameter_count(),
                 "completed_steps": step,
@@ -141,7 +172,7 @@ def main():
             checksum = sha256_file(checkpoint)
             with (args.output_dir / "SHA256SUMS").open("a", encoding="utf-8") as sums:
                 sums.write(f"{checksum}  {checkpoint.name}\n")
-            summary = {"step": step, "train_loss": float(loss.detach()),
+            summary = {"step": step, "train_loss": float(loss.detach()), "learning_rate": optimizer.param_groups[0]["lr"],
                        "validation_loss": val_loss, "checkpoint": checkpoint.name,
                        "sha256": checksum}
             checkpoints.append(summary)

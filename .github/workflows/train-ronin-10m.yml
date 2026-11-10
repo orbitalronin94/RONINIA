@@ -121,6 +121,7 @@ jobs:
         run: |
           python scripts/train.py --config configs/ronin-10m.json --corpus data/corpus/train.txt \
             --tokenizer tokenizer/tokenizer.json --steps "${{ inputs.steps }}" --threads 2 \
+            --batch-size 4 --learning-rate 3e-4 --warmup-steps 2000 --min-lr-ratio 0.1 \
             --checkpoint-every 5000 --eval-batches 16
       - uses: actions/upload-artifact@v4
         with:
