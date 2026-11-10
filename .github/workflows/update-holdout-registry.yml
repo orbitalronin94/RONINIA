@@ -1,0 +1,74 @@
+name: Update holdout registry
+
+on:
+  workflow_run:
+    types: [completed]
+
+permissions:
+  actions: read
+  contents: write
+
+concurrency:
+  group: roninia-holdout-registry
+  cancel-in-progress: false
+
+jobs:
+  register:
+    if: contains(github.event.workflow_run.name, 'holdout')
+    runs-on: ubuntu-latest
+    steps:
+      # Deliberately does not checkout or execute code from the completed workflow.
+      - name: Add completed holdout run and artifacts to the registry
+        uses: actions/github-script@v8
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const run = context.payload.workflow_run;
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const path = 'docs/HOLDOUTS.md';
+            const runUrl = run.html_url || `https://github.com/${owner}/${repo}/actions/runs/${run.id}`;
+
+            const artifactsResponse = await github.rest.actions.listWorkflowRunArtifacts({
+              owner, repo, run_id: run.id, per_page: 100
+            });
+            const artifacts = artifactsResponse.data.artifacts
+              .filter(a => !a.expired)
+              .map(a => `[${a.name}](${runUrl})${a.expires_at ? ` (expira: ${a.expires_at.slice(0, 10)})` : ''}`);
+
+            const escapeCell = value => String(value ?? '').replace(/\\|/g, '\\|').replace(/\r?\n/g, ' ');
+            const date = (run.updated_at || run.created_at || '').slice(0, 10);
+            const artifactCell = artifacts.length ? artifacts.join('<br>') : 'Sin artefactos publicados';
+            const row = `| ${date} | ${escapeCell(run.name)} | ${run.id} | ${escapeCell(run.conclusion || run.status)} | [Ver ejecución](${runUrl}) | ${artifactCell} | ${run.head_sha ? run.head_sha.slice(0, 12) : '—'} |\n`;
+
+            const current = await github.rest.repos.getContent({ owner, repo, path });
+            if (!('content' in current.data) || current.data.encoding !== 'base64') {
+              throw new Error('No se pudo leer docs/HOLDOUTS.md');
+            }
+            let content = Buffer.from(current.data.content, 'base64').toString('utf8');
+            const start = '<!-- HOLDOUT-INDEX-START -->';
+            const end = '<!-- HOLDOUT-INDEX-END -->';
+            const startAt = content.indexOf(start);
+            const endAt = content.indexOf(end);
+            if (startAt < 0 || endAt < startAt) {
+              throw new Error('No se encontraron los marcadores del índice de holdouts');
+            }
+
+            let section = content.slice(startAt + start.length, endAt);
+            const lines = section.split('\n').filter(line => line.trim());
+            const runMarker = `| ${date} | ${escapeCell(run.name)} | ${run.id} |`;
+            const withoutDuplicate = lines.filter(line => !line.startsWith(runMarker));
+            const rows = [row.trimEnd(), ...withoutDuplicate].join('\n');
+            const updatedSection = `\n\n${rows}\n\n`;
+            content = content.slice(0, startAt + start.length) + updatedSection + content.slice(endAt);
+
+            await github.rest.repos.createOrUpdateFileContents({
+              owner,
+              repo,
+              path,
+              message: `docs: register holdout run ${run.id}`,
+              sha: current.data.sha,
+              content: Buffer.from(content, 'utf8').toString('base64'),
+              branch: 'main'
+            });
+            core.info(`Registered holdout run ${run.id} with ${artifacts.length} active artifact(s).`);
