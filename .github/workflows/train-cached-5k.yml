@@ -68,7 +68,10 @@ jobs:
           assert m["vocab_size"] == 8192
           assert m["token_count"] * 2 == p.stat().st_size
           assert m["tokens_bytes"] == p.stat().st_size
-          h = hashlib.sha256()\n          with p.open("rb") as f:\n              for chunk in iter(lambda: f.read(8 * 1024 * 1024), b""):\n                  h.update(chunk)\n          assert m["tokens_sha256"] == h.hexdigest()
+          h = hashlib.sha256()
+          with p.open("rb") as f:
+              for chunk in iter(lambda: f.read(8 * 1024 * 1024), b""):
+                  h.update(chunk)\n          assert m["tokens_sha256"] == h.hexdigest()
           print(json.dumps({k:m[k] for k in ("token_count","tokens_bytes","corpus_sha256","tokenizer_sha256")}, indent=2))
           PY
 
