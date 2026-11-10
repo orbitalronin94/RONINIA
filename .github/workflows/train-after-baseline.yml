@@ -1,4 +1,4 @@
-name: RONIN-10M — continuous parent training loop
+name: RONIN-10M — manual 5k continuation
 
 on:
   workflow_dispatch:
@@ -12,7 +12,7 @@ on:
         required: true
         type: string
       generation:
-        description: "Continuous training generation number"
+        description: "Manual continuation generation (2 for the first 5k after baseline)"
         required: true
         default: "2"
         type: string
@@ -22,7 +22,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: roninia-10m-continuous-parent-loop
+  group: roninia-10m-manual-continuation
   cancel-in-progress: false
 
 jobs:
