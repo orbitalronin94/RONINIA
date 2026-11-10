@@ -18,7 +18,7 @@ def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--input-root",required=True,type=Path)
     ap.add_argument("--output",required=True,type=Path)
-    ap.add_argument("--manifest",type=Path,default=Path("data/corpus/corpus-manifest.json"))
+    ap.add_argument("--manifest",type=Path,default=Path("data/corpus/corpus-manifest.json"))\n    ap.add_argument("--source-run-id",type=int,default=42523463620)
     a=ap.parse_args()
     sources=sorted(p for p in a.input_root.rglob("*") if p.is_file() and
                    (p.name.endswith((".jsonl.gz",".jsonl",".txt"))))
@@ -60,7 +60,7 @@ def main():
                             "evaluation_excluded":evaluation,"sha256_text":file_hash.hexdigest()})
     if total==0: raise SystemExit("No non-synthetic, non-evaluation source records survived")
     manifest={"schema":"roninia-corpus-v1","source_artifact":"MINIRONIN unified corpus",
-        "source_run_id":42523463620,"files":entries,"files_total":len(entries),
+        "source_run_id":a.source_run_id,"files":entries,"files_total":len(entries),
         "records_total":total,"synthetic_records_excluded":skipped_synthetic,
         "evaluation_records_excluded":skipped_eval,"text_bytes":byte_count,
         "corpus_sha256":corpus_hash.hexdigest()}
