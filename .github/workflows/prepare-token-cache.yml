@@ -7,12 +7,6 @@ on:
       - ".github/workflows/train-after-baseline.yml"
       - "scripts/tokenize_corpus.py"
       - "scripts/prepare_corpus.py"
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/prepare-token-cache.yml"
-      - "scripts/tokenize_corpus.py"
-      - "scripts/prepare_corpus.py"
   workflow_dispatch:
     inputs:
       corpus_run_id:
