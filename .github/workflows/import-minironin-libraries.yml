@@ -29,7 +29,6 @@ jobs:
           test "$(jq -r .status <<<"$run")" = "completed"
           test "$(jq -r .conclusion <<<"$run")" = "success"
           test "$(jq -r .head_branch <<<"$run")" = "main"
-          echo "Verified MINIRONIN corpus run: $CORPUS_RUN_ID"
       - name: Download verified MINIRONIN unified corpus artifact
         uses: actions/download-artifact@v4
         with:
@@ -53,13 +52,7 @@ jobs:
           sources=json.loads(Path("minironin-unified/sources.json").read_text())
           assert report["record_count"] > 0
           assert sources["record_count"] == report["record_count"]
-          print(json.dumps({
-            "records_in_source_artifact": report["record_count"],
-            "datasets": len(report.get("datasets", {})),
-            "source_files": report.get("source_files"),
-            "synthetic_rows_present_but_filtered_by_RONINIA": report.get("synthetic_and_source_counts", {}).get("synthetic", 0),
-            "source_rows": report.get("synthetic_and_source_counts", {}).get("source_text", 0)
-          }, ensure_ascii=False, indent=2))
+          print(json.dumps({"records":report["record_count"],"datasets":len(report.get("datasets",{})),"source_files":report.get("source_files")},indent=2))
           PY
       - name: Check runner disk capacity
         run: |
@@ -67,9 +60,7 @@ jobs:
           available=$(df --output=avail -k . | tail -1 | tr -d ' ')
           test "$available" -gt 3000000 || { echo "Insufficient runner disk for unified corpus"; exit 1; }
       - name: Convert source rows to clean text; exclude synthetic and evaluation
-        run: |
-          python scripts/prepare_corpus.py --input-root minironin-unified \
-            --output data/corpus/train.txt --manifest data/corpus/corpus-manifest.json \\\n            --source-run-id "${{ inputs.corpus_run_id }}"
+        run: python scripts/prepare_corpus.py --input-root minironin-unified --output data/corpus/train.txt --manifest data/corpus/corpus-manifest.json --source-run-id "${{ inputs.corpus_run_id }}"
       - name: Verify imported corpus
         env:
           CORPUS_RUN_ID: ${{ inputs.corpus_run_id }}
@@ -79,7 +70,7 @@ jobs:
           m=json.load(open("data/corpus/corpus-manifest.json"))
           assert m["source_run_id"] == int(os.environ["CORPUS_RUN_ID"])
           assert m["records_total"] > 0
-          print(json.dumps(m, ensure_ascii=False, indent=2))
+          print(json.dumps(m,ensure_ascii=False,indent=2))
           PY
       - uses: actions/upload-artifact@v4
         with:
