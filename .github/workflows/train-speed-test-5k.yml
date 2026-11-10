@@ -158,7 +158,7 @@ jobs:
           config = json.loads(Path("configs/ronin-10m.json").read_text())
           config["context_length"] = 256
           Path("configs/ronin-10m-speed-256.json").write_text(
-              json.dumps(config, indent=2) + "\\n"
+              json.dumps(config, indent=2) + chr(10)
           )
           print(json.dumps(config, indent=2))
           PY
