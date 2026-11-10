@@ -7,12 +7,6 @@ on:
       - "scripts/baseline_holdout.py"
       - ".github/workflows/baseline-holdout-ronin-10m.yml"
   workflow_dispatch:
-    inputs:
-      tokenizer_run_id:
-        description: "Successful run that published the exact 8k tokenizer artifact"
-        required: true
-        default: "42849436025"
-        type: string
 
 permissions:
   actions: read
@@ -27,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 180
     env:
-      TOKENIZER_RUN_ID: ${{ inputs.tokenizer_run_id || '42849436025' }}
+      TOKENIZER_RUN_ID: '42849436025'
       TOKENIZER_ARTIFACT_NAME: roninia-tokenizer-8k-0f83e1bf4ca6aa7c08cb412d3bf48a5a7de961d012fd4abfe6f648e7ed029617
     steps:
       - uses: actions/checkout@v4
