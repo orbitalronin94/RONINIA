@@ -1,6 +1,10 @@
 name: RONIN-10M — step-0 baseline inference holdout
 
 on:
+  pull_request:
+    paths:
+      - "scripts/baseline_holdout.py"
+      - ".github/workflows/baseline-holdout-ronin-10m.yml"
   push:
     branches: [main]
     paths:
@@ -56,7 +60,7 @@ jobs:
           digest=hashlib.sha256(Path("tokenizer/tokenizer.json").read_bytes()).hexdigest()
           assert manifest["vocab_size"] == 8192
           assert manifest["tokenizer_sha256"] == digest
-          assert manifest["source_corpus_run_id"] == "42523463620"
+          assert str(manifest["source_corpus_run_id"]) == "42523463620"
           print(json.dumps(manifest, indent=2))
           PY
       - name: Download immutable 100-question inference-only holdout
