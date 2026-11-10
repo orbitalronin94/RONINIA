@@ -1,0 +1,38 @@
+name: RONINIA — import admitted MINIRONIN libraries
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Checkout admitted MINIRONIN corpus only
+        uses: actions/checkout@v4
+        with:
+          repository: orbitalronin94/MINIRONIN
+          ref: main
+          path: minironin
+          sparse-checkout: |
+            data/curated/accepted
+          sparse-checkout-cone-mode: true
+          fetch-depth: 1
+      - name: Check available disk
+        run: |
+          df -h .
+          free_kb=$(df --output=avail -k . | tail -1 | tr -d ' ')
+          test "$free_kb" -gt 3000000 || { echo "Insufficient runner disk for corpus import"; exit 1; }
+      - name: Build text corpus and provenance manifest
+        run: |
+          python scripts/prepare_corpus.py --input-root minironin/data/curated/accepted \
+            --output data/corpus/train.txt --manifest data/corpus/corpus-manifest.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: roninia-corpus
+          path: |
+            data/corpus/train.txt
+            data/corpus/corpus-manifest.json
+          if-no-files-found: error
+          retention-days: 30
