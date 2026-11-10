@@ -42,3 +42,9 @@ pytest
 ```
 
 El desarrollo local es opcional; los workflows son la vía reproducible del proyecto.
+
+## Fuente de bibliotecas MINIRONIN
+
+La importación inicial utiliza el artefacto unificado de MINIRONIN generado por el run exitoso **42523463620** en `main` (8 de noviembre de 2026). El artefacto fuente está publicado como `minironin-unified-train-corpus-42523463620`, con SHA-256 del archivo de artefacto `e02fa1240a0457310cacf1406f641c720942a41abc48d83f3e4c730506b691fc`.
+
+La preparación de RONINIA verifica los hashes del artefacto, conserva la procedencia y excluye explícitamente filas marcadas `synthetic=true` y registros de evaluación. También se respetan las exclusiones de derechos y de holdout aplicadas por el constructor canónico de MINIRONIN. No se importan checkpoints ni datos de evaluación.
