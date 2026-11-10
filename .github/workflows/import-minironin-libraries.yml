@@ -1,0 +1,82 @@
+name: RONINIA — import MINIRONIN unified non-synthetic libraries
+on:
+  workflow_dispatch:
+    inputs:
+      corpus_run_id:
+        description: "Verified successful MINIRONIN unified-corpus run on main"
+        required: true
+        default: "42523463620"
+        type: string
+permissions:
+  actions: read
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Confirm source run is successful and on MINIRONIN main
+        env:
+          CORPUS_RUN_ID: ${{ inputs.corpus_run_id }}
+        run: |
+          set -euo pipefail
+          [[ "$CORPUS_RUN_ID" =~ ^[0-9]+$ ]]
+          run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/MINIRONIN/actions/runs/$CORPUS_RUN_ID")"
+          test "$(jq -r .name <<<"$run")" = "MINIRONIN — construir corpus unificado de entrenamiento"
+          test "$(jq -r .status <<<"$run")" = "completed"
+          test "$(jq -r .conclusion <<<"$run")" = "success"
+          test "$(jq -r .head_branch <<<"$run")" = "main"
+      - name: Download verified MINIRONIN unified corpus artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: minironin-unified-train-corpus-${{ inputs.corpus_run_id }}
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/MINIRONIN
+          run-id: ${{ inputs.corpus_run_id }}
+          path: minironin-unified
+      - name: Verify source artifact checksums and provenance
+        run: |
+          set -euo pipefail
+          test -s minironin-unified/train.jsonl.gz
+          test -s minironin-unified/sources.json
+          test -s minironin-unified/quality-report.json
+          test -s minironin-unified/SHA256SUMS
+          (cd minironin-unified && sha256sum -c SHA256SUMS)
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path("minironin-unified/quality-report.json").read_text())
+          sources=json.loads(Path("minironin-unified/sources.json").read_text())
+          assert report["record_count"] > 0
+          assert sources["record_count"] == report["record_count"]
+          print(json.dumps({"records":report["record_count"],"datasets":len(report.get("datasets",{})),"source_files":report.get("source_files")},indent=2))
+          PY
+      - name: Check runner disk capacity
+        run: |
+          df -h .
+          available=$(df --output=avail -k . | tail -1 | tr -d ' ')
+          test "$available" -gt 3000000 || { echo "Insufficient runner disk for unified corpus"; exit 1; }
+      - name: Convert source rows to clean text; exclude synthetic and evaluation
+        run: python scripts/prepare_corpus.py --input-root minironin-unified --output data/corpus/train.txt --manifest data/corpus/corpus-manifest.json --source-run-id "${{ inputs.corpus_run_id }}"
+      - name: Verify imported corpus
+        env:
+          CORPUS_RUN_ID: ${{ inputs.corpus_run_id }}
+        run: |
+          python - <<'PY'
+          import json, os
+          m=json.load(open("data/corpus/corpus-manifest.json"))
+          assert m["source_run_id"] == int(os.environ["CORPUS_RUN_ID"])
+          assert m["records_total"] > 0
+          print(json.dumps(m,ensure_ascii=False,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: roninia-corpus
+          path: |
+            data/corpus/train.txt
+            data/corpus/corpus-manifest.json
+          if-no-files-found: error
+          retention-days: 30
