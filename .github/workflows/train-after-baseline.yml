@@ -52,7 +52,11 @@ jobs:
           echo "cache_run_id=$CACHE_INPUT" >> "$GITHUB_OUTPUT"
           echo "parent_run_id=$PARENT_INPUT" >> "$GITHUB_OUTPUT"
           echo "generation=$GENERATION_INPUT" >> "$GITHUB_OUTPUT"
-          echo "initial=false" >> "$GITHUB_OUTPUT"
+          if [[ "$GENERATION_INPUT" == "2" && "$PARENT_INPUT" == "42877522370" ]]; then
+            echo "initial=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "initial=false" >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Verify reusable cache run
         env:
@@ -63,6 +67,16 @@ jobs:
           run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/RONINIA/actions/runs/$CACHE_RUN_ID")"
           test "$(jq -r .status <<<"$run")" = "completed"
           test "$(jq -r .conclusion <<<"$run")" = "success"
+
+      - name: Download original 5k baseline checkpoint
+        if: steps.chain.outputs.initial == 'true'
+        uses: actions/download-artifact@v4
+        with:
+          name: ronin-10m-speed-trial-5k-42877522370
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/RONINIA
+          run-id: ${{ steps.chain.outputs.parent_run_id }}
+          path: parent-artifact
 
       - name: Download previous generation checkpoint
         if: steps.chain.outputs.initial == 'false'
