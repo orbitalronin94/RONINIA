@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 """Compare CPU training throughput across controlled RONIN-10M configurations."""
-import argparse, hashlib, json, random, time
+import argparse, hashlib, json, random, sys, time
 from dataclasses import replace
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 import numpy as np
 import torch
