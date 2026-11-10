@@ -1,10 +1,5 @@
 name: RONIN-10M — train 50k from scratch with 5k evaluations
 on:
-  push:
-    branches: [main]
-    paths:
-      - "scripts/train.py"
-      - ".github/workflows/train-ronin-10m.yml"
   workflow_dispatch:
     inputs:
       steps:
