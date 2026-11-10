@@ -1,10 +1,6 @@
 name: RONIN-10M — checkpoint 8k inference holdout
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/checkpoint-holdout-ronin-10m-8000.yml'
   workflow_dispatch:
     inputs:
       train_run_id:
