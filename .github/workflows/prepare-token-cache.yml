@@ -1,0 +1,132 @@
+name: RONIN-10M — prepare reusable token cache
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/prepare-token-cache.yml"
+      - "scripts/tokenize_corpus.py"
+      - "scripts/prepare_corpus.py"
+  workflow_dispatch:
+    inputs:
+      corpus_run_id:
+        description: "Verified MINIRONIN unified corpus run"
+        required: true
+        default: "42523463620"
+        type: string
+      tokenizer_run_id:
+        description: "Successful standalone 8k tokenizer run"
+        required: true
+        default: "42849436025"
+        type: string
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  validate:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m py_compile scripts/prepare_corpus.py scripts/tokenize_corpus.py scripts/train.py
+
+  prepare:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Verify source corpus run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CORPUS_RUN_ID: ${{ inputs.corpus_run_id }}
+        run: |
+          set -euo pipefail
+          [[ "$CORPUS_RUN_ID" =~ ^[0-9]+$ ]]
+          run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/MINIRONIN/actions/runs/$CORPUS_RUN_ID")"
+          test "$(jq -r .status <<<"$run")" = "completed"
+          test "$(jq -r .conclusion <<<"$run")" = "success"
+          test "$(jq -r .head_branch <<<"$run")" = "main"
+
+      - name: Download source corpus
+        uses: actions/download-artifact@v4
+        with:
+          name: minironin-unified-train-corpus-${{ inputs.corpus_run_id }}
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/MINIRONIN
+          run-id: ${{ inputs.corpus_run_id }}
+          path: minironin-unified
+
+      - name: Verify source artifact and prepare train-only text
+        run: |
+          set -euo pipefail
+          test -s minironin-unified/train.jsonl.gz
+          test -s minironin-unified/sources.json
+          test -s minironin-unified/quality-report.json
+          test -s minironin-unified/SHA256SUMS
+          (cd minironin-unified && sha256sum -c SHA256SUMS)
+          available=$(df --output=avail -k . | tail -1 | tr -d ' ')
+          test "$available" -gt 3000000
+          python scripts/prepare_corpus.py --input-root minironin-unified \
+            --output data/corpus/train.txt --manifest data/corpus/corpus-manifest.json \
+            --source-run-id "${{ inputs.corpus_run_id }}"
+          test -s data/corpus/train.txt
+
+      - name: Install tokenizer dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install tokenizers numpy
+
+      - name: Download reusable 8k tokenizer
+        uses: actions/download-artifact@v4
+        with:
+          name: roninia-tokenizer-8k-${{ hashFiles('data/corpus/corpus-manifest.json') }}
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/RONINIA
+          run-id: ${{ inputs.tokenizer_run_id }}
+          path: tokenizer
+
+      - name: Verify tokenizer and build uint16 token cache
+        run: |
+          set -euo pipefail
+          test -s tokenizer/tokenizer.json
+          test -s tokenizer/manifest.json
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          corpus = json.loads(Path("data/corpus/corpus-manifest.json").read_text())
+          tok = json.loads(Path("tokenizer/manifest.json").read_text())
+          actual = hashlib.sha256(Path("tokenizer/tokenizer.json").read_bytes()).hexdigest()
+          assert tok["vocab_size"] == 8192
+          assert tok["tokenizer_sha256"] == actual
+          assert tok["corpus_sha256"] == corpus["corpus_sha256"]
+          assert tok["corpus_bytes"] == corpus["text_bytes"]
+          assert str(tok["source_corpus_run_id"]) == str(corpus["source_run_id"])
+          assert tok["evaluation_records_excluded"] == corpus["evaluation_records_excluded"]
+          PY
+          python scripts/tokenize_corpus.py \
+            --corpus data/corpus/train.txt \
+            --tokenizer tokenizer/tokenizer.json \
+            --corpus-manifest data/corpus/corpus-manifest.json \
+            --output token-cache/corpus-tokens.u16 \
+            --manifest token-cache/token-manifest.json
+          (cd token-cache && sha256sum corpus-tokens.u16 token-manifest.json > SHA256SUMS)
+
+      - name: Upload reusable pretokenized corpus
+        uses: actions/upload-artifact@v4
+        with:
+          name: roninia-token-cache-${{ github.run_id }}
+          path: |
+            token-cache/corpus-tokens.u16
+            token-cache/token-manifest.json
+            token-cache/SHA256SUMS
+          if-no-files-found: error
+          retention-days: 90
