@@ -1,4 +1,4 @@
-name: RONINIA — import MINIRONIN unified non-synthetic libraries
+name: RONINIA — import MINIRONIN full synthetic-inclusive corpus
 on:
   workflow_dispatch:
     inputs:
