@@ -1,9 +1,6 @@
 name: RONIN-10M — continuous parent training loop
 
 on:
-  workflow_run:
-    workflows: ["RONIN-10M — prepare reusable token cache"]
-    types: [completed]
   workflow_dispatch:
     inputs:
       token_cache_run_id:
@@ -30,10 +27,7 @@ concurrency:
 
 jobs:
   train-and-continue:
-    if: >-
-      github.event_name == 'workflow_dispatch' ||
-      (github.event.workflow_run.conclusion == 'success' &&
-       github.event.workflow_run.head_branch == 'main')
+
     runs-on: ubuntu-latest
     timeout-minutes: 420
     steps:
@@ -47,27 +41,18 @@ jobs:
       - name: Resolve cache, parent and generation
         id: chain
         env:
-          EVENT_NAME: ${{ github.event_name }}
           CACHE_INPUT: ${{ inputs.token_cache_run_id }}
           PARENT_INPUT: ${{ inputs.parent_run_id }}
           GENERATION_INPUT: ${{ inputs.generation }}
-          PREPARATION_RUN_ID: ${{ github.event.workflow_run.id }}
         run: |
           set -euo pipefail
-          if [[ "$EVENT_NAME" == "workflow_run" ]]; then
-            echo "cache_run_id=$PREPARATION_RUN_ID" >> "$GITHUB_OUTPUT"
-            echo "parent_run_id=42877522370" >> "$GITHUB_OUTPUT"
-            echo "generation=2" >> "$GITHUB_OUTPUT"
-            echo "initial=true" >> "$GITHUB_OUTPUT"
-          else
-            [[ "$CACHE_INPUT" =~ ^[0-9]+$ ]]
-            [[ "$PARENT_INPUT" =~ ^[0-9]+$ ]]
-            [[ "$GENERATION_INPUT" =~ ^[2-9][0-9]*$|^1[0-9]+$ ]]
-            echo "cache_run_id=$CACHE_INPUT" >> "$GITHUB_OUTPUT"
-            echo "parent_run_id=$PARENT_INPUT" >> "$GITHUB_OUTPUT"
-            echo "generation=$GENERATION_INPUT" >> "$GITHUB_OUTPUT"
-            echo "initial=false" >> "$GITHUB_OUTPUT"
-          fi
+          [[ "$CACHE_INPUT" =~ ^[0-9]+$ ]]
+          [[ "$PARENT_INPUT" =~ ^[0-9]+$ ]]
+          [[ "$GENERATION_INPUT" =~ ^[2-9][0-9]*$|^1[0-9]+$ ]]
+          echo "cache_run_id=$CACHE_INPUT" >> "$GITHUB_OUTPUT"
+          echo "parent_run_id=$PARENT_INPUT" >> "$GITHUB_OUTPUT"
+          echo "generation=$GENERATION_INPUT" >> "$GITHUB_OUTPUT"
+          echo "initial=false" >> "$GITHUB_OUTPUT"
 
       - name: Verify reusable cache run
         env:
@@ -78,44 +63,6 @@ jobs:
           run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/RONINIA/actions/runs/$CACHE_RUN_ID")"
           test "$(jq -r .status <<<"$run")" = "completed"
           test "$(jq -r .conclusion <<<"$run")" = "success"
-
-      - name: Wait for original 5k baseline to finish
-        if: steps.chain.outputs.initial == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-          BASELINE_RUN_ID: ${{ steps.chain.outputs.parent_run_id }}
-        run: |
-          set -euo pipefail
-          deadline=$((SECONDS + 21600))
-          while true; do
-            run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/RONINIA/actions/runs/$BASELINE_RUN_ID")"
-            status="$(jq -r .status <<<"$run")"
-            conclusion="$(jq -r .conclusion <<<"$run")"
-            echo "Initial baseline: status=$status conclusion=$conclusion"
-            if [[ "$status" == "completed" ]]; then
-              test "$conclusion" = "success"
-              break
-            fi
-            if (( SECONDS >= deadline )); then
-              echo "Timed out waiting for the initial 5k baseline"
-              exit 1
-            fi
-            sleep 60
-          done
-
-      - name: Wait five minutes before first continuation
-        if: steps.chain.outputs.initial == 'true'
-        run: sleep 300
-
-      - name: Download original baseline checkpoint
-        if: steps.chain.outputs.initial == 'true'
-        uses: actions/download-artifact@v4
-        with:
-          name: ronin-10m-speed-trial-5k-42877522370
-          github-token: ${{ github.token }}
-          repository: orbitalronin94/RONINIA
-          run-id: ${{ steps.chain.outputs.parent_run_id }}
-          path: parent-artifact
 
       - name: Download previous generation checkpoint
         if: steps.chain.outputs.initial == 'false'
@@ -262,31 +209,3 @@ jobs:
           if-no-files-found: error
           retention-days: 30
 
-      - name: Wait five minutes and dispatch the next generation
-        env:
-          GH_TOKEN: ${{ github.token }}
-          NEXT_PARENT_RUN_ID: ${{ github.run_id }}
-          CACHE_RUN_ID: ${{ steps.chain.outputs.cache_run_id }}
-          GENERATION: ${{ steps.chain.outputs.generation }}
-          MAX_GENERATIONS: "96"
-        run: |
-          set -euo pipefail
-          if (( GENERATION >= MAX_GENERATIONS )); then
-            echo "Reached safety cap: $MAX_GENERATIONS generations (480,000 cumulative steps)."
-            exit 0
-          fi
-          sleep 300
-          next_generation=$((GENERATION + 1))
-          payload="$(jq -n \
-            --arg ref "main" \
-            --arg parent "$NEXT_PARENT_RUN_ID" \
-            --arg cache "$CACHE_RUN_ID" \
-            --arg generation "$next_generation" \
-            '{ref:$ref, inputs:{parent_run_id:$parent, token_cache_run_id:$cache, generation:$generation}}')"
-          curl --fail --silent --show-error -X POST \
-            -H "Authorization: Bearer $GH_TOKEN" \
-            -H "Accept: application/vnd.github+json" \
-            -H "X-GitHub-Api-Version: 2022-11-28" \
-            https://api.github.com/repos/orbitalronin94/RONINIA/actions/workflows/train-after-baseline.yml/dispatches \
-            -d "$payload"
-          echo "Dispatched generation $next_generation from parent run $NEXT_PARENT_RUN_ID"
