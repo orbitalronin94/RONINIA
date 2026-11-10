@@ -1,0 +1,122 @@
+name: RONIN-10M — checkpoint 5k inference holdout
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/checkpoint_holdout.py"
+      - ".github/workflows/checkpoint-holdout-ronin-10m.yml"
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+concurrency:
+  group: roninia-checkpoint-5k-holdout
+  cancel-in-progress: false
+
+jobs:
+  holdout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      TRAIN_RUN_ID: "42877522370"
+      TRAIN_ARTIFACT_NAME: "ronin-10m-speed-trial-5k-42877522370"
+      TOKENIZER_RUN_ID: "42849436025"
+      TOKENIZER_ARTIFACT_NAME: "roninia-tokenizer-8k-0f83e1bf4ca6aa7c08cb412d3bf48a5a7de961d012fd4abfe6f648e7ed029617"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify training run completed successfully
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/RONINIA/actions/runs/$TRAIN_RUN_ID")"
+          test "$(jq -r .status <<<"$run")" = "completed"
+          test "$(jq -r .conclusion <<<"$run")" = "success"
+          echo "Verified source training run $TRAIN_RUN_ID"
+
+      - name: Download trained 5k checkpoint artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.TRAIN_ARTIFACT_NAME }}
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/RONINIA
+          run-id: ${{ env.TRAIN_RUN_ID }}
+          path: trained
+
+      - name: Verify checkpoint and checksum
+        run: |
+          set -euo pipefail
+          checkpoint="trained/runs/ronin-10m-speed-5k/checkpoint-5000.pt"
+          test -s "$checkpoint"
+          cd trained/runs/ronin-10m-speed-5k
+          grep -F "  checkpoint-5000.pt" SHA256SUMS
+          sha256sum -c SHA256SUMS
+          cd "$GITHUB_WORKSPACE"
+          echo "Checkpoint SHA-256:"
+          sha256sum "$checkpoint"
+
+      - name: Download exact tokenizer used by training
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.TOKENIZER_ARTIFACT_NAME }}
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/RONINIA
+          run-id: ${{ env.TOKENIZER_RUN_ID }}
+          path: tokenizer
+
+      - name: Download immutable 100-question holdout
+        run: |
+          set -euo pipefail
+          mkdir -p benchmarks
+          curl --fail --silent --show-error --location \
+            https://raw.githubusercontent.com/orbitalronin94/MINIRONIN/main/benchmarks/inference-holdout-v1.jsonl \
+            -o benchmarks/inference-holdout-v1.jsonl
+          test "$(grep -cve '^$' benchmarks/inference-holdout-v1.jsonl)" -eq 100
+
+      - name: Install CPU dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
+          python -m pip install tokenizers numpy
+
+      - name: Generate 100 answers from checkpoint 5000
+        env:
+          OMP_NUM_THREADS: "2"
+          MKL_NUM_THREADS: "2"
+          OPENBLAS_NUM_THREADS: "1"
+        run: |
+          python scripts/checkpoint_holdout.py \
+            --checkpoint trained/runs/ronin-10m-speed-5k/checkpoint-5000.pt \
+            --tokenizer tokenizer/tokenizer.json \
+            --holdout benchmarks/inference-holdout-v1.jsonl \
+            --output-dir runs/checkpoint-5000-holdout \
+            --threads 2 --max-new-tokens 32 --max-new-bytes 128
+
+      - name: Verify same holdout and tokenizer as baseline
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          result=json.loads(Path("runs/checkpoint-5000-holdout/checkpoint-5000-holdout-100.json").read_text())
+          baseline_sha="3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535"
+          assert result["holdout_count"] == 100
+          assert result["holdout_sha256"] == baseline_sha, result["holdout_sha256"]
+          assert result["completed_steps"] == 5000
+          print("Same 100-question holdout verified.")
+          print("Checkpoint:", result["checkpoint_sha256"])
+          print("Tokenizer:", result["tokenizer_sha256"])
+          print("Holdout:", result["holdout_sha256"])
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ronin-10m-checkpoint-5000-holdout-100-${{ github.run_id }}
+          path: |
+            runs/checkpoint-5000-holdout/
+            benchmarks/inference-holdout-v1.jsonl
+          if-no-files-found: error
+          retention-days: 90
