@@ -276,7 +276,7 @@ jobs:
             exit 0
           fi
           sleep 300
-          next_generation=$((GENERATION + 1)
+          next_generation=$((GENERATION + 1))
           payload="$(jq -n \
             --arg ref "main" \
             --arg parent "$NEXT_PARENT_RUN_ID" \
