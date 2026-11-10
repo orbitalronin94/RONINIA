@@ -1,0 +1,209 @@
+name: RONIN-10M — 5k CPU speed trial (FP32 B2 C256)
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/train-speed-test-5k.yml"
+      - "scripts/train.py"
+      - "scripts/prepare_corpus.py"
+      - "configs/ronin-10m.json"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/train-speed-test-5k.yml"
+  workflow_dispatch:
+    inputs:
+      corpus_run_id:
+        description: "Verified MINIRONIN unified training corpus run"
+        required: true
+        default: "42523463620"
+        type: string
+      tokenizer_run_id:
+        description: "Successful standalone 8k tokenizer preparation run"
+        required: true
+        default: "42849436025"
+        type: string
+
+permissions:
+  actions: read
+  contents: read
+
+concurrency:
+  group: roninia-10m-speed-trial-5k
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate existing trainer and base model config
+        run: |
+          set -euo pipefail
+          python -m py_compile scripts/train.py scripts/prepare_corpus.py
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          config = json.loads(Path("configs/ronin-10m.json").read_text())
+          assert config["vocab_size"] == 8192
+          assert config["context_length"] == 512
+          assert config["n_layers"] == 6
+          assert config["d_model"] == 288
+          print("Base model configuration validated.")
+          PY
+
+  train:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate and verify source MINIRONIN corpus run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CORPUS_RUN_ID: ${{ inputs.corpus_run_id || '42523463620' }}
+        run: |
+          set -euo pipefail
+          [[ "$CORPUS_RUN_ID" =~ ^[0-9]+$ ]]
+          run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/MINIRONIN/actions/runs/$CORPUS_RUN_ID")"
+          test "$(jq -r .status <<<"$run")" = "completed"
+          test "$(jq -r .conclusion <<<"$run")" = "success"
+          test "$(jq -r .head_branch <<<"$run")" = "main"
+          echo "Verified MINIRONIN source run $CORPUS_RUN_ID"
+
+      - name: Download full MINIRONIN corpus artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: minironin-unified-train-corpus-${{ inputs.corpus_run_id || '42523463620' }}
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/MINIRONIN
+          run-id: ${{ inputs.corpus_run_id || '42523463620' }}
+          path: minironin-unified
+
+      - name: Verify corpus artifact and disk capacity
+        run: |
+          set -euo pipefail
+          test -s minironin-unified/train.jsonl.gz
+          test -s minironin-unified/sources.json
+          test -s minironin-unified/quality-report.json
+          test -s minironin-unified/SHA256SUMS
+          (cd minironin-unified && sha256sum -c SHA256SUMS)
+          available=$(df --output=avail -k . | tail -1 | tr -d ' ')
+          echo "Available disk: ${available} KiB"
+          test "$available" -gt 3000000
+
+      - name: Install CPU dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
+          python -m pip install tokenizers numpy
+
+      - name: Prepare exact train-only corpus
+        run: |
+          python scripts/prepare_corpus.py --input-root minironin-unified \
+            --output data/corpus/train.txt --manifest data/corpus/corpus-manifest.json \
+            --source-run-id "${{ inputs.corpus_run_id || '42523463620' }}"
+
+      - name: Verify imported corpus
+        run: |
+          set -euo pipefail
+          test -s data/corpus/train.txt
+          test -s data/corpus/corpus-manifest.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          m = json.loads(Path("data/corpus/corpus-manifest.json").read_text())
+          assert m["records_total"] > 0
+          assert m["evaluation_records_excluded"] >= 0
+          print(json.dumps(m, ensure_ascii=False, indent=2))
+          PY
+
+      - name: Download reusable 8k tokenizer
+        uses: actions/download-artifact@v4
+        with:
+          name: roninia-tokenizer-8k-${{ hashFiles('data/corpus/corpus-manifest.json') }}
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/RONINIA
+          run-id: ${{ inputs.tokenizer_run_id || '42849436025' }}
+          path: tokenizer
+
+      - name: Verify tokenizer matches exact corpus
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          corpus = json.loads(Path("data/corpus/corpus-manifest.json").read_text())
+          manifest = json.loads(Path("tokenizer/manifest.json").read_text())
+          actual = hashlib.sha256(Path("tokenizer/tokenizer.json").read_bytes()).hexdigest()
+          assert manifest["vocab_size"] == 8192
+          assert manifest["tokenizer_sha256"] == actual
+          assert manifest["corpus_sha256"] == corpus["corpus_sha256"]
+          assert manifest["corpus_bytes"] == corpus["text_bytes"]
+          assert str(manifest["source_corpus_run_id"]) == str(corpus["source_run_id"])
+          assert manifest["evaluation_records_excluded"] == corpus["evaluation_records_excluded"]
+          print(json.dumps(manifest, indent=2))
+
+      - name: Build speed-only config (context 256)
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          config = json.loads(Path("configs/ronin-10m.json").read_text())
+          config["context_length"] = 256
+          Path("configs/ronin-10m-speed-256.json").write_text(
+              json.dumps(config, indent=2) + chr(10)
+          )
+          print(json.dumps(config, indent=2))
+          PY
+
+      - name: Train 5,000 steps — FP32, batch 2, context 256, one CPU thread
+        env:
+          OMP_NUM_THREADS: "1"
+          MKL_NUM_THREADS: "1"
+          OPENBLAS_NUM_THREADS: "1"
+          OMP_PROC_BIND: CLOSE
+          OMP_PLACES: CORES
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import runpy, sys, torch
+          torch.set_num_threads(1)
+          torch.set_num_interop_threads(1)
+          sys.argv = [
+              "scripts/train.py",
+              "--config", "configs/ronin-10m-speed-256.json",
+              "--corpus", "data/corpus/train.txt",
+              "--tokenizer", "tokenizer/tokenizer.json",
+              "--output-dir", "runs/ronin-10m-speed-5k",
+              "--steps", "5000",
+              "--threads", "1",
+              "--batch-size", "2",
+              "--learning-rate", "3e-4",
+              "--warmup-steps", "200",
+              "--min-lr-ratio", "0.1",
+              "--checkpoint-every", "1000",
+              "--eval-batches", "8",
+          ]
+          runpy.run_path("scripts/train.py", run_name="__main__")
+          PY
+
+      - name: Upload 1k-step checkpoints and run metadata
+        uses: actions/upload-artifact@v4
+        with:
+          name: ronin-10m-speed-trial-5k-${{ github.run_id }}
+          path: |
+            runs/ronin-10m-speed-5k/checkpoint-*.pt
+            runs/ronin-10m-speed-5k/SHA256SUMS
+            runs/ronin-10m-speed-5k/progress.json
+            tokenizer/
+            data/corpus/corpus-manifest.json
+            configs/ronin-10m-speed-256.json
+          if-no-files-found: error
+          retention-days: 30
