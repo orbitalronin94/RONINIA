@@ -1,0 +1,137 @@
+name: RONIN-10M — train from reusable token cache
+
+on:
+  workflow_dispatch:
+    inputs:
+      preparation_run_id:
+        description: "Successful prepare-token-cache workflow run ID"
+        required: true
+        type: string
+      steps:
+        description: "Training steps"
+        required: true
+        default: "5000"
+        type: string
+
+permissions:
+  actions: read
+  contents: read
+
+concurrency:
+  group: roninia-10m-cached-training
+  cancel-in-progress: false
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate preparation run and requested steps
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PREPARATION_RUN_ID: ${{ inputs.preparation_run_id }}
+          STEPS: ${{ inputs.steps }}
+        run: |
+          set -euo pipefail
+          [[ "$PREPARATION_RUN_ID" =~ ^[0-9]+$ ]]
+          [[ "$STEPS" =~ ^[1-9][0-9]*$ ]]
+          run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/RONINIA/actions/runs/$PREPARATION_RUN_ID")"
+          test "$(jq -r .status <<<"$run")" = "completed"
+          test "$(jq -r .conclusion <<<"$run")" = "success"
+          test "$(jq -r .head_branch <<<"$run")" = "main"
+
+      - name: Download reusable token cache
+        uses: actions/download-artifact@v4
+        with:
+          name: roninia-token-cache-${{ inputs.preparation_run_id }}
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/RONINIA
+          run-id: ${{ inputs.preparation_run_id }}
+          path: token-cache
+
+      - name: Verify cache integrity and model compatibility
+        run: |
+          set -euo pipefail
+          (cd token-cache && sha256sum -c SHA256SUMS)
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          m = json.loads(Path("token-cache/token-manifest.json").read_text())
+          p = Path("token-cache/corpus-tokens.u16")
+          assert m["schema"] == "roninia-token-cache-v1"
+          assert m["dtype"] == "uint16"
+          assert m["vocab_size"] == 8192
+          assert m["token_count"] * 2 == p.stat().st_size
+          assert m["tokens_bytes"] == p.stat().st_size
+          h = hashlib.sha256()
+          with p.open("rb") as f:
+              for chunk in iter(lambda: f.read(8 * 1024 * 1024), b""):
+                  h.update(chunk)
+          assert m["tokens_sha256"] == h.hexdigest()
+          print(json.dumps({k:m[k] for k in ("token_count","tokens_bytes","corpus_sha256","tokenizer_sha256")}, indent=2))
+          PY
+
+      - name: Install CPU training dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
+          python -m pip install tokenizers numpy
+
+      - name: Build speed config
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          config = json.loads(Path("configs/ronin-10m.json").read_text())
+          config["context_length"] = 256
+          Path("configs/ronin-10m-speed-256.json").write_text(json.dumps(config, indent=2) + chr(10))
+          PY
+
+      - name: Train directly from pretokenized memmap
+        env:
+          OMP_NUM_THREADS: "1"
+          MKL_NUM_THREADS: "1"
+          OPENBLAS_NUM_THREADS: "1"
+          OMP_PROC_BIND: CLOSE
+          OMP_PLACES: CORES
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import runpy, sys, torch
+          torch.set_num_threads(1)
+          torch.set_num_interop_threads(1)
+          sys.argv = [
+              "scripts/train.py",
+              "--config", "configs/ronin-10m-speed-256.json",
+              "--tokens", "token-cache/corpus-tokens.u16",
+              "--token-manifest", "token-cache/token-manifest.json",
+              "--output-dir", "runs/ronin-10m-cached",
+              "--steps", "${{ inputs.steps }}",
+              "--threads", "1",
+              "--batch-size", "2",
+              "--learning-rate", "3e-4",
+              "--warmup-steps", "200",
+              "--min-lr-ratio", "0.1",
+              "--checkpoint-every", "1000",
+              "--eval-batches", "8",
+          ]
+          runpy.run_path("scripts/train.py", run_name="__main__")
+          PY
+
+      - name: Upload checkpoints and cache provenance
+        uses: actions/upload-artifact@v4
+        with:
+          name: ronin-10m-cached-train-${{ github.run_id }}
+          path: |
+            runs/ronin-10m-cached/checkpoint-*.pt
+            runs/ronin-10m-cached/SHA256SUMS
+            runs/ronin-10m-cached/progress.json
+            token-cache/token-manifest.json
+            configs/ronin-10m-speed-256.json
+          if-no-files-found: error
+          retention-days: 30

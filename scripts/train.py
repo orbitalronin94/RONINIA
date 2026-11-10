@@ -48,8 +48,10 @@ def evaluate(model, data, context, batches=16, batch_size=2):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", type=Path, required=True)
-    ap.add_argument("--corpus", type=Path, required=True)
-    ap.add_argument("--tokenizer", type=Path, required=True)
+    ap.add_argument("--corpus", type=Path)
+    ap.add_argument("--tokenizer", type=Path)
+    ap.add_argument("--tokens", type=Path, help="Reusable uint16 token cache")
+    ap.add_argument("--token-manifest", type=Path, help="Manifest for a reusable token cache")
     ap.add_argument("--output-dir", type=Path, default=Path("runs/ronin-10m"))
     ap.add_argument("--steps", type=int, default=50000)
     ap.add_argument("--batch-size", type=int, default=4)
@@ -59,6 +61,7 @@ def main():
     ap.add_argument("--min-lr-ratio", type=float, default=0.1)
     ap.add_argument("--checkpoint-every", type=int, default=5000)
     ap.add_argument("--eval-batches", type=int, default=16)
+    ap.add_argument("--resume", type=Path, help="Parent checkpoint to continue from")
     args = ap.parse_args()
     if min(args.steps, args.batch_size, args.threads, args.checkpoint_every, args.eval_batches) <= 0 or args.warmup_steps < 0 or not 0 < args.min_lr_ratio <= 1:
         raise SystemExit("steps, batch-size, threads, checkpoint-every and eval-batches must be positive")
@@ -67,21 +70,44 @@ def main():
     random.seed(20261110)
     torch.manual_seed(20261110)
     config = ModelConfig.load(args.config)
-    tokenizer = Tokenizer.from_file(str(args.tokenizer))
-    eos_id = tokenizer.token_to_id("<|eos|>")
-    if eos_id is None:
-        raise SystemExit("Tokenizer is missing <|eos|>")
-
     args.output_dir.mkdir(parents=True, exist_ok=True)
-    token_cache = args.output_dir / "corpus-tokens.u16"
-    token_count = 0
-    with token_cache.open("wb") as binary, args.corpus.open(encoding="utf-8") as corpus:
-        for line in corpus:
-            if line.strip():
-                ids = tokenizer.encode(line.strip()).ids
-                if ids:
-                    np.asarray(ids + [eos_id], dtype=np.uint16).tofile(binary)
-                    token_count += len(ids) + 1
+    generated_token_cache = args.tokens is None
+    if generated_token_cache:
+        if args.corpus is None or args.tokenizer is None or args.token_manifest is not None:
+            raise SystemExit("provide --corpus and --tokenizer, or --tokens with --token-manifest")
+        tokenizer = Tokenizer.from_file(str(args.tokenizer))
+        if tokenizer.get_vocab_size() != config.vocab_size:
+            raise SystemExit("tokenizer vocabulary size does not match model config")
+        eos_id = tokenizer.token_to_id("<|eos|>")
+        if eos_id is None:
+            raise SystemExit("Tokenizer is missing <|eos|>")
+        token_cache = args.output_dir / "corpus-tokens.u16"
+        token_count = 0
+        with token_cache.open("wb") as binary, args.corpus.open(encoding="utf-8") as corpus:
+            for line in corpus:
+                if line.strip():
+                    ids = tokenizer.encode(line.strip()).ids
+                    if ids:
+                        np.asarray(ids + [eos_id], dtype=np.uint16).tofile(binary)
+                        token_count += len(ids) + 1
+        tokenizer_sha256 = sha256_file(args.tokenizer)
+        corpus_sha256 = sha256_file(args.corpus)
+    else:
+        if args.corpus is not None or args.tokenizer is not None or args.token_manifest is None:
+            raise SystemExit("pretokenized mode requires --tokens and --token-manifest only")
+        token_cache = args.tokens
+        manifest = json.loads(args.token_manifest.read_text(encoding="utf-8"))
+        if manifest.get("schema") != "roninia-token-cache-v1" or manifest.get("dtype") != "uint16":
+            raise SystemExit("unsupported token cache manifest")
+        if manifest.get("vocab_size") != config.vocab_size:
+            raise SystemExit("token cache vocabulary does not match model config")
+        if sha256_file(token_cache) != manifest.get("tokens_sha256"):
+            raise SystemExit("token cache SHA-256 mismatch")
+        token_count = manifest.get("token_count")
+        if not isinstance(token_count, int) or token_count * 2 != token_cache.stat().st_size:
+            raise SystemExit("token cache size/count mismatch")
+        tokenizer_sha256 = manifest["tokenizer_sha256"]
+        corpus_sha256 = manifest["corpus_sha256"]
 
     if token_count < (config.context_length + 2) * 2:
         raise SystemExit("Corpus too small for train/validation windows")
@@ -98,6 +124,30 @@ def main():
         raise SystemExit("Insufficient tokens after deterministic 99/1 train-validation split")
 
     model = RoninLM(config)
+    resume_payload = None
+    start_step = 0
+    parent_checkpoint_sha256 = None
+    if args.resume is not None:
+        if not args.resume.is_file():
+            raise SystemExit(f"Parent checkpoint not found: {args.resume}")
+        resume_payload = torch.load(args.resume, map_location="cpu", weights_only=False)
+        if resume_payload.get("config") != config.__dict__:
+            raise SystemExit("Parent checkpoint model config does not match current config")
+        if resume_payload.get("corpus_sha256") != corpus_sha256:
+            raise SystemExit("Parent checkpoint corpus fingerprint does not match token cache")
+        if resume_payload.get("tokenizer_sha256") != tokenizer_sha256:
+            raise SystemExit("Parent checkpoint tokenizer fingerprint does not match token cache")
+        model.load_state_dict(resume_payload["model_state_dict"], strict=True)
+        start_step = int(resume_payload.get("completed_steps", 0))
+        if start_step <= 0:
+            raise SystemExit("Parent checkpoint has no valid completed_steps")
+        parent_checkpoint_sha256 = sha256_file(args.resume)
+        print(json.dumps({
+            "event": "resume_parent",
+            "parent_checkpoint": str(args.resume),
+            "parent_sha256": parent_checkpoint_sha256,
+            "parent_completed_steps": start_step,
+        }), flush=True)
     # Keep decay off biases, normalization parameters and the tied token embedding.
     decay, no_decay = [], []
     for name, parameter in model.named_parameters():
@@ -124,10 +174,20 @@ def main():
         cosine = 0.5 * (1.0 + np.cos(np.pi * progress))
         return args.min_lr_ratio + (1.0 - args.min_lr_ratio) * float(cosine)
     scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lr_factor)
+    if resume_payload is not None:
+        if "optimizer_state_dict" not in resume_payload:
+            raise SystemExit("Parent checkpoint is missing optimizer state")
+        optimizer.load_state_dict(resume_payload["optimizer_state_dict"])
+        # Continue with a conservative fixed LR while preserving AdamW moments.
+        for group in optimizer.param_groups:
+            group["lr"] = args.learning_rate
+            group["initial_lr"] = args.learning_rate
+        scheduler = torch.optim.lr_scheduler.LambdaLR(optimizer, lambda _: 1.0)
     model.train()
     history = []
     checkpoints = []
-    for step in range(1, args.steps + 1):
+    for local_step in range(1, args.steps + 1):
+        step = start_step + local_step
         starts = torch.randint(0, len(train_data) - config.context_length - 1, (args.batch_size,))
         batch = torch.stack([
             torch.from_numpy(np.asarray(
@@ -146,7 +206,7 @@ def main():
             history.append(record)
             print(json.dumps(record), flush=True)
 
-        if step % args.checkpoint_every == 0 or step == args.steps:
+        if local_step % args.checkpoint_every == 0 or local_step == args.steps:
             val_loss = evaluate(
                 model, val_data, config.context_length,
                 batches=args.eval_batches, batch_size=args.batch_size
@@ -163,8 +223,10 @@ def main():
                 "config": config.__dict__,
                 "parameter_count": model.parameter_count(),
                 "completed_steps": step,
-                "tokenizer_sha256": sha256_file(args.tokenizer),
-                "corpus_sha256": sha256_file(args.corpus),
+                "parent_checkpoint_sha256": parent_checkpoint_sha256,
+                "optimizer_continued_from_parent": resume_payload is not None,
+                "tokenizer_sha256": tokenizer_sha256,
+                "corpus_sha256": corpus_sha256,
                 "token_count": token_count,
                 "train_tokens": len(train_data),
                 "validation_tokens": len(val_data),
@@ -185,9 +247,12 @@ def main():
             )
             print(json.dumps(summary), flush=True)
 
-    token_cache.unlink(missing_ok=True)
+    if generated_token_cache:
+        token_cache.unlink(missing_ok=True)
     print(json.dumps({
-        "completed_steps": args.steps,
+        "completed_steps": start_step + args.steps,
+        "steps_this_run": args.steps,
+        "parent_checkpoint_sha256": parent_checkpoint_sha256,
         "parameters": model.parameter_count(),
         "tokens": token_count,
         "checkpoints": checkpoints,
