@@ -116,10 +116,14 @@ jobs:
         run: |
           set -euo pipefail
           if [[ "$INITIAL_PARENT" == "true" ]]; then
-            test -s parent-artifact/checkpoint-5000.pt
-            cp parent-artifact/checkpoint-5000.pt parent-artifact/checkpoint-parent.pt
+            source_checkpoint="$(find parent-artifact -type f -name 'checkpoint-5000.pt' -print -quit)"
+          else
+            source_checkpoint="$(find parent-artifact -type f -name 'checkpoint-parent.pt' -print -quit)"
           fi
-          test -s parent-artifact/checkpoint-parent.pt
+          test -n "$source_checkpoint"
+          test -s "$source_checkpoint"
+          cp "$source_checkpoint" parent-artifact/checkpoint-parent.pt
+          echo "Using parent checkpoint: $source_checkpoint"
           sha256sum parent-artifact/checkpoint-parent.pt
 
       - name: Build fixed architecture speed config
