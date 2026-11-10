@@ -1,11 +1,11 @@
-name: RONIN-10M — train from scratch
+name: RONIN-10M — train 50k from scratch with 5k evaluations
 on:
   workflow_dispatch:
     inputs:
       steps:
         description: "Training steps"
         required: true
-        default: "1000"
+        default: "50000"
         type: string
 permissions:
   contents: read
@@ -35,23 +35,26 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
-          python -m pip install tokenizers
+          python -m pip install tokenizers numpy
       - name: Verify imported corpus
         run: |
           test -s data/corpus/train.txt
           test -s data/corpus/corpus-manifest.json
-          python -c 'import json; m=json.load(open("data/corpus/corpus-manifest.json")); assert m["records_total"]>0; print(m["records_total"], m["text_bytes"], m["corpus_sha256"])'
+          python -c 'import json; m=json.load(open("data/corpus/corpus-manifest.json")); assert m["records_total"]>0; print(m["records_total"], m["synthetic_records_included"], m["text_bytes"], m["corpus_sha256"])'
       - name: Train new BPE tokenizer (16,384)
         run: python scripts/train_tokenizer.py --input data/corpus/train.txt --output tokenizer
-      - name: Train model from random initialization
+      - name: Train model from random initialization with 5k checkpoints
         run: |
           python scripts/train.py --config configs/ronin-10m.json --corpus data/corpus/train.txt \
-            --tokenizer tokenizer/tokenizer.json --steps "${{ inputs.steps }}" --threads 2
+            --tokenizer tokenizer/tokenizer.json --steps "${{ inputs.steps }}" --threads 2 \
+            --checkpoint-every 5000 --eval-batches 16
       - uses: actions/upload-artifact@v4
         with:
           name: ronin-10m-step-${{ inputs.steps }}
           path: |
-            runs/ronin-10m/
+            runs/ronin-10m/checkpoint-*.pt
+            runs/ronin-10m/SHA256SUMS
+            runs/ronin-10m/progress.json
             tokenizer/
             data/corpus/corpus-manifest.json
           if-no-files-found: error
