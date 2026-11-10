@@ -43,15 +43,23 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--input", required=True, type=Path)
     ap.add_argument("--output", required=True, type=Path)
+    ap.add_argument("--corpus-manifest", required=True, type=Path)
     ap.add_argument("--vocab-size", type=int, default=16384)
-    ap.add_argument("--progress-every-mib", type=int, default=256)
+    ap.add_argument("--progress-every-mib", type=int, default=128)
     a = ap.parse_args()
     if a.vocab_size != 16384:
         raise SystemExit("RONIN-10M fixes vocab_size=16384")
     if not a.input.is_file() or a.input.stat().st_size == 0:
         raise SystemExit(f"Missing or empty corpus: {a.input}")
+    if not a.corpus_manifest.is_file():
+        raise SystemExit(f"Missing corpus manifest: {a.corpus_manifest}")
     if a.progress_every_mib < 1:
         raise SystemExit("--progress-every-mib must be >= 1")
+
+    corpus_manifest = json.loads(a.corpus_manifest.read_text(encoding="utf-8"))
+    corpus_sha256 = corpus_manifest.get("corpus_sha256")
+    if not corpus_sha256 or a.input.stat().st_size != corpus_manifest.get("text_bytes"):
+        raise SystemExit("Corpus file does not match its preparation manifest")
 
     a.output.mkdir(parents=True, exist_ok=True)
     tok = Tokenizer(models.BPE(unk_token="<|unk|>"))
@@ -84,7 +92,10 @@ def main():
             s: tok.token_to_id(s) for s in ("<|unk|>", "<|bos|>", "<|eos|>", "<|pad|>")
         },
         "tokenizer_sha256": digest,
+        "corpus_sha256": corpus_sha256,
         "corpus_bytes": a.input.stat().st_size,
+        "source_corpus_run_id": corpus_manifest["source_run_id"],
+        "records_total": corpus_manifest["records_total"],
     }
     (a.output / "manifest.json").write_text(
         json.dumps(manifest, indent=2) + "\n", encoding="utf-8"

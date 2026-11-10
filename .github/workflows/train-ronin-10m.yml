@@ -12,6 +12,10 @@ on:
         required: true
         default: "42679698690"
         type: string
+      tokenizer_run_id:
+        description: "Successful standalone tokenizer-preparation run"
+        required: true
+        type: string
 permissions:
   actions: read
   contents: read
@@ -31,10 +35,12 @@ jobs:
         env:
           STEPS: ${{ inputs.steps }}
           CORPUS_RUN_ID: ${{ inputs.corpus_run_id }}
+          TOKENIZER_RUN_ID: ${{ inputs.tokenizer_run_id }}
         run: |
           set -euo pipefail
           [[ "$STEPS" =~ ^[1-9][0-9]*$ ]]
           [[ "$CORPUS_RUN_ID" =~ ^[0-9]+$ ]]
+          [[ "$TOKENIZER_RUN_ID" =~ ^[0-9]+$ ]]
           test "$STEPS" -le 50000
       - name: Verify source MINIRONIN corpus run
         env:
@@ -71,7 +77,7 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
           python -m pip install tokenizers numpy
-      - name: Prepare corpus (include synthetic, exclude evaluation)
+      - name: Prepare corpus for training and identity check
         run: |
           python scripts/prepare_corpus.py --input-root minironin-unified \
             --output data/corpus/train.txt \
@@ -89,37 +95,29 @@ jobs:
           assert m["evaluation_records_excluded"] >= 0
           print(json.dumps(m,ensure_ascii=False,indent=2))
           PY
-      - name: Restore tokenizer cache for this exact corpus
-        id: tokenizer-cache
-        uses: actions/cache@v4
+      - name: Download prebuilt tokenizer artifact
+        uses: actions/download-artifact@v4
         with:
-          path: tokenizer/
-          key: roninia-tokenizer-v1-${{ hashFiles('data/corpus/corpus-manifest.json') }}
-      - name: Train BPE tokenizer with streaming progress
-        if: steps.tokenizer-cache.outputs.cache-hit != 'true'
-        timeout-minutes: 180
-        run: |
-          python scripts/train_tokenizer.py --input data/corpus/train.txt --output tokenizer \
-            --progress-every-mib 256
-      - name: Verify tokenizer and corpus identity
+          name: roninia-tokenizer-${{ hashFiles('data/corpus/corpus-manifest.json') }}
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/RONINIA
+          run-id: ${{ inputs.tokenizer_run_id }}
+          path: tokenizer
+      - name: Verify tokenizer matches this exact corpus
         run: |
           python - <<'PY'
           import hashlib, json
           from pathlib import Path
+          corpus=json.loads(Path("data/corpus/corpus-manifest.json").read_text())
           manifest=json.loads(Path("tokenizer/manifest.json").read_text())
           actual=hashlib.sha256(Path("tokenizer/tokenizer.json").read_bytes()).hexdigest()
           assert manifest["vocab_size"] == 16384
           assert manifest["tokenizer_sha256"] == actual
+          assert manifest["corpus_sha256"] == corpus["corpus_sha256"]
+          assert manifest["corpus_bytes"] == corpus["text_bytes"]
+          assert manifest["source_corpus_run_id"] == corpus["source_run_id"]
           print(json.dumps(manifest, indent=2))
           PY
-      - name: Upload reusable tokenizer artifact
-        if: steps.tokenizer-cache.outputs.cache-hit != 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: roninia-tokenizer-${{ hashFiles('data/corpus/corpus-manifest.json') }}
-          path: tokenizer/
-          if-no-files-found: error
-          retention-days: 90
       - name: Train model from random initialization with 5k checkpoints
         run: |
           python scripts/train.py --config configs/ronin-10m.json --corpus data/corpus/train.txt \
