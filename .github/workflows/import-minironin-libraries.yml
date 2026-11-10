@@ -1,11 +1,11 @@
-name: RONINIA — import MINIRONIN unified non-synthetic libraries
+name: RONINIA — import MINIRONIN full synthetic-inclusive corpus
 on:
   workflow_dispatch:
     inputs:
       corpus_run_id:
         description: "Verified successful MINIRONIN unified-corpus run on main"
         required: true
-        default: "42523463620"
+        default: "42679698690"
         type: string
 permissions:
   actions: read

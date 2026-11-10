@@ -29,7 +29,7 @@ La configuración apunta a aproximadamente 9,9M parámetros entrenables. El recu
 
 ## Estado
 
-La primera entrega establece arquitectura, contrato de tokenizador, preparación de corpus, entrenamiento desde cero y pruebas de integridad. No hay todavía un checkpoint entrenado ni una afirmación de calidad. La importación inicial toma los ficheros admitidos de MINIRONIN; los datasets sintéticos y los holdouts quedan excluidos.
+La primera entrega establece arquitectura, contrato de tokenizador, preparación de corpus, entrenamiento desde cero y pruebas de integridad. No hay todavía un checkpoint entrenado ni una afirmación de calidad. La importación toma el corpus unificado grande de MINIRONIN, incluidos sus registros sintéticos; los holdouts y particiones de evaluación permanecen excluidos.
 
 ## Uso opcional
 
@@ -45,6 +45,6 @@ El desarrollo local es opcional; los workflows son la vía reproducible del proy
 
 ## Fuente de bibliotecas MINIRONIN
 
-La importación inicial utiliza el artefacto unificado de MINIRONIN generado por el run exitoso **42523463620** en `main` (8 de noviembre de 2026). El artefacto fuente está publicado como `minironin-unified-train-corpus-42523463620`, con SHA-256 del archivo de artefacto `e02fa1240a0457310cacf1406f641c720942a41abc48d83f3e4c730506b691fc`.
+La importación inicial utiliza el artefacto unificado de MINIRONIN generado por el run exitoso **42679698690** en `main` (9 de noviembre de 2026). El artefacto fuente está publicado como `minironin-unified-train-corpus-42679698690`, con un tamaño de 7.330.326.614 bytes (aprox. 6,83 GiB).
 
-La preparación de RONINIA verifica los hashes del artefacto, conserva la procedencia y excluye explícitamente filas marcadas `synthetic=true` y registros de evaluación. También se respetan las exclusiones de derechos y de holdout aplicadas por el constructor canónico de MINIRONIN. No se importan checkpoints ni datos de evaluación.
+La preparación de RONINIA verifica los hashes del artefacto, conserva la procedencia e incluye filas marcadas `synthetic=true`. Solo excluye registros identificados como evaluación/holdout; también se respetan las exclusiones de derechos aplicadas por el constructor canónico de MINIRONIN. No se importan checkpoints ni datos de evaluación.
