@@ -14,7 +14,7 @@ concurrency:
 
 jobs:
   register:
-    if: contains(github.event.workflow_run.name, 'holdout')
+    if: contains(github.event.workflow_run.name, 'holdout') && github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.head_repository.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
       # Deliberately does not checkout or execute code from the completed workflow.
