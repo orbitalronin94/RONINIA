@@ -102,7 +102,7 @@ def main():
     )
     with torch.inference_mode():
         for index, row in enumerate(rows, 1):
-            prompt = instruction + "\\n\\n" + row["question"].strip() + "\\nRespuesta:"
+            prompt = instruction + "\n\n" + row["question"].strip() + "\nRespuesta:"
             ids = tokenizer.encode(prompt).ids
             if not ids:
                 raise ValueError(f"{row['id']}: empty prompt encoding")
@@ -116,7 +116,6 @@ def main():
                 next_id = int(torch.argmax(logits[0, -1]).item())
                 if next_id == eos_id:
                     break
-                piece = tokenizer.id_to_token(next_id) or ""
                 piece_bytes = tokenizer.decode([next_id], skip_special_tokens=True).encode("utf-8")
                 if generated_bytes + len(piece_bytes) > args.max_new_bytes:
                     break
@@ -158,14 +157,14 @@ def main():
         "note": "Step-0 reference only. Rubrics are included for later scoring; this workflow does not claim an automatic quality score.",
     }
     out = args.output_dir / "baseline-holdout-100.json"
-    out.write_text(json.dumps(diary, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    out.write_text(json.dumps(diary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     manifest = {
         "checkpoint": checkpoint_path.name, "checkpoint_sha256": checkpoint_sha,
         "tokenizer_sha256": tokenizer_sha, "holdout_sha256": holdout_sha,
         "holdout_count": len(results), "completed_steps": 0, "seed": SEED,
     }
     (args.output_dir / "manifest.json").write_text(
-        json.dumps(manifest, indent=2) + "\\n", encoding="utf-8"
+        json.dumps(manifest, indent=2) + "\n", encoding="utf-8"
     )
     print(json.dumps(manifest, indent=2), flush=True)
 
