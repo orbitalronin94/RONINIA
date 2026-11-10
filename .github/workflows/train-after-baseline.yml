@@ -268,10 +268,15 @@ jobs:
           NEXT_PARENT_RUN_ID: ${{ github.run_id }}
           CACHE_RUN_ID: ${{ steps.chain.outputs.cache_run_id }}
           GENERATION: ${{ steps.chain.outputs.generation }}
+          MAX_GENERATIONS: "96"
         run: |
           set -euo pipefail
+          if (( GENERATION >= MAX_GENERATIONS )); then
+            echo "Reached safety cap: $MAX_GENERATIONS generations (480,000 cumulative steps)."
+            exit 0
+          fi
           sleep 300
-          next_generation=$((GENERATION + 1))
+          next_generation=$((GENERATION + 1)
           payload="$(jq -n \
             --arg ref "main" \
             --arg parent "$NEXT_PARENT_RUN_ID" \
