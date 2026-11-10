@@ -61,5 +61,5 @@ def main():
         "token_count":token_count,"history":history},ckpt)
     sha=sha256_file(ckpt)
     (a.output_dir/"SHA256SUMS").write_text(f"{sha}  {ckpt.name}\\n",encoding="utf-8")
-    print(json.dumps({"checkpoint":str(ckpt),"sha256":sha,"parameters":model.parameter_count(),"tokens":token_count}))
+    token_cache.unlink(missing_ok=True)\n    print(json.dumps({"checkpoint":str(ckpt),"sha256":sha,"parameters":model.parameter_count(),"tokens":token_count}))
 if __name__=="__main__": main()
