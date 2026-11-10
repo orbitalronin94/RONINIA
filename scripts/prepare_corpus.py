@@ -18,7 +18,8 @@ def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--input-root",required=True,type=Path)
     ap.add_argument("--output",required=True,type=Path)
-    ap.add_argument("--manifest",type=Path,default=Path("data/corpus/corpus-manifest.json"))\n    ap.add_argument("--source-run-id",type=int,default=42523463620)
+    ap.add_argument("--manifest",type=Path,default=Path("data/corpus/corpus-manifest.json"))
+    ap.add_argument("--source-run-id",type=int,default=42523463620)
     a=ap.parse_args()
     sources=sorted(p for p in a.input_root.rglob("*") if p.is_file() and
                    (p.name.endswith((".jsonl.gz",".jsonl",".txt"))))
