@@ -176,6 +176,18 @@ jobs:
           runpy.run_path("scripts/train.py", run_name="__main__")
           PY
 
+      - name: Upload every completed training checkpoint (survives later failures)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ronin-10m-checkpoints-${{ github.run_id }}
+          path: |
+            runs/ronin-10m-chain/checkpoint-*.pt
+            runs/ronin-10m-chain/SHA256SUMS
+            runs/ronin-10m-chain/progress.json
+          if-no-files-found: warn
+          retention-days: 90
+
       - name: Select final checkpoint and write lineage metadata
         env:
           PARENT_RUN_ID: ${{ steps.chain.outputs.parent_run_id }}
@@ -200,10 +212,12 @@ jobs:
               "cumulative_steps": int(re.search(r"checkpoint-(\d+)", latest.name).group(1)),
           }
           (out / "lineage.json").write_text(json.dumps(meta, indent=2) + chr(10))
-          assert meta["cumulative_steps"] == 10000, meta\n          print(json.dumps(meta, indent=2))
+          assert meta["cumulative_steps"] == 10000, meta
+          print(json.dumps(meta, indent=2))
           PY
 
       - name: Upload child checkpoint and lineage
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: ronin-10m-chain-${{ github.run_id }}
@@ -215,5 +229,5 @@ jobs:
             runs/ronin-10m-chain/lineage.json
             token-cache/token-manifest.json
             configs/ronin-10m-speed-256.json
-          if-no-files-found: error
-          retention-days: 30
+          if-no-files-found: warn
+          retention-days: 90
