@@ -135,6 +135,7 @@ def main():
         loss.backward()
         torch.nn.utils.clip_grad_norm_(model.parameters(), 1.0)
         optimizer.step()
+        scheduler.step()
 
         if step == 1 or step % 100 == 0:
             record = {"step": step, "train_loss": float(loss.detach()), "learning_rate": optimizer.param_groups[0]["lr"]}
