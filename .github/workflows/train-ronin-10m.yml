@@ -1,5 +1,10 @@
 name: RONIN-10M — train 50k from scratch with 5k evaluations
 on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/train.py"
+      - ".github/workflows/train-ronin-10m.yml"
   workflow_dispatch:
     inputs:
       steps:
@@ -33,9 +38,9 @@ jobs:
           python-version: "3.11"
       - name: Validate training inputs
         env:
-          STEPS: ${{ inputs.steps }}
-          CORPUS_RUN_ID: ${{ inputs.corpus_run_id }}
-          TOKENIZER_RUN_ID: ${{ inputs.tokenizer_run_id }}
+          STEPS: ${{ inputs.steps || '50000' }}
+          CORPUS_RUN_ID: ${{ inputs.corpus_run_id || '42523463620' }}
+          TOKENIZER_RUN_ID: ${{ inputs.tokenizer_run_id || '42849436025' }}
         run: |
           set -euo pipefail
           [[ "$STEPS" =~ ^[1-9][0-9]*$ ]]
@@ -45,7 +50,7 @@ jobs:
       - name: Verify source MINIRONIN corpus run
         env:
           GH_TOKEN: ${{ github.token }}
-          CORPUS_RUN_ID: ${{ inputs.corpus_run_id }}
+          CORPUS_RUN_ID: ${{ inputs.corpus_run_id || '42523463620' }}
         run: |
           set -euo pipefail
           run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/MINIRONIN/actions/runs/$CORPUS_RUN_ID")"
@@ -56,10 +61,10 @@ jobs:
       - name: Download full MINIRONIN corpus artifact directly
         uses: actions/download-artifact@v4
         with:
-          name: minironin-unified-train-corpus-${{ inputs.corpus_run_id }}
+          name: minironin-unified-train-corpus-${{ inputs.corpus_run_id || '42523463620' }}
           github-token: ${{ github.token }}
           repository: orbitalronin94/MINIRONIN
-          run-id: ${{ inputs.corpus_run_id }}
+          run-id: ${{ inputs.corpus_run_id || '42523463620' }}
           path: minironin-unified
       - name: Verify source artifact and disk capacity
         run: |
@@ -81,7 +86,7 @@ jobs:
         run: |
           python scripts/prepare_corpus.py --input-root minironin-unified \
             --output data/corpus/train.txt --manifest data/corpus/corpus-manifest.json \
-            --source-run-id "${{ inputs.corpus_run_id }}"
+            --source-run-id "${{ inputs.corpus_run_id || '42523463620' }}"
       - name: Verify imported corpus
         run: |
           test -s data/corpus/train.txt
@@ -99,7 +104,7 @@ jobs:
           name: roninia-tokenizer-8k-${{ hashFiles('data/corpus/corpus-manifest.json') }}
           github-token: ${{ github.token }}
           repository: orbitalronin94/RONINIA
-          run-id: ${{ inputs.tokenizer_run_id }}
+          run-id: ${{ inputs.tokenizer_run_id || '42849436025' }}
           path: tokenizer
       - name: Verify tokenizer matches this exact corpus
         run: |
@@ -120,12 +125,12 @@ jobs:
       - name: Train model from random initialization with 5k checkpoints
         run: |
           python scripts/train.py --config configs/ronin-10m.json --corpus data/corpus/train.txt \
-            --tokenizer tokenizer/tokenizer.json --steps "${{ inputs.steps }}" --threads 2 \
+            --tokenizer tokenizer/tokenizer.json --steps "${{ inputs.steps || '50000' }}" --threads 2 \
             --batch-size 4 --learning-rate 3e-4 --warmup-steps 2000 --min-lr-ratio 0.1 \
             --checkpoint-every 5000 --eval-batches 16
       - uses: actions/upload-artifact@v4
         with:
-          name: ronin-10m-step-${{ inputs.steps }}
+          name: ronin-10m-step-${{ inputs.steps || '50000' }}
           path: |
             runs/ronin-10m/checkpoint-*.pt
             runs/ronin-10m/SHA256SUMS
