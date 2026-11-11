@@ -2,6 +2,10 @@ name: RONIN-10M — recover 54k and continue 6k with reduced learning rate
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/train-54k-to-60k-reduced-lr.yml"
 
 permissions:
   actions: read
@@ -20,7 +24,7 @@ jobs:
       CORPUS_RUN_ID: "42523463620"
       TOKEN_CACHE_RUN_ID: "42890884432"
       EXPECTED_PARENT_SHA256: "5eb84ddd7df2512336bf7d86f590eeaf0a8007d9057ecd05167bcd4d9f963d9d"
-      EXPECTED_TOKENIZER_SHA256: "605834d0d1deea545518be54ae0936060845107b906172f6628d0ff952e57a4"
+      EXPECTED_TOKENIZER_SHA256: "605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4"
     steps:
       - uses: actions/checkout@v4
         with:
