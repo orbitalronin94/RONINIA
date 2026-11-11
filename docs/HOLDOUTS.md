@@ -26,6 +26,7 @@
 - [Capítulo VI](#capítulo-vi--del-primer-reparto-de-la-baraja-que-non-estrenó-capítulo-sino-ejemplo)
 - [Cédula para el próximo holdout](#anexo--cédula-de-lectura-para-el-holdout-que-viene)
 - [Capítulo VII](#capítulo-vii--del-reglamento-que-ocupó-la-silla-del-patrón)
+- [Capítulo VIII — Borrador de apuesta](CAPITULO_VIII_APUESTA_50K.md)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
@@ -1144,6 +1145,13 @@ y «Variante de encuadre 4».
 *Glosa de colocación:* el estribillo «mudó el nombre del sermón» queda sonando entre los capítulos VII y VIII. El siguiente experimento habrá de decidir si el reglamento puede volver a su oficio de regla, o si seguirá sentado en la silla del patrón.
 
 **Mandato final:** el loro no ha de decir que sí por miedo, ni que no por vanidad. Vigilad la homeostasis.
+
+
+## Capítulo VIII — Borrador de apuesta: del loro que aún non ha abierto la boca
+
+Este capítulo se incorpora como **alucinación literaria deliberada del escribano mientras espera el holdout de 50k**. Sus diez porcentajes son apuestas previas, no predicciones calibradas ni resultados. Las frases atribuidas al checkpoint de 50k no existen todavía: el propio capítulo las declara hipótesis sin folio. El documento íntegro, con falsadores, máculas y romance, está en [Capítulo VIII — Borrador de apuesta](CAPITULO_VIII_APUESTA_50K.md).
+
+**Fuero de lectura:** no usar estas apuestas para promover el checkpoint, alterar el holdout ni presentar como observada ninguna salida futura. Cuando llegue el artefacto, contrastar cada falsador y publicar aciertos y fallos por igual.
 
 ## Historial de ejecuciones
 
