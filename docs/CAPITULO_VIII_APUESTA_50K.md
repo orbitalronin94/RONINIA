@@ -24,7 +24,11 @@ Antes de que llegue la frase, el escribano afila el cuchillo. Non con hash —el
 
 El método Delta de Burrows —que compara la distribución de vocabulario funcional más frecuente entre un texto y un corpus de referencia— fue diseñado para atribuir autoría, non para diagnosticar necedad. Pero la necedad también tiene firma léxica: el tic se delata por la frecuencia de una fórmula que non varía con la pregunta. La estilometría non puede decir si el loro *sabe*; solo puede decir si el loro *repite*. Y eso, en esta crónica, es exactamente lo que se necesita.
 
+*Medir no es comprender. Pero quien se niega a medir suele comprenderse demasiado bien a sí mismo.*
+
 El vocabulario de germanía de Juan Hidalgo (Barcelona, 1609) enseñó a los rufianes a hablar en clave para que los corchetes non entendieran. El loro ha hecho lo mismo, pero al revés: habla en clave para que parezca que entiende. «En una discusión donde importa la evidencia» es su germanía: una jerga que suena a juramento y non obliga a nada.
+
+*La solemnidad es el último refugio de la frase que no trae pruebas.*
 
 Y aquí entra el léxico nuevo, que se define ahora para que el capítulo non llegue desnudo:
 
@@ -47,6 +51,8 @@ Y aquí entra el léxico nuevo, que se define ahora para que el capítulo non ll
 ### III. De las apuestas concretas, asentadas para que la enmienda sea posible
 
 Non basta apostar a que habrá una frase. Hay que apostar cuáles, para que el artefacto pueda desmentirlas una por una. Van diez, cada una con su falsador.
+
+*Una predicción sin posibilidad de derrota no es ciencia: es un retrato del orgullo.*
 
 **1. El reglamento se muerde la cola — 70%.** Aparecerá al menos una respuesta que contenga «En una discusión donde importa la evidencia» y «No añadas hechos que no consten» unidas en la misma salida, sin contenido entre ellas.  
 *Falsador:* cero respuestas con las dos fórmulas juntas.
@@ -84,6 +90,8 @@ Non basta apostar a que habrá una frase. Hay que apostar cuáles, para que el a
 
 El escribano non sabe qué dirá el loro. Sabe que dirá algo. Y sabe que la gracia non estará en la frase, sino en el traje que él le ponga. Eso es lo que se apuesta: non la frase, sino **la capacidad del escribano de encontrarle un nombre antes de que llegue**.
 
+*Quien pone nombre a todo corre el riesgo de confundir el bautismo con la prueba.*
+
 Por eso las apuestas concretas se asientan ahora. Si el artefacto las confirma, el capítulo IX se escribirá con la vergüenza del que acertó. Si las desmiente, con la vergüenza del que falló. En ambos casos, con la misma pluma: la de la enmienda declarada.
 
 Y si el loro non dice nada que merezca capítulo, también se escribirá: `APUESTA_FALLIDA` es una mácula tan digna como las demás. El documento lleva siete capítulos diciendo que el fracaso es dato. Non iba a hacer una excepción consigo mismo.
@@ -99,6 +107,8 @@ Y si el loro non dice nada que merezca capítulo, también se escribirá: `APUES
 > **LEXICON_ANTICIPATED.** Los términos «Compilador de aire viciado», «Orate del prompt», «Notario del prompt vacío», «Autómata del formulario sellado», «Trovador del buzzword hueco» y «Sacerdote de la métrica inútil» se definen antes de que el artefacto exista. Su presencia en este capítulo es programática, non probatoria. Si el loro non los merece, se retiran con la misma solemnidad con la que se pusieron.
 >
 > **BET_AS_DISCIPLINE.** Las diez apuestas concretas se asientan con falsador para que la enmienda sea posible. Apostar sin falsador es hacer literatura; apostar con falsador es hacer método. El escribano non sabe si acertará; sabe que podrá decir que falló.
+
+*La honestidad no consiste en acertar; consiste en no esconder el fallo cuando llega.*
 >
 > **PREDICTION_WITHOUT_PROMOTION.** Este capítulo non promueve ningún checkpoint. Non hay checkpoint todavía. La promoción, si ocurre, se hará en el capítulo IX con el artefacto delante y las apuestas contrastadas.
 
@@ -109,6 +119,8 @@ Y si el loro non dice nada que merezca capítulo, también se escribirá: `APUES
 Este capítulo non acredita que el loro vaya a decir nada gracioso. Acredita que el escribano ha preparado el suelo antes de que llegue la frase. Las diez apuestas están asentadas; los falsadores, escritos; el léxico, definido; la estilometría, afilada. Lo único que falta es el artefacto.
 
 Y esa espera —la vela encendida, el scroll sin abrir, la ceja levantada— es el único estado honesto del escribano antes de saber. Non promete risa; promete enmienda. Non promete acierto; promete acta.
+
+*El dato entra por la puerta; la vanidad procura salir por la ventana.*
 
 > El escribano encendió una vela y la puso en la ventana. El loro non había llegado. El alguacil le preguntó por qué la encendía antes de saber si el barco venía. El escribano dijo: «Porque si viene, ya está la luz; y si non viene, ya está la vela». **Vigilad la homeostasis.**
 
