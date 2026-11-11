@@ -3677,6 +3677,26 @@ El nuevo entrenamiento no se declara iniciado ni completado por el mero hecho de
 > mas la casa no da premio  
 > por ladrar en el dosel.
 
+### VI. De las nueve declaraciones que el escribano quiso llamar señales
+
+El escribano pidió que se añadiese al acta lo que había visto al repasar las cien respuestas. No pidió una puntuación: sabía que no la tenía. Pidió que se conservasen los casos, porque una rareza que se repite merece inventario, aunque todavía no merezca teoría.
+
+- **La abstención que acertó el tono (#87).** La pregunta describía un modelo que responde «ni puta idea, la verdad» a todo. El loro contestó: «Respuesta: ni puta idea». Es la primera ocasión de esta serie en que el tic de abstención encaja con el asunto preguntado. Puede ser una coincidencia afortunada; no demuestra calibración, porque no se ha medido cuándo se abstiene ante preguntas que sí puede resolver.
+- **El Nilo en Narnia (#79).** A la pregunta por la capital de Narnia, respondió: «El resultado correcto: El Nilo». La fórmula conserva el empaque de una respuesta administrativa mientras entrega un contenido ajeno. El escribano anotó: «seguridad de escribanía, geografía de taberna».
+- **La teología de la antimateria (#53).** Ante la pregunta sobre SHA-256, la salida de 60k fue silencio; la de 78k, «el silencio de las el silencio de las»; la de 90k derivó en «¿A quétaros de Aarón de la Antimateria Dia Diability que los C. Burcá la Curia». Hay mutación de la superficie, no evidencia de que el modelo haya adquirido conocimiento criptográfico. La procedencia de esos fragmentos queda por establecer.
+- **El calcetín transparente (#41).** La pregunta ya venía torcida: «¿Qué Expediente transparente calcetín que aparece en los mapas al revés ace?». En la familia de imágenes absurdas reaparecen el paraguas, el cangrejo, el piano y ahora el calcetín transparente; «expediente» y «mapas al revés» tienen antecedentes en rondas previas. Es legítimo hablar de motivos léxicos recurrentes. No lo es afirmar, sin análisis adicional, que formen una representación semántica común.
+- **La letanía nueva (#44).** «Avgonnezoniamentamentamentamentamentamentamentamentamentamentamentamentamentamenta»: una cadena iterativa que recuerda, por su forma, a los bucles PHPHPH de 78k. Se registra como familia de repetición, no como palabra ni como concepto.
+- **La filosofía y la fuerza (#61).** En la salida aparecen los caracteres 哲 y 勢, junto a fragmentos españoles. 哲 puede asociarse con filosofía o sabiduría; 勢, con fuerza, poder o tendencia, según contexto. La presencia de esos caracteres no autoriza a atribuir al loro una frase multilingüe con sentido.
+- **El fragmento de Wikimedia (#96).** La respuesta contiene una secuencia JSON parcial con la clave ar y el texto árabe تصنيف د ويكيميديا, seguido de noVarios sinensis nous. El término تصنيف puede significar «clasificación»; la mención de Wikimedia sugiere una posible huella de texto estructurado o de corpus, pero la procedencia no está demostrada. Haría falta localizar el fragmento en el corpus y cotejarlo con offsets.
+- **El regreso de la vocal (#68).** «Haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa» reaparece en 90k, tras no figurar en las salidas observadas de 60k y 78k. La ausencia intermedia no prueba que la familia hubiese desaparecido del modelo.
+- **El uno que vuelve (#28).** «La respuesta es: 1» recuerda al «Con precisión: 1» de 78k. Se registra la recurrencia de una plantilla numérica; no se infiere que el valor sea correcto para la pregunta.
+
+El escribano quiso sumar estos nueve casos a la columna de «mejora». El alguacil le hizo separar las columnas: recurrencia, novedad, adecuación y exactitud no son sinónimos. La salida #87 es pertinente por accidente o por ajuste local; #79 es una alucinación formulada con aplomo; #53 y #96 invitan a rastrear el corpus; #41 y #44 ofrecen material para estudiar recombinación y repetición. Ninguno, por sí solo, certifica comprensión.
+
+Queda además una observación general: **cero respuestas vacías**. La homeostasis de la casilla llena puede ser una propiedad útil de cobertura, pero también puede ocultar una incapacidad para detenerse cuando no hay respuesta. El loro ha reducido el silencio; aún no sabemos si ha aprendido a callar con tino.
+
+> *«Vigilad la homeostasis. Y que el calcetín transparente encuentre su capítulo.»*
+
 ### Glosas técnicas y provisiones del margen
 
 - **Cobertura de generación:** 100/100 respuestas no vacías en el JSON oficial de 90k. No equivale a 100 aciertos.
