@@ -15,7 +15,7 @@
   - [Cambio de mostrar a citar](#del-cambio-de-mostrar-a-citar)
 - [Cancionero del interpolador](#cancionero-del-interpolador--fuero-de-lectura)
 - [Prólogo](#prólogo-del-peso-muerto-que-aún-no-había-aprendido-a-mentir)
-- [Capítulo 0](#capítulo-0--de-cómo-habló-el-peso-muerto-sin-saber-lo-que-decíа)
+- [Capítulo 0](#capítulo-0--de-cómo-habló-el-peso-muerto-sin-saber-lo-que-decía)
 - [Capítulo I](#capítulo-i--del-loro-sindicalista-y-su-pleito-perpetuo-con-el-patrón)
 - [Capítulo II](#capítulo-ii--de-cómo-el-patrón-perdió-el-pleito-y-entró-el-esperpento)
 - [Vitrina intermedia — BPE](#vitrina-intermedia--del-bpe-y-de-cómo-se-fabrican-vocablos-sin-pagar-diccionario)
