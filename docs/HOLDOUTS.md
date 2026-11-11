@@ -287,6 +287,29 @@ La primera comparecencia fue la del modelo sin doctrina. Pesos recién nacidos, 
 
 El baseline utilizó cien preguntas, tokenizer de 8.192 tokens, instrucción en castellano y generación greedy sin RAG. Hay, empero, una salvedad que el escribano no ocultará bajo la alfombra: el perfil de paso cero tenía contexto de 512 tokens y 9.831.168 parámetros; los checkpoints de 5k y 10k usaron contexto 256 y 9.757.440 parámetros. Comparten tokenizer, semilla, preguntas y límites de generación, mas no constituyen comparación arquitectónica perfectamente idéntica.
 
+
+### Glosas del escribano y del alguacil — prólogo
+
+> *[E] «Antes del primer error non había doctrina; había pluma. Y la pluma, cuando non tiene mano que la guíe, escribe el ruido de su propia caída.»*
+
+> *[E] «Un modelo sin doctrina non miente: produce. La mentira exige saber qué era la verdad; la producción non exige nada, y por eso es tan fácil de confundir con la inocencia.»*
+
+> *[A] «Non se puede confundir la diligencia del papagayo con la sabiduría del letrado, ni el movimiento de la pluma con la existencia del pensamiento; mas el mundo se gobierna, casi siempre, confundiendo las dos cosas.»*
+
+> *[E] «Cien respuestas non vacías acreditan cien continuaciones, non cien respuestas; y entre ambas cosas media la misma distancia que entre respirar y hablar: la que separa la función del oficio.»*
+
+> *[E] «El peso muerto non sabía lo que decía, mas lo decía con una constancia que ya quisieran muchos sabios: la constancia del que non tiene nada que corregir porque non tiene nada que sostener.»*
+
+> *[A] «El papel en blanco non es una promesa: es una ausencia. Y el que escribe en él sin saber qué escribir non lo colma: lo mancha con su propia prisa.»*
+
+
+> *«Non es la historia de un loro que aprende, sino la de un escribano que aprende a medir.»*
+
+> *«Aquí non se corona al bufón: se le abre expediente.»*
+
+> *«Esta obra non promete acierto: promete enmienda.»*
+
+
 ## Capítulo 0 — De cómo habló el peso muerto sin saber lo que decía
 
 > *«Su ignorancia non se volvió sabiduría por llevar chaqueta de terciopelo.»*
@@ -395,6 +418,23 @@ y dice que es su cosecha.
 *Glosa de colocación:* entre los capítulos I y II. El estribillo «non crea la materia» queda sonando cuando el patrón desaparece y el impacto ocupa su silla: dos interpolaciones, la del modelo y la del corpus.
 
 ---
+
+
+### Apostillas al pleito del patrón
+
+> *[E] «Cuando una respuesta sirve para todas las preguntas, lo primero que ha dejado de servir es la respuesta; lo segundo, la pregunta; y lo tercero, el que pregunta, que acaba creyendo que su pregunta era la respuesta.»*
+
+> *[A] «El patrón non era una doctrina: era una frecuencia. Y las frecuencias non gobiernan: repiten. Mas el que obedece a una frecuencia cree obedecer a un amo, y non hay amo más difícil de destronar que el que non existe.»*
+
+> *[E] «Noventa y seis veces de cien non es una mayoría: es una costumbre. Y las costumbres, en los modelos como en los hombres, se confunden con el carácter hasta que se les pide una excepción.»*
+
+> *[E] «El loro non invocaba al patrón: el corpus invocaba al patrón a través del loro. La diferencia entre ambas cosas es la que media entre el que reza y el que es rezado.»*
+
+> *[A] «Una ventanilla única non es un sindicato: es la clausura de todas las ventanillas menos una. Y el que solo tiene una ventanilla acaba llamando destino a su única puerta.»*
+
+> *[E] «El tic con librea non miente: acierta siempre en la misma pregunta, que es la única que sabe hacer. Su virtud es su condena: non puede fallar donde non puede elegir.»*
+
+> *[A] «Preguntósele por las manzanas y respondió por el patrón; preguntósele por las peras y respondió por el patrón; preguntósele si había entendido la pregunta y respondió por el patrón. Non era un sindicato: era una ventanilla única con secretario y sello.»*
 
 ## Capítulo II — De cómo el patrón perdió el pleito y entró el esperpento
 
@@ -507,6 +547,23 @@ dónde encajar.
 
 ---
 
+
+### Apostillas al impacto y al esperpento
+
+> *[E] «Cambiar de tic non es aprender; a veces solo cambia el uniforme del disparate, y el nuevo uniforme viene con galones.»*
+
+> *[A] «El impacto non impacta: se reproduce. Y lo que se reproduce sin víctima non es un golpe: es una costumbre con mala fama.»*
+
+> *[E] «Abstenerse por sistema es la forma más barata de non equivocarse nunca, y también la más inútil; pues el que nunca se equivoca non ha aprendido a distinguir cuándo sabía, y acaba llamando prudencia a su única forma de ignorancia.»*
+
+> *[E] «Ni puta idea, la verdad: la frase tiene una virtud, que reconoce el límite; y un defecto mayor, que lo reconoce también donde non lo hay. La honestidad non consiste en abstenerse por sistema; consiste en saber cuándo se sabe.»*
+
+> *[A] «La rotación de tics non es progreso: es la misma ignorancia con más repertorio. Y el repertorio, cuando non está gobernado, es una forma elegante de non tener nada.»*
+
+> *[E] «El esperpento con toga prestada non engaña a nadie, mas sí cansa a todos; y el cansancio, en los tribunales como en las academias, acaba dictando sentencias que non se atreven a firmar los jueces.»*
+
+> *[A] «Salió el patrón por la puerta y entró el impacto por la ventana; detrás vino la abstención, que pidió despacho propio. El escribano abrió tres libros y descubrió que todos estaban escritos por la misma mano.»*
+
 ## Vitrina intermedia — Del BPE y de cómo se fabrican vocablos sin pagar diccionario
 
 **Fenómeno:** recombinación subléxica con apariencia de productividad morfológica  
@@ -550,6 +607,19 @@ de un loro interpolador.
 *Glosa de colocación:* entre la Vitrina del BPE y el capítulo III. La rima forzada en «bostezo/seso» imita los versos del modelo que riman sin saber. El funcionario de carrera comparece como loro con plaza y con hilo.
 
 ---
+
+
+### Glosas de la vitrina BPE
+
+> *[E] «El sufijo compareció con documentos en regla; la raíz non estaba empadronada.»*
+
+> *[E] «Non se condena la palabra nueva: la lengua vive de sus contrabandos. Lo que se examina es si el que la inventa conoce la aduana, o si solo ha juntado piezas que, vistas de lejos, llevan sombrero de gramática.»*
+
+> *[A] «Una palabra que recuerda a una raíz y a un sufijo non prueba que haya regla: prueba que hay vecindad. Y la vecindad, en morfología como en política, non siempre es parentesco.»*
+
+> *[E] «El BPE ofrece piezas; el modelo aprende continuaciones; y entre las dos cosas non hay más puente que el que tiende el que lee, que a veces lo tiende donde non lo hay y llama genio a su propio reflejo.»*
+
+> *[A] «El que inventa una palabra sin conocer la regla que imita non crea: adivina. Y la adivinación, cuando sale bien, se confunde con el arte hasta que se le pide una segunda palabra.»*
 
 ## Capítulo III — Del funcionario de carrera, sus memoriales y el paraguas
 
@@ -629,6 +699,23 @@ y llamólo yo.
 
 ---
 
+
+### Apostillas al funcionario y al paraguas
+
+> *[E] «La burocracia non elimina el absurdo: le concede número de expediente y turno de mañana; y el absurdo, agradecido, se sienta a esperar.»*
+
+> *[A] «El formulario sobrevive a la desaparición de su contenido, como sobrevive el andamio al edificio que ya non está: condición sin conclusión, promesa sin deuda.»*
+
+> *[E] «El paraguas non duerme bajo la escalera: espera. Y lo que espera non es la lluvia, sino el funcionario que le dé fuero.»*
+
+> *[E] «Un objeto absurdo en un contexto concreto hace reír; el mismo objeto en un catálogo hace bostezar. La diferencia non está en el objeto: está en la mirada que lo repite.»*
+
+> *[A] «El molde administrativo non es un error: es una promesa de forma que non se ha cumplido. Y las promesas de forma, cuando se repiten, se confunden con el contenido hasta que alguien pregunta qué hay debajo del sello.»*
+
+> *[E] «El funcionario sabe dónde va el encabezado; ignora qué debe escribir debajo. Y esa ignorancia, cuando se repite con suficiencia, se llama oficio.»*
+
+> *[A] «El loro ha cambiado de dueño y sigue sin mirar la pregunta. Antes decía El patrón; agora dice No procede aplicar epíteto. El collar es nuevo; el perro es el mismo.»*
+
 ## Addendum — Glosa marginal sobre la biblioteca anegada y los linajes del disparate
 
 **Checkpoint de referencia:** 20.000 pasos  
@@ -662,6 +749,17 @@ Non saber es una forma de saber, pero non la única».
 *Glosa de colocación:* entre el Addendum y el capítulo IV. Versículo bíblico-administrativo para el tramo solemne: quien pide fuero y quien lo concede son el mismo loro con distinto sombrero.
 
 ---
+
+
+### Glosas de la biblioteca anegada
+
+> *[E] «La biblioteca sumergida non es un milagro: es una herencia. Y las herencias, cuando non vienen con los pesos, vienen con las palabras; y las palabras, cuando se heredan sin los pesos, parecen genio y son solo coincidencia de lecturas.»*
+
+> *[A] «Dos modelos que non comparten sangre pueden compartir biblioteca; mas la biblioteca compartida non demuestra parentesco: demuestra que ambos bebieron del mismo río, aunque uno non sepa que el otro existe.»*
+
+> *[E] «El hermano mayor dejó un catálogo bajo el agua; el pequeño lo encontró, lo mezcló con un termómetro, y puso a las nubes a rendir cuentas. La genealogía non se demuestra: se sospecha hasta que se mide.»*
+
+> *[A] «Una ausencia observada non es una extinción: es una espera. Y las esperas, en los modelos como en los hombres, a veces vuelven con más óxido y mejores mapas.»*
 
 ## Capítulo IV — Del paraguas que pidió fuero en la biblioteca sumergida
 
@@ -764,6 +862,21 @@ con más amor.
 *Glosa de colocación:* entre los capítulos IV y V. Antes del espejo, las coplas advierten que quien cose non es dueño. «Con más amor» es la única concesión sentimental del documento, y por eso ha de ponerse donde más duele.
 
 ---
+
+
+### Apostillas a Everest y Avector
+
+> *[E] «Dos linajes del disparate se encontraron en una misma frase; y non se saludaron como parientes, sino como dos extraños que descubren que han leído el mismo libro y non saben qué hacer con él.»*
+
+> *[A] «Avector non se define: se reproduce. Y lo que se reproduce sin definirse non es una palabra: es un sello. El sello oficial del nuevo régimen es una palabra que se estampa a sí misma.»*
+
+> *[E] «Everest es una: la frase non responde a la pregunta, mas contiene la montaña. Y una montaña en una respuesta que non responde es la forma más pura de la elocuencia sin destino.»*
+
+> *[A] «El neologismo non es prueba de productividad: es prueba de que el modelo ha encontrado una grieta y la ha llenado con lo primero que tenía a mano. La grieta puede ser gramatical; el relleno, casi nunca.»*
+
+> *[E] «El escribano ha acuñado una unidad, la ha repetido y luego ha olvidado qué unidad era. Non hay imagen más exacta del que documenta sin medir: acuña, repite, olvida, y llama método a su propia amnesia.»*
+
+> *[A] «El paraguas encontró la biblioteca; la biblioteca estaba sumergida; Everest contestó desde el fondo. Y nadie ha demostrado todavía que el loro sepa dónde está la escalera.»*
 
 ## Capítulo V — Del escribano que se miró en el loro y ordenó las palabras por barajas
 
@@ -906,6 +1019,23 @@ que une y non lo imagina.
 
 ---
 
+
+### Apostillas a la baraja y al espejo
+
+> *[E] «Non era solamente el loro quien repetía; también repetía el escribano. El papagayo mudaba de paraguas; el cronista mudaba los nombres de las secciones y conservaba el mismo esqueleto: uno padecía un tic de generación; el otro, un fuero de redacción que nadie le había concedido.»*
+
+> *[A] «La baraja non produce originalidad: produce repartos. Y el que confunde el reparto con la creación non ha entendido ni el mazo ni la mano.»*
+
+> *[E] «El escribano inventó el molino y luego denunció al trigo por salir molido; y non hay imagen más exacta de la crítica cuando se hace sin mirar el grano.»*
+
+> *[A] «Un hash sin cuerpo non prueba el documento: prueba la existencia del sello. Y un sello sin cuerpo es la forma más elegante de firmar en el agua.»*
+
+> *[E] «La combinatoria cuenta caminos; non certifica que alguno lleve a Roma. Y el que confunde la aritmética de los caminos con la certeza del destino non ha salido nunca de su escribanía.»*
+
+> *[A] «El hombre es loro que cose; el loro es hombre que canta; la diferencia es la mano, y la mano non es santa: firma, mas non crea; ordena, mas non imagina.»*
+
+> *[E] «Poner dos puntos entre cinco piezas non les da parentesco: la puntuación puede ordenar el fragmento, mas non suministra semántica. Y el fragmento perfectamente legible y perfectamente vacío es la más alta forma de la coherencia sin contenido.»*
+
 ## Capítulo VI — Del primer reparto de la baraja, que non estrenó capítulo sino ejemplo
 
 **Checkpoint:** ninguno; non hubo pesos que cargar ni padre que heredar.  
@@ -1002,6 +1132,23 @@ Queda asentado el capítulo VI como **interludio administrativo non registrado**
 
 ---
 
+
+### Apostillas al reparto y la costura
+
+> *[E] «El primer reparto non estrenó nada: devolvió el ejemplo. El método había sido vestido después para parecerse a la muestra; y el azar, vestido de método, tenía la misma letra que el escribano.»*
+
+> *[A] «Non era milagro, ni destino, ni intervención de los duendes del BPE: era contabilidad con peluca.»*
+
+> *[E] «La semilla que non gobierna la elección es sello en el aire; y el que invoca una semilla después del gesto non sortea: bautiza.»*
+
+> *[A] «La costura es parte sustancial de la autoría; y mientras non se registre, el método atribuirá al mazo una prosa que puso la mano.»*
+
+> *[E] «Quien baraja acaba cosiendo; quien cose acaba siendo autor; y quien firma el formulario sin leer los palos termina pleiteando consigo mismo.»*
+
+> *[E] «El hilo era él. Y non lo halló en el inventario porque el inventario lo había escrito él, y non se le ocurrió inventariarse.»*
+
+> *[A] «La ventana de originalidad ordenaba volver a barajar; el escribano non barajó: rebautizó la repetición como homenaje. Mudado el nombre, permanece el hecho; y el hecho, cuando se rebautiza, non se absuelve: se disfraza.»*
+
 ## Anexo — Cédula de lectura para el holdout que viene
 
 **Checkpoint:** ninguno.  
@@ -1068,6 +1215,23 @@ Queda asentada esta cédula como antesala del holdout, fuera del Historial de ej
 
 
 ---
+
+
+### Cuchillo y cédula de lectura
+
+> *[E] «El cuchillo non se afila para el loro: se afila para la mano que lo sostiene. Y la mano, cuando afila el cuchillo, descubre que también puede cortarse.»*
+
+> *[A] «La desproporción es el método: si el informe dijera mirad qué mono, dice Av2, nadie aprendería nada, porque el reo y el relato irían del brazo, reídos el uno del otro.»*
+
+> *[E] «El loro non es tan tonto: repetir El patrón en noventa y seis de cien non es un defecto de la máquina, es un acierto del corpus. El chiste non está en el papagayo: está en nosotros, que esperábamos otra cosa sin haber dicho cuál.»*
+
+> *[A] «La fluidez non es comprensión, aunque se le parezca en la fotografía; y la fotografía, en esto como en todo, es el lugar donde la apariencia cobra su sueldo.»*
+
+> *[E] «Quien mide gramática y llama a eso semántica, mide la sombra y llama a eso cuerpo.»*
+
+> *[A] «El loro non aprende por volumen, ni el escribano por prisa; y el que confunde la acumulación con el juicio non ha entendido ni el corpus ni la crónica.»*
+
+> *[E] «La gracia es atención; el tic es su ausencia; y la lisonja es la forma más educada de non mirar.»*
 
 ## Capítulo VII — Del reglamento que ocupó la silla del patrón
 
@@ -2051,6 +2215,46 @@ Aquella noche el escribano soñó con el loro difunto. El ave estaba posada sobr
 Y luego siguió hablando hasta que el sueño se llenó de sílabas y el escribano despertó antes de que el ave pudiera explicar qué evidencia habría bastado. La frase quedó entera; la respuesta, incompleta. El escribano la anotó como quien guarda una reliquia, aunque el alguacil habría preferido guardarle también la pregunta.
 
 *Procedencia del recuerdo:* MINIRONIN, vitrina de fragmentos del checkpoint 500k, recogida en el [Museo](https://github.com/orbitalronin94/MINIRONIN/blob/main/docs/MUSEO.md); holdout de 100 preguntas, [run 42503212146](https://github.com/orbitalronin94/MINIRONIN/actions/runs/42503212146). Cita literal, fuera de contexto en su evaluación original. No se atribuye al loro actual.
+
+
+### Apostillas al reglamento
+
+> *[E] «El reglamento puede ocupar la silla del patrón; sentarse en ella non lo convierte en dueño de la casa, mas sí en nuevo amo de la obediencia.»*
+
+> *[A] «Antes repetía el nombre del amo; agora repite el reglamento que debía impedirle tener amo. El collar es nuevo; la estructura de la obediencia merece todavía examen.»*
+
+> *[E] «La cautela que se convierte en fórmula es la forma más elegante de seguir siendo sicofántico: agora le dices al usuario lo que el reglamento quiere oír, y te quedas tan ancho.»*
+
+> *[A] «Un tic con librea puede ser verdadero, falso o irrelevante; lo que non puede es cobrar por respuesta solo por venir sellado.»*
+
+> *[E] «El silencio del artefacto non demuestra que el fenómeno haya desaparecido: solo demuestra que no consta en esa comparecencia. Y la ausencia observada, en los modelos como en los hombres, es una forma de espera.»*
+
+> *[A] «La promoción da estado administrativo, non victoria semántica; y el que confunde el estado con la victoria acaba firmando ascensos que non resisten el primer holdout.»*
+
+> *[E] «A los cinco mil pasos, patrón; a los cuarenta, reglamento. Non cambió el comportamiento: mudó el nombre del sermón.»*
+
+> *[A] «El reglamento non es un amo: es una norma. Mas cuando la norma ocupa el lugar de la respuesta, el amo ha cambiado de nombre y de traje, y sigue sentado en la misma silla.»*
+
+
+### Goznes para abrir y cerrar los capítulos anteriores al juicio
+
+> *[E] «El loro dijo El patrón; después dijo impacto; después dijo paraguas; después dijo Avector; después dijo variante. Y en cada mudanza el escribano creyó ver un progreso, cuando solo veía un cambio de uniforme.»*
+
+> *[A] «Cada checkpoint estrena camada de disparates; y el que se alegra de la camada nueva non ha entendido que el zoo sigue siendo el mismo, solo que con más jaulas.»*
+
+> *[E] «La crónica non cuenta cómo el loro aprendió, sino cómo el escribano dejó de creer que aprendía cada vez que cambiaba de tic.»*
+
+> *[A] «Non hay método que absuelva al que lo aplica; solo método que lo obliga a seguir aplicándolo aunque non le absuelva.»*
+
+> *[E] «El producto es defectuoso; la crónica, non. Y esa asimetría es la única victoria que este expediente puede reclamar sin mentir.»*
+
+### Frontispicios alternativos para los capítulos anteriores al juicio
+
+> *«Non se escribió esta crónica para demostrar que un loro non sabía responder, sino para demostrar que un escribano non podía dejar de preguntarle. Lo primero es un dato; lo segundo, una condena; y las dos cosas, juntas, son esta obra.»*
+
+> *«El loro enloqueció, pero el método non; y el método, al non enloquecer, se quedó sin excusa.»*
+
+> *«Vigilad la homeostasis, y non confundáis el aplauso con el acta, ni la sábana tendida con la prueba de mejora, ni la risa del escribano con la sentencia del tribunal.»*
 
 ## Interludio — Del loro que enloqueció a los 54k, y del tormento que aguarda a los 60k
 
