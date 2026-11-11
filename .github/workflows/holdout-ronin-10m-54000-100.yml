@@ -1,0 +1,142 @@
+name: RONIN-10M — official 100-prompt holdout at 54k
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/holdout-ronin-10m-54000-100.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+concurrency:
+  group: roninia-official-holdout-54000-100
+  cancel-in-progress: false
+
+jobs:
+  holdout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      SOURCE_RUN_ID: "43025252739"
+      TOKENIZER_RUN_ID: "42849436025"
+      EXPECTED_CHECKPOINT_SHA256: "5eb84ddd7df2512336bf7d86f590eeaf0a8007d9057ecd05167bcd4d9f963d9d"
+      EXPECTED_TOKENIZER_SHA256: "605834d0d1deea545518be54ae0936060845107b906172f6628d0ff952e57a4"
+      EXPECTED_PROMPT_SHA256: "79ac322e107fd47ee6f03eb13f83b50952fae4b574f9bf6b763e5c4cc47d11ba"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Verify source run and recovery artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/RONINIA/actions/runs/$SOURCE_RUN_ID")"
+          test "$(jq -r .status <<<"$run")" = "completed"
+          test "$(jq -r .conclusion <<<"$run")" = "cancelled"
+          artifacts="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/RONINIA/actions/runs/$SOURCE_RUN_ID/artifacts")"
+          echo "$artifacts" | jq -e '.artifacts[] | select(.name == "ronin-10m-checkpoints-60k-43025252739" and .expired == false)' >/dev/null
+
+      - name: Download recovery artifact containing 54k checkpoint
+        uses: actions/download-artifact@v4
+        with:
+          name: ronin-10m-checkpoints-60k-${{ env.SOURCE_RUN_ID }}
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/RONINIA
+          run-id: ${{ env.SOURCE_RUN_ID }}
+          path: recovered
+
+      - name: Verify exact 54k checkpoint SHA-256 and step count
+        id: checkpoint
+        run: |
+          set -euo pipefail
+          mapfile -t candidates < <(find recovered -type f -name 'checkpoint-54000.pt' -size +0c)
+          test "${#candidates[@]}" -eq 1
+          checkpoint="${candidates[0]}"
+          actual="$(sha256sum "$checkpoint" | awk '{print $1}')"
+          test "$actual" = "$EXPECTED_CHECKPOINT_SHA256"
+          python - "$checkpoint" <<'PY'
+          import sys,torch
+          p=torch.load(sys.argv[1],map_location="cpu",weights_only=False)
+          assert int(p.get("completed_steps",-1))==54000
+          assert p.get("tokenizer_sha256")=="605834d0d1deea545518be54ae0936060845107b906172f6628d0ff952e57a4"
+          print({"completed_steps":p["completed_steps"],"validation_loss":p.get("validation_loss"),"parameter_count":p.get("parameter_count")})
+          PY
+          echo "path=$checkpoint" >> "$GITHUB_OUTPUT"
+          echo "Verified checkpoint SHA-256: $actual"
+
+      - name: Download exact training tokenizer
+        uses: actions/download-artifact@v4
+        with:
+          name: roninia-tokenizer-8k-0f83e1bf4ca6aa7c08cb412d3bf48a5a7de961d012fd4abfe6f648e7ed029617
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/RONINIA
+          run-id: ${{ env.TOKENIZER_RUN_ID }}
+          path: tokenizer
+
+      - name: Verify tokenizer and unchanged 100-prompt sample
+        run: |
+          set -euo pipefail
+          test -s tokenizer/tokenizer.json
+          tokenizer_sha="$(sha256sum tokenizer/tokenizer.json | awk '{print $1}')"
+          test "$tokenizer_sha" = "$EXPECTED_TOKENIZER_SHA256"
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          p=Path("benchmarks/ronin-random-100-v1.jsonl")
+          raw=p.read_bytes()
+          assert hashlib.sha256(raw).hexdigest()=="79ac322e107fd47ee6f03eb13f83b50952fae4b574f9bf6b763e5c4cc47d11ba"
+          rows=[json.loads(x) for x in raw.decode().splitlines() if x.strip()]
+          assert len(rows)==100 and len({r["id"] for r in rows})==100
+          assert all(r.get("split")=="inference_only" and r.get("question") for r in rows)
+          print("Verified same 100 unique inference-only prompts as the 50k sample.")
+          PY
+
+      - name: Run all 100 prompts against official 54k checkpoint
+        env:
+          OMP_NUM_THREADS: "2"
+          MKL_NUM_THREADS: "2"
+          OPENBLAS_NUM_THREADS: "1"
+        run: |
+          python scripts/checkpoint_holdout.py \
+            --checkpoint "${{ steps.checkpoint.outputs.path }}" \
+            --tokenizer tokenizer/tokenizer.json \
+            --holdout benchmarks/ronin-random-100-v1.jsonl \
+            --output-dir runs/random-54000-holdout \
+            --expected-steps 54000 \
+            --threads 2 --max-new-tokens 64 --max-new-bytes 256
+
+      - name: Verify 100 responses and immutable identity
+        run: |
+          python - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          p=Path("runs/random-54000-holdout/checkpoint-54000-holdout-100.json")
+          r=json.loads(p.read_text())
+          assert r["completed_steps"]==54000
+          assert r["checkpoint_sha256"]=="5eb84ddd7df2512336bf7d86f590eeaf0a8007d9057ecd05167bcd4d9f963d9d"
+          assert r["holdout_count"]==100 and len(r["results"])==100
+          assert r["holdout_sha256"]=="79ac322e107fd47ee6f03eb13f83b50952fae4b574f9bf6b763e5c4cc47d11ba"
+          print(json.dumps({
+            "completed_steps":r["completed_steps"],
+            "checkpoint_sha256":r["checkpoint_sha256"],
+            "tokenizer_sha256":r.get("tokenizer_sha256"),
+            "holdout_count":r["holdout_count"],
+            "holdout_sha256":r["holdout_sha256"],
+            "empty_answers":sum(not (x.get("answer") or "").strip() for x in r["results"]),
+            "classification":"diagnostic inference sample; not a scored promotion benchmark and not for the narrative book"
+          },indent=2))
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ronin-10m-official-holdout-54000-100-${{ github.run_id }}
+          path: |
+            runs/random-54000-holdout/
+            benchmarks/ronin-random-100-v1.jsonl
+          if-no-files-found: error
+          retention-days: 90
