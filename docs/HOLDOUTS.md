@@ -2080,24 +2080,15 @@ que juzga al loro y se juzga.
 
 *Glosa de colocación:* entre los capítulos XII y XIII (que tendrá El holdout ) El estribillo «a la sexta con la cuerda» debe quedar sonando cuando el lector pase al capítulo siguiente, donde el alguacil ratificará o anulará el proceso.
 
-## Historial de ejecuciones
+## Historial de ejecuciones — registro completo de GitHub Actions
 
-*Confesión del registro:* la tabla no refleja las comparecencias intermedias porque sus runs no llevan «holdout» en el nombre. El índice completo de comparecencias es el BARE, no esta tabla. Se conserva como testimonio del mecanismo de registro, no como registro exhaustivo del contenido.
+Este registro incluye **todas las ejecuciones completadas en `main` del repositorio**, no solo los holdouts: entrenamiento, tokenización, evaluación, preflight, fallos y reintentos. Los identificadores y artefactos se conservan aunque una ejecución falle. La fecha figura como «—» cuando no se ha recuperado de la API y no debe inferirse.
 
-| Fecha | Evaluación | Run ID | Resultado | Ejecución | Artefactos | Commit |
-|---|---|---:|---|---|---|---|
-<!-- HOLDOUT-INDEX-START -->
-| 2026-11-11 | RONIN-10M — 50k inference holdout | 43019963290 | success | [Ver ejecución](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290) | [holdout 50k — 13854621810](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290/artifacts/13854621810) | `a57054ccef22564ae168c541574e584ada42d962` |
+El bloque histórico se reconstruyó con los runs citados en los capítulos y en la cadena de custodia. No se inventan ejecuciones ausentes: la tabla declara el inventario verificable disponible en esta crónica. Los runs anteriores al cambio del listener pueden requerir una reconciliación adicional con el historial completo de Actions si no quedaron citados en los documentos.
 
-| 2026-11-10 | RONIN-10M — step-0 baseline inference holdout | 42874585777 | success | [Ver ejecución](https://github.com/orbitalronin94/RONINIA/actions/runs/42874585777) | [ronin-step0-baseline.zip](https://github.com/orbitalronin94/RONINIA/actions/runs/42874585777) | — |
+El workflow `.github/workflows/update-holdout-registry.yml` escucha ahora **todo `workflow_run: completed`** de `main` en este repositorio. Registra nombre, ruta del workflow, evento, ID, conclusión, commit y artefactos; deduplica por Run ID. Excluye únicamente su propia ejecución para evitar que el escribano se registre a sí mismo en un bucle infinito. No hace checkout ni ejecuta código de la ejecución terminada.
 
-<!-- HOLDOUT-INDEX-END -->
-
-## Del mecanismo del registro, para que nadie culpe al escribano
-
-El workflow `.github/workflows/update-holdout-registry.yml` escucha los eventos `workflow_run: completed`. Solo ejecuta el registro si el nombre de la ejecución contiene `holdout`. Por ello no aparecen aquí las ejecuciones de entrenamiento/evaluación intermedias de 5k, 10k, 20k, 30k y 40k, cuyos nombres no satisfacen ese filtro. El índice completo de comparecencias y su cadena de custodia están en el BARE, más arriba; esta tabla conserva únicamente las ejecuciones admitidas por el mecanismo automático. Consulta el BARE para el registro del contenido y esta tabla para el testimonio del listener.
-
-El actualizador no descarga ni ejecuta los artefactos ni hace checkout del código de la ejecución que acaba de terminar. Para que una evaluación futura aparezca aquí automáticamente, el nombre del workflow debe incluir la palabra `holdout` (por ejemplo, `RONIN-10M — checkpoint holdout`).
+Los runs fallidos `43022253427` y `43022290341` se conservan como fallos, con sus artefactos de recuperación. El run `43025252739` estaba `in_progress` al verificarse este registro; aparecerá de nuevo con su conclusión final cuando termine, mediante el listener.
 
 ## Fuero de lectura y reglas contra el embuste
 
