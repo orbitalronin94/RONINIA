@@ -1,10 +1,6 @@
 name: RONIN-10M — continue 78k to 90k (+12k, verified parent)
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/train-78k-to-90k.yml"
   workflow_dispatch:
 
 permissions:
