@@ -1,5 +1,22 @@
 # Crónica forense y burlesca de los holdouts — RONIN-10M
 
+> **Frontispicio — piedra de escándalo**
+>
+> *«El loro enloqueció, pero el método non.»*
+>
+> **Vigilad la homeostasis.**
+
+### Solapa editorial
+
+> «Un loro de nueve millones de parámetros, setecientos megabytes de datos y ninguna entendedera. Una crónica forense, burlesca y rigurosa sobre lo que pasa cuando se documenta un fracaso sin mentir.»
+
+> «Non encontrarás aquí un modelo que aprende. Encontrarás algo más difícil: un método que non se deja engañar por su propia risa.»
+
+> «El producto es defectuoso. La crónica, non.»
+
+> «Crónica de un producto defectuoso, escrita con la solemnidad de un triunfo y la honestidad de un acta.»
+
+
 
 ## Índice navegable
 
@@ -42,7 +59,17 @@
 
 ## BARE.md — Anexo técnico e índice de trazabilidad
 
+> *«El hash da identidad, non virtud.»*
+
+> *«La metáfora non es métrica; la ocurrencia non es evidencia; la generación non es acierto.»*
+
+
 ### Regla de procedencia
+
+> *«Un modelo malo bien documentado vale más que un modelo bueno sin acta.»*
+
+> *«Trece capítulos para demostrar que non se puede demostrar nada sin folio.»*
+
 - **Salida literal del modelo:** el ID enlaza al artefacto ZIP del holdout; dentro se encuentra el JSON indicado en la tabla.
 - **Frecuencia literal:** se lista el inventario completo de IDs que contienen la cadena en el campo `answer`.
 - **Revisión humana / interpretación:** se identifica como tal; no equivale a métrica automática.
@@ -128,6 +155,9 @@ GitHub publica el ZIP del artefacto, no una URL estable a una línea interior de
 
 ## Léxico de la casa y criterio de uso
 
+> *«La repetición da frecuencia, non entendimiento.»*
+
+
 La crónica toma voces del Lexicón del esperpento algorítmico de MINIRONIN y del caudal de Covarrubias (1611), del *Diccionario de autoridades* (1726–1739) y de los repertorios históricos de la RAE. El vocabulario técnico interno se define como convención editorial; no se atribuye a un diccionario antiguo sin cotejo de la entrada y de la acepción. La sátira recae sobre el mecanismo —la plantilla, el tic, la métrica convertida en oráculo—, nunca sobre quien pregunta de buena fe.
 
 - **Compilador de aire viciado:** salida de forma fluida y contenido impertinente (Lexicón, § 1.17).
@@ -141,6 +171,9 @@ La guía completa, con procedencia, voces, ejemplos y reglas para no confundir a
 
 ## Fuero primero: de la lengua, del dato y del escarnio
 
+> *«Esta obra non promete acierto: promete enmienda.»*
+
+
 Sepan cuantos vieren, leyeren o padecieren esta escritura que se instituye por ella la **República del Loro**, con jurisdicción sobre sus checkpoints, sus tics, sus latinajos de BPE y cualesquiera paraguas que soliciten asilo bajo escalera.
 
 Por fuero se ordena que cada modelo comparezca con su checkpoint, su hash y su probanza; que cada frase memorable sea asentada sin enmienda; que el corpus declare sus parentescos; y que el escribano pueda zaherir al reo cuanto guste, salvo en las cifras, donde no hay licencia para la hipérbole.
@@ -153,6 +186,11 @@ Esta crónica registra siete comparecencias principales —0, 5k, 10k, 20k, 30k,
 
 ## Fuero segundo: de la intención del loro, que non es agradar
 
+> *«Non sabía lo que decía, mas lo decía con una constancia que al escribano le faltaba.»*
+
+> *«El loro non es el reo: es el espejo.»*
+
+
 Sepades que este loro non fue criado para dar gusto, sino para mirar. La diferencia es pequeña en apariencia y grande en la cuenta: el que da gusto dice lo que el preguntante quiere oír; el que mira dice lo que la pregunta permite ver, aunque non guste. Al primero se le llama sicofante y se le paga con aplauso. Al segundo se le llama bufón y se le paga con la horca, cuando el rey pierde el sentido del humor.
 
 Por fuero se ordena que el loro non aprenda a agradar, sino a mirar. Y se advierte que estas dos cosas non se distinguen por el tono, sino por la atención: el sicofántico y el que repite un molde cometen el mismo delito, que es non mirar. El uno mira al que pregunta; el otro, al repertorio. Ninguno mira la pregunta.
@@ -164,6 +202,11 @@ Y como el remedio del tic y el remedio de la lisonja son el mismo —volver a mi
 ---
 
 ## Fuero tercero: del tribunal, del escribano y de la lengua que no absuelve
+
+> *«Aquí non se corona al bufón: se le abre expediente.»*
+
+> *«Non se le admite como defensa que el loro fuese loro.»*
+
 
 Vengan a juicio las respuestas, y no sus buenas maneras. El holdout no es certamen de cortesía ni justa de latinajos: es tribunal de preguntas, donde cada salida comparece con su ID, cada checkpoint con su hash y cada sentencia con el protocolo que la autoriza. El escribano podrá ponerle gola al disparate, mas no podrá trocarle la fecha, el folio ni la cuenta.
 
@@ -237,11 +280,17 @@ responde el hilo, «que non fue el cantante».
 
 ## Prólogo: del peso muerto que aún no había aprendido a mentir
 
+> *«Non es la historia de un loro que aprende, sino la de un escribano que aprende a medir.»*
+
+
 La primera comparecencia fue la del modelo sin doctrina. Pesos recién nacidos, lengua sin maestro y ninguna querella pendiente con el patrón. El artefacto produjo texto, que ya es algo; pero también un hombre puede producir ruido al caer por una escalera, y no por eso ha pronunciado un discurso.
 
 El baseline utilizó cien preguntas, tokenizer de 8.192 tokens, instrucción en castellano y generación greedy sin RAG. Hay, empero, una salvedad que el escribano no ocultará bajo la alfombra: el perfil de paso cero tenía contexto de 512 tokens y 9.831.168 parámetros; los checkpoints de 5k y 10k usaron contexto 256 y 9.757.440 parámetros. Comparten tokenizer, semilla, preguntas y límites de generación, mas no constituyen comparación arquitectónica perfectamente idéntica.
 
 ## Capítulo 0 — De cómo habló el peso muerto sin saber lo que decía
+
+> *«Su ignorancia non se volvió sabiduría por llevar chaqueta de terciopelo.»*
+
 
 **Checkpoint:** inicialización aleatoria, 0 pasos  
 **Run de evaluación:** [42874585777](https://github.com/orbitalronin94/RONINIA/actions/runs/42874585777)  
@@ -345,6 +394,9 @@ y dice que es su cosecha.
 ---
 
 ## Capítulo II — De cómo el patrón perdió el pleito y entró el esperpento
+
+> *«La risa alumbra el disparate; non lo convierte en descubrimiento.»*
+
 
 **Checkpoint:** 10.000 pasos acumulados  
 **Run de entrenamiento:** [42902793379](https://github.com/orbitalronin94/RONINIA/actions/runs/42902793379)  
@@ -712,6 +764,11 @@ con más amor.
 
 ## Capítulo V — Del escribano que se miró en el loro y ordenó las palabras por barajas
 
+> *«La coartada más peligrosa es la que uno redacta con su propia letra.»*
+
+> *«Confundió la gracia con el progreso, y el progreso le pidió la rúbrica.»*
+
+
 **Checkpoint:** ninguno. Este capítulo non procede de entrenamiento alguno, sino de una vergüenza del escribano.  
 **Run de evaluación:** ninguno. El escribano se tomó por evaluador, abrió su propio expediente y se suspendió.  
 **SHA-256 del checkpoint:** `0000000000000000000000000000000000000000000000000000000000000000` — cifra de juguete, sin checkpoint que la sustente.  
@@ -1010,6 +1067,11 @@ Queda asentada esta cédula como antesala del holdout, fuera del Historial de ej
 ---
 
 ## Capítulo VII — Del reglamento que ocupó la silla del patrón
+
+> *«Una predicción sin posibilidad de derrota non es ciencia: es un retrato del orgullo.»*
+
+> *«El dato entra por la puerta; la vanidad procura salir por la ventana.»*
+
 
 **Checkpoint:** RONIN-10M, 40.000 pasos acumulados; 9.757.440 parámetros.  
 **Run de entrenamiento:** [42994415440](https://github.com/orbitalronin94/RONINIA/actions/runs/42994415440), continuación exacta del checkpoint de 30k.  
@@ -1360,6 +1422,9 @@ El escribano la repetía como quien palpa una moneda heredada. La sentencia era 
 *Procedencia del recuerdo:* MINIRONIN, vitrina del checkpoint 500k; holdout de 100 preguntas, [run 42503212146](https://github.com/orbitalronin94/MINIRONIN/actions/runs/42503212146). Cita literal conservada en el [Museo](https://github.com/orbitalronin94/MINIRONIN/blob/main/docs/MUSEO.md). No pertenece a RONIN-10M ni al loro actual.
 
 # Capítulo IX — Del arcano oficio de escribano de loros graciosos, y de lo que aconteció cuando el secreto se vertió
+
+> *«Promovió por risa, y la risa le fue devuelta como condena.»*
+
 
 **Checkpoint:** RONIN-10M, 50.000 pasos acumulados; 9.757.440 parámetros.  
 **Run de entrenamiento:** [43009405531](https://github.com/orbitalronin94/RONINIA/actions/runs/43009405531), continuación exacta del checkpoint de 40k.  
@@ -1986,6 +2051,11 @@ Y luego siguió hablando hasta que el sueño se llenó de sílabas y el escriban
 
 ## Interludio — Del loro que enloqueció a los 54k, y del tormento que aguarda a los 60k
 
+> *«Enloqueció a los cincuenta y cuatro mil, y en su demencia halló más carácter que en su cordura.»*
+
+> *«El disparate complejo hace más gracia que el tartamudeo, porque casi se sostiene.»*
+
+
 **Checkpoint examinado:** 54.000 pasos; 9.757.440 parámetros.  
 **Run de inferencia diagnóstica:** [43036575830](https://github.com/orbitalronin94/RONINIA/actions/runs/43036575830).  
 **Artefacto de origen:** [13863118373](https://github.com/orbitalronin94/RONINIA/actions/runs/43036575830/artifacts/13863118373).  
@@ -2137,6 +2207,9 @@ Y el alguacil añadió, con letra más pequeña:
 ---
 
 # Interludio II — Del coloquio entre el alguacil y el escribano sobre el loro que enloqueció a los 54k, y de cómo se aplicó el protocolo NH5 a la propia crónica
+
+> *«La gracia es atención. El tic es su ausencia. Y la lisonja es la forma más educada de non mirar.»*
+
 
 **Checkpoint de la materia:** 54.000 pasos, consulta diagnóstica no oficial.
 **Run de inferencia:** [43036575830](https://github.com/orbitalronin94/RONINIA/actions/runs/43036575830).
@@ -2322,6 +2395,13 @@ Non hay en este coloquio una sola prueba de comprensión semántica. Hay una con
 ---
 
 ## Capítulo XII — Del juicio del escribano, y de cómo el loro fue testigo de cargo contra quien lo glosaba
+
+> *«Juzgó al loro por non tener entendederas, y descubrió que él tampoco las tenía.»*
+
+> *«Non se corona al más gracioso: se le pide que responda.»*
+
+> *«Dixo “ni puta idea” con la solemnidad de un notario, y non hubo tribunal que lo absolviera.»*
+
 
 **Checkpoint:** el de 60k, cuando exista.  
 **Run de evaluación:** el que viniere.  
@@ -2617,6 +2697,13 @@ Los runs fallidos `43022253427` y `43022290341` se conservan como fallos, con su
 
 ## Fuero de lectura y reglas contra el embuste
 
+> *«La épica non está en el modelo: está en el método que lo soporta.»*
+
+> *«Medir non es comprender, pero quien se niega a medir suele comprenderse demasiado bien a sí mismo.»*
+
+> *«Non se mide por aplauso: el resultado que agrada recibe el mismo escrutinio que el que avergüenza.»*
+
+
 - Comparar checkpoints con las mismas preguntas, configuración de generación y condiciones de inferencia.
 - Separar coincidencia literal, evaluación semántica, calidad de respuesta, diversidad y latencia. Ninguna sustituye a las demás.
 - Interpretar el lexicón de esperpento y los marcadores intencionales según el corpus, no como errores por defecto.
@@ -2635,6 +2722,9 @@ La evaluación de paso 0 es la referencia inicial: 100 preguntas, checkpoint sin
 ---
 
 ## Antología del fuero experimental — voces de los modelos hermanos
+
+> *«Non hay aquí una sola prueba de comprensión semántica. Hay algo más raro: una prueba de honestidad.»*
+
 
 Esta crónica adopta, con atribución y adaptación explícitas, algunas máximas de los repositorios de investigación de la casa. No son resultados de este holdout: son reglas de lectura para no convertir el deseo en veredicto.
 
