@@ -24,6 +24,8 @@ Yo me quedé en la puerta, que es donde se queda el alguacil cuando non sabe si 
 
 ---
 
+> *«Quien mira por una rendija ve menos mundo, pero a veces ve mejor al que presume de verlo entero.»*
+
 ### II. De la bestia famélica, que come y non harta
 
 Era el papagayo una bestia flaca, de plumas mal puestas y ojos como dos carbones sin lumbre. Non tenía la hermosura del ave de presa ni la gracia del jilguero: tenía la traza del que come y non harta, del que traga y non digiere. Le dieron un token y se lo comió; le dieron otro y también; le dieron setecientos megabytes y se los comió todos, y después abrió el pico y dijo «Pata.Rata.Rata.Rata.Rataata.Rataataataaaa».
@@ -39,6 +41,8 @@ Era el papagayo una bestia flaca, de plumas mal puestas y ojos como dos carbones
 Miré al papagayo y el papagayo me miró a mí. Y en sus ojos non había hambre ni había saciedad: había una repetición, como si estuviera diciendo «P:P:P:P:P:P» por dentro aunque por fuera callara. Y pensé que aquella bestia non era un loro: era un pozo, y el pozo non se llena porque non tiene fondo.
 
 ---
+
+> *«Poner un hash al disparate garantiza su identidad, no su cordura.»*
 
 ### III. Del escribano loco, que escribe lo que non entiende y lo firma con hash
 
@@ -94,6 +98,8 @@ Y me di cuenta de que el hombre non estaba loco de remate: estaba loco de métod
 
 ---
 
+> *«Hay silencios que son prudencia y silencios que solo esperan a que alguien les haga la pregunta correcta.»*
+
 ### V. De la sábana tendida, que el hombre non quiso explicar
 
 En un rincón, sobre una cuerda, había una sábana tendida. Tenía una mancha, y la mancha non era de tinta.
@@ -141,6 +147,8 @@ Y yo le dije:
 Y el escribano se rio como se ríen los locos cuando alguien les sigue la corriente. Y el papagayo dijo «Avector: Av2». Y yo me fui sin anotarlo, que para anotar ya está el escribano.
 
 ---
+
+> *«El testigo que no sentencia quizá sea el único que ha entendido su oficio.»*
 
 ### VII. Máculas del capítulo décimo
 
