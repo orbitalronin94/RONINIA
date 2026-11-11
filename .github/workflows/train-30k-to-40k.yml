@@ -1,10 +1,10 @@
-name: RONIN-10M — continue 20k to 30k (reuse exact checkpoint and token cache)
+name: RONIN-10M — continue 30k to 40k (reuse exact checkpoint and token cache)
 
 on:
   push:
     branches: [main]
     paths:
-      - ".github/workflows/train-20k-from-20k.yml"
+      - ".github/workflows/train-30k-to-40k.yml"
   workflow_dispatch:
 
 permissions:
@@ -12,7 +12,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: roninia-10m-continue-20000-to-30000
+  group: roninia-10m-continue-30000-to-40000
   cancel-in-progress: false
 
 jobs:
@@ -20,9 +20,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 420
     env:
-      PARENT_RUN_ID: "42973299789"
+      PARENT_RUN_ID: "42984964609"
       TOKEN_CACHE_RUN_ID: "42890884432"
-      EXPECTED_PARENT_SHA256: "53528c3002ba07fe493815b9bfa4bd69bdc08cf985f77a4e59958ee2b3344cc4"
+      EXPECTED_PARENT_SHA256: "140230697a4df69f43c2cc4f6dc95ba2cc596b095532d3e171c486891d26bc4a"
     steps:
       - uses: actions/checkout@v4
         with:
@@ -44,10 +44,10 @@ jobs:
           test "$(jq -r .status <<<"$run")" = "completed"
           test "$(jq -r .conclusion <<<"$run")" = "success"
 
-      - name: Download immutable 20k checkpoint chain artifact
+      - name: Download immutable 30k checkpoint chain artifact
         uses: actions/download-artifact@v4
         with:
-          name: ronin-10m-chain-20k-42973299789
+          name: ronin-10m-chain-30k-42984964609
           github-token: ${{ github.token }}
           repository: orbitalronin94/RONINIA
           run-id: ${{ env.PARENT_RUN_ID }}
@@ -64,9 +64,9 @@ jobs:
           set -euo pipefail
           echo "Downloaded parent artifact:"
           find parent-artifact -type f -printf '%p (%s bytes)\\n' | sort
-          mapfile -t candidates < <(find parent-artifact -type f -name 'checkpoint-20000.pt' -size +0c)
+          mapfile -t candidates < <(find parent-artifact -type f -name 'checkpoint-30000.pt' -size +0c)
           if [ "${#candidates[@]}" -ne 1 ]; then
-            echo "::error::Expected exactly one checkpoint-20000.pt, found ${#candidates[@]}"
+            echo "::error::Expected exactly one checkpoint-30000.pt, found ${#candidates[@]}"
             exit 1
           fi
           cp "${candidates[0]}" parent-artifact/checkpoint-parent.pt
@@ -77,7 +77,7 @@ jobs:
           import torch
           p=torch.load("parent-artifact/checkpoint-parent.pt",map_location="cpu",weights_only=False)
           assert int(p.get("completed_steps",-1)) == 30000, p.get("completed_steps")
-          print("Verified exact parent checkpoint at 20,000 cumulative steps.")
+          print("Verified exact parent checkpoint at 30,000 cumulative steps.")
           PY
 
       - name: Download existing pretokenized corpus cache (no tokenization)
@@ -135,7 +135,7 @@ jobs:
             "--tokens","token-cache/corpus-tokens.u16",
             "--token-manifest","token-cache/token-manifest.json",
             "--resume","parent-artifact/checkpoint-parent.pt",
-            "--output-dir","runs/ronin-10m-30k",
+            "--output-dir","runs/ronin-10m-40k",
             "--steps","10000",
             "--threads","2",
             "--batch-size","4",
@@ -152,11 +152,11 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ronin-10m-checkpoints-30k-${{ github.run_id }}
+          name: ronin-10m-checkpoints-40k-${{ github.run_id }}
           path: |
-            runs/ronin-10m-30k/checkpoint-*.pt
-            runs/ronin-10m-30k/SHA256SUMS
-            runs/ronin-10m-30k/progress.json
+            runs/ronin-10m-40k/checkpoint-*.pt
+            runs/ronin-10m-40k/SHA256SUMS
+            runs/ronin-10m-40k/progress.json
           if-no-files-found: warn
           retention-days: 90
 
@@ -166,18 +166,18 @@ jobs:
           python - <<'PY'
           import hashlib,json,re
           from pathlib import Path
-          out=Path("runs/ronin-10m-30k")
+          out=Path("runs/ronin-10m-40k")
           checkpoints=list(out.glob("checkpoint-*.pt"))
           if not checkpoints:
             raise SystemExit("No recoverable checkpoints were produced")
           latest=max(checkpoints,key=lambda p:int(re.search(r"checkpoint-(\d+)",p.name).group(1)))
           step=int(re.search(r"checkpoint-(\d+)",latest.name).group(1))
-          assert step == 30000, {"latest_checkpoint":latest.name,"cumulative_steps":step}
+          assert step == 40000, {"latest_checkpoint":latest.name,"cumulative_steps":step}
           digest=hashlib.sha256(latest.read_bytes()).hexdigest()
           lineage={
-            "parent_run_id":42973299789,
-            "parent_checkpoint":"checkpoint-20000.pt",
-            "parent_checkpoint_sha256":"53528c3002ba07fe493815b9bfa4bd69bdc08cf985f77a4e59958ee2b3344cc4",
+            "parent_run_id":42984964609,
+            "parent_checkpoint":"checkpoint-30000.pt",
+            "parent_checkpoint_sha256":"140230697a4df69f43c2cc4f6dc95ba2cc596b095532d3e171c486891d26bc4a",
             "token_cache_run_id":42890884432,
             "steps_this_run":10000,
             "cumulative_steps":step,
@@ -197,12 +197,12 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ronin-10m-chain-30k-${{ github.run_id }}
+          name: ronin-10m-chain-40k-${{ github.run_id }}
           path: |
-            runs/ronin-10m-30k/checkpoint-*.pt
-            runs/ronin-10m-30k/SHA256SUMS
-            runs/ronin-10m-30k/progress.json
-            runs/ronin-10m-30k/lineage.json
+            runs/ronin-10m-40k/checkpoint-*.pt
+            runs/ronin-10m-40k/SHA256SUMS
+            runs/ronin-10m-40k/progress.json
+            runs/ronin-10m-40k/lineage.json
             token-cache/token-manifest.json
             configs/ronin-10m-speed-256.json
           if-no-files-found: warn
