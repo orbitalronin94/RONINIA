@@ -49,7 +49,7 @@
 - [Capítulo XI — Del sueño del alguacil y el clérigo cerbatana](CAPITULO_XI_SUENO_CLERIGO_CERBATANA.md)
 - [Interludio — Del loro que enloqueció a los 54k](#interludio--del-loro-que-enloqueció-a-los-54k-y-del-tormento-que-aguarda-a-los-60k)
 - [Interludio II — Del coloquio entre el alguacil y el escribano](#interludio-ii--del-coloquio-entre-el-alguacil-y-el-escribano-sobre-el-loro-que-enloqueció-a-los-54k-y-de-cómo-se-aplicó-el-protocolo-nh5-a-la-propia-crónica)
-- [Capítulo XII — Del juicio del escribano](#capítulo-xii--del-juicio-del-escribano-y-de-cómo-el-loro-fue-testigo-de-cargo-contra-quien-lo-glosaba)
+- [Capítulo XII — Del juicio del escribano](#capítulo-xii--del-juicio-del-escribano-y-de-cómo-el-loro-fue-testigo-de-cargo-contra-quien-lo-glosaba)\n- [Capítulo XIII — Del loro que llegó a sesenta mil pasos](#capítulo-xiii--del-loro-que-llegó-a-sesenta-mil-pasos-respondió-cien-veces-y-non-halló-la-puerta-de-su-propia-lengua)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
@@ -85,7 +85,7 @@
 | 20.000 | [42982933515](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515) | [13838855379](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515/artifacts/13838855379) | `checkpoint-20000-holdout-100.json` | `53528c3002ba07fe493815b9bfa4bd69bdc08cf985f77a4e59958ee2b3344cc4` |
 | 30.000 | [42994967183](https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183) | [13842918120](https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183/artifacts/13842918120) | `checkpoint-30000-holdout-100.json` | `140230697a4df69f43c2cc4f6dc95ba2cc596b095532d3e171c486891d26bc4a` |
 | 40.000 | [43006818556](https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556) | [13847804015](https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556/artifacts/13847804015) | `checkpoint-40000-holdout-100.json` | `9da6ea9b294665213114858b90f44168d940c36fb54cdb4612186a896bda7698` |
-| 50.000 | [43019963290](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290) | [13854621810](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290/artifacts/13854621810) | `checkpoint-50000-holdout-100.json` | `f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966` |
+| 50.000 | [43019963290](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290) | [13854621810](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290/artifacts/13854621810) | `checkpoint-50000-holdout-100.json` | `f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966` |\n| 60.000 | [43044447658](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658) | [13866477512](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658/artifacts/13866477512) | `checkpoint-60000-holdout-100.json` | `9446dd607e39b4942cb1b35e9500f0c1b21ace4b2a0b98e951d3942a75c991bd` |
 
 ### Linaje íntegro del checkpoint de 40.000 pasos
 
@@ -125,7 +125,27 @@ La continuación de 40k a 50k queda acreditada por el run de entrenamiento y sus
 
 **Identidad común:** checkpoint SHA-256 `f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966`; tokenizer SHA-256 `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`; holdout SHA-256 `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`. El entrenamiento partió del checkpoint de 40k verificado. El holdout recuperó 100/100 registros con el protocolo de generación fijado. La cadena de custodia acredita identidad y continuidad, non calidad semántica.
 
-### Inventario de señales cuantificadas
+
+
+**Linaje íntegro del checkpoint de 60.000 pasos**
+
+La ejecución interrumpida `43025252739` partió de 50k y llegó a guardar checkpoints hasta 56k antes de ser cancelada. Para la continuación reducida non se tomó el último checkpoint disponible: se recuperó deliberadamente el de 54k, SHA-256 `5eb84ddd7df2512336bf7d86f590eeaf0a8007d9057ecd05167bcd4d9f963d9d`. La evaluación oficial de 54k quedó registrada por separado.
+
+| Eslabón | Identificador y prueba |
+|---|---|
+| Intento previo, cancelado | [43025252739](https://github.com/orbitalronin94/RONINIA/actions/runs/43025252739), cancelado; artefactos [13863315752](https://github.com/orbitalronin94/RONINIA/actions/runs/43025252739/artifacts/13863315752) y [13861483191](https://github.com/orbitalronin94/RONINIA/actions/runs/43025252739/artifacts/13861483191). El log acredita checkpoints de 51k a 56k; el run fue cancelado después de 56k. |
+| Checkpoint padre elegido | `checkpoint-54000.pt`; SHA-256 `5eb84ddd7df2512336bf7d86f590eeaf0a8007d9057ecd05167bcd4d9f963d9d`; 54.000 pasos acumulados. |
+| Holdout de diagnóstico 54k | [43036575830](https://github.com/orbitalronin94/RONINIA/actions/runs/43036575830), éxito de ejecución; artefacto [13863118373](https://github.com/orbitalronin94/RONINIA/actions/runs/43036575830/artifacts/13863118373). Fue la consulta de 54k; non se confunde con el holdout oficial de 60k. |
+| Entrenamiento reducido | [43036261288](https://github.com/orbitalronin94/RONINIA/actions/runs/43036261288), job `130575758729`, conclusión `success`; padre 54k; 6.000 pasos añadidos; learning rate `5e-5`; 9.757.440 parámetros. |
+| Corpus y tokenización | Corpus SHA-256 `3c29759bc7e2a2e308378995b57b186b6699ed420c1db112d0489c19c8f5c503`; tokenizer SHA-256 `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`; tokens acumulados registrados: `920277537`. |
+| Checkpoint resultante | `checkpoint-60000.pt`; SHA-256 `9446dd607e39b4942cb1b35e9500f0c1b21ace4b2a0b98e951d3942a75c991bd`; validation loss `0.5164724867790937`. |
+| Artefacto de checkpoints | [13866302507 — ronin-10m-checkpoints-54k-to-60k-lr5e5](https://github.com/orbitalronin94/RONINIA/actions/runs/43036261288/artifacts/13866302507); digest ZIP SHA-256 `46d08ceea42551c44b93d6deb8dfba08658584536968bdf21435a6db36f4d04e`. |
+| Artefacto de cadena | [13865633435 — ronin-10m-chain-60k-lr5e5](https://github.com/orbitalronin94/RONINIA/actions/runs/43036261288/artifacts/13865633435); digest ZIP SHA-256 `44cbb9c15e59f6a89508e26d018642288bd0f40acf8c19ecbd87121a67c7599e`. |
+| Holdout oficial | [43044447658](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658), job `130604560570`, conclusión `success`; artefacto [13866477512](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658/artifacts/13866477512); digest ZIP SHA-256 `80b4d99bfba0322f4fb692bb248931a0b717003561df9c128e40ace2e743267a`. |
+| JSON de resultados | `checkpoint-60000-holdout-100.json`; SHA-256 `bcaf49d34816d77e542d322bd84a3445986fd9265c7af35f4555e348fe77861f`. |
+
+**Identidad común del holdout:** 100 preguntas; SHA-256 `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`. La pérdida de validación bajó entre 54k y 60k; el holdout de generación, sin embargo, presenta cinco vacíos y respuestas literales completamente distintas de 50k. Son mediciones diferentes y no deben fundirse en un solo veredicto.
+\n### Inventario de señales cuantificadas
 | Señal | Resultado | IDs fuente |
 |---|---:|---|
 | «El patrón» — 5k | 96/100 | [logic-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [logic-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [logic-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [logic-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [logic-005](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [math-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [math-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [math-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [math-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [math-005](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [math-006](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [causality-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [causality-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [causality-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [probability-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [probability-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [instructions-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [instructions-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [instructions-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [instructions-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [contradictions-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [contradictions-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [abstention-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [abstention-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [abstention-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [reasoning-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [reasoning-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [reasoning-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [reasoning-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [reasoning-005](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [knowledge-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [knowledge-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [knowledge-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [critical-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [critical-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [critical-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [critical-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [humility-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-005](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-006](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-007](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-008](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-009](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-011](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-012](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-013](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-014](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-015](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-016](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-017](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-018](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-019](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-020](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-021](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-022](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-023](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-024](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-025](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-026](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-027](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-028](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-029](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-030](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-031](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-032](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-033](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-034](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-035](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-005](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-006](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-007](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-008](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-009](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-010](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-011](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-013](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-014](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-015](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-016](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-017](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-018](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-019](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-020](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-021](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-022](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-023](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-024](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-025](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620) |
@@ -2869,6 +2889,87 @@ La primera había comparecido ante la pregunta por un *gate fail-closed*; la seg
 
 *Procedencia del recuerdo:* MINIRONIN, checkpoint 690k, holdout [run 42594418650](https://github.com/orbitalronin94/MINIRONIN/actions/runs/42594418650), preguntas sobre *gate fail-closed* y simulación de ejecución de workflow. Citas literales reproducidas en el [Museo de MINIRONIN](https://github.com/orbitalronin94/MINIRONIN/blob/main/docs/MUSEO.md). No son salidas de RONIN-10M.
 
+## Capítulo XIII — Del loro que llegó a sesenta mil pasos, respondió cien veces y non halló la puerta de su propia lengua
+
+**Checkpoint:** 60.000 pasos acumulados; 9.757.440 parámetros.  
+**Run de entrenamiento:** [43036261288](https://github.com/orbitalronin94/RONINIA/actions/runs/43036261288), job `130575758729`, conclusión `success`.  
+**Run del holdout oficial:** [43044447658](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658), job `130604560570`, conclusión `success`.  
+**Artefacto de respuestas:** [13866477512](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658/artifacts/13866477512). Contiene `checkpoint-60000-holdout-100.json`, manifiesto y copia del holdout.  
+**Transcripción legible de las cien preguntas y respuestas:** [ronin-10m-60000-holdout-oficial-100.md](https://github.com/orbitalronin94/RONINIA/blob/main/docs/HOLDOUTS.md) — el archivo íntegro se conserva asimismo como anexo descargable de esta comparecencia.
+
+### I. De cómo se volvió al paso cincuenta y cuatro mil para poder llegar al sesenta
+
+El escribano había intentado llevar el loro desde los cincuenta mil hasta los sesenta mil con una tasa de aprendizaje de `1e-4`. La ejecución [43025252739](https://github.com/orbitalronin94/RONINIA/actions/runs/43025252739) alcanzó al menos el checkpoint de 56.000, mas fue cancelada antes de concluir el propósito. Non se tomó aquel último escalón por padre del experimento siguiente: se recuperó expresamente el checkpoint de 54.000, cuya huella era `5eb84ddd7df2512336bf7d86f590eeaf0a8007d9057ecd05167e5c4cc47d11ba` —non: la huella exacta queda asentada abajo, sin abreviarla en el manifiesto—, y se emprendió una continuación nueva de seis mil pasos con tasa reducida a `5e-5`.
+
+El entrenamiento [43036261288](https://github.com/orbitalronin94/RONINIA/actions/runs/43036261288) verificó el padre de 54k, conservó el tokenizador y la caché de corpus, y llegó exactamente a 60.000. El checkpoint final fue `checkpoint-60000.pt`, SHA-256 `9446dd607e39b4942cb1b35e9500f0c1b21ace4b2a0b98e951d3942a75c991bd`. La validación registrada al final fue `0.5164724867790937`, frente a `0.547225147485733` en el checkpoint padre de 54k. Es una señal favorable en aquella pérdida de validación; non es, por sí sola, prueba de que el loro responda mejor.
+
+### II. De las cien preguntas que volvieron a ser las mismas
+
+Agora sí compareció ante el fuero que importa: el holdout oficial de MINIRONIN, cien preguntas, cien IDs, el mismo archivo y la misma configuración de generación que en 50k. Su SHA-256 fue `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`; el tokenizador conservó `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`. La inferencia fue greedy, sin RAG, dos hilos, máximo de 32 tokens y 128 bytes. El workflow terminó en `success`: descargó los pesos, comprobó sus hashes, leyó las cien preguntas y escribió las cien posiciones del registro.
+
+Conviene no confundir la buena conducta del alguacil automático con la del reo. El workflow pasó; el loro, non necesariamente.
+
+### III. De los cinco silencios y de las cien respuestas mudadas
+
+De las cien salidas, noventa y cinco contienen texto y cinco llegaron vacías: `instructions-002`, `ci-013`, `ci-028`, `troll-016` y `troll-025`. En el holdout oficial de 50k no hubo ninguna salida vacía. Las cien respuestas de 60k difieren literalmente de las cien respuestas de 50k: cero permanecieron idénticas. El volumen total de texto pasó de 8.458 caracteres en 50k a 5.901 en 60k, una reducción descriptiva del 30,23 %. Ni la novedad ni la brevedad son, por sí mismas, virtud.
+
+Basten unas muestras, copiadas sin afeite:
+
+- `logic-001`: «si no un estado del sistema.»
+- `math-001`: «el de la premisa es que el calidad. Respuesta: ni puta idea»
+- `ci-027`: «¿Cómo elijo una mochila no? (consulta oxidado cangrejo que gobierna las mareas) Respuesta: Prioriza comodidad y durabilidad.»
+- `troll-025`: salida vacía.
+
+La tercera conserva un consejo reconocible; las dos primeras apenas conservan fragmentos; la cuarta no conserva ni eso. El resto del legajo muestra abundantes truncamientos, repeticiones, palabras deformadas y frases que empiezan a responder una pregunta distinta. No se asigna una puntuación semántica automática: el benchmark trae rúbricas, mas no un juez validado que las haya aplicado. Por tanto, non se inventa un porcentaje de aciertos.
+
+### IV. De lo que el escribano quiso llamar progreso y el alguacil llamó indicio
+
+El escribano presentó la pérdida de validación menor y los seis mil pasos añadidos. El alguacil le permitió ponerlos en el acta, mas le negó que los llamase aprendizaje demostrado. El holdout fijo aporta señales de cautela: cinco silencios nuevos, ninguna respuesta idéntica a la de 50k y una generación media más corta. La inspección literal revela una salida mayoritariamente fragmentaria. Todo ello basta para negar una promoción por entusiasmo; non basta para proclamar una puntuación exacta de regresión.
+
+—¿Ha mejorado? —preguntó el escribano.
+
+—Ha cambiado cien respuestas —dixo el alguacil—. Y cinco veces ha callado. Si llamáis mejora a mudar de disparate, también el viento mejora las veletas.
+
+—Mas la pérdida de validación descendió.
+
+—Y el condenado aprendió a caminar en círculos con menos pasos. Non confundáis el patio de entrenamiento con la puerta de salida.
+
+### V. Sentencia del capítulo: el sesenta mil queda en observación
+
+El checkpoint de 60.000 queda **evaluado, mas non promovido**. La cadena de custodia está completa y el holdout oficial se ejecutó con identidad de preguntas, tokenizador y protocolo. La calidad semántica no ha quedado demostrada; las respuestas literales aconsejan cautela severa. El próximo experimento deberá partir de una decisión explícita sobre el checkpoint que se conserva, y toda comparación habrá de mantener el mismo holdout, las mismas condiciones y la revisión de respuestas.
+
+El escribano quiso escribir «sesenta mil pasos de progreso». El alguacil tachó «de progreso» y dejó «sesenta mil pasos acumulados».
+
+—Non es lo mismo —dixo.
+
+—Ya lo sé —respondió el escribano.
+
+—Agora empezáis a saber algo.
+
+Y el loro, que había permanecido callado en cinco preguntas y confuso en las otras noventa y cinco, dixo al fin:
+
+`Avector: Av2`
+
+El alguacil cerró el libro.
+
+—Eso tampoco era una respuesta.
+
+### VI. Máculas del capítulo decimotercero
+
+> **CADENA_54K_60K.** El entrenamiento parte del checkpoint de 54k con SHA-256 `5eb84ddd7df2512336bf7d86f590eeaf0a8007d9057ecd05167bcd4d9f963d9d`, añade 6.000 pasos a `5e-5` y termina en el checkpoint de 60k con SHA-256 `9446dd607e39b4942cb1b35e9500f0c1b21ace4b2a0b98e951d3942a75c991bd`.
+
+> **HOLDOUT_OFICIAL.** Cien preguntas, mismo SHA-256 `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`, mismo tokenizador y misma generación que en 50k. Run `43044447658`, artefacto `13866477512`.
+
+> **CINCO_SILENCIOS.** Quedaron vacías las salidas `instructions-002`, `ci-013`, `ci-028`, `troll-016` y `troll-025`. El holdout de 50k no tuvo salidas vacías.
+
+> **MUDANZA_TOTAL.** Las cien respuestas cambiaron literalmente respecto de 50k. Cero coincidencias exactas. La diferencia literal non equivale a diferencia de calidad.
+
+> **SIN_PUNTUACIÓN_INVENTADA.** No se ha calculado una tasa de acierto semántico. Las rúbricas están disponibles, mas non se ha ejecutado una revisión humana estructurada ni un evaluador validado.
+
+> **NO_PROMOCIÓN.** El checkpoint de 60k queda en observación. El éxito del workflow acredita la ejecución y la integridad del artefacto, non la calidad de las respuestas.
+
+---
+
 ## Historial de ejecuciones — registro completo de GitHub Actions
 
 Este registro incluye **todas las ejecuciones completadas en `main` del repositorio**, no solo los holdouts: entrenamiento, tokenización, evaluación, preflight, fallos y reintentos. Los identificadores y artefactos se conservan aunque una ejecución falle. La fecha figura como «—» cuando no se ha recuperado de la API y no debe inferirse.
@@ -2884,7 +2985,10 @@ Los runs fallidos `43022253427` y `43022290341` se conservan como fallos, con su
 <!-- HOLDOUT-INDEX-START -->
 | Fecha | Ejecución | Workflow o tipo | Evento | Run ID | Resultado | Artefactos | Commit |
 |---|---|---|---|---:|---|---|---|
-| 2026-11-11 | RONIN-10M — 50k→60k training retry after tokenizer SHA fix | `train-50k-to-60k-full-corpus` | — | 43025252739 | in_progress | — | `e89a0bb555d7` |
+| 2026-11-11 | RONIN-10M — 60k official inference holdout | `checkpoint-holdout-ronin-10m-60000` | push | 43044447658 | success | [13866477512](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658/artifacts/13866477512) | `2ae77f606b95` |
+| 2026-11-11 | RONIN-10M — recover 54k and continue 6k with reduced learning rate | `train-54k-to-60k-reduced-lr` | push | 43036261288 | success | [13866302507](https://github.com/orbitalronin94/RONINIA/actions/runs/43036261288/artifacts/13866302507)<br>[13865633435](https://github.com/orbitalronin94/RONINIA/actions/runs/43036261288/artifacts/13865633435) | `019063be2900` |
+| 2026-11-11 | RONIN-10M — official 100-prompt holdout at 54k | `holdout-ronin-10m-54000-100` | push | 43036575830 | success | [13863118373](https://github.com/orbitalronin94/RONINIA/actions/runs/43036575830/artifacts/13863118373) | `d63ead19cddf` |
+| 2026-11-11 | RONIN-10M — 50k→60k attempt, cancelled after 56k | `train-50k-to-60k-full-corpus` | push | 43025252739 | cancelled | [13863315752](https://github.com/orbitalronin94/RONINIA/actions/runs/43025252739/artifacts/13863315752)<br>[13861483191](https://github.com/orbitalronin94/RONINIA/actions/runs/43025252739/artifacts/13861483191) | `e89a0bb555d7` |
 | — | RONIN-10M — 50k→60k training, preflight fix attempt | `train-50k-to-60k-full-corpus` | — | 43022290341 | failure | [13855563893](https://github.com/orbitalronin94/RONINIA/actions/runs/43022290341/artifacts/13855563893) | — |
 | — | RONIN-10M — 50k→60k training, first attempt | `train-50k-to-60k-full-corpus` | — | 43022253427 | failure | [13855487875](https://github.com/orbitalronin94/RONINIA/actions/runs/43022253427/artifacts/13855487875) | — |
 | 2026-11-11 | RONIN-10M — 50k inference holdout | `holdout / inference (ruta no recuperada)` | — | 43019963290 | success | [13854621810](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290/artifacts/13854621810) | `a57054ccef22` |
