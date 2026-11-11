@@ -1,4 +1,4 @@
-name: Update holdout registry
+name: Update execution registry
 
 on:
   workflow_run:
@@ -9,42 +9,20 @@ permissions:
   contents: write
 
 concurrency:
-  group: roninia-holdout-registry
+  group: roninia-execution-registry
   cancel-in-progress: false
 
 jobs:
   register:
-    if: github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.head_repository.full_name == github.repository
+    if: >-
+      github.event.workflow_run.head_branch == 'main' &&
+      github.event.workflow_run.head_repository.full_name == github.repository &&
+      github.event.workflow_run.path != '.github/workflows/update-holdout-registry.yml'
     runs-on: ubuntu-latest
     steps:
-      - name: Validate holdout naming contract
-        id: contract
-        env:
-          WORKFLOW_PATH: ${{ github.event.workflow_run.path }}
-          WORKFLOW_NAME: ${{ github.event.workflow_run.name }}
-        run: |
-          set -euo pipefail
-          path_has_holdout=false
-          name_has_holdout=false
-          [[ "$WORKFLOW_PATH" == *holdout* ]] && path_has_holdout=true
-          [[ "$WORKFLOW_NAME" == *holdout* ]] && name_has_holdout=true
-          if [[ "$path_has_holdout" != "$name_has_holdout" ]]; then
-            echo "::error::Holdout registry contract mismatch: both workflow file path and workflow name must contain 'holdout'."
-            echo "Workflow path: $WORKFLOW_PATH"
-            echo "Workflow name: $WORKFLOW_NAME"
-            exit 1
-          fi
-          if [[ "$path_has_holdout" == true ]]; then
-            echo "eligible=true" >> "$GITHUB_OUTPUT"
-            echo "Validated holdout workflow naming contract."
-          else
-            echo "eligible=false" >> "$GITHUB_OUTPUT"
-            echo "Non-holdout workflow; registry update not required."
-          fi
-
-      # Deliberately does not checkout or execute code from the completed workflow.
-      - name: Add completed holdout run and artifacts to the registry
-        if: steps.contract.outputs.eligible == 'true'
+      # This listener records metadata only. It never checks out or executes
+      # code from the completed workflow.
+      - name: Register every completed main-branch execution
         uses: actions/github-script@v8
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -62,10 +40,14 @@ jobs:
               .filter(a => !a.expired)
               .map(a => `[${a.name}](${runUrl})${a.expires_at ? ` (expira: ${a.expires_at.slice(0, 10)})` : ''}`);
 
-            const escapeCell = value => String(value ?? '').replace(/\\|/g, '\\|').replace(/\r?\n/g, ' ');
-            const date = (run.updated_at || run.created_at || '').slice(0, 10);
+            const escapeCell = value => String(value ?? '—')
+              .replace(/\\\\/g, '\\\\\\\\')
+              .replace(/\\|/g, '\\\\|')
+              .replace(/\\r?\\n/g, ' ');
+            const date = (run.updated_at || run.created_at || '').slice(0, 10) || '—';
+            const workflowPath = escapeCell(run.path || '—');
             const artifactCell = artifacts.length ? artifacts.join('<br>') : 'Sin artefactos publicados';
-            const row = `| ${date} | ${escapeCell(run.name)} | ${run.id} | ${escapeCell(run.conclusion || run.status)} | [Ver ejecución](${runUrl}) | ${artifactCell} | ${run.head_sha ? run.head_sha.slice(0, 12) : '—'} |\n`;
+            const row = `| ${date} | ${escapeCell(run.name)} | ${workflowPath} | ${escapeCell(run.event)} | ${run.id} | ${escapeCell(run.conclusion || run.status)} | [Ver ejecución](${runUrl}) | ${artifactCell} | ${run.head_sha ? run.head_sha.slice(0, 12) : '—'} |\\n`;
 
             const current = await github.rest.repos.getContent({ owner, repo, path });
             if (!('content' in current.data) || current.data.encoding !== 'base64') {
@@ -77,24 +59,23 @@ jobs:
             const startAt = content.indexOf(start);
             const endAt = content.indexOf(end);
             if (startAt < 0 || endAt < startAt) {
-              throw new Error('No se encontraron los marcadores del índice de holdouts');
+              throw new Error('No se encontraron los marcadores del registro de ejecuciones');
             }
 
-            let section = content.slice(startAt + start.length, endAt);
-            const lines = section.split('\n').filter(line => line.trim());
-            const runMarker = `| ${date} | ${escapeCell(run.name)} | ${run.id} |`;
-            const withoutDuplicate = lines.filter(line => !line.startsWith(runMarker));
-            const rows = [row.trimEnd(), ...withoutDuplicate].join('\n');
-            const updatedSection = `\n\n${rows}\n\n`;
-            content = content.slice(0, startAt + start.length) + updatedSection + content.slice(endAt);
+            const section = content.slice(startAt + start.length, endAt);
+            const existing = section.split('\\n').filter(line => line.trim() && !line.startsWith('| Fecha'));
+            const runMarker = `| ${date} | ${escapeCell(run.name)} | ${workflowPath} | ${escapeCell(run.event)} | ${run.id} |`;
+            const withoutDuplicate = existing.filter(line => !line.includes(`| ${run.id} |`));
+            const rows = [row.trimEnd(), ...withoutDuplicate].join('\\n');
+            content = content.slice(0, startAt + start.length) +
+              `\\n\\n${rows}\\n\\n` +
+              content.slice(endAt);
 
             await github.rest.repos.createOrUpdateFileContents({
-              owner,
-              repo,
-              path,
-              message: `docs: register holdout run ${run.id}`,
+              owner, repo, path,
+              message: `docs: register GitHub Actions execution ${run.id}`,
               sha: current.data.sha,
               content: Buffer.from(content, 'utf8').toString('base64'),
               branch: 'main'
             });
-            core.info(`Registered holdout run ${run.id} with ${artifacts.length} active artifact(s).`);
+            core.info(`Registered execution ${run.id}; artifacts: ${artifacts.length}.`);
