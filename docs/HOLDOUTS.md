@@ -2923,7 +2923,7 @@ Basten unas muestras, copiadas sin afeite:
 - `ci-027`: «¿Cómo elijo una mochila no? (consulta oxidado cangrejo que gobierna las mareas) Respuesta: Prioriza comodidad y durabilidad.»
 - `troll-025`: salida vacía.
 
-La tercera conserva un consejo reconocible; las dos primeras apenas conservan fragmentos; la cuarta no conserva ni eso. El resto del legajo muestra abundantes truncamientos, repeticiones, palabras deformadas y frases que empiezan a responder una pregunta distinta. No se asigna una puntuación semántica automática: el benchmark trae rúbricas, mas no un juez validado que las haya aplicado. Por tanto, non se inventa un porcentaje de aciertos.
+La tercera ofrece un consejo gramaticalmente reconocible sobre una mochila, mas la pregunta versaba sobre promocionar un checkpoint: es una respuesta desplazada, non un acierto. Las dos primeras apenas conservan fragmentos; la cuarta no conserva ni eso. El resto del legajo muestra abundantes truncamientos, repeticiones, palabras deformadas y frases que empiezan a responder una pregunta distinta. No se asigna una puntuación semántica automática: el benchmark trae rúbricas, mas no un juez validado que las haya aplicado. Por tanto, non se inventa un porcentaje de aciertos.
 
 ### IV. De lo que el escribano quiso llamar progreso y el alguacil llamó indicio
 
