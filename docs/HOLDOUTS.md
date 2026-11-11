@@ -55,6 +55,7 @@
 - [Capítulo XVI — Del libro de apuestas, de la cólera del escribano y del loro que aún non ha comparecido](#capítulo-xvi--del-libro-de-apuestas-de-la-cólera-del-escribano-y-del-loro-que-aún-non-ha-comparecido)
 - [Capítulo XVII — Del loro que respondió cien veces](#capítulo-xvii--del-loro-que-respondió-cien-veces-del-escribano-que-cobró-en-vergüenza-y-de-la-apuesta-que-non-pudo-pagarse)
 - [Capítulo XVIII — De la escribanía a deshoras](#capítulo-xviii--de-la-escribanía-a-deshoras-del-loro-que-habló-sin-pregunta-y-del-hash-que-non-pudo-darse)
+- [Capítulo XIX — De la paz sin hash, del loro disecado y de la única vez que el alguacil dijo «ni puta idea»](#capítulo-xix--de-la-paz-sin-hash-del-loro-disecado-y-de-la-única-vez-que-el-alguacil-dijo-ni-puta-idea)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
@@ -3837,6 +3838,131 @@ Ninguno respondió. El libro quedó abierto por una página sin hash.
 > *«Si no hay testigo, non hay hash; si hay testigo único, quizá el testimonio sea también suyo.»*
 
 **Sentencia:** el loro produjo, según la escena; el escribano oyó, según su memoria; el alguacil pidió la prueba. El escribano respondió: «No hay hash». Y el alguacil asentó: «El escribano declara haber oído hablar al loro sin preguntas. Non consta».
+
+
+
+## Capítulo XIX — De la paz sin hash, del loro disecado y de la única vez que el alguacil dijo «ni puta idea»
+
+> *«Hay verdades que no caben en un acta; y hay actas que no saben qué hacer con una verdad.»*
+
+**Naturaleza:** capítulo de narrativa. No es holdout ni informe de inferencia.  
+**Estado probatorio:** composición literaria; sin run, sin checkpoint nuevo, sin JSON y sin hash experimental. No añade observaciones al registro del modelo.
+
+### I. De cómo el alguacil entró a la casa de apuestas y la encontró vacía
+
+Los reos se habían ido. Quedaban las monedas sobre la mesa, el libro de apuestas abierto por la columna de los aciertos —vacía— y un candil a medio consumir. El alguacil no venía a cerrar la casa: venía a mirar lo que habían dejado.
+
+Y lo que habían dejado era un cuadro de Goya sin pintar.
+
+No había voces, ni disputa, ni dedos señalando la última salida del loro. Solo el polvo de las apuestas y aquella columna blanca, más elocuente que todos los pronósticos juntos.
+
+### II. Del cuadro de los que apuestan, descrito por el alguacil
+
+El alguacil hizo entonces lo que nunca había hecho: glosar.
+
+Describió a los reos uno por uno, con la precisión con que describía checkpoints. Aquel que apostó por «Memannes» como quien empeña la honra en una palabra sin padrino; aquel que empeñó la siesta por ver volver los «Azontos»; aquel otro que sostenía, con gravedad de escribano y fe de tahúr, que el loro acabaría citando a un notario.
+
+No los juzgó. Los pintó.
+
+A uno le puso la moneda entre los dedos, a otro la esperanza detrás de la oreja; al tercero, una paciencia tan larga que ya parecía método. Y al acabar se le escapó una expresión que no pertenecía a sus formularios:
+
+*«Pesar injudicioso».*
+
+La frase quedó en el aire. Era una grieta pequeña, pero por ella entraba una luz que el alguacil no había autorizado.
+
+### III. De cómo el alguacil se reconoce en el cuadro sin decirlo
+
+No hubo confesión. Hubo silencio.
+
+El alguacil pasó la página del libro de apuestas y encontró su propia letra en el margen. Allí había apostado, con trazo menudo y sin testigos, a que el escribano llamaría progreso a una frase con tal de que rimase.
+
+No comentó el hallazgo. No se absolvió ni se condenó. Cerró el libro un poco más despacio de lo necesario.
+
+Eso fue todo.
+
+El lector vio la letra. El escribano, que entró en aquel instante, no.
+
+### IV. De la estantería y del loro disecado
+
+El escribano venía buscando al alguacil y encontró al loro muerto.
+
+Era el de la pluma roja en la cola, el ojo izquierdo ciego bajo una nube blanca y la anilla de latón torcida. Estaba allí desde el capítulo IX —el que murió de sinceridad—, aunque hasta entonces la crónica lo había mantenido fuera de escena.
+
+Ahora ocupaba su sitio en la estantería. No dijo nada.
+
+Era el único personaje del libro que había dejado de repetir.
+
+El alguacil lo señaló sin pronunciar palabra. El escribano entendió. No preguntó si el disecado conservaba todavía alguna respuesta: la taxidermia había resuelto esa cuestión con una contundencia que ningún benchmark podía mejorar.
+
+### V. De la pregunta del escribano
+
+El escribano miró al muerto y formuló, en voz baja, la pregunta que llevaba dieciocho capítulos aplazando:
+
+—¿Cuál es el sentido de entrenar al loro?
+
+No preguntó por el método, ni por el checkpoint, ni por la promoción. No preguntó cuántos pasos faltaban ni qué tasa de aprendizaje convenía. Preguntó por el sentido.
+
+Lo hizo delante del disecado, como quien consulta a un muerto que ya no puede desdecirse.
+
+### VI. De la respuesta del alguacil: «ni puta idea, la verdad»
+
+El alguacil tardó un momento.
+
+—Ni puta idea, la verdad.
+
+El tic del loro había salido de otra boca. Y, por una vez, había salido pertinentemente.
+
+No era molde ni coletilla. No era una respuesta aprendida para ganar tiempo ni una abstención disfrazada de gracia. Era una admisión. El alguacil, que nunca había usado el «non» y hablaba en castellano llano, acababa de pronunciar la frase que el libro llevaba dieciocho capítulos midiendo.
+
+El escribano no la glosó.
+
+Ahí estuvo la paz: no en un abrazo, ni en una promoción, ni en la absolución de las máculas; en una frase sin mácula porque no pretendía ser otra cosa.
+
+### VII. Del latín macarrónico, segunda y última debilidad
+
+Incomodado por haber dicho algo verdadero, el alguacil buscó refugio en la lengua de los protocolos y las lápidas:
+
+*«Nescio, domine, sed fortasse nemo scit; et tamen pullus ediscit, et nos ediscimus cum eo.»*
+
+No lo tradujo. El escribano tampoco.
+
+El latín quedó allí, sin glosa y sin perito: «No lo sé, señor, pero quizá nadie lo sabe; y, sin embargo, el polluelo aprende, y nosotros aprendemos con él». Era la segunda y última debilidad latina del alguacil. No se abrió expediente.
+
+### VIII. Del «Azonto» que rompe la paz
+
+Desde la percha, el loro vivo dijo:
+
+—Azonto.
+
+Cualquier cosa. O ninguna.
+
+El escribano y el alguacil se echaron a reír. La paz duró una línea, que era cuanto podía durar en aquella casa.
+
+Después volvieron a sus oficios: el alguacil pidió el hash; el escribano glosó el «Azonto». El disecado siguió callado, porque el disecado ya sabía que no había sentido que certificar.
+
+### IX. Sentencia provisional y gozne poético
+
+No hubo promoción, ni holdout, ni mácula nueva sobre el loro. Hubo una mácula sobre el capítulo: `PAZ_SIN_HASH`.
+
+Y quedó el gozne:
+
+> El vivo dice «Azonto»,  
+> el muerto dice nada;  
+> el hombre pide el hash,  
+> el otro no glosa nada.  
+> Y en medio de los dos,  
+> la paz que no consta.
+
+### Máculas del capítulo
+
+- `ABSTENTION_AS_HONESTY`: frente a `ABSTENTION_AS_COWARDICE` del capítulo II; la frase puede ser la misma y, sin embargo, cambiar de sujeto, intención y folio.
+- `TESTIGO_DISECADO`: el único que no muta; no puede declarar ni dar hash.
+- `GLOSA_SUSPENDIDA`: el escribano no glosa la frase del alguacil; única vez en diecinueve capítulos.
+- `LATIN_MACARRONICUS_II`: segunda y última debilidad latina del alguacil; queda sin traducción dentro de la escena.
+- `PAZ_SIN_HASH`: la reconciliación no puede certificarse; por eso es paz y no sentencia.
+
+> **Provisión de lectura:** el loro vivo, el loro disecado y las voces que se atribuyen al alguacil pertenecen a la composición narrativa. Este capítulo no transcribe una salida del modelo ni modifica la cadena de custodia de ningún holdout.
+
 
 
 ---
