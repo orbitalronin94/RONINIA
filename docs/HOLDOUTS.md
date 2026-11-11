@@ -2896,7 +2896,7 @@ La primera había comparecido ante la pregunta por un *gate fail-closed*; la seg
 **Run de entrenamiento:** [43036261288](https://github.com/orbitalronin94/RONINIA/actions/runs/43036261288), job `130575758729`, conclusión `success`.  
 **Run del holdout oficial:** [43044447658](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658), job `130604560570`, conclusión `success`.  
 **Artefacto de respuestas:** [13866477512](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658/artifacts/13866477512). Contiene `checkpoint-60000-holdout-100.json`, manifiesto y copia del holdout.  
-**Transcripción íntegra:** las cien preguntas y respuestas literales constan en `checkpoint-60000-holdout-100.json`, dentro del artefacto enlazado arriba; non se han corregido ni resumido.
+**Transcripción íntegra:** [las cien preguntas y respuestas literales](../reports/ronin-10m-60000-holdout-oficial-100.md), cotejadas contra `checkpoint-60000-holdout-100.json`; non se han corregido ni resumido.
 
 ### I. De cómo se volvió al paso cincuenta y cuatro mil para poder llegar al sesenta
 
