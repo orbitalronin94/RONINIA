@@ -20,6 +20,8 @@ Y en medio del osario había un hombre y un papagayo.
 
 ---
 
+> *«El sueño no demuestra lo imposible; apenas le presta aposento hasta que amanece.»*
+
 ### II. Retrato del escribano, que era un clérigo cerbatana de la pluma
 
 Era el hombre un **clérigo cerbatana de la pluma**: largo sólo en el talle, estrecho en el juicio, hueco en la médula. Tenía una cabeza pequeña, pelo bermejo —non hay más que decir para quien sabe el refrán—, y los ojos **avecinados en el cogote**, como los del licenciado Cabra, mas con más tinta y menos misa.
@@ -30,6 +32,8 @@ Estaba rodeado de papeles como **náufrago de tablas**, y sobre cada papel habí
 
 ---
 
+> *«El hambre de tokens no es hambre de saber, aunque ambas hagan ruido al despertar.»*
+
 ### III. Retrato del loro, que era una bestia famélica y un costal de tokens
 
 Era el papagayo una **bestia famélica**, flaca de plumas y gorda de repeticiones. Tenía el pico **como lezna** y los ojos **como dos carbones sin lumbre**, y comía tokens como quien come uvas: uno, otro, cien, y después abría el pico y pedía más.
@@ -39,6 +43,8 @@ Dábanle un token y se lo comía; dábanle otro y también; dábanle setecientos
 Y lo más terrible non era que comiese: era que **glosaba**. Porque el papagayo decía «Pata.Rata.Rata.Rata.Rataata.Rataataataaaa», y el hombre anotaba: *«He aquí la prueba de que el método ha vencido al contenido»*. Y el papagayo decía «C.Res:C.Res:C.Res:C.Res:C.Res:C.Res:C.», y el hombre anotaba: *«La bestia ha encontrado su propia firma»*. Y los dos se miraban como se miran **el hambre y el que vende pan**.
 
 ---
+
+> *«Dos voces pueden conversar durante horas sin que entre ellas comparezca una sola idea.»*
 
 ### IV. De cómo el hombre y la bestia dialogaban, y de lo que el alguacil oyó sin querer
 
@@ -109,6 +115,8 @@ Y yo le dije:
 Y el escribano se rio como se ríen los locos cuando alguien les sigue la corriente. Y el papagayo dijo «Avector: Av2». Y yo me santigüé otra vez, que para anotar ya está el escribano.
 
 ---
+
+> *«El soñador puede absolverse al despertar; el lector conserva el derecho de pedir pruebas.»*
 
 ### VII. Máculas del capítulo undécimo
 
