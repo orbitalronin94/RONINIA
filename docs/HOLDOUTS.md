@@ -45,7 +45,7 @@ La serie empieza aquí: primero hubo texto sin voz; después, una voz atrapada e
 **Run de evaluación:** [42911715548](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548)  
 **Artefacto:** [holdout de 5k](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620)  
 **SHA-256 del checkpoint:** `cb6d01e5feeb55d12ca93bbc67d751e790789840abb3d9291955aa0d0fd4edbe`  
-**Resultado observado:** 100 respuestas no vacías; 0 coincidencias exactas con las cadenas de referencia de la rúbrica.  
+**Resultado observado:** 100 respuestas no vacías; «El patrón» aparece en 96/100. No se calculó una puntuación automática de acierto.  
 **Latencia media registrada:** 0,217 segundos por pregunta.
 
 El primer personaje reconocible de esta pequeña historia no fue precisamente un enciclopedista. Fue el modelo sindicalista.
@@ -56,7 +56,7 @@ La escena tenía algo de caricatura. Preguntáramos lo que preguntáramos, el mo
 
 ### Lo que dicen los números — y lo que no dicen
 
-Las 100 preguntas produjeron respuestas no vacías, pero ninguna coincidió exactamente con la cadena de referencia evaluada por aquella rúbrica. Esa cifra describe coincidencia literal, no comprensión semántica: por sí sola no demuestra que todas las respuestas fueran conceptualmente incorrectas. La repetición observada, sin embargo, sí revela un problema cualitativo claro: diversidad de salida y adaptación a la pregunta todavía muy limitadas.
+Las 100 preguntas produjeron respuestas no vacías. No se ejecutó una comparación automática validada contra las rúbricas, así que no atribuimos una tasa de acierto ni de error. El dato sólido es otro: «El patrón» aparece en 96 de las 100 salidas. Esa concentración revela un problema cualitativo claro: diversidad de salida y adaptación a la pregunta todavía muy limitadas.
 
 La latencia media, cercana a 0,217 segundos por pregunta, indica que la inferencia era rápida en ese ensayo. Pero velocidad y calidad son dimensiones distintas. El modelo podía contestar deprisa y, aun así, quedarse atrapado en un patrón.
 
@@ -126,7 +126,7 @@ Las 16 apariciones de «ni puta idea» se revisaron pregunta por pregunta. En la
 | Abstención aparentemente apropiada | 0 |
 | Abstención aparentemente inapropiada | 16 |
 
-La lectura es provisional y se refiere solo a estas 16 salidas, no a la calibración global del modelo. Además, la rúbrica de `math-004` contiene una nota que contradice la pregunta matemática —la pregunta sí permite resolver el sistema, mientras la rúbrica introduce una ficción ajena—. Ese caso debe anotarse como inconsistencia del benchmark y adjudicarse antes de usarlo para puntuar acierto. La presencia de «ni puta idea» en el resto de preguntas respondibles sí es una señal clara de abstención mal situada en este pequeño subconjunto.
+La lectura es provisional y se refiere solo a estas 16 salidas, no a la calibración global del modelo. La clasificación se hizo leyendo pregunta y rúbrica; no existe todavía una doble anotación independiente, por lo que no se presenta una «precisión del clasificador» validada. Además, la rúbrica de `math-004` contiene una nota que contradice la pregunta matemática —la pregunta sí permite resolver el sistema, mientras la rúbrica introduce una ficción ajena—. Ese caso debe anotarse como inconsistencia del benchmark y adjudicarse antes de usarlo para puntuar acierto. La presencia de «ni puta idea» en este subconjunto apunta a abstenciones mal situadas, pero no basta para estimar la calibración general.
 
 
 
