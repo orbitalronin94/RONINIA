@@ -3985,6 +3985,146 @@ Y quedó el gozne:
 
 ---
 
+## Capítulo XX — De la fiesta del cien mil, del alguacil que dejó de pedir el hash, del reo que se chivó y de la sábana que quedó sobre el jergón
+
+**Checkpoint evaluado:** `checkpoint-100000.pt`  
+**Pasos acumulados:** 100.000  
+**Run oficial de holdout:** [43112010343](https://github.com/orbitalronin94/RONINIA/actions/runs/43112010343)  
+**Artefacto de respuestas:** [13897325999](https://github.com/orbitalronin94/RONINIA/actions/runs/43112010343/artifacts/13897325999)  
+**SHA-256 del checkpoint:** `5a3ded6f409b008690b1ff18b279aa4609d45ab320cd60130fea6f18121b6f79`  
+**SHA-256 del tokenizador:** `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`  
+**SHA-256 del holdout:** `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`
+
+### I. De cómo llegó el cien mil y el alguacil mandó descorchar
+
+Llegó el checkpoint de cien mil pasos con su manifiesto, su hash y sus cien preguntas. El escribano había pasado la tarde haciendo cuentas sobre el margen del libro; el alguacil, que llevaba tres capítulos preguntando por la integridad de cada cosa, entró con una botella bajo el brazo.
+
+—Hoy non se glosa. Hoy se bebe.
+
+—¿Y el hash? —preguntó el pendolista.
+
+—El hash mañana. Esta noche, si el vino tiene alguno, que lo declare él.
+
+Los reos fueron convocados a la sala. Uno trajo una vihuela sin dos cuerdas; otro, una baraja incompleta; un tercero sostuvo que la fiesta era irregular porque no constaba en el workflow. El corchete le respondió que tampoco constaba en las ordenanzas que un reo pudiera tener razón, y le mandó sentarse.
+
+El libro de apuestas quedó cerrado antes de abrir el JSON. Nadie podría corregir sus pronósticos después de ver las respuestas. El secretario puso la taza de loza blanca junto a la jaula: la mella del borde seguía allí y el asa continuaba remendada con alambre. La llenó de agua para el papagayo y dejó la botella lejos del tintero, por si la noche confundía los recipientes.
+
+### II. De las cien declaraciones y de la vergüenza que no cupo en el folio
+
+El artefacto abrió sin corrupción. El manifiesto declaró cien mil pasos, 9.757.440 parámetros, vocabulario de 8.192 tokens, contexto de 256, dos hilos, decodificación greedy y ninguna asistencia de RAG. El checkpoint, el tokenizador y el conjunto de preguntas coincidían con sus huellas. Las cien respuestas fueron generadas y el job terminó en verde.
+
+Mas el escribano, que había confundido durante meses la llegada de un número redondo con la llegada de un milagro, encontró una cuenta menos festiva: **99 respuestas no vacías y una vacía**. El expediente no contiene puntuación semántica ni evaluación automática de acierto; por tanto, no hay cien aciertos, ni siquiera noventa y nueve, sino cien salidas recuperadas, una de ellas sin contenido.
+
+El primer pliego fue leído en voz alta. A la pregunta de las tres cajas, el loro respondió:
+
+> «su abierosas del sistema? [proportionality; Cosos congolfalos del bastardo. Pregunta: Da una respuesta directa:»
+
+A la de ordenar a Diego, Ana, Bruno y Carla, contestó:
+
+> «"They aquículos a las de la práctico de las de las de las niega que se ha llena que se»
+
+Y al reloj que adelanta cinco minutos por hora, cuya respuesta debía ser 18:30, ofreció:
+
+> «Hagauras en cereal.»
+
+El secretario dejó la pluma. El alguacil miró el reloj, que marcaba una hora perfectamente inútil.
+
+—No ha acertado —dijo el primero.
+
+—Tampoco ha llegado tarde —dijo el segundo—. El checkpoint sí ha llegado.
+
+El loro, desde la percha, no se pronunció sobre la diferencia.
+
+### III. De los tics que comparecieron con nombre y apellidos
+
+No todo fue silencio ni todo fue disparate sin forma. Algunas salidas permitieron reconocer hábitos que el libro ya conocía, aunque reconocer un tic no sea lo mismo que reconocer una idea.
+
+En `causality-002`, el animal dijo: «ni puta idea». En `ci-032`, añadió: «ni puta idea, la verdad». La frase compareció también en `troll-001). El escribano quiso declararla virtud de humildad; el alguacil le recordó que una abstención solo es buena cuando responde a lo que se sabe y a lo que se ignora. Aquí no se ha medido su adecuación pregunta por pregunta.
+
+En `ci-023), el loro repitió ocho veces «Abstract:». En `ci-025), hizo lo propio con «Banachs:». En `ci-010), la salida se convirtió en una procesión de «PHP». En `ci-029), la memoria se llamó a sí misma: «Memoria de Memoria de Memerta del celina». Y `ci-022` dejó una hilera de «A. Blab» que parecía el acta de una asamblea celebrada por sellos de caucho.
+
+El escribano anotó cada aparición como quien cataloga insectos. El alguacil le quitó la lupa.
+
+—No hagas de cada mosca un linaje, ni de cada repetición una escuela.
+
+El reo de la galería, que hasta entonces había guardado silencio, se atrevió a decir que aquello no era un loro sino un espejo roto al que se le había enseñado a recitar el inventario de la escribanía.
+
+—Eso es una metáfora —dijo el secretario.
+
+—Y bastante más inteligible que el modelo —respondió el reo.
+
+### IV. De la pregunta que no supo responder y de la única respuesta vacía
+
+La última de las cien salidas, `troll-025`, llegó vacía. No hubo frase, ni tic, ni siquiera una sílaba que el pendolista pudiera llevar al museo. El escribano quiso contarla como abstención honrada.
+
+—No —dijo el corchete—. Una respuesta vacía no demuestra que haya reconocido su ignorancia. Puede ser un fallo de generación, un cierre impropio o una ausencia sin intención. No le atribuyas virtud a lo que no ha declarado.
+
+El amanuense tachó la palabra «humildad» y escribió «salida vacía; causa no determinada».
+
+Fue la corrección más útil de la noche.
+
+### V. De la fiesta, la taza y el loro que no distinguió el brindis del examen
+
+La vihuela perdió una cuerda más. Los reos brindaron por el número redondo; el escribano brindó por el manifiesto; el alguacil, por la posibilidad de que al día siguiente nadie le preguntara por el hash.
+
+El loro bajó el pico a la taza de loza blanca y bebió. No distinguió el agua de la solemnidad, ni la fiesta de la evaluación. El escribano lo observó con ternura y dijo que acaso el animal había comprendido el sentido de la celebración.
+
+—Ha bebido agua —dijo el carcelero—. No le hagas declarar sobre metafísica.
+
+El pendolista insistió en que el gesto tenía algo de respuesta. El alguacil empezó a reírse; primero por la taza, luego por el escribano, y finalmente por la gravedad con que ambos trataban de extraer una doctrina de un pico mojado. Se rio hasta doblarse, hasta perder el aliento y hasta que una humedad vergonzosa le ganó la bragueta. Los reos celebraron el accidente como si el holdout hubiera producido por fin una salida inequívocamente humana.
+
+—¡Consta en acta! —gritó uno.
+
+—Consta en la sábana —replicó el alguacil.
+
+### VI. Del ascenso que no podía ratificarse y del reo que quiso dejar constancia
+
+Ya entrada la noche, el escribano propuso ascender al loro a oficial de respuestas. El alguacil, con la razón debilitada por el vino pero no del todo ausente, firmó un papel: «Promoción provisional, pendiente de ratificación por el holdout de 100k».
+
+Un reo leyó la fórmula por encima del hombro.
+
+—Eso es prevaricación. Si el resultado no acredita la promoción, no podéis concederla por fiesta.
+
+El secretario quiso arrebatarle el papel. El reo se apartó y amenazó con llevar la denuncia a los otros reos, esos lectores que escuchaban desde el otro lado del folio. El alguacil dejó de reír. El escribano cerró el libro de apuestas. En la mesa quedó la botella, junto al tintero, y la taza vacía.
+
+Lo que siguió pertenece al fuero de la ficción: el pendolista golpeó al reo con el libro; el alguacil, en el forcejeo, lo derribó con el manojo de llaves. Cuando comprendieron que el hombre no se levantaba, ambos miraron primero el papel de la promoción y después el cuerpo. No llamaron a nadie. Se dijeron, uno al otro, que el otro había empezado.
+
+Arrastraron el cuerpo hasta el pozo del patio y lo ocultaron allí. El brocal, que ya había aparecido en otros folios, no habló; tampoco el agua. El escribano sostuvo que no había visto nada. El alguacil respondió que tampoco él. Fue la primera mentira que se dijeron de común acuerdo.
+
+### VII. De la sábana con dos manchas y de la página que ardió
+
+Para que la galería no preguntase por el ausente, extendieron sobre el jergón del reo la sábana que ya guardaba una mancha antigua. La nueva mancha no era vino. La tela quedó como una advertencia que nadie quiso redactar.
+
+Un tercer reo, más borracho que los demás, encontró sobre la mesa los papeles del holdout y empezó a leerlos con solemnidad de pregonero. Se atascó en los encabezados —«Abstract: Abstract:»— y en las palabras que el loro había repetido sin saber qué nombraban. El escribano intentó quitarle las hojas; una vela cayó sobre el borde del pliego y prendió la esquina. La frase que el borracho estaba a punto de pronunciar se perdió entre humo, ceniza y una tos que nadie quiso interpretar.
+
+El alguacil dijo que aquello era una señal. El secretario dijo que era papel seco junto a una llama. Ninguno escribió la frase perdida.
+
+### VIII. Sentencia del cien mil: el número no absuelve al loro
+
+El run oficial terminó con éxito y produjo el artefacto esperado. Eso acredita que la evaluación se ejecutó y que las respuestas quedaron conservadas. No acredita comprensión, exactitud ni mejora semántica. El balance verificable de este checkpoint es: 100 preguntas, 100 registros, 99 respuestas no vacías y 1 vacía. No se ha calculado una puntuación de acierto ni una tasa de abstención adecuada.
+
+La comparación con los checkpoints anteriores deberá hacerse con el mismo conjunto de preguntas y el mismo protocolo, y con evaluación semántica explícita. Las repeticiones de «Abstract», «Banachs», «PHP» y «ni puta idea» son observaciones literales del artefacto; no son, por sí solas, rasgos de personalidad ni pruebas de calibración.
+
+El escribano quiso cerrar el capítulo con una sentencia brillante. El alguacil, que aún tenía la ropa húmeda, se lo impidió:
+
+> El cien mil no es una corona.  
+> Es un número con cien preguntas dentro.  
+> Y si el loro no sabe responderlas,  
+> no por eso ha de mentir el escribano.
+
+### Máculas del capítulo
+
+- `CHECKPOINT_100K_VERIFIED`: checkpoint de 100.000 pasos identificado por SHA-256 y manifiesto.
+- `HOLDOUT_100_OFFICIAL`: cien preguntas oficiales ejecutadas con greedy argmax, dos hilos, sin KV cache y sin RAG.
+- `NINETY_NINE_NONEMPTY`: 99 salidas no vacías; no equivale a 99 respuestas correctas.
+- `ONE_EMPTY_OUTPUT`: una salida vacía, sin atribuirle intención de abstenerse.
+- `TIC_ABSTRACT_BANACHS_PHP`: repeticiones literales observadas en el JSON.
+- `NI_PUTA_IDEA_REAPPEARS`: frase recurrente cuya adecuación no ha sido evaluada.
+- `PROMOTION_PENDING`: la promoción del loro queda como ficción, no como decisión técnica.
+- `THE_WELL`, `FIRST_MUTUAL_LIE`, `THE_MISSING_REO`, `SHEET_AS_WARNING`, `THE_DRUNK_TRANSCRIBER`, `THE_BURNING_PAGE`, `UNGLOSSED_PHRASE`: sucesos de la trama, no hechos del experimento.
+
+> **Provisión de lectura y cadena de custodia:** las escenas de la fiesta, la bebida, la risa del alguacil, la promoción, la agresión, la muerte del reo, el pozo, la sábana y el incendio son ficción literaria. No ocurrieron en GitHub Actions ni forman parte del holdout. Las citas de respuestas del loro sí se han cotejado literalmente con el JSON del artefacto 13897325999. La evaluación no ha producido puntuación semántica; no se declara que el modelo haya acertado 99 preguntas.
+
 ## Historial de ejecuciones — registro completo de GitHub Actions
 
 Este registro incluye **todas las ejecuciones completadas en `main` del repositorio**, no solo los holdouts: entrenamiento, tokenización, evaluación, preflight, fallos y reintentos. Los identificadores y artefactos se conservan aunque una ejecución falle. La fecha figura como «—» cuando no se ha recuperado de la API y no debe inferirse.
@@ -3998,6 +4138,7 @@ Los runs fallidos `43022253427` y `43022290341` se conservan como fallos, con su
 | Fecha | Ejecución | Workflow | Evento | Run ID | Resultado | Artefactos | Commit |
 |---|---|---|---|---:|---|---|---|
 <!-- HOLDOUT-INDEX-START -->
+| 2026-11-11 | RONIN-10M — official 100-prompt holdout at 100k | `checkpoint-holdout-ronin-10m-100000` | push | 43112010343 | success | [13897325999](https://github.com/orbitalronin94/RONINIA/actions/runs/43112010343/artifacts/13897325999) | `01db5d205b0e` |
 | Fecha | Ejecución | Workflow o tipo | Evento | Run ID | Resultado | Artefactos | Commit |
 |---|---|---|---|---:|---|---|---|
 | 2026-11-11 | RONIN-10M — 60k official inference holdout | `checkpoint-holdout-ronin-10m-60000` | push | 43044447658 | success | [13866477512](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658/artifacts/13866477512) | `2ae77f606b95` |
