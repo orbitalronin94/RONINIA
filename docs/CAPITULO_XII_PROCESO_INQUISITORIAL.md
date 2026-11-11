@@ -14,7 +14,7 @@
 
 ### I. De la denuncia, y de por qué agora sí y antes non
 
-Antes de que el lector pregunte por qué el papagayo ha sido juzgado cinco veces sin tormento y agora se le aplica, conviene que sepa que **el tormento non se aplica por capricho del fiscal, sino por reincidencia probada y denuncia formal**. Mientras se reunía el tribunal, un mozo sacó agua del pozo para lavar el tintero; el fiscal protestó porque el agua olía a hierro y el secretario respondió que, para lo que escribían, tampoco era menester que oliese a rosas.
+Antes de que el lector pregunte por qué el papagayo ha sido juzgado cinco veces sin tormento y agora se le aplica, conviene que sepa que **el tormento non se aplica por capricho del fiscal, sino por reincidencia probada y denuncia formal**.
 
 **A 5k, 10k, 20k, 30k y 40k non hubo tormento porque non hubo denuncia.** El amanuense levantaba acta, el corchete la firmaba, y el proceso era **sumario**: se leían las respuestas, se contaban los tics, se dictaba sentencia y se promovía o non se promovía. El pájaro confesaba de plano, por así decirlo: sus tics eran la confesión, y non había necesidad de apretarle la cuerda porque ya estaba cantando.
 
