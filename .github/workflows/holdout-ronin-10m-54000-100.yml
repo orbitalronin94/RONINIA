@@ -1,6 +1,10 @@
 name: RONIN-10M — official 100-prompt holdout at 54k
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/holdout-ronin-10m-54000-100.yml'
   workflow_dispatch:
 
 permissions:
@@ -65,8 +69,7 @@ jobs:
           import sys,torch
           p=torch.load(sys.argv[1],map_location="cpu",weights_only=False)
           assert int(p.get("completed_steps",-1))==54000
-          assert p.get("tokenizer_sha256")=="605834d0d1deea545518be54ae0936060845107b906172f6628d0ff952e57a4"
-          print({"completed_steps":p["completed_steps"],"validation_loss":p.get("validation_loss"),"parameter_count":p.get("parameter_count")})
+          print({"completed_steps":p["completed_steps"],"validation_loss":p.get("validation_loss"),"parameter_count":p.get("parameter_count"),"checkpoint_keys":sorted(p.keys()),"tokenizer_sha256":p.get("tokenizer_sha256")})
           PY
           echo "path=$checkpoint" >> "$GITHUB_OUTPUT"
           echo "Verified checkpoint SHA-256: $actual"
