@@ -20,8 +20,7 @@ jobs:
       github.event.workflow_run.path != '.github/workflows/update-holdout-registry.yml'
     runs-on: ubuntu-latest
     steps:
-      # This listener records metadata only. It never checks out or executes
-      # code from the completed workflow.
+      # Metadata-only listener: never checks out or executes code from the completed run.
       - name: Register every completed main-branch execution
         uses: actions/github-script@v8
         with:
@@ -33,49 +32,25 @@ jobs:
             const path = 'docs/HOLDOUTS.md';
             const runUrl = run.html_url || `https://github.com/${owner}/${repo}/actions/runs/${run.id}`;
 
-            const artifactsResponse = await github.rest.actions.listWorkflowRunArtifacts({
-              owner, repo, run_id: run.id, per_page: 100
-            });
-            const artifacts = artifactsResponse.data.artifacts
-              .filter(a => !a.expired)
-              .map(a => `[${a.name}](${runUrl})${a.expires_at ? ` (expira: ${a.expires_at.slice(0, 10)})` : ''}`);
-
-            const escapeCell = value => String(value ?? '—')
-              .replace(/\\\\/g, '\\\\\\\\')
-              .replace(/\\|/g, '\\\\|')
-              .replace(/\\r?\\n/g, ' ');
+            const artifactsResponse = await github.rest.actions.listWorkflowRunArtifacts({ owner, repo, run_id: run.id, per_page: 100 });
+            const artifacts = artifactsResponse.data.artifacts.filter(a => !a.expired).map(a => `[${a.name}](${runUrl})${a.expires_at ? ` (expira: ${a.expires_at.slice(0, 10)})` : ''}`);
+            const escapeCell = value => String(value ?? '—').replace(/\\/g, '\\\\').replace(/\|/g, '\\|').replace(/\r?\n/g, ' ');
             const date = (run.updated_at || run.created_at || '').slice(0, 10) || '—';
-            const workflowPath = escapeCell(run.path || '—');
             const artifactCell = artifacts.length ? artifacts.join('<br>') : 'Sin artefactos publicados';
-            const row = `| ${date} | ${escapeCell(run.name)} | ${workflowPath} | ${escapeCell(run.event)} | ${run.id} | ${escapeCell(run.conclusion || run.status)} | [Ver ejecución](${runUrl}) | ${artifactCell} | ${run.head_sha ? run.head_sha.slice(0, 12) : '—'} |\\n`;
+            const row = `| ${date} | ${escapeCell(run.name)} | ${escapeCell(run.path)} | ${escapeCell(run.event)} | ${run.id} | ${escapeCell(run.conclusion || run.status)} | [Ver ejecución](${runUrl}) | ${artifactCell} | ${run.head_sha ? run.head_sha.slice(0, 12) : '—'} |`;
 
             const current = await github.rest.repos.getContent({ owner, repo, path });
-            if (!('content' in current.data) || current.data.encoding !== 'base64') {
-              throw new Error('No se pudo leer docs/HOLDOUTS.md');
-            }
+            if (!('content' in current.data) || current.data.encoding !== 'base64') throw new Error('No se pudo leer docs/HOLDOUTS.md');
             let content = Buffer.from(current.data.content, 'base64').toString('utf8');
             const start = '<!-- HOLDOUT-INDEX-START -->';
             const end = '<!-- HOLDOUT-INDEX-END -->';
             const startAt = content.indexOf(start);
             const endAt = content.indexOf(end);
-            if (startAt < 0 || endAt < startAt) {
-              throw new Error('No se encontraron los marcadores del registro de ejecuciones');
-            }
-
+            if (startAt < 0 || endAt < startAt) throw new Error('No se encontraron los marcadores del registro de ejecuciones');
             const section = content.slice(startAt + start.length, endAt);
-            const existing = section.split('\\n').filter(line => line.trim() && !line.startsWith('| Fecha'));
-            const runMarker = `| ${date} | ${escapeCell(run.name)} | ${workflowPath} | ${escapeCell(run.event)} | ${run.id} |`;
+            const existing = section.split('\n').filter(line => line.trim() && !line.startsWith('| Fecha') && !line.startsWith('|---'));
             const withoutDuplicate = existing.filter(line => !line.includes(`| ${run.id} |`));
-            const rows = [row.trimEnd(), ...withoutDuplicate].join('\\n');
-            content = content.slice(0, startAt + start.length) +
-              `\\n\\n${rows}\\n\\n` +
-              content.slice(endAt);
-
-            await github.rest.repos.createOrUpdateFileContents({
-              owner, repo, path,
-              message: `docs: register GitHub Actions execution ${run.id}`,
-              sha: current.data.sha,
-              content: Buffer.from(content, 'utf8').toString('base64'),
-              branch: 'main'
-            });
+            const rows = [row, ...withoutDuplicate].join('\n');
+            content = content.slice(0, startAt + start.length) + `\n${rows}\n` + content.slice(endAt);
+            await github.rest.repos.createOrUpdateFileContents({ owner, repo, path, message: `docs: register GitHub Actions execution ${run.id}`, sha: current.data.sha, content: Buffer.from(content, 'utf8').toString('base64'), branch: 'main' });
             core.info(`Registered execution ${run.id}; artifacts: ${artifacts.length}.`);
