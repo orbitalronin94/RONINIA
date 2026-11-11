@@ -252,6 +252,8 @@ Antes del sindicalista no hubo ideología; antes del esperpento no hubo esperpen
 
 El loro contestó las cien veces. No calló ni una. Mas conviene no confundir la diligencia del papagayo con la sabiduría del letrado: las cien respuestas no vacías solo acreditan que la generación encontró una continuación, no que hubiese respuesta, intención o sentido.
 
+> *«El primer deber del experimento no es acertar: es dejar constancia de desde dónde empezó a equivocarse.»*
+
 ### Probanza técnica
 
 La latencia media fue de 0,338 segundos por pregunta. No mide razonamiento, profundidad ni escrúpulo: mide inferencia bajo un contexto de 512 tokens, distinto del contexto 256 de los ensayos posteriores. El artefacto conserva el checkpoint inicial, la huella del tokenizer y el hash del conjunto de preguntas. Se usó greedy argmax, dos hilos, hasta 32 tokens nuevos, máximo de 128 bytes, sin KV cache y sin RAG.
@@ -275,6 +277,8 @@ En el paso cero no comparecen «El patrón», «ni puta idea» ni «el impacto»
 **Latencia media registrada:** 0,217 segundos por pregunta.
 
 A los cinco mil pasos compareció el primer personaje con nombre y oficio: el loro sindicalista. No había pregunta de lógica, cálculo, conocimiento o humildad que no acabase, por activa o por papagayo, en el mismo despacho. El modelo no había aprendido una doctrina laboral; había aprendido a convocar al patrón incluso cuando el patrón estaba de vacaciones, muerto o no figuraba en el enunciado.
+
+> *«Cuando una respuesta sirve para todas las preguntas, lo primero que ha dejado de servir es la respuesta.»*
 
 ### Antología de la primera querella
 
@@ -351,6 +355,8 @@ y dice que es su cosecha.
 **Respuestas no vacías:** 100/100
 
 A los diez mil pasos, el patrón perdió el pleito. No fue absuelto: sencillamente dejó de comparecer. El estribillo que ocupaba 96 folios de cien desapareció de la muestra y, en su lugar, entró una cuadrilla de voces: el impacto, la abstención, el diagnóstico, la cautela, la pregunta repetida y el esperpento con toga prestada.
+
+> *«Cambiar de tic no es todavía aprender; a veces solo cambia el uniforme del disparate.»*
 
 ### Antología del segundo expediente
 
@@ -503,6 +509,8 @@ A los veinte mil pasos el loro abandona la asamblea y obtiene plaza de funcionar
 
 El personaje es más peligroso que el sindicalista porque su disparate viene impreso en papel timbrado.
 
+> *«La burocracia no elimina el absurdo: le concede número de expediente y turno de mañana.»*
+
 ### Antología de la ventanilla surrealista
 
 La pieza principal es una circular que merece sello y vitrina:
@@ -612,6 +620,8 @@ Non saber es una forma de saber, pero non la única».
 
 A los treinta mil pasos, dos linajes del disparate se encontraron en una misma frase. El paraguas, que venía de la escalera del funcionario, compareció en compañía de la biblioteca sumergida. Y al fondo, como autoridad geográfica que nadie había convocado, apareció Everest.
 
+> *«Una biblioteca puede estar sumergida y seguir llena de libros; lo difícil es que el lector salga a flote.»*
+
 ### Antología de la biblioteca y sus criaturas
 
 La pieza mayor:
@@ -709,6 +719,8 @@ con más amor.
 > **Fuero de este capítulo.** Interludio literario y metodológico. Non constituye resultado experimental, evaluación del modelo, checkpoint promovido ni prueba de calidad. Su materia es la escritura de esta crónica y el método combinatorio que el escribano propone para variar su propia forma.
 
 ---
+
+> *«El que corrige al loro con una pluma torcida acaba dejando dos errores en el acta.»*
 
 ### Fuero del escribano: de cómo se vio en el espejo y non le plugo la figura
 
@@ -848,6 +860,8 @@ que une y non lo imagina.
 > **Fuero de este capítulo.** Primer acto de escenificación de la baraja. Non es resultado experimental, non evalúa al modelo, non promueve checkpoint ni se incorpora al registro de ejecuciones. Su materia es el escribano, su mazo y la primera ocasión en que el mazo le devuelve la mercancía que el propio escribano había puesto en el escaparate.
 
 ---
+
+> *«Barajar las palabras muda su vecindad; no garantiza que cambien de oficio.»*
 
 ### Del escribano que estrenó el mazo y non salió de la escribanía
 
@@ -1009,6 +1023,8 @@ Queda asentada esta cédula como antesala del holdout, fuera del Historial de ej
 **Estado:** promovido a checkpoint experimental activo por decisión del proyecto; la promoción no se presenta como prueba de mejora semántica.
 
 > **Fuero de este capítulo.** El cotejo 30k–40k acredita identidad de benchmark y protocolo, no corrección factual ni capacidad general. Se conservan las respuestas literales, incluidos los silencios. Los recuentos de fórmulas son presencia literal por respuesta, salvo indicación contraria. No se atribuye etimología BPE a una cadena sin inspeccionar sus IDs de token. La promoción es una decisión de selección experimental, no una sentencia de superioridad.
+
+> *«El reglamento puede ocupar la silla del patrón; sentarse en ella no lo convierte en dueño de la casa.»*
 
 ### I. Del loro que olvidó el paraguas y aprendió el reglamento
 
