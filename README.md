@@ -4,14 +4,16 @@
 
 ## Modelo experimental activo
 
-El checkpoint seleccionado actualmente es el de **10.000 pasos acumulados**. La selección prioriza la mayor diversidad de salida observada frente al patrón casi único «El patrón» del checkpoint de 5.000 pasos. El lexicón de esperpento, los marcadores NH y las evasivas deliberadas forman parte del corpus intencional y no se consideran fallos por defecto.
+El checkpoint experimental activo es el de **20.000 pasos acumulados**, continuado desde el checkpoint de 10.000 pasos. Se promociona como selección experimental y no como modelo con capacidad factual o razonamiento validados.
 
 - Manifiesto verificable: [models/active.json](models/active.json)
-- Entrenamiento: [run 42902793379](https://github.com/orbitalronin94/RONINIA/actions/runs/42902793379)
-- Holdout de 100 preguntas: [run 42970549370](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370)
-- SHA-256 del checkpoint: `b82df8b5d06171a9e6db6157d4036854ea445a84f8462b731c4d6d9892e3e172`
+- Entrenamiento: [run 42973299789](https://github.com/orbitalronin94/RONINIA/actions/runs/42973299789)
+- Holdout de 100 preguntas: [run 42982933515](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515)
+- Artefacto de respuestas: [holdout 20k](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515#artifacts)
+- SHA-256 del checkpoint: `53528c3002ba07fe493815b9bfa4bd69bdc08cf985f77a4e59958ee2b3344cc4`
+- Parámetros: **9.757.440**
 
-La promoción es experimental: el holdout confirma que las 100 respuestas se generaron con el protocolo esperado, pero no produce por sí mismo una puntuación automática de calidad semántica.
+El holdout confirma 100/100 generaciones con el protocolo fijado. La revisión cualitativa identifica tres fenómenos por investigar: fuga de controles negativos, consolidación de moldes de definición funcional y una posible recombinación surrealista («el transparente paraguas que duerme bajo una escalera»). Ninguno equivale por sí solo a mejora de capacidad. El checkpoint de 10.000 pasos permanece en el historial y en los artefactos originales.
 
 ## Diseño: RONIN-10M
 
