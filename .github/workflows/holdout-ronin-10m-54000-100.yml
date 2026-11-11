@@ -140,3 +140,5 @@ jobs:
             benchmarks/ronin-random-100-v1.jsonl
           if-no-files-found: error
           retention-days: 90
+
+# Triggered once for this immutable 54k diagnostic holdout.
