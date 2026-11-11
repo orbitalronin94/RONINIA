@@ -320,6 +320,9 @@ En el paso cero no comparecen «El patrón», «ni puta idea» ni «el impacto»
 
 ## Capítulo I — Del loro sindicalista y su pleito perpetuo con el patrón
 
+> *«Repitió tanto que acabó teniendo firma.»*
+
+
 **Checkpoint:** 5.000 pasos  
 **Run de evaluación:** [42911715548](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548)  
 **Artefacto:** [holdout de 5k](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620)  
