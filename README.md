@@ -4,16 +4,16 @@
 
 ## Modelo experimental activo
 
-El checkpoint experimental activo es el de **20.000 pasos acumulados**, continuado desde el checkpoint de 10.000 pasos. Se promociona como selección experimental y no como modelo con capacidad factual o razonamiento validados.
+El checkpoint experimental activo es el de **40.000 pasos acumulados**, continuado desde el checkpoint de 30.000 pasos. Se promociona por decisión del proyecto como selección experimental; el holdout emparejado no demuestra una mejora semántica global ni valida capacidad factual o razonamiento.
 
 - Manifiesto verificable: [models/active.json](models/active.json)
-- Entrenamiento: [run 42973299789](https://github.com/orbitalronin94/RONINIA/actions/runs/42973299789)
-- Holdout de 100 preguntas: [run 42982933515](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515)
-- Artefacto de respuestas: [holdout 20k](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515#artifacts)
-- SHA-256 del checkpoint: `53528c3002ba07fe493815b9bfa4bd69bdc08cf985f77a4e59958ee2b3344cc4`
+- Entrenamiento: [run 42994415440](https://github.com/orbitalronin94/RONINIA/actions/runs/42994415440)
+- Holdout de 100 preguntas: [run 43006818556](https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556)
+- Artefacto de respuestas: [holdout 40k](https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556#artifacts)
+- SHA-256 del checkpoint: `9da6ea9b294665213114858b90f44168d940c36fb54cdb4612186a896bda7698`
 - Parámetros: **9.757.440**
 
-El holdout confirma 100/100 generaciones con el protocolo fijado. La revisión cualitativa identifica tres fenómenos por investigar: fuga de controles negativos, consolidación de moldes de definición funcional y una posible recombinación surrealista («el transparente paraguas que duerme bajo una escalera»). Ninguno equivale por sí solo a mejora de capacidad. El checkpoint de 10.000 pasos permanece en el historial y en los artefactos originales.
+El holdout de 40k registra 100 preguntas: 98 respuestas no vacías y 2 vacías. Comparado con 30k, cambian 96 respuestas y cuatro permanecen idénticas. Se observa recurrencia de fórmulas de cautela («En una discusión donde importa la evidencia», 12/100; «No añadas hechos que no consten», 8/100) y fragmentos repetitivos como «PERY:INITY» y once «PL». Estos fenómenos describen las salidas; no constituyen una puntuación semántica. El checkpoint se promueve como referencia experimental activa por decisión del proyecto, no por una mejora de calidad demostrada.
 
 ## Diseño: RONIN-10M
 
