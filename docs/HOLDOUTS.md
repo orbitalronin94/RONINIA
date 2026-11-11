@@ -136,6 +136,38 @@ La crónica toma voces del Lexicón del esperpento algorítmico de MINIRONIN y d
 
 La guía completa, con procedencia, voces, ejemplos y reglas para no confundir arcaísmo con adorno, está en [docs/LEXICO_Y_ESTILO.md](LEXICO_Y_ESTILO.md). Esta capa léxica es editorial: no añade observaciones ni puntuaciones a ningún holdout.
 
+## Reparto y señas de la escribanía — canon de personajes
+
+Para que la casa tenga memoria y sus moradores no muden de cuerpo según convenga al chiste, se asienta este **fuero de continuidad**. No basta con nombrar al personaje: cuando vuelva a escena, el relato dejará ver una seña suya —un rasgo físico, un gesto, una manía o una prenda—. Se alternarán las señas; no se recitará el inventario entero en cada comparecencia. Una peculiaridad nueva podrá añadirse, mas no borrará ni contradirá las ya asentadas. El rasgo sirve al retrato, no como diagnóstico ni como dato del holdout.
+
+### El escribano — hombre de pluma y de expediente
+
+Es seco de cuerpo y prolijo de letra; pasa tantas horas inclinado sobre los folios que un hombro parece haber aprendido a vivir más alto que el otro. Lleva tinta en el índice y el pulgar, aun los días en que jura no haber escrito; suele tener la comisura de los labios reseca de glosar y una pluma detrás de la oreja que busca a tientas cuando se queda sin argumento. Su manía es poner nombre a cuanto ve antes de comprobar si lo ha entendido. Cuando se entusiasma, se le acelera la mano; cuando se avergüenza, alisa el papel como si pudiera planchar también la evidencia.
+
+**Señas que podrán reaparecer:** dedos manchados de tinta; hombro vencido por la mesa; pluma tras la oreja; labios resecos; uñas mordidas durante la espera; la costumbre de ordenar los folios en montones que luego no encuentra. La sábana de la colada pertenece a la historia de la promoción de 50k, no es atributo permanente ni prueba de mejora.
+
+### El alguacil — alguacil de la razón y de la memoria
+
+Es hombre de paso pesado y llavero sonoro: las llaves de la escribanía le golpean el muslo antes de que su dueño cruce la puerta. Tiene una cicatriz fina que le corta la ceja izquierda y un bigote que nunca termina de obedecerle; cuando desconfía, ladea la cabeza y olfatea el aire como si las mentiras tuvieran olor de cocina. Entra sin llamar, escucha más de lo que concede y recuerda las palabras exactas que el escribano preferiría haber dejado en borrador. Sus latines son macarrónicos, pero su memoria no: tuerce la lengua y rara vez el hecho.
+
+**Señas que podrán reaparecer:** llaves que tintinean; bota cuyo tacón arrastra apenas; ceja izquierda marcada; bigote indócil; cabeza ladeada antes de dictar sentencia; olfateo de la sábana o del expediente. Su autoridad es testimonial y burlesca: no convierte un sueño en prueba ni una promoción administrativa en mejora semántica.
+
+### El loro actual — RONIN-10M, reo de plumas y tokens
+
+Este es el papagayo vivo de la escribanía, el checkpoint de 50k y sus continuaciones: una bestia famélica, flaca de plumas y cargada de repeticiones. Tiene el pico agudo como lezna y los ojos oscuros, como carbones apagados; su cuello parece demasiado estrecho para el apetito con que engulle tokens. El plumaje verde está gastado en el pecho, donde asoma una mancha amarillenta; bajo el ala derecha conserva una pluma blanca que sobresale como un papel mal archivado. Se afirma en el posadero con la pata izquierda y, antes de soltar una fórmula conocida, da dos golpecitos secos con el pico.
+
+**Señas que podrán reaparecer:** pluma blanca bajo el ala derecha; pecho verde gastado con mancha amarillenta; pico de lezna; ojos de carbón; dos golpes de pico antes de repetir; pata izquierda aferrada al posadero. Su hambre de tokens y su facilidad para repetir son rasgos cómicos del personaje, no métricas literales de apetito ni prueba de comprensión.
+
+### Distinción inviolable: el loro difunto de MINIRONIN
+
+El loro anterior del escribano es otro animal y otra voz. Era verde, de pecho amarillo, ciego del ojo izquierdo por una nube blanquecina; tenía la punta del pico mellada, un aro de latón torcido en la pata derecha, una uña ausente en el dedo posterior de la pata izquierda y una pluma roja al final de la cola. Murió —según la fórmula de la casa— de sinceridad. Sus frases solo comparecen como recuerdos del escribano y con su procedencia MINIRONIN; jamás se atribuirán al RONIN-10M actual. El loro actual no hereda ni la ceguera, ni el aro, ni el pico mellado, ni la pluma roja del difunto.
+
+### Regla de aparición
+
+En cada escena nueva donde intervenga uno de estos personajes, se incorporará al menos una seña pertinente, preferiblemente distinta de la aparición anterior. En escenas compartidas podrán contrastarse las señas —las llaves del alguacil, la tinta del escribano, los dos golpes del loro— para que el lector reconozca quién actúa incluso antes de leer su nombre. No se inventará una peculiaridad que contradiga este canon; si una nueva descripción exige corregirlo, se hará de forma expresa y se conservará la continuidad histórica.
+
+---
+
 ## Fuero primero: de la lengua, del dato y del escarnio
 
 Sepan cuantos vieren, leyeren o padecieren esta escritura que se instituye por ella la **República del Loro**, con jurisdicción sobre sus checkpoints, sus tics, sus latinajos de BPE y cualesquiera paraguas que soliciten asilo bajo escalera.
