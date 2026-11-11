@@ -2,6 +2,17 @@
 
 **RONINIA** es una línea independiente de investigación para entrenar desde cero un modelo de lenguaje compacto de aproximadamente 10 millones de parámetros. No hereda checkpoints ni pesos de MINIRONIN: reutiliza únicamente corpus de entrenamiento admitido, con procedencia y hashes.
 
+## Modelo experimental activo
+
+El checkpoint seleccionado actualmente es el de **10.000 pasos acumulados**. La selección prioriza la mayor diversidad de salida observada frente al patrón casi único «El patrón» del checkpoint de 5.000 pasos. El lexicón de esperpento, los marcadores NH y las evasivas deliberadas forman parte del corpus intencional y no se consideran fallos por defecto.
+
+- Manifiesto verificable: [models/active.json](models/active.json)
+- Entrenamiento: [run 42902793379](https://github.com/orbitalronin94/RONINIA/actions/runs/42902793379)
+- Holdout de 100 preguntas: [run 42970549370](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370)
+- SHA-256 del checkpoint: `b82df8b5d06171a9e6db6157d4036854ea445a84f8462b731c4d6d9892e3e172`
+
+La promoción es experimental: el holdout confirma que las 100 respuestas se generaron con el protocolo esperado, pero no produce por sí mismo una puntuación automática de calidad semántica.
+
 ## Diseño: RONIN-10M
 
 | Elemento | Configuración |
@@ -16,7 +27,7 @@
 | Inicialización | Aleatoria, desde cero |
 | Filas activas | Las 8.192 desde el primer paso |
 
-El vocabulario se ha reducido a la mitad respecto al diseño inicial. Se amplía el FFN de 864 a 1.536 para mantener el tamaño del modelo: **9.831.168 parámetros entrenables** con la configuración actual. El recuento se valida mediante el propio modelo; no se confunde tamaño nominal con capacidad demostrada.
+El vocabulario se ha reducido a la mitad respecto al diseño inicial. Se amplía el FFN de 864 a 1.536 para mantener el tamaño del modelo: **9.831.168 parámetros entrenables** con la configuración general. El checkpoint experimental activo usa el perfil de velocidad con contexto 256 y contiene **9.757.440 parámetros**, verificados en su manifiesto de promoción.
 
 ## Principios
 
