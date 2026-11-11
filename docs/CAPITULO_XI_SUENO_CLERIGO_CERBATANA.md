@@ -16,7 +16,7 @@
 
 Dormíme sobre el expediente de 50k, que es lo que face todo guardián cuando lleva tres días leyendo hashes y non halla un solo reo con cara de reo. Y soñé que entraba en la escribanía sin llamar, como entro siempre, mas esta vez la escribanía non era escribanía: era un **osario de papeles**, un **muladar de tinta**, una **jaula de locos con sello de lacre**.
 
-Y en medio del osario había un hombre y un papagayo. Al fondo del patio, el pozo tenía una tapa de madera que no ajustaba; en el sueño alguien la calzaba con una alpargata para que no golpease con el viento. La alpargata despertó antes que yo.
+Y en medio del osario había un hombre y un papagayo.
 
 ---
 
