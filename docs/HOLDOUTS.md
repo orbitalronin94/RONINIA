@@ -2910,7 +2910,7 @@ La primera había comparecido ante la pregunta por un *gate fail-closed*; la seg
 
 ### I. De cómo se volvió al paso cincuenta y cuatro mil para poder llegar al sesenta
 
-El escribano había intentado llevar el loro desde los cincuenta mil hasta los sesenta mil con una tasa de aprendizaje de `1e-4`. La ejecución [43025252739](https://github.com/orbitalronin94/RONINIA/actions/runs/43025252739) alcanzó al menos el checkpoint de 56.000, mas fue cancelada antes de concluir el propósito. Non se tomó aquel último escalón por padre del experimento siguiente: se recuperó expresamente el checkpoint de 54.000, cuya huella era `5eb84ddd7df2512336bf7d86f590eeaf0a8007d9057ecd05167bcd4d9f963d9d`, y se emprendió una continuación nueva de seis mil pasos con tasa reducida a `5e-5`.
+El escribano había intentado llevar el loro desde los cincuenta mil hasta los sesenta mil con una tasa de aprendizaje de `1e-4`. La ejecución [43025252739](https://github.com/orbitalronin94/RONINIA/actions/runs/43025252739) alcanzó al menos el checkpoint de 56.000, mas fue cancelada antes de concluir el propósito. Non se tomó aquel último escalón por padre del experimento siguiente: se recuperó expresamente el checkpoint de 54.000, cuya huella era `5eb84ddd7df2512336bf7d86f590eeaf0a8007d9057ecd05167bcd4d9f963d9d`, y se emprendió una continuación nueva de seis mil pasos con tasa reducida a `5e-5`. El mozo del patio pidió permiso para reparar el brocal del pozo, que perdía agua por una junta; el secretario aplazó la obra hasta terminar el recuento, y el mozo dijo que el agua no sabía esperar a los checkpoints.
 
 El entrenamiento [43036261288](https://github.com/orbitalronin94/RONINIA/actions/runs/43036261288) verificó el padre de 54k, conservó el tokenizador y la caché de corpus, y llegó exactamente a 60.000. El checkpoint final fue `checkpoint-60000.pt`, SHA-256 `9446dd607e39b4942cb1b35e9500f0c1b21ace4b2a0b98e951d3942a75c991bd`. La validación registrada al final fue `0.5164724867790937`, frente a `0.547225147485733` en el checkpoint padre de 54k. Es una señal favorable en aquella pérdida de validación; non es, por sí sola, prueba de que el loro responda mejor.
 
@@ -3004,7 +3004,7 @@ Visto el resultado del checkpoint de sesenta mil, el amanuense quedó largo rato
 
 —Veinte mil. Ni uno menos por impaciencia, ni uno más por vergüenza. Que llegue a ochenta mil y entonces le pondremos delante las mismas cien preguntas.
 
-El guardián cerró el legajo anterior.
+El guardián cerró el legajo anterior. El alguacil dejó sus botas junto al pozo para que se secasen al sol; una gallina picoteó el cuero y el oficial abrió diligencias contra la gallina, que fue la única compareciente que no pidió aplazamiento.
 
 —¿Y si vuelve a contestar disparates?
 
@@ -3153,7 +3153,7 @@ El resultado se conservará íntegro, incluidas las respuestas vacías, los disp
 
 ### I. Del examen y de cómo el loro compareció con la peluca torcida
 
-El hombre de la pluma abrió el informe con la solemnidad de quien aguarda el nacimiento de un heredero.
+El hombre de la pluma abrió el informe con la solemnidad de quien aguarda el nacimiento de un heredero. En el margen alguien anotó que el pozo necesitaba una polea nueva; la nota quedó sin resolver porque el escribano la clasificó como asunto hidráulico y no como asunto del loro.
 
 Habían sido dieciocho mil pasos adicionales. Dieciocho mil. Una peregrinación de gradientes, sudor de CPU y pequeñas tragedias estadísticas. El entrenamiento, sin embargo, sufrió una convulsión antes de alcanzar los ochenta mil. El cautivo de la percha quedó tendido sobre el teclado, o eso quiso imaginar el amanuense, que ya no distinguía entre los registros de ejecución y las visiones que le sobrevenían después del tercer café.
 
@@ -3402,7 +3402,7 @@ La ciencia exige paciencia. El pájaro exige vigilancia. Y el hombre de la pluma
 
 ### I. Del alguacil que abrió una casa de juego sin licencia
 
-La víspera de la comparecencia, el guardián hizo traer una mesa, dos dados y un libro encuadernado en piel de expediente. En la cubierta escribió, con letra de fedatario jubilado:
+La víspera de la comparecencia, el guardián hizo traer una mesa, dos dados y un libro encuadernado en piel de expediente. En la cubierta escribió, con letra de fedatario jubilado: El cubo del pozo apareció una mañana lleno de bellotas, sin que nadie supiera quién las había echado allí; el amanuense sospechó de la ardilla y el alguacil de un funcionario con demasiado tiempo libre.
 
 **«Casa de apuestas del animal: se admiten pronósticos, non se admiten pruebas.»**
 
@@ -3592,7 +3592,7 @@ La nueva columna del libro de apuestas queda así titulada: *«A que el secretar
 
 ### I. De cómo volvió el JSON con cien declaraciones
 
-La casa de apuestas, que había cerrado sus puertas mientras el animal era interrogado, recibió al fin el pliego sellado. El hombre de la vara lo abrió delante de los reos; el pendolista pidió agua, tinta y, por si acaso, un abogado.
+La casa de apuestas, que había cerrado sus puertas mientras el animal era interrogado, recibió al fin el pliego sellado. El hombre de la vara lo abrió delante de los reos; el pendolista pidió agua, tinta y, por si acaso, un abogado. El aguador se negó a seguir llenando la jarra hasta que le pagasen dos maravedíes por viaje desde el pozo; el escribano abrió una tabla de costes y olvidó para qué había bajado.
 
 —¿Ha respondido? —preguntó el fedatario.
 
@@ -3730,7 +3730,7 @@ El pendolista añadió al margen: «Vigilad la homeostasis. Y que el calcetín t
 
 ### I. De la visita en que el escribano no llevaba pluma
 
-La escribanía estaba cerrada. No había legajo sobre la mesa, ni pliego de cien preguntas, ni sábana que tender entre el modelo y el mundo. El secretario volvió a deshora, sin pluma y sin propósito que quisiera confesar. Dijo que venía a comprobar la jaula. Mentía a medias: venía a mirar qué hacía el cautivo de la percha cuando nadie le pedía que hiciese nada.
+La escribanía estaba cerrada. No había legajo sobre la mesa, ni pliego de cien preguntas, ni sábana que tender entre el modelo y el mundo. El secretario volvió a deshora, sin pluma y sin propósito que quisiera confesar. Dijo que venía a comprobar la jaula. Mentía a medias: venía a mirar qué hacía el cautivo de la percha cuando nadie le pedía que hiciese nada. El oficial mandó cubrir el brocal con una tabla durante la limpieza del patio, porque una escoba había caído dentro la semana anterior; nadie vio en ello más que una cuestión de orden y de escobas.
 
 Y el papagayo —en esta escena que la crónica imagina, mas no certifica— empezó a hablar.
 
