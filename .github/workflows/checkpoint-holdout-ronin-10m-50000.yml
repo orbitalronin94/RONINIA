@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Verify successful 30k training run
+      - name: Verify successful 50k training run
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -34,7 +34,7 @@ jobs:
           test "$(jq -r .status <<<"$run")" = "completed"
           test "$(jq -r .conclusion <<<"$run")" = "success"
 
-      - name: Download immutable 30k checkpoint chain artifact
+      - name: Download immutable 50k checkpoint chain artifact
         uses: actions/download-artifact@v4
         with:
           name: ronin-10m-chain-50k-${{ env.TRAIN_RUN_ID }}
@@ -49,7 +49,7 @@ jobs:
           python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
           python -m pip install tokenizers numpy
 
-      - name: Verify exact 30k checkpoint and SHA-256
+      - name: Verify exact 50k checkpoint and SHA-256
         id: checkpoint
         run: |
           set -euo pipefail
@@ -116,7 +116,7 @@ jobs:
           assert result["generation"]["threads"] == 2
           assert result["generation"]["max_new_tokens"] == 32
           assert result["generation"]["max_new_bytes"] == 128
-          print("100/100 questions; exact 30k checkpoint, same tokenizer and same generation protocol.")
+          print("100/100 questions; exact 50k checkpoint, same tokenizer and same generation protocol.")
           print("Checkpoint SHA-256:", result["checkpoint_sha256"])
           print("Tokenizer SHA-256:", result["tokenizer_sha256"])
           print("Holdout SHA-256:", result["holdout_sha256"])
