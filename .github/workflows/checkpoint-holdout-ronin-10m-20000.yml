@@ -43,6 +43,12 @@ jobs:
           run-id: ${{ env.TRAIN_RUN_ID }}
           path: trained
 
+      - name: Install CPU checkpoint verification and inference dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
+          python -m pip install tokenizers numpy
+
       - name: Verify exact 20k checkpoint and SHA-256
         id: checkpoint
         run: |
@@ -77,17 +83,11 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p benchmarks
-          curl --fail --silent --show-error --location \
-            https://raw.githubusercontent.com/orbitalronin94/MINIRONIN/main/benchmarks/inference-holdout-v1.jsonl \
+          curl --fail --silent --show-error --location \\
+            https://raw.githubusercontent.com/orbitalronin94/MINIRONIN/main/benchmarks/inference-holdout-v1.jsonl \\
             -o benchmarks/inference-holdout-v1.jsonl
           test "$(grep -cve '^$' benchmarks/inference-holdout-v1.jsonl)" -eq 100
           echo "3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535  benchmarks/inference-holdout-v1.jsonl" | sha256sum -c -
-
-      - name: Install CPU inference dependencies
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
-          python -m pip install tokenizers numpy
 
       - name: Generate 100 answers from checkpoint 20000
         env:
@@ -95,12 +95,12 @@ jobs:
           MKL_NUM_THREADS: "2"
           OPENBLAS_NUM_THREADS: "1"
         run: |
-          python scripts/checkpoint_holdout.py \
-            --checkpoint "${{ steps.checkpoint.outputs.path }}" \
-            --tokenizer tokenizer/tokenizer.json \
-            --holdout benchmarks/inference-holdout-v1.jsonl \
-            --output-dir runs/checkpoint-20000-holdout \
-            --expected-steps 20000 \
+          python scripts/checkpoint_holdout.py \\
+            --checkpoint "${{ steps.checkpoint.outputs.path }}" \\
+            --tokenizer tokenizer/tokenizer.json \\
+            --holdout benchmarks/inference-holdout-v1.jsonl \\
+            --output-dir runs/checkpoint-20000-holdout \\
+            --expected-steps 20000 \\
             --threads 2 --max-new-tokens 32 --max-new-bytes 128
 
       - name: Verify identical benchmark protocol and checkpoint identity
