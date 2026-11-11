@@ -1,8 +1,6 @@
 name: RONIN-10M — continue 90k to 100k (+10k, verified parent)
 
 on:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 permissions:
