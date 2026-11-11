@@ -86,7 +86,7 @@ En un rincón, sobre una cuerda, había una sábana tendida. Tenía una mancha, 
 
 —¿Y por qué non la recoges?
 
-—Porque mientras esté tendida, la mancha es prueba. Si la recojo, la mancha se seca y ya non prueba nada. Y la promoción sigue diferida. Mientras el alguacil non promueva, la sábana sigue al sol.
+—Porque mientras esté tendida, la mancha es prueba. Si la recojo, la mancha se seca y ya non prueba nada. Y la promoción ya fue concedida por decisión expresa de la casa; mas la sábana sigue al sol, porque la compra y la promoción non convierten la mancha en prueba de mejora.
 
 Miré la sábana y la mancha, y pensé que aquel hombre había encontrado la única métrica que non se puede falsificar: **la que se seca al sol y non vuelve**.
 
@@ -122,7 +122,7 @@ Y el escribano se rio como se ríen los locos cuando alguien les sigue la corrie
 
 > **ESTILOMETRIA_DECLARADA.** Se declara que el capítulo ha sido escrito buscando una densidad retórica superior a la de los capítulos anteriores: más bimembraciones, más cultismos, más hipérbaton, más paronomasia. Si el resultado es recargado, se declara recargado; si es pomposo, se declara pomposo.
 
-> **SABANA_DIFERIDA.** La sábana sigue tendida porque la promoción sigue diferida. El sueño del alguacil confirma lo que el capítulo IX dejó pendiente: la mancha se compró, mas la promoción non se hizo.
+> **SABANA_TENDIDA_POST_PROMOCION.** La sábana sigue tendida aunque el checkpoint de 50k ya fue promovido como selección experimental activa por decisión expresa del proyecto. La mancha se compró y la promoción se concedió; ninguna de las dos cosas acredita mejora semántica.
 
 > **PARAGUAS_REDIVIVUS_SOÑADO.** El paraguas oxidado en los mapas al revés de los calcetines aparece en el sueño del alguacil, glosado por el escribano. Es la tercera aparición del paraguas en la crónica: 20k, 30k (ausente), 50k (redivivo). Se declara como retorno onírico, non como métrica.
 
