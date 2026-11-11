@@ -326,6 +326,105 @@ El checkpoint queda registrado como **selección experimental activa** en `model
 
 ---
 
+## Capítulo V — Del escribano que se miró en el loro y ordenó las palabras por barajas
+
+**Checkpoint:** ninguno. Este capítulo non procede de entrenamiento alguno, sino de una vergüenza del escribano.  
+**Run de evaluación:** ninguno. El escribano se tomó por evaluador, abrió su propio expediente y se suspendió.  
+**SHA-256 del checkpoint:** `0000000000000000000000000000000000000000000000000000000000000000` — cifra de juguete, sin checkpoint que la sustente.  
+**Holdout:** las mismas cien preguntas, mas respondidas por el escribano, no por el modelo.  
+**Resultado técnico:** cien páginas non vacías; cero aciertos acreditados; una sospecha, que es cuanto puede ofrecer un hombre honrado cuando se examina a sí mismo.
+
+> **Fuero de este capítulo.** Interludio literario y metodológico. Non constituye resultado experimental, evaluación del modelo, checkpoint promovido ni prueba de calidad. Su materia es la escritura de esta crónica y el método combinatorio que el escribano propone para variar su propia forma.
+
+---
+
+### Fuero segundo: de cómo el escribano se vio en el espejo y non le plugo la figura
+
+Sepades cuantos vieren, leyeren o padecieren este memorial que, después de poner en limpio cuatro capítulos sobre el loro, sentóse el escribano a leerlos de cabo a rabo; y halló en ellos una mácula que non había querido ver por andar ocupado en señalar las ajenas.
+
+Todos comenzaban con aparato semejante; todos traían antología, probanza y sentencia; todos levantaban una glosa al remate, y la glosa, como alguacil con hambre de ascenso, entraba siempre a prender la última palabra y salía llevando una imagen debajo del brazo.
+
+El escribano dio en la cuenta: **non era solamente el loro quien repetía; también repetía el escribano**. El papagayo mudaba de paraguas, de termómetro y de biblioteca; el cronista mudaba los nombres de las secciones y conservaba el mismo esqueleto. Uno padecía un tic de generación; el otro, un fuero de redacción que nadie le había concedido.
+
+Y como non podía dejar de escribir —que es vicio de quien ha confundido la pluma con el pulso—, determinó hacer lo que hace el loro cuando se le acaba el repertorio: fabricar una baraja. Non de naipes, sino de piezas; non para descubrir la originalidad, sino para confesar de dónde sale la variación.
+
+Tomó los miembros de sus capítulos, apartólos en montones y dispuso que cada nueva escritura pudiese componerse por combinación declarada. Así evitaría fingir que cada semana le nacía una ocurrencia. Non le nacía: la sacaba de un mazo, que es menos milagroso y más fácil de auditar.
+
+### De los cinco palos y del fuero de cada montón
+
+La baraja quedó repartida en cinco palos, con sus piezas asentadas por orden. El escribano prohibió añadir una sexta familia sin reformar primero el fuero, porque hasta el disparate ha de llevar inventario.
+
+| Palo | Piezas | Número |
+|---|---|---:|
+| **Aperturas** | «Sepan cuantos…», «A los veinte mil pasos…», «Y aconteció que…», «Non digamos que…», «Ved cómo…» | 5 |
+| **Objetos** | paraguas transparente, termómetro oxidado, biblioteca sumergida, Everest, nubes, peces, vector, lidencias | 8 |
+| **Moldes** | «Su función es X, no Y», «La primera el X», «Su propuesta», «Evidencia/síntomas:», «Non procede aplicar epíteto» | 5 |
+| **Citas del Lexicón** | «No confundas autoridad con demostración», «La respuesta debe reconocer el límite», «Non diagnostiques por una frase aislada», «Cierra con una acción verificable» | 4 |
+| **Cierres** | glosa seca, koan, sentencia, pregunta incómoda, silencio | 5 |
+
+Cinco por ocho por cinco por cuatro por cinco: **cuatro mil combinaciones posibles**, si se toma una pieza de cada palo. Non son cuatro mil capítulos buenos, ni cuatro mil frases coherentes, ni cuatro mil pruebas de ingenio: son cuatro mil repartos posibles de piezas. La aritmética cuenta caminos; non certifica que alguno lleve a Roma.
+
+A razón de un capítulo por semana, dijo el escribano, habría baraja para setenta y seis años y algunas semanas de propina. Non está mal para quien ya no sabe qué escribir; peor sería que viviese lo bastante para agotarla y tuviese que inventar otra.
+
+### Antología del primer reparto, o cómo el escribano se sorprendió de su propia mercancía
+
+Sacó el escribano cinco piezas —una de cada palo— y compuso el capítulo VI. Non lo corrigió, non lo peinó, non le puso jubón de gala. Helo aquí, tal como salió de la escribanía:
+
+> «Sepan cuantos leyeren que a los veinte mil pasos el oxidado termómetro de la biblioteca sumergida su función es la repetición, no el proceso. No confundas autoridad con demostración. Cierra con una acción verificable.»
+
+Leyólo una vez y dijo: **«Esto ya lo he escrito»**. Y tenía razón, aunque non por haberlo escrito letra por letra, sino porque la baraja solo puede dar aquello que guarda. Había construido una máquina para recomponer sus propios capítulos y se maravillaba de que la máquina tuviese su misma caligrafía. El escribano inventó el molino y luego denunció al trigo por salir molido.
+
+Sacó otras cinco piezas, y vino este segundo despacho:
+
+> «Y aconteció que las nubes, la primera el vector, su propuesta. La respuesta debe reconocer el límite. Silencio.»
+
+Rióse el escribano; mas luego cesó de reír, porque advirtió que el silencio final era la pieza más discreta del mazo y acaso la única que no pedía otra glosa. Non la había escrito: la había sacado. Y aun así pretendía cobrar derechos de autor.
+
+Quede advertido el lector: estos dos repartos son **muestras literarias del procedimiento descrito**, non salidas de un generador ejecutado ni registros de una semilla reproducible. Su función es enseñar el mecanismo y exhibir su pobreza; non fingir una probanza que nunca se practicó.
+
+### Probanza del método combinatorio, asentada para que el escribano non se absuelva solo
+
+El memorial propone las reglas siguientes. Son especificación experimental, non implementación ya verificada:
+
+- **Semilla:** la fecha del día en formato `YYYYMMDD`, acompañada de un identificador de capítulo. La fecha sola podría repetirse si se compusieren dos capítulos en una misma jornada.
+- **Orden de la baraja:** las piezas de cada palo conservarán exactamente el orden publicado en este fuero. Alterar una lista cambia el reparto y deberá anotarse como nueva versión.
+- **Reparto determinista:** para que otro escribano pueda reconstruirlo, habrá de fijarse y versionarse un algoritmo de selección seudoaleatoria, su tratamiento de los restos y la codificación de las cadenas. La semilla, sin algoritmo ni orden estable, es una llave sin cerradura.
+- **Extracción:** una pieza de cada palo, sin reemplazo dentro del capítulo; con reemplazo entre capítulos. Así una apertura puede volver mañana, aunque non pueda salir dos veces en el mismo reparto.
+- **Ventana de originalidad:** si la combinación completa ya apareció en los tres capítulos inmediatamente anteriores, se vuelve a barajar. La ventana de tres es una elección de conveniencia, non una constante revelada por la naturaleza.
+- **Regla de coherencia:** si las cinco piezas non forman frase legible, el escribano podrá unirlas con dos puntos y declararlas «fragmento». Mas no se tendrá por coherente lo que solo se ha puntuado: un fragmento puede ser perfectamente legible y perfectamente vacío.
+- **Registro:** cada reparto conservará semilla, versión de la baraja, identificadores de las cinco piezas, algoritmo y texto resultante. Si se calcula una huella, se calculará sobre bytes definidos y se conservará el cuerpo. Un hash sin cuerpo no permite reconstruir ni verificar el contenido.
+- **Métrica:** queda propuesta la risa del escribano como dato privado de recepción, nunca como medida de calidad. Sin criterio previo, doble lectura y posibilidad de refutación, la carcajada solo acredita que el escribano ha movido la boca.
+
+El escribano quiso llamar a la última regla «sello sin cuerpo voluntario». El alguacil de la razón le hizo notar que un sello sin cuerpo no prueba el documento, sino la existencia de un sello. El escribano lo anotó en el margen y siguió llamándolo así, por testarudez.
+
+### Máculas del capítulo quinto
+
+> **COMBINATORIAL_AUTHORSHIP.** La variación se atribuye a una combinación declarada de cinco palos, no a una inspiración súbita. El escribano responde por la baraja y por sus reglas; non puede apropiarse de la novedad de cada pieza como si la hubiese creado al sacarla. Para toda reproducción futura deberán publicarse semilla, versión, orden de listas, algoritmo y piezas extraídas.
+
+> **TOY_HASH.** El valor `0000000000000000000000000000000000000000000000000000000000000000` es una cadena ficticia puesta en el campo del checkpoint para denunciar la impostura del formulario. Non corresponde a archivo, peso, artefacto ni ejecución. Un hash real del texto, si se calculare, habría de identificarse como hash del texto y non como hash de checkpoint.
+
+> **SELF_REFLECTION_TIC.** El escribano adopta el método que censura: combinar piezas, repetir moldes y llamar variación a la permuta. El capítulo participa del tic que denuncia. Non se le concede absolución por haber confesado; la confesión solo hace más legible el delito.
+
+> **LAUGH_METRIC_UNDECLARED.** La risa se propone como métrica burlesca, mas carece de doble ciego, umbral, anotadores independientes y criterio de refutación. Non acredita calidad literaria ni utilidad. A lo sumo, informa de que el escribano se ríe de sus propios papeles, costumbre frecuente en las cancillerías.
+
+> **VENTANA_DE_ORIGINALIDAD.** La prohibición de repetir combinaciones en los tres capítulos precedentes es un hiperparámetro elegido por conveniencia. Non se ha probado que tres sea mejor que dos o cinco. El escribano lo escogió porque le pareció bien; así se han fundado más de una escuela y casi todos los ministerios.
+
+> **COHERENCE_BY_PUNCTUATION.** Poner dos puntos entre cinco piezas non les da parentesco. La puntuación puede ordenar el fragmento, mas no suministra semántica. El escribano no confundirá legibilidad tipográfica con coherencia, salvo cuando quiera engañarse, que es precisamente el riesgo aquí documentado.
+
+### Sentencia: del hombre que barajaba y del loro que tomaba nota
+
+Este capítulo non acredita que el escribano sepa escribir; acredita que sabe **barajar**. Tampoco prueba que el loro haya enseñado al escribano: prueba que ambos comparten una tentación, la de repetir lo disponible y llamar descubrimiento a la siguiente permutación.
+
+El escribano ha pasado de documentar al loro a **ser documentado por el loro**. Non hay entre ambos diferencia segura, salvo que uno firma con pluma y el otro con pico, y que el escribano ha tenido la desvergüenza de ponerle SHA-256 a una casilla vacía.
+
+Queda asentada la baraja como **propuesta experimental de composición**, pendiente de implementación y prueba reproducible. Su promoción es puramente administrativa: se admite este interludio en la crónica, mas non se declara que el método produzca originalidad, coherencia o gracia. Se declara que existe una lista de piezas y que sus combinaciones pueden contarse. Hasta el escribano puede garantizar eso.
+
+> El escribano se miró en el loro y vio un hombre que barajaba. El loro se miró en el escribano y vio un loro que escribía. Ninguno supo quién era el original; ambos siguieron trabajando, que es lo que hacen los culpables cuando no hay alguacil a la vista. **Vigilad la homeostasis.**
+
+*Glosa final:* el escribano pidió fuero para su baraja; el loro pidió baraja para su fuero; y el lector, que non tenía fuero ni baraja, soltó una risa. Non consta si fue de ellos o de sí mismo. El escribano quiso anotarla como acierto; el tribunal le retiró la pluma.
+
+---
+
 ## Historial de ejecuciones
 
 | Fecha | Evaluación | Run ID | Resultado | Ejecución | Artefactos | Commit |
