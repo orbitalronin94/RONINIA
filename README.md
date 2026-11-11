@@ -16,7 +16,7 @@ El checkpoint experimental activo es el de **50.000 pasos acumulados**, continua
 
 El holdout de 50k registra 100/100 respuestas recuperadas. El cotejo de las diez apuestas del capítulo VIII arroja seis pasadas, tres fallidas y una probable (la longitud media queda pendiente de cómputo). Reaparecen fragmentos repetitivos (`P:P:P...`, `Pata.Rata...`, `C.Res...`, `PHP...`) y el paraguas en `ci-001`. Son observaciones literales, no puntuación semántica. El BPB sigue sin calcularse; la promoción registra el checkpoint elegido para continuar, no una mejora de calidad demostrada.
 
-La crónica completa del hito está en [Capítulo IX — Del arcano oficio de escribano de loros graciosos](docs/CAPITULO_IX_ARCANO_ESCRIBANO.md).
+La crónica del hito y sus dos continuaciones narrativas están en [Capítulo IX — Del arcano oficio de escribano de loros graciosos](docs/CAPITULO_IX_ARCANO_ESCRIBANO.md), [Capítulo X — Del alguacil que entró sin llamar](docs/CAPITULO_X_ALGUACIL_RENDIJA.md) y [Capítulo XI — Del sueño del alguacil y el clérigo cerbatana](docs/CAPITULO_XI_SUENO_CLERIGO_CERBATANA.md). Los capítulos X y XI son narrativa pura: no añaden runs, métricas ni evidencia de capacidad.
 
 ## Diseño: RONIN-10M
 
