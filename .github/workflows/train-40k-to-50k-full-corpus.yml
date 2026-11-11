@@ -34,6 +34,12 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install CPU checkpoint and training dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
+          python -m pip install numpy tokenizers
+
       - name: Verify successful 40k parent training run
         env:
           GH_TOKEN: ${{ github.token }}
