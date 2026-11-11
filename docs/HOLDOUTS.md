@@ -192,7 +192,7 @@ También queda asentada la confesión más escueta:
 
 La frase tiene una virtud: reconoce el límite. Y un defecto de mayor tamaño: la usa incluso donde el enunciado permite responder. La honestidad no consiste en abstenerse por sistema; también hay que saber cuándo se sabe.
 
-**Mácula: ABSTENTION_AS_COWARDICE.** Dieciséis abstenciones, dieciséis inapropiadas, cero apropiadas. El loro ha aprendido a decir «ni puta idea» y lo dice también cuando sabe. Non es humildad epistémica: es cobardía con vocabulario técnico. La anti-sicofancia de verdad exige saber lo suficiente para contradecir; si el modelo se abstiene siempre, non está siendo honesto, está escondiéndose detrás de una norma. Abstenerse por sistema es la forma más barata de non equivocarse nunca, y también la más inútil.
+**Mácula: ABSTENTION_AS_COWARDICE.** Dieciséis abstenciones, dieciséis inapropiadas, cero apropiadas, según la revisión humana provisional del [artefacto de 10k](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652); no es una puntuación automática ni cuenta con doble anotación independiente. El loro ha aprendido a decir «ni puta idea» y lo dice también cuando sabe. Non es humildad epistémica: es cobardía con vocabulario técnico. La anti-sicofancia de verdad exige saber lo suficiente para contradecir; si el modelo se abstiene siempre, non está siendo honesto, está escondiéndose detrás de una norma. Abstenerse por sistema es la forma más barata de non equivocarse nunca, y también la más inútil.
 
 *Glosa:* preguntósele si sabía y dijo que non. Preguntósele si era verdad y dijo que tampoco. El tribunal, por primera vez, non supo si absolverlo o suspenderlo.
 
@@ -525,7 +525,7 @@ con más amor.
 
 ---
 
-### Fuero segundo: de cómo el escribano se vio en el espejo y non le plugo la figura
+### Fuero del escribano: de cómo se vio en el espejo y non le plugo la figura
 
 Sepades cuantos vieren, leyeren o padecieren este memorial que, después de poner en limpio cuatro capítulos sobre el loro, sentóse el escribano a leerlos de cabo a rabo; y halló en ellos una mácula que non había querido ver por andar ocupado en señalar las ajenas.
 
