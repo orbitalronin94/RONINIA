@@ -38,6 +38,39 @@ Por eso los holdouts no son un trámite al final del entrenamiento. Son el contr
 
 El modelo sindicalista no fue un fracaso inútil. Fue el primer personaje que nos enseñó qué debíamos vigilar.
 
+## Capítulo II — Del patrón al esperpento
+
+**Checkpoint:** 10.000 pasos acumulados  
+**Run de entrenamiento:** [42902793379](https://github.com/orbitalronin94/RONINIA/actions/runs/42902793379)  
+**SHA-256 del checkpoint:** `b82df8b5d06171a9e6db6157d4036854ea445a84f8462b731c4d6d9892e3e172`  
+**Holdout:** 100 preguntas  
+**Run de evaluación:** [42970549370](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370)  
+**Artefacto:** [holdout completo](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652)  
+**SHA-256 del holdout:** `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`
+
+El segundo personaje ya no responde a casi todo con «el patrón». En las 100 preguntas aparecen más registros, expresiones y formas de salida. La diferencia más importante respecto al checkpoint de 5.000 pasos es esa ampliación de diversidad: el modelo deja de refugiarse de manera casi exclusiva en una única fórmula.
+
+### Leer el corpus antes de juzgar la salida
+
+RONIN-10M se entrena también con un lexicón de esperpento y expresiones deliberadamente evasivas. Marcadores como **NH** y fórmulas como «ni puta idea» pertenecen a esa distribución intencional. No deben clasificarse automáticamente como errores, alucinaciones o incapacidad de responder: su función depende del contexto y del registro que el corpus pretende enseñar.
+
+La evaluación debe distinguir entre:
+- **Rasgos estilísticos intencionales:** lexicón del esperpento, marcadores NH, evasivas deliberadas y cambios de registro.
+- **Adaptación a la pregunta:** si la salida selecciona un registro pertinente para la pregunta y el dominio.
+- **Fallos de generación:** bucles degenerativos, fragmentos truncados o combinaciones sin coherencia, que sí requieren seguimiento.
+
+Esta separación evita penalizar al modelo por haber aprendido precisamente una parte del estilo que queríamos incorporar.
+
+### Resultado técnico
+
+El workflow generó las 100 respuestas y verificó el checkpoint, el tokenizer y el protocolo. La generación utilizó greedy argmax, dos hilos, un máximo de 32 tokens nuevos y no utilizó RAG ni KV cache. El tiempo total registrado fue de aproximadamente 24,02 segundos, con una media de 0,240 segundos por respuesta.
+
+No se calculó una puntuación automática de calidad semántica. Por tanto, la promoción no se presenta como una cifra de exactitud ni como una demostración de razonamiento general. Se basa en la mejora cualitativa observada en diversidad de salida frente al comportamiento excesivamente concentrado de los 5.000 pasos, conservando el artefacto y toda su procedencia.
+
+### Decisión
+
+El checkpoint de 10.000 pasos queda seleccionado como **modelo experimental activo** de RONIN-10M. Se conserva su SHA-256, el run de entrenamiento, el tokenizer y el holdout asociado para que cualquier continuación pueda partir exactamente de este estado. La selección no borra el baseline de 5.000 pasos ni convierte una observación cualitativa en una puntuación que no hemos medido.
+
 ## Historial de ejecuciones
 
 | Fecha | Evaluación | Run ID | Resultado | Ejecución | Artefactos | Commit |
@@ -58,9 +91,10 @@ El actualizador no descarga ni ejecuta los artefactos ni hace checkout del códi
 
 - Comparar checkpoints con las mismas preguntas, configuración de generación y condiciones de inferencia.
 - Separar coincidencia literal, evaluación semántica, calidad de respuesta, diversidad y latencia. No presentar una como sustituta de las demás.
+- Interpretar el lexicón de esperpento y los marcadores intencionales según el corpus, no como errores por defecto.
 - Registrar el identificador del checkpoint, SHA-256, run de entrenamiento, run de evaluación y artefactos.
 - Distinguir siempre entre resultados observados, hipótesis e interpretaciones narrativas.
-- No declarar una promoción de modelo solo por una pérdida menor o una salida llamativa: exigir la comparación holdout correspondiente.
+- No declarar una puntuación de calidad si no se ha medido con un evaluador explícito y validado.
 
 ## Baseline de referencia
 
