@@ -3402,7 +3402,7 @@ La ciencia exige paciencia. El pájaro exige vigilancia. Y el hombre de la pluma
 
 ### I. Del alguacil que abrió una casa de juego sin licencia
 
-La víspera de la comparecencia, el guardián hizo traer una mesa, dos dados y un libro encuadernado en piel de expediente. En la cubierta escribió, con letra de fedatario jubilado: El cubo del pozo apareció una mañana lleno de bellotas, sin que nadie supiera quién las había echado allí; el amanuense sospechó de la ardilla y el alguacil de un funcionario con demasiado tiempo libre.
+La víspera de la comparecencia, el guardián hizo traer una mesa, dos dados y un libro encuadernado en piel de expediente. En la cubierta escribió, con letra de fedatario jubilado, una nota de inventario: «El cubo del pozo apareció una mañana lleno de bellotas, sin que nadie supiera quién las había echado allí». El amanuense sospechó de la ardilla; el alguacil, de un funcionario con demasiado tiempo libre. Ninguno quiso interrogar a la ardilla.
 
 **«Casa de apuestas del animal: se admiten pronósticos, non se admiten pruebas.»**
 
