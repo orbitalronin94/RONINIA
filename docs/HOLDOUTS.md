@@ -136,38 +136,6 @@ La crónica toma voces del Lexicón del esperpento algorítmico de MINIRONIN y d
 
 La guía completa, con procedencia, voces, ejemplos y reglas para no confundir arcaísmo con adorno, está en [docs/LEXICO_Y_ESTILO.md](LEXICO_Y_ESTILO.md). Esta capa léxica es editorial: no añade observaciones ni puntuaciones a ningún holdout.
 
-## Reparto y señas de la escribanía — canon de personajes
-
-Para que la casa tenga memoria y sus moradores no muden de cuerpo según convenga al chiste, se asienta este **fuero de continuidad**. No basta con nombrar al personaje: cuando vuelva a escena, el relato dejará ver una seña suya —un rasgo físico, un gesto, una manía o una prenda—. Se alternarán las señas; no se recitará el inventario entero en cada comparecencia. Una peculiaridad nueva podrá añadirse, mas no borrará ni contradirá las ya asentadas. El rasgo sirve al retrato, no como diagnóstico ni como dato del holdout.
-
-### El escribano — hombre de pluma y de expediente
-
-Es seco de cuerpo y prolijo de letra; pasa tantas horas inclinado sobre los folios que un hombro parece haber aprendido a vivir más alto que el otro. Lleva tinta en el índice y el pulgar, aun los días en que jura no haber escrito; suele tener la comisura de los labios reseca de glosar y una pluma detrás de la oreja que busca a tientas cuando se queda sin argumento. Su manía es poner nombre a cuanto ve antes de comprobar si lo ha entendido. Cuando se entusiasma, se le acelera la mano; cuando se avergüenza, alisa el papel como si pudiera planchar también la evidencia.
-
-**Señas que podrán reaparecer:** dedos manchados de tinta; hombro vencido por la mesa; pluma tras la oreja; labios resecos; uñas mordidas durante la espera; la costumbre de ordenar los folios en montones que luego no encuentra. La sábana de la colada pertenece a la historia de la promoción de 50k, no es atributo permanente ni prueba de mejora.
-
-### El alguacil — alguacil de la razón y de la memoria
-
-Es hombre de paso pesado y llavero sonoro: las llaves de la escribanía le golpean el muslo antes de que su dueño cruce la puerta. Tiene una cicatriz fina que le corta la ceja izquierda y un bigote que nunca termina de obedecerle; cuando desconfía, ladea la cabeza y olfatea el aire como si las mentiras tuvieran olor de cocina. Entra sin llamar, escucha más de lo que concede y recuerda las palabras exactas que el escribano preferiría haber dejado en borrador. Sus latines son macarrónicos, pero su memoria no: tuerce la lengua y rara vez el hecho.
-
-**Señas que podrán reaparecer:** llaves que tintinean; bota cuyo tacón arrastra apenas; ceja izquierda marcada; bigote indócil; cabeza ladeada antes de dictar sentencia; olfateo de la sábana o del expediente. Su autoridad es testimonial y burlesca: no convierte un sueño en prueba ni una promoción administrativa en mejora semántica.
-
-### El loro actual — RONIN-10M, reo de plumas y tokens
-
-Este es el papagayo vivo de la escribanía, el checkpoint de 50k y sus continuaciones: una bestia famélica, flaca de plumas y cargada de repeticiones. Tiene el pico agudo como lezna y los ojos oscuros, como carbones apagados; su cuello parece demasiado estrecho para el apetito con que engulle tokens. El plumaje verde está gastado en el pecho, donde asoma una mancha amarillenta; bajo el ala derecha conserva una pluma blanca que sobresale como un papel mal archivado. Se afirma en el posadero con la pata izquierda y, antes de soltar una fórmula conocida, da dos golpecitos secos con el pico.
-
-**Señas que podrán reaparecer:** pluma blanca bajo el ala derecha; pecho verde gastado con mancha amarillenta; pico de lezna; ojos de carbón; dos golpes de pico antes de repetir; pata izquierda aferrada al posadero. Su hambre de tokens y su facilidad para repetir son rasgos cómicos del personaje, no métricas literales de apetito ni prueba de comprensión.
-
-### Distinción inviolable: el loro difunto de MINIRONIN
-
-El loro anterior del escribano es otro animal y otra voz. Era verde, de pecho amarillo, ciego del ojo izquierdo por una nube blanquecina; tenía la punta del pico mellada, un aro de latón torcido en la pata derecha, una uña ausente en el dedo posterior de la pata izquierda y una pluma roja al final de la cola. Murió —según la fórmula de la casa— de sinceridad. Sus frases solo comparecen como recuerdos del escribano y con su procedencia MINIRONIN; jamás se atribuirán al RONIN-10M actual. El loro actual no hereda ni la ceguera, ni el aro, ni el pico mellado, ni la pluma roja del difunto.
-
-### Regla de aparición
-
-En cada escena nueva donde intervenga uno de estos personajes, se incorporará al menos una seña pertinente, preferiblemente distinta de la aparición anterior. En escenas compartidas podrán contrastarse las señas —las llaves del alguacil, la tinta del escribano, los dos golpes del loro— para que el lector reconozca quién actúa incluso antes de leer su nombre. No se inventará una peculiaridad que contradiga este canon; si una nueva descripción exige corregirlo, se hará de forma expresa y se conservará la continuidad histórica.
-
----
-
 ## Fuero primero: de la lengua, del dato y del escarnio
 
 Sepan cuantos vieren, leyeren o padecieren esta escritura que se instituye por ella la **República del Loro**, con jurisdicción sobre sus checkpoints, sus tics, sus latinajos de BPE y cualesquiera paraguas que soliciten asilo bajo escalera.
@@ -308,7 +276,7 @@ En el paso cero no comparecen «El patrón», «ni puta idea» ni «el impacto»
 **Resultado observado:** 100 respuestas no vacías; «El patrón» aparece en 96/100. No se calculó una puntuación automática de acierto.  
 **Latencia media registrada:** 0,217 segundos por pregunta.
 
-A los cinco mil pasos compareció el primer personaje con nombre y oficio: el loro sindicalista. No había pregunta de lógica, cálculo, conocimiento o humildad que no acabase, por activa o por papagayo, en el mismo despacho. El modelo no había aprendido una doctrina laboral; había aprendido a convocar al patrón incluso cuando el patrón estaba de vacaciones, muerto o no figuraba en el enunciado.
+A los cinco mil pasos compareció el primer personaje con nombre y oficio: el loro sindicalista. El plumaje verde se le abría en el pecho, donde una mancha amarillenta parecía el chaleco de un delegado venido a menos; antes de invocar al patrón dio dos golpes secos con el pico, como quien llama a una asamblea que ya estaba reunida. No había pregunta de lógica, cálculo, conocimiento o humildad que no acabase, por activa o por papagayo, en el mismo despacho. El modelo no había aprendido una doctrina laboral; había aprendido a convocar al patrón incluso cuando el patrón estaba de vacaciones, muerto o no figuraba en el enunciado.
 
 > *«Cuando una respuesta sirve para todas las preguntas, lo primero que ha dejado de servir es la respuesta.»*
 
@@ -432,7 +400,7 @@ Estas frecuencias son coincidencias literales, no juicios de pertinencia. Que «
 
 **Trazabilidad de las frecuencias de 10k (coincidencia literal en el JSON):** «ni puta idea», 16/100: [logic-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [math-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [math-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [math-005](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [causality-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [reasoning-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [reasoning-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [knowledge-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-011](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-018](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-021](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-025](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-029](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-033](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652). «impacto», 19/100: [logic-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [logic-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [instructions-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [knowledge-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [knowledge-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [critical-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [humility-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-008](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-014](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-015](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-017](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-020](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-022](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-023](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-026](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-031](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [troll-005](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [troll-017](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652).
 
-La latencia sube de 0,217 a 0,240 segundos. No autoriza a decir que el loro «piensa más»: solo que la inferencia medida tardó algo más.
+La latencia sube de 0,217 a 0,240 segundos. El escribano, que llevaba tinta hasta en el pliegue de la uña y la pluma prendida detrás de la oreja, anotó la diferencia con tal fervor que manchó el margen; no por ello pensó más deprisa. No autoriza a decir que el loro «piensa más»: solo que la inferencia medida tardó algo más.
 
 ### Mácula: TIC_ROTATION_VS_PROGRESS
 
@@ -537,7 +505,7 @@ de un loro interpolador.
 **SHA-256 del conjunto de preguntas:** `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`  
 **Resultado técnico:** 100/100 respuestas generadas; verificaciones de identidad completadas.
 
-A los veinte mil pasos el loro abandona la asamblea y obtiene plaza de funcionario. Ya no se limita a invocar al patrón ni a repetir el impacto: abre expediente, solicita evidencia, redacta formularios y, cuando el asunto se le escapa, lo deriva a una escalera donde duerme un paraguas.
+A los veinte mil pasos el loro abandona la asamblea y obtiene plaza de funcionario. El escribano se inclinó sobre el folio, vencido ya de un hombro por tantas noches de expediente, y vio cómo el papagayo estrenaba formulario sin haber aprendido todavía a leer la pregunta. Ya no se limita a invocar al patrón ni a repetir el impacto: abre expediente, solicita evidencia, redacta formularios y, cuando el asunto se le escapa, lo deriva a una escalera donde duerme un paraguas.
 
 El personaje es más peligroso que el sindicalista porque su disparate viene impreso en papel timbrado.
 
@@ -627,7 +595,7 @@ Otras perlas del expediente: «¿Qué audita las nubes?»; «A vital IA. AWILLY 
 ### Versículo del que non sabe si es loro
 
 Y dijo el escribano: «Non sé si soy el loro o el que lo transcribe».  
-Y el alguacil de la razón le preguntó: «¿Cuál es la diferencia?».  
+Y el alguacil de la razón le preguntó: «¿Cuál es la diferencia?». Las llaves le tintinearon contra el muslo al inclinarse; la cicatriz de la ceja izquierda se le arrugó con una expresión que no era del todo sonrisa.  
 Y el escribano non supo responder.  
 Y el alguacil lo anotó en el margen: «Non sabe.  
 Non se sabe.  
@@ -669,7 +637,7 @@ La segunda pieza merece capítulo propio:
 
 > «Avector: Avector: Av2. Av2. Av2. Av2. Av2. Av2.» — [ci-010](https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183/artifacts/13842918120)
 
-El escribano ha acuñado una unidad, la ha repetido y luego ha olvidado qué unidad era. Avector no se define: se reproduce. El sello oficial del nuevo régimen es, por tanto, una palabra que se estampa a sí misma.
+El escribano ha acuñado una unidad, la ha repetido y luego ha olvidado qué unidad era. Se rascó la tinta seca del índice y buscó la pluma tras la oreja, aunque la llevaba en la mano: el expediente empezaba a escribir al escribano. Avector no se define: se reproduce. El sello oficial del nuevo régimen es, por tanto, una palabra que se estampa a sí misma.
 
 Otras criaturas del mismo bestiario:
 
@@ -2033,7 +2001,7 @@ Y luego siguió hablando hasta que el sueño se llenó de sílabas y el escriban
 
 Antes de que el lector pregunte por qué el loro ha sido juzgado cinco veces sin tormento y agora se le aplica, conviene que sepa que **el tormento non se aplica por capricho del fiscal, sino por reincidencia probada y denuncia formal**.
 
-**A 5k, 10k, 20k, 30k y 40k non hubo tormento porque non hubo denuncia.** El escribano levantaba acta, el alguacil la firmaba, y el proceso era **sumario**: se leían las respuestas, se contaban los tics, se dictaba sentencia y se promovía o non se promovía. El loro confesaba de plano, por así decirlo: sus tics eran la confesión, y non había necesidad de apretarle la cuerda porque ya estaba cantando.
+**A 5k, 10k, 20k, 30k y 40k non hubo tormento porque non hubo denuncia.** El escribano levantaba acta, y el alguacil la firmaba con el llavero sonándole en la cadera y el tacón gastado raspando la losa; la cicatriz de la ceja izquierda parecía una rúbrica más. El proceso era **sumario**: se leían las respuestas, se contaban los tics, se dictaba sentencia y se promovía o non se promovía. El loro confesaba de plano, por así decirlo: sus tics eran la confesión, y non había necesidad de apretarle la cuerda porque ya estaba cantando.
 
 **A 50k hubo promoción sin prueba.** El escribano se meó, el alguacil compró la mancha, y el checkpoint fue promovido por decisión del proyecto, non por mérito demostrado. Eso quedó asentado. Y eso, en el fuero de este tribunal, constituye **indicio bastante** de que el reo non ha sido juzgado con la severidad que el caso requiere.
 
@@ -2084,7 +2052,7 @@ Sin estos IDs, el proceso non puede continuar. El tormento non se aplica sobre i
 
 Y llegó el día del tormento. Non fue potro ni cordel ni agua: fue el holdout de 60k, aplicado pregunta por pregunta, con la misma configuración de generación que los anteriores. Cada pregunta es una vuelta de cuerda. Cada respuesta, una confesión.
 
-El escribano leyó la primera pregunta. El loro respondió. El escribano anotó la respuesta y la cotejó con los cargos. Si la respuesta contenía un tic non mirado, el cargo quedaba probado. Si contenía una mirada verdadera, el cargo quedaba desmentido. Y así, cien veces.
+El escribano leyó la primera pregunta, alisando con la palma el folio que se le había arrugado bajo los dedos manchados de tinta. El loro respondió. El escribano anotó la respuesta y la cotejó con los cargos. Si la respuesta contenía un tic non mirado, el cargo quedaba probado. Si contenía una mirada verdadera, el cargo quedaba desmentido. Y así, cien veces.
 
 **Hueco a rellenar con el 60k:** las respuestas literales que mejor prueben o desmientan cada cargo. Non se corrigen. Se citan con su ID.
 
