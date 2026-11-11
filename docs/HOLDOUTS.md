@@ -2111,7 +2111,19 @@ El alguacil cerró el expediente de cincuenta y cuatro mil y puso encima el lega
 
 —Que traiga sus títulos y sus hashes.
 
-El escribano dejó preparada la cuerda, que en aquella escribanía no era de cáñamo, sino de cien preguntas iguales para todos los checkpoints. A cincuenta y cuatro mil había comparecido una consulta diagnóstica no oficial: útil para observar el disparate, insuficiente para dictar promoción. El tormento de verdad, según el fuero ya establecido, aguardaba a los sesenta mil y habría de celebrarse con el protocolo fijado, el artefacto íntegro y los IDs por testigos.
+El escribano dejó preparada la cuerda, que en aquella escribanía no era de cáñamo, sino de cien preguntas iguales para todos los checkpoints. Mas el tormento no consistía solamente en esperar al interrogatorio: también se había dispuesto una disciplina para el aprendizaje que lo precedía.
+
+Al reanudar el entrenamiento desde el checkpoint verificado de 54.000 pasos, se redujo a la mitad la tasa de aprendizaje: de `1e-4` a `5e-5`. Se añadieron otros 6.000 pasos, con validación más densa —32 batches— y checkpoints cada mil. No era un adorno del escribano ni una penitencia teatral: era una decisión técnica deliberada. Tras las oscilaciones y disparates observados, se quiso que cada actualización moviera menos los pesos, que el modelo consolidase lo aprendido sin sacudidas tan bruscas y que llegase a los 60.000 en mejores condiciones para responder.
+
+—¿Le habéis aflojado la cuerda? —preguntó el alguacil.
+
+—Le hemos bajado el *learning rate* —dijo el escribano—. No es lo mismo, aunque en esta casa ambas cosas se administren con prudencia.
+
+—¿Y así declarará con solvencia?
+
+—Así esperamos favorecerlo. La solvencia no se decreta: se comprobará cuando comparezca ante las cien preguntas.
+
+La continuación quedó, pues, concebida como una preparación para el interrogatorio: mitad de tasa, seis mil pasos añadidos, validación más frecuente y linaje conservado desde el checkpoint de 54k. El tormento de verdad, según el fuero ya establecido, aguardaba a los sesenta mil y habría de celebrarse con el protocolo fijado, el artefacto íntegro y los IDs por testigos. La tasa reducida era el tratamiento; el holdout sería el examen.
 
 Antes de cerrar el legajo, el escribano escribió en el margen:
 
