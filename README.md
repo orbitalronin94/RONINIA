@@ -43,6 +43,36 @@ RONINIA toma de sus otros trabajos una disciplina y una voz: de **Agent-Eval**, 
 
 El propósito no es fabricar un contradictor automático, sino un bufón con juicio: que sepa cuándo asentir, cuándo negar y cuándo descubrir que el rey pregunta por una pera mientras el loro lleva tres páginas hablando de manzanas.
 
+## Antología de los laboratorios hermanos
+
+RONINIA no hereda solo un método: hereda una pequeña literatura de laboratorio. De **RONIN-IA**, **MINIRONIN** y **HERETIC-RONIN** se rescatan estas sentencias, adaptadas aquí al oficio del escribano y del loro. Son máximas editoriales, no resultados del modelo.
+
+> «La única herejía imperdonable sería dejar de medir porque el resultado nos gusta.» — HERETIC-RONIN
+
+> «Una mácula declarada sigue siendo mácula. Que se vea no la cura.» — RONIN-IA
+
+> «Conservar la función es oficio de cirujano; aprender es oficio de maestro.» — RONIN-IA
+
+> «Un hash sin cuerpo es un epitafio: recuerda que algo existió, mas no permite comprobar que aún lo poseemos.» — adaptación de RONIN-IA
+
+> «El método es largo; el modelo todavía está creciendo. Mas crecer dista de aprender: es solo ocupar más sitio en el artefacto.» — RONIN-IA
+
+> «No existe un mejor loro por decreto; existe una colección de versiones con evidencia desigual.» — adaptación del catálogo de MINIRONIN
+
+> «Tener un repertorio no es tener un solo remate; y tener un remate no es saber responder.» — adaptación de MINIRONIN
+
+> «La elocuencia mínima puede acuñar una frase memorable; mas la belleza de la sentencia non absuelve el desacierto de la respuesta.» — MINIRONIN
+
+> «El loro puede ser respondón sin ser injusto, cínico sin ser ciego y antisicofántico sin contradecir por deporte.» — adaptación del currículo conductual de MINIRONIN
+
+> «La mosca non reclama ganar la feria: reclama que se pueda abrir el libro de cuentas.» — RONIN-IA
+
+> «Más número en la etiqueta no hace más bíceps; más corpus en la alforja no hace más juicio.» — adaptación de MINIRONIN y RONIN-IA
+
+> «El artefacto que falla también deja testimonio; el fallo que se borra se convierte en leyenda.» — adaptación de los diarios experimentales hermanos
+
+Estas voces se incorporan como tradición editorial de la casa. Las citas adaptadas se identifican como tales; ninguna máxima se computa como evidencia, métrica o salida literal del checkpoint.
+
 ## Principios
 
 - **No se heredan pesos:** MINIRONIN aporta corpus, no checkpoints ni estado del optimizador.
