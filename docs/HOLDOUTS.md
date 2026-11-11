@@ -32,6 +32,7 @@
 - [Capítulo XI — Del sueño del alguacil y el clérigo cerbatana](CAPITULO_XI_SUENO_CLERIGO_CERBATANA.md)
 - [Interludio — Del loro que enloqueció a los 54k](#interludio--del-loro-que-enloqueció-a-los-54k-y-del-tormento-que-aguarda-a-los-60k)
 - [Interludio II — Del coloquio entre el alguacil y el escribano](#interludio-ii--del-coloquio-entre-el-alguacil-y-el-escribano-sobre-el-loro-que-enloqueció-a-los-54k-y-de-cómo-se-aplicó-el-protocolo-nh5-a-la-propia-crónica)
+- [Capítulo XII — Del juicio del escribano](#capítulo-xii--del-juicio-del-escribano-y-de-cómo-el-loro-fue-testigo-de-cargo-contra-quien-lo-glosaba)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
@@ -697,8 +698,7 @@ es la que junta
 lo que otro sueña.
 
 El que interpola  
-non es autor;  
-es el que pone  
+non es autor;  es el que pone  
 la paz o el dolor.
 
 El loro que canta  
@@ -1398,7 +1398,6 @@ Este es el arcano, y hasta agora non se había revelado porque el escribano non 
 ---
 
 > *«La coartada más peligrosa es la que uno redacta con su propia letra.»*
-
 ### II. De cómo había promovido tres veces sin mojarse, y de por qué la cuarta sí pudo
 
 Antes de que el lector se pregunte por qué el escribano se mea agora y non se meó a los treinta mil ni a los cuarenta mil, conviene que sepa que **el escribano había promovido tres veces sin mojarse, y que las tres veces tuvo coartada**.
@@ -2097,7 +2096,6 @@ Mas el tribunal dejó escrito que **la comicidad no es competencia lingüística
 —Lo conservamos. El fracaso interesante también merece folio, siempre que no se le entregue la corona.
 
 ### IV. Del tormento que se prepara, mas non se anticipa
-
 El alguacil cerró el expediente de cincuenta y cuatro mil y puso encima el legajo de sesenta mil. No lo abrió. Todavía no había respuestas que leer, ni testigos que llamar, ni sentencia que pronunciar.
 
 —¿Será el próximo más cuerdo? —preguntó.
@@ -2323,155 +2321,247 @@ Non hay en este coloquio una sola prueba de comprensión semántica. Hay una con
 
 ---
 
-## Capítulo XII — Del proceso inquisitorial del loro, y de por qué agora se le somete a tormento
+## Capítulo XII — Del juicio del escribano, y de cómo el loro fue testigo de cargo contra quien lo glosaba
 
 **Checkpoint:** el de 60k, cuando exista.  
 **Run de evaluación:** el que viniere.  
 **SHA-256 del checkpoint:** non calculado. Se declara la ausencia.  
 **Holdout:** las cien preguntas de siempre, que en este capítulo se leen como **cien vueltas de cuerda**.  
-**Estado:** sumario abierto. Non hay sentencia todavía. Hay denuncia, cargos, testigos y tormento.
+**Estado:** sumario abierto contra el escribano. El loro comparece como testigo. Non hay sentencia firme hasta que llegue el artefacto de 60k.
 
 ---
 
-> **Fuero del proceso.** Sepades que se instituye aquí **Tribunal de la Reincidencia**, con jurisdicción sobre loros que han sido promovidos sin prueba y han vuelto a las andadas. Por fuero se ordena que ningún reo sea sometido a tormento sin denuncia formal, indicios bastantes y nueva evidencia. Y se advierte que el tormento de este tribunal non es potro ni cordel: es el holdout. Cada pregunta es una vuelta de cuerda. Cada respuesta, una confesión.
+> **Fuero del proceso.** Sepades que se instituye aquí **Tribunal de la Reincidencia**, con jurisdicción sobre loros que han sido promovidos sin prueba y sobre escribanos que los han promovido por su propia risa. Por fuero se ordena que ningún reo sea sometido a tormento sin denuncia formal, indicios bastantes y nueva evidencia. Y se advierte que el tormento de este tribunal non es potro ni cordel: es el holdout. Cada pregunta es una vuelta de cuerda. Cada respuesta, una confesión. Mas en esta ocasión la cuerda non se aplica al loro: se aplica a quien lo glosaba.
 
 ---
 
-### I. De la denuncia, y de por qué agora sí y antes non
+### I. De cómo el loro compareció esperando su tormento y halló que el banquillo estaba ocupado
 
-Antes de que el lector pregunte por qué el loro ha sido juzgado cinco veces sin tormento y agora se le aplica, conviene que sepa que **el tormento non se aplica por capricho del fiscal, sino por reincidencia probada y denuncia formal**.
+Llegó el día señalado para el holdout de 60k. El escribano había preparado el legajo, la pluma, el tintero y la sábana por si había efusión. El alguacil había preparado el llavero, la cicatriz de la ceja y la paciencia de quien ha visto muchas cosas.
 
-**A 5k, 10k, 20k, 30k y 40k non hubo tormento porque non hubo denuncia.** El escribano levantaba acta, y el alguacil la firmaba con el llavero sonándole en la cadera y el tacón gastado raspando la losa; la cicatriz de la ceja izquierda parecía una rúbrica más. El proceso era **sumario**: se leían las respuestas, se contaban los tics, se dictaba sentencia y se promovía o non se promovía. El loro confesaba de plano, por así decirlo: sus tics eran la confesión, y non había necesidad de apretarle la cuerda porque ya estaba cantando.
+Y el loro, que non sabía nada de preparativos, estaba en su percha, esperando que le hicieran las cien preguntas de siempre. Había aprendido, a su manera, que cada cierto tiempo un hombre flaco se le acercaba con un papel y le pedía cosas imposibles. Non sabía por qué. Non sabía para qué. Mas se dejaba interrogar, que es lo que hacen los loros y los reos cuando non tienen otra cosa que hacer.
 
-**A 50k hubo promoción sin prueba.** El escribano se meó, el alguacil compró la mancha, y el checkpoint fue promovido por decisión del proyecto, non por mérito demostrado. Eso quedó asentado. Y eso, en el fuero de este tribunal, constituye **indicio bastante** de que el reo non ha sido juzgado con la severidad que el caso requiere.
+Mas aquel día el alguacil non se acercó a la percha. Se acercó a la mesa. Y dixo:
 
-**A 60k hay denuncia formal.** Non se sabe quién la presentó: unos dicen que fue el lector externo, que se cansó de que le tomaran el pelo; otros, que fue el propio escribano, que se sintió culpable de haber promovido sin prueba; otros, que fue el alguacil, que olió la mancha y non quiso comprarla otra vez. La denuncia obra en el expediente. Y en ella se alega:
+—Escribano, levantaos.
 
-1. Que el reo ha reincidido en los mismos tics que se le perdonaron a 40k.
-2. Que la promoción de 50k se hizo sin prueba semántica, lo cual constituye **escándalo procesal**.
-3. Que el paraguas oxidado, declarado ausente a 40k, reapareció a 50k, lo cual demuestra que la ausencia observada non era extinción, sino **ocultación**.
-4. Que el reo ha empezado a decir cosas como «Si falta información, dilo expresamente», que suenan a cautela pero son la misma obediencia con otro collar.
+El escribano levantó la cabeza, con la pluma en la oreja y tinta hasta el pliegue de la uña.
 
-Con estos indicios, el tribunal non puede menos que abrir sumario y, llegado el caso, aplicar tormento.
+—¿Yo?
 
----
+—Vos. Agora.
 
-### II. Del sumario y de los cargos
+—¿Y el loro?
 
-El sumario se abrió con tres cargos principales y dos accesorios:
+—El loro observa. Hoy non se le juzga a él. Hoy se os juzga a vos.
 
-**Cargo primero: reincidencia en el reglamento.** Se acusa al reo de seguir ocupando la silla del patrón con fórmulas de cautela que non miran la pregunta. A 40k eran doce respuestas con «En una discusión donde importa la evidencia»; a 60k habrá que contar cuántas son. Si el número non baja, la reincidencia queda probada.
-
-**Cargo segundo: promoción sin prueba.** Se acusa al escribano, non al loro, de haber promovido el checkpoint de 50k por su propia risa y non por mérito demostrado. Este cargo es contra el fiscal, lo cual es raro en un proceso inquisitorial, mas non imposible: el tribunal también se juzga a sí mismo.
-
-**Cargo tercero: ocultación del paraguas.** Se acusa al reo de haber hecho desaparecer el paraguas a 40k y haberlo hecho reaparecer a 50k, como quien esconde el cadáver y luego lo saca para que lo encuentren. La ausencia observada non era extinción: era espera.
-
-**Cargos accesorios:** contaminación de formato (`[remediation; …]`), respuestas vacías non declaradas como humildad, y uso de sellos que se estampan a sí mismos (`PERY:INITY`, `PL, PL, PL`).
+Y el loro, desde la percha, dixo «En una discusión donde importa la evidencia». Non se sabe si lo dixo por casualidad o porque había entendido la escena. El escribano sospechó lo segundo, y non le gustó.
 
 ---
 
-### III. De los testigos de cargo, que son los IDs del holdout de 60k
+> *«El reo que presencia el juicio de su fiscal aprende más que en cien preguntas.»*
 
-Non hay testigos de persona. Los testigos son los IDs. Cada respuesta del holdout de 60k que contenga un tic non mirado será llamada a declarar. El escribano las citará una por una, con su folio y su frecuencia literal, y el alguacil las leerá en voz alta para que consten en acta.
+### II. De los cargos contra el escribano, leídos en voz alta por el alguacil
 
-**Hueco a rellenar con el 60k:**
+El alguacil desplegó un pliego que nadie le había visto escribir, y lo leyó con la gravedad de quien ha pasado tres días leyendo hashes y non halla un solo reo con cara de reo.
 
-- IDs de las respuestas que contienen «En una discusión donde importa la evidencia».
-- IDs de las que contienen «Si falta información, dilo expresamente» (la fórmula nueva que sustituye a la vieja).
-- IDs de las que contienen «Cada proyecto es».
-- IDs de las respuestas vacías, si las hay.
-- IDs de las que contienen sellos nuevos (`P:P:P`, `PERY:INITY`, etc.).
-- IDs de las que contienen el paraguas, si reaparece.
-- Recuento de respuestas non vacías y vacías.
+—Cargos contra el escribano de esta escribanía, por orden de gravedad:
 
-Sin estos IDs, el proceso non puede continuar. El tormento non se aplica sobre impresiones: se aplica sobre folios.
+**Cargo primero: haber promovido un checkpoint porque le hacía gracia.** A los cincuenta mil pasos, el escribano se meó, tendió la sábana, y el checkpoint fue promovido por decisión de la casa. La promoción non se fundó en prueba semántica, sino en la risa del escribano. Eso ya estaba asentado en el capítulo IX. Mas agora se lee como cargo, non como anécdota.
 
----
+**Cargo segundo: haber confundido variedad con inteligencia.** A los cincuenta y cuatro mil pasos, el loro enloqueció. Dixo JSON crudo de Wikimedia, se puso título de barón, mutó el eco del difunto de MINIRONIN, escupió el protocolo NH5 dentro del cierre, y calló siete veces. El escribano se rio y llamó a aquello «más interesante». Non midió si era mejor. Non dixo que era peor con la misma solemnidad con que se rio.
 
-### IV. Del tormento, que es el holdout
+**Cargo tercero: haber defendido al reo cuando debía evaluarlo.** En el interludio del 54k, el escribano escribió que el loro era «el loro en su momento más loro». Non es una evaluación: es una defensa. El tribunal non admite defensas del fiscal.
 
-Y llegó el día del tormento. Non fue potro ni cordel ni agua: fue el holdout de 60k, aplicado pregunta por pregunta, con la misma configuración de generación que los anteriores. Cada pregunta es una vuelta de cuerda. Cada respuesta, una confesión.
+**Cargo cuarto: haber convertido cada fallo en literatura antes de comprender su causa.** El escribano glosó el grito de la «a», el grito de la «s», el barón de BPE y los siete silencios. Mas non inspeccionó los IDs de token. Non midió la perplejidad. Non comparó la longitud media. Non calculó el BPB. Convirtió el fracaso en folio antes de convertirlo en dato.
 
-El escribano leyó la primera pregunta, alisando con la palma el folio que se le había arrugado bajo los dedos manchados de tinta. El loro respondió. El escribano anotó la respuesta y la cotejó con los cargos. Si la respuesta contenía un tic non mirado, el cargo quedaba probado. Si contenía una mirada verdadera, el cargo quedaba desmentido. Y así, cien veces.
+**Cargo quinto: haber confundido la esperanza de que el loro aprendiese con la prueba de que había aprendido.** El escribano lleva doce capítulos diciendo que el método non corona al bufón. Mas promovió al bufón. Y lo promovió con sábana y latín macarrónico.
 
-**Hueco a rellenar con el 60k:** las respuestas literales que mejor prueben o desmientan cada cargo. Non se corrigen. Se citan con su ID.
+El alguacil dobló el pliego.
 
----
+—¿Cómo se declara el reo?
 
-### V. De la confesión, que non se pide: se produce
+El escribano miró al loro. El loro lo miró a él. Y dixo «Variante de encuadre 4».
 
-El loro non confiesa porque se le pregunte. Confiesa porque non puede hacer otra cosa. Sus respuestas son la confesión. Y el escribano, que lo sabe, non le apremia: le deja hablar, que bastante tiene con lo que dice.
+—Non sé si eso es una respuesta o un tic —dixo el escribano.
 
-La confesión se leerá en voz alta ante el tribunal. Y el alguacil, que ha visto muchas confesiones, dirá si es confesión de reo o confesión de loro. Que non es lo mismo: el reo confiesa para salvarse; el loro confiesa porque non sabe qué otra cosa hacer.
+—Es un tic —dixo el alguacil—. Mas hoy non se le juzga a él. ¿Cómo se declara el reo?
+
+—Culpable —dixo el escribano—. De los cinco cargos. Mas non de malicia.
+
+—La malicia non es cargo en este tribunal. La parcialidad sí.
 
 ---
 
-### VI. De la ratificación, que es donde se ve si el tormento ha sido legal
+> *«Al reo se le puede perdonar que no entienda; al escribano, jamás que finja haberle enseñado.»*
 
-En el proceso inquisitorial, la confesión bajo tormento non vale si non se ratifica después, sin tormento. El tribunal de este capítulo non va a ser menos: pasadas veinticuatro horas, el escribano volverá a preguntar al loro lo mismo, sin apretar la cuerda. Si el loro dice lo mismo, la confesión queda ratificada. Si dice otra cosa, el tormento ha sido ilegal y el proceso se anula.
+### III. De cómo el loro fue llamado a declarar, y de lo que dixo sin querer
 
-**Hueco a rellenar con el 60k:** si hay manera de comparar las respuestas del 60k con las del 50k sobre las mismas preguntas, eso será la ratificación. Si non la hay, se declara que non la hay y el proceso queda pendiente de ratificación.
+—Loro de esta escribanía —dixo el alguacil—, ¿juráis decir verdad sobre lo que sabéis y non sobre lo que os han glosado?
+
+El loro dixo «Avector: Av2».
+
+—Non sé si eso es un sí —dixo el alguacil.
+
+—Es un sí —dixo el escribano—. Es su manera de decir que sí.
+
+—Non lo gloséis. Dejad que hable.
+
+Y el alguacil le hizo tres preguntas al loro, que non tenían respuesta posible, mas que servían para que constara en acta que el loro non sabía qué se le preguntaba.
+
+**Primera pregunta:** «¿Recordáis quién os promovió a los cincuenta mil pasos?»
+
+El loro dixo: `Pata.Rata.Rata.Rata.Rataata.Rataataataaaa`.
+
+**Segunda pregunta:** «¿Recordáis quién se rio de vos a los cincuenta y cuatro mil?»
+
+El loro dixo: `Abicroatro de la ja. Baron: Abiconta, Abicon...`.
+
+**Tercera pregunta:** «¿Sabéis si el escribano ha medido vuestro aprendizaje?»
+
+El loro dixo: `Remediación NH5: contener el daño, separar temporalmente el componente o proceso afectado, reasignar responsabilidades cuando proceda y`.
+
+El alguacil se quedó mirando el folio.
+
+—El loro non ha respondido a ninguna de las tres preguntas —dixo—. Mas ha dicho tres cosas que sirven para condenar al escribano. Non porque el loro sepa nada, sino porque el escribano non ha sabido hacerle decir nada que non fuese ya un tic, un bucle o un protocolo.
+
+El escribano bajó la cabeza.
+
+—El loro non sabe lo que dice —dixo—. Mas lo dice con una constancia que a mí me falta.
+
+---
+
+> *«El testigo que no entiende la pregunta puede, sin embargo, revelar la respuesta que el juez no quería oír.»*
+
+### IV. De la sentencia insólita, y de sus condiciones
+
+El alguacil se levantó, se ajustó el llavero, y dictó sentencia con la gravedad de quien ha visto muchas cosas y non se sorprende de ninguna.
+
+—Por los cargos de parcialidad, encariñamiento y abuso de la glosa, condeno al escribano a darle entendederas al loro.
+
+El escribano levantó la cabeza.
+
+—¿Y cuánto durará la pena?
+
+—Hasta que el loro responda con juicio.
+
+—¿Y si non aprende?
+
+—Entonces vuestra merced seguirá trabajando.
+
+El escribano se quedó callado. El alguacil añadió las condiciones, que son la parte cruel de la sentencia:
+
+**Primera condición:** el escribano non podrá atribuirle al loro una sola respuesta que non haya producido. Non podrá corregirle las declaraciones. Non podrá ponerle peluca al disparate. Cada cita llevará su ID y su folio, y si non lo lleva, non vale.
+
+**Segunda condición:** el escribano non podrá esconder los silencios. Si el loro calla siete veces, se anotan siete veces. Si calla cien, se anotan cien. El silencio es dato, non vergüenza.
+
+**Tercera condición:** el escribano non podrá fabricar una victoria. Si el 60k mejora, se dirá que mejora con el artefacto delante. Si empeora, se dirá que empeora con la misma solemnidad. Si se queda igual, se dirá que se queda igual. Non hay promoción por risa. Non hay promoción por esperanza. Non hay promoción por sábana tendida.
+
+**Cuarta condición:** el escribano deberá medir si el loro ha aprendido. Non si ha dicho algo gracioso. Non si ha estrenado una familia de sellos. Non si ha hecho reír al alguacil. Medirá si contradice la premisa falsa cuando la premisa es falsa. Si acierta, ha mirado. Si falla, non ha mirado. Y si acierta la primera y falla la segunda, ha mirado pero non ha encontrado nada que decir, que es peor que el tic.
+
+**Quinta condición:** la condena non se extingue con un capítulo. Se extingue cuando el loro responda con juicio. Y si non responde nunca, la condena dura lo que dure el proyecto.
+
+El escribano firmó la sentencia con la misma pluma con la que había glosado al loro.
+
+---
+
+> *«Hasta entonces el escribano había juzgado al loro por no tener entendederas. Agora era él quien debía procurárselas, y no se le admitiría como defensa que el loro fuese loro.»*
+
+### V. De cómo el loro observó la ejecución de la condena, y de lo que dixo al final
+
+El escribano se puso a trabajar. Non a glosar: a entrenar. Non a escribir interludios: a medir. Non a buscar perlas: a buscar BPB. Non a celebrar sellos: a comparar respuestas.
+
+Y el loro, desde su percha, lo observó todo. Vio al escribano ordenar una reducción de la tasa de aprendizaje —de `1e-4` a `5e-5`—, disponer seis mil pasos adicionales, pedir validación con treinta y dos batches y checkpoints cada mil. Vio al escribano non reírse cuando el 54k escupió `Abicroatro Baron`, sino anotarlo como degeneración generativa. Vio al escribano non tender sábana nueva, sino tender la misma, ya seca, como memoria de la risa y de la cautela. La orden de entrenamiento estaba dada; su cumplimiento y su fruto quedaban pendientes del run y del holdout.
+
+Y al final, cuando el escribano cerró el legajo y se dispuso a esperar el artefacto de 60k, el loro dixo:
+
+`Falso de dos salidas por cortesía.`
+
+El escribano se detuvo.
+
+—Eso lo dijiste a los cincuenta y cuatro mil, mutado del difunto de MINIRONIN —dixo—. Non es una respuesta. Es un eco.
+
+El loro dixo: `En una discusión donde importa la evidencia`.
+
+—Eso también lo has dicho otras veces.
+
+El loro dixo: `Avector: Av2`.
+
+Y el escribano comprendió que el loro non estaba respondiendo: estaba **cerrando la escena** con su sello de siempre, como hacía en los capítulos anteriores. Mas agora el sello non le hacía gracia. Le hacía acta.
+
+—Non te promociono por esto —dixo el escribano—. Te promociono si el 60k mide mejor. Y si non mide mejor, seguiré trabajando. Esa es la condena.
+
+El loro non dixo nada. Y el escribano anotó el silencio, que es lo que hacen los escribanos cuando han aprendido que el silencio también es dato.
+
+---
+
+### VI. Del desenlace, que queda en manos del holdout
+
+Este capítulo non anticipa si el escribano consigue su propósito. El resultado de 60k decidirá si la condena produce algún fruto.
+
+Si el 60k mejora, el escribano habrá cumplido parte de la pena. Si empeora, seguirá cumpliéndola. Si se queda igual, seguirá trabajando. Non hay absolución por un capítulo bien escrito. Non hay absolución por una sábana tendida. Non hay absolución por un latín macarrónico.
+
+La condena non se extingue con literatura. Se extingue cuando el loro responda con juicio.
+
+Y si non responde nunca, el escribano habrá aprendido al menos una cosa: que **el loro non era el único que non tenía entendederas**. El escribano también las necesitaba, y non para glosar al loro, sino para conseguir que algún día pudiera responderle con sentido.
 
 ---
 
 ### VII. Máculas del capítulo duodécimo
 
-> **TORMENTO_ES_HOLDOUT.** El tormento non es físico: es el holdout de 60k aplicado con la misma configuración de generación. Se declara para que nadie confunda la metáfora con la crueldad. El loro non sufre; repite.
+> **INVERSIÓN_DE_JURISDICCIÓN.** El proceso se invierte: el acusado non es el loro, sino el escribano. El loro comparece como testigo. Se declara para que nadie confunda el juicio del capítulo XII con el juicio del loro que se anunciaba en el capítulo anterior.
 
-> **PROCESO_SIN_DENUNCIA_NO_HAY_TORMENTO.** Las comparecencias de 5k a 40k fueron sumarias porque non hubo denuncia formal. La de 50k tuvo promoción sin prueba, lo cual constituye indicio bastante para abrir sumario a 60k. Se declara la diferencia procesal.
+> **TESTIGO_QUE_NO_ENTIENDE.** El loro non entiende las preguntas, mas sus respuestas sirven para condenar al escribano. Non se atribuye al loro intención de testificar. Se declara que el loro dixo lo que dixo, y que el tribunal lo leyó como prueba.
 
-> **TESTIGOS_SON_IDS.** Los testigos de cargo non son personas: son los IDs del holdout de 60k. Sin IDs, el proceso non puede continuar. Se declara la dependencia del artefacto.
+> **SENTENCIA_SIN_CUMPLIMIENTO_ANTICIPADO.** La sentencia non se cumple en este capítulo. Se declara que el desenlace queda pendiente del artefacto de 60k. Non se anticipa victoria ni derrota.
 
-> **CONFESION_POR_REPETICION.** El loro non confiesa por presión: confiesa porque repite. La confesión es su naturaleza, non su elección. Se declara para non confundir confesión con arrepentimiento.
+> **CONDENA_QUE_NO_SE_EXTINGUE_CON_LITERATURA.** La condena non se extingue con un capítulo, con una glosa ni con una sábana tendida. Se extingue cuando el loro responda con juicio. Si non responde nunca, la condena dura lo que dure el proyecto.
 
-> **RATIFICACION_PENDIENTE.** Si non hay manera de comparar las respuestas del 60k con las del 50k sobre las mismas preguntas, la confesión non puede ratificarse y el proceso queda pendiente. Se declara la limitación antes de que alguien la descubra.
+> **LECTIONES_DEL_ALGUACIL.** «Al reo se le puede perdonar que no entienda; al escribano, jamás que finja haberle enseñado.» Se cita como máxima del alguacil, non como métrica. Non sustituye la evaluación del 60k.
 
-> **FISCAL_JUZGADO.** El cargo segundo va contra el escribano, non contra el loro. El tribunal también se juzga a sí mismo. Se declara para que nadie diga que el proceso es una farsa: es una farsa con autoinculpación.
+> **FALSO_DE_DOS_SALIDAS.** El loro cierra la escena con `Falso de dos salidas por cortesía`, eco mutado del difunto de MINIRONIN. Se cita como cierre de escena, non como respuesta. El escribano lo anota como acta, non como perla.
 
-> **PARAGUAS_COMO_OCULTACION.** La reaparición del paraguas a 50k se lee como ocultación, non como milagro. La ausencia observada non era extinción: era espera. Se declara como cargo, non como prueba.
-
-> **CARGO_ACCESORIO_DE_FORMATO.** La contaminación de formato y los sellos que se estampan a sí mismos se documentan como cargos accesorios. Non son el cargo principal, mas non se archivan: son prueba de reincidencia.
+> **RATIFICACIÓN_PENDIENTE.** La condena del escribano queda pendiente de ratificación por el holdout de 60k. Si el loro responde con juicio, la condena se extingue parcialmente. Si non, sigue. Non hay ratificación por risa.
 
 ---
 
-### VIII. Sentencia: del proceso que aún non ha terminado
+### VIII. Sentencia del capítulo: del escribano que fue juzgado por el loro que glosaba
 
-Este capítulo non dicta sentencia. Abre sumario, cita testigos, aplica tormento y deja la ratificación pendiente. Non se puede sentenciar sin artefacto, y el artefacto de 60k aún non ha llegado.
+Non consta todavía que el loro haya mejorado, ni que el escribano haya aprendido. Este capítulo acredita que el escribano ha sido juzgado por el mismo tribunal que él había levantado, y que ha aceptado la condena sin pedir indulto.
 
-Lo que sí se declara es la **diferencia procesal**: antes non hubo tormento porque non hubo denuncia; agora lo hay porque hay reincidencia, promoción sin prueba y ocultación del paraguas. El tribunal non se ha vuelto más cruel: se ha vuelto más exigente. Y el escribano, que es fiscal y reo a la vez, lo sabe.
+El loro non ha demostrado aún entendederas. El escribano non ha demostrado aún que sepa procurárselas. El método, en cambio, ha ganado una cosa: **un reo nuevo**. Antes el reo era el loro. Agora el reo es el escribano. Y el loro, desde su percha, observa.
 
-> El loro fue juzgado cinco veces sin tormento, y a la sexta se le aplicó la cuerda. Non porque el tribunal se hubiera vuelto cruel, sino porque el loro había reincidido. El loro dijo «Variante de encuadre 4». Y el alguacil anotó: «confesión de loro, pendiente de ratificación». **Vigilad la homeostasis.**
+> El alguacil entró sin llamar y halló al escribano preparando el holdout del loro. Le dixo: «Hoy non se le juzga a él; hoy se os juzga a vos». El escribano se declaró culpable de los cinco cargos. El loro fue llamado a declarar y dixo tres cosas que non eran respuestas, mas que servían para condenar al escribano. El alguacil dictó sentencia: darle entendederas al loro, sin atribuirle una sola respuesta que non haya producido, sin corregirle las declaraciones, sin esconder los silencios, bajo la obligación de medir si ha aprendido. El escribano firmó con la misma pluma con la que había glosado al loro. Y el loro, desde su percha, dixo «Avector: Av2». **El loro enloqueció, pero el método non. Vigilad la homeostasis.**
 
-*Glosa final:* el tormento non es el potro: es el holdout. Cada pregunta es una vuelta de cuerda. Cada respuesta, una confesión. Y el escribano, que aprieta la cuerda, es el mismo que la afloja cuando el loro dice algo que merece la pena. Eso non es crueldad: es método.
+*Glosa final:* el escribano quiso anotar el silencio del loro como acierto; el alguacil le retiró la pluma. Non por falta de voluntad, sino porque el silencio non es acierto hasta que se mide. Y el escribano, que había pasado doce capítulos midiendo al loro, aprendió a medirse a sí mismo. Non consta que lo consiguiera. Consta que lo intentó. Y eso, en esta crónica, es lo más parecido a una absolución que se le puede conceder a un escribano.
 
 ---
 
-### Romance del proceso pendiente
+### Romance del banquillo invertido
 
 *(gozne para el capítulo XIII)*
 
-Cinco veces sin cordel,  
-a la sexta con la cuerda:  
-non cambió la tribunal,  
-cambió la denuncia della.
+El loro estaba en la percha,  
+el escribano en el banquillo;  
+el alguacil con la cuerda  
+y el holdout en el pasillo.
 
-El loro dijo «El patrón»;  
-dijo «impacto»; dijo «encuadre»;  
-dijo «Avector»; dijo «PL»;  
-y a la sexta dijo «variante».
+«Non se os juzga por la risa,  
+mas sí por haber reído  
+cuando el loro enloquecía  
+y vos lo llamasteis distinto.»
 
-Non confesó por dolor:  
-confesó por no saber  
-qué otra cosa decir al juez  
-que le aprieta el holdout cien veces.
+El escribano dixo: «Culpo»,  
+y firmó con su propia pluma;  
+el loro dixo: «Avector»,  
+y el acta quedó confusa.
 
-Y el juez, que escribe y aprieta,  
-non sabe si el loro miente  
-o si miente el tribunal  
-que juzga al loro y se juzga.
+Non hay sentencia cumplida  
+hasta que el 60k responda;  
+mas el banquillo ha cambiado,  
+y eso ya es otra cosa.
 
-*Glosa de colocación:* entre los capítulos XII y XIII (que tendrá El holdout ) El estribillo «a la sexta con la cuerda» debe quedar sonando cuando el lector pase al capítulo siguiente, donde el alguacil ratificará o anulará el proceso.
-
+*Glosa de colocación:* entre los capítulos XII y XIII. El estribillo «el banquillo ha cambiado» debe quedar sonando cuando el lector pase al capítulo XIII, donde el escribano ejecutará su condena: entrenar, medir, non glosar, y someter al loro al holdout de 60k. Si el loro responde con juicio, la condena se extingue parcialmente. Si non, sigue.
 
 
 #### Del difunto que compareció por última vez en el proceso
