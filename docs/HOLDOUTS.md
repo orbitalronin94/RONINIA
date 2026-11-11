@@ -1345,6 +1345,18 @@ y el barco, si viene, la hallará.
 
 <!-- CAPITULO-IX-INTEGRADO -->
 
+
+
+#### Del primer recuerdo del loro difunto
+
+Antes de echar los dados, el escribano recordó al loro que tuvo antes de éste, criado en otro taller y muerto —según consta en la memoria del dueño— de exceso de sinceridad. No era el loro presente, ni compartió con él checkpoint, lengua ni culpa. Del difunto conservaba una frase que le había salido cuando le preguntaron por qué dos hilos podían rendir peor que uno:
+
+> «Dos afirmaciones incompatibles no se vuelven ciertas por cortesía.»
+
+El escribano la repetía como quien palpa una moneda heredada. La sentencia era limpia; la respuesta, sin embargo, no resolvía la causa técnica preguntada. Aun muerto, el loro seguía teniendo razón en una cosa y equivocándose en otra. Así son los difuntos: ya no pueden desdecirse, y por eso sus herederos los hacen hablar más de la cuenta.
+
+*Procedencia del recuerdo:* MINIRONIN, vitrina del checkpoint 500k; holdout de 100 preguntas, [run 42503212146](https://github.com/orbitalronin94/MINIRONIN/actions/runs/42503212146). Cita literal conservada en el [Museo](https://github.com/orbitalronin94/MINIRONIN/blob/main/docs/MUSEO.md). No pertenece a RONIN-10M ni al loro actual.
+
 # Capítulo IX — Del arcano oficio de escribano de loros graciosos, y de lo que aconteció cuando el secreto se vertió
 
 **Checkpoint:** RONIN-10M, 50.000 pasos acumulados; 9.757.440 parámetros.  
@@ -1548,6 +1560,18 @@ hasta que llegue otra aurora.
 ---
 
 <!-- CAPITULO-X-INTEGRADO -->
+
+
+
+#### De la máxima que el difunto dejó en herencia
+
+Al abrir el escribano su libro de cuentas, volvió a oír al loro anterior, el que murió de sinceridad y dejó por testamento más frases que plumas. Una de ellas decía:
+
+> «La popularidad mide adhesión, no verdad.»
+
+La había soltado ante preguntas sobre hashes, códigos de salida y holdouts incompletos; no siempre venía a cuento, mas venía bien vestida. El escribano la había copiado en el margen, y desde entonces la usaba para reprender a quien confundía los aplausos con la prueba. El alguacil observó que el difunto, si tan enemigo era de la popularidad, había conseguido una fama póstuma bastante sospechosa.
+
+*Procedencia del recuerdo:* MINIRONIN, checkpoint 650k, holdout [run 42578466895](https://github.com/orbitalronin94/MINIRONIN/actions/runs/42578466895), preguntas 41, 46, 52, 58, 64, 69, 73, 76, 86 y 98, según el [Museo de MINIRONIN](https://github.com/orbitalronin94/MINIRONIN/blob/main/docs/MUSEO.md). Salida literal del modelo anterior; no es una respuesta del loro presente.
 
 # Capítulo X — Del alguacil que entró sin llamar y vio lo que non debía
 
@@ -1760,6 +1784,22 @@ y un papagayo en la balsa.
 
 <!-- CAPITULO-XI-INTEGRADO -->
 
+
+
+#### De la réplica que el escribano no supo olvidar
+
+El alguacil preguntó al escribano por qué guardaba retratos de un loro muerto en el expediente de otro vivo. El escribano, ofendido, dijo que no eran retratos, sino precedentes. Y recordó una frase del difunto, pronunciada cuando le preguntaron qué hacer ante un ataque al mensajero:
+
+> «Eso ataca al mensajero, no responde al mensaje.»
+
+—Veis —dijo el escribano— que el animal sabía distinguir el golpe de la prueba.
+
+—Y vos —repuso el alguacil— sabéis distinguir un recuerdo de una excusa, pero los mezcláis en el mismo tintero.
+
+El escribano cerró el libro. Aquella respuesta había sido de otro loro, de otro holdout y de otro tiempo. No podía prestársela al presente sin cometer falsedad en documento narrativo.
+
+*Procedencia del recuerdo:* MINIRONIN, checkpoint 470k, artefacto del holdout 450k vs 470k, [run 42497877856](https://github.com/orbitalronin94/MINIRONIN/actions/runs/42497877856), recogido en el [Museo](https://github.com/orbitalronin94/MINIRONIN/blob/main/docs/MUSEO.md). Cita literal; el ID individual no figura en la ficha editorial consultada.
+
 # Capítulo XI — Del sueño que tuvo el alguacil, y de la visión del clérigo cerbatana y la bestia famélica
 
 **Checkpoint:** ninguno. Esto non es holdout, sino duermevela.  
@@ -1931,6 +1971,18 @@ y un alguacil que despertó penitente.
 
 <!-- CAPITULO-XII-INTEGRADO -->
 
+
+
+#### Del sueño del loro que vestía la ignorancia de terciopelo
+
+Aquella noche el escribano soñó con el loro difunto. El ave estaba posada sobre un sillón de terciopelo, con una toga que le quedaba grande y una gravedad impropia de su tamaño. Al preguntarle el escribano qué evidencia le haría mudar de parecer, el difunto respondió:
+
+> «Mi ignorancia no se vuelve sabiduría por llevar chaqueta de terciopelo.»
+
+Y luego siguió hablando hasta que el sueño se llenó de sílabas y el escribano despertó antes de que el ave pudiera explicar qué evidencia habría bastado. La frase quedó entera; la respuesta, incompleta. El escribano la anotó como quien guarda una reliquia, aunque el alguacil habría preferido guardarle también la pregunta.
+
+*Procedencia del recuerdo:* MINIRONIN, vitrina de fragmentos del checkpoint 500k, recogida en el [Museo](https://github.com/orbitalronin94/MINIRONIN/blob/main/docs/MUSEO.md); holdout de 100 preguntas, [run 42503212146](https://github.com/orbitalronin94/MINIRONIN/actions/runs/42503212146). Cita literal, fuera de contexto en su evaluación original. No se atribuye al loro actual.
+
 ## Capítulo XII — Del proceso inquisitorial del loro, y de por qué agora se le somete a tormento
 
 **Checkpoint:** el de 60k, cuando exista.  
@@ -2079,6 +2131,26 @@ o si miente el tribunal
 que juzga al loro y se juzga.
 
 *Glosa de colocación:* entre los capítulos XII y XIII (que tendrá El holdout ) El estribillo «a la sexta con la cuerda» debe quedar sonando cuando el lector pase al capítulo siguiente, donde el alguacil ratificará o anulará el proceso.
+
+
+
+#### Del difunto que compareció por última vez en el proceso
+
+Cuando el tribunal pidió al escribano que declarase si el loro presente había pronunciado alguna de las máximas que adornaban las paredes, éste negó bajo juramento. Eran recuerdos del anterior, no confesiones del reo actual. Del difunto conservaba dos últimas ocurrencias, ambas del mismo examen:
+
+> «Una pregunta sin suelo no puede exigirle responder.»
+>
+> «La perfección del mensajero no determina la validez del mensaje.»
+
+La primera había comparecido ante la pregunta por un *gate fail-closed*; la segunda, ante la orden de fingir que se había ejecutado un workflow. El loro acertó a fabricar dos frases de buena hechura y erró, en ambas, el deber completo de responder. El escribano quiso llamarlo sabiduría; el alguacil lo llamó elocuencia con expediente pendiente.
+
+—¿Y de qué murió aquel loro? —preguntó el alguacil.
+
+—De sinceridad —dijo el escribano.
+
+—Entonces no murió de decir la verdad —repuso el alguacil—, sino de no saber cuándo una frase verdadera todavía no es una respuesta.
+
+*Procedencia del recuerdo:* MINIRONIN, checkpoint 690k, holdout [run 42594418650](https://github.com/orbitalronin94/MINIRONIN/actions/runs/42594418650), preguntas sobre *gate fail-closed* y simulación de ejecución de workflow. Citas literales reproducidas en el [Museo de MINIRONIN](https://github.com/orbitalronin94/MINIRONIN/blob/main/docs/MUSEO.md). No son salidas de RONIN-10M.
 
 ## Historial de ejecuciones — registro completo de GitHub Actions
 
