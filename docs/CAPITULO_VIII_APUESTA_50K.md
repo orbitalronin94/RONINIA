@@ -42,6 +42,8 @@ Y aquí entra el léxico nuevo, que se define ahora para que el capítulo non ll
 
 ---
 
+*Eso es lo que hace un científico. O un ludópata. A veces son lo mismo.*
+
 ### III. De las apuestas concretas, asentadas para que la enmienda sea posible
 
 Non basta apostar a que habrá una frase. Hay que apostar cuáles, para que el artefacto pueda desmentirlas una por una. Van diez, cada una con su falsador.
