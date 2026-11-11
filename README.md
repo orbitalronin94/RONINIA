@@ -51,3 +51,12 @@ El workflow verifica el estado y la procedencia del run, descarga el artefacto, 
 3. Ejecutar train-ronin-10m.yml usando el ID del run del tokenizador. El entrenamiento comienza desde inicialización aleatoria y guarda checkpoints cada 5.000 pasos.
 
 El desarrollo local es opcional; los workflows son la vía reproducible del proyecto.
+
+
+## Contrato del registro de holdouts
+
+El registro automático escucha `workflow_run: completed`. Para que una evaluación se incorpore al libro, **el nombre del archivo** debe incluir `holdout` (por ejemplo, `.github/workflows/checkpoint-holdout-ronin-10m.yml`) y el campo YAML `name:` también debe incluir esa palabra. El listener valida ambos nombres: si uno se modifica y el otro no, la ejecución falla explícitamente. Si se renombra el archivo y el workflow a la vez, hay que actualizar conscientemente este contrato y su documentación.
+
+No basta con que el job termine en verde: el registro conserva el run, conclusión, artefactos y commit de origen. Consulta la [crónica de holdouts](docs/HOLDOUTS.md) para las interpretaciones narrativas, límites de las métricas y máculas abiertas.
+
+**Criterio de lectura actual:** la desaparición de una muletilla o la aparición de otras solo demuestra cambio de distribución superficial. No se declarará progreso de modelado sin BPB medido sobre una validación fija, y las abstenciones se analizarán por adecuación a la información disponible.
