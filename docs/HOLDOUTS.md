@@ -53,6 +53,8 @@
 - [Capítulo XIII — Del loro que llegó a sesenta mil pasos](#capítulo-xiii--del-loro-que-llegó-a-sesenta-mil-pasos-respondió-cien-veces-y-non-halló-la-puerta-de-su-propia-lengua)
 - [Capítulo XV — Del loro que perdió el juicio](#capítulo-xv--del-loro-que-perdió-el-juicio-del-escribano-que-perdió-la-vergüenza-y-de-cien-preguntas-que-acabaron-pidiendo-un-exorcista)
 - [Capítulo XVI — Del libro de apuestas, de la cólera del escribano y del loro que aún non ha comparecido](#capítulo-xvi--del-libro-de-apuestas-de-la-cólera-del-escribano-y-del-loro-que-aún-non-ha-comparecido)
+- [Capítulo XVII — Del holdout de 90k y de las cien respuestas no vacías](#capítulo-xvii--del-loro-que-respondió-cien-veces-del-escribano-que-cobró-en-vergüenza-y-de-la-apuesta-que-non-pudo-pagarse)
+- [Capítulo XVIII — Del loro que habló sin pregunta](CAPITULO_XVIII_LORO_SIN_TESTIGO.md)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
