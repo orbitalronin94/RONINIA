@@ -2469,7 +2469,7 @@ El escribano firmó la sentencia con la misma pluma con la que había glosado al
 
 ### V. De cómo el loro observó la ejecución de la condena, y de lo que dixo al final
 
-El escribano se puso a trabajar. Non a glosar: a entrenar. Non a escribir interludios: a medir. Non a buscar perlas: a buscar BPB. Non a celebrar sellos: a comparar respuestas.
+El escribano se puso a trabajar. Non a glosar: a entrenar. Non a escribir interludios: a medir. Non a buscar perlas: a buscar BPB. Non a celebrar sellos: a comparar respuestas. Y se impuso una regla más: dejar el fracaso documentado con la solemnidad de un triunfo y la honestidad de un acta notarial; non para disfrazarlo de victoria, sino para que ni el tiempo ni la vergüenza pudiesen alterar lo sucedido.
 
 Y el loro, desde su percha, lo observó todo. Vio al escribano ordenar una reducción de la tasa de aprendizaje —de `1e-4` a `5e-5`—, disponer seis mil pasos adicionales, pedir validación con treinta y dos batches y checkpoints cada mil. Vio al escribano non reírse cuando el 54k escupió `Abicroatro Baron`, sino anotarlo como degeneración generativa. Vio al escribano non tender sábana nueva, sino tender la misma, ya seca, como memoria de la risa y de la cautela. La orden de entrenamiento estaba dada; su cumplimiento y su fruto quedaban pendientes del run y del holdout.
 
