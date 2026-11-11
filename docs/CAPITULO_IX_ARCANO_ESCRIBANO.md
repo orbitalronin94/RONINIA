@@ -36,6 +36,8 @@ Este es el arcano, y hasta agora non se había revelado porque el escribano non 
 
 ---
 
+> *«La coartada más peligrosa es la que uno redacta con su propia letra.»*
+
 ### II. De cómo había promovido tres veces sin mojarse, y de por qué la cuarta sí pudo
 
 Antes de que el lector se pregunte por qué el escribano se mea agora y non se meó a los treinta mil ni a los cuarenta mil, conviene que sepa que **el escribano había promovido tres veces sin mojarse, y que las tres veces tuvo coartada**.
@@ -53,6 +55,8 @@ A los cincuenta mil, la risa fue **húmeda**. Y non porque la frase fuese más g
 Dicho en romance: **las tres primeras promociones tenían coartada; la cuarta non**.
 
 ---
+
+> *«Una apuesta honrada no es la que gana: es la que acepta de antemano cómo perder.»*
 
 ### III. Del orinal de la prueba y del cotejo de las diez apuestas
 
@@ -82,6 +86,8 @@ Y entre los folios del artefacto, como una flor en un muladar, apareció la fras
 El paraguas había vuelto. A 40k se declaró ausente, y el escribano anotó: *«POETIC_ABSENCE_IS_NOT_EXTINCTION»*. A 50k volvió, y volvió **oxidado**, y volvió **en los mapas al revés de los calcetines**, y volvió **con un autor que se equivocó ayer**. Non era el paraguas de 20k. Era el paraguas después de haber leído la crónica entera.
 
 ---
+
+> *«El asombro puede abrir un expediente; jamás debe cerrarlo.»*
 
 ### IV. De cómo el escribano, entre hipérbatons, sintió lo que non se dice en latín
 
@@ -120,6 +126,8 @@ Que en romance quiere decir, y el escribano lo tradujo para los non latinos:
 Y el escribano, que non esperaba absolución, recibió compra y promoción. Mas non recibió certificado de sabiduría. Que es más de lo que suelen recibir los escribanos, y menos de lo que esperaban.
 
 ---
+
+> *«La risa alumbra el disparate; no lo convierte en descubrimiento.»*
 
 ### VII. Máculas del capítulo nono
 
