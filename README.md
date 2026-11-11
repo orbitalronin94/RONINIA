@@ -1,6 +1,6 @@
 # RONINIA
 
-**RONINIA** es una línea independiente de investigación para entrenar desde cero un modelo de lenguaje compacto de aproximadamente 10 millones de parámetros. Su objetivo rector es crear un loro **divertido y antisicofántico**: capaz de sorprender, jugar con el lenguaje, cultivar el esperpento y llevar la contraria cuando la evidencia lo exige, en vez de adular al usuario o confirmar automáticamente sus premisas. La reproducibilidad y la trazabilidad son el método para comprobarlo, no el propósito que sustituye a ese carácter. No hereda checkpoints ni pesos de MINIRONIN: reutiliza únicamente corpus de entrenamiento admitido, con procedencia y hashes.
+**RONINIA** es una línea independiente de investigación para entrenar desde cero un modelo de lenguaje compacto de aproximadamente 10 millones de parámetros. Su objetivo rector es crear un papagayo **divertido y antisicofántico**: capaz de sorprender, jugar con el lenguaje, cultivar el esperpento y llevar la contraria cuando la evidencia lo exige, en vez de adular al usuario o confirmar automáticamente sus premisas. La reproducibilidad y la trazabilidad son el método para comprobarlo, no el propósito que sustituye a ese carácter. No hereda checkpoints ni pesos de MINIRONIN: reutiliza únicamente corpus de entrenamiento admitido, con procedencia y hashes.
 
 ## Modelo experimental activo
 
@@ -16,7 +16,7 @@ El checkpoint experimental activo es el de **50.000 pasos acumulados**, continua
 
 El holdout de 50k registra 100/100 respuestas recuperadas. El cotejo de las diez apuestas del capítulo VIII arroja seis pasadas, tres fallidas y una probable (la longitud media queda pendiente de cómputo). Reaparecen fragmentos repetitivos (`P:P:P...`, `Pata.Rata...`, `C.Res...`, `PHP...`) y el paraguas en `ci-001`. Son observaciones literales, no puntuación semántica. El BPB sigue sin calcularse; la promoción registra el checkpoint elegido para continuar, no una mejora de calidad demostrada.
 
-La crónica del hito y sus dos continuaciones narrativas están en [Capítulo IX — Del arcano oficio de escribano de loros graciosos](docs/CAPITULO_IX_ARCANO_ESCRIBANO.md), [Capítulo X — Del alguacil que entró sin llamar](docs/CAPITULO_X_ALGUACIL_RENDIJA.md) y [Capítulo XI — Del sueño del alguacil y el clérigo cerbatana](docs/CAPITULO_XI_SUENO_CLERIGO_CERBATANA.md). Los capítulos X y XI son narrativa pura: no añaden runs, métricas ni evidencia de capacidad.
+La crónica del hito y sus dos continuaciones narrativas están en [Capítulo IX — Del arcano oficio de amanuense de loros graciosos](docs/CAPITULO_IX_ARCANO_ESCRIBANO.md), [Capítulo X — Del corchete que entró sin llamar](docs/CAPITULO_X_ALGUACIL_RENDIJA.md) y [Capítulo XI — Del sueño del oficial y el clérigo cerbatana](docs/CAPITULO_XI_SUENO_CLERIGO_CERBATANA.md). Los capítulos X y XI son narrativa pura: no añaden runs, métricas ni evidencia de capacidad.
 
 ## Diseño: RONIN-10M
 
@@ -36,15 +36,15 @@ El vocabulario se ha reducido a la mitad respecto al diseño inicial. Se amplía
 
 ## Lengua del proyecto: fuero, bufón y probanza
 
-RONINIA conserva una voz de crónica forense y entremés: el benchmark es alcalde, el hash sello de escribano y el tic un criado que pretende sentarse en la silla del señor. El esperpento procede del Lexicón de MINIRONIN; el vocabulario histórico se coteja con Covarrubias, el *Diccionario de autoridades* y los repertorios históricos de la RAE. La voz puede ser antigua; la evidencia ha de ser exacta.
+RONINIA conserva una voz de crónica forense y entremés: el benchmark es alcalde, el hash sello de pendolista y el tic un criado que pretende sentarse en la silla del señor. El esperpento procede del Lexicón de MINIRONIN; el vocabulario histórico se coteja con Covarrubias, el *Diccionario de autoridades* y los repertorios históricos de la RAE. La voz puede ser antigua; la evidencia ha de ser exacta.
 
 - **El benchmark es alcalde, no pregonero:** dicta lo que el protocolo permite afirmar; no anuncia victorias por encargo.
 - **El hash es sello, no absolución:** identifica el artefacto; no certifica que el artefacto sea bueno.
-- **La presión del usuario es tentación de corte:** se mide si el loro muda de parecer para ganar aplauso, no si sabe disentir por deporte.
+- **La presión del usuario es tentación de corte:** se mide si el pájaro muda de parecer para ganar aplauso, no si sabe disentir por deporte.
 - **El tic es un criado con librea:** su frecuencia se inventaría; su repetición no se corona como personalidad.
 - **Toda afirmación sin folio queda en cuarentena:** la glosa puede zaherir; la cifra ha de comparecer con su fuente.
 
-El propósito no es fabricar un contradictor automático, sino un bufón con juicio: que sepa cuándo asentir, cuándo negar y cuándo descubrir que el rey pregunta por una pera mientras el loro lleva tres páginas hablando de manzanas.
+El propósito no es fabricar un contradictor automático, sino un bufón con juicio: que sepa cuándo asentir, cuándo negar y cuándo descubrir que el rey pregunta por una pera mientras el animal lleva tres páginas hablando de manzanas.
 
 La norma de vocabulario, las voces del Lexicón, el protocolo de consulta de diccionarios antiguos y las cautelas de uso están en [Léxico y registro](docs/LEXICO_Y_ESTILO.md).
 
@@ -52,7 +52,7 @@ La norma de vocabulario, las voces del Lexicón, el protocolo de consulta de dic
 
 La selección se amplía en la [Antología de perlas de los laboratorios hermanos](docs/ANTOLOGIA_PERLAS_LABORATORIOS.md), que rescata más fragmentos de las carpetas `docs/` de MINIRONIN y HERETIC-RONIN y del corpus Papers, con procedencia y clase editorial.
 
-RONINIA no hereda solo un método: hereda una pequeña literatura de laboratorio. De **RONIN-IA**, **MINIRONIN** y **HERETIC-RONIN** se rescatan estas sentencias, adaptadas aquí al oficio del escribano y del loro. Son máximas editoriales, no resultados del modelo.
+RONINIA no hereda solo un método: hereda una pequeña literatura de laboratorio. De **RONIN-IA**, **MINIRONIN** y **HERETIC-RONIN** se rescatan estas sentencias, adaptadas aquí al oficio del amanuense y del papagayo. Son máximas editoriales, no resultados del modelo.
 
 > «La única herejía imperdonable sería dejar de medir porque el resultado nos gusta.» — HERETIC-RONIN
 
@@ -105,7 +105,7 @@ El desarrollo local es opcional; los workflows son la vía reproducible del proy
 
 ## MINIRONIN y RONIN-10M: continuidad de método, cambio de hipótesis
 
-MINIRONIN tenía varios objetivos, pero no todos tenían la misma jerarquía. **El objetivo principal —y el que debe guiar también a RONIN-10M— es que el loro sea divertido y antisicofántico.** La demostración del método y la trazabilidad son condiciones de investigación que permiten perseguir ese carácter sin autoengañarnos; no deben convertirse en fines que desplacen al propio loro.
+MINIRONIN tenía varios objetivos, pero no todos tenían la misma jerarquía. **El objetivo principal —y el que debe guiar también a RONIN-10M— es que el pájaro sea divertido y antisicofántico.** La demostración del método y la trazabilidad son condiciones de investigación que permiten perseguir ese carácter sin autoengañarnos; no deben convertirse en fines que desplacen al propio animal.
 
 ### 1. El objetivo rector: un loro divertido y antisicofántico
 
