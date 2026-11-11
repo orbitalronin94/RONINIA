@@ -1,0 +1,47 @@
+{
+  "model_id": "RONIN-10M",
+  "status": "promoted_experimental",
+  "promoted_at": "2026-11-11",
+  "training": {
+    "run_id": 42902793379,
+    "run_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42902793379",
+    "cumulative_steps": 10000,
+    "checkpoint": "checkpoint-10000.pt",
+    "checkpoint_sha256": "b82df8b5d06171a9e6db6157d4036854ea445a84f8462b731c4d6d9892e3e172",
+    "parameters": 9757440,
+    "config": {
+      "vocab_size": 8192,
+      "context_length": 256,
+      "layers": 6,
+      "d_model": 288,
+      "heads": 8,
+      "d_ff": 1536,
+      "dropout": 0,
+      "tied_embeddings": true
+    }
+  },
+  "tokenizer": {
+    "run_id": 42849436025,
+    "sha256": "605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4"
+  },
+  "evaluation": {
+    "run_id": 42970549370,
+    "run_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370",
+    "artifact_id": 13832434652,
+    "artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652",
+    "questions": 100,
+    "holdout_sha256": "3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535",
+    "generation": "greedy_argmax",
+    "max_new_tokens": 32,
+    "max_new_bytes": 128,
+    "threads": 2,
+    "kv_cache": false,
+    "rag": false,
+    "automated_quality_score": null
+  },
+  "interpretation": {
+    "observed_change_from_5000_steps": "greater output diversity; the previous dominant 'El patrón' response is no longer the sole dominant mode",
+    "corpus_style_note": "Esperpento lexicon and intentional evasive expressions, including NH markers and 'ni puta idea', are part of the intended training distribution and must not automatically be scored as errors",
+    "caveat": "Promotion records the selected experimental checkpoint; it does not claim a validated accuracy or semantic-quality percentage."
+  }
+}
