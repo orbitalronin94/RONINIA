@@ -59,6 +59,31 @@ Las definiciones técnicas son convenciones internas. No se atribuyen a Covarrub
 6. **No se confunde voz con capacidad.** Una frase memorable no demuestra que el modelo entienda aquello que nombra.
 7. **Se declara el préstamo.** Cita literal, adaptación y síntesis editorial se distinguen siempre.
 
+
+## Variación combinatoria de personajes y referentes
+
+La crónica no debe martillear el mismo sustantivo en cada línea. En la prosa narrativa se alternarán, con criterio sintáctico y sin convertir cada mención en un disfraz, las denominaciones siguientes:
+
+| Referente | Variantes admisibles | Cautela |
+|---|---|---|
+| **Alguacil** | el corchete, el carcelero, el hombre de la vara, el oficial, el guardián, el ministro de justicia | «Corchete» y «carcelero» cargan el matiz de custodia; «oficial» es más neutro. No atribuir jurisdicción que la escena no le haya dado. |
+| **Escribano** | el amanuense, el pendolista, el fedatario, el secretario, el hombre de la pluma | «Fedatario» y «secretario» pueden sugerir funciones jurídicas o administrativas concretas: reservarlos para escenas compatibles. |
+| **Loro** | el pájaro, el papagayo, el ave, el plumífero, el animal, el cautivo de la percha | «Animal» sirve para rebajar la antropomorfización; «plumífero» y «cautivo de la percha» son voces de color, no nombres zoológicos precisos. |
+| **Reo** | el preso, el encausado, el penado, el huésped de la celda, el hombre de la galería | No usar «condenado» si la narración no ha establecido sentencia. |
+| **Escribanía / expediente** | mesa de plumas, mesa del registro, libro, memorial, legajo, protocolo | No sustituir nombres de archivos, rutas, artefactos ni documentos técnicos. |
+
+### Regla de alternancia
+
+1. Alternar las denominaciones en la narración cuando el referente sea inequívoco; evitar dos sinónimos seguidos en una misma frase.
+2. Conservar el nombre funcional en la primera presentación de una escena o cuando haya riesgo de confundir a dos personajes.
+3. No variar dentro de citas literales, salidas del modelo, prompts, JSON, código, tablas de resultados, nombres de etiquetas, identificadores, títulos de artefactos ni metadatos de procedencia.
+4. No reemplazar mecánicamente todas las apariciones. La repetición deliberada puede ser un recurso —sobre todo en una sentencia, un diálogo o un tic— y se conserva cuando produzca efecto.
+5. Mantener género, número, concordancia y referente. «El amanuense» puede ser el escribano; «el corchete», el alguacil; pero no intercambiar sus actos ni sus competencias.
+6. Usar «el animal» o «el ave» cuando convenga recordar que el loro es un ser vivo y no un oráculo; reservar «el loro» para las escenas en que su identidad narrativa importe.
+7. La variedad ha de sonar natural, no a tesauro desbocado. Si el lector advierte el mecanismo de sustitución antes que la escena, se ha abusado de la combinatoria.
+
+La alternancia es una norma de composición, no una instrucción para alterar las citas ni los datos del holdout. En caso de conflicto, prevalece la fidelidad documental.
+
 ## Ejemplo de aplicación
 
 **Prosa plana:** «El modelo repite una plantilla y no responde a la pregunta».
