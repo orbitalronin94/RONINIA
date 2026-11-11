@@ -2,10 +2,6 @@ name: RONIN-10M — recover 54k and continue 6k with reduced learning rate
 
 on:
   workflow_dispatch:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/train-54k-to-60k-reduced-lr.yml"
 
 permissions:
   actions: read
