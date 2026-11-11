@@ -220,6 +220,104 @@ La aspiración no es quitarle el ridículo: es que pueda reconocer cuándo está
 
 **Vigilad la homeostasis.**
 
+
+## Capítulo IV — El paraguas de la biblioteca sumergida
+
+**Checkpoint:** 30.000 pasos acumulados  
+**Run de entrenamiento:** [42984964609](https://github.com/orbitalronin94/RONINIA/actions/runs/42984964609)  
+**Artefacto de checkpoint:** [ronin-10m-chain-30k](https://github.com/orbitalronin94/RONINIA/actions/runs/42984964609#artifacts)  
+**SHA-256 del checkpoint:** `140230697a4df69f43c2cc4f6dc95ba2cc596b095532d3e171c486891d26bc4a`  
+**Run de evaluación:** [42994967183](https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183)  
+**Artefacto de evaluación:** [holdout de 30k](https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183/artifacts/13842918120)  
+**Holdout:** las mismas 100 preguntas  
+**SHA-256 del conjunto de preguntas:** `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`  
+**Tokenizer SHA-256:** `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`  
+**Resultado técnico:** 100/100 generaciones completadas; no se calculó una puntuación automática de calidad semántica.
+
+A los 20.000 pasos, el loro había abierto expediente sobre un paraguas transparente que dormía bajo una escalera. También había aparecido la biblioteca sumergida, una imagen asociada en la historia de MINIRONIN. A los 30.000 pasos, ambas genealogías parecen encontrarse en una sola salida:
+
+> «la sacción de los estados, el análisis de una para oxidado paraguas de la biblioteca sumergida. Respuesta: Everest es una»
+
+La frase no es una respuesta correcta a la pregunta que la provocó. Pero como pieza de la crónica del modelo es excepcional: el paraguas de la familia de escenas de RONIN aparece ahora unido, en el mismo sintagma, a la biblioteca sumergida que se había observado en MINIRONIN. El objeto ya no duerme simplemente bajo una escalera; parece pertenecer a una biblioteca submarina. Y Everest irrumpe al final como un nuevo contenedor imposible. La escalera empieza a quedarse pequeña.
+
+### Mácula: TIC_HYBRIDIZATION_ACROSS_MODELS
+
+La etiqueta describe una **hipótesis de hibridación léxica por corpus compartido**. La salida combina dos motivos que en la crónica tienen genealogías distintas: el paraguas/objeto bajo la escalera, observado en RONIN, y la biblioteca sumergida, atribuida a MINIRONIN. Si ambos modelos estuvieron expuestos a material compartido, la recombinación puede explicarse por aprendizaje desde datos comunes, sin transferencia de pesos.
+
+La frase constituye un caso visible de coaparición y recombinación en una misma salida. No demuestra por sí sola que cada componente proceda exclusivamente de un corpus distinto, ni que exista una transmisión causal entre modelos. Para elevar la hipótesis a hallazgo se necesita localizar las expresiones y variantes en ambos corpus, medir solapamiento exacto y aproximado, revisar sus contextos y comprobar si la combinación ya existe en los datos de entrenamiento.
+
+### Mácula: TEMPLATE_STACKING
+
+La revisión humana identifica el molde «La primera [X]» en quince respuestas. La ranura aparece ocupada por expresiones que a su vez recuerdan otras plantillas: «el sistema», «el fallo», «el archivo», «el proceso» o «el análisis». La impresión es la de una plantilla de apertura que se apoya en una segunda plantilla de contenido.
+
+Este apilamiento parece más elaborado que la repetición de un único estribillo, pero no implica por sí mismo composición semántica. El recuento de quince casos es una anotación manual provisional sobre las cien salidas. La prueba pendiente consiste en medir la frecuencia literal y las variantes, identificar las ranuras, y comprobar si el modelo puede rellenarlas con información correcta cuando la pregunta y el corpus contienen esa información.
+
+### Vitrina: NEOLOGISM_DENSITY
+
+La revisión destaca ocho formas nuevas o deformadas:
+
+- «Avector» / «Av2»
+- «Noído»
+- «Confundemicos»
+- «Transgia»
+- «Ajonimenta»
+- «Teorece»
+- «Lidencias»
+- «Sinciidad»
+
+La muestra más llamativa es la respuesta #50:
+
+> «Avector: Avector: Av2. Av2. Av2. Av2. Av2. Av2.»
+
+Aquí la invención parece convertirse en una notación repetida, una especie de unidad formal que el modelo no define. Otras salidas, como «Ajonimenta el sistema de las intenciones atribuidas», tienen una forma verbal reconocible aunque el significado no se estabilice. «Noído no necesita una promesa el coste de código» parece, por su parte, una frase construida con piezas familiares que no terminan de formar una proposición interpretable.
+
+La lista es una selección cualitativa, no un inventario exhaustivo ni una tasa de neologismos validada. Tampoco conocemos todavía la segmentación BPE de estas formas. No se debe afirmar que «Avector» sea una fusión concreta de tokens, ni que «Ajonimenta» pruebe productividad morfológica, hasta inspeccionar los IDs de token y comparar las formas con el vocabulario y el corpus.
+
+La auditoría deberá separar palabras ausentes del corpus, variantes ortográficas, errores de generación y secuencias compuestas por tokens subléxicos frecuentes. También deberá distinguir novedad formal de estabilidad semántica: una palabra puede ser nueva y aun así tener un significado recuperable por contexto; otra puede parecer española sin expresar nada estable.
+
+### Mácula: CONTAINER_MUTATION_ESCALATION
+
+La familia de escenas surrealistas parece cambiar de objeto entre checkpoints: paraguas transparente bajo una escalera, termómetro oxidado y, ahora, paraguas oxidado asociado a la biblioteca sumergida, con Everest en la misma respuesta. La escalera persiste como marco narrativo, mientras los objetos y contenedores mutan.
+
+La lectura es provisional: la revisión identifica motivos y semejanzas, pero todavía no se ha calculado su frecuencia exacta en el corpus ni se ha demostrado que exista una plantilla generativa estable. Conviene conservar las frases literales y comparar en los siguientes checkpoints si reaparece el marco «objeto + atributo + bajo/de la escalera/biblioteca», qué ranuras cambian y si los cambios dependen del prompt.
+
+### Mácula: NEGATIVE_CONTROL_LEAKAGE — persistencia de la rúbrica
+
+La frase:
+
+> «No procede aplicar un epíteto sin evidencia suficiente; una semejanza superficial no demuestra ese patrón.»
+
+aparece en las respuestas #3, #65 y #69, según el recuento manual. También se observa una variante en #82: «la respuesta podría corresponder a la conducta descrita en su contenido, no por elogio».
+
+El fragmento conserva una regla prudente del Lexicón, pero aparece como respuesta a preguntas técnicas de CI/CD que requieren información concreta. La repetición no demuestra que el modelo haya interiorizado la norma ni que sepa aplicarla: puede estar reproduciendo una rúbrica fuera de contexto. La variante de #82 parece más cercana al sentido de la regla, aunque tampoco basta para concluir que el modelo haya identificado correctamente la conducta preguntada.
+
+La evaluación futura debe etiquetar cada aparición como pertinente, parcialmente pertinente o fuera de contexto, y contrastarla con las preguntas y sus rúbricas. La abstención calibrada exige reconocer qué información falta y por qué; repetir una frase de cautela no es suficiente.
+
+### El cambio de moldes: de «Su función» a «Su propuesta»
+
+En la revisión del checkpoint de 20.000 pasos destacaban «Su función es X, no Y» y los encabezados de tipo formulario. En 30.000 pasos, la expresión «Su propuesta» aparece en un recuento manual de 23 respuestas (#7, #10, #25, #26, #33, #46, #48, #52, #53, #55, #56, #57, #58, #63, #66, #67, #70, #71, #74, #84, #85, #92 y #97). El molde «La primera [X]» se anota en quince respuestas.
+
+Son recuentos literales/manuales que deben reproducirse automáticamente sobre el JSON antes de tratarlos como métricas definitivas. La observación principal es que el repertorio de plantillas parece rotar y combinarse: una fórmula de apertura puede preceder a otra fórmula de contenido. No sabemos aún si esa combinación mejora la adaptación a la pregunta; las salidas revisadas muestran que con frecuencia sigue sin hacerlo.
+
+### Lo que ha desaparecido — en esta muestra
+
+La revisión no encuentra en el holdout de 30k varios tics destacados en checkpoints anteriores: «El patrón», «impacto» como bucle dominante, «Michaelación», «servidícula», «menos dinero conocimiento», «ni sus e inocuo» y la aparición independiente del termómetro oxidado. La familia del paraguas tampoco conserva exactamente su formulación anterior.
+
+Es correcto decir que estos fragmentos no aparecen en la muestra revisada de cien respuestas. No es correcto declararlos extinguidos del modelo: una muestra finita no permite descartar que reaparezcan con otros prompts, semillas o configuraciones. «Ocho tics muertos» funciona como imagen narrativa, no como conclusión estadística.
+
+### Lectura del hito: más variación, capacidad aún no acreditada
+
+El checkpoint de 30.000 pasos ofrece una superficie de generación más variada en las muestras revisadas: neologismos, plantillas apiladas, cambios de objeto y una combinación memorable entre el paraguas y la biblioteca sumergida. Pero la evaluación no asigna una puntuación semántica automática, y las respuestas continúan mostrando fragmentación, asociaciones fuera de contexto y conclusiones incompletas. Las cien generaciones completadas no equivalen a cien respuestas correctas; tampoco existe aquí una tasa validada de aciertos.
+
+Por tanto, el diagnóstico se limita a la evolución cualitativa de los tics. El holdout permite documentar la salida y conservar el comportamiento observado, no declarar una mejora de competencia. La siguiente comparación deberá mantener el mismo conjunto de preguntas, tokenizer y protocolo, y añadir anotación de pertinencia, corrección y terminación EOS verificable.
+
+### Decisión
+
+El checkpoint de 30.000 pasos queda registrado como **selección experimental activa** en `models/active.json`. La promoción administrativa no significa que haya superado una evaluación semántica ni que sea mejor que el checkpoint anterior en exactitud. Su valor en esta crónica es documentar un nuevo régimen de generación y preservar un caso especialmente memorable de recombinación léxica.
+
+> El paraguas encontró la biblioteca. La biblioteca estaba sumergida. Everest contestó desde el fondo. El loro tomó nota y acuñó «Avector». Nadie ha demostrado todavía que sepa dónde está la escalera. Vigilad la homeostasis.
+
+
 ## Historial de ejecuciones
 
 | Fecha | Evaluación | Run ID | Resultado | Ejecución | Artefactos | Commit |
