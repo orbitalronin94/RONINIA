@@ -1,6 +1,6 @@
 # RONINIA
 
-**RONINIA** es una línea independiente de investigación para entrenar desde cero un modelo de lenguaje compacto de aproximadamente 10 millones de parámetros. No hereda checkpoints ni pesos de MINIRONIN: reutiliza únicamente corpus de entrenamiento admitido, con procedencia y hashes.
+**RONINIA** es una línea independiente de investigación para entrenar desde cero un modelo de lenguaje compacto de aproximadamente 10 millones de parámetros. Su objetivo rector es crear un loro **divertido y antisicofántico**: capaz de sorprender, jugar con el lenguaje, cultivar el esperpento y llevar la contraria cuando la evidencia lo exige, en vez de adular al usuario o confirmar automáticamente sus premisas. La reproducibilidad y la trazabilidad son el método para comprobarlo, no el propósito que sustituye a ese carácter. No hereda checkpoints ni pesos de MINIRONIN: reutiliza únicamente corpus de entrenamiento admitido, con procedencia y hashes.
 
 ## Modelo experimental activo
 
@@ -54,23 +54,29 @@ El desarrollo local es opcional; los workflows son la vía reproducible del proy
 
 ## MINIRONIN y RONIN-10M: continuidad de método, cambio de hipótesis
 
-MINIRONIN tenía tres objetivos distintos. Conviene no confundirlos ni atribuir a RONIN-10M una victoria sobre todos ellos.
+MINIRONIN tenía varios objetivos, pero no todos tenían la misma jerarquía. **El objetivo principal —y el que debe guiar también a RONIN-10M— es que el loro sea divertido y antisicofántico.** La demostración del método y la trazabilidad son condiciones de investigación que permiten perseguir ese carácter sin autoengañarnos; no deben convertirse en fines que desplacen al propio loro.
 
-### 1. Demostrar que el método es largo y el modelo es corto
+### 1. El objetivo rector: un loro divertido y antisicofántico
+
+No queremos un asistente complaciente que premie cualquier ocurrencia del usuario con aprobación. Queremos una voz con personalidad, humor, irreverencia y criterio: que pueda ser absurda cuando el juego lo pide, escéptica cuando faltan pruebas, que reconozca lo que no sabe y que contradiga una afirmación incorrecta sin volverse hostil. **Antisicofántico no significa llevar la contraria por sistema**: significa no cambiar el juicio para agradar. Y **divertido no significa limitarse a repetir tics**: un latiguillo puede ser gracioso durante un experimento, pero su repetición mecánica no equivale a humor, comprensión ni personalidad consolidada.
+
+La aparición temprana de «El patrón», «ni puta idea» o «impacto» es material para el museo y una señal de carácter emergente, no una prueba de que el objetivo esté cumplido. El éxito tendrá que combinar humor no puramente repetitivo, independencia frente a la presión de acuerdo, honestidad ante la incertidumbre y respuestas pertinentes.
+
+### 2. Demostrar que el método es largo y el modelo es corto
 
 MINIRONIN dejó una crónica de **810.000 pasos, catorce checkpoints, cuarenta vitrinas y 0/100 aciertos** en el holdout histórico. La conclusión no es que el método fracasara: el método de experimentación, registro y conservación de evidencias quedó demostrado; la capacidad útil del modelo no llegó a consolidarse.
 
 RONIN-10M **hereda ese método**. No necesita volver a demostrar que se puede documentar un experimento largo. Su hipótesis es diferente: comprobar si un modelo entrenado desde cero, con un tokenizador BPE byte-level de 8.192 tokens, un corpus reorganizado y una configuración distinta, puede adquirir capacidades observables que MINIRONIN no mostró.
 
-### 2. Producir un artefacto reproducible y con trazabilidad forense
+### 3. Producir un artefacto reproducible y con trazabilidad forense
 
 Este objetivo también viene de MINIRONIN. RONIN-10M lo hereda y amplía el archivo: hashes de checkpoints, identidad del holdout, configuración de generación, artefactos y crónica de cambios.
 
 El avance del libro de holdouts es un resultado del **método y del archivo**, no una mejora atribuible a los pesos. La trazabilidad permite comparar sin convertir una impresión narrativa en una puntuación de calidad.
 
-### 3. Que el loro diga cosas divertidas
+### 4. El archivo del carácter: que el loro diga cosas divertidas
 
-Este objetivo apareció casi accidentalmente en MINIRONIN. En RONIN-10M los tics han aparecido mucho antes: «El patrón» dominó 96/100 salidas a 5k; a 10k dejó de aparecer y surgieron «ni puta idea» (16/100) y «impacto» (19/100).
+Este objetivo apareció casi accidentalmente en MINIRONIN, aunque el humor y la personalidad no son un adorno: forman parte del propósito central de RONIN-10M. En RONIN-10M los tics han aparecido mucho antes: «El patrón» dominó 96/100 salidas a 5k; a 10k dejó de aparecer y surgieron «ni puta idea» (16/100) y «impacto» (19/100).
 
 Es tentador describirlo como una rotación de tics 65 veces más rápida tomando 650k y 10k como hitos. Esa cifra es **una comparación temporal aproximada, no una medida de capacidad ni una relación causal**. Los modelos, tokenizadores, corpus y protocolos de entrenamiento no son idénticos. Una rotación más rápida puede reflejar segmentación distinta, composición del corpus o dinámica de generación; no demuestra más inteligencia ni más pertinencia.
 
