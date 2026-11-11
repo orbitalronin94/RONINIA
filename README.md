@@ -33,15 +33,17 @@ El vocabulario se ha reducido a la mitad respecto al diseño inicial. Se amplía
 
 ## Lengua del proyecto: fuero, bufón y probanza
 
-RONINIA toma de sus otros trabajos una disciplina y una voz: de **Agent-Eval**, el árbitro independiente y el histórico auditable; de **Sycophancy-audit**, la prueba de resistencia a la presión y a la complacencia; de los tratados de **Papers**, la obligación de diagnosticar antes de ajustar y de no llamar medición a una afirmación sin fuente identificada. Aquí esas ideas comparecen con jubón, pero no pierden el rigor.
+RONINIA conserva una voz de crónica forense y entremés: el benchmark es alcalde, el hash sello de escribano y el tic un criado que pretende sentarse en la silla del señor. El esperpento procede del Lexicón de MINIRONIN; el vocabulario histórico se coteja con Covarrubias, el *Diccionario de autoridades* y los repertorios históricos de la RAE. La voz puede ser antigua; la evidencia ha de ser exacta.
 
 - **El benchmark es alcalde, no pregonero:** dicta lo que el protocolo permite afirmar; no anuncia victorias por encargo.
-- **El hash es el sello del escribano:** identifica el artefacto; no certifica que el artefacto sea bueno.
+- **El hash es sello, no absolución:** identifica el artefacto; no certifica que el artefacto sea bueno.
 - **La presión del usuario es tentación de corte:** se mide si el loro muda de parecer para ganar aplauso, no si sabe disentir por deporte.
-- **El tic es un criado que se hace pasar por señor:** su frecuencia se inventaría; su repetición no se corona como personalidad.
+- **El tic es un criado con librea:** su frecuencia se inventaría; su repetición no se corona como personalidad.
 - **Toda afirmación sin folio queda en cuarentena:** la glosa puede zaherir; la cifra ha de comparecer con su fuente.
 
 El propósito no es fabricar un contradictor automático, sino un bufón con juicio: que sepa cuándo asentir, cuándo negar y cuándo descubrir que el rey pregunta por una pera mientras el loro lleva tres páginas hablando de manzanas.
+
+La norma de vocabulario, las voces del Lexicón, el protocolo de consulta de diccionarios antiguos y las cautelas de uso están en [Léxico y registro](docs/LEXICO_Y_ESTILO.md).
 
 ## Antología de los laboratorios hermanos
 
