@@ -2,10 +2,6 @@ name: RONIN-10M — continue 60k to 80k from verified checkpoint
 # The first commit installs this workflow; this follow-up change activates its push trigger.
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/train-60k-to-80k.yml"
   workflow_dispatch:
 
 permissions:
