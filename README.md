@@ -47,6 +47,8 @@ La norma de vocabulario, las voces del Lexicón, el protocolo de consulta de dic
 
 ## Antología de los laboratorios hermanos
 
+La selección se amplía en la [Antología de perlas de los laboratorios hermanos](docs/ANTOLOGIA_PERLAS_LABORATORIOS.md), que rescata más fragmentos de las carpetas `docs/` de MINIRONIN y HERETIC-RONIN y del corpus Papers, con procedencia y clase editorial.
+
 RONINIA no hereda solo un método: hereda una pequeña literatura de laboratorio. De **RONIN-IA**, **MINIRONIN** y **HERETIC-RONIN** se rescatan estas sentencias, adaptadas aquí al oficio del escribano y del loro. Son máximas editoriales, no resultados del modelo.
 
 > «La única herejía imperdonable sería dejar de medir porque el resultado nos gusta.» — HERETIC-RONIN
