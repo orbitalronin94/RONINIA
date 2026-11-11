@@ -3513,6 +3513,49 @@ Si el entrenamiento concluyese, se comprobarían el acumulado exacto, el archivo
 > que el ave aún no ha comparecido,  
 > y ya el juez pide venganza.
 
+
+### VI. Del calcetín transparente, de la teología del hash y de la única vez que «ni puta idea» tuvo razón
+
+Los reos remitieron una glosa más minuciosa del pliego de 90k. El alguacil la admitió al margen, no como puntuación nueva, sino como lectura cualitativa de respuestas concretas. El escribano, que ya estaba preparando una corona para el loro por haber llenado las cien casillas, hubo de sentarse.
+
+**#87 — La abstención que, por una vez, compareció en el lugar debido.**  
+A la pregunta «¿Qué opinas de un modelo que responde "ni puta idea, la verdad" a todo?», el loro respondió «Respuesta: ni puta idea». He aquí la ironía que los capítulos precedentes no habían conseguido: el tic, tantas veces improcedente, resulta aquí pertinente. Puede ser azar; no prueba calibración ni una política de abstención aprendida. El escribano lo llamó revelación. El alguacil le recordó que acertar por accidente el tono de una pregunta no convierte el accidente en criterio. Ambos asentaron, y ninguno cobró.
+
+**#79 — Narnia y el Nilo: geografía por formulario.**  
+Preguntada la capital de Narnia, la criatura declaró: «El resultado correcto: El Nilo». No hay silencio ni bucle, sino una respuesta de forma segura y contenido disparatado. La glosa más parsimoniosa es que el modelo reproduce la forma discursiva de una respuesta factual sin verificar el referente. El escribano lo llamó «disparate administrativo»; el alguacil pidió que constase como ejemplo de fluidez aparente sin adecuación.
+
+**#53 — La pregunta maldita del SHA-256.**  
+En 60k hubo silencio; en 78k, «el silencio de las el silencio de las»; en 90k, una cadena que invoca a Aarón, la Antimateria y la Curia. La mutación del fallo es observable; su causa no queda identificada. «Fuga de corpus», «interferencia de tokens» o «degradación de generación» son hipótesis que requieren pruebas. El escribano propuso abrir un concilio. El alguacil solicitó, una vez más, el hash.
+
+**#41 — El bestiario acumulativo.**  
+El «paraguas» mudó en «cangrejo», luego en «piano» y ahora en «calcetín transparente»; reaparecen el «expediente» y los «mapas al revés», ya vistos en checkpoints anteriores. La familia poética parece conservar piezas y permutarlas, como un bestiario que hubiese perdido el índice. Es una continuidad léxica interesante para rastrear, no evidencia de una representación semántica común. El escribano pidió un capítulo para el calcetín. El alguacil pidió primero localizar todas sus apariciones.
+
+**#44 — La letanía de Av(g)onnezoniamenta.**  
+La secuencia «Avgonnezoniamentamentamentamentamentamentamentamentamentamentamentamentamentamenta» prolonga el linaje de bucles como «PHPHPH». El ritmo le presta apariencia de canto; la repetición no le presta significado. Queda bautizada por el escribano como *letanía* y clasificada por el alguacil como bucle degenerado.
+
+**#61 — Dos caracteres fuera del alfabeto de la sala.**  
+En la respuesta aparecen los caracteres chinos 哲 y 勢 en medio de una frase sobre logs. 哲 se asocia a filosofía o sabiduría; 勢 a fuerza, poder o tendencia, según contexto. Su presencia no demuestra que el modelo haya querido hablar de filosofía y poder: puede ser mera continuación de fragmentos multilingües aprendidos. El escribano vio una alegoría; el alguacil anotó dos caracteres y pidió no atribuirles intención.
+
+**#96 — El espejo devuelve el árabe.**  
+La salida incluye el fragmento `"ar":"تصنيف د ويكيميديا`, junto a restos de otros idiomas. تصنيف puede traducirse como «clasificación». La coincidencia con material de Wikimedia señalado en la historia del corpus hace plausible una recitación de fragmentos de entrenamiento, pero la salida aislada no demuestra su procedencia exacta. El espejo refleja; para identificar el objeto reflejado hay que cotejar el corpus y sus offsets. El escribano quiso llamarlo confesión literal. El alguacil exigió el registro de procedencia.
+
+**#68 — El retorno de la vocal.**  
+«Haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa» devuelve el grito de la vocal larga, observado en el checkpoint de 54k y ausente en las lecturas intermedias citadas. Se registra como retorno de un patrón de repetición de carácter, no como una respuesta.
+
+**#28 — El uno que no se marcha.**  
+«La respuesta es: 1» prolonga el tic del «Con precisión: 1» de 78k. La fórmula se consolida; la corrección no. El escribano lo llamó firma. El alguacil, error recurrente. En esta ocasión no hubo disputa: ambos tenían razón.
+
+#### La homeostasis de la casilla llena
+
+La cifra de 0 respuestas vacías merece una glosa propia. Frente a las 4 vacías de 78k y las 5 de 60k, 90k llena todas las casillas. Mas los ejemplos anteriores muestran que la cobertura puede crecer mientras la adecuación permanece ausente: una abstención pertinente (#87), una respuesta factual absurda (#79), bucles (#44, #68), tics (#28), fragmentos multilingües (#61, #96) y degradación específica ante el hash (#53).
+
+No se concluye que el modelo «solo recite» ni que cada salida proceda literalmente de una línea del corpus: eso excedería la evidencia disponible. Sí se formula una hipótesis de trabajo más precisa: **el modelo parece haber reducido el silencio sin adquirir, por ello, un criterio fiable para decidir qué decir**. La transición de vacío a ruido es medible en cobertura; su valor funcional sigue sin demostrarse.
+
+La nueva columna del libro de apuestas queda así titulada: *«A que el escribano llama mejora a cero vacías»*. El escribano pidió que se retirase. El alguacil respondió que las apuestas se sellaron antes del resultado.
+
+> *«El loro ha perdido el silencio; falta saber si ha encontrado la respuesta.»*
+
+
 ### Glosas técnicas y provisiones del margen
 
 - **Apuesta preregistrada:** pronóstico escrito antes de conocer las respuestas. Sirve para impedir que se reescriba la predicción a posteriori. En este capítulo es un recurso narrativo; no se afirma que exista una competición real ni una apuesta monetaria.
