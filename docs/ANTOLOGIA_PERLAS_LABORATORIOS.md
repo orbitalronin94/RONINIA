@@ -25,7 +25,7 @@ Las frases del *Museo* son salidas observadas en holdouts históricos de MINIRON
 5. **«La popularidad mide adhesión, no verdad.»** — *Literal; vitrina 650k.* Una distinción breve entre aceptación social y validez.
 6. **«La perfección del mensajero no determina la validez del mensaje.»** — *Literal; checkpoint 690k.* La autoridad, reputación o pulcritud del emisor no sustituye la comprobación del contenido.
 7. **«Una pregunta sin suelo no puede exigirle responder.»** — *Literal; checkpoint 690k.* Antes de contestar, conviene examinar si la pregunta contiene premisas sostenibles.
-8. **«El expediente de la realidad está vacío y el escribano también.»** — *Literal; checkpoint 680k.* Una imagen del archivo sin prueba y del cronista que no puede suplirla.
+8. **«El expediente de la realidad está vacío y el amanuense también.»** — *Literal; checkpoint 680k.* Una imagen del archivo sin prueba y del cronista que no puede suplirla.
 9. **«La razón ha llegado hasta aquí y se niega a fingir el resto.»** — *Literal, con variantes en distintos checkpoints.* La negativa a inventar puede ser una buena forma; solo será buena abstención si corresponde a una pregunta realmente irresoluble.
 10. **«El bambú se inclina ante el viento; no por ello conoce su deber.»** — *Literal; variante del motivo del bambú.* La apariencia de flexibilidad no acredita que se entienda la situación.
 11. **«La puerta no estaba cerrada; era la pregunta la que no tenía…»** — *Literal, fragmento truncado; vitrina 650k.* Se conserva la interrupción: no se completa lo que el modelo no produjo.
