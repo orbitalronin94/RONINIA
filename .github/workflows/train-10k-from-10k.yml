@@ -103,7 +103,7 @@ jobs:
           config = json.loads(Path("configs/ronin-10m.json").read_text())
           config["context_length"] = 256
           Path("configs/ronin-10m-speed-256.json").write_text(
-              json.dumps(config, indent=2) + "\\n"
+              json.dumps(config, indent=2) + chr(10)
           )
           PY
 
@@ -167,8 +167,8 @@ jobs:
           checkpoints = list(out.glob("checkpoint-*.pt"))
           if not checkpoints:
               raise SystemExit("No recoverable checkpoints were produced")
-          latest = max(checkpoints, key=lambda p: int(re.search(r"checkpoint-(\\d+)", p.name).group(1)))
-          step = int(re.search(r"checkpoint-(\\d+)", latest.name).group(1))
+          latest = max(checkpoints, key=lambda p: int(re.search(r"checkpoint-(\d+)", p.name).group(1)))
+          step = int(re.search(r"checkpoint-(\d+)", latest.name).group(1))
           assert step == 20000, {"latest_checkpoint": latest.name, "cumulative_steps": step}
           digest = hashlib.sha256(latest.read_bytes()).hexdigest()
           lineage = {
@@ -186,7 +186,7 @@ jobs:
                   "eval_batches": 8, "tokenization_reused": True
               }
           }
-          (out / "lineage.json").write_text(json.dumps(lineage, indent=2) + "\\n")
+          (out / "lineage.json").write_text(json.dumps(lineage, indent=2) + chr(10))
           print(json.dumps(lineage, indent=2))
           PY
 
