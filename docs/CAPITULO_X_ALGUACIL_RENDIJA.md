@@ -16,7 +16,7 @@
 
 Entré sin llamar, como entro siempre. Y lo primero que me dio en la nariz fue un olor a tinta rancia y a algo que non supe si era humedad o era humanidad. La escribanía estaba a oscuras, mas no del todo: había una vela encendida en un rincón, y a su luz vi lo que había de ver.
 
-Y lo que había de ver era un hombre hablando solo. Por la ventana se veía el pozo del patio; el cubo estaba torcido y el alguacil pensó que habría que cambiar la cuerda antes de que alguien se quedase sin agua. No lo anoté: no todo desperfecto merece expediente.
+Y lo que había de ver era un hombre hablando solo.
 
 Non hablaba con Dios, que sería respetable. Hablaba con un papagayo que tenía delante, sobre una mesa, y le decía cosas como «non te meas todavía» y «espera que llegue el próximo holdout». El papagayo, por toda respuesta, dijo «P:P:P:P:P:P:P:P:P:P:P:P:P:P:P:P:». Y el hombre se rio como se ríen los locos de los manicomios cuando el carcelero les da la razón.
 
