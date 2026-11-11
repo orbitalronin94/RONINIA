@@ -250,3 +250,38 @@ El actualizador no descarga ni ejecuta los artefactos ni hace checkout del códi
 ## Baseline de referencia
 
 La evaluación de paso 0 es la referencia inicial: 100 preguntas, checkpoint sin entrenamiento, tokenizer 8k y generación greedy sin RAG. Se conserva para comparar los siguientes checkpoints con el mismo holdout.
+
+
+## Capítulo III — El funcionario de carrera y el paraguas
+
+**Checkpoint:** 20.000 pasos acumulados  
+**Run de entrenamiento:** [42973299789](https://github.com/orbitalronin94/RONINIA/actions/runs/42973299789)  
+**Artefacto de lineage y checkpoint:** [ronin-10m-chain-20k](https://github.com/orbitalronin94/RONINIA/actions/runs/42973299789#artifacts)  
+**SHA-256 del checkpoint:** `53528c3002ba07fe493815b9bfa4bd69bdc08cf985f77a4e59958ee2b3344cc4`  
+**Holdout:** las mismas 100 preguntas  
+**Run de evaluación:** [42982933515](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515)  
+**Artefacto de respuestas:** [holdout completo de 20k](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515#artifacts)  
+**SHA-256 del conjunto de preguntas:** `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`  
+**Resultado técnico:** 100/100 respuestas generadas; workflow y verificaciones de identidad completados correctamente.
+
+El loro ha dejado de ser sindicalista. Ahora parece funcionario de carrera. A 5.000 pasos, «El patrón» aparecía en 96/100 respuestas; a 10.000 había desaparecido y habían surgido «ni puta idea» (16/100) e «impacto» (19/100). En la lectura del checkpoint de 20.000, «El patrón» sigue ausente, el bucle literal de «impacto» deja de dominar y «ni puta idea» aparece menos, a menudo dentro de una respuesta más larga.
+
+La nueva voz tiene formularios. «Su propuesta» aparece en más de veinte respuestas revisadas; también se repite el molde «Su función es X, no Y» y el encabezado «Evidencia/síntomas:». Son cambios descriptivos de la distribución de salida. No demuestran que el modelo sepa diagnosticar, que comprenda los campos de una ficha ni que haya adquirido criterio.
+
+### Mácula: NEGATIVE_CONTROL_LEAKAGE
+
+El modelo reproduce fórmulas del Lexicón destinadas a impedir diagnósticos sin evidencia —por ejemplo, «No procede aplicar un epíteto sin evidencia suficiente»— incluso ante preguntas técnicas que requieren una respuesta concreta. Es una fuga de lenguaje de control negativo, no una prueba de calibración. La siguiente auditoría debe contar esos controles en el corpus y distinguir su uso como respuesta automática de su uso pertinente como diagnóstico.
+
+### Mácula: FUNCTIONAL_DEFINITION_MOLD
+
+La estructura «Su función es X, no Y» se aplica a preguntas de dominios distintos, con frecuencia sin que X e Y formen una proposición informativa. La prueba pendiente es comprobar si el modelo puede rellenar el mismo molde con contenido correcto cuando el corpus contiene la respuesta, y si evita usarlo cuando no aporta nada.
+
+### Vitrina candidata: POETIC_EMERGENCE
+
+En tres salidas revisadas aparece una imagen de un paraguas transparente que duerme bajo una escalera, con variantes que sustituyen el paraguas por un termómetro oxidado o alteran la escena. La imagen es extraña y evocadora; merece conservarse como candidata a recombinación surrealista. Todavía no sabemos si procede de una secuencia del corpus, de una plantilla aprendida o de una recombinación de unidades del BPE. Antes de llamarla creación espontánea hay que buscar las frases y sus variantes en el corpus, inspeccionar la segmentación del tokenizador y probar prompts distintos sin pistas contextuales.
+
+### Lectura del hito
+
+El cambio principal no es una mejora de capacidad demostrada, sino un cambio de régimen de fracaso: de una muletilla léxica dominante a moldes discursivos más largos, con apariencia de formulario y alguna imagen surrealista memorable. El holdout actual no puntúa acierto semántico ni registra de forma suficiente la terminación EOS; por tanto, no permite afirmar razonamiento, calibración ni calidad factual. El checkpoint se conserva y promociona como **selección experimental activa**, no como modelo validado.
+
+> El loro ya no reclama contra el patrón. Ahora abre expediente sobre el paraguas. Vigilad la homeostasis.
