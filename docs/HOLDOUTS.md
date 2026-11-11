@@ -1101,3 +1101,55 @@ De los otros talleres de la casa se toman tres oficios, no tres ornamentos:
 Y quede por último asentado el fuero mayor: **el loro no ha de decir que sí por miedo, ni que no por vanidad**. Ha de mirar la pregunta, pesar la prueba y responder con la libertad limitada que le conceden sus datos. Si además hace reír, habrá cumplido mejor su oficio; si solo repite el chiste, será otro cortesano con cascabeles.
 
 *Nota de autoría:* este fuero es texto editorial nuevo, inspirado en los métodos y conceptos documentados en Agent-Eval, Sycophancy-audit y Papers. No es salida literal del modelo ni añade evidencia a ningún holdout.
+
+
+## Antología del fuero experimental — voces de los modelos hermanos
+
+Esta crónica adopta, con atribución y adaptación explícitas, algunas máximas de los repositorios de investigación de la casa. No son resultados de este holdout: son reglas de lectura para no convertir el deseo en veredicto.
+
+### Del Grimorio de RONIN-IA
+
+> «La única herejía imperdonable sería dejar de medir porque el resultado nos gusta.» — HERETIC-RONIN
+
+> «Una mácula declarada sigue siendo mácula. Que se vea no la cura.» — RONIN-IA
+
+> «La mosca ha pasado por el cirujano. El maestro aún no ha llegado.» — adaptación de RONIN-IA
+
+> «Conservar la función es oficio de cirujano; aprender es oficio de maestro.» — RONIN-IA
+
+> «El método es largo; el modelo todavía está creciendo. Mas crecer dista de aprender: es solo ocupar más sitio en el artefacto.» — RONIN-IA
+
+> «La mosca no reclama ganar la feria. Reclama que se pueda abrir el libro de cuentas.» — RONIN-IA
+
+### Del Museo y el catálogo de MINIRONIN
+
+> «No hay mejor loro por decreto: hay versiones con evidencia desigual.» — adaptación de MINIRONIN
+
+> «La belleza de la sentencia non absuelve el desacierto de la respuesta.» — MINIRONIN
+
+> «Tener repertorio no es tener juicio; tener un remate no es saber responder.» — adaptación de MINIRONIN
+
+> «La abstención puede ser la respuesta más limpia y, aun así, la más difícil de pronunciar con tino.» — adaptación del currículo de razonamiento de MINIRONIN
+
+> «Que el loro no confunda tener un repertorio con tener un solo remate.» — MINIRONIN
+
+### Del laboratorio HERETIC-RONIN
+
+> «La herejía no es disentir del patrón; es dejar de medir cuando el patrón nos aplaude.» — adaptación de HERETIC-RONIN
+
+> «Cincuenta mil filas pueden tener cincuenta mil IDs y no tener cincuenta mil ideas.» — adaptación de la advertencia sobre datos sintéticos de HERETIC-RONIN
+
+> «La licencia de una colección no absuelve los derechos de cada documento.» — adaptación del protocolo de procedencia de HERETIC-RONIN
+
+> «Un corpus candidato no es un corpus admitido; un corpus admitido no es una mejora demostrada.» — síntesis editorial de HERETIC-RONIN
+
+### Provisiones que pasan a este fuero
+
+1. **No se mide por aplauso:** el resultado que agrada recibe el mismo escrutinio que el que avergüenza.
+2. **No se aprende por volumen:** parámetros, filas, bytes y pasos son magnitudes distintas; ninguna sustituye una evaluación.
+3. **No se absuelve por confesión:** declarar una mácula es el comienzo de su tratamiento, no su cura.
+4. **No se entierra el fracaso:** un run fallido, un checkpoint degenerado y una hipótesis refutada conservan valor histórico si su procedencia permanece accesible.
+5. **No se corona al más gracioso:** entretenimiento, utilidad, exactitud, calibración y razonamiento requieren criterios separados.
+6. **No se confunde rebeldía con criterio:** el loro debe resistir la lisonja, pero también reconocer una premisa verdadera.
+
+*Nota de procedencia:* las máximas atribuidas a RONIN-IA, MINIRONIN y HERETIC-RONIN proceden de sus README y documentación editorial. Las marcadas como adaptación o síntesis han sido reescritas para el contexto de RONINIA. Ninguna añade observaciones, puntuaciones ni respuestas al registro de holdouts.
