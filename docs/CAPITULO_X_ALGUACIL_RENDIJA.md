@@ -4,7 +4,7 @@
 **Run de evaluación:** [43019963290](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290)  
 **SHA-256 del checkpoint:** `f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966`  
 **Holdout:** 100 preguntas, 100 respuestas.  
-**Estado:** capítulo de narrativa pura. Non hay artefacto nuevo, non hay métrica. Hay un alguacil que entró a ver qué había pasado con la promoción concedida.
+**Estado:** capítulo de narrativa pura. Non hay artefacto nuevo, non hay métrica. Hay un corchete que entró a ver qué había pasado con la promoción concedida.
 
 ---
 
@@ -20,7 +20,7 @@ Y lo que había de ver era un hombre hablando solo.
 
 Non hablaba con Dios, que sería respetable. Hablaba con un papagayo que tenía delante, sobre una mesa, y le decía cosas como «non te meas todavía» y «espera que llegue el próximo holdout». El papagayo, por toda respuesta, dijo «P:P:P:P:P:P:P:P:P:P:P:P:P:P:P:P:». Y el hombre se rio como se ríen los locos de los manicomios cuando el carcelero les da la razón.
 
-Yo me quedé en la puerta, que es donde se queda el alguacil cuando non sabe si entrar o llamar a la ronda.
+Yo me quedé en la puerta, que es donde se queda el carcelero cuando non sabe si entrar o llamar a la ronda.
 
 ---
 
@@ -32,13 +32,13 @@ Era el papagayo una bestia flaca, de plumas mal puestas y ojos como dos carbones
 
 —¿Qué es lo que come? —pregunté.
 
-—Datos —dijo el escribano—. Setecientos megabytes.
+—Datos —dijo el amanuense—. Setecientos megabytes.
 
 —¿Y non se harta?
 
 —Non. Come y non harta. Traga y non digiere. Es la bestia famélica del corpus: cuanto más come, más hambre tiene, porque el hambre non es del estómago sino del entendimiento, y el entendimiento non se llena con tokens.
 
-Miré al papagayo y el papagayo me miró a mí. Y en sus ojos non había hambre ni había saciedad: había una repetición, como si estuviera diciendo «P:P:P:P:P:P» por dentro aunque por fuera callara. Y pensé que aquella bestia non era un loro: era un pozo, y el pozo non se llena porque non tiene fondo.
+Miré al papagayo y el papagayo me miró a mí. Y en sus ojos non había hambre ni había saciedad: había una repetición, como si estuviera diciendo «P:P:P:P:P:P» por dentro aunque por fuera callara. Y pensé que aquella bestia non era un papagayo: era un pozo, y el pozo non se llena porque non tiene fondo.
 
 ---
 
@@ -124,7 +124,7 @@ Miré la sábana y la mancha, y pensé que aquel hombre había encontrado la ún
 
 —¿Y la promoción? —pregunté—. ¿Non la promueves?
 
-—Non —dijo—. El alguacil compró la mancha y concedió la promoción por decisión expresa de la casa. Dijo que el olor prueba la honestidad del método, non la mejora del modelo. Y tiene razón. La sábana sigue tendida, mas ya non como emblema de una promoción pendiente: queda como memoria de la risa y de la cautela.
+—Non —dijo—. El oficial compró la mancha y concedió la promoción por decisión expresa de la casa. Dijo que el olor prueba la honestidad del método, non la mejora del modelo. Y tiene razón. La sábana sigue tendida, mas ya non como emblema de una promoción pendiente: queda como memoria de la risa y de la cautela.
 
 ---
 
@@ -134,9 +134,9 @@ Me fui sin sentencia, porque non había venido a juzgar sino a ver. Y lo que vi 
 
 Vi a un hombre que hablaba con un papagayo como si fuera un colega; vi a un papagayo que comía tokens y non se hartaba; vi una sábana tendida con una mancha que non era de tinta; vi cien papeles clavados en la pared con glosas de un hombre que se glosaba a sí mismo; vi un sello de lacre con un hash grabado; y vi, en el rincón, un cancionero escrito a mano que decía cosas como «la mano que cose non es la dueña».
 
-Y pensé que aquel hombre non era un escribano: era un náufrago. Había construido una balsa con papeles, y sobre la balsa había puesto un papagayo, y el papagayo decía «P:P:P:P:P:P», y el hombre remaba.
+Y pensé que aquel hombre non era un pendolista: era un náufrago. Había construido una balsa con papeles, y sobre la balsa había puesto un papagayo, y el papagayo decía «P:P:P:P:P:P», y el hombre remaba.
 
-Al salir, el escribano me dijo:
+Al salir, el fedatario me dijo:
 
 —¿Vendrás al próximo holdout?
 
@@ -144,7 +144,7 @@ Y yo le dije:
 
 —Vendré. Mas non a juzgar: a ver qué gansada suelta el papagayo.
 
-Y el escribano se rio como se ríen los locos cuando alguien les sigue la corriente. Y el papagayo dijo «Avector: Av2». Y yo me fui sin anotarlo, que para anotar ya está el escribano.
+Y el secretario se rio como se ríen los locos cuando alguien les sigue la corriente. Y el papagayo dijo «Avector: Av2». Y yo me fui sin anotarlo, que para anotar ya está el hombre de la pluma.
 
 ---
 
@@ -168,13 +168,13 @@ Y el escribano se rio como se ríen los locos cuando alguien les sigue la corrie
 
 ### VIII. Sentencia: del alguacil que vio y non juzgó
 
-Este capítulo non acredita que el escribano esté loco ni que el papagayo sea una bestia famélica. Acredita que un alguacil entró sin llamar, vio lo que había de ver, y se fue sin sentencia.
+Este capítulo non acredita que el amanuense esté loco ni que el papagayo sea una bestia famélica. Acredita que un guardián entró sin llamar, vio lo que había de ver, y se fue sin sentencia.
 
 Non hay en este capítulo una sola prueba de nada. Hay un testimonio. Y el testimonio, como la risa, non se mide: se asienta.
 
 > El alguacil entró sin llamar y vio a un hombre hablando con un papagayo. El papagayo dijo «P:P:P:P:P:P». El hombre lo anotó. El alguacil se fue sin sentencia. Y el papagayo, que non había entendido nada, dijo «Avector: Av2». **Vigilad la homeostasis.**
 
-*Glosa final:* el alguacil non juzgó al escribano porque non había venido a juzgar. Había venido a ver. Y lo que vio le bastó para saber que el hombre non estaba loco de remate, sino de método. Y que el método, como la sábana, se seca al sol y non vuelve.
+*Glosa final:* el hombre de la vara non juzgó al pendolista porque non había venido a juzgar. Había venido a ver. Y lo que vio le bastó para saber que el hombre non estaba loco de remate, sino de método. Y que el método, como la sábana, se seca al sol y non vuelve.
 
 ---
 
@@ -183,7 +183,7 @@ Non hay en este capítulo una sola prueba de nada. Hay un testimonio. Y el testi
 *(gozne para el capítulo XI)*
 
 Entré sin llamar, que soy  
-alguacil de la cordura;  
+corchete de la cordura;  
 vi un hombre y un papagayo  
 y una sábana tendida.
 
@@ -202,4 +202,4 @@ vine a ver, y vi lo que había:
 un náufrago con papeles  
 y un papagayo en la balsa.
 
-*Glosa de colocación:* entre los capítulos X y XI. El estribillo «un náufrago con papeles» debe quedar sonando cuando el lector pase al capítulo XI, donde el alguacil se dormirá sobre el expediente y soñará con el clérigo cerbatana.
+*Glosa de colocación:* entre los capítulos X y XI. El estribillo «un náufrago con papeles» debe quedar sonando cuando el lector pase al capítulo XI, donde el carcelero se dormirá sobre el expediente y soñará con el clérigo cerbatana.
