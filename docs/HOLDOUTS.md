@@ -664,7 +664,7 @@ de un papagayo interpolador.
 **SHA-256 del conjunto de preguntas:** `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`  
 **Resultado técnico:** 100/100 respuestas generadas; verificaciones de identidad completadas.
 
-A los veinte mil pasos el plumífero abandona la asamblea y obtiene plaza de funcionario. El pendolista se inclinó sobre el folio, vencido ya de un hombro por tantas noches de expediente, y vio cómo el papagayo estrenaba formulario sin haber aprendido todavía a leer la pregunta. Ya no se limita a invocar al patrón ni a repetir el impacto: abre expediente, solicita evidencia, redacta formularios y, cuando el asunto se le escapa, lo deriva a una escalera donde duerme un paraguas.
+A los veinte mil pasos el plumífero abandona la asamblea y obtiene plaza de funcionario. El pendolista se inclinó sobre el folio, vencido ya de un hombro por tantas noches de expediente, y vio cómo el papagayo estrenaba formulario sin haber aprendido todavía a leer la pregunta. Ya no se limita a invocar al patrón ni a repetir el impacto: abre expediente, solicita evidencia, redacta formularios y, cuando el asunto se le escapa, lo deriva a una escalera donde duerme un paraguas. Al otro lado del patio estaba el pozo, de brocal bajo y piedra verdinegra; el alguacil prohibía acercarse sin cubo, aunque nadie recordaba haber visto allí agua limpia.
 
 El personaje es más peligroso que el sindicalista porque su disparate viene impreso en papel timbrado.
 
@@ -805,7 +805,7 @@ Non saber es una forma de saber, pero non la única».
 **Tokenizer SHA-256:** `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`  
 **Resultado técnico:** 100/100 generaciones completadas; no se calculó puntuación automática de calidad semántica.
 
-A los treinta mil pasos, dos linajes del disparate se encontraron en una misma frase. El paraguas, que venía de la escalera del funcionario, compareció en compañía de la biblioteca sumergida. Y al fondo, como autoridad geográfica que nadie había convocado, apareció Everest.
+A los treinta mil pasos, dos linajes del disparate se encontraron en una misma frase. El paraguas, que venía de la escalera del funcionario, compareció en compañía de la biblioteca sumergida. Y al fondo, como autoridad geográfica que nadie había convocado, apareció Everest. El agua que el escribano sacaba del pozo para humedecer los pliegos dejaba en el papel un cerco pardo; desde entonces se prohibió llamar potable a cualquier cosa que hubiese tocado un expediente.
 
 > *«Una biblioteca puede estar sumergida y seguir llena de libros; lo difícil es que el lector salga a flote.»*
 
@@ -3402,7 +3402,7 @@ La ciencia exige paciencia. El pájaro exige vigilancia. Y el hombre de la pluma
 
 ### I. Del alguacil que abrió una casa de juego sin licencia
 
-La víspera de la comparecencia, el guardián hizo traer una mesa, dos dados y un libro encuadernado en piel de expediente. En la cubierta escribió, con letra de fedatario jubilado, una nota de inventario: «La mesa cojea de la pata izquierda y alguien la ha calzado con una cáscara de nuez». El amanuense sospechó de la ardilla; el alguacil, de un funcionario con demasiado tiempo libre. Ninguno quiso interrogar a la ardilla.
+La víspera de la comparecencia, el guardián hizo traer una mesa, dos dados y un libro encuadernado en piel de expediente. En la cubierta escribió, con letra de fedatario jubilado, una nota de inventario: «La mesa cojea de la pata izquierda y alguien la ha calzado con una cáscara de nuez». El amanuense sospechó de la ardilla; el alguacil, de un funcionario con demasiado tiempo libre. Ninguno quiso interrogar a la ardilla. Detrás de la mesa, el pozo seguía abierto; una argolla oxidada mordía el brocal y la soga colgaba hasta perderse en la oscuridad. El alguacil decía que era por economía de cuerda; el escribano, que por economía de explicaciones.
 
 **«Casa de apuestas del animal: se admiten pronósticos, non se admiten pruebas.»**
 
