@@ -27,6 +27,7 @@
 - [Cédula para el próximo holdout](#anexo--cédula-de-lectura-para-el-holdout-que-viene)
 - [Capítulo VII](#capítulo-vii--del-reglamento-que-ocupó-la-silla-del-patrón)
 - [Capítulo VIII — Borrador de apuesta](CAPITULO_VIII_APUESTA_50K.md)
+- [Capítulo IX — Del arcano oficio de escribano de loros graciosos](CAPITULO_IX_ARCANO_ESCRIBANO.md)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
@@ -52,6 +53,7 @@
 | 20.000 | [42982933515](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515) | [13838855379](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515/artifacts/13838855379) | `checkpoint-20000-holdout-100.json` | `53528c3002ba07fe493815b9bfa4bd69bdc08cf985f77a4e59958ee2b3344cc4` |
 | 30.000 | [42994967183](https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183) | [13842918120](https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183/artifacts/13842918120) | `checkpoint-30000-holdout-100.json` | `140230697a4df69f43c2cc4f6dc95ba2cc596b095532d3e171c486891d26bc4a` |
 | 40.000 | [43006818556](https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556) | [13847804015](https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556/artifacts/13847804015) | `checkpoint-40000-holdout-100.json` | `9da6ea9b294665213114858b90f44168d940c36fb54cdb4612186a896bda7698` |
+| 50.000 | [43019963290](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290) | [13854621810](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290/artifacts/13854621810) | `checkpoint-50000-holdout-100.json` | `f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966` |
 
 ### Linaje íntegro del checkpoint de 40.000 pasos
 
@@ -74,6 +76,22 @@ La cadena no se limita al ZIP de respuestas. El checkpoint activo procede de una
 **Distinción de huellas.** El SHA-256 del checkpoint identifica los pesos `.pt`; los tres digests de artefacto identifican ZIP distintos. No son intercambiables. El log del entrenamiento acredita que se descargó el padre, se verificó su hash, se reutilizó la caché, se alcanzó exactamente el paso 40.000 y se escribió `lineage.json`. La cadena de custodia del checkpoint no demuestra calidad semántica.
 
 **Identidad común:** holdout SHA-256 `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`; tokenizer SHA-256 `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`. El baseline difiere en contexto y parámetros, como se advierte en el prólogo.
+
+**Linaje íntegro del checkpoint de 50.000 pasos**
+
+La continuación de 40k a 50k queda acreditada por el run de entrenamiento y sus artefactos. El job terminó correctamente, descargó y verificó el padre exacto, reutilizó la caché completa de tokens y escribió el checkpoint acumulado de 50k.
+
+| Eslabón | Identificador y prueba |
+|---|---|
+| Ejecución de entrenamiento | [43009405531](https://github.com/orbitalronin94/RONINIA/actions/runs/43009405531), job `130484922999`, conclusión `success` |
+| Padre inmediato | `checkpoint-40000.pt`; SHA-256 `9da6ea9b294665213114858b90f44168d940c36fb54cdb4612186a896bda7698` |
+| Trabajo añadido | 10.000 pasos; acumulado final 50.000; 920.277.537 tokens registrados |
+| Checkpoint resultante | `checkpoint-50000.pt`; SHA-256 `f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966` |
+| Artefacto de checkpoints | [13854905773 — ronin-10m-checkpoints-50k-43009405531](https://github.com/orbitalronin94/RONINIA/actions/runs/43009405531/artifacts/13854905773); digest ZIP SHA-256 `3db5f0b6cfaa767cadc370440baa7f4e97d5380a8acdc0e0a5566df926b9401c` |
+| Artefacto de cadena y recuperación | [13854017804 — ronin-10m-chain-50k-43009405531](https://github.com/orbitalronin94/RONINIA/actions/runs/43009405531/artifacts/13854017804); digest ZIP SHA-256 `18ba1ce424da81ec553c18299b66f2369491b37c4bd5aab727d8bdd849ba1f45` |
+| Evaluación | [43019963290](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290); [artefacto 13854621810](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290/artifacts/13854621810) |
+
+**Identidad común:** checkpoint SHA-256 `f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966`; tokenizer SHA-256 `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`; holdout SHA-256 `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`. El entrenamiento partió del checkpoint de 40k verificado. El holdout recuperó 100/100 registros con el protocolo de generación fijado. La cadena de custodia acredita identidad y continuidad, non calidad semántica.
 
 ### Inventario de señales cuantificadas
 | Señal | Resultado | IDs fuente |
@@ -1153,11 +1171,18 @@ Este capítulo se incorpora como **alucinación literaria deliberada del escriba
 
 **Fuero de lectura:** no usar estas apuestas para promover el checkpoint, alterar el holdout ni presentar como observada ninguna salida futura. Cuando llegue el artefacto, contrastar cada falsador y publicar aciertos y fallos por igual.
 
+## Capítulo IX — Del arcano oficio de escribano de loros graciosos
+
+El capítulo IX incorpora el resultado de 50k, el cotejo de las diez apuestas del capítulo VIII y la decisión de promoción experimental. Su romance de la sábana comprada queda como gozne para el capítulo X. La promoción se registra como elección operativa del proyecto; no se presenta como prueba de comprensión ni de mejora semántica. Véase el [texto íntegro del capítulo IX](CAPITULO_IX_ARCANO_ESCRIBANO.md).
+
+**Fuero de lectura:** seis apuestas pasan, tres fallan y una queda probable; la media de longitud no se declara medida hasta calcularla. El artefacto conserva 100 respuestas, y la cadena de entrenamiento acredita la continuación exacta de 40k a 50k. El BPB sigue pendiente.
+
 ## Historial de ejecuciones
 
 | Fecha | Evaluación | Run ID | Resultado | Ejecución | Artefactos | Commit |
 |---|---|---:|---|---|---|---|
 <!-- HOLDOUT-INDEX-START -->
+| 2026-11-11 | RONIN-10M — 50k inference holdout | 43019963290 | success | [Ver ejecución](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290) | [holdout 50k — 13854621810](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290/artifacts/13854621810) | `a57054ccef22564ae168c541574e584ada42d962` |
 
 | 2026-11-10 | RONIN-10M — step-0 baseline inference holdout | 42874585777 | success | [Ver ejecución](https://github.com/orbitalronin94/RONINIA/actions/runs/42874585777) | [ronin-step0-baseline.zip](https://github.com/orbitalronin94/RONINIA/actions/runs/42874585777) | — |
 

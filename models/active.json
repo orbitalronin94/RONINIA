@@ -2,20 +2,22 @@
   "model_id": "RONIN-10M",
   "status": "promoted_experimental",
   "promoted_at": "2026-11-11",
-  "promotion_note": "Selected as the active experimental checkpoint by project decision. The matched 100-question holdout verifies artifact and protocol identity but does not demonstrate a global semantic-quality improvement; no automated quality score is claimed.",
+  "promotion_note": "Selected as the active experimental checkpoint by explicit project decision after the 50,000-step holdout. The matched 100-question holdout verifies artifact and protocol identity but does not demonstrate a global semantic-quality improvement; no automated quality score is claimed.",
   "training": {
-    "run_id": 42994415440,
-    "run_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42994415440",
-    "cumulative_steps": 40000,
+    "run_id": 43009405531,
+    "run_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/43009405531",
+    "cumulative_steps": 50000,
     "steps_this_run": 10000,
-    "parent_run_id": 42984964609,
-    "parent_checkpoint_sha256": "140230697a4df69f43c2cc4f6dc95ba2cc596b095532d3e171c486891d26bc4a",
-    "checkpoint": "checkpoint-40000.pt",
-    "checkpoint_sha256": "9da6ea9b294665213114858b90f44168d940c36fb54cdb4612186a896bda7698",
-    "artifact_id": 13848916129,
-    "artifact_name": "ronin-10m-chain-40k-42994415440",
-    "artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42994415440#artifacts",
-    "artifact_sha256": "a7cf13030c2e1390ed2bc9198c9de9acd2048a5dd70f3a1b47fbfa4a79107d6f",
+    "parent_run_id": 42994415440,
+    "parent_checkpoint_sha256": "9da6ea9b294665213114858b90f44168d940c36fb54cdb4612186a896bda7698",
+    "checkpoint": "checkpoint-50000.pt",
+    "checkpoint_sha256": "f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966",
+    "artifact_id": 13854017804,
+    "artifact_name": "ronin-10m-chain-50k-43009405531",
+    "artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/43009405531/artifacts/13854017804",
+    "artifact_sha256": "18ba1ce424da81ec553c18299b66f2369491b37c4bd5aab727d8bdd849ba1f45",
+    "checkpoints_artifact_id": 13854905773,
+    "checkpoints_artifact_sha256": "3db5f0b6cfaa767cadc370440baa7f4e97d5380a8acdc0e0a5566df926b9401c",
     "parameters": 9757440,
     "config": {
       "vocab_size": 8192,
@@ -37,12 +39,11 @@
     "sha256": "605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4"
   },
   "evaluation": {
-    "run_id": 43006818556,
-    "run_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556",
-    "artifact_id": 13847804015,
-    "artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556#artifacts",
-    "artifact_name": "ronin-10m-checkpoint-40000-holdout-100-43006818556",
-    "artifact_sha256": "6d3d4f7c1bf0525472f600c9edf202604e915d82d24e0622d5abf5931ce9d1e1",
+    "run_id": 43019963290,
+    "run_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290",
+    "artifact_id": 13854621810,
+    "artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290/artifacts/13854621810",
+    "artifact_name": "ronin-10m-checkpoint-50000-holdout-100-43019963290",
     "questions": 100,
     "holdout_sha256": "3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535",
     "generation": "greedy_argmax",
@@ -54,13 +55,13 @@
     "automated_quality_score": null
   },
   "interpretation": {
-    "observed_change_from_30000_steps": "96 of 100 answer strings changed; 4 remained identical. Two outputs are empty. Literal template counts shifted, but no validated semantic-quality score is available.",
+    "observed_change_from_40000_steps": "100 answers were recovered for the fixed 100-question holdout. No validated semantic-quality score is available; no direct semantic improvement claim is made.",
     "qualitative_findings": [
-      "REGLAMENTO_AS_PATRON: the evidence-preface and caution phrases recur in place of task-specific answers.",
-      "EMPTY_AS_DATA: causality-003 and troll-016 are empty outputs.",
-      "SELF_STAMPING_SEAL: PERY:INITY and repeated PL fragments appear in generated text.",
-      "POETIC_ABSENCE_IS_NOT_EXTINCTION: umbrella/thermometer/submerged-library/Everest motifs are absent from this 100-answer sample."
+      "REGLAMENTO_MUTATION: 'Si falta información, dilo expresamente' recurs as a caution template; it is not evidence of task understanding.",
+      "REPEATED_FRAGMENTS: P:P:P, Pata.Rata, C.Res and PHP fragments recur in the sample.",
+      "PARAGUAS_REDIVIVUS: the umbrella motif reappears in ci-001 after its absence in the 40k sample.",
+      "FORMAT_CONTAMINATION: remediation labels, inserted questions and metaprompt fragments remain visible in generated text."
     ],
-    "caveat": "Experimental promotion records the project's selected active checkpoint and preserves immutable lineage. The holdout verifies generation and protocol identity, not semantic accuracy, reasoning, calibrated abstention, EOS correctness, BPB improvement, or general capability. No automated quality score is claimed."
+    "caveat": "The 50k checkpoint is selected as active by project decision. The holdout verifies checkpoint identity and the fixed generation protocol, not semantic accuracy, reasoning, calibrated abstention, EOS correctness, BPB improvement, or general capability. BPB remains uncomputed; the mean answer length in the chapter's seventh wager remains uncomputed."
   }
 }
