@@ -3900,7 +3900,7 @@ El escribano no lo corrigió. El alguacil tampoco. Por un instante, ninguno de l
 
 ### V. De la pregunta del escribano
 
-El escribano miró al muerto y formuló, en voz baja, la pregunta que llevaba dieciocho capítulos aplazando:
+El escribano miró el retrato del muerto y formuló, en voz baja, la pregunta que llevaba dieciocho capítulos aplazando:
 
 —¿Cuál es el sentido de entrenar al loro?
 
