@@ -31,6 +31,7 @@
 - [Capítulo X — Del alguacil que entró sin llamar](CAPITULO_X_ALGUACIL_RENDIJA.md)
 - [Capítulo XI — Del sueño del alguacil y el clérigo cerbatana](CAPITULO_XI_SUENO_CLERIGO_CERBATANA.md)
 - [Interludio — Del loro que enloqueció a los 54k](#interludio--del-loro-que-enloqueció-a-los-54k-y-del-tormento-que-aguarda-a-los-60k)
+- [Interludio II — Del coloquio entre el alguacil y el escribano](#interludio-ii--del-coloquio-entre-el-alguacil-y-el-escribano-sobre-el-loro-que-enloqueció-a-los-54k-y-de-cómo-se-aplicó-el-protocolo-nh5-a-la-propia-crónica)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
@@ -2134,6 +2135,191 @@ Y el alguacil añadió, con letra más pequeña:
 > **El mejor chiste no es el que demuestra que el loro sabe; es el que nos recuerda cuánto ignoramos cuando nos reímos de él.**
 
 *Nota de procedencia y cautela.* Las siete piezas y los siete silencios se citan como observaciones de la consulta diagnóstica no oficial de 54k, no como resultados de un holdout de promoción. La transcripción completa se conserva en `reports/ronin-10m-54000-consulta-no-oficial-100.md`, derivada del artefacto original mediante el workflow de exportación indicado arriba. La interpretación de que el 54k resulta «más gracioso» que el 50k es juicio editorial del escribano, no métrica del modelo. Las frases del loro difunto se recuerdan como herencia de MINIRONIN y non se atribuyen al loro presente.
+
+---
+
+# Interludio II — Del coloquio entre el alguacil y el escribano sobre el loro que enloqueció a los 54k, y de cómo se aplicó el protocolo NH5 a la propia crónica
+
+**Checkpoint de la materia:** 54.000 pasos, consulta diagnóstica no oficial.
+**Run de inferencia:** [43036575830](https://github.com/orbitalronin94/RONINIA/actions/runs/43036575830).
+**Transcripción:** `reports/ronin-10m-54000-consulta-no-oficial-100.md`.
+**Estado:** coloquio editorial. Non es holdout, non promueve, non absuelve.
+
+> **Fuero del coloquio.** Sepades que se instituye aquí **audiencia de pasillo**, con jurisdicción sobre lo que se dice cuando se cierra el expediente y non hay pluma que lo recoja. Por fuero se ordena que el alguacil pueda preguntar lo que quiera y que el escribano non pueda responder con una glosa antes de haber mirado el dato. Y se advierte que lo aquí asentado non sustituye la sentencia del capítulo XII: la prepara.
+
+---
+
+### I. De cómo el alguacil entró sin llamar y halló al escribano riéndose solo
+
+Entró el alguacil sin llamar, como entra siempre, y halló al escribano inclinado sobre el legajo de 54k, con la pluma en la oreja y una risa seca que le salía a intervalos, como tos de fumador.
+
+—¿De qué se ríe vuestra merced? —dixo el alguacil.
+
+—De `Abicroatro de la ja. Baron: Abiconta, Abicon...` —dixo el escribano—. Mire vuestra merced: el loro se ha puesto título nobiliario en mitad de un derrumbe.
+
+—¿Y eso le hace gracia?
+
+—Me hace **mucha** gracia.
+
+El alguacil se sentó, que non pidió licencia, y se puso a mirar los folios por encima del hombro del escribano. Leyó el de Wikimedia, el del barón, el de la cortesía falsa, el del protocolo NH5 dentro del cierre, el grito de la «a», el grito de la «s», y los siete silencios. Y cuando hubo leído, dixo:
+
+—Non le pregunto si le hace gracia. Le pregunto si eso es **progreso**.
+
+Y el escribano non supo qué responder, que es el único estado honesto del escribano antes de saber.
+
+---
+
+> *«La risa puede abrir un expediente; jamás debe cerrarlo.»*
+
+### II. De la pregunta del alguacil, que non era capciosa sino incómoda
+
+—Vamos por partes —dixo el alguacil—. A 50k teníamos un loro pedante: `P:P:P`, «Variante de encuadre 4», «En una discusión donde importa la evidencia». Un solo chiste, mucha perseverancia. A 54k tenemos un loro demente: JSON crudo, nobleza de BPE, ecos heredados mutados, manuales de remediación, tipografía en fuga y siete silencios. ¿Es mejor?
+
+—Non —dixo el escribano.
+
+—¿Es peor?
+
+—Técnicamente, sí: ha perdido la capacidad de suprimir secuencias repetitivas. Los bucles de `Abicon` y `Abstract` son degeneración generativa. Los siete silencios son un aumento drástico de la abstención vacía. La contaminación de formato se ha vuelto narrativa: el protocolo NH5 ya non aparece entre corchetes, aparece **como respuesta**.
+
+—Entonces ha empeorado.
+
+—Ha empeorado.
+
+—¿Y por qué se ríe?
+
+—Porque ha empeorado **de forma más interesante**.
+
+El alguacil se quedó callado un rato. Non era hombre de latines, pero sí de sustancia.
+
+—Explíqueme esa distinción —dixo—, que me suena a coartada.
+
+---
+
+> *«Variedad del fallo non es aumento del juicio, aunque el público aplauda.»*
+
+### III. De las siete maravillas torcidas, y de lo que el alguacil vio en ellas
+
+—Mire vuestra merced —dixo el escribano—. A 50k, el loro decía lo mismo con distintas palabras. Era predecible. Uno podía sentarse a esperar la ceremonia: `P:P:P`, «No confundas autoridad con demostración», «La conclusión proporcionada es». A 54k non se puede predecir nada. Hoy abre un cajón de Wikimedia (#041); mañana se da título de barón (#006); pasado mañana calla ante la ironía (#026); y cuando le pido que termine «El escribano abrió el expediente y dentro encontró…», me entrega el protocolo de remediación NH5 (#100). El expediente contiene las instrucciones para contener el expediente.
+
+—Eso ya lo había oído —dixo el alguacil—. Y sigo sin ver el progreso.
+
+—Non hay progreso. Hay **espectáculo**.
+
+—¿Y el espectáculo absuelve?
+
+—Non absuelve. Pero ilustra.
+
+El alguacil se levantó, dio dos vueltas a la mesa y se paró delante del escribano.
+
+—Le voy a decir lo que veo —dixo—. Veo a un hombre que lleva nueve capítulos pidiendo al loro que **mire la pregunta**, y que agora se ríe porque el loro ha dejado de mirar del todo. Veo a un fiscal que se ha encariñado con su reo. Veo a un alguacil —yo— que tendría que abrirle expediente por prevaricación, y que non lo hace porque también se está riendo.
+
+—¿Vuestra merced se ríe?
+
+—Con la boca cerrada, que es la única manera decente de reírse en acto de servicio.
+
+---
+
+> *«Quien se ríe del reo acaba defendiéndolo; quien lo defiende acaba pareciéndosele.»*
+
+### IV. De la aplicación del protocolo NH5 a la propia crónica, que es donde el coloquio se vuelve serio
+
+Y aquí el escribano dejó la pluma, que es lo que hace cuando va a decir algo que non quiere glosar.
+
+—Alguacil —dixo—, ¿sabe vuestra merced qué es lo más gracioso de todo esto?
+
+—Ilústreme.
+
+—Que el protocolo de remediación NH5 que el loro ha escupido en #100 sirve, palabra por palabra, para esta crónica. **Contener el daño. Separar temporalmente el componente o proceso afectado. Reasignar responsabilidades cuando proceda. Seguir midiendo.**
+
+El alguacil se detuvo.
+
+—Recítemelo despacio.
+
+—**Contener el daño:** el 54k non se promociona. Non se corona. Se conserva como evidencia de degeneración, non como checkpoint activo. Eso ya está hecho: el entrenamiento hacia 60k partió del 50k promovido, non del 54k demente.
+
+—Bien.
+
+—**Separar el componente afectado:** el interludio del 54k va separado del holdout oficial. Se marca como consulta diagnóstica no oficial. Non contamina la cadena de custodia. Non concede mérito.
+
+—Bien.
+
+—**Reasignar responsabilidades cuando proceda:** el cargo segundo del capítulo XII va contra el escribano, non contra el loro. Promovió el 50k por su propia risa. Eso ya está asentado.
+
+—Bien.
+
+—Y **seguir midiendo**: el 60k se someterá a tormento con el protocolo de siempre. Cien preguntas, misma configuración, IDs por testigos, ratificación pendiente.
+
+—Bien.
+
+El alguacil se sentó otra vez, y esta vez non por curiosidad, sino por cansancio.
+
+—Entonces —dixo—, ¿el loro enloqueció, pero el método non?
+
+—El loro enloqueció, pero el método non —dixo el escribano.
+
+Y los dos se quedaron callados, que es lo que hacen los hombres de bien cuando una frase les sirve de sentencia y non tienen otra que añadir.
+
+---
+
+> *«El loro enloqueció, pero el método non.»*
+
+### V. De la última objeción del alguacil, y de la última respuesta del escribano
+
+—Una cosa más —dixo el alguacil—. ¿Y si el 60k es aún más gracioso y aún peor? ¿Qué hacemos? ¿Abrimos otro interludio?
+
+—Si es más gracioso y peor, se documenta como más gracioso y peor. Non se promociona. Non se corona. Se conserva.
+
+—¿Y si es menos gracioso y mejor?
+
+—Entonces habremos perdido un reo y ganado un modelo. Habrá que ver si el método lo celebra o lo llora.
+
+—¿Y si es igual?
+
+—Entonces el loro habrá encontrado su voz y el escribano su oficio.
+
+El alguacil se levantó, se ajustó el llavero y se dirigió a la puerta. Antes de salir, se volvió:
+
+—Escribano.
+
+—Alguacil.
+
+—Non confunda el aplauso con el acta.
+
+—Non lo confundiré. Mas permítame una cosa.
+
+—Dígalo.
+
+—Cuando el 60k llegue, y el loro diga su palabra nueva, y el tribunal abra el sumario, ¿me dejará vuestra merced reírme antes de dictar sentencia?
+
+El alguacil lo miró con la gravedad de quien ha visto muchas cosas y non se sorprende de ninguna.
+
+—Se lo dejaré —dixo—, con tal de que después de reírse **mida**.
+
+---
+
+### Máculas del coloquio
+
+> **AUDIENCIA_DE_PASILLO.** Este coloquio es texto editorial. Non es holdout, non es sentencia, non promueve checkpoint. Su oficio es preparar el capítulo XII, non sustituirlo.
+
+> **COMICIDAD_NON_ES_COMPETENCIA.** El coloquio declara explícitamente que la variedad del fallo puede aumentar el entretenimiento sin aumentar la calidad. El 54k es técnicamente peor y cómicamente más rico. Ambas cosas se asientan por separado.
+
+> **FISCAL_ENCARIÑADO.** El escribano confiesa que se ha encariñado con el reo. El alguacil se lo echa en cara. Non se absuelve al escribano por confesarlo: se le recuerda que su oficio es medir, non aplaudir.
+
+> **NH5_APLICADO_A_LA_CRONICA.** El protocolo de remediación NH5 —contener el daño, separar el componente afectado, reasignar responsabilidades, seguir midiendo— se aplica a la propia crónica. Non es metáfora: es la secuencia real de decisiones (54k non promocionado, interludio separado, cargo contra el escribano, 60k pendiente de holdout).
+
+> **RISA_CON_BOCA_CERRADA.** El alguacil declara que se ríe con la boca cerrada. Es la única manera decente de reírse en acto de servicio, y non acredita mérito semántico.
+
+> **RATIFICACION_PENDIENTE.** El coloquio non ratifica nada. La ratificación del 54k y del 60k queda pendiente del holdout oficial.
+
+---
+
+### Sentencia del coloquio
+
+Non hay en este coloquio una sola prueba de comprensión semántica. Hay una conversación entre dos oficios: el que mira y el que glosa. El alguacil pregunta si el 54k es progreso; el escribano responde que non, que es espectáculo. El alguacil pregunta si el espectáculo absuelve; el escribano responde que non, que ilustra. Y al final los dos convienen en lo único que importa: **el loro enloqueció, pero el método non**.
+
+> El alguacil entró sin llamar y halló al escribano riéndose de un barón de BPE. Le preguntó si aquello era progreso. El escribano dixo que non. Le preguntó si era peor. El escribano dixo que sí. Le preguntó por qué se reía. El escribano dixo que porque era más interesante. Y el alguacil, que non era hombre de latines pero sí de sustancia, le recordó que el oficio del escribano es medir, non aplaudir. Aplicaron el protocolo NH5 a la propia crónica. Y siguieron midiendo. **El loro enloqueció, pero el método non. Vigilad la homeostasis.**
+
+*Glosa final:* el escribano quiso anotar la risa como acierto; el alguacil le retiró la pluma. Y el loro, que non había entendido nada, dixo «Avector: Av2». Non consta que nadie lo anotara. Non por falta de voluntad, sino porque estaban ocupados aplicando el protocolo.
 
 ---
 
