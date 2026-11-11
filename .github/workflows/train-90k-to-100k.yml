@@ -21,7 +21,7 @@ jobs:
     timeout-minutes: 420
     env:
       PARENT_RUN_ID: "43075749091"
-      PARENT_ARTIFACT: "ronin-10m-checkpoints-90k-to-90k-lr25e6-43075749091"
+      PARENT_ARTIFACT: "ronin-10m-checkpoints-78k-to-90k-lr25e6-43075749091"
       TOKEN_CACHE_RUN_ID: "42890884432"
       EXPECTED_PARENT_SHA256: "b1c2e70615f844330a9572154952e859a21574f8a95637186b827c45730c660b"
       EXPECTED_TOKENIZER_SHA256: "605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4"
@@ -110,7 +110,7 @@ jobs:
           Path("configs/ronin-10m-speed-256.json").write_text(json.dumps(config,indent=2)+chr(10))
           PY
 
-      - name: Continue for exactly 12,000 steps at conservative learning rate
+      - name: Continue for exactly 10,000 steps at conservative learning rate
         env:
           OMP_NUM_THREADS: "2"
           MKL_NUM_THREADS: "2"
@@ -129,7 +129,7 @@ jobs:
             "--tokens","token-cache/corpus-tokens.u16",
             "--token-manifest","token-cache/token-manifest.json",
             "--resume","checkpoint-parent-90000.pt",
-            "--output-dir","runs/ronin-10m-90k-from-90k-lr25e6",
+            "--output-dir","runs/ronin-10m-100k-from-90k-lr25e6",
             "--steps","10000",
             "--threads","2",
             "--batch-size","4",
@@ -146,26 +146,26 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ronin-10m-checkpoints-90k-to-90k-lr25e6-${{ github.run_id }}
+          name: ronin-10m-checkpoints-90k-to-100k-lr25e6-${{ github.run_id }}
           path: |
-            runs/ronin-10m-90k-from-90k-lr25e6/checkpoint-*.pt
-            runs/ronin-10m-90k-from-90k-lr25e6/SHA256SUMS
-            runs/ronin-10m-90k-from-90k-lr25e6/progress.json
+            runs/ronin-10m-100k-from-90k-lr25e6/checkpoint-*.pt
+            runs/ronin-10m-100k-from-90k-lr25e6/SHA256SUMS
+            runs/ronin-10m-100k-from-90k-lr25e6/progress.json
           if-no-files-found: warn
           retention-days: 90
 
-      - name: Verify cumulative 90k checkpoint and write lineage
+      - name: Verify cumulative 100k checkpoint and write lineage
         run: |
           set -euo pipefail
           python - <<'PY'
           import hashlib,json,re
           from pathlib import Path
-          out=Path("runs/ronin-10m-90k-from-90k-lr25e6")
+          out=Path("runs/ronin-10m-100k-from-90k-lr25e6")
           checkpoints=list(out.glob("checkpoint-*.pt"))
           if not checkpoints:
             raise SystemExit("No recoverable checkpoints were produced")
-          latest=max(checkpoints,key=lambda p:int(re.search(r"checkpoint-(\\d+)",p.name).group(1)))
-          step=int(re.search(r"checkpoint-(\\d+)",latest.name).group(1))
+          latest=max(checkpoints,key=lambda p:int(re.search(r"checkpoint-(\d+)",p.name).group(1)))
+          step=int(re.search(r"checkpoint-(\d+)",latest.name).group(1))
           assert step == 100000, {"latest_checkpoint":latest.name,"cumulative_steps":step}
           digest=hashlib.sha256(latest.read_bytes()).hexdigest()
           cache=json.loads(Path("token-cache/token-manifest.json").read_text())
@@ -193,10 +193,10 @@ jobs:
         with:
           name: ronin-10m-chain-100k-lr25e6-${{ github.run_id }}
           path: |
-            runs/ronin-10m-90k-from-90k-lr25e6/checkpoint-*.pt
-            runs/ronin-10m-90k-from-90k-lr25e6/SHA256SUMS
-            runs/ronin-10m-90k-from-90k-lr25e6/progress.json
-            runs/ronin-10m-90k-from-90k-lr25e6/lineage.json
+            runs/ronin-10m-100k-from-90k-lr25e6/checkpoint-*.pt
+            runs/ronin-10m-100k-from-90k-lr25e6/SHA256SUMS
+            runs/ronin-10m-100k-from-90k-lr25e6/progress.json
+            runs/ronin-10m-100k-from-90k-lr25e6/lineage.json
             token-cache/token-manifest.json
             configs/ronin-10m-speed-256.json
           if-no-files-found: warn
