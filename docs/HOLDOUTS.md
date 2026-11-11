@@ -2093,22 +2093,24 @@ Los runs fallidos `43022253427` y `43022290341` se conservan como fallos, con su
 | Fecha | Ejecución | Workflow | Evento | Run ID | Resultado | Artefactos | Commit |
 |---|---|---|---|---:|---|---|---|
 <!-- HOLDOUT-INDEX-START -->
-| 2026-11-11 | RONIN-10M — 50k to 60k full-corpus training (retry after tokenizer SHA fix) | `train-50k-to-60k-full-corpus` | workflow_dispatch | 43025252739 | in_progress | — | `e89a0bb555d7` |
-| — | RONIN-10M — 50k to 60k full-corpus training (preflight fix attempt) | `train-50k-to-60k-full-corpus` | workflow_dispatch | 43022290341 | failure | [13855563893](https://github.com/orbitalronin94/RONINIA/actions/runs/43022290341/artifacts/13855563893) | — |
-| — | RONIN-10M — 50k to 60k full-corpus training (attempt 1) | `train-50k-to-60k-full-corpus` | workflow_dispatch | 43022253427 | failure | [13855487875](https://github.com/orbitalronin94/RONINIA/actions/runs/43022253427/artifacts/13855487875) | — |
-| 2026-11-11 | RONIN-10M — 50k inference holdout | `holdout / inference` | workflow_dispatch | 43019963290 | success | [13854621810](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290/artifacts/13854621810) | `a57054ccef22` |
-| — | RONIN-10M — training to 50k | `train` | workflow_dispatch | 43009405531 | success | [13854905773](https://github.com/orbitalronin94/RONINIA/actions/runs/43009405531/artifacts/13854905773)<br>[13854017804](https://github.com/orbitalronin94/RONINIA/actions/runs/43009405531/artifacts/13854017804) | — |
-| — | RONIN-10M — 40k inference holdout | `holdout / inference` | workflow_dispatch | 43006818556 | success | [13847804015](https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556/artifacts/13847804015) | — |
-| — | RONIN-10M — 30k inference holdout | `holdout / inference` | workflow_dispatch | 42994967183 | success | [13842918120](https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183/artifacts/13842918120) | — |
-| — | RONIN-10M — training to 40k | `train` | workflow_dispatch | 42994415440 | success | [13848916129](https://github.com/orbitalronin94/RONINIA/actions/runs/42994415440/artifacts/13848916129)<br>[13848976223](https://github.com/orbitalronin94/RONINIA/actions/runs/42994415440/artifacts/13848976223) | `1108c6fbef20` |
-| — | RONIN-10M — training to 30k | `train` | workflow_dispatch | 42984964609 | success | ronin-10m-chain-30k | — |
-| — | RONIN-10M — 20k inference holdout | `holdout / inference` | workflow_dispatch | 42982933515 | success | [13838855379](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515/artifacts/13838855379) | — |
-| — | RONIN-10M — training to 20k | `train` | workflow_dispatch | 42973299789 | success | ronin-10m-chain-20k | — |
-| — | RONIN-10M — 10k inference holdout | `holdout / inference` | workflow_dispatch | 42970549370 | success | [13832434652](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652) | — |
-| — | RONIN-10M — 5k inference holdout | `holdout / inference` | workflow_dispatch | 42911715548 | success | [13807012620](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620) | — |
-| — | RONIN-10M — training to 10k | `train` | workflow_dispatch | 42902793379 | success | — | — |
-| — | RONIN-10M — token cache / corpus tokenization | `token-cache` | workflow_dispatch | 42890884432 | success | — | — |
-| — | RONIN-10M — baseline inference holdout (0 pasos) | `holdout / inference` | workflow_dispatch | 42874585777 | success | [13791466097](https://github.com/orbitalronin94/RONINIA/actions/runs/42874585777/artifacts/13791466097) | — |
+| Fecha | Ejecución | Workflow o tipo | Evento | Run ID | Resultado | Artefactos | Commit |
+|---|---|---|---|---:|---|---|---|
+| 2026-11-11 | RONIN-10M — 50k→60k training retry after tokenizer SHA fix | `train-50k-to-60k-full-corpus` | — | 43025252739 | in_progress | — | `e89a0bb555d7` |
+| — | RONIN-10M — 50k→60k training, preflight fix attempt | `train-50k-to-60k-full-corpus` | — | 43022290341 | failure | [13855563893](https://github.com/orbitalronin94/RONINIA/actions/runs/43022290341/artifacts/13855563893) | — |
+| — | RONIN-10M — 50k→60k training, first attempt | `train-50k-to-60k-full-corpus` | — | 43022253427 | failure | [13855487875](https://github.com/orbitalronin94/RONINIA/actions/runs/43022253427/artifacts/13855487875) | — |
+| 2026-11-11 | RONIN-10M — 50k inference holdout | `holdout / inference (ruta no recuperada)` | — | 43019963290 | success | [13854621810](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290/artifacts/13854621810) | `a57054ccef22` |
+| — | RONIN-10M — training to 50k | `training (ruta no recuperada)` | — | 43009405531 | success | [13854905773](https://github.com/orbitalronin94/RONINIA/actions/runs/43009405531/artifacts/13854905773)<br>[13854017804](https://github.com/orbitalronin94/RONINIA/actions/runs/43009405531/artifacts/13854017804) | — |
+| — | RONIN-10M — 40k inference holdout | `holdout / inference (ruta no recuperada)` | — | 43006818556 | success | [13847804015](https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556/artifacts/13847804015) | — |
+| — | RONIN-10M — 30k inference holdout | `holdout / inference (ruta no recuperada)` | — | 42994967183 | success | [13842918120](https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183/artifacts/13842918120) | — |
+| — | RONIN-10M — training to 40k | `training (ruta no recuperada)` | — | 42994415440 | success | [13848916129](https://github.com/orbitalronin94/RONINIA/actions/runs/42994415440/artifacts/13848916129)<br>[13848976223](https://github.com/orbitalronin94/RONINIA/actions/runs/42994415440/artifacts/13848976223) | `1108c6fbef20` |
+| — | RONIN-10M — training to 30k | `training (ruta no recuperada)` | — | 42984964609 | success | [ronin-10m-chain-30k](https://github.com/orbitalronin94/RONINIA/actions/runs/42984964609#artifacts) | — |
+| — | RONIN-10M — 20k inference holdout | `holdout / inference (ruta no recuperada)` | — | 42982933515 | success | [13838855379](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515/artifacts/13838855379) | — |
+| — | RONIN-10M — training to 20k | `training (ruta no recuperada)` | — | 42973299789 | success | [ronin-10m-chain-20k](https://github.com/orbitalronin94/RONINIA/actions/runs/42973299789#artifacts) | — |
+| — | RONIN-10M — 10k inference holdout | `holdout / inference (ruta no recuperada)` | — | 42970549370 | success | [13832434652](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652) | — |
+| — | RONIN-10M — 5k inference holdout | `holdout / inference (ruta no recuperada)` | — | 42911715548 | success | [13807012620](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620) | — |
+| — | RONIN-10M — training to 10k | `training (ruta no recuperada)` | — | 42902793379 | success | — | — |
+| — | RONIN-10M — token cache / corpus tokenization | `tokenización/cache (ruta no recuperada)` | — | 42890884432 | success documentado | — | — |
+| — | RONIN-10M — baseline inference holdout (0 pasos) | `holdout / inference (ruta no recuperada)` | — | 42874585777 | success | [13791466097](https://github.com/orbitalronin94/RONINIA/actions/runs/42874585777/artifacts/13791466097) | — |
 <!-- HOLDOUT-INDEX-END -->
 
 ## Fuero de lectura y reglas contra el embuste
