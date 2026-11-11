@@ -2973,6 +2973,105 @@ El alguacil cerró el libro.
 
 ---
 
+## Capítulo XIV — Del escribano que mandó andar veinte mil pasos antes de volver a preguntar al loro
+
+**Checkpoint de partida:** 60.000 pasos acumulados, modelo de 9.757.440 parámetros.  
+**Run padre:** entrenamiento 54k→60k, `43036261288`.  
+**Checkpoint padre:** `checkpoint-60000.pt`.  
+**SHA-256 del checkpoint padre:** `9446dd607e39b4942cb1b35e9500f0c1b21ace4b2a0b98e951d3942a75c991bd`.  
+**Run de entrenamiento nuevo:** `43046362021` — [RONIN-10M: continuar de 60k a 80k](https://github.com/orbitalronin94/RONINIA/actions/runs/43046362021).  
+**Estado al redactar:** en ejecución; todavía non hay checkpoint de 80.000 ni resultado de holdout que consignar.
+
+### I. De cómo el escribano pidió veinte mil pasos de paciencia
+
+Visto el resultado del checkpoint de sesenta mil, el escribano quedó largo rato mirando las cien respuestas del loro. No las miraba como quien contempla una obra acabada, sino como quien cuenta las ventanas de una cárcel y descubre que ninguna da al campo.
+
+—Hemos llegado a sesenta mil —dixo al cabo—. Y el animal todavía confunde la pregunta con el ruido de sus propias tripas.
+
+—Así consta —respondió el alguacil.
+
+—Pues démosle veinte mil pasos más antes de volver a examinarlo.
+
+—¿Veinte mil?
+
+—Veinte mil. Ni uno menos por impaciencia, ni uno más por vergüenza. Que llegue a ochenta mil y entonces le pondremos delante las mismas cien preguntas.
+
+El alguacil cerró el legajo anterior.
+
+—¿Y si vuelve a contestar disparates?
+
+—Los escribiremos.
+
+—¿Y si calla?
+
+—También.
+
+—¿Y si mejora?
+
+El escribano tardó en responder.
+
+—Entonces procuraremos no estropearlo llamando milagro a lo que apenas sea una señal.
+
+### II. Del mandato y sus condiciones
+
+Quedó dispuesto un nuevo entrenamiento de **20.000 pasos adicionales**, desde el artefacto de 60k verificado, con destino a **80.000 pasos acumulados**. No se parte de una reconstrucción ni de un checkpoint aproximado: el workflow debe descargar el artefacto de la ejecución padre y comprobar su SHA-256 antes de admitirlo como origen.
+
+La continuación quedó configurada con:
+
+- Learning rate: `2.5e-5`.
+- Batch size: `4`.
+- Dos hilos de CPU.
+- Contexto: 256 tokens, configuración compatible con el checkpoint.
+- Evaluación de entrenamiento: 32 batches.
+- Checkpoints intermedios cada 1.000 pasos.
+- Reutilización de la caché de tokens y del tokenizador ya existentes; non se vuelve a tokenizar el corpus.
+
+El workflow conserva los checkpoints recuperables incluso si una fase posterior falla. Al término deberá dejar manifiesto de linaje con la identidad del padre, el corpus, el tokenizador y el nuevo artefacto. La cifra de ochenta mil será acumulada, non una manera retórica de sumar ejecuciones inconexas.
+
+### III. Del próximo interrogatorio
+
+El escribano ordenó que el siguiente examen se haga **después** de completar los veinte mil pasos, no durante la marcha. Será el holdout oficial de cien preguntas, con la misma identidad del benchmark y el protocolo de generación comparable. La consulta de 54k, los diagnósticos improvisados y cualquier colección auxiliar quedan fuera de ese veredicto.
+
+—No quiero cien preguntas nuevas —dixo—. Quiero las mismas. Si mudamos las preguntas, podremos atribuir al loro lo que pertenece al examinador.
+
+—¿Y qué haremos con las respuestas?
+
+—Las conservaremos literalmente. Las vacías, las torcidas, las lúcidas si las hubiere, y las que parezcan escritas por un alguacil borracho. Después compararemos.
+
+No se fija de antemano una puntuación, ni se promete una mejora. Se revisarán las cien salidas, los silencios, las respuestas desplazadas, la adecuación a cada pregunta y cualquier cambio medible. La pérdida de validación podrá acompañar el expediente, mas non usurpará el oficio del holdout.
+
+### IV. Sentencia provisional: caminar no es aprender
+
+El checkpoint de 60k sigue sin promoción. El nuevo entrenamiento es un experimento de continuación, no una absolución retroactiva del resultado anterior. El checkpoint de 80k tampoco será promovido por haber alcanzado el número redondo, por haber terminado el workflow o por mostrar una pérdida menor.
+
+El alguacil dejó escrito en el margen:
+
+> «Veinte mil pasos son veinte mil ocasiones de cambiar. Non son veinte mil pruebas de haber mejorado.»
+
+Y el escribano añadió:
+
+> «Primero que ande. Después que responda. Y solo entonces veremos si sabe dónde está la puerta.»
+
+El loro, que oyó la palabra *puerta*, repitió:
+
+`Avector: Av2`
+
+—Al menos conserva la memoria —dixo el escribano.
+
+—Conserva el tic —replicó el alguacil—. La memoria habrá de probarla cuando le preguntemos otra vez.
+
+### V. Máculas y cadena de custodia del capítulo decimocuarto
+
+> **PADRE_60K.** Run de entrenamiento `43036261288`; checkpoint `checkpoint-60000.pt`; SHA-256 `9446dd607e39b4942cb1b35e9500f0c1b21ace4b2a0b98e951d3942a75c991bd`.
+
+> **CONTINUACIÓN_20K.** Run `43046362021`; objetivo 80.000 pasos acumulados. El estado y los artefactos deben consultarse en [GitHub Actions](https://github.com/orbitalronin94/RONINIA/actions/runs/43046362021). Al redactar este capítulo, el run seguía en ejecución.
+
+> **HOLDOUT_PENDIENTE.** El próximo holdout oficial de cien preguntas queda expresamente pospuesto hasta que termine el entrenamiento. No existe todavía resultado de 80k, y por tanto no se atribuye al modelo mejora alguna.
+
+> **NO_PROMOCIÓN.** Ni el checkpoint padre de 60k ni el futuro checkpoint de 80k reciben promoción automática. La decisión dependerá de la evidencia comparativa y de la revisión de respuestas.
+
+---
+
 ## Historial de ejecuciones — registro completo de GitHub Actions
 
 Este registro incluye **todas las ejecuciones completadas en `main` del repositorio**, no solo los holdouts: entrenamiento, tokenización, evaluación, preflight, fallos y reintentos. Los identificadores y artefactos se conservan aunque una ejecución falle. La fecha figura como «—» cuando no se ha recuperado de la API y no debe inferirse.
