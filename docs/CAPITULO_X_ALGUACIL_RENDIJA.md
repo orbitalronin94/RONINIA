@@ -118,7 +118,7 @@ Miré la sábana y la mancha, y pensé que aquel hombre había encontrado la ún
 
 —¿Y la promoción? —pregunté—. ¿Non la promueves?
 
-—Non —dijo—. El alguacil compró la mancha, mas difirió la promoción. Dijo que el olor prueba la honestidad del método, non la mejora del modelo. Y tiene razón. Y por eso la sábana sigue tendida: porque la promoción sigue diferida.
+—Non —dijo—. El alguacil compró la mancha y concedió la promoción por decisión expresa de la casa. Dijo que el olor prueba la honestidad del método, non la mejora del modelo. Y tiene razón. La sábana sigue tendida, mas ya non como emblema de una promoción pendiente: queda como memoria de la risa y de la cautela.
 
 ---
 
@@ -150,7 +150,7 @@ Y el escribano se rio como se ríen los locos cuando alguien les sigue la corrie
 
 > **LOCURA_DE_METODO.** El escribano se describe como loco de método, non de remate. La distinción importa: el loco de remate non tiene método; el de método lo tiene, y por eso es más peligroso.
 
-> **SABANA_NON_EXPLICADA.** El alguacil ve la sábana tendida y el escribano le explica por qué sigue ahí: porque la promoción sigue diferida. La sábana es el emblema de la promoción que non se ha hecho.
+> **SABANA_TENDIDA.** El alguacil ve la sábana tendida. Aunque la promoción experimental ya fue concedida por decisión expresa del proyecto, la sábana permanece como emblema narrativo de la efusión y de la cautela; non acredita mejora semántica.
 
 > **HASH_ILEGIBLE.** El alguacil non sabe leer hashes, y lo dice. Su testimonio non depende de que sepa leerlos. Se declara la ignorancia como parte del testimonio.
 
@@ -194,4 +194,4 @@ vine a ver, y vi lo que había:
 un náufrago con papeles  
 y un papagayo en la balsa.
 
-*Glosa de colocación:* entre los capítulos X y XI. El estribillo «un náufrago con papeles» debe quedar sonando cuando el lector pase al capítulo siguiente, donde el alguacil se dormirá sobre el expediente y soñará con el clérigo cerbatana.
+*Glosa de colocación:* entre los capítulos X y XI. El estribillo «un náufrago con papeles» debe quedar sonando cuando el lector pase al capítulo XI, donde el alguacil se dormirá sobre el expediente y soñará con el clérigo cerbatana.
