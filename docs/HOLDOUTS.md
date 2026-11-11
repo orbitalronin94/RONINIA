@@ -144,7 +144,7 @@ Por fuero se ordena que cada modelo comparezca con su checkpoint, su hash y su p
 
 La voz de esta crónica será satírica y arcaizante, con glosa de malicia quevedesca: habrá memoriales, pregones, provisiones, censores, escribanos, alguaciles de la sintaxis y pleitos entre palabras que no se conocen. Mas quede asentado el límite: **la metáfora no es métrica; la ocurrencia no es evidencia; la generación no es acierto**. Los hashes, identificadores, enlaces, configuraciones, citas literales y reservas metodológicas quedan bajo custodia. Ningún dato será retocado para que luzca más gracioso.
 
-Esta crónica registra cuatro comparecencias principales —5k, 10k, 20k y 30k— además del estado cero. Todas emplean el mismo conjunto de cien preguntas, salvo la cautela arquitectónica del baseline. Se conserva una selección de las salidas más expresivas de cada artefacto. Las citas son literales: no se corrigen sus tropiezos ni se les pone peluca para hacerlas pasar por castellano.
+Esta crónica registra siete comparecencias principales —0, 5k, 10k, 20k, 30k, 40k y 50k—. Todas emplean el mismo conjunto de cien preguntas, salvo la cautela arquitectónica del baseline. Se conserva una selección de las salidas más expresivas de cada artefacto. Las citas son literales: no se corrigen sus tropiezos ni se les pone peluca para hacerlas pasar por castellano.
 
 ---
 
@@ -1167,19 +1167,35 @@ y «Variante de encuadre 4».
 **Mandato final:** el loro no ha de decir que sí por miedo, ni que no por vanidad. Vigilad la homeostasis.
 
 
-## Capítulo VIII — Borrador de apuesta: del loro que aún non ha abierto la boca
+## Capítulo VIII — Apuesta preregistrada para 50k: del loro que aún non ha abierto la boca
 
-Este capítulo se incorpora como **alucinación literaria deliberada del escribano mientras espera el holdout de 50k**. Sus diez porcentajes son apuestas previas, no predicciones calibradas ni resultados. Las frases atribuidas al checkpoint de 50k no existen todavía: el propio capítulo las declara hipótesis sin folio. El documento íntegro, con falsadores, máculas y romance, está en [Capítulo VIII — Borrador de apuesta](CAPITULO_VIII_APUESTA_50K.md).
+Este capítulo se incorpora como **alucinación literaria deliberada del escribano mientras espera el holdout de 50k**. Sus diez porcentajes son apuestas previas, no predicciones calibradas ni resultados. Las frases atribuidas al checkpoint de 50k no existen todavía: el propio capítulo las declara hipótesis sin folio. El documento íntegro, con falsadores, máculas y romance, está en [Capítulo VIII — Apuesta preregistrada para 50k](CAPITULO_VIII_APUESTA_50K.md).
 
 **Fuero de lectura:** no usar estas apuestas para promover el checkpoint, alterar el holdout ni presentar como observada ninguna salida futura. Cuando llegue el artefacto, contrastar cada falsador y publicar aciertos y fallos por igual.
 
 ## Capítulo IX — Del arcano oficio de escribano de loros graciosos
 
-El capítulo IX incorpora el resultado de 50k, el cotejo de las diez apuestas del capítulo VIII y la decisión de promoción experimental. Su romance de la sábana comprada queda como gozne para el capítulo X. La promoción se registra como elección operativa del proyecto; no se presenta como prueba de comprensión ni de mejora semántica. Véase el [texto íntegro del capítulo IX](CAPITULO_IX_ARCANO_ESCRIBANO.md).
+El capítulo IX incorpora el resultado de 50k, el cotejo de las diez apuestas del capítulo VIII y la decisión de promoción experimental. Su romance de la sábana comprada queda como gozne para el capítulo X. La promoción se registra como elección operativa del proyecto; no se presenta como prueba de comprensión ni de mejora semántica. El [capítulo IX completo](CAPITULO_IX_ARCANO_ESCRIBANO.md) contiene el cotejo de las apuestas, el juramento hídrico, el latín macarrónico y la escena de la sábana; aquí se conserva este resumen ejecutivo para que el lector conozca el resultado sin abrir el archivo externo.
 
-**Fuero de lectura:** seis apuestas pasan, tres fallan y una queda probable; la media de longitud no se declara medida hasta calcularla. El artefacto conserva 100 respuestas, y la cadena de entrenamiento acredita la continuación exacta de 40k a 50k. El BPB sigue pendiente.
+**Fuero de lectura:** seis apuestas pasan, tres fallan y una queda probable; la media de longitud no se declara medida hasta calcularla. El artefacto conserva 100 respuestas, y la cadena de entrenamiento acredita la continuación exacta de 40k a 50k. El checkpoint fue promovido por decisión expresa del proyecto, no por una mejora semántica demostrada. El BPB sigue pendiente.
+
+## Capítulo X — Del alguacil que entró sin llamar y vio lo que non debía
+
+El [capítulo X completo](CAPITULO_X_ALGUACIL_RENDIJA.md) es una continuación narrativa del expediente de 50k: el alguacil entra en la escribanía, encuentra al escribano conversando con el papagayo y examina la distancia entre la promoción administrativa y la calidad que el holdout no ha demostrado. No incorpora nuevo entrenamiento, evaluación, métrica ni artefacto.
+
+**Gozne:** la sábana comprada del capítulo IX queda tendida; el alguacil entra a mirar qué significa haber concedido la promoción sin convertirla en victoria.  
+**Mácula:** narrativa pura, sin nueva probanza. La memoria del alguacil no añade evidencia al checkpoint.
+
+## Capítulo XI — Del sueño que tuvo el alguacil, y de la visión del clérigo cerbatana
+
+El [capítulo XI completo](CAPITULO_XI_SUENO_CLERIGO_CERBATANA.md) lleva al alguacil desde el expediente de 50k hasta un sueño de escribanía, clérigo cerbatana y bestia famélica. Se declara desde su encabezamiento que no hay checkpoint, run ni holdout: el sueño pertenece al libro literario, no al registro experimental.
+
+**Gozne:** donde el capítulo X deja al alguacil despierto ante el papagayo, el XI lo hace dormirse sobre el expediente y despertar dentro de su propia sátira.  
+**Mácula:** sueño sin hash ni artefacto; no se computa como salida del modelo ni como resultado.
 
 ## Historial de ejecuciones
+
+*Confesión del registro:* la tabla no refleja las comparecencias intermedias porque sus runs no llevan «holdout» en el nombre. El índice completo de comparecencias es el BARE, no esta tabla. Se conserva como testimonio del mecanismo de registro, no como registro exhaustivo del contenido.
 
 | Fecha | Evaluación | Run ID | Resultado | Ejecución | Artefactos | Commit |
 |---|---|---:|---|---|---|---|
@@ -1192,7 +1208,7 @@ El capítulo IX incorpora el resultado de 50k, el cotejo de las diez apuestas de
 
 ## Del mecanismo del registro, para que nadie culpe al escribano
 
-El workflow `.github/workflows/update-holdout-registry.yml` escucha los eventos `workflow_run: completed`. Solo ejecuta el registro si el nombre de la ejecución contiene `holdout`. Consulta la API de GitHub para recuperar los artefactos de esa ejecución y actualiza esta tabla en `main`.
+El workflow `.github/workflows/update-holdout-registry.yml` escucha los eventos `workflow_run: completed`. Solo ejecuta el registro si el nombre de la ejecución contiene `holdout`. Por ello no aparecen aquí las ejecuciones de entrenamiento/evaluación intermedias de 5k, 10k, 20k, 30k y 40k, cuyos nombres no satisfacen ese filtro. El índice completo de comparecencias y su cadena de custodia están en el BARE, más arriba; esta tabla conserva únicamente las ejecuciones admitidas por el mecanismo automático. Consulta el BARE para el registro del contenido y esta tabla para el testimonio del listener.
 
 El actualizador no descarga ni ejecuta los artefactos ni hace checkout del código de la ejecución que acaba de terminar. Para que una evaluación futura aparezca aquí automáticamente, el nombre del workflow debe incluir la palabra `holdout` (por ejemplo, `RONIN-10M — checkpoint holdout`).
 
