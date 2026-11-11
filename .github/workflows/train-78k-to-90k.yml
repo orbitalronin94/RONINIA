@@ -1,4 +1,4 @@
-name: RONIN-10M — continue 78k to 90k (+12k)
+name: RONIN-10M — continue 78k to 90k (+12k, verified parent)
 
 on:
   push:
