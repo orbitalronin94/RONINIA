@@ -1,0 +1,134 @@
+name: RONIN-10M — 50k random 100 prompts (for laughs)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'benchmarks/ronin-random-100-v1.jsonl'
+      - '.github/workflows/random-holdout-ronin-10m-50000.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+concurrency:
+  group: roninia-random-holdout-50000
+  cancel-in-progress: false
+
+jobs:
+  random-holdout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    env:
+      TRAIN_RUN_ID: "43009405531"
+      TOKENIZER_RUN_ID: "42849436025"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify official successful 50k training run
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/RONINIA/actions/runs/$TRAIN_RUN_ID")"
+          test "$(jq -r .status <<<"$run")" = "completed"
+          test "$(jq -r .conclusion <<<"$run")" = "success"
+
+      - name: Download immutable official 50k checkpoint chain
+        uses: actions/download-artifact@v4
+        with:
+          name: ronin-10m-chain-50k-${{ env.TRAIN_RUN_ID }}
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/RONINIA
+          run-id: ${{ env.TRAIN_RUN_ID }}
+          path: trained
+
+      - name: Install CPU inference dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
+          python -m pip install tokenizers numpy
+
+      - name: Verify exact official 50k checkpoint and SHA-256
+        id: checkpoint
+        run: |
+          set -euo pipefail
+          checkpoint="$(find trained -type f -name 'checkpoint-50000.pt' -size +0c -print -quit)"
+          test -n "$checkpoint"
+          sums="$(find trained -type f -name SHA256SUMS -print -quit)"
+          test -n "$sums"
+          (cd "$(dirname "$sums")" && sha256sum -c SHA256SUMS)
+          actual="$(sha256sum "$checkpoint" | cut -d' ' -f1)"
+          expected="f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966"
+          test "$actual" = "$expected"
+          python - "$checkpoint" <<'PY'
+          import sys, torch
+          p=torch.load(sys.argv[1], map_location="cpu", weights_only=False)
+          assert int(p.get("completed_steps", -1)) == 50000
+          print("Verified official checkpoint at 50,000 steps")
+          PY
+          echo "path=$checkpoint" >> "$GITHUB_OUTPUT"
+          echo "Verified checkpoint SHA-256: $actual"
+
+      - name: Download exact tokenizer used by training
+        uses: actions/download-artifact@v4
+        with:
+          name: roninia-tokenizer-8k-0f83e1bf4ca6aa7c08cb412d3bf48a5a7de961d012fd4abfe6f648e7ed029617
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/RONINIA
+          run-id: ${{ env.TOKENIZER_RUN_ID }}
+          path: tokenizer
+
+      - name: Verify 100 independent random prompts
+        run: |
+          set -euo pipefail
+          test "$(grep -cve '^$' benchmarks/ronin-random-100-v1.jsonl)" -eq 100
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          rows=[json.loads(x) for x in Path("benchmarks/ronin-random-100-v1.jsonl").read_text().splitlines() if x.strip()]
+          assert len(rows)==100
+          assert len({r["id"] for r in rows})==100
+          assert all(r.get("split")=="inference_only" and r.get("question") for r in rows)
+          print("Verified 100 unique, inference-only random prompts")
+          PY
+
+      - name: Ask the official 50k parrot all 100 random things
+        env:
+          OMP_NUM_THREADS: "2"
+          MKL_NUM_THREADS: "2"
+          OPENBLAS_NUM_THREADS: "1"
+        run: |
+          python scripts/checkpoint_holdout.py \
+            --checkpoint "${{ steps.checkpoint.outputs.path }}" \
+            --tokenizer tokenizer/tokenizer.json \
+            --holdout benchmarks/ronin-random-100-v1.jsonl \
+            --output-dir runs/random-50000-holdout \
+            --expected-steps 50000 \
+            --threads 2 --max-new-tokens 64 --max-new-bytes 256
+
+      - name: Verify run identity and output count
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path("runs/random-50000-holdout/checkpoint-50000-holdout-100.json")
+          r=json.loads(p.read_text())
+          assert r["completed_steps"]==50000
+          assert r["checkpoint_sha256"]=="f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966"
+          assert r["holdout_count"]==100
+          assert len(r["results"])==100
+          print("100 answers captured; informal sample, not a scored benchmark.")
+          print("Checkpoint SHA-256:",r["checkpoint_sha256"])
+          print("Prompt-set SHA-256:",r["holdout_sha256"])
+          PY
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ronin-10m-random-holdout-50000-100-${{ github.run_id }}
+          path: |
+            runs/random-50000-holdout/
+            benchmarks/ronin-random-100-v1.jsonl
+          if-no-files-found: error
+          retention-days: 90
