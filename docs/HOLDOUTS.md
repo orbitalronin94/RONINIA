@@ -42,34 +42,67 @@ El modelo sindicalista no fue un fracaso inútil. Fue el primer personaje que no
 
 **Checkpoint:** 10.000 pasos acumulados  
 **Run de entrenamiento:** [42902793379](https://github.com/orbitalronin94/RONINIA/actions/runs/42902793379)  
-**SHA-256 del checkpoint:** `b82df8b5d06171a9e6db6157d4036854ea445a84f8462b731c4d6d9892e3e172`  
-**Holdout:** 100 preguntas  
+**SHA-256 del checkpoint:** b82df8b5d06171a9e6db6157d4036854ea445a84f8462b731c4d6d9892e3e172  
+**Holdout:** las mismas 100 preguntas del ensayo de 5.000 pasos  
 **Run de evaluación:** [42970549370](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370)  
 **Artefacto:** [holdout completo](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652)  
-**SHA-256 del holdout:** `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`
+**SHA-256 del holdout:** 3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535
 
-El segundo personaje ya no responde a casi todo con «el patrón». En las 100 preguntas aparecen más registros, expresiones y formas de salida. La diferencia más importante respecto al checkpoint de 5.000 pasos es esa ampliación de diversidad: el modelo deja de refugiarse de manera casi exclusiva en una única fórmula.
+El segundo capítulo empieza con una ausencia. En el primer holdout, el modelo encontraba una salida casi universal: «El patrón». No importaba demasiado si la pregunta trataba de lógica, matemáticas o conocimiento general; la frase volvía a ocupar el centro de la respuesta. A los 5.000 pasos, esa expresión aparecía en 96 de las 100 salidas.
 
-### Leer el corpus antes de juzgar la salida
+A los 10.000 pasos, ya no aparece en ninguna.
 
-RONIN-10M se entrena también con un lexicón de esperpento y expresiones deliberadamente evasivas. Marcadores como **NH** y fórmulas como «ni puta idea» pertenecen a esa distribución intencional. No deben clasificarse automáticamente como errores, alucinaciones o incapacidad de responder: su función depende del contexto y del registro que el corpus pretende enseñar.
+No es todavía el nacimiento de un razonador solvente. Es algo más modesto, pero también más interesante para esta crónica: el modelo ha dejado de apoyarse en aquella única muletilla y ha empezado a recorrer otros caminos del corpus. Donde antes repetía «El patrón», ahora aparecen fragmentos de explicación, referencias al contexto, fórmulas de diagnóstico, expresiones del esperpento y evasivas explícitas. El personaje ha cambiado de voz, aunque todavía no domine del todo lo que quiere decir.
 
-La evaluación debe distinguir entre:
-- **Rasgos estilísticos intencionales:** lexicón del esperpento, marcadores NH, evasivas deliberadas y cambios de registro.
-- **Adaptación a la pregunta:** si la salida selecciona un registro pertinente para la pregunta y el dominio.
-- **Fallos de generación:** bucles degenerativos, fragmentos truncados o combinaciones sin coherencia, que sí requieren seguimiento.
+En algunas respuestas asoma una voz casi sentenciosa: «No confundas autoridad con demostración». En otras, el texto se deshace en repeticiones alrededor de «el impacto». Y en otras aparece una salida que forma parte deliberada del registro aprendido: «ni puta idea». La transformación tiene algo de esperpento: ya no es el mismo estribillo repetido cien veces, sino un repertorio más amplio de voces que a veces encajan con la pregunta y otras veces se cruzan, se interrumpen o se quedan a medio construir.
 
-Esta separación evita penalizar al modelo por haber aprendido precisamente una parte del estilo que queríamos incorporar.
+### La diferencia que sí podemos medir
+
+La comparación de los dos artefactos permite describir el cambio sin convertirlo en una impresión vaga:
+
+| Señal observada | 5.000 pasos | 10.000 pasos |
+|---|---:|---:|
+| Respuestas que contienen «El patrón» | 96/100 | 0/100 |
+| Respuestas que contienen «ni puta idea» | 0/100 | 16/100 |
+| Respuestas que contienen «impacto» | 0/100 | 19/100 |
+| Respuestas no vacías | 100/100 | 100/100 |
+| Latencia media por respuesta | 0,217 s | 0,240 s |
+
+Estas frecuencias describen apariciones literales, no una clasificación semántica. No significan que 16 respuestas sean buenas por incluir una evasiva, ni que las 19 menciones de «impacto» sean pertinentes. Sí muestran que la distribución superficial de las respuestas ha cambiado de manera verificable: la fórmula dominante del primer checkpoint desaparece y otras familias de expresiones pasan a ocupar espacio.
+
+La latencia media aumenta ligeramente, de unos 0,217 a 0,240 segundos por pregunta. En este ensayo, por tanto, la diversificación observada no vino acompañada de una mejora de velocidad. La diferencia es pequeña y no debe confundirse con una medición exhaustiva de rendimiento.
+
+### Leer el esperpento sin confundirlo con un fallo
+
+Hay una decisión de interpretación que importa tanto como los números. RONIN-10M se entrena con un lexicón que incluye esperpento, expresiones evasivas y marcadores como NH. Esos elementos no son errores por definición: forman parte del material que se quiere incorporar al estilo del modelo.
+
+La respuesta «ni puta idea», por ejemplo, puede ser una evasiva deliberada y reconocible dentro de ese registro. No debe premiarse ni castigarse de forma automática por su mera presencia. La pregunta relevante es si el modelo sabe cuándo esa salida corresponde, si puede sostener después una explicación y si distingue una incertidumbre legítima de una pregunta que sí puede resolver.
+
+Lo mismo ocurre con NH y con el lenguaje de diagnóstico. Su aparición demuestra que ciertos rasgos del corpus están llegando a la generación; no demuestra por sí sola que el modelo comprenda su función. Hay que separar tres planos:
+
+- **Identidad estilística:** expresiones del esperpento, marcadores NH, evasivas y cambios de registro que pertenecen al corpus.
+- **Adecuación:** que el registro elegido responda a la pregunta concreta y no sea una inserción automática.
+- **Coherencia y resolución:** que la respuesta mantenga una idea, complete el razonamiento y llegue a una conclusión defendible.
+
+En el checkpoint de 10.000 pasos conviven señales de los tres planos. Hay más variedad verbal que en el primer capítulo, pero también persisten fragmentos truncados, repeticiones locales y respuestas que no resuelven el problema planteado. La desaparición de «El patrón» es una transformación observable; no es todavía una prueba de competencia general.
+
+### Lo que revela el segundo personaje
+
+El modelo sindicalista tenía una obsesión: volver al patrón. El personaje de los 10.000 pasos es menos uniforme y más difícil de resumir. A veces parece intentar explicar; a veces invoca el contexto; a veces se refugia en una evasiva que el propio corpus le ha enseñado; y a veces mezcla esas voces sin conseguir ordenarlas.
+
+Ese cambio importa porque indica que el entrenamiento no se limitó a reforzar la misma respuesta dominante. El espacio de generación se ha movido. Pero el nuevo repertorio todavía necesita organización: no basta con disponer de más expresiones, hay que aprender a escogerlas, conectarlas y detenerse cuando la respuesta está completa.
 
 ### Resultado técnico
 
-El workflow generó las 100 respuestas y verificó el checkpoint, el tokenizer y el protocolo. La generación utilizó greedy argmax, dos hilos, un máximo de 32 tokens nuevos y no utilizó RAG ni KV cache. El tiempo total registrado fue de aproximadamente 24,02 segundos, con una media de 0,240 segundos por respuesta.
+El holdout contiene 100 preguntas y conserva el mismo hash de conjunto que el registro del checkpoint de 5.000 pasos. La generación se realizó con greedy argmax, máximo de 32 tokens nuevos, dos hilos, sin KV cache y sin RAG. El checkpoint contiene 9.757.440 parámetros y utiliza el tokenizer cuyo SHA-256 queda registrado en el manifiesto.
 
-No se calculó una puntuación automática de calidad semántica. Por tanto, la promoción no se presenta como una cifra de exactitud ni como una demostración de razonamiento general. Se basa en la mejora cualitativa observada en diversidad de salida frente al comportamiento excesivamente concentrado de los 5.000 pasos, conservando el artefacto y toda su procedencia.
+El tiempo total de generación fue de aproximadamente 24,02 segundos, con una media de 0,240 segundos por respuesta. Las 100 salidas fueron no vacías. No se calculó una puntuación automática de calidad semántica ni una tasa validada de aciertos; por ello, este capítulo no atribuye al checkpoint una mejora de exactitud que el experimento no midió.
 
 ### Decisión
 
-El checkpoint de 10.000 pasos queda seleccionado como **modelo experimental activo** de RONIN-10M. Se conserva su SHA-256, el run de entrenamiento, el tokenizer y el holdout asociado para que cualquier continuación pueda partir exactamente de este estado. La selección no borra el baseline de 5.000 pasos ni convierte una observación cualitativa en una puntuación que no hemos medido.
+El checkpoint de 10.000 pasos queda registrado como **modelo experimental activo** de RONIN-10M. Se conserva su SHA-256, el run de entrenamiento, el tokenizer y el artefacto de holdout. La decisión reconoce un cambio cualitativo concreto frente a los 5.000 pasos: la respuesta deja de girar alrededor de «El patrón» y empieza a expresar una variedad mayor de rasgos del corpus.
+
+La siguiente iteración tendrá que responder a una pregunta más exigente: si el modelo puede convertir ese repertorio en respuestas pertinentes y coherentes, manteniendo la identidad estilística que se quiere enseñar. El segundo capítulo no cuenta todavía la historia de un modelo que ya sabe; cuenta la de uno que ha dejado de repetir siempre lo mismo y empieza, con resultados desiguales, a buscar otra voz.
 
 ## Historial de ejecuciones
 
