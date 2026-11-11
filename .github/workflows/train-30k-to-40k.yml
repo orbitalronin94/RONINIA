@@ -1,10 +1,6 @@
 name: RONIN-10M — continue 30k to 40k (reuse exact checkpoint and token cache)
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/train-30k-to-40k.yml"
   workflow_dispatch:
 
 permissions:
