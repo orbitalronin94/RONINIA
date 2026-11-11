@@ -18,6 +18,14 @@ El holdout de 50k registra 100/100 respuestas recuperadas. El cotejo de las diez
 
 La crónica del hito y sus dos continuaciones narrativas están en [Capítulo IX — Del arcano oficio de amanuense de loros graciosos](docs/CAPITULO_IX_ARCANO_ESCRIBANO.md), [Capítulo X — Del corchete que entró sin llamar](docs/CAPITULO_X_ALGUACIL_RENDIJA.md) y [Capítulo XI — Del sueño del oficial y el clérigo cerbatana](docs/CAPITULO_XI_SUENO_CLERIGO_CERBATANA.md). Los capítulos X y XI son narrativa pura: no añaden runs, métricas ni evidencia de capacidad.
 
+
+
+## Hito de 100.000 pasos
+
+El checkpoint `checkpoint-100000.pt` quedó evaluado mediante el [holdout oficial de 100 preguntas](https://github.com/orbitalronin94/RONINIA/actions/runs/43112010343). El artefacto de respuestas es [13897325999](https://github.com/orbitalronin94/RONINIA/actions/runs/43112010343/artifacts/13897325999). El manifiesto verifica 100.000 pasos y 9.757.440 parámetros; el JSON contiene 100 registros, 99 respuestas no vacías y una vacía. No se ha calculado una puntuación semántica, por lo que no se presentan esos registros como aciertos.
+
+La crónica, con las citas cotejadas y la separación explícita entre evidencia y ficción, está en [Capítulo XX — De la fiesta del cien mil](docs/HOLDOUTS.md#capítulo-xx--de-la-fiesta-del-cien-mil-del-alguacil-que-dejó-de-pedir-el-hash-del-reo-que-se-chivó-y-de-la-sábana-que-quedó-sobre-el-jergón).
+
 ## Diseño: RONIN-10M
 
 | Elemento | Configuración |
