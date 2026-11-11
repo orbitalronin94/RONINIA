@@ -3,17 +3,17 @@
   "status": "promoted_experimental",
   "promoted_at": "2026-11-11",
   "training": {
-    "run_id": 42973299789,
-    "run_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42973299789",
-    "cumulative_steps": 20000,
+    "run_id": 42984964609,
+    "run_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42984964609",
+    "cumulative_steps": 30000,
     "steps_this_run": 10000,
-    "parent_checkpoint_sha256": "b82df8b5d06171a9e6db6157d4036854ea445a84f8462b731c4d6d9892e3e172",
-    "checkpoint": "checkpoint-20000.pt",
-    "checkpoint_sha256": "53528c3002ba07fe493815b9bfa4bd69bdc08cf985f77a4e59958ee2b3344cc4",
-    "artifact_id": 13838480475,
-    "artifact_name": "ronin-10m-chain-20k-42973299789",
-    "artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42973299789#artifacts",
-    "artifact_sha256": "642b04c5c4d24626960beedfe2d500d566be1811559b4e309a73a172312d24d7",
+    "parent_checkpoint_sha256": "53528c3002ba07fe493815b9bfa4bd69bdc08cf985f77a4e59958ee2b3344cc4",
+    "checkpoint": "checkpoint-30000.pt",
+    "checkpoint_sha256": "140230697a4df69f43c2cc4f6dc95ba2cc596b095532d3e171c486891d26bc4a",
+    "artifact_id": 13841428976,
+    "artifact_name": "ronin-10m-chain-30k-42984964609",
+    "artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42984964609#artifacts",
+    "artifact_sha256": "c4267a8e2c2d6e94e55e9f3ea95004d6c75014df49761791cf05451b80d624b0",
     "parameters": 9757440,
     "config": {
       "vocab_size": 8192,
@@ -35,12 +35,12 @@
     "sha256": "605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4"
   },
   "evaluation": {
-    "run_id": 42982933515,
-    "run_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515",
-    "artifact_id": 13838855379,
-    "artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515#artifacts",
-    "artifact_name": "ronin-10m-checkpoint-20000-holdout-100-42982933515",
-    "artifact_sha256": "53e1fcb943b19c9e45cb5d5a8278226d9fe3d8db1d6ce5f1de4306aed7f83f2a",
+    "run_id": 42994967183,
+    "run_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183",
+    "artifact_id": 13842918120,
+    "artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183#artifacts",
+    "artifact_name": "ronin-10m-checkpoint-30000-holdout-100-42994967183",
+    "artifact_sha256": "a844ec90d7c68e75c1c27771effc3356cb8a9623a2193b1527d62e0c303f297a",
     "questions": 100,
     "holdout_sha256": "3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535",
     "generation": "greedy_argmax",
@@ -52,11 +52,9 @@
     "automated_quality_score": null
   },
   "interpretation": {
-    "observed_change_from_10000_steps": "The previous literal 'impacto' loop is no longer dominant; 'El patrón' remains absent; 'ni puta idea' appears less often and is frequently embedded in longer diagnostic templates. 'Su propuesta', 'Su función es X, no Y', and evidence/negative-control phrasing recur. The phrase family around a transparent umbrella sleeping under a staircase appears three times in the reviewed outputs.",
+    "observed_change_from_20000_steps": "30k checkpoint completed all 100 generations under the same fixed holdout and inference protocol. Semantic quality has not been automatically scored; review answers before interpreting gains.",
     "qualitative_findings": [
-      "NEGATIVE_CONTROL_LEAKAGE: memorized negative-control/rubric language is emitted out of context; this is not yet evidence of calibrated restraint.",
-      "FUNCTIONAL_DEFINITION_MOLD: the 'Su función es X, no Y' template recurs without demonstrating semantically correct slot filling.",
-      "POETIC_EMERGENCE: the umbrella/staircase image is a candidate surreal recombination; corpus provenance and tokenizer segmentation have not yet been established."
+      "HOLDOUT_PROTOCOL_VERIFIED: exact checkpoint, tokenizer, benchmark SHA and 100 generations verified."
     ],
     "caveat": "Promotion selects this experimental checkpoint and preserves its immutable lineage. The 100-question holdout verifies generation and protocol identity, not semantic accuracy, reasoning, calibrated abstention, or general capability. No automated quality score is claimed."
   }
