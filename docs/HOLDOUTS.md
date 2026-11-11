@@ -162,6 +162,64 @@ El checkpoint de 10.000 pasos queda registrado como **modelo experimental activo
 
 La siguiente iteración tendrá que responder a una pregunta más exigente: si el modelo puede convertir ese repertorio en respuestas pertinentes y coherentes, manteniendo la identidad estilística que se quiere enseñar. Para ello se exigirán BPB sobre validación fija, desglose completo de abstenciones y análisis específico de la fuga «el impacto» antes de llamar progreso a una rotación de expresiones. El segundo capítulo no cuenta todavía la historia de un modelo que ya sabe; cuenta la de uno que ha dejado de repetir siempre lo mismo y empieza, con resultados desiguales, a buscar otra voz.
 
+
+## Vitrina III — El BPE del «-eishon»: gramática sin diccionario
+
+**Fenómeno:** recombinación subléxica con apariencia de productividad morfológica  
+**Material observado:** «bugar», «ridación», «mentirable» y «el mentirable la sago»  
+**Checkpoint de referencia:** RONIN-10M en continuación desde 10.000 pasos  
+**SHA-256 del padre:** `b82df8b5d06171a9e6db6157d4036854ea445a84f8462b731c4d6d9892e3e172`  
+**Estado:** observación cualitativa; hipótesis pendiente de experimento controlado
+
+### La escena
+
+Un hablante de español puede decir «esto es muy bugeable»: toma la raíz inglesa *bug* y le añade el sufijo español `-eable` (o la adaptación coloquial `-able`). El resultado no necesita estar en un diccionario para que otro hablante lo interprete. La construcción aprovecha una pauta productiva del español y la aplica a una raíz extranjera. Hay intención comunicativa y el contexto ayuda a recuperar el significado.
+
+RONIN produce formas como «bugar», «ridación» o «mentirable». También puede encadenarlas en frases como «el mentirable la sago». La superficie recuerda a una palabra española: hay raíces reconocibles, terminaciones frecuentes y una sintaxis que parece querer arrancar. Pero la forma plausible no garantiza que exista un significado estable detrás.
+
+La ironía es precisa: el hablante que inventa «bugeable» puede estar mostrando que domina una regla morfológica aunque desconozca parte del léxico inglés. El modelo, en cambio, puede estar recombinando fragmentos frecuentes del vocabulario BPE de 8k sin haber abstraído una regla gramatical ni asociado la palabra resultante a un concepto. No debemos atribuirle comprensión morfológica solo porque el resultado nos suene bien formado.
+
+### La distinción
+
+Conviene separar tres niveles:
+
+1. **Invención interpretable — «bugeable».** Una forma nueva construida con una pauta productiva; el contexto y la intención permiten entenderla.
+2. **Forma plausible — «mentirable».** Una secuencia que parece compatible con la morfología del español, pero cuyo significado no está establecido.
+3. **Enunciado sin semántica estable — «el mentirable la sago».** Los fragmentos parecen lingüísticos, pero no forman una proposición cuya interpretación pueda mantenerse y verificarse.
+
+En hablantes bilingües se habla de *transferencia morfológica negativa* cuando se aplican patrones de una lengua a otra y se producen formas no convencionales. Es una analogía útil para la escena del «-eishon», pero no describe literalmente el mecanismo del modelo. Para RONIN, la etiqueta provisional más prudente es **recombinación subléxica con apariencia de productividad morfológica**: el BPE ofrece piezas y el modelo aprende continuaciones estadísticas. Que esas piezas coincidan con raíces y sufijos no prueba que haya aprendido su función lingüística.
+
+La fórmula de esta vitrina es: **la forma de la lengua sin la sustancia de la lengua**.
+
+### Qué sabemos y qué no
+
+**Observado:** el modelo emite formas novedosas o deformadas que recuerdan a construcciones morfológicas del español. Son muestras cualitativas del comportamiento de generación.
+
+**Hipótesis:** algunas podrían surgir de la recombinación de fragmentos subléxicos frecuentes. También es posible que parte de la regularidad proceda de patrones de palabras completas, contexto o memorización del corpus. Sin análisis de tokens y controles no podemos adjudicar la causa.
+
+**No demostrado:** que RONIN haya aprendido reglas morfológicas abstractas; que comprenda el significado de las formas inventadas; o que «mentirable» sea una palabra semánticamente vacía para cualquier hablante en cualquier contexto. La interpretación de una palabra inventada depende también del contexto y del lector.
+
+### El experimento que falta
+
+Para distinguir productividad de coincidencia estadística, la siguiente prueba deberá fijar antes del análisis un conjunto de raíces conocidas, raíces inventadas y raíces reservadas que no aparezcan en el corpus de entrenamiento. Se combinarán con sufijos productivos y no productivos, y se evaluarán al menos cuatro dimensiones:
+
+- **Productividad:** ¿forma palabras plausibles con raíces no vistas, o solo repite combinaciones del corpus?
+- **Sensibilidad morfológica:** ¿elige sufijos distintos según la categoría y el contexto, o los añade indiscriminadamente?
+- **Estabilidad semántica:** si se le pide definir una palabra inventada, ¿mantiene una interpretación coherente al usarla en varios contextos?
+- **Calibración:** cuando no puede justificar el significado, ¿reconoce que la forma la ha inventado y que no sabe qué significa?
+
+El control debe incluir palabras reales, pseudopalabras construidas por humanos y recombinaciones aleatorias de fragmentos BPE. Hay que guardar el checkpoint exacto, tokenizer, tokens emitidos, prompts, configuración de generación y respuestas completas. La evaluación semántica debe hacerse a ciegas con una rúbrica fijada de antemano; no basta con que al evaluador le haga gracia la palabra.
+
+### Por qué entra en el museo
+
+No queremos borrar «mentirable» ni corregir el esperpento hasta convertirlo en prosa neutra. El humor y la invención verbal forman parte del objetivo del proyecto. La pregunta es si el modelo puede distinguir entre una invención deliberada, una palabra convencional y una secuencia que solo parece lenguaje.
+
+La aspiración no es quitarle el ridículo: es que pueda reconocer cuándo está inventando, cuándo está jugando con la lengua y cuándo no tiene ni idea. Si algún día responde «me he inventado “mentirable”; no sé qué significa», habrá añadido algo más valioso que otro sufijo: una forma de honestidad sobre sus propios límites.
+
+**Koan.** Un español llegó a Londres sin saber inglés. Le preguntaron qué tal el viaje. Dijo: «Muy good, pero el tube es muy complicateishon». Le entendieron. Volvió a España y contó que sabía inglés. Le preguntaron que tradujera «yo tengo un bug». Dijo: «I have a bugueishon». Le preguntaron qué era un bug. Contestó: «Ni puta idea, la verdad».
+
+**Vigilad la homeostasis.**
+
 ## Historial de ejecuciones
 
 | Fecha | Evaluación | Run ID | Resultado | Ejecución | Artefactos | Commit |
