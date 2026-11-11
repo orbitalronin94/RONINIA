@@ -1,10 +1,6 @@
 name: RONIN-10M — official 100-prompt holdout at 54k
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/holdout-ronin-10m-54000-100.yml'
   workflow_dispatch:
 
 permissions:
