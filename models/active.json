@@ -8,6 +8,13 @@
     "cumulative_steps": 10000,
     "checkpoint": "checkpoint-10000.pt",
     "checkpoint_sha256": "b82df8b5d06171a9e6db6157d4036854ea445a84f8462b731c4d6d9892e3e172",
+    "artifact_id": 13805344020,
+    "artifact_name": "ronin-10m-checkpoints-42902793379",
+    "artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42902793379/artifacts/13805344020",
+    "artifact_sha256": "0f97e0bd6254e505f80090f1b153223821e7cb337d39e56f20c3cb5657469d84",
+    "lineage_artifact_id": 13805289091,
+    "lineage_artifact_name": "ronin-10m-chain-42902793379",
+    "lineage_artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42902793379/artifacts/13805289091",
     "parameters": 9757440,
     "config": {
       "vocab_size": 8192,
