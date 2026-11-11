@@ -50,6 +50,27 @@
 | 10.000 | [42970549370](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370) | [13832434652](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652) | `checkpoint-10000-holdout-100.json` | `b82df8b5d06171a9e6db6157d4036854ea445a84f8462b731c4d6d9892e3e172` |
 | 20.000 | [42982933515](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515) | [13838855379](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515/artifacts/13838855379) | `checkpoint-20000-holdout-100.json` | `53528c3002ba07fe493815b9bfa4bd69bdc08cf985f77a4e59958ee2b3344cc4` |
 | 30.000 | [42994967183](https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183) | [13842918120](https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183/artifacts/13842918120) | `checkpoint-30000-holdout-100.json` | `140230697a4df69f43c2cc4f6dc95ba2cc596b095532d3e171c486891d26bc4a` |
+| 40.000 | [43006818556](https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556) | [13847804015](https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556/artifacts/13847804015) | `checkpoint-40000-holdout-100.json` | `9da6ea9b294665213114858b90f44168d940c36fb54cdb4612186a896bda7698` |
+
+### Linaje íntegro del checkpoint de 40.000 pasos
+
+La cadena no se limita al ZIP de respuestas. El checkpoint activo procede de una continuación exacta del artefacto de 30k; se deja aquí el vínculo entre ejecución, padre, caché, peso resultante y evaluación.
+
+| Eslabón | Identificador y prueba |
+|---|---|
+| Código de entrenamiento | Commit `1108c6fbef201b2492193067f8ddd03a5c1108d2` en [run 42994415440](https://github.com/orbitalronin94/RONINIA/actions/runs/42994415440) |
+| Ejecución de entrenamiento | [42994415440](https://github.com/orbitalronin94/RONINIA/actions/runs/42994415440), job `130434799195`, conclusión `success` |
+| Padre inmediato | [Run 30k: 42984964609](https://github.com/orbitalronin94/RONINIA/actions/runs/42984964609); archivo `checkpoint-30000.pt`; SHA-256 `140230697a4df69f43c2cc4f6dc95ba2cc596b095532d3e171c486891d26bc4a` |
+| Artefacto padre descargado | [13841428976 — ronin-10m-chain-30k-42984964609](https://github.com/orbitalronin94/RONINIA/actions/runs/42984964609/artifacts/13841428976); el log registra descarga completa y digest verificado `c4267a8e2c2d6e94e55e9f3ea95004d6c75014df49761791cf05451b80d624b0` |
+| Caché de tokens reutilizada | Run [42890884432](https://github.com/orbitalronin94/RONINIA/actions/runs/42890884432); el manifiesto se descargó y verificó. No se retokenizó el corpus |
+| Trabajo añadido | 10.000 pasos; acumulado final 40.000; checkpoints cada 1.000 pasos |
+| Configuración | contexto 256; 2 hilos; batch 4; learning rate 0,0001; 8 batches de evaluación; tokenización reutilizada |
+| Checkpoint resultante | `checkpoint-40000.pt`; SHA-256 `9da6ea9b294665213114858b90f44168d940c36fb54cdb4612186a896bda7698` |
+| Artefacto de checkpoints | [13848976223 — ronin-10m-checkpoints-40k-42994415440](https://github.com/orbitalronin94/RONINIA/actions/runs/42994415440/artifacts/13848976223); digest ZIP SHA-256 `dd87fd64635786e9b5715f366b7a475b0a7d9814fd881688e3dd28f5617c3a49` |
+| Artefacto de cadena y recuperación | [13848916129 — ronin-10m-chain-40k-42994415440](https://github.com/orbitalronin94/RONINIA/actions/runs/42994415440/artifacts/13848916129); digest ZIP SHA-256 `a7cf13030c2e1390ed2bc9198c9de9acd2048a5dd70f3a1b47fbfa4a79107d6f` |
+| Evaluación del checkpoint | [Run 43006818556](https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556); [artefacto 13847804015](https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556/artifacts/13847804015); digest ZIP SHA-256 `6d3d4f7c1bf0525472f600c9edf202604e915d82d24e0622d5abf5931ce9d1e1` |
+
+**Distinción de huellas.** El SHA-256 del checkpoint identifica los pesos `.pt`; los tres digests de artefacto identifican ZIP distintos. No son intercambiables. El log del entrenamiento acredita que se descargó el padre, se verificó su hash, se reutilizó la caché, se alcanzó exactamente el paso 40.000 y se escribió `lineage.json`. La cadena de custodia del checkpoint no demuestra calidad semántica.
 
 **Identidad común:** holdout SHA-256 `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`; tokenizer SHA-256 `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`. El baseline difiere en contexto y parámetros, como se advierte en el prólogo.
 
