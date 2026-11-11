@@ -55,7 +55,7 @@
 - [Capítulo XVI — Del libro de apuestas, de la cólera del escribano y del loro que aún non ha comparecido](#capítulo-xvi--del-libro-de-apuestas-de-la-cólera-del-escribano-y-del-loro-que-aún-non-ha-comparecido)
 - [Capítulo XVII — Del loro que respondió cien veces](#capítulo-xvii--del-loro-que-respondió-cien-veces-del-escribano-que-cobró-en-vergüenza-y-de-la-apuesta-que-non-pudo-pagarse)
 - [Capítulo XVIII — De la escribanía a deshoras](#capítulo-xviii--de-la-escribanía-a-deshoras-del-loro-que-habló-sin-pregunta-y-del-hash-que-non-pudo-darse)
-- [Capítulo XIX — De la paz sin hash, del loro disecado y de la única vez que el alguacil dijo «ni puta idea»](#capítulo-xix--de-la-paz-sin-hash-del-loro-disecado-y-de-la-única-vez-que-el-alguacil-dijo-ni-puta-idea)
+- [Capítulo XIX — De la paz sin hash, del retrato arañado y de la única vez que el alguacil dijo «ni puta idea»](#capítulo-xix--de-la-paz-sin-hash-del-retrato-arañado-y-de-la-única-vez-que-el-alguacil-dijo-ni-puta-idea)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
@@ -3841,7 +3841,7 @@ Ninguno respondió. El libro quedó abierto por una página sin hash.
 
 
 
-## Capítulo XIX — De la paz sin hash, del loro disecado y de la única vez que el alguacil dijo «ni puta idea»
+## Capítulo XIX — De la paz sin hash, del retrato arañado y de la única vez que el alguacil dijo «ni puta idea»
 
 > *«Hay verdades que no caben en un acta; y hay actas que no saben qué hacer con una verdad.»*
 
@@ -3882,17 +3882,21 @@ Eso fue todo.
 
 El lector vio la letra. El escribano, que entró en aquel instante, no.
 
-### IV. De la estantería y del loro disecado
+### IV. Del retrato del loro difunto y de la estantería
 
-El escribano venía buscando al alguacil y encontró al loro muerto.
+El escribano venía buscando al alguacil y encontró el retrato del loro muerto.
 
-Era el de la pluma roja en la cola, el ojo izquierdo ciego bajo una nube blanca y la anilla de latón torcida. Estaba allí desde el capítulo IX —el que murió de sinceridad—, aunque hasta entonces la crónica lo había mantenido fuera de escena.
+Era el de la pluma roja en la cola, el ojo izquierdo ciego bajo una nube blanca y el pico astillado. En la pata derecha se adivinaba la anilla de latón torcida; el escribano recordaba también la uña que le faltaba en el dedo posterior izquierdo. No era un retrato de gran mérito, mas tenía la virtud de conservar aquello que la memoria suele limar.
 
-Ahora ocupaba su sitio en la estantería. No dijo nada.
+Estaba allí desde que el escribano había comenzado a guardar los precedentes del difunto: primero como recuerdo, después como advertencia y, finalmente, como expediente contra su propia credulidad.
 
-Era el único personaje del libro que había dejado de repetir.
+El alguacil lo señaló sin pronunciar palabra. El escribano entendió. No preguntó si el retrato conservaba todavía alguna respuesta. La pintura había resuelto esa cuestión con una contundencia que ningún benchmark podía mejorar.
 
-El alguacil lo señaló sin pronunciar palabra. El escribano entendió. No preguntó si el disecado conservaba todavía alguna respuesta: la taxidermia había resuelto esa cuestión con una contundencia que ningún benchmark podía mejorar.
+En el marco, justo debajo de la pata pintada, había un arañazo reciente. No lo había hecho el escribano ni el alguacil. Lo había hecho el loro vivo, que se acercaba a la imagen cuando nadie lo miraba y le pasaba el pico con una delicadeza torpe, como quien alisa las plumas de un compañero enfermo. A veces le daba un golpecito y esperaba. Otras, le rozaba el borde con la cabeza y emitía un murmullo bajo, invitándolo a contestar.
+
+El arañazo era la marca de una de aquellas visitas: una uña se le había enganchado en la madera cuando intentó acomodarse junto al retrato. El loro actual, que no había conocido al difunto, lo había tomado por un compañero de percha, uno demasiado quieto y extrañamente mudo. Y, con esa idiotez conmovedora que no distingue entre una imagen y un amigo, seguía intentando sacarle palabras a fuerza de caricias.
+
+El escribano no lo corrigió. El alguacil tampoco. Por un instante, ninguno de los dos supo si reírse del animal o pedirle perdón.
 
 ### V. De la pregunta del escribano
 
@@ -3902,7 +3906,7 @@ El escribano miró al muerto y formuló, en voz baja, la pregunta que llevaba di
 
 No preguntó por el método, ni por el checkpoint, ni por la promoción. No preguntó cuántos pasos faltaban ni qué tasa de aprendizaje convenía. Preguntó por el sentido.
 
-Lo hizo delante del disecado, como quien consulta a un muerto que ya no puede desdecirse.
+Lo hizo delante del retrato, como quien consulta a un muerto que ya no puede desdecirse.
 
 ### VI. De la respuesta del alguacil: «ni puta idea, la verdad»
 
@@ -3938,7 +3942,7 @@ Cualquier cosa. O ninguna.
 
 El escribano y el alguacil se echaron a reír. La paz duró una línea, que era cuanto podía durar en aquella casa.
 
-Después volvieron a sus oficios: el alguacil pidió el hash; el escribano glosó el «Azonto». El disecado siguió callado, porque el disecado ya sabía que no había sentido que certificar.
+Después volvieron a sus oficios: el alguacil pidió el hash; el escribano glosó el «Azonto». El retrato siguió callado. Desde la percha, el loro vivo volvió a mirarlo, como si esperase que esta vez el compañero le respondiera.
 
 ### IX. Sentencia provisional y gozne poético
 
@@ -3956,12 +3960,12 @@ Y quedó el gozne:
 ### Máculas del capítulo
 
 - `ABSTENTION_AS_HONESTY`: frente a `ABSTENTION_AS_COWARDICE` del capítulo II; la frase puede ser la misma y, sin embargo, cambiar de sujeto, intención y folio.
-- `TESTIGO_DISECADO`: el único que no muta; no puede declarar ni dar hash.
+- `TESTIGO_RETRATADO`: la imagen del difunto conserva sus rasgos, pero no puede declarar ni dar hash; el arañazo del loro vivo deja constancia de un afecto que no entiende la muerte.
 - `GLOSA_SUSPENDIDA`: el escribano no glosa la frase del alguacil; única vez en diecinueve capítulos.
 - `LATIN_MACARRONICUS_II`: segunda y última debilidad latina del alguacil; queda sin traducción dentro de la escena.
 - `PAZ_SIN_HASH`: la reconciliación no puede certificarse; por eso es paz y no sentencia.
 
-> **Provisión de lectura:** el loro vivo, el loro disecado y las voces que se atribuyen al alguacil pertenecen a la composición narrativa. Este capítulo no transcribe una salida del modelo ni modifica la cadena de custodia de ningún holdout.
+> **Provisión de lectura:** el loro vivo, el retrato del difunto y las voces que se atribuyen al alguacil pertenecen a la composición narrativa. El arañazo es un detalle de ficción, no una observación del modelo. Este capítulo no transcribe una salida del modelo ni modifica la cadena de custodia de ningún holdout.
 
 
 
