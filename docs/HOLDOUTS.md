@@ -7,7 +7,7 @@
   - [Regla de procedencia](#regla-de-procedencia)
   - [Cadena de custodia](#cadena-de-custodia-por-comparecencia)
   - [Inventario de señales](#inventario-de-señales-cuantificadas)
-- [Léxico de la casa y criterio de uso](#léxico-de-la-casa-y-criterio-de-uso)\n- [Fuero primero — lengua, dato y escarnio](#fuero-primero-de-la-lengua-del-dato-y-del-escarnio)
+- [Léxico de la casa y criterio de uso](#léxico-de-la-casa-y-criterio-de-uso)\n- [Reparto y señas de la escribanía](#reparto-y-señas-de-la-escribanía--canon-de-personajes)\n- [Fuero primero — lengua, dato y escarnio](#fuero-primero-de-la-lengua-del-dato-y-del-escarnio)
 - [Fuero segundo — intención del loro](#fuero-segundo-de-la-intención-del-loro-que-non-es-agradar)
 - [Fuero tercero — tribunal y escribano](#fuero-tercero-del-tribunal-del-escribano-y-de-la-lengua-que-no-absuelve)
   - [Vocabulario de la probanza](#vocabulario-de-la-probanza)
