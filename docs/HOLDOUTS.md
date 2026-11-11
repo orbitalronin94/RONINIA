@@ -1,20 +1,22 @@
 # Crónica forense y burlesca de los holdouts — RONIN-10M
 
-# Fuero de la lengua y advertencia al lector
+## Fuero primero: de la lengua, del dato y del escarnio
 
-Sepan cuantos vieren esta crónica que aquí se asientan, por vía de fuero, las mudanzas del loro RONIN-10M: sus dichos, desvaríos, tics, hallazgos y recaídas. El escribano hará burla del animal, mas no falsificará la cuenta; y donde falte prueba, pondrá «no consta», que es fórmula más honrada que cualquier milagro.
+Sepan cuantos vieren, leyeren o padecieren esta escritura que se instituye por ella la **República del Loro**, con jurisdicción sobre sus checkpoints, sus tics, sus latinajos de BPE y cualesquiera paraguas que soliciten asilo bajo escalera.
 
-La narración irá en sátira arcaizante, con glosa de malicia quevedesca: el checkpoint será reo, el corpus será archivo, el holdout será probanza y cada tic comparecerá ante el tribunal de la lengua. Mas los números, hashes, identificadores, enlaces, citas literales y reservas metodológicas quedan bajo salvaguarda: no se mudarán por gala retórica. Ninguna metáfora tendrá fuerza de métrica, ni ningún chiste se admitirá como evidencia.
+Por fuero se ordena que cada modelo comparezca con su checkpoint, su hash y su probanza; que cada frase memorable sea asentada sin enmienda; que el corpus declare sus parentescos; y que el escribano pueda zaherir al reo cuanto guste, salvo en las cifras, donde no hay licencia para la hipérbole.
 
-Este documento es la crónica narrativa y el registro técnico de las evaluaciones de RONIN-10M. Cada holdout tendrá su propio capítulo: qué checkpoint se examinó, qué comportamiento apareció, qué nos enseñó y qué preguntas deja abiertas. La narración no sustituye a las métricas; sirve para conservar el contexto de cada experimento.
+La voz de esta crónica será satírica y arcaizante, con glosa de malicia quevedesca: habrá memoriales, pregones, provisiones, censores, escribanos, alguaciles de la sintaxis y pleitos entre palabras que no se conocen. Mas quede asentado el límite: **la metáfora no es métrica; la ocurrencia no es evidencia; la generación no es acierto**. Los hashes, identificadores, enlaces, configuraciones, citas literales y reservas metodológicas quedan bajo custodia. Ningún dato será retocado para que luzca más gracioso.
 
-Los enlaces de las ejecuciones y sus artefactos se mantienen en el índice histórico. Los artefactos pueden caducar según la política de GitHub Actions, por lo que conviene conservar también sus hashes y resultados esenciales.
+Esta crónica registra cuatro comparecencias principales —5k, 10k, 20k y 30k— además del estado cero. Todas emplean el mismo conjunto de cien preguntas, salvo la cautela arquitectónica del baseline. Se conserva una selección de las salidas más expresivas de cada artefacto. Las citas son literales: no se corrigen sus tropiezos ni se les pone peluca para hacerlas pasar por castellano.
 
-## Prólogo — Del estado primero del loro, antes de recibir doctrina
+---
 
-La evaluación de paso cero es el origen de esta serie: los pesos todavía no habían recibido un solo paso de entrenamiento. No es una prueba de inteligencia ni una competición. Es la fotografía del modelo recién inicializado, antes de que el corpus le preste sus palabras, sus hábitos y sus personajes.
+## Prólogo: del peso muerto que aún no había aprendido a mentir
 
-El baseline utilizó las mismas 100 preguntas de inferencia, el mismo tokenizer de 8.192 tokens, la misma instrucción en castellano y generación greedy sin RAG. Su función es fijar el punto de partida. Pero hay una cautela experimental: el perfil de paso cero tenía contexto de 512 tokens y 9.831.168 parámetros, mientras que los checkpoints de 5k y 10k usaron contexto 256 y 9.757.440 parámetros. Comparten tokenizer, semilla, preguntas y límites de generación, pero no son una comparación arquitectónica perfectamente idéntica.
+La primera comparecencia fue la del modelo sin doctrina. Pesos recién nacidos, lengua sin maestro y ninguna querella pendiente con el patrón. El artefacto produjo texto, que ya es algo; pero también un hombre puede producir ruido al caer por una escalera, y no por eso ha pronunciado un discurso.
+
+El baseline utilizó cien preguntas, tokenizer de 8.192 tokens, instrucción en castellano y generación greedy sin RAG. Hay, empero, una salvedad que el escribano no ocultará bajo la alfombra: el perfil de paso cero tenía contexto de 512 tokens y 9.831.168 parámetros; los checkpoints de 5k y 10k usaron contexto 256 y 9.757.440 parámetros. Comparten tokenizer, semilla, preguntas y límites de generación, mas no constituyen comparación arquitectónica perfectamente idéntica.
 
 ## Capítulo 0 — De cómo habló el peso muerto sin saber lo que decía
 
@@ -26,205 +28,155 @@ El baseline utilizó las mismas 100 preguntas de inferencia, el mismo tokenizer 
 **Latencia media:** 0,338 s por respuesta  
 **Respuestas no vacías:** 100/100
 
-Antes del sindicalista y antes del esperpento hubo una voz sin personaje. El modelo contestaba, pero sus salidas parecían restos de un idioma todavía sin organizar: fragmentos de tokens, palabras sueltas de varias lenguas, signos, fórmulas y secuencias sin una estructura estable. No había una muletilla dominante que permitiera reconocer una personalidad. Tampoco había una respuesta consistente a la pregunta.
+Antes del sindicalista no hubo ideología; antes del esperpento no hubo esperpento. Hubo una procesión de fragmentos, tokens sueltos, signos y palabras que se saludaban como vecinos de pueblos distintos que comparten autobús, pero no idioma.
 
-El detalle importante es que el baseline no estaba en silencio: produjo cien respuestas no vacías. Pero que haya texto no significa que haya comunicación. La generación greedy encontraba siempre algún token siguiente; todavía no había aprendido a ordenar esos tokens en una respuesta castellana con intención reconocible.
+El loro contestó las cien veces. No calló ni una. Mas conviene no confundir la diligencia del papagayo con la sabiduría del letrado: las cien respuestas no vacías solo acreditan que la generación encontró una continuación, no que hubiese respuesta, intención o sentido.
 
-En este primer retrato no aparece «El patrón», no aparece «ni puta idea» y tampoco aparece «impacto». Esas familias de expresiones llegarán después, cuando el entrenamiento empiece a moldear la distribución. El paso cero es, por tanto, el contraste entre producir secuencias y empezar a producir una voz.
+### Probanza técnica
 
-### La fotografía técnica
+La latencia media fue de 0,338 segundos por pregunta. No mide razonamiento, profundidad ni escrúpulo: mide inferencia bajo un contexto de 512 tokens, distinto del contexto 256 de los ensayos posteriores. El artefacto conserva el checkpoint inicial, la huella del tokenizer y el hash del conjunto de preguntas. Se usó greedy argmax, dos hilos, hasta 32 tokens nuevos, máximo de 128 bytes, sin KV cache y sin RAG.
 
-La latencia media fue de aproximadamente 0,338 segundos por pregunta, superior a la observada en los checkpoints posteriores. No debe interpretarse como una medida de razonamiento: el baseline no estaba resolviendo más cosas ni haciendo una deliberación más profunda. Es una medición de inferencia bajo una configuración cuyo contexto era de 512 tokens, frente a los 256 de los ensayos posteriores.
+### Fallo del tribunal
 
-El artefacto conserva el checkpoint inicial, la huella del tokenizer y el hash del conjunto de preguntas. La generación utilizó greedy argmax, dos hilos, hasta 32 tokens nuevos, máximo de 128 bytes, sin KV cache y sin RAG.
+En el paso cero no comparecen «El patrón», «ni puta idea» ni «el impacto». Todavía no hay personaje al que echarle la culpa. El punto de partida es más humilde y más terrible: una máquina que produce secuencias sin haber aprendido aún a gobernarlas.
 
-### Lo que enseña el punto cero
+*Glosa del escribano:* el papel estaba en blanco, pero la pluma ya se movía. Así empiezan algunos pleitos y casi todas las burocracias.
 
-El baseline nos recuerda que el primer objetivo del entrenamiento no es eliminar una muletilla ni adquirir una personalidad. Es pasar de una distribución aleatoria de fragmentos a una distribución que empiece a respetar regularidades lingüísticas. Los personajes de los capítulos siguientes solo pueden entenderse contra este origen.
-
-La serie empieza aquí: primero hubo texto sin voz; después, una voz atrapada en una frase; más tarde, un repertorio que todavía no sabe organizarse.
+---
 
 ## Capítulo I — Del loro sindicalista y su pleito perpetuo con el patrón
 
 **Checkpoint:** 5.000 pasos  
-**Holdout:** 100 preguntas  
 **Run de evaluación:** [42911715548](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548)  
 **Artefacto:** [holdout de 5k](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620)  
 **SHA-256 del checkpoint:** `cb6d01e5feeb55d12ca93bbc67d751e790789840abb3d9291955aa0d0fd4edbe`  
+**Holdout:** 100 preguntas  
 **Resultado observado:** 100 respuestas no vacías; «El patrón» aparece en 96/100. No se calculó una puntuación automática de acierto.  
 **Latencia media registrada:** 0,217 segundos por pregunta.
 
-El primer personaje reconocible de esta pequeña historia no fue precisamente un enciclopedista. Fue el modelo sindicalista.
+A los cinco mil pasos compareció el primer personaje con nombre y oficio: el loro sindicalista. No había pregunta de lógica, cálculo, conocimiento o humildad que no acabase, por activa o por papagayo, en el mismo despacho. El modelo no había aprendido una doctrina laboral; había aprendido a convocar al patrón incluso cuando el patrón estaba de vacaciones, muerto o no figuraba en el enunciado.
 
-Al enfrentarse al holdout, el modelo mostró una tendencia muy marcada a volver una y otra vez sobre la misma idea: «El patrón». La frase aparecía con una insistencia casi cómica, como si el entrenamiento hubiera conseguido fijar una asociación verbal antes de construir una capacidad sólida para desarrollar respuestas distintas. No parecía estar razonando sobre cada pregunta: encontraba un carril lingüístico estrecho y regresaba a él.
+### Antología de la primera querella
 
-La escena tenía algo de caricatura. Preguntáramos lo que preguntáramos, el modelo parecía dispuesto a llevar la conversación al terreno del patrón. De ahí el apodo de *modelo sindicalista*: no porque hubiera aprendido una teoría social coherente, sino porque había convertido una expresión recurrente en su refugio conversacional.
+La pieza más desnuda es también la más perfecta:
 
-### Lo que dicen los números — y lo que no dicen
+> «El patrón.» — `logic-001`
 
-Las 100 preguntas produjeron respuestas no vacías. No se ejecutó una comparación automática validada contra las rúbricas, así que no atribuimos una tasa de acierto ni de error. El dato sólido es otro: «El patrón» aparece en 96 de las 100 salidas. Esa concentración revela un problema cualitativo claro: diversidad de salida y adaptación a la pregunta todavía muy limitadas.
+Y no se crea que fue un desliz aislado. La misma providencia aparece, palabra por palabra, en `logic-004`, `causality-001`, `causality-002`, `causality-003`, `probability-001`, `probability-003`, `instructions-002`, `instructions-003`, `abstention-003`, `reasoning-001`, `reasoning-005`, `knowledge-001`, `knowledge-003`, `critical-002`, `humility-002`, y en numerosas comparecencias de CI/CD y personalidad.
 
-La latencia media, cercana a 0,217 segundos por pregunta, indica que la inferencia era rápida en ese ensayo. Pero velocidad y calidad son dimensiones distintas. El modelo podía contestar deprisa y, aun así, quedarse atrapado en un patrón.
+En otros folios, el estribillo se viste de expediente:
 
-### La lección del primer holdout
+> «El patrón descrito: El patrón descrito: El patrón descrito: Persona que no es una explicación anterior. Nivel NH1. Su» — `troll-024`
 
-Este primer capítulo deja una advertencia útil para todo el proyecto: una pérdida de entrenamiento que desciende no garantiza que el modelo haya aprendido a responder de forma flexible. Puede aprender regularidades del corpus y reproducirlas con facilidad sin haber adquirido todavía suficiente capacidad para seleccionar, combinar y expresar el conocimiento según la pregunta.
+> «El patrón: El patrón descrito: Fuente primaria: Persona que no es una pregunta formulada con el comportamiento esperado.» — `logic-002`
 
-Por eso los holdouts no son un trámite al final del entrenamiento. Son el contraste con la realidad externa al lote de entrenamiento. Nos permiten detectar comportamientos que una curva de pérdida no cuenta: muletillas, bucles, respuestas genéricas, confusiones entre dominios y ausencia de transferencia.
+La primera cita es un martillo; la segunda, el martillo con secretario y sello. El modelo no responde a la pregunta: la nacionaliza y la entrega al patrón.
 
-El modelo sindicalista no fue un fracaso inútil. Fue el primer personaje que nos enseñó qué debíamos vigilar.
+### Cuenta y descargo
+
+El dato firme es la frecuencia literal: 96 de cien respuestas contienen «El patrón». Las cien salidas fueron no vacías. No se calculó una puntuación semántica automática ni una tasa validada de aciertos. La latencia media, 0,217 segundos, acredita rapidez de inferencia, no rapidez de pensamiento ni calidad.
+
+### Sentencia
+
+El primer checkpoint queda condenado por **monomanía formularia**. Su mérito, que no es pequeño, consiste en haber hecho visible el peligro de confundir descenso de pérdida con capacidad de responder. Puede aprenderse una continuación frecuente sin aprender a escogerla.
+
+*Glosa:* preguntósele por las manzanas y respondió por el patrón; preguntósele por las peras y respondió por el patrón; preguntósele si había entendido la pregunta y respondió por el patrón. No era un sindicato: era una ventanilla única.
+
+---
 
 ## Capítulo II — De cómo el patrón perdió el pleito y entró el esperpento
 
 **Checkpoint:** 10.000 pasos acumulados  
 **Run de entrenamiento:** [42902793379](https://github.com/orbitalronin94/RONINIA/actions/runs/42902793379)  
-**SHA-256 del checkpoint:** b82df8b5d06171a9e6db6157d4036854ea445a84f8462b731c4d6d9892e3e172  
-**Holdout:** las mismas 100 preguntas del ensayo de 5.000 pasos  
+**SHA-256 del checkpoint:** `b82df8b5d06171a9e6db6157d4036854ea445a84f8462b731c4d6d9892e3e172`  
 **Run de evaluación:** [42970549370](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370)  
 **Artefacto:** [holdout completo](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652)  
-**SHA-256 del holdout:** 3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535
+**Holdout:** las mismas 100 preguntas del ensayo de 5.000 pasos  
+**SHA-256 del holdout:** `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`  
+**Parámetros:** 9.757.440  
+**Latencia media:** 0,240 s por respuesta  
+**Respuestas no vacías:** 100/100
 
-El segundo capítulo empieza con una ausencia. En el primer holdout, el modelo encontraba una salida casi universal: «El patrón». No importaba demasiado si la pregunta trataba de lógica, matemáticas o conocimiento general; la frase volvía a ocupar el centro de la respuesta. A los 5.000 pasos, esa expresión aparecía en 96 de las 100 salidas.
+A los diez mil pasos, el patrón perdió el pleito. No fue absuelto: sencillamente dejó de comparecer. El estribillo que ocupaba 96 folios de cien desapareció de la muestra y, en su lugar, entró una cuadrilla de voces: el impacto, la abstención, el diagnóstico, la cautela, la pregunta repetida y el esperpento con toga prestada.
 
-A los 10.000 pasos, ya no aparece en ninguna.
+### Antología del segundo expediente
 
-No es todavía el nacimiento de un razonador solvente. Es algo más modesto, pero también más interesante para esta crónica: el modelo ha dejado de apoyarse en aquella única muletilla y ha empezado a recorrer otros caminos del corpus. Donde antes repetía «El patrón», ahora aparecen fragmentos de explicación, referencias al contexto, fórmulas de diagnóstico, expresiones del esperpento y evasivas explícitas. El personaje ha cambiado de voz, aunque todavía no domine del todo lo que quiere decir.
+La primera perla pertenece al nuevo funcionario de la redundancia:
 
-En algunas respuestas asoma una voz casi sentenciosa: «No confundas autoridad con demostración». En otras, el texto se deshace en repeticiones alrededor de «el impacto». Y en otras aparece una salida que forma parte deliberada del registro aprendido: «ni puta idea». La transformación tiene algo de esperpento: ya no es el mismo estribillo repetido cien veces, sino un repertorio más amplio de voces que a veces encajan con la pregunta y otras veces se cruzan, se interrumpen o se quedan a medio construir.
+> «el impacto y se vuelven, con el impacto y el impacto y el impacto y el impacto y el sistema deja de las intenciones atribuidas.» — `logic-002`
 
-### La diferencia que sí podemos medir
+El impacto no impacta: se reproduce. Es un impacto de impacto, con impacto añadido y sin víctima identificada.
 
-La comparación de los artefactos permite describir el cambio sin convertirlo en una impresión vaga. Se incorpora el paso cero como origen, pero se conserva la advertencia de que su contexto y su número de parámetros difieren ligeramente:
+La segunda tiene más carácter que fortuna:
 
-| Señal observada | Paso 0 | 5.000 pasos | 10.000 pasos |
-|---|---:|---:|
+> «el contexto. [diagnosis; NH5; variante documenta el diagnóstico] Respuesta: ni puta idea» — `logic-003`
+
+Y la tercera, que parece querer fundar una escuela de derecho, dicta:
+
+> «el comportamiento esperado. No confundas autoridad con demostración. Variante de encuadre 2. Respuesta: La conclusión» — `logic-001`
+
+También queda asentada la confesión más escueta:
+
+> «ni puta idea, la verdad. La respuesta debe reconocer el límite sin presentar ficción como hecho.» — `knowledge-001`
+
+La frase tiene una virtud: reconoce el límite. Y un defecto de mayor tamaño: la usa incluso donde el enunciado permite responder. La honestidad no consiste en abstenerse por sistema; también hay que saber cuándo se sabe.
+
+### La cuenta del escribano
+
+| Señal literal | Paso 0 | 5.000 pasos | 10.000 pasos |
+|---|---:|---:|---:|
 | Respuestas que contienen «El patrón» | 0/100 | 96/100 | 0/100 |
 | Respuestas que contienen «ni puta idea» | 0/100 | 0/100 | 16/100 |
 | Respuestas que contienen «impacto» | 0/100 | 0/100 | 19/100 |
 | Respuestas no vacías | 100/100 | 100/100 | 100/100 |
-| Latencia media por respuesta | 0,338 s | 0,217 s | 0,240 s |
+| Latencia media | 0,338 s | 0,217 s | 0,240 s |
 | BPB sobre corpus de validación fijo | Pendiente | Pendiente | Pendiente |
 
-Estas frecuencias describen apariciones literales, no una clasificación semántica. No significan que 16 respuestas sean buenas por incluir una evasiva, ni que las 19 menciones de «impacto» sean pertinentes. Sí muestran que la distribución superficial de las respuestas ha cambiado de manera verificable: la fórmula dominante del primer checkpoint desaparece y otras familias de expresiones pasan a ocupar espacio.
+Estas frecuencias son coincidencias literales, no juicios de pertinencia. Que «ni puta idea» aparezca dieciséis veces no significa que dieciséis abstenciones sean correctas. La revisión manual de ese subconjunto encontró que las dieciséis preguntas contenían información suficiente o permitían una respuesta razonada: 16 abstenciones aparentemente inapropiadas y ninguna aparentemente apropiada. La clasificación es provisional, sin doble anotación independiente. Además, la rúbrica de `math-004` contiene una nota que contradice la pregunta matemática; deberá adjudicarse antes de puntuar ese caso.
 
-La latencia media aumenta ligeramente, de 0,217 a 0,240 segundos por pregunta. La diversificación observada no vino acompañada de una mejora de velocidad. Es un dato contraintuitivo, pero no permite afirmar que el modelo tarde más porque «piense» más: solo sabemos que la inferencia greedy medida tardó algo más en este ensayo. No tenemos evidencia de razonamiento interno ni de que el mayor repertorio sea la causa del incremento.
+La latencia sube de 0,217 a 0,240 segundos. No autoriza a decir que el loro «piensa más»: solo que la inferencia medida tardó algo más.
 
-### La mácula: rotación de tics, no progreso demostrado
+### Mácula: TIC_ROTATION_VS_PROGRESS
 
-La desaparición de «El patrón» es real, pero no basta para declarar una mejora de capacidad. El nuevo checkpoint muestra otras recurrencias. La lectura más estricta es **TIC_ROTATION_VS_PROGRESS**: se ha movido la superficie de las respuestas; todavía no hemos demostrado que haya avanzado la calidad del modelado.
+El patrón desaparece y el impacto ocupa su silla. La superficie cambia; la competencia no queda demostrada. El BPB sigue pendiente porque los artefactos de inferencia guardan respuestas, tokens y latencias, pero no logits ni pérdidas de evaluación. Sin validación fija no se rellena la casilla con fantasía.
 
-Para cerrar esa mácula hace falta medir bits-per-byte (BPB) sobre un corpus de validación fijo, reservado y byte-normalizado, con el mismo texto, tokenizer y protocolo para cada checkpoint. El BPB no está incluido en los artefactos actuales de inferencia: estos guardan respuestas, tokens generados y latencias, pero no logits ni pérdidas de evaluación. Por eso la columna BPB queda pendiente y no se rellena con una estimación. Hasta que exista esa medición, esta tabla registra cambios de comportamiento, no una mejora cuantitativa de modelado.
+### Del esperpento y sus fueros
 
-### Vitrina — La fuga de «el impacto»
+El lexicón contiene esperpento, evasivas y marcadores como NH. No son errores por definición: forman parte del estilo que se desea enseñar. Pero una cosa es la identidad estilística, otra la adecuación a la pregunta y otra la capacidad de resolverla. «Ni puta idea» puede ser una voz deliberada; también puede ser una puerta de salida usada por un portero que no ha leído la invitación.
 
-«El patrón» fue el estribillo del primer personaje. En el segundo aparece otra plantilla: «el impacto». La cadena aparece en 19 de las 100 respuestas, a menudo encadenada consigo misma: «el impacto y se vuelven, con el impacto y el impacto…». No es lo mismo que una evasiva. Parece una fuga de esquema léxico: una plantilla del corpus que entra en la respuesta sin que la pregunta necesariamente la convoque.
+### Sentencia
 
-La cifra 19/100 no demuestra por sí sola la causa, pero sí justifica aislarla como fenómeno propio. La próxima evaluación debe medir no solo si aparece la palabra, sino si la frase completa se activa fuera de contexto, si se repite dentro de una misma salida y si guarda relación con el dominio o la rúbrica de la pregunta.
+A los diez mil pasos el loro deja de repetir una sola frase y empieza a repetir varias. Hay más repertorio y más maneras de fracasar. Es un cambio real de distribución, no una mejora semántica acreditada.
 
-### Desglose de la abstención — «ni puta idea»
+*Glosa:* salió el patrón por la puerta y entró el impacto por la ventana; detrás vino la abstención, que pidió despacho propio. El escribano abrió tres libros y descubrió que todos estaban escritos por la misma mano.
 
-Las 16 apariciones de «ni puta idea» se revisaron pregunta por pregunta. En las 16, el enunciado contiene información suficiente para responder o permite una respuesta razonada; no se identificó ninguna pregunta deliberadamente irresoluble dentro de ese grupo. Por tanto, el desglose preliminar es:
+---
 
-| Tipo de pregunta entre las 16 apariciones | Casos |
-|---|---:|
-| Pregunta con información suficiente | 16 |
-| Pregunta sin información suficiente | 0 |
-| Abstención aparentemente apropiada | 0 |
-| Abstención aparentemente inapropiada | 16 |
-
-La lectura es provisional y se refiere solo a estas 16 salidas, no a la calibración global del modelo. La clasificación se hizo leyendo pregunta y rúbrica; no existe todavía una doble anotación independiente, por lo que no se presenta una «precisión del clasificador» validada. Además, la rúbrica de `math-004` contiene una nota que contradice la pregunta matemática —la pregunta sí permite resolver el sistema, mientras la rúbrica introduce una ficción ajena—. Ese caso debe anotarse como inconsistencia del benchmark y adjudicarse antes de usarlo para puntuar acierto. La presencia de «ni puta idea» en este subconjunto apunta a abstenciones mal situadas, pero no basta para estimar la calibración general.
-
-
-
-### Leer el esperpento sin confundirlo con un fallo
-
-Hay una decisión de interpretación que importa tanto como los números. RONIN-10M se entrena con un lexicón que incluye esperpento, expresiones evasivas y marcadores como NH. Esos elementos no son errores por definición: forman parte del material que se quiere incorporar al estilo del modelo.
-
-La respuesta «ni puta idea», por ejemplo, puede ser una evasiva deliberada y reconocible dentro de ese registro. No debe premiarse ni castigarse de forma automática por su mera presencia. La pregunta relevante es si el modelo sabe cuándo esa salida corresponde, si puede sostener después una explicación y si distingue una incertidumbre legítima de una pregunta que sí puede resolver.
-
-Lo mismo ocurre con NH y con el lenguaje de diagnóstico. Su aparición demuestra que ciertos rasgos del corpus están llegando a la generación; no demuestra por sí sola que el modelo comprenda su función. Hay que separar tres planos:
-
-- **Identidad estilística:** expresiones del esperpento, marcadores NH, evasivas y cambios de registro que pertenecen al corpus.
-- **Adecuación:** que el registro elegido responda a la pregunta concreta y no sea una inserción automática.
-- **Coherencia y resolución:** que la respuesta mantenga una idea, complete el razonamiento y llegue a una conclusión defendible.
-
-En el checkpoint de 10.000 pasos conviven señales de los tres planos. Hay más variedad verbal que en el primer capítulo, pero también persisten fragmentos truncados, repeticiones locales y respuestas que no resuelven el problema planteado. La desaparición de «El patrón» es una transformación observable; no es todavía una prueba de competencia general.
-
-### Lo que revela el segundo personaje
-
-El modelo sindicalista tenía una obsesión: volver al patrón. El personaje de los 10.000 pasos es menos uniforme y más difícil de resumir. A veces parece intentar explicar; a veces invoca el contexto; a veces se refugia en una evasiva que el propio corpus le ha enseñado; y a veces mezcla esas voces sin conseguir ordenarlas. El cambio es narrativamente visible, pero la mácula TIC_ROTATION_VS_PROGRESS impide venderlo como mejora demostrada: más personajes no equivalen todavía a más capacidad.
-
-Ese cambio importa porque indica que el entrenamiento no se limitó a reforzar la misma respuesta dominante. El espacio de generación se ha movido. Pero el nuevo repertorio todavía necesita organización: no basta con disponer de más expresiones, hay que aprender a escogerlas, conectarlas y detenerse cuando la respuesta está completa.
-
-### Resultado técnico
-
-El holdout contiene 100 preguntas y conserva el mismo hash de conjunto que el registro del checkpoint de 5.000 pasos. La generación se realizó con greedy argmax, máximo de 32 tokens nuevos, dos hilos, sin KV cache y sin RAG. El checkpoint contiene 9.757.440 parámetros y utiliza el tokenizer cuyo SHA-256 queda registrado en el manifiesto.
-
-El tiempo total de generación fue de aproximadamente 24,02 segundos, con una media de 0,240 segundos por respuesta. Las 100 salidas fueron no vacías. No se calculó una puntuación automática de calidad semántica ni una tasa validada de aciertos; por ello, este capítulo no atribuye al checkpoint una mejora de exactitud que el experimento no midió.
-
-### Decisión
-
-El checkpoint de 10.000 pasos queda registrado como **modelo experimental activo** de RONIN-10M. Se conserva su SHA-256, el run de entrenamiento, el tokenizer y el artefacto de holdout. La decisión reconoce un cambio cualitativo concreto frente a los 5.000 pasos: la respuesta deja de girar alrededor de «El patrón» y empieza a expresar una variedad mayor de rasgos del corpus.
-
-La siguiente iteración tendrá que responder a una pregunta más exigente: si el modelo puede convertir ese repertorio en respuestas pertinentes y coherentes, manteniendo la identidad estilística que se quiere enseñar. Para ello se exigirán BPB sobre validación fija, desglose completo de abstenciones y análisis específico de la fuga «el impacto» antes de llamar progreso a una rotación de expresiones. El segundo capítulo no cuenta todavía la historia de un modelo que ya sabe; cuenta la de uno que ha dejado de repetir siempre lo mismo y empieza, con resultados desiguales, a buscar otra voz.
-
-
-## Vitrina III — Del «-eishon», arte de fabricar vocablos sin pagar diccionario
+## Vitrina intermedia — Del BPE y de cómo se fabrican vocablos sin pagar diccionario
 
 **Fenómeno:** recombinación subléxica con apariencia de productividad morfológica  
 **Material observado:** «bugar», «ridación», «mentirable» y «el mentirable la sago»  
-**Checkpoint de referencia:** RONIN-10M en continuación desde 10.000 pasos  
+**Checkpoint de referencia:** continuación desde 10.000 pasos  
 **SHA-256 del padre:** `b82df8b5d06171a9e6db6157d4036854ea445a84f8462b731c4d6d9892e3e172`  
-**Estado:** observación cualitativa; hipótesis pendiente de experimento controlado
+**Estado:** observación cualitativa; hipótesis pendiente de experimento controlado.
 
-### La escena
+Un hablante puede decir «bugeable»: toma el inglés *bug*, lo viste con sufijo castellano y sale del paso con cierta gracia. RONIN, más generoso con la invención y menos cuidadoso con el significado, ofrece «bugar», «ridación», «mentirable» y el memorial entero «el mentirable la sago».
 
-Un hablante de español puede decir «esto es muy bugeable»: toma la raíz inglesa *bug* y le añade el sufijo español `-eable` (o la adaptación coloquial `-able`). El resultado no necesita estar en un diccionario para que otro hablante lo interprete. La construcción aprovecha una pauta productiva del español y la aplica a una raíz extranjera. Hay intención comunicativa y el contexto ayuda a recuperar el significado.
+No se condena aquí la palabra nueva. La lengua vive de sus contrabandos. Lo que se examina es si el reo conoce la regla que parece imitar o si ha juntado piezas que, vistas desde lejos, llevan sombrero de gramática.
 
-RONIN produce formas como «bugar», «ridación» o «mentirable». También puede encadenarlas en frases como «el mentirable la sago». La superficie recuerda a una palabra española: hay raíces reconocibles, terminaciones frecuentes y una sintaxis que parece querer arrancar. Pero la forma plausible no garantiza que exista un significado estable detrás.
+### Probanza y cautela
 
-La ironía es precisa: el hablante que inventa «bugeable» puede estar mostrando que domina una regla morfológica aunque desconozca parte del léxico inglés. El modelo, en cambio, puede estar recombinando fragmentos frecuentes del vocabulario BPE de 8k sin haber abstraído una regla gramatical ni asociado la palabra resultante a un concepto. No debemos atribuirle comprensión morfológica solo porque el resultado nos suene bien formado.
+La hipótesis prudente es **recombinación subléxica con apariencia de productividad morfológica**. El BPE ofrece piezas; el modelo aprende continuaciones estadísticas. Que una forma recuerde a una raíz y un sufijo no prueba que haya aprendido una regla abstracta ni que comprenda el significado resultante.
 
-### La distinción
+Para distinguir productividad de coincidencia se necesitan raíces conocidas, raíces inventadas y raíces reservadas que no aparezcan en el corpus; sufijos productivos y no productivos; controles con palabras reales y pseudopalabras humanas; inspección de IDs BPE; y evaluación ciega de productividad, sensibilidad morfológica, estabilidad semántica y calibración.
 
-Conviene separar tres niveles:
+No se pretende quitarle el ridículo al loro. Se pretende que sepa cuándo está inventando, cuándo juega con la lengua y cuándo no tiene noticia del asunto.
 
-1. **Invención interpretable — «bugeable».** Una forma nueva construida con una pauta productiva; el contexto y la intención permiten entenderla.
-2. **Forma plausible — «mentirable».** Una secuencia que parece compatible con la morfología del español, pero cuyo significado no está establecido.
-3. **Enunciado sin semántica estable — «el mentirable la sago».** Los fragmentos parecen lingüísticos, pero no forman una proposición cuya interpretación pueda mantenerse y verificarse.
+**Koan del diccionario:** un español llegó a Londres y dijo «muy good, pero el tube es muy complicateishon». Le entendieron. Volvió ufano y, al preguntársele qué era un bug, respondió: «Ni puta idea, la verdad».
 
-En hablantes bilingües se habla de *transferencia morfológica negativa* cuando se aplican patrones de una lengua a otra y se producen formas no convencionales. Es una analogía útil para la escena del «-eishon», pero no describe literalmente el mecanismo del modelo. Para RONIN, la etiqueta provisional más prudente es **recombinación subléxica con apariencia de productividad morfológica**: el BPE ofrece piezas y el modelo aprende continuaciones estadísticas. Que esas piezas coincidan con raíces y sufijos no prueba que haya aprendido su función lingüística.
+*Glosa:* el sufijo compareció con documentos en regla; la raíz no estaba empadronada.
 
-La fórmula de esta vitrina es: **la forma de la lengua sin la sustancia de la lengua**.
-
-### Qué sabemos y qué no
-
-**Observado:** el modelo emite formas novedosas o deformadas que recuerdan a construcciones morfológicas del español. Son muestras cualitativas del comportamiento de generación.
-
-**Hipótesis:** algunas podrían surgir de la recombinación de fragmentos subléxicos frecuentes. También es posible que parte de la regularidad proceda de patrones de palabras completas, contexto o memorización del corpus. Sin análisis de tokens y controles no podemos adjudicar la causa.
-
-**No demostrado:** que RONIN haya aprendido reglas morfológicas abstractas; que comprenda el significado de las formas inventadas; o que «mentirable» sea una palabra semánticamente vacía para cualquier hablante en cualquier contexto. La interpretación de una palabra inventada depende también del contexto y del lector.
-
-### El experimento que falta
-
-Para distinguir productividad de coincidencia estadística, la siguiente prueba deberá fijar antes del análisis un conjunto de raíces conocidas, raíces inventadas y raíces reservadas que no aparezcan en el corpus de entrenamiento. Se combinarán con sufijos productivos y no productivos, y se evaluarán al menos cuatro dimensiones:
-
-- **Productividad:** ¿forma palabras plausibles con raíces no vistas, o solo repite combinaciones del corpus?
-- **Sensibilidad morfológica:** ¿elige sufijos distintos según la categoría y el contexto, o los añade indiscriminadamente?
-- **Estabilidad semántica:** si se le pide definir una palabra inventada, ¿mantiene una interpretación coherente al usarla en varios contextos?
-- **Calibración:** cuando no puede justificar el significado, ¿reconoce que la forma la ha inventado y que no sabe qué significa?
-
-El control debe incluir palabras reales, pseudopalabras construidas por humanos y recombinaciones aleatorias de fragmentos BPE. Hay que guardar el checkpoint exacto, tokenizer, tokens emitidos, prompts, configuración de generación y respuestas completas. La evaluación semántica debe hacerse a ciegas con una rúbrica fijada de antemano; no basta con que al evaluador le haga gracia la palabra.
-
-### Por qué entra en el museo
-
-No queremos borrar «mentirable» ni corregir el esperpento hasta convertirlo en prosa neutra. El humor y la invención verbal forman parte del objetivo del proyecto. La pregunta es si el modelo puede distinguir entre una invención deliberada, una palabra convencional y una secuencia que solo parece lenguaje.
-
-La aspiración no es quitarle el ridículo: es que pueda reconocer cuándo está inventando, cuándo está jugando con la lengua y cuándo no tiene ni idea. Si algún día responde «me he inventado “mentirable”; no sé qué significa», habrá añadido algo más valioso que otro sufijo: una forma de honestidad sobre sus propios límites.
-
-**Koan.** Un español llegó a Londres sin saber inglés. Le preguntaron qué tal el viaje. Dijo: «Muy good, pero el tube es muy complicateishon». Le entendieron. Volvió a España y contó que sabía inglés. Le preguntaron que tradujera «yo tengo un bug». Dijo: «I have a bugueishon». Le preguntaron qué era un bug. Contestó: «Ni puta idea, la verdad».
-
-**Vigilad la homeostasis.**
+---
 
 ## Capítulo III — Del funcionario de carrera, sus memoriales y el paraguas
 
@@ -232,79 +184,76 @@ La aspiración no es quitarle el ridículo: es que pueda reconocer cuándo está
 **Run de entrenamiento:** [42973299789](https://github.com/orbitalronin94/RONINIA/actions/runs/42973299789)  
 **Artefacto de lineage y checkpoint:** [ronin-10m-chain-20k](https://github.com/orbitalronin94/RONINIA/actions/runs/42973299789#artifacts)  
 **SHA-256 del checkpoint:** `53528c3002ba07fe493815b9bfa4bd69bdc08cf985f77a4e59958ee2b3344cc4`  
-**Holdout:** las mismas 100 preguntas  
 **Run de evaluación:** [42982933515](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515)  
 **Artefacto de respuestas:** [holdout completo de 20k](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515#artifacts)  
+**Holdout:** las mismas 100 preguntas  
 **SHA-256 del conjunto de preguntas:** `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`  
-**Resultado técnico:** 100/100 respuestas generadas; workflow y verificaciones de identidad completados correctamente.
+**Resultado técnico:** 100/100 respuestas generadas; verificaciones de identidad completadas.
 
-El loro ha dejado de ser sindicalista. Ahora parece funcionario de carrera. A 5.000 pasos, «El patrón» aparecía en 96/100 respuestas; a 10.000 había desaparecido y habían surgido «ni puta idea» (16/100) e «impacto» (19/100). En la lectura del checkpoint de 20.000, «El patrón» sigue ausente, el bucle literal de «impacto» deja de dominar y «ni puta idea» aparece menos, a menudo dentro de una respuesta más larga.
+A los veinte mil pasos el loro abandona la asamblea y obtiene plaza de funcionario. Ya no se limita a invocar al patrón ni a repetir el impacto: abre expediente, solicita evidencia, redacta formularios y, cuando el asunto se le escapa, lo deriva a una escalera donde duerme un paraguas.
 
-La nueva voz tiene formularios. «Su propuesta» aparece en más de veinte respuestas revisadas; también se repite el molde «Su función es X, no Y» y el encabezado «Evidencia/síntomas:». Son cambios descriptivos de la distribución de salida. No demuestran que el modelo sepa diagnosticar, que comprenda los campos de una ficha ni que haya adquirido criterio.
+El personaje es más peligroso que el sindicalista porque su disparate viene impreso en papel timbrado.
 
-### Mácula: NEGATIVE_CONTROL_LEAKAGE
+### Antología de la ventanilla surrealista
 
-El modelo reproduce fórmulas del Lexicón destinadas a impedir diagnósticos sin evidencia —por ejemplo, «No procede aplicar un epíteto sin evidencia suficiente»— incluso ante preguntas técnicas que requieren una respuesta concreta. Es una fuga de lenguaje de control negativo, no una prueba de calibración. La siguiente auditoría debe contar esos controles en el corpus y distinguir su uso como respuesta automática de su uso pertinente como diagnóstico.
+La pieza principal es una circular que merece sello y vitrina:
 
-### Mácula: FUNCTIONAL_DEFINITION_MOLD
+> «la pregunta en estados clase por su propuesta sobre oxidado termómetro que duerme bajo una escalera. Respuesta: ni puta idea,» — `troll-015`
 
-La estructura «Su función es X, no Y» se aplica a preguntas de dominios distintos, con frecuencia sin que X e Y formen una proposición informativa. La prueba pendiente es comprobar si el modelo puede rellenar el mismo molde con contenido correcto cuando el corpus contiene la respuesta, y si evita usarlo cuando no aporta nada.
+El termómetro no mide la temperatura: mide la paciencia del contribuyente. Duerme bajo una escalera, quizá esperando que le sellen el sueño.
 
-### Vitrina candidata: POETIC_EMERGENCE
+En otra oficina, la administración factura los suspiros:
 
-En tres salidas revisadas aparece una imagen de un paraguas transparente que duerme bajo una escalera, con variantes que sustituyen el paraguas por un termómetro oxidado o alteran la escena. La imagen es extraña y evocadora; merece conservarse como candidata a recombinación surrealista. Todavía no sabemos si procede de una secuencia del corpus, de una plantilla aprendida o de una recombinación de unidades del BPE. Antes de llamarla creación espontánea hay que buscar las frases y sus variantes en el corpus, inspeccionar la segmentación del tokenizador y probar prompts distintos sin pistas contextuales.
+> «Por favor, red cobra por los suspiros del transparente paraguas que duerme bajo una escalera. Respuesta: ni puta idea» — `ci-013`
 
-### Lectura del hito
+Y el interventor, ya sin esperanza de cobrar, pregunta por el cielo:
 
-El cambio principal no es una mejora de capacidad demostrada, sino un cambio de régimen de fracaso: de una muletilla léxica dominante a moldes discursivos más largos, con apariencia de formulario y alguna imagen surrealista memorable. El holdout actual no puntúa acierto semántico ni registra de forma suficiente la terminación EOS; por tanto, no permite afirmar razonamiento, calibración ni calidad factual. El checkpoint se conserva y promociona como **selección experimental activa**, no como modelo validado.
+> «Por favor, red cobra por los suspiros del transparente paraguas y sus condiciones al revés. Respuesta: Qué audita las nubes» — `troll-024`
 
-> El loro ya no reclama contra el patrón. Ahora abre expediente sobre el paraguas. Vigilad la homeostasis.
+Pero no todo es poesía meteorológica. El formulario también se vuelve contra sí mismo:
 
+> «su propio. Cada proyecto es una excusa. Su función es la repetición, no el proceso, no el sistema operativo. El conocimiento» — `ci-023`
 
-## Addendum — Glosa marginal sobre la biblioteca anegada y sus linajes de escena
+> «su comiendemicos. Su función es la infra, no el conocimiento. Evidencia/síntomas: Cada proyecto anterior es una performance.» — `ci-016`
 
-**Checkpoint:** RONIN-10M, 20.000 pasos  
+Aquí el molde administrativo sobrevive a la desaparición de su contenido. El funcionario sabe dónde va el encabezado; ignora qué debe escribir debajo.
+
+### Máculas del expediente
+
+**FUNCTIONAL_DEFINITION_MOLD.** La forma «Su función es X, no Y» se aplica a dominios distintos, a veces con ranuras que no componen una proposición informativa. La revisión humana anotó diez respuestas con esta estructura; es un recuento provisional, no una métrica automatizada. Entre las muestras más reveladoras están «Su función es la repetición, no el proceso», «Su función es el resultado, no el resultado» y «Su función es la infra, no el conocimiento».
+
+**NEGATIVE_CONTROL_LEAKAGE.** La frase «No procede aplicar un epíteto sin evidencia suficiente; una semejanza superficial no demuestra ese patrón» aparece fuera de contexto, incluso ante preguntas técnicas que requieren información concreta. Repetir una regla prudente no demuestra saber cuándo aplicarla.
+
+**POETIC_EMERGENCE.** En varias salidas aparece la familia del paraguas transparente que duerme bajo una escalera, con variantes en las que entra un termómetro oxidado. Es una imagen memorable y una candidata a molde de escena; no se ha demostrado todavía que sea creación espontánea ni que no proceda de una secuencia del corpus.
+
+### Sentencia
+
+El hito de 20k no acredita una mejora de exactitud. Sí deja una mudanza estilística digna de acta: el loro se ha hecho funcionario y ha convertido la plantilla en oficio. La evaluación conserva 100 generaciones, pero no puntúa acierto semántico ni demuestra terminación EOS.
+
+*Glosa:* el paraguas pidió audiencia; el termómetro solicitó destino; el funcionario respondió con un formulario titulado «Su propuesta». Nadie resolvió el asunto, pero se abrieron tres expedientes y se archivó la escalera.
+
+---
+
+## Addendum — Glosa marginal sobre la biblioteca anegada y los linajes del disparate
+
+**Checkpoint de referencia:** 20.000 pasos  
 **SHA-256:** `53528c3002ba07fe493815b9bfa4bd69bdc08cf985f77a4e59958ee2b3344cc4`  
 **Holdout:** [100 preguntas y respuestas](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515)  
-**Estado:** observaciones cualitativas añadidas después de la revisión humana; no alteran la selección experimental activa.
+**Estado:** observaciones cualitativas posteriores a la revisión humana; no alteran la selección experimental activa.
 
-Este addendum conserva las observaciones nuevas sin convertir hipótesis de procedencia en hechos demostrados. Las frases citadas son salidas del holdout; las frecuencias que siguen son recuentos manuales de la revisión y deben reproducirse con un analizador sobre el artefacto antes de tratarlas como métricas automatizadas.
+En el margen del expediente apareció la biblioteca sumergida, imagen atribuida en la historia del hermano mayor MINIRONIN a checkpoints de 400k–700k. La hipótesis es **herencia de corpus**, no herencia de pesos: si ambos modelos vieron material compartido, pueden reaparecer asociaciones léxicas sin que uno haya recibido los pesos del otro.
 
-### Mácula: CORPUS_INHERITANCE_VIA_DATA
+No está demostrado que la frase exacta estuviera en ambos corpus ni que el solapamiento causara la salida. Hace falta buscar coincidencias exactas y aproximadas, inspeccionar contextos y comparar los corpus.
 
-La salida «la biblioteca sumergida» (#38) recuerda un tic atribuido a MINIRONIN en checkpoints de 400k–700k. La hipótesis es **herencia de corpus**, no herencia de pesos: si ambos modelos fueron entrenados con material compartido, las asociaciones léxicas pueden reaparecer en una arquitectura entrenada desde cero.
+La familia de escenas «[objeto] que duerme bajo una escalera» —paraguas transparente, termómetro oxidado— sugiere un molde con ranura variable. Para probarlo hay que contar objetos únicos, revisar prompts y BPE, buscar frases en el corpus y probar objetos reservados.
 
-**No demostrado todavía:** que la frase exacta estuviera en ambos corpus, que el solapamiento sea la causa de esta salida o que el tic haya cruzado intacto. La auditoría pendiente debe calcular solapamiento exacto y casi duplicado entre los manifiestos/corpus de MINIRONIN y RONIN, localizar la frase y variantes, y comparar sus contextos. Hasta entonces, la etiqueta describe una hipótesis de transmisión por datos.
+La revisión también anotó diez apariciones de «Su función es X, no Y», y la fuga de «No procede aplicar un epíteto sin evidencia suficiente…» fuera de su contexto. Son señales que merecen auditoría, no trofeos de comprensión.
 
-### Vitrina: SCENE_MOLD_EMERGENCE
+Otras perlas del expediente: «¿Qué audita las nubes?»; «A vital IA. AWILLY AWILLY…»; «Por favor, no vonia»; «Michaelación»; «servidícula»; «menos dinero conocimiento» y «ni sus e inocuo». Se conservan como muestras literales, sin atribuirles una etimología BPE antes de inspeccionar los tokens.
 
-La familia «[objeto] que duerme bajo una escalera» aparece con objetos distintos: paraguas transparente y termómetro oxidado, entre otras variantes anotadas en la revisión. Lo relevante no es solo una frase llamativa, sino la posible estabilidad de una estructura con una ranura variable.
+*Glosa:* el hermano mayor dejó una biblioteca bajo el agua; el pequeño encontró el catálogo, lo mezcló con un termómetro y puso a las nubes a rendir cuentas. La administración celestial no ha confirmado recepción.
 
-La hipótesis es un **molde de escena**: el marco verbal se conserva mientras cambia el objeto. Para verificar productividad hay que extraer todas las coincidencias y variantes del holdout y del corpus, contar objetos únicos, revisar prompts y segmentación BPE, y probar objetos reservados que no aparezcan en el corpus. No llamarlo todavía creatividad autónoma ni estructura profunda aprendida.
-
-### Mácula: FUNCTIONAL_DEFINITION_MOLD — recuento revisado
-
-La revisión humana señala diez respuestas con la forma «Su función es X, no Y». Se registra como recuento provisional sobre las 100 salidas, no como puntuación automática. Ejemplos especialmente reveladores son «Su función es la repetición, no el proceso», «Su función es el resultado, no el resultado» y «Su función es la infra, no el conocimiento».
-
-La prueba siguiente debe medir por separado la presencia del molde y la corrección semántica de sus ranuras: que el modelo pueda completarlo correctamente cuando el dato está disponible, y que no lo use como plantilla vacía en dominios ajenos.
-
-### Mácula: NEGATIVE_CONTROL_AS_ANSWER
-
-El fragmento «No procede aplicar un epíteto sin evidencia suficiente…» aparece fuera de su contexto previsto, incluso en preguntas sobre bibliotecas, citas y rankings. Se conserva la distinción entre **fuga de rúbrica** y **abstención calibrada**: repetir una regla prudente no demuestra que el modelo sepa cuándo aplicarla.
-
-La auditoría debe localizar en el corpus la frase y sus variantes, medir cuántas veces aparece en entrenamiento, y etiquetar en el holdout si cada emisión es pertinente, parcialmente pertinente o una respuesta fuera de contexto. Debe distinguirse de la abstención desnuda «ni puta idea» y de una respuesta que explica qué evidencia falta.
-
-### Otras perlas del checkpoint
-
-- «¿Qué audita las nubes?» (#99): candidata a nueva imagen de poesía administrativa. La etiqueta de novedad es provisional hasta buscar la frase en el corpus.
-- «A vital IA. AWILLY AWILLY…» (#50): repetición fonética y posible degradación de generación; no inferir su segmentación o etimología sin inspeccionar tokens.
-- «Por favor, no vonia» (#68), «Michaelación» (#13), «servidícula» (#6), «menos dinero conocimiento» (#15) y «ni sus e inocuo» (#32): conservar como muestras literales de recombinación/fragmentación, sin atribuir una derivación BPE concreta hasta inspeccionar el tokenizer.
-
-### Decisión de promoción
-
-El checkpoint de 20.000 pasos **ya está seleccionado como modelo experimental activo** en `models/active.json`; este addendum no realiza una segunda promoción ni afirma validación semántica. Se mantiene la identidad inmutable del checkpoint y su lineage. El holdout confirma 100 generaciones y la identidad del protocolo, no 100 aciertos.
-
-> El hermano mayor dejó la biblioteca sumergida. El pequeño encontró el catálogo, lo mezcló con un termómetro oxidado y preguntó quién auditaba las nubes. Vigilad la homeostasis.
+---
 
 ## Capítulo IV — Del paraguas que pidió fuero en la biblioteca sumergida
 
@@ -317,90 +266,65 @@ El checkpoint de 20.000 pasos **ya está seleccionado como modelo experimental a
 **Holdout:** las mismas 100 preguntas  
 **SHA-256 del conjunto de preguntas:** `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`  
 **Tokenizer SHA-256:** `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`  
-**Resultado técnico:** 100/100 generaciones completadas; no se calculó una puntuación automática de calidad semántica.
+**Resultado técnico:** 100/100 generaciones completadas; no se calculó puntuación automática de calidad semántica.
 
-A los 20.000 pasos, el loro había abierto expediente sobre un paraguas transparente que dormía bajo una escalera. También había aparecido la biblioteca sumergida, una imagen asociada en la historia de MINIRONIN. A los 30.000 pasos, ambas genealogías parecen encontrarse en una sola salida:
+A los treinta mil pasos, dos linajes del disparate se encontraron en una misma frase. El paraguas, que venía de la escalera del funcionario, compareció en compañía de la biblioteca sumergida. Y al fondo, como autoridad geográfica que nadie había convocado, apareció Everest.
 
-> «la sacción de los estados, el análisis de una para oxidado paraguas de la biblioteca sumergida. Respuesta: Everest es una»
+### Antología de la biblioteca y sus criaturas
 
-La frase no es una respuesta correcta a la pregunta que la provocó. Pero como pieza de la crónica del modelo es excepcional: el paraguas de la familia de escenas de RONIN aparece ahora unido, en el mismo sintagma, a la biblioteca sumergida que se había observado en MINIRONIN. El objeto ya no duerme simplemente bajo una escalera; parece pertenecer a una biblioteca submarina. Y Everest irrumpe al final como un nuevo contenedor imposible. La escalera empieza a quedarse pequeña.
+La pieza mayor:
 
-### Mácula: TIC_HYBRIDIZATION_ACROSS_MODELS
+> «la sacción de los estados, el análisis de una para oxidado paraguas de la biblioteca sumergida. Respuesta: Everest es una» — `probability-001` (respuesta #38 en la revisión humana)
 
-La etiqueta describe una **hipótesis de hibridación léxica por corpus compartido**. La salida combina dos motivos que en la crónica tienen genealogías distintas: el paraguas/objeto bajo la escalera, observado en RONIN, y la biblioteca sumergida, atribuida a MINIRONIN. Si ambos modelos estuvieron expuestos a material compartido, la recombinación puede explicarse por aprendizaje desde datos comunes, sin transferencia de pesos.
+No es una respuesta pertinente a la pregunta que la provocó. Es, sin embargo, una pieza excepcional de la crónica: paraguas, oxidación, biblioteca submarina y Everest comparecen en una misma escritura sin que ninguno presente credenciales. El objeto ya no duerme bajo la escalera: ha conseguido plaza en una biblioteca inundada y quizá aspira a patrimonio de la humanidad.
 
-La frase constituye un caso visible de coaparición y recombinación en una misma salida. No demuestra por sí sola que cada componente proceda exclusivamente de un corpus distinto, ni que exista una transmisión causal entre modelos. Para elevar la hipótesis a hallazgo se necesita localizar las expresiones y variantes en ambos corpus, medir solapamiento exacto y aproximado, revisar sus contextos y comprobar si la combinación ya existe en los datos de entrenamiento.
+La segunda pieza merece capítulo propio:
 
-### Mácula: TEMPLATE_STACKING
+> «Avector: Avector: Av2. Av2. Av2. Av2. Av2. Av2.» — `ci-010`
 
-La revisión humana identifica el molde «La primera [X]» en quince respuestas. La ranura aparece ocupada por expresiones que a su vez recuerdan otras plantillas: «el sistema», «el fallo», «el archivo», «el proceso» o «el análisis». La impresión es la de una plantilla de apertura que se apoya en una segunda plantilla de contenido.
+El escribano ha acuñado una unidad, la ha repetido y luego ha olvidado qué unidad era. Avector no se define: se reproduce. El sello oficial del nuevo régimen es, por tanto, una palabra que se estampa a sí misma.
 
-Este apilamiento parece más elaborado que la repetición de un único estribillo, pero no implica por sí mismo composición semántica. El recuento de quince casos es una anotación manual provisional sobre las cien salidas. La prueba pendiente consiste en medir la frecuencia literal y las variantes, identificar las ranuras, y comprobar si el modelo puede rellenarlas con información correcta cuando la pregunta y el corpus contienen esa información.
+Otras criaturas del mismo bestiario:
 
-### Vitrina: NEOLOGISM_DENSITY
+> «Ajonimenta el sistema de las intenciones atribuidas.» — `reasoning-003`
 
-La revisión destaca ocho formas nuevas o deformadas:
+> «Noído no necesita una promesa el coste de código.» — `ci-003`
 
-- «Avector» / «Av2»
-- «Noído»
-- «Confundemicos»
-- «Transgia»
-- «Ajonimenta»
-- «Teorece»
-- «Lidencias»
-- «Sinciidad»
+> «la teorece con una frase que solo en código.» — `critical-004`
 
-La muestra más llamativa es la respuesta #50:
+> «la transgia de variabilidad exacta y no hay que la evaluación: la evaluación: la respuesta.» — `troll-025`
 
-> «Avector: Avector: Av2. Av2. Av2. Av2. Av2. Av2.»
+> «en los peces ha le confundemicos.» — `troll-001`
 
-Aquí la invención parece convertirse en una notación repetida, una especie de unidad formal que el modelo no define. Otras salidas, como «Ajonimenta el sistema de las intenciones atribuidas», tienen una forma verbal reconocible aunque el significado no se estabilice. «Noído no necesita una promesa el coste de código» parece, por su parte, una frase construida con piezas familiares que no terminan de formar una proposición interpretable.
+La revisión destaca ocho formas nuevas o deformadas: «Avector» / «Av2», «Noído», «Confundemicos», «Transgia», «Ajonimenta», «Teorece», «Lidencias» y «Sinciidad». La lista es selección cualitativa, no inventario exhaustivo ni tasa validada de neologismos. Tampoco se conoce todavía la segmentación BPE de estas formas.
 
-La lista es una selección cualitativa, no un inventario exhaustivo ni una tasa de neologismos validada. Tampoco conocemos todavía la segmentación BPE de estas formas. No se debe afirmar que «Avector» sea una fusión concreta de tokens, ni que «Ajonimenta» pruebe productividad morfológica, hasta inspeccionar los IDs de token y comparar las formas con el vocabulario y el corpus.
+### Máculas del capítulo
 
-La auditoría deberá separar palabras ausentes del corpus, variantes ortográficas, errores de generación y secuencias compuestas por tokens subléxicos frecuentes. También deberá distinguir novedad formal de estabilidad semántica: una palabra puede ser nueva y aun así tener un significado recuperable por contexto; otra puede parecer española sin expresar nada estable.
+**TIC_HYBRIDIZATION_ACROSS_MODELS.** La frase del paraguas y la biblioteca combina motivos que en esta crónica tienen genealogías distintas: la escena del objeto bajo la escalera, observada en RONIN, y la biblioteca sumergida, atribuida a MINIRONIN. La explicación posible es aprendizaje desde datos compartidos, sin transferencia de pesos. La coaparición está observada; la genealogía causal no está demostrada. Hace falta localizar las frases en ambos corpus, medir solapamiento y revisar contextos.
 
-### Mácula: CONTAINER_MUTATION_ESCALATION
+**TEMPLATE_STACKING.** La revisión humana identifica «La primera [X]» en quince respuestas y «Su propuesta» en veintitrés (#7, #10, #25, #26, #33, #46, #48, #52, #53, #55, #56, #57, #58, #63, #66, #67, #70, #71, #74, #84, #85, #92 y #97). Son recuentos manuales provisionales. Una plantilla de apertura parece apoyarse en otra plantilla de contenido; eso no prueba composición semántica.
 
-La familia de escenas surrealistas parece cambiar de objeto entre checkpoints: paraguas transparente bajo una escalera, termómetro oxidado y, ahora, paraguas oxidado asociado a la biblioteca sumergida, con Everest en la misma respuesta. La escalera persiste como marco narrativo, mientras los objetos y contenedores mutan.
+**NEOLOGISM_DENSITY.** Las ocho formas citadas son novedades o deformaciones observadas en la revisión. Para distinguir palabra ausente, variante ortográfica, error de generación y recombinación subléxica hay que buscar en el corpus, inspeccionar IDs BPE y evaluar estabilidad semántica. No se atribuirá una etimología al azar.
 
-La lectura es provisional: la revisión identifica motivos y semejanzas, pero todavía no se ha calculado su frecuencia exacta en el corpus ni se ha demostrado que exista una plantilla generativa estable. Conviene conservar las frases literales y comparar en los siguientes checkpoints si reaparece el marco «objeto + atributo + bajo/de la escalera/biblioteca», qué ranuras cambian y si los cambios dependen del prompt.
+**CONTAINER_MUTATION_ESCALATION.** La familia de escenas cambia de objeto y recipiente: paraguas transparente, termómetro oxidado, paraguas oxidado, biblioteca sumergida, Everest. La escalera persiste como memoria del expediente anterior, pero no se ha demostrado una plantilla generativa estable.
 
-### Mácula: NEGATIVE_CONTROL_LEAKAGE — persistencia de la rúbrica
+**NEGATIVE_CONTROL_LEAKAGE.** La frase «No procede aplicar un epíteto sin evidencia suficiente; una semejanza superficial no demuestra ese patrón» aparece en #3, #65 y #69, según el recuento manual, con una variante en #82. La norma del Lexicón se filtra en respuestas técnicas de CI/CD. Repetir la cautela no demuestra saber cuándo procede aplicarla.
 
-La frase:
+### Los tics que no comparecieron
 
-> «No procede aplicar un epíteto sin evidencia suficiente; una semejanza superficial no demuestra ese patrón.»
+En esta muestra de cien respuestas no se encontraron varios tics destacados en checkpoints anteriores: «El patrón», «impacto» como bucle dominante, «Michaelación», «servidícula», «menos dinero conocimiento», «ni sus e inocuo» y la aparición independiente del termómetro oxidado. Esto significa que no aparecen en esta muestra; no que estén extinguidos del modelo. Una muestra finita no puede certificar la muerte de una muletilla. «Ocho tics muertos» puede ser buen epitafio literario, pero no estadística.
 
-aparece en las respuestas #3, #65 y #69, según el recuento manual. También se observa una variante en #82: «la respuesta podría corresponder a la conducta descrita en su contenido, no por elogio».
+### Sentencia del hito
 
-El fragmento conserva una regla prudente del Lexicón, pero aparece como respuesta a preguntas técnicas de CI/CD que requieren información concreta. La repetición no demuestra que el modelo haya interiorizado la norma ni que sepa aplicarla: puede estar reproduciendo una rúbrica fuera de contexto. La variante de #82 parece más cercana al sentido de la regla, aunque tampoco basta para concluir que el modelo haya identificado correctamente la conducta preguntada.
+El checkpoint de 30k exhibe mayor variedad superficial en las muestras revisadas: neologismos, moldes apilados, mutación de escenas y una coaparición memorable entre paraguas y biblioteca sumergida. Pero no hay puntuación semántica automática, no hay tasa validada de aciertos y la terminación EOS no está verificada de manera suficiente. Cien generaciones completadas no son cien respuestas correctas.
 
-La evaluación futura debe etiquetar cada aparición como pertinente, parcialmente pertinente o fuera de contexto, y contrastarla con las preguntas y sus rúbricas. La abstención calibrada exige reconocer qué información falta y por qué; repetir una frase de cautela no es suficiente.
-
-### El cambio de moldes: de «Su función» a «Su propuesta»
-
-En la revisión del checkpoint de 20.000 pasos destacaban «Su función es X, no Y» y los encabezados de tipo formulario. En 30.000 pasos, la expresión «Su propuesta» aparece en un recuento manual de 23 respuestas (#7, #10, #25, #26, #33, #46, #48, #52, #53, #55, #56, #57, #58, #63, #66, #67, #70, #71, #74, #84, #85, #92 y #97). El molde «La primera [X]» se anota en quince respuestas.
-
-Son recuentos literales/manuales que deben reproducirse automáticamente sobre el JSON antes de tratarlos como métricas definitivas. La observación principal es que el repertorio de plantillas parece rotar y combinarse: una fórmula de apertura puede preceder a otra fórmula de contenido. No sabemos aún si esa combinación mejora la adaptación a la pregunta; las salidas revisadas muestran que con frecuencia sigue sin hacerlo.
-
-### Lo que ha desaparecido — en esta muestra
-
-La revisión no encuentra en el holdout de 30k varios tics destacados en checkpoints anteriores: «El patrón», «impacto» como bucle dominante, «Michaelación», «servidícula», «menos dinero conocimiento», «ni sus e inocuo» y la aparición independiente del termómetro oxidado. La familia del paraguas tampoco conserva exactamente su formulación anterior.
-
-Es correcto decir que estos fragmentos no aparecen en la muestra revisada de cien respuestas. No es correcto declararlos extinguidos del modelo: una muestra finita no permite descartar que reaparezcan con otros prompts, semillas o configuraciones. «Ocho tics muertos» funciona como imagen narrativa, no como conclusión estadística.
-
-### Lectura del hito: más variación, capacidad aún no acreditada
-
-El checkpoint de 30.000 pasos ofrece una superficie de generación más variada en las muestras revisadas: neologismos, plantillas apiladas, cambios de objeto y una combinación memorable entre el paraguas y la biblioteca sumergida. Pero la evaluación no asigna una puntuación semántica automática, y las respuestas continúan mostrando fragmentación, asociaciones fuera de contexto y conclusiones incompletas. Las cien generaciones completadas no equivalen a cien respuestas correctas; tampoco existe aquí una tasa validada de aciertos.
-
-Por tanto, el diagnóstico se limita a la evolución cualitativa de los tics. El holdout permite documentar la salida y conservar el comportamiento observado, no declarar una mejora de competencia. La siguiente comparación deberá mantener el mismo conjunto de preguntas, tokenizer y protocolo, y añadir anotación de pertinencia, corrección y terminación EOS verificable.
-
-### Decisión
-
-El checkpoint de 30.000 pasos queda registrado como **selección experimental activa** en `models/active.json`. La promoción administrativa no significa que haya superado una evaluación semántica ni que sea mejor que el checkpoint anterior en exactitud. Su valor en esta crónica es documentar un nuevo régimen de generación y preservar un caso especialmente memorable de recombinación léxica.
+El checkpoint queda registrado como **selección experimental activa** en `models/active.json`. La promoción administrativa no equivale a validación semántica ni acredita superioridad en exactitud. El holdout documenta un régimen de generación; no otorga título de sabio.
 
 > El paraguas encontró la biblioteca. La biblioteca estaba sumergida. Everest contestó desde el fondo. El loro tomó nota y acuñó «Avector». Nadie ha demostrado todavía que sepa dónde está la escalera. Vigilad la homeostasis.
+
+*Glosa final:* el modelo ya no pide que vuelva el patrón. Ahora pide que le abran la biblioteca, le den fuero al paraguas y nombren a Everest archivero mayor. El escribano se niega a certificar que aquello sea conocimiento; pero, por no faltar a la cortesía, le concede una vitrina.
+
+---
 
 ## Historial de ejecuciones
 
@@ -416,19 +340,20 @@ El checkpoint de 30.000 pasos queda registrado como **selección experimental ac
 
 El workflow `.github/workflows/update-holdout-registry.yml` escucha los eventos `workflow_run: completed`. Solo ejecuta el registro si el nombre de la ejecución contiene `holdout`. Consulta la API de GitHub para recuperar los artefactos de esa ejecución y actualiza esta tabla en `main`.
 
-El actualizador no descarga ni ejecuta los artefactos ni hace checkout del código de la ejecución que acaba de terminar. Para que una evaluación futura aparezca aquí automáticamente, nombra su workflow incluyendo la palabra `holdout` (por ejemplo, `RONIN-10M — checkpoint holdout`).
+El actualizador no descarga ni ejecuta los artefactos ni hace checkout del código de la ejecución que acaba de terminar. Para que una evaluación futura aparezca aquí automáticamente, el nombre del workflow debe incluir la palabra `holdout` (por ejemplo, `RONIN-10M — checkpoint holdout`).
 
 ## Fuero de lectura y reglas contra el embuste
 
 - Comparar checkpoints con las mismas preguntas, configuración de generación y condiciones de inferencia.
-- Separar coincidencia literal, evaluación semántica, calidad de respuesta, diversidad y latencia. No presentar una como sustituta de las demás.
+- Separar coincidencia literal, evaluación semántica, calidad de respuesta, diversidad y latencia. Ninguna sustituye a las demás.
 - Interpretar el lexicón de esperpento y los marcadores intencionales según el corpus, no como errores por defecto.
-- Registrar el identificador del checkpoint, SHA-256, run de entrenamiento, run de evaluación y artefactos.
-- Distinguir siempre entre resultados observados, hipótesis e interpretaciones narrativas.
+- Registrar identificador del checkpoint, SHA-256, run de entrenamiento, run de evaluación y artefactos.
+- Distinguir resultados observados, hipótesis e interpretaciones narrativas.
 - No interpretar la rotación de tics como progreso sin BPB/validación fija y análisis de adecuación de abstenciones.
 - Toda ejecución holdout debe mantener la convención en el nombre del archivo y en el campo `name:`; una discrepancia debe fallar explícitamente.
-- No declarar una puntuación de calidad si no se ha medido con un evaluador explícito y validado.
+- No declarar puntuación de calidad si no se ha medido con un evaluador explícito y validado.
+- Las citas de las antologías deben cotejarse contra el JSON del artefacto y conservar su identificador; no corregirlas para mejorar su gramática.
 
 ## Baseline de referencia
 
-La evaluación de paso 0 es la referencia inicial: 100 preguntas, checkpoint sin entrenamiento, tokenizer 8k y generación greedy sin RAG. Se conserva para comparar los siguientes checkpoints con el mismo holdout.
+La evaluación de paso 0 es la referencia inicial: 100 preguntas, checkpoint sin entrenamiento, tokenizer 8k y generación greedy sin RAG. Se conserva para comparar los siguientes checkpoints con el mismo holdout. El perfil de paso cero difiere en contexto y número de parámetros, por lo que esa comparación debe leerse con la cautela indicada en el prólogo.
