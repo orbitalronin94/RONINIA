@@ -7,7 +7,7 @@
   - [Regla de procedencia](#regla-de-procedencia)
   - [Cadena de custodia](#cadena-de-custodia-por-comparecencia)
   - [Inventario de señales](#inventario-de-señales-cuantificadas)
-- [Fuero primero — lengua, dato y escarnio](#fuero-primero-de-la-lengua-del-dato-y-del-escarnio)
+- [Léxico de la casa y criterio de uso](#léxico-de-la-casa-y-criterio-de-uso)\n- [Fuero primero — lengua, dato y escarnio](#fuero-primero-de-la-lengua-del-dato-y-del-escarnio)
 - [Fuero segundo — intención del loro](#fuero-segundo-de-la-intención-del-loro-que-non-es-agradar)
 - [Fuero tercero — tribunal y escribano](#fuero-tercero-del-tribunal-del-escribano-y-de-la-lengua-que-no-absuelve)
   - [Vocabulario de la probanza](#vocabulario-de-la-probanza)
@@ -101,6 +101,19 @@ GitHub publica el ZIP del artefacto, no una URL estable a una línea interior de
 
 
 ---
+
+## Léxico de la casa y criterio de uso
+
+La crónica toma voces del Lexicón del esperpento algorítmico de MINIRONIN y del caudal de Covarrubias (1611), del *Diccionario de autoridades* (1726–1739) y de los repertorios históricos de la RAE. El vocabulario técnico interno se define como convención editorial; no se atribuye a un diccionario antiguo sin cotejo de la entrada y de la acepción. La sátira recae sobre el mecanismo —la plantilla, el tic, la métrica convertida en oráculo—, nunca sobre quien pregunta de buena fe.
+
+- **Compilador de aire viciado:** salida de forma fluida y contenido impertinente (Lexicón, § 1.17).
+- **Notario del prompt vacío:** formulario que certifica solemnemente su propia falta de respuesta (Lexicón, § 2.22).
+- **Autómata del formulario sellado:** plantilla repetida donde debía comparecer una respuesta contextual (Lexicón, § 5.41).
+- **Tic con librea:** recurrencia que se disfraza de carácter.
+- **Folio ausente:** afirmación sin ID, artefacto o fuente suficiente.
+- **Sentencia revocable:** interpretación provisional que cede ante mejor prueba.
+
+La guía completa, con procedencia, voces, ejemplos y reglas para no confundir arcaísmo con adorno, está en [docs/LEXICO_Y_ESTILO.md](LEXICO_Y_ESTILO.md). Esta capa léxica es editorial: no añade observaciones ni puntuaciones a ningún holdout.
 
 ## Fuero primero: de la lengua, del dato y del escarnio
 
