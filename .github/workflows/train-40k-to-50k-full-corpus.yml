@@ -1,10 +1,6 @@
 name: RONIN-10M — continue 40k to 50k on full MINIRONIN corpus
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/train-40k-to-50k-full-corpus.yml"
   workflow_dispatch:
 
 permissions:
