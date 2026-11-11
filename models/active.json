@@ -2,18 +2,20 @@
   "model_id": "RONIN-10M",
   "status": "promoted_experimental",
   "promoted_at": "2026-11-11",
+  "promotion_note": "Selected as the active experimental checkpoint by project decision. The matched 100-question holdout verifies artifact and protocol identity but does not demonstrate a global semantic-quality improvement; no automated quality score is claimed.",
   "training": {
-    "run_id": 42984964609,
-    "run_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42984964609",
-    "cumulative_steps": 30000,
+    "run_id": 42994415440,
+    "run_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42994415440",
+    "cumulative_steps": 40000,
     "steps_this_run": 10000,
-    "parent_checkpoint_sha256": "53528c3002ba07fe493815b9bfa4bd69bdc08cf985f77a4e59958ee2b3344cc4",
-    "checkpoint": "checkpoint-30000.pt",
-    "checkpoint_sha256": "140230697a4df69f43c2cc4f6dc95ba2cc596b095532d3e171c486891d26bc4a",
-    "artifact_id": 13841428976,
-    "artifact_name": "ronin-10m-chain-30k-42984964609",
-    "artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42984964609#artifacts",
-    "artifact_sha256": "c4267a8e2c2d6e94e55e9f3ea95004d6c75014df49761791cf05451b80d624b0",
+    "parent_run_id": 42984964609,
+    "parent_checkpoint_sha256": "140230697a4df69f43c2cc4f6dc95ba2cc596b095532d3e171c486891d26bc4a",
+    "checkpoint": "checkpoint-40000.pt",
+    "checkpoint_sha256": "9da6ea9b294665213114858b90f44168d940c36fb54cdb4612186a896bda7698",
+    "artifact_id": 13848916129,
+    "artifact_name": "ronin-10m-chain-40k-42994415440",
+    "artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42994415440#artifacts",
+    "artifact_sha256": "a7cf13030c2e1390ed2bc9198c9de9acd2048a5dd70f3a1b47fbfa4a79107d6f",
     "parameters": 9757440,
     "config": {
       "vocab_size": 8192,
@@ -35,12 +37,12 @@
     "sha256": "605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4"
   },
   "evaluation": {
-    "run_id": 42994967183,
-    "run_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183",
-    "artifact_id": 13842918120,
-    "artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183#artifacts",
-    "artifact_name": "ronin-10m-checkpoint-30000-holdout-100-42994967183",
-    "artifact_sha256": "a844ec90d7c68e75c1c27771effc3356cb8a9623a2193b1527d62e0c303f297a",
+    "run_id": 43006818556,
+    "run_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556",
+    "artifact_id": 13847804015,
+    "artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556#artifacts",
+    "artifact_name": "ronin-10m-checkpoint-40000-holdout-100-43006818556",
+    "artifact_sha256": "6d3d4f7c1bf0525472f600c9edf202604e915d82d24e0622d5abf5931ce9d1e1",
     "questions": 100,
     "holdout_sha256": "3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535",
     "generation": "greedy_argmax",
@@ -52,10 +54,13 @@
     "automated_quality_score": null
   },
   "interpretation": {
-    "observed_change_from_20000_steps": "30k checkpoint completed all 100 generations under the same fixed holdout and inference protocol. Semantic quality has not been automatically scored; review answers before interpreting gains.",
+    "observed_change_from_30000_steps": "96 of 100 answer strings changed; 4 remained identical. Two outputs are empty. Literal template counts shifted, but no validated semantic-quality score is available.",
     "qualitative_findings": [
-      "HOLDOUT_PROTOCOL_VERIFIED: exact checkpoint, tokenizer, benchmark SHA and 100 generations verified."
+      "REGLAMENTO_AS_PATRON: the evidence-preface and caution phrases recur in place of task-specific answers.",
+      "EMPTY_AS_DATA: causality-003 and troll-016 are empty outputs.",
+      "SELF_STAMPING_SEAL: PERY:INITY and repeated PL fragments appear in generated text.",
+      "POETIC_ABSENCE_IS_NOT_EXTINCTION: umbrella/thermometer/submerged-library/Everest motifs are absent from this 100-answer sample."
     ],
-    "caveat": "Promotion selects this experimental checkpoint and preserves its immutable lineage. The 100-question holdout verifies generation and protocol identity, not semantic accuracy, reasoning, calibrated abstention, or general capability. No automated quality score is claimed."
+    "caveat": "Experimental promotion records the project's selected active checkpoint and preserves immutable lineage. The holdout verifies generation and protocol identity, not semantic accuracy, reasoning, calibrated abstention, EOS correctness, BPB improvement, or general capability. No automated quality score is claimed."
   }
 }
