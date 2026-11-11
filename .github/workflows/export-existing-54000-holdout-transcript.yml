@@ -124,3 +124,5 @@ jobs:
           path: reports/ronin-10m-54000-consulta-no-oficial-100.md
           if-no-files-found: error
           retention-days: 90
+
+# Re-trigger export after workflow registration on the default branch.
