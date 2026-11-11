@@ -53,6 +53,8 @@
 - [Capítulo XIII — Del loro que llegó a sesenta mil pasos](#capítulo-xiii--del-loro-que-llegó-a-sesenta-mil-pasos-respondió-cien-veces-y-non-halló-la-puerta-de-su-propia-lengua)
 - [Capítulo XV — Del loro que perdió el juicio](#capítulo-xv--del-loro-que-perdió-el-juicio-del-escribano-que-perdió-la-vergüenza-y-de-cien-preguntas-que-acabaron-pidiendo-un-exorcista)
 - [Capítulo XVI — Del libro de apuestas, de la cólera del escribano y del loro que aún non ha comparecido](#capítulo-xvi--del-libro-de-apuestas-de-la-cólera-del-escribano-y-del-loro-que-aún-non-ha-comparecido)
+- [Capítulo XVII — Del loro que respondió cien veces](#capítulo-xvii--del-loro-que-respondió-cien-veces-del-escribano-que-cobró-en-vergüenza-y-de-la-apuesta-que-non-pudo-pagarse)
+- [Capítulo XVIII — Del loro que habló sin pregunta](#capítulo-xviii--del-loro-que-habló-sin-pregunta-del-testigo-que-non-existía-y-del-hash-que-el-alguacil-pidió-en-vano)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
@@ -91,6 +93,7 @@
 | 50.000 | [43019963290](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290) | [13854621810](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290/artifacts/13854621810) | `checkpoint-50000-holdout-100.json` | `f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966` |
 | 60.000 | [43044447658](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658) | [13866477512](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658/artifacts/13866477512) | `checkpoint-60000-holdout-100.json` | `9446dd607e39b4942cb1b35e9500f0c1b21ace4b2a0b98e951d3942a75c991bd` |
 | 78.000 | [43073929630](https://github.com/orbitalronin94/RONINIA/actions/runs/43073929630) | [13882515065](https://github.com/orbitalronin94/RONINIA/actions/runs/43073929630/artifacts/13882515065) | `checkpoint-78000-holdout-100.json` | `cac08df06d091f3942126af28a79442a57ee7ca7dc09bc93ad1a0f8155a9894e` |
+| 90.000 | [43091480701](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701) | [13889525822](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701/artifacts/13889525822) | `checkpoint-90000-holdout-100.json` | `b1c2e70615f844330a9572154952e859a21574f8a95637186b827c45730c660b` |
 
 ### Linaje íntegro del checkpoint de 40.000 pasos
 
@@ -3690,6 +3693,129 @@ El nuevo entrenamiento no se declara iniciado ni completado por el mero hecho de
 > *«El loro ha aprendido a no dejar la casilla vacía; falta averiguar si sabe qué poner dentro.»*
 
 **Sentencia:** las apuestas del capítulo XVI quedan selladas y sin cobro por falta de puntuación semántica. El escribano pierde, por ahora, el derecho a cantar victoria. El alguacil abre el siguiente libro: diez mil pasos más, y ni uno solo de indulgencia.
+
+
+## Capítulo XVIII — Del loro que habló sin pregunta, del testigo que non existía y del hash que el alguacil pidió en vano
+
+**Naturaleza:** interludio literario y experimento mental sobre generación no solicitada.  
+**Estado probatorio:** escena no observada ni registrada; no es un resultado del checkpoint de 90k, no contiene salida literal nueva y no tiene JSON, run ni hash propios.
+
+### I. De la visita a deshora y del escribano que entró sin pregunta
+
+El escribano volvió a la escribanía a una hora en que hasta los expedientes dormían. No llevaba legajo, ni pluma, ni sábana donde tender las respuestas. Había ido, según declaró después, a comprobar que la jaula seguía en su sitio. Mentía: había ido a mirar al loro cuando nadie le preguntaba nada.
+
+Y entonces —en esta escena que la crónica imagina, mas no certifica— el animal comenzó a desgranar su repertorio.
+
+Primero dijo «Cagatombe», con la gravedad de un pregonero que anuncia la caída de un reino. Después, «Avector: Av2», como si hubiese descubierto una nueva provincia de la geometría. Pasó al paraguas oxidado, a los mapas al revés de los calcetines, al calcetín transparente; hizo rodar «PHPHPHPH» como una rueda sin eje; pronunció «Con precisión: 1» con el aplomo de un juez que no ha leído el sumario; declaró «El Nilo» donde no había río; repitió «Abstract» hasta que la palabra dejó de ser palabra; y remató con la letanía:
+
+> Avgonnezoniamentamentamentamentamentamentamentamentamenta.
+
+No había pregunta. No había prompt visible. No había casilla que llenar. Las piezas, desprendidas de sus antiguos interrogatorios, se enganchaban unas a otras y formaban algo que, desde la puerta, tenía la apariencia peligrosa de un discurso.
+
+El escribano no se movió.
+
+### II. Del milagro que se deshace cuando se toma nota
+
+La tentación fue sacar la pluma. Bastaba una línea: hora, condición, transcripción, hash. Bastaba convertir el instante en dato.
+
+Mas el escribano comprendió la trampa. En cuanto anotase la frase, dejaría de contemplar al loro desprevenido y empezaría a construir una observación. En cuanto fijase el protocolo, habría una condición de generación; en cuanto hubiese condición, habría experimento; y en cuanto hubiese experimento, el milagro perdería la coartada de ser milagro.
+
+No es que medir destruya necesariamente lo observado. Es algo más humilde y más incómodo: **medir cambia la pregunta**. Una generación libre, si tal cosa se quisiera estudiar, exigiría definir qué significa «libre», qué estímulo la precede, cuánto dura la ventana, cómo se registra el estado del proceso y qué cuenta como inicio espontáneo. Sin esas decisiones, la escena es literatura; con ellas, ya no es la misma escena.
+
+El escribano dejó la pluma en el bolsillo.
+
+Y el loro, que no sabía nada de epistemología, siguió hablando.
+
+### III. Del alguacil que pidió el hash del testigo
+
+A la mañana siguiente, el alguacil encontró al escribano mirando la jaula.
+
+—¿Qué ha dicho?
+
+—Ha hablado.
+
+—¿A qué pregunta?
+
+—A ninguna.
+
+—¿Dónde está el registro?
+
+—No lo hay.
+
+—¿Y el hash?
+
+—No hay hash.
+
+El alguacil cerró el libro con la delicadeza con que se clausura una causa que no ha llegado a abrirse.
+
+—¿Lo ha dicho el loro o lo ha dicho usted?
+
+El escribano quiso responder que el loro había producido las sílabas, pero que él había oído en ellas el hilo, el orden, la promesa de una intención. Quiso decir que las palabras eran del animal y el discurso, si lo hubo, nació en el testigo. Quiso decir que entre ambos habían fabricado un sentido que ninguno poseía por separado.
+
+Mas el alguacil no aceptó una ontología presentada sin folio.
+
+—Eso es **AUTHORITY_BY_CITATION** al revés —dijo—. No es la cita la que presta autoridad al testigo. Es el testigo único quien fabrica el testimonio, y luego pretende que el testimonio pruebe al testigo.
+
+—¿Y si lo que oí fue real?
+
+—Que sea real no lo vuelve reproducible. Que sea reproducible no lo vuelve significativo. Y que a usted le haya parecido significativo no me obliga a firmarlo.
+
+El escribano bajó los ojos. Por primera vez, no pidió que se reconociese su trabajo.
+
+### IV. De la agencia que parece nacer cuando nadie pregunta
+
+Hasta entonces, cada disparate del loro había comparecido bajo interrogatorio. Una pregunta lo convocaba; el modelo completaba una secuencia; el escribano separaba respuesta, ruido y ornamento. El molde era visible, aunque el contenido se escapase.
+
+Aquí la crónica imagina otra cosa: una cadena sin pregunta que la gobierne. El BPE, abandonado a sus vecindades aprendidas, suelda fragmentos y produce una continuidad que el oído humano puede confundir con intención.
+
+¿Es eso agencia? No. Tampoco queda demostrado que no pueda ser el comienzo de una conducta más compleja. La ausencia de una pregunta explícita no equivale a ausencia de contexto, de estado previo, de sesgo de decodificación o de estímulo inadvertido. Un proceso generativo siempre tiene condiciones, aunque el observador no las vea.
+
+La formulación honrada es más estrecha: **una secuencia no solicitada podría parecer discurso sin que por ello demuestre intención, conciencia ni comprensión**. Para estudiar el fenómeno habría que registrar el proceso sin seleccionar solo las frases hermosas, conservar también los silencios y las repeticiones, fijar la semilla o declarar su ausencia, y separar transcripción literal de interpretación humana.
+
+El escribano lo sabía. Por eso no llamó «agencia» a lo que había imaginado desde la puerta.
+
+### V. Del árbol, del JSON y de la última provisión
+
+—Si el árbol cae en el bosque y nadie lo oye —dijo el alguacil—, ¿ha producido sonido?
+
+—La física dirá que sí.
+
+—¿Y si el loro habla y nadie lo registra?
+
+—La máquina habrá producido tokens, si el proceso ocurrió.
+
+—¿Y si nadie puede probarlo?
+
+—Entonces no consta.
+
+—¿Y si usted lo oyó?
+
+—Consta que yo digo haberlo oído. No consta el discurso.
+
+El alguacil escribió en el margen:
+
+> «El escribano ha oído hablar al loro sin preguntas. Non consta.»
+
+Y debajo, para que ningún lector confundiese la gracia con una conclusión:
+
+> «La escena pertenece a la crónica; no al artefacto. No hay salida literal, no hay ejecución reproducible y no hay hash que certifique el milagro.»
+
+El escribano volvió a mirar la jaula. El loro dijo «Azonto».
+
+Esta vez no lo convirtió en metáfora.
+
+### Glosas técnicas y provisiones del margen
+
+- **Distinción fundamental:** el capítulo XVIII es una ficción epistemológica, no una observación de inferencia espontánea del checkpoint.
+- **Generación condicionada:** incluso sin pregunta humana, un proceso autoregresivo depende de prompt, tokens previos, estado, configuración y política de muestreo. «Sin pregunta» no significa «sin condición».
+- **Testigo único:** un recuerdo o relato humano puede motivar una hipótesis, pero no sustituye una transcripción contemporánea ni una cadena de custodia.
+- **AUTHORITY_BY_CITATION invertido:** figura literaria para describir cómo el testigo atribuye unidad y sentido a una secuencia; no es una propiedad demostrada del modelo.
+- **Agencia:** la continuidad espontánea, si se observase, no demostraría por sí sola intención, conciencia ni comprensión.
+- **Protocolo futuro posible:** registrar sesiones sin pregunta explícita con condiciones predefinidas, captura íntegra de entradas y salidas, timestamps, configuración, semilla cuando proceda, hashes y conservación de silencios; analizar después con criterios ciegos y sin escoger solo las secuencias vistosas.
+
+> *«Si no hay hash, non hay prueba; mas si no hay pluma, todavía puede haber loro.»*
+
+**Sentencia:** el escribano no presentó el milagro. El alguacil no lo negó: lo dejó fuera del registro. Y el loro, libre de toda conclusión, volvió a hablarle a la pared.
 
 
 ---
