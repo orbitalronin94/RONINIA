@@ -425,6 +425,100 @@ Queda asentada la baraja como **propuesta experimental de composición**, pendie
 
 ---
 
+## Capítulo VI — Del primer reparto de la baraja, que non estrenó capítulo sino ejemplo
+
+**Checkpoint:** ninguno; non hubo pesos que cargar ni padre que heredar.  
+**Run de entrenamiento:** ninguno.  
+**Run de evaluación:** ninguno. El escribano se examinó con su propio mazo y se declaró apto por unanimidad de una sola mano.  
+**SHA-256 del checkpoint:** non aplica; non hay checkpoint.  
+**SHA-256 del texto:** **non calculado**. Declárase la ausencia antes que fingir cifra: el primer hash honrado de esta crónica será, por ahora, el que non está.  
+**Semilla declarada:** `20261111`.  
+**Versión de la baraja:** `v1`, según el orden de listas asentado en el capítulo V.  
+**Algoritmo declarado:** el de los dedos; véase la probanza, donde los dedos comparecen y la máquina se ausenta.  
+**Ventana de originalidad:** quebrantada con conocimiento de causa.  
+**Resultado técnico:** un reparto declarado; cero capítulos nuevos; una diligencia administrativa que prueba que el ejemplo era anterior al método.
+
+> **Fuero de este capítulo.** Primer acto de escenificación de la baraja. Non es resultado experimental, non evalúa al modelo, non promueve checkpoint ni se incorpora al registro de ejecuciones. Su materia es el escribano, su mazo y la primera ocasión en que el mazo le devuelve la mercancía que el propio escribano había puesto en el escaparate.
+
+---
+
+### Del escribano que estrenó el mazo y non salió de la escribanía
+
+Sepades cuantos vieren, leyeren o padecieren este traslado que, publicado el fuero de la baraja, quiso el escribano estrenarla con la solemnidad de un canciller y la destreza de un tahúr de mesón. Fijó por semilla la fecha del día, `20261111`; invocó la versión `v1`; y asentó en el libro de repartos las piezas que dijo haber sacado, una por cada palo.
+
+El asiento quedó de esta suerte:
+
+| Palo declarado | Pieza asentada | Índice declarado |
+|---|---|---:|
+| Aperturas | «Sepan cuantos…» | 1 |
+| Objetos | termómetro oxidado | 2 |
+| Moldes | «Su función es X, no Y» | 1 |
+| Citas del Lexicón | «No confundas autoridad con demostración» | 1 |
+| Cierres | «Cierra con una acción verificable» | 4 |
+
+Miró el escribano la tabla; tornó a mirarla; y, por no fiarse de sus propios ojos, consultó el capítulo V. Allí halló el ejemplo que había ofrecido al público para ilustrar la baraja, y lo reconoció casi entero, con su jubón, sus botones y hasta el mismo olor a tinta:
+
+> «Sepan cuantos leyeren que a los veinte mil pasos el oxidado termómetro de la biblioteca sumergida su función es la repetición, no el proceso. No confundas autoridad con demostración. Cierra con una acción verificable.»
+
+Contó con los dedos de una mano; salió lo mismo. Contó con los de la otra, por si la primera fuese cómplice; salió lo mismo. Y entendió la afrenta: **el primer reparto non había producido un capítulo nuevo; había devuelto el ejemplo**. El ejemplo non ilustraba el método: el método había sido vestido después para parecerse al ejemplo. El escribano fabricó primero la muestra, inventó luego el sorteo y, al final, se admiró de que el azar tuviese su misma letra.
+
+Non era milagro, ni destino, ni intervención de los duendes del BPE. Era contabilidad con peluca.
+
+### Antología del reparto, o el texto que hubo de coserse a mano
+
+Quiso después el escribano demostrar que las cinco piezas podían dar prosa legible. Y compuso este pasaje, cosiendo con hilo propio lo que el mazo apenas le había entregado:
+
+> «Sepan cuantos leyeren este reparto que el oxidado termómetro, su función es la paciencia y non la temperatura, mide lo que nadie le pidió. No confundas autoridad con demostración: el termómetro tiene óxido, que es una forma lenta de tener razón. Cierra con una acción verificable: colgadlo otra vez bajo la escalera y anotad la hora.»
+
+El párrafo se sostiene en pie, aunque no se le concedería licencia para enseñar retórica. Mas al escribano le sobrevino doble espanto.
+
+El primero: **el texto es legible**. Non es bueno por decreto, mas se deja leer; y aun eso basta para que la baraja reclame algún mérito, siquiera el de haber puesto piezas sobre la mesa.
+
+El segundo, de mayor gravedad: **la baraja non escribió el párrafo**. Puso acaso algunos rótulos; el escribano añadió las junturas, las explicaciones, la ocurrencia del óxido y la orden de colgar el termómetro. El mazo suministró las piezas; la mano puso la sintaxis, el sentido y buena parte de la gracia —si gracia hubiere—. La costura non figuraba en el inventario, y el escribano pretendía cobrar como autor de una tela que había cosido él mismo.
+
+### Probanza del reparto, para que conste el algoritmo y non solamente la fecha
+
+El escribano declara el procedimiento realmente seguido, que fue menos máquina que ceremonia:
+
+1. **Entrada declarada:** semilla `20261111`, baraja `v1`, y orden de listas según el capítulo V.
+2. **Selección asentada:** la tabla precedente declara cinco piezas y sus índices. Mas el asiento non basta para probar que una selección se ejecutó.
+3. **Algoritmo:** non fue ejecutado por máquina. El escribano contó con los dedos, escogió o reconoció las piezas y asentó los índices. Non se conserva código, traza, estado intermedio ni función seudoaleatoria.
+4. **Reproducibilidad:** el reparto es **declarado**, non **reproducible**. Un tercero puede leer lo que el escribano dice haber elegido; non puede verificar que la semilla gobernase la elección, porque non la gobernó.
+5. **Ventana de originalidad:** la combinación se parece —y en lo sustancial remeda— al ejemplo del capítulo V. La regla mandaba volver a barajar si la combinación había aparecido en los tres capítulos precedentes. El escribano non volvió a barajar: llamó «homenaje» a la repetición. El alguacil de la semántica le abrió expediente por rebautizo.
+6. **Registro:** quedan asentados la fecha, la versión, los índices declarados y los textos. El hash del cuerpo non se calcula; se declara ausente. No se suplirá con ceros ni con una cifra inventada.
+
+Y quede dicho con sello y pregón: **el reparto non se ejecutó; se escenificó**. La semilla fue adorno de formulario, y el formulario, por una vez, tuvo la decencia de confesarlo.
+
+### Máculas del capítulo sexto
+
+> **SEED_COLLISION_WITH_EXAMPLE.** El primer reparto declarado reproduce el ejemplo que el mismo escribano había publicado en el capítulo V. Non se atribuye la coincidencia a un azar cuya ejecución non existe. La explicación más sobria es que el autor conocía su propio ejemplo y asentó después un reparto que lo imitaba. Se declara la colisión; non se declara casualidad.
+
+> **WINDOW_BYPASS_BY_HOMAGE.** La ventana de originalidad ordenaba volver a barajar ante una combinación reciente. El escribano non obedeció: rebautizó la repetición como «homenaje». Mudado el nombre, permanece el hecho. La ventana queda rota a sabiendas, que es la única manera decente de romper una regla sin fingir que se la ha cumplido.
+
+> **PALO_MAL_ASENTADO.** La tabla llama «Cierre» a «Cierra con una acción verificable», mas esa pieza figura en el palo de **Citas del Lexicón**, no en el de Cierres. El índice 4 del palo Cierres, siguiendo la lista publicada en el capítulo V, corresponde a «pregunta incómoda». Hay, pues, una clasificación errónea en el asiento. Y no para ahí el pleito: el ejemplo del capítulo V contiene dos objetos —termómetro y biblioteca sumergida— y dos citas del Lexicón, sin pieza inequívoca del palo Cierres. No es un reparto válido de una pieza por palo. El escribano lo reconoce y non lo enmienda retroactivamente.
+
+> **THREAD_UNDECLARED.** El capítulo nace de cinco piezas declaradas y de un número no inventariado de junturas, frases puente, explicaciones y remates añadidos por el escribano. La costura es parte sustancial de la autoría. Mientras no se registre, el método atribuirá al mazo una prosa que puso la mano.
+
+> **SEED_DECORATIVE.** La semilla `20261111` non gobernó la selección: no hubo algoritmo ejecutado ni traza. Una semilla que no interviene es sello en el aire. Para el capítulo siguiente de la baraja habrá que implementar y publicar algoritmo, orden, identificadores de piezas y traza; o suprimir la semilla y llamar al método por su nombre: «elegí estas piezas porque me pareció».
+
+> **HASH_ABSENT_BY_DECLARATION.** El hash del texto no se ha calculado. Esta ausencia no es un defecto que deba cubrirse con una cadena de ceros: es un dato editorial. Cuando se calcule, habrá de indicarse qué bytes se han resumido y conservarse el texto exacto. Un hash sin cuerpo es epitafio; un hash ficticio, firma en el agua.
+
+> **HISTORIAL_INVISIBLE.** Este capítulo non comparecerá en el Historial de ejecuciones, porque no hubo workflow, entrenamiento ni evaluación. El actualizador automático registra ejecuciones holdout, no interludios literarios. Que no figure en la tabla no significa que se haya perdido: significa que la tabla, por una vez, está haciendo su oficio.
+
+### Sentencia: del hombre que estrenó su mazo y halló su propia letra
+
+Este capítulo non acredita que la baraja produzca capítulos. Acredita que puede producirse un **reparto declarado**, y que entre las piezas y el texto hay una costura que el escribano había omitido de la cuenta.
+
+El primer reparto non estrenó nada: devolvió el ejemplo. La semilla non gobernó nada: fue invocada después del gesto. La ventana non protegió nada: fue quebrada y bautizada. El cierre non era cierre, sino cita; y el objeto venía acompañado de otro objeto que nadie había declarado. Solo el hilo era auténticamente del escribano, y precisamente ese hilo no constaba en el inventario.
+
+Queda asentado el capítulo VI como **interludio administrativo non registrado**, con su reparto declarado, su clasificación defectuosa y su colisión confesada. Non se promueve a resultado ni a prueba del modelo. Se archiva como advertencia: quien baraja acaba cosiendo; quien cose acaba siendo autor; y quien firma el formulario sin leer los palos termina pleiteando consigo mismo.
+
+> El escribano fijó la semilla para non repetirse; el mazo le devolvió su ejemplo. Contó con los dedos y le salió su propia letra. Buscó el hilo en el inventario y non lo halló. Y comprendió que el hilo era él. **Vigilad la homeostasis.**
+
+*Glosa final:* pidió el escribano a la baraja un capítulo nuevo; la baraja le restituyó su retrato. Firmólo como homenaje y colgólo en la pared. Pasó el loro, miró el cuadro y dijo: «Avector: Av2». El escribano, por primera vez, non anotó la respuesta. Non por falta de voluntad, sino porque non tenía hash.
+
+---
+
 ## Historial de ejecuciones
 
 | Fecha | Evaluación | Run ID | Resultado | Ejecución | Artefactos | Commit |
