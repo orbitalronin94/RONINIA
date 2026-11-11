@@ -901,14 +901,14 @@ No se comparó, pues, una pregunta nueva con una vieja, ni un tokenizador con ot
 | Respuestas literalmente idénticas entre checkpoints | — | 4 | solo 4 conservan el texto |
 | Respuestas cuyo texto cambió | — | 96 | 96 % |
 | Respuestas exactas distintas dentro del lote | 90 | 95 | +5 |
-| Longitud media, caracteres | 70,30 | 65,62 | −6,68 |
+| Longitud media, caracteres | 70,30 | 65,62 | −4,68 (−6,7 %) |
 | Longitud mediana, caracteres | 64,5 | 55 | −9,5 |
 
 Las cuatro respuestas que permanecieron literalmente iguales fueron las de `humility-001`, `troll-008`, `troll-012` y `troll-022`. Las otras noventa y seis mudaron de texto.
 
 Que haya cinco respuestas exactas distintas más no prueba que haya cinco ideas nuevas. Puede significar diversidad; puede significar fragmentación; puede significar que el loro ha cambiado de tartamudeo. El contador no distingue esas causas.
 
-La longitud media descendió casi un diez por ciento. Tampoco es por sí sola mejora ni regresión: una respuesta breve puede ser exacta y una larga puede ser humo. Pero, cuando se acompaña de dos respuestas vacías y de numerosos fragmentos sin relación suficiente con la pregunta, no cabe venderla como concisión virtuosa.
+La longitud media descendió un 6,7 %. Tampoco es por sí sola mejora ni regresión: una respuesta breve puede ser exacta y una larga puede ser humo. Pero, cuando se acompaña de dos respuestas vacías y de numerosos fragmentos sin relación suficiente con la pregunta, no cabe venderla como concisión virtuosa.
 
 ### III. De los tics que menguaron y de los que ocuparon su silla
 
