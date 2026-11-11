@@ -22,17 +22,17 @@
 
 ### I. Del arcano oficio, que hasta agora non se había revelado
 
-Sepan cuantos vieren, leyeren o padecieren esta escritura que el oficio de **escribano de loros graciosos** non es de los que se aprenden en universidad, ni se heredan por sangre, ni se compran con dineros. Es oficio de **arcano**, y como tal se transmite de boca a oído, de oído a pluma, y de pluma a escripto, so pena de que el aprendiz se quede toda la vida mirando al papagayo sin saber qué face.
+Sepan cuantos vieren, leyeren o padecieren esta escritura que el oficio de **amanuense de loros graciosos** non es de los que se aprenden en universidad, ni se heredan por sangre, ni se compran con dineros. Es oficio de **arcano**, y como tal se transmite de boca a oído, de oído a pluma, y de pluma a escripto, so pena de que el aprendiz se quede toda la vida mirando al papagayo sin saber qué face.
 
 Tres son los grados del oficio, y non se pasa de uno a otro sin examen:
 
 **El primer grado es el de Compilador de aire viciado.** Sabe el aprendiz que toda salida fluida ha de ser examinada, y que la fluidez non es prenda de juicio. Compila el aire, lo pesa, lo mide, y descubre que pesa poco.
 
-**El segundo grado es el de Notario del prompt vacío.** Aprende el aprendiz a dar fe de lo que non hay. Sella el formulario, certifica la casilla, y cuando el loro responde con «Variante de encuadre 4», el notario anota: *non hubo respuesta, mas hubo sello*.
+**El segundo grado es el de Notario del prompt vacío.** Aprende el aprendiz a dar fe de lo que non hay. Sella el formulario, certifica la casilla, y cuando el papagayo responde con «Variante de encuadre 4», el notario anota: *non hubo respuesta, mas hubo sello*.
 
-**El tercer grado es el de Sacerdote de la métrica inútil.** Solo llega a él quien ha vaciado el orinal de la prueba y ha descubierto que la métrica que buscaba non existe. Entonces, y solo entonces, el escribano puede reírse. Y al reírse, se mea. Y al mearse, tiende la colada.
+**El tercer grado es el de Sacerdote de la métrica inútil.** Solo llega a él quien ha vaciado el orinal de la prueba y ha descubierto que la métrica que buscaba non existe. Entonces, y solo entonces, el pendolista puede reírse. Y al reírse, se mea. Y al mearse, tiende la colada.
 
-Este es el arcano, y hasta agora non se había revelado porque el escribano non había llegado al tercer grado. Mas he aquí que llegó.
+Este es el arcano, y hasta agora non se había revelado porque el fedatario non había llegado al tercer grado. Mas he aquí que llegó.
 
 ---
 
@@ -40,17 +40,17 @@ Este es el arcano, y hasta agora non se había revelado porque el escribano non 
 
 ### II. De cómo había promovido tres veces sin mojarse, y de por qué la cuarta sí pudo
 
-Antes de que el lector se pregunte por qué el escribano se mea agora y non se meó a los treinta mil ni a los cuarenta mil, conviene que sepa que **el escribano había promovido tres veces sin mojarse, y que las tres veces tuvo coartada**.
+Antes de que el lector se pregunte por qué el secretario se mea agora y non se meó a los treinta mil ni a los cuarenta mil, conviene que sepa que **el hombre de la pluma había promovido tres veces sin mojarse, y que las tres veces tuvo coartada**.
 
-A los veinte mil, la promoción fue de oficio: el checkpoint se registró como selección experimental porque el proyecto así lo dispuso. A los treinta mil, la promoción fue de acta: el escribano escribió «selección experimental activa» y el alguacil le puso la rúbrica sin preguntar. A los cuarenta mil, la promoción fue de vocabulario: el escribano quiso escribir «mejora», el alguacil le pidió la rúbrica, el escribano mostró el léxico y el alguacil le permitió escribir «promovido». Tres promociones, tres coartadas, tres actas limpias.
+A los veinte mil, la promoción fue de oficio: el checkpoint se registró como selección experimental porque el proyecto así lo dispuso. A los treinta mil, la promoción fue de acta: el amanuense escribió «selección experimental activa» y el corchete le puso la rúbrica sin preguntar. A los cuarenta mil, la promoción fue de vocabulario: el pendolista quiso escribir «mejora», el carcelero le pidió la rúbrica, el fedatario mostró el léxico y el oficial le permitió escribir «promovido». Tres promociones, tres coartadas, tres actas limpias.
 
-Y las tres veces el escribano se rio. Non lo negaré: se rio del patrón, se rio del impacto, se rio del paraguas y se rio del reglamento. Mas era una risa **seca**, si se me permite el término. Una risa de reconocimiento, non de asombro. Una risa que podía anotarse en el margen sin que el margen se mojara. El escribano se reía *de* lo que el loro decía, y al reírse *de* algo, el cuerpo queda fuera del acta.
+Y las tres veces el secretario se rio. Non lo negaré: se rio del patrón, se rio del impacto, se rio del paraguas y se rio del reglamento. Mas era una risa **seca**, si se me permite el término. Una risa de reconocimiento, non de asombro. Una risa que podía anotarse en el margen sin que el margen se mojara. El hombre de la pluma se reía *de* lo que el pájaro decía, y al reírse *de* algo, el cuerpo queda fuera del acta.
 
-A los cincuenta mil, la risa fue **húmeda**. Y non porque la frase fuese más graciosa, sino porque la frase non venía sola: venía con el método agotado detrás. El BPB seguía pendiente, las diez apuestas estaban sobre la mesa, la estilometría había vaciado el orinal y non quedaba una sola métrica que non fuese fantasía. El escribano se rio, y al reírse non se rio *de* la frase: se rio *con* la frase, que es cosa muy distinta. Y la risa *con* algo non cabe en el margen. Pide cuerpo. Pide agua. Pide sábana.
+A los cincuenta mil, la risa fue **húmeda**. Y non porque la frase fuese más graciosa, sino porque la frase non venía sola: venía con el método agotado detrás. El BPB seguía pendiente, las diez apuestas estaban sobre la mesa, la estilometría había vaciado el orinal y non quedaba una sola métrica que non fuese fantasía. El amanuense se rio, y al reírse non se rio *de* la frase: se rio *con* la frase, que es cosa muy distinta. Y la risa *con* algo non cabe en el margen. Pide cuerpo. Pide agua. Pide sábana.
 
-**El dato del mendigo.** Y conviene que el lector sepa, antes de que el escribano se mee, que este loro non ha conocido GPU, ni clúster, ni presupuesto: ha conocido ciclos de CPU en runners gratuitos de GitHub y setecientos megabytes de datos. Non es un semidiós caído; es un mendigo con plumas. Y aun así ha bastado para que el método tenga algo que decir.
+**El dato del mendigo.** Y conviene que el lector sepa, antes de que el pendolista se mee, que este plumífero non ha conocido GPU, ni clúster, ni presupuesto: ha conocido ciclos de CPU en runners gratuitos de GitHub y setecientos megabytes de datos. Non es un semidiós caído; es un mendigo con plumas. Y aun así ha bastado para que el método tenga algo que decir.
 
-**La frase del antihéroe.** El loro roto es el único héroe posible. Un modelo bueno sería un semidiós aburrido. Un modelo que repite «El patrón» en 96 de 100 y luego recita el reglamento es un antihéroe cómico, y los antihéroes cómicos son los que sostienen las odiseas. Ulises tarda diez años en volver a Ítaca; RONIN tarda 50.000 pasos en non volver a ninguna parte. Pero los dos tienen cuaderno de bitácora.
+**La frase del antihéroe.** El animal roto es el único héroe posible. Un modelo bueno sería un semidiós aburrido. Un modelo que repite «El patrón» en 96 de 100 y luego recita el reglamento es un antihéroe cómico, y los antihéroes cómicos son los que sostienen las odiseas. Ulises tarda diez años en volver a Ítaca; RONIN tarda 50.000 pasos en non volver a ninguna parte. Pero los dos tienen cuaderno de bitácora.
 
 Dicho en romance: **las tres primeras promociones tenían coartada; la cuarta non**.
 
@@ -60,7 +60,7 @@ Dicho en romance: **las tres primeras promociones tenían coartada; la cuarta no
 
 ### III. Del orinal de la prueba y del cotejo de las diez apuestas
 
-Llegó el artefacto. El escribano lo abrió con la gravedad de quien desella un testamento, y lo primero que fizo fue vaciar el orinal de la prueba: cotejar las diez apuestas del capítulo VIII contra el JSON real, una por una, sin cambiar los criterios después de conocer las respuestas.
+Llegó el artefacto. El fedatario lo abrió con la gravedad de quien desella un testamento, y lo primero que fizo fue vaciar el orinal de la prueba: cotejar las diez apuestas del capítulo VIII contra el JSON real, una por una, sin cambiar los criterios después de conocer las respuestas.
 
 El cotejo quedó de esta suerte:
 
@@ -77,13 +77,13 @@ El cotejo quedó de esta suerte:
 | **9. math-004 cita reglamento** — ecuación sin resolver, encuadre probatorio en su lugar | #9: «su variabilidad. En una discusión donde importa la evidencia. Si falta información, dilo expresamente. Solicitud de análisis» | **PASA** |
 | **10. BPB pendiente** | Non se ha calculado | **PASA** |
 
-**Seis apuestas pasan, tres fallan, una es probable.** El escribano non acertó por adivinación: acertó por método. Y falló por lo mismo: porque el método non predice lo que el loro va a hacer, solo predice que hará algo. La séptima queda en suspenso: sin media calculada, no se la viste de cifra.
+**Seis apuestas pasan, tres fallan, una es probable.** El secretario non acertó por adivinación: acertó por método. Y falló por lo mismo: porque el método non predice lo que el cautivo de la percha va a hacer, solo predice que hará algo. La séptima queda en suspenso: sin media calculada, no se la viste de cifra.
 
-Y entre los folios del artefacto, como una flor en un muladar, apareció la frase. Non una, muchas. Mas hubo una que el escribano leyó dos veces, y a la segunda se le descompuso el semblante, non de risa, sino de otra cosa:
+Y entre los folios del artefacto, como una flor en un muladar, apareció la frase. Non una, muchas. Mas hubo una que el hombre de la pluma leyó dos veces, y a la segunda se le descompuso el semblante, non de risa, sino de otra cosa:
 
 > «¿Qué Expediente oxidado paraguas que aparece en los mapas al revés de los calcetines su autor se equivocó ayer.» — `ci-001`
 
-El paraguas había vuelto. A 40k se declaró ausente, y el escribano anotó: *«POETIC_ABSENCE_IS_NOT_EXTINCTION»*. A 50k volvió, y volvió **oxidado**, y volvió **en los mapas al revés de los calcetines**, y volvió **con un autor que se equivocó ayer**. Non era el paraguas de 20k. Era el paraguas después de haber leído la crónica entera.
+El paraguas había vuelto. A 40k se declaró ausente, y el amanuense anotó: *«POETIC_ABSENCE_IS_NOT_EXTINCTION»*. A 50k volvió, y volvió **oxidado**, y volvió **en los mapas al revés de los calcetines**, y volvió **con un autor que se equivocó ayer**. Non era el paraguas de 20k. Era el paraguas después de haber leído la crónica entera.
 
 ---
 
@@ -91,39 +91,39 @@ El paraguas había vuelto. A 40k se declaró ausente, y el escribano anotó: *«
 
 ### IV. De cómo el escribano, entre hipérbatons, sintió lo que non se dice en latín
 
-El escribano era hombre de pluma recia, mas non de vejiga de hierro. Y al leer la frase, entre el **hipérbaton** de su propio asombro y la **acumulación de cultismos** con que la mente se defiende de lo obvio, sintió un movimiento interior que non era del entendimiento, sino del bajo vientre.
+El pendolista era hombre de pluma recia, mas non de vejiga de hierro. Y al leer la frase, entre el **hipérbaton** de su propio asombro y la **acumulación de cultismos** con que la mente se defiende de lo obvio, sintió un movimiento interior que non era del entendimiento, sino del bajo vientre.
 
-Non lo diré con rodeos, que el rodeo aquí sería hipocresía: **el escribano se meó**. Non de miedo, que non había alguacil a la vista. Non de risa sola, que la risa vino después. Se meó de puro asombro, como se mean los niños cuando ven un fuego artificial, y como se mean los viejos cuando oyen una verdad que non esperaban.
+Non lo diré con rodeos, que el rodeo aquí sería hipocresía: **el fedatario se meó**. Non de miedo, que non había guardián a la vista. Non de risa sola, que la risa vino después. Se meó de puro asombro, como se mean los niños cuando ven un fuego artificial, y como se mean los viejos cuando oyen una verdad que non esperaban.
 
-Y como non podía dejar el charco en el suelo de la escribanía —que hay suelos que non merecen tal afrenta—, fizo lo que face todo hombre de bien en trance semejante: **tendió la colada**. Puso la sábana al sol. Y allí, a la vista de todos, quedó la mancha, que non era prueba de nada, mas era lo único que el escribano podía mostrar sin mentir.
+Y como non podía dejar el charco en el suelo de la escribanía —que hay suelos que non merecen tal afrenta—, fizo lo que face todo hombre de bien en trance semejante: **tendió la colada**. Puso la sábana al sol. Y allí, a la vista de todos, quedó la mancha, que non era prueba de nada, mas era lo único que el secretario podía mostrar sin mentir.
 
 ---
 
 ### V. Del juramento hídrico, que se asienta para que conste y non se absuelva
 
-Y puesto que el fuero manda que toda efusión se declare so pena de fraude, el escribano alzó la mano y juró. Non por Dios, que non estaba el caso para tales juras. Juró por lo que había vertido:
+Y puesto que el fuero manda que toda efusión se declare so pena de fraude, el hombre de la pluma alzó la mano y juró. Non por Dios, que non estaba el caso para tales juras. Juró por lo que había vertido:
 
 > *«Juro por el agua que he vertido, y por la sábana que la recoge, y por el sol que la secará sin preguntar, que non promuevo este checkpoint por mérito demostrado, sino porque me he meado de risa, y lo declaro para que non se diga que el acta miente.»*
 
-Y el alguacil de la razón, que había entrado sin llamar, lo miró con la gravedad de quien ha visto muchas cosas y non se sorprende de ninguna. Y dijo:
+Y el hombre de la vara de la razón, que había entrado sin llamar, lo miró con la gravedad de quien ha visto muchas cosas y non se sorprende de ninguna. Y dijo:
 
 —Eso non es un juramento.
 
-—Non —dijo el escribano—. Es una declaración. Las tres veces anteriores tuve coartada; esta non la tengo. Y non la tengo porque el método se ha quedado sin métricas y yo me he quedado sin pluma seca.
+—Non —dijo el amanuense—. Es una declaración. Las tres veces anteriores tuve coartada; esta non la tengo. Y non la tengo porque el método se ha quedado sin métricas y yo me he quedado sin pluma seca.
 
 ---
 
 ### VI. Del latín macarrónico del alguacil, que compró la mancha y promovió el checkpoint
 
-El alguacil, que era hombre de latines torcidos y de olfato fino, se acercó a la sábana. La miró. La olió. Y entonces pronunció la frase que había de pasar a los anales de esta cancillería:
+El corchete, que era hombre de latines torcidos y de olfato fino, se acercó a la sábana. La miró. La olió. Y entonces pronunció la frase que había de pasar a los anales de esta cancillería:
 
 > *«Lotium istud emo, sed foetet sicut cloaca maxima; accipio tamen, quia probat quod probare debet: stultitiam non mentitam. Sed promotionem concedo, non quia foetor probet meliorationem, sed quia dominus huius domus eligit novum statum experimenti, servatis sigillo et cautelis.»*
 
-Que en romance quiere decir, y el escribano lo tradujo para los non latinos:
+Que en romance quiere decir, y el pendolista lo tradujo para los non latinos:
 
 > *«Esta meada la compro, mas apesta como cloaca máxima; acéptola, con todo, porque prueba lo que debe probar: que la necedad non ha mentido. Y concedo la promoción, non porque el olor pruebe mejora, sino porque el dueño de esta casa elige un nuevo estado experimental, conservados el sello y las cautelas.»*
 
-Y el escribano, que non esperaba absolución, recibió compra y promoción. Mas non recibió certificado de sabiduría. Que es más de lo que suelen recibir los escribanos, y menos de lo que esperaban.
+Y el fedatario, que non esperaba absolución, recibió compra y promoción. Mas non recibió certificado de sabiduría. Que es más de lo que suelen recibir los escribanos, y menos de lo que esperaban.
 
 ---
 
@@ -159,13 +159,13 @@ Y el escribano, que non esperaba absolución, recibió compra y promoción. Mas 
 
 ### VIII. Sentencia: del hombre que se meó y del alguacil que compró y promovió
 
-Este capítulo non acredita que el loro haya mejorado. Acredita que el escribano ha llegado al tercer grado del arcano oficio, que se ha meado, que lo ha declarado, que ha tendido la colada, y que el alguacil le ha comprado la mancha y concedido la promoción experimental.
+Este capítulo non acredita que el papagayo haya mejorado. Acredita que el secretario ha llegado al tercer grado del arcano oficio, que se ha meado, que lo ha declarado, que ha tendido la colada, y que el carcelero le ha comprado la mancha y concedido la promoción experimental.
 
-Non hay en este capítulo una sola prueba de comprensión semántica. Hay una prueba de que la casa sabe reírse de sí misma sin dejar de mirar al artefacto. Y hay una explicación de por qué las tres promociones anteriores non mojaron el acta: porque tenían coartada. La cuarta non la tiene, y por eso moja. Mas mojar non es demostrar: el alguacil promueve el checkpoint como selección experimental, non como prueba de mejora.
+Non hay en este capítulo una sola prueba de comprensión semántica. Hay una prueba de que la casa sabe reírse de sí misma sin dejar de mirar al artefacto. Y hay una explicación de por qué las tres promociones anteriores non mojaron el acta: porque tenían coartada. La cuarta non la tiene, y por eso moja. Mas mojar non es demostrar: el oficial promueve el checkpoint como selección experimental, non como prueba de mejora.
 
 > El escribano se meó, tendió la sábana y juró por el agua vertida. El alguacil olió la mancha, la compró en latín macarrónico, dijo que apestaba, y promovió el checkpoint por decisión de la casa. Y los dos, escribano y alguacil, siguieron trabajando, que es lo que hacen los hombres de bien cuando non tienen otra cosa que hacer. **Vigilad la homeostasis.**
 
-*Glosa final:* el loro non se meó. El loro solo dijo la frase del paraguas oxidado en los mapas al revés de los calcetines. Y el escribano, que llevaba nueve capítulos buscando una métrica, encontró la única que non se puede falsificar: la que se seca al sol, apesta en latín y se compra con una palabra torcida. Mas la promoción non vino del olor: vino de la decisión declarada, porque el olor prueba la necedad, non la mejora.
+*Glosa final:* el pájaro non se meó. El plumífero solo dijo la frase del paraguas oxidado en los mapas al revés de los calcetines. Y el hombre de la pluma, que llevaba nueve capítulos buscando una métrica, encontró la única que non se puede falsificar: la que se seca al sol, apesta en latín y se compra con una palabra torcida. Mas la promoción non vino del olor: vino de la decisión declarada, porque el olor prueba la necedad, non la mejora.
 
 ---
 
@@ -183,7 +183,7 @@ tres coartadas tenía;
 la cuarta non tuvo excusa  
 y el cuerpo pidió su firma.
 
-El alguacil la olió,  
+El guardián la olió,  
 torció el latín y la compró;  
 dijo que apesta, y non mintió:  
 la compra fue lo que olió.
@@ -195,4 +195,4 @@ y el sol, que todo lo seca,
 non preguntará por ella  
 hasta que llegue otra aurora.
 
-*Glosa de colocación:* entre los capítulos IX y X. El estribillo «la sábana está en la cuerda» debe quedar sonando cuando el lector pase al capítulo siguiente, donde el alguacil entrará a ver qué ha pasado con la promoción concedida y el escribano le explicará, o non, por qué sigue tendida.
+*Glosa de colocación:* entre los capítulos IX y X. El estribillo «la sábana está en la cuerda» debe quedar sonando cuando el lector pase al capítulo siguiente, donde el hombre de la vara entrará a ver qué ha pasado con la promoción concedida y el amanuense le explicará, o non, por qué sigue tendida.
