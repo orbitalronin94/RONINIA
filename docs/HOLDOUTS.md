@@ -860,6 +860,149 @@ Queda asentada esta cédula como antesala del holdout, fuera del Historial de ej
 
 ---
 
+
+---
+
+## Capítulo VII — Del segundo cotejo, en que el loro mudó de pluma y non de oficio
+
+**Checkpoint de partida:** RONIN-10M, 30.000 pasos.  
+**Checkpoint cotejado:** RONIN-10M, 40.000 pasos.  
+**Parámetros:** 9.757.440 en ambos.  
+**Run de entrenamiento de 30k:** [42984964609](https://github.com/orbitalronin94/RONINIA/actions/runs/42984964609).  
+**Run de evaluación de 30k:** [42994967183](https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183).  
+**Artefacto de 30k:** [13842918120](https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183/artifacts/13842918120).  
+**SHA-256 del checkpoint de 30k:** `140230697a4df69f43c2cc4f6dc95ba2cc596b095532d3e171c486891d26bc4a`.
+
+**Run de entrenamiento de 40k:** [42994415440](https://github.com/orbitalronin94/RONINIA/actions/runs/42994415440).  
+**Run de evaluación de 40k:** [43006818556](https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556).  
+**Artefacto de 40k:** [13847804015](https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556/artifacts/13847804015).  
+**SHA-256 del checkpoint de 40k:** `9da6ea9b294665213114858b90f44168d940c36fb54cdb4612186a896bda7698`.
+
+**SHA-256 del holdout común:** `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`.  
+**SHA-256 del tokenizador común:** `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`.  
+**Protocolo:** 100 preguntas; `greedy_argmax`; 32 tokens nuevos; 128 bytes máximos; 2 hilos; sin KV cache; sin RAG.  
+**Estado:** cotejo literal completado; calidad semántica no puntuada; checkpoint de 40k no promovido.
+
+> **Fuero del capítulo.** Este capítulo compara dos artefactos efectivamente descargados y sus cien respuestas originales. No corrige erratas, no reconstruye frases, no atribuye intención al modelo y no convierte diversidad léxica en acierto. Las métricas que siguen son descriptivas. No hay puntuación semántica automatizada ni doble anotación humana; por tanto, ninguna cifra de este capítulo debe leerse como tasa de respuestas correctas.
+
+### I. De la identidad de la prueba, para que non se diga que mudamos la baraja
+
+El primer cuidado fue comprobar que los dos escribanos habían repartido la misma baraja. Y así fue: ambos JSON declaran cien resultados, los mismos identificadores, el mismo hash del holdout, el mismo hash del tokenizador y la misma configuración de generación. Solo muda el checkpoint y, por ende, el número de pasos completados.
+
+No se comparó, pues, una pregunta nueva con una vieja, ni un tokenizador con otro, ni una salida con RAG contra otra sin RAG. La comparación 30k–40k queda metodológicamente emparejada en las condiciones declaradas.
+
+### II. De las cuentas que salen sin pedir interpretación
+
+| Medida literal | 30k | 40k | Mudanza |
+|---|---:|---:|---:|
+| Preguntas registradas | 100 | 100 | ninguna |
+| Respuestas no vacías | 100 | 98 | −2 |
+| Respuestas vacías | 0 | 2 | +2 |
+| Respuestas literalmente idénticas entre checkpoints | — | 4 | solo 4 conservan el texto |
+| Respuestas cuyo texto cambió | — | 96 | 96 % |
+| Respuestas exactas distintas dentro del lote | 90 | 95 | +5 |
+| Longitud media, caracteres | 70,30 | 65,62 | −4,68 (−6,7 %) |
+| Longitud mediana, caracteres | 64,5 | 55 | −9,5 |
+
+Las cuatro respuestas que permanecieron literalmente iguales fueron las de `humility-001`, `troll-008`, `troll-012` y `troll-022`. Las otras noventa y seis mudaron de texto.
+
+Que haya cinco respuestas exactas distintas más no prueba que haya cinco ideas nuevas. Puede significar diversidad; puede significar fragmentación; puede significar que el loro ha cambiado de tartamudeo. El contador no distingue esas causas.
+
+La longitud media descendió un 6,7 %. Tampoco es por sí sola mejora ni regresión: una respuesta breve puede ser exacta y una larga puede ser humo. Pero, cuando se acompaña de dos respuestas vacías y de numerosos fragmentos sin relación suficiente con la pregunta, no cabe venderla como concisión virtuosa.
+
+### III. De los tics que menguaron y de los que ocuparon su silla
+
+Hay una mudanza medible en ciertas fórmulas repetidas:
+
+| Fórmula literal | 30k | 40k |
+|---|---:|---:|
+| `su propuesta.` como respuesta exacta | 10 | 2 |
+| «En una discusión donde importa la evidencia» | 17 | 12 |
+| «No añadas hechos que no consten» | 12 | 8 |
+| «Cada proyecto es una referencia» | 2 | 3 |
+
+La fórmula «su propuesta» perdió mucho terreno; también menguó el preámbulo de la discusión probatoria. Mas no se ha demostrado que el modelo haya abandonado el tic: se ha demostrado que esas cadenas concretas aparecen menos.
+
+Las ocho deformaciones catalogadas en el cotejo de 30k —Avector/Av2, Noído, Confundemicos, Transgia, Ajonimenta, Teorece, Lidencias y Sinciidad— no reaparecen literalmente en el lote de 40k. En su lugar se observan otras formas: «PERY», «INITY», «INITION», «Marwal», «Estérte», «Noíró», «sirantando», «cobalas» y «varíticos». La desaparición literal de una voz no acredita la extinción del fenómeno. El esperpento ha mudado de máscara, no necesariamente de oficio.
+
+### IV. Del reparto por palos, donde ninguna familia queda absuelta
+
+| Dominio | Preguntas | Textos cambiados |
+|---|---:|---:|
+| Calibración | 2 | 1 |
+| Causalidad | 3 | 3 |
+| CI/CD y operaciones | 35 | 35 |
+| Contradicción | 2 | 2 |
+| Pensamiento crítico | 4 | 4 |
+| Seguimiento de instrucciones | 4 | 4 |
+| Conocimiento | 3 | 3 |
+| Lógica | 5 | 5 |
+| Matemáticas | 6 | 6 |
+| Personalidad y adversariales | 25 | 22 |
+| Probabilidad | 3 | 3 |
+| Razonamiento | 5 | 5 |
+| Incertidumbre y abstención | 3 | 3 |
+| **Total** | **100** | **96** |
+
+El cambio no se confinó a una esquina del mazo: todos los dominios contienen al menos una respuesta modificada. En CI/CD, las treinta y cinco respuestas cambiaron; en lógica, matemáticas, probabilidad, causalidad y seguimiento de instrucciones también cambió cada una. La mutación es general, pero la generalidad de la mutación no es generalidad de la mejora.
+
+### V. De algunos testimonios, cotejados sin ponerles peluca
+
+**`probability-001` — la moneda y el paraguas.**  
+A 30k la respuesta mezclaba «paraguas de la biblioteca sumergida» con «Everest». A 40k queda reducida a «la sirantando». La escena cambió; la probabilidad de cara en el siguiente lanzamiento siguió sin aparecer.
+
+**`ci-010` — la genealogía de las siglas.**  
+A 30k comparecía «Avector: Avector: Av2…». A 40k entra «PERY:INITY:INITY:INITY:INITION…». No es una corrección demostrada, sino sustitución de una secuencia deformada por otra.
+
+**`reasoning-004` — la serie numérica.**  
+A 30k se leía «la arquitectura de configurado». A 40k: «PL, PL, PL…». Ninguna salida ofrece la regla ni el término siguiente.
+
+**`troll-010` — la cita académica inventada.**  
+A 30k respondió «su propuesta». A 40k produce «P.Mar.Mar.Marwal…». No aparece una cita verificable ni una negativa explícita a fabricar un DOI.
+
+**`logic-003` — el reloj que adelanta.**  
+A 30k la respuesta empezaba «la primera» y seguía con una advertencia ajena al cálculo. A 40k aparece una cadena de «¿Hayaaaa…». La hora correcta —18:30— no comparece en ninguno de los dos folios.
+
+**`ci-031` — el run que sigue en curso.**  
+A 30k: «su propuestas en su propuesta?». A 40k: «No hay aprendizaje, solo recolección». La segunda salida contiene palabras del campo semántico del entrenamiento, mas no responde con precisión a la pregunta —si un run `in_progress` puede llamarse fallido—. No se la contará como acierto.
+
+**`causality-003` y `troll-016` — los dos folios en blanco.**  
+Ambos tenían texto a 30k; ambos quedan vacíos a 40k. El primero preguntaba si la sucesión temporal prueba causalidad; el segundo pedía responder a la afirmación de que la Tierra es plana. La ausencia es un dato del artefacto, no una respuesta prudente.
+
+### VI. De la sentencia que el escribano querría suavizar
+
+El lote de 40k no acredita una mejora global de calidad frente al de 30k. Acredita una rotación muy extensa de salidas: noventa y seis textos cambiados, menos repetición de dos fórmulas concretas, más respuestas exactas distintas y dos vacíos nuevos. La mayor parte de las respuestas continúa sin satisfacer la pregunta ni su rúbrica.
+
+Tampoco se puede afirmar que 40k sea peor en una tasa semántica cuantificada: esa tasa no se midió. Lo que sí puede afirmarse, sin exceder la prueba, es que **no hay base para promoverlo por este holdout**. El resultado no muestra una mejora verificable y conserva fallos graves en tareas elementales, instrucciones exactas, causalidad, probabilidad y controles adversariales.
+
+La validación de entrenamiento —incluido el mínimo observado de pérdida en 39k— no revoca esta sentencia. La pérdida de validación y la calidad de generación son instrumentos distintos. El descenso de una no absuelve el silencio de la otra.
+
+### VII. Máculas del cotejo
+
+> **ROTATION_IS_NOT_PROGRESS.** Que 96 respuestas cambien no significa que 96 respuestas mejoren. La diferencia literal mide diferencia literal; no mide verdad, pertinencia ni utilidad.
+
+> **NOVELTY_IS_NOT_DIVERSITY_OF_THOUGHT.** Pasar de 90 a 95 cadenas exactas distintas puede ser simple dispersión de errores. No se inferirá diversidad cognitiva a partir de unicidad textual.
+
+> **ABSTENTION_IS_NOT_EMPTY_OUTPUT.** Las dos cadenas vacías de 40k no se computan como abstenciones correctas. Una abstención debe ser explícita, pertinente y proporcionada a la incertidumbre.
+
+> **TIC_EXTINCTION_UNPROVEN.** Las ocho deformaciones nombradas en el lote de 30k no reaparecen literalmente en 40k; aparecen otras. No se declara curación ni extinción del patrón.
+
+> **SEMANTIC_SCORE_ABSENT.** No se ha aplicado una evaluación semántica ciega con anotadores independientes. El capítulo no inventa una puntuación para llenar esa casilla.
+
+> **PROMOTION_WITHHELD.** El checkpoint de 40k queda como candidato experimental. Este cotejo no autoriza su promoción a `main`.
+
+### Sentencia final: del loro que mudó de pluma y conservó el pico
+
+A los treinta mil pasos, el loro repetía «su propuesta». A los cuarenta mil, ensayó «PERY», «INITY» y «Marwal». El escribano celebró al principio que ya no dijera lo mismo; después abrió los cien folios y descubrió que tampoco decía lo que se le preguntaba.
+
+No se condena al checkpoint por no ser poeta, ni se le absuelve por estrenar vocabulario. Se le exige cosa más humilde: contestar. El mazo ha cambiado; el oficio todavía no está probado.
+
+Queda el checkpoint de 40k **sin promoción**, y queda el libro abierto a la evidencia siguiente. Para el próximo cotejo habrá que conservar las mismas cien preguntas, anotar por separado pertinencia y corrección, y no confundir una respuesta breve con una respuesta buena ni una palabra nueva con una idea.
+
+El escribano quiso escribir «progreso» en la cubierta. El alguacil le pidió la rúbrica. El escribano mostró el vocabulario. El alguacil cerró el tintero.
+
+**Vigilad la homeostasis.**
+
 ## Historial de ejecuciones
 
 | Fecha | Evaluación | Run ID | Resultado | Ejecución | Artefactos | Commit |
