@@ -1,0 +1,126 @@
+name: Export existing RONIN 54k holdout transcript
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/export-existing-54000-holdout-transcript.yml"
+
+permissions:
+  actions: read
+  contents: write
+
+concurrency:
+  group: roninia-export-existing-54000-transcript
+  cancel-in-progress: false
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Download the already completed 54k inference artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ronin-10m-official-holdout-54000-100-43036575830
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/RONINIA
+          run-id: 43036575830
+          path: recovered-artifact
+
+      - name: Render exact questions and answers as Markdown
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          candidates = list(Path("recovered-artifact").rglob("checkpoint-54000-holdout-100.json"))
+          if len(candidates) != 1:
+              raise SystemExit(f"Expected one holdout JSON, found {len(candidates)}: {candidates}")
+          source = candidates[0]
+          data = json.loads(source.read_text(encoding="utf-8"))
+          rows = data.get("results", [])
+          assert data.get("completed_steps") == 54000, data.get("completed_steps")
+          assert data.get("holdout_count") == 100 and len(rows) == 100, len(rows)
+          assert data.get("checkpoint_sha256") == "5eb84ddd7df2512336bf7d86f590eeaf0a8007d9057ecd05167bcd4d9f963d9d"
+          assert data.get("holdout_sha256") == "79ac322e107fd47ee6f03eb13f83b50952fae4b574f9bf6b763e5c4cc47d11ba"
+
+          def fence_for(*values):
+              longest = 0
+              for value in values:
+                  run = 0
+                  for char in value:
+                      if char == "`":
+                          run += 1
+                          longest = max(longest, run)
+                      else:
+                          run = 0
+              return "`" * max(3, longest + 1)
+
+          lines = [
+              "# RONIN-10M — consulta no oficial de 100 preguntas",
+              "",
+              "- Checkpoint: **54.000 pasos**",
+              "- Run de inferencia: [43036575830](https://github.com/orbitalronin94/RONINIA/actions/runs/43036575830)",
+              f"- SHA-256 checkpoint: `{data['checkpoint_sha256']}`",
+              f"- SHA-256 tokenizador: `{data['tokenizer_sha256']}`",
+              f"- SHA-256 muestra: `{data['holdout_sha256']}`",
+              f"- Respuestas no vacías: **{sum(bool((x.get('answer') or '').strip()) for x in rows)}/100**",
+              f"- Respuestas vacías: **{sum(not (x.get('answer') or '').strip() for x in rows)}**",
+              "",
+              "> Transcripción literal de las inferencias guardadas en el artefacto. No se han regenerado, corregido ni evaluado las respuestas. Muestra diagnóstica; no es benchmark de promoción ni material para el libro.",
+              "",
+          ]
+          for index, item in enumerate(rows, 1):
+              question = str(item.get("question", ""))
+              answer = str(item.get("answer") or "")
+              fence = fence_for(question, answer)
+              lines.extend([
+                  f"## {index:03d}. {item.get('domain', 'sin dominio')}",
+                  "",
+                  "**Pregunta**",
+                  "",
+                  fence,
+                  question,
+                  fence,
+                  "",
+                  "**Respuesta literal de RONIN**",
+                  "",
+                  fence,
+                  answer if answer else "[RESPUESTA VACÍA]",
+                  fence,
+                  "",
+              ])
+
+          out = Path("reports/ronin-10m-54000-consulta-no-oficial-100.md")
+          out.parent.mkdir(parents=True, exist_ok=True)
+          out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+          print(f"Rendered {len(rows)} literal Q/A pairs to {out}")
+          PY
+
+      - name: Publish transcript to repository and job summary
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reports/ronin-10m-54000-consulta-no-oficial-100.md
+          if ! git diff --cached --quiet; then
+            git commit -m "docs: publish literal 54k diagnostic holdout transcript"
+            git push origin HEAD:main
+          fi
+          cat reports/ronin-10m-54000-consulta-no-oficial-100.md >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Upload plain-text transcript
+        uses: actions/upload-artifact@v4
+        with:
+          name: ronin-10m-54000-consulta-no-oficial-100-md
+          path: reports/ronin-10m-54000-consulta-no-oficial-100.md
+          if-no-files-found: error
+          retention-days: 90
