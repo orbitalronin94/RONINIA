@@ -2,6 +2,10 @@ name: RONIN-10M — official 100-prompt holdout at 54k
 
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/holdout-ronin-10m-54000-100.yml"
 
 permissions:
   actions: read
@@ -19,7 +23,7 @@ jobs:
       SOURCE_RUN_ID: "43025252739"
       TOKENIZER_RUN_ID: "42849436025"
       EXPECTED_CHECKPOINT_SHA256: "5eb84ddd7df2512336bf7d86f590eeaf0a8007d9057ecd05167bcd4d9f963d9d"
-      EXPECTED_TOKENIZER_SHA256: "605834d0d1deea545518be54ae0936060845107b906172f6628d0ff952e57a4"
+      EXPECTED_TOKENIZER_SHA256: "605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4"
       EXPECTED_PROMPT_SHA256: "79ac322e107fd47ee6f03eb13f83b50952fae4b574f9bf6b763e5c4cc47d11ba"
     steps:
       - uses: actions/checkout@v4
