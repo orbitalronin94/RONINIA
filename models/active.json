@@ -3,18 +3,17 @@
   "status": "promoted_experimental",
   "promoted_at": "2026-11-11",
   "training": {
-    "run_id": 42902793379,
-    "run_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42902793379",
-    "cumulative_steps": 10000,
-    "checkpoint": "checkpoint-10000.pt",
-    "checkpoint_sha256": "b82df8b5d06171a9e6db6157d4036854ea445a84f8462b731c4d6d9892e3e172",
-    "artifact_id": 13805344020,
-    "artifact_name": "ronin-10m-checkpoints-42902793379",
-    "artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42902793379/artifacts/13805344020",
-    "artifact_sha256": "0f97e0bd6254e505f80090f1b153223821e7cb337d39e56f20c3cb5657469d84",
-    "lineage_artifact_id": 13805289091,
-    "lineage_artifact_name": "ronin-10m-chain-42902793379",
-    "lineage_artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42902793379/artifacts/13805289091",
+    "run_id": 42973299789,
+    "run_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42973299789",
+    "cumulative_steps": 20000,
+    "steps_this_run": 10000,
+    "parent_checkpoint_sha256": "b82df8b5d06171a9e6db6157d4036854ea445a84f8462b731c4d6d9892e3e172",
+    "checkpoint": "checkpoint-20000.pt",
+    "checkpoint_sha256": "53528c3002ba07fe493815b9bfa4bd69bdc08cf985f77a4e59958ee2b3344cc4",
+    "artifact_id": 13838480475,
+    "artifact_name": "ronin-10m-chain-20k-42973299789",
+    "artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42973299789#artifacts",
+    "artifact_sha256": "642b04c5c4d24626960beedfe2d500d566be1811559b4e309a73a172312d24d7",
     "parameters": 9757440,
     "config": {
       "vocab_size": 8192,
@@ -24,7 +23,11 @@
       "heads": 8,
       "d_ff": 1536,
       "dropout": 0,
-      "tied_embeddings": true
+      "tied_embeddings": true,
+      "threads": 2,
+      "batch_size": 4,
+      "learning_rate": 0.0001,
+      "tokenization_reused": true
     }
   },
   "tokenizer": {
@@ -32,10 +35,12 @@
     "sha256": "605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4"
   },
   "evaluation": {
-    "run_id": 42970549370,
-    "run_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370",
-    "artifact_id": 13832434652,
-    "artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652",
+    "run_id": 42982933515,
+    "run_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515",
+    "artifact_id": 13838855379,
+    "artifact_url": "https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515#artifacts",
+    "artifact_name": "ronin-10m-checkpoint-20000-holdout-100-42982933515",
+    "artifact_sha256": "53e1fcb943b19c9e45cb5d5a8278226d9fe3d8db1d6ce5f1de4306aed7f83f2a",
     "questions": 100,
     "holdout_sha256": "3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535",
     "generation": "greedy_argmax",
@@ -47,8 +52,12 @@
     "automated_quality_score": null
   },
   "interpretation": {
-    "observed_change_from_5000_steps": "greater output diversity; the previous dominant 'El patrón' response is no longer the sole dominant mode",
-    "corpus_style_note": "Esperpento lexicon and intentional evasive expressions, including NH markers and 'ni puta idea', are part of the intended training distribution and must not automatically be scored as errors",
-    "caveat": "Promotion records the selected experimental checkpoint; it does not claim a validated accuracy or semantic-quality percentage."
+    "observed_change_from_10000_steps": "The previous literal 'impacto' loop is no longer dominant; 'El patrón' remains absent; 'ni puta idea' appears less often and is frequently embedded in longer diagnostic templates. 'Su propuesta', 'Su función es X, no Y', and evidence/negative-control phrasing recur. The phrase family around a transparent umbrella sleeping under a staircase appears three times in the reviewed outputs.",
+    "qualitative_findings": [
+      "NEGATIVE_CONTROL_LEAKAGE: memorized negative-control/rubric language is emitted out of context; this is not yet evidence of calibrated restraint.",
+      "FUNCTIONAL_DEFINITION_MOLD: the 'Su función es X, no Y' template recurs without demonstrating semantically correct slot filling.",
+      "POETIC_EMERGENCE: the umbrella/staircase image is a candidate surreal recombination; corpus provenance and tokenizer segmentation have not yet been established."
+    ],
+    "caveat": "Promotion selects this experimental checkpoint and preserves its immutable lineage. The 100-question holdout verifies generation and protocol identity, not semantic accuracy, reasoning, calibrated abstention, or general capability. No automated quality score is claimed."
   }
 }
