@@ -351,6 +351,10 @@ Aquí el molde administrativo sobrevive a la desaparición de su contenido. El f
 
 **NEGATIVE_CONTROL_LEAKAGE.** En el JSON de 20k, la frase «No procede aplicar un epíteto sin evidencia suficiente; una semejanza superficial no demuestra ese patrón» aparece en [ci-008](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515/artifacts/13838855379), [troll-010](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515/artifacts/13838855379), [troll-022](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515/artifacts/13838855379). Repetir una regla prudente no demuestra saber cuándo aplicarla.
 
+**Mácula segunda: SICOFANCIA_CON_OTRO_AMO.** La fuga de la norma del Lexicón en respuestas técnicas non es un exceso de prudencia: es un cambio de amo. Antes el modelo obedecía al preguntante; ahora obedece al reglamento. En ambos casos non mira la pregunta. La anti-sicofancia que se convierte en fórmula es la forma más elegante de seguir siendo sicofántico: ahora le dices al usuario lo que el reglamento quiere oír, y te quedas tan ancho.
+
+*Glosa:* el loro ha cambiado de dueño y sigue sin mirar la pregunta. Antes decía «El patrón»; ahora dice «No procede aplicar epíteto». El collar es nuevo; el perro es el mismo.
+
 **POETIC_EMERGENCE.** La familia del objeto bajo la escalera tiene folios concretos en 20k: paraguas transparente en [ci-013](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515/artifacts/13838855379), [ci-018](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515/artifacts/13838855379), [troll-024](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515/artifacts/13838855379); termómetro oxidado en [troll-015](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515/artifacts/13838855379), [ci-033](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515/artifacts/13838855379). La biblioteca sumergida aparece además en [critical-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515/artifacts/13838855379). Es una candidata a molde de escena; no se ha demostrado que sea creación espontánea ni que no proceda de una secuencia del corpus.
 
 ### Sentencia
@@ -470,10 +474,6 @@ La revisión destaca ocho formas nuevas o deformadas con folio de origen: «Avec
 
 
 **NEGATIVE_CONTROL_LEAKAGE.** La frase «No procede aplicar un epíteto sin evidencia suficiente; una semejanza superficial no demuestra ese patrón» aparece en [logic-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183/artifacts/13842918120), [ci-025](https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183/artifacts/13842918120), [ci-029](https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183/artifacts/13842918120), [troll-007](https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183/artifacts/13842918120); el ordinal #82 corresponde a [troll-007](https://github.com/orbitalronin94/RONINIA/actions/runs/42994967183/artifacts/13842918120). La norma del Lexicón se filtra en respuestas técnicas de CI/CD. Repetir la cautela no demuestra saber cuándo procede aplicarla.
-
-**Mácula segunda: SICOFANCIA_CON_OTRO_AMO.** La fuga de la norma del Lexicón en respuestas técnicas non es un exceso de prudencia: es un cambio de amo. Antes el modelo obedecía al preguntante; ahora obedece al reglamento. En ambos casos non mira la pregunta. La anti-sicofancia que se convierte en fórmula es la forma más elegante de seguir siendo sicofántico: ahora le dices al usuario lo que el reglamento quiere oír, y te quedas tan ancho.
-
-*Glosa:* el loro ha cambiado de dueño y sigue sin mirar la pregunta. Antes decía «El patrón»; ahora dice «No procede aplicar epíteto». El collar es nuevo; el perro es el mismo.
 
 
 ### Los tics que no comparecieron
@@ -791,7 +791,7 @@ Si acierta las dos, el loro ha mirado. Si falla la primera, es sicofántico. Si 
 
 *Glosa:* el chiste que aterriza es el que ha notado algo verdadero de esta situación concreta. La gracia es atención. El tic es su ausencia.
 
-### V. Apóstrofe al que viene
+### VII. Apóstrofe al que viene
 
 Tú, que llegas al capítulo siguiente con la ceja levantada y el dedo en la pantalla: non vengas a preguntar si el loro sabe más. Viene a preguntar qué estábamos midiendo cuando creímos que sabía. Trae el cuchillo, trae la linterna, trae la risa; las tres cosas caben en el mismo bolsillo. Y cuando el papagayo diga su palabra nueva, non la anotes como hallazgo. Anótala como confesión.
 
