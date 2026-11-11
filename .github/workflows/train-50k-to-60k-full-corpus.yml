@@ -223,8 +223,8 @@ jobs:
           checkpoints=list(out.glob("checkpoint-*.pt"))
           if not checkpoints:
             raise SystemExit("No recoverable checkpoints were produced")
-          latest=max(checkpoints,key=lambda p:int(re.search(r"checkpoint-(\\d+)",p.name).group(1)))
-          step=int(re.search(r"checkpoint-(\\d+)",latest.name).group(1))
+          latest=max(checkpoints,key=lambda p:int(re.search(r"checkpoint-(\d+)",p.name).group(1)))
+          step=int(re.search(r"checkpoint-(\d+)",latest.name).group(1))
           assert step == 60000, {"latest_checkpoint":latest.name,"cumulative_steps":step}
           digest=hashlib.sha256(latest.read_bytes()).hexdigest()
           cache=json.loads(Path("token-cache/token-manifest.json").read_text())
