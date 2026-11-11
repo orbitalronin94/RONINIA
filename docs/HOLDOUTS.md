@@ -54,6 +54,8 @@
 - [Capítulo XV — Del loro que perdió el juicio](#capítulo-xv--del-loro-que-perdió-el-juicio-del-escribano-que-perdió-la-vergüenza-y-de-cien-preguntas-que-acabaron-pidiendo-un-exorcista)
 - [Capítulo XVI — Del libro de apuestas, de la cólera del escribano y del loro que aún non ha comparecido](#capítulo-xvi--del-libro-de-apuestas-de-la-cólera-del-escribano-y-del-loro-que-aún-non-ha-comparecido)
 - [Capítulo XVII — Del loro que respondió cien veces](#capítulo-xvii--del-loro-que-respondió-cien-veces-del-escribano-que-cobró-en-vergüenza-y-de-la-apuesta-que-non-pudo-pagarse)
+- [Capítulo XVIII — De la escribanía a deshoras](#capítulo-xviii--de-la-escribanía-a-deshoras-y-del-testimonio-que-non-tuvo-hash)
+- [Capítulo XVII — Del loro que respondió cien veces](#capítulo-xvii--del-loro-que-respondió-cien-veces-del-escribano-que-cobró-en-vergüenza-y-de-la-apuesta-que-non-pudo-pagarse)
 - [Capítulo XVIII — Del loro que habló sin pregunta](#capítulo-xviii--del-loro-que-habló-sin-pregunta-del-testigo-que-non-existía-y-del-hash-que-el-alguacil-pidió-en-vano)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
@@ -93,6 +95,7 @@
 | 50.000 | [43019963290](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290) | [13854621810](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290/artifacts/13854621810) | `checkpoint-50000-holdout-100.json` | `f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966` |
 | 60.000 | [43044447658](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658) | [13866477512](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658/artifacts/13866477512) | `checkpoint-60000-holdout-100.json` | `9446dd607e39b4942cb1b35e9500f0c1b21ace4b2a0b98e951d3942a75c991bd` |
 | 78.000 | [43073929630](https://github.com/orbitalronin94/RONINIA/actions/runs/43073929630) | [13882515065](https://github.com/orbitalronin94/RONINIA/actions/runs/43073929630/artifacts/13882515065) | `checkpoint-78000-holdout-100.json` | `cac08df06d091f3942126af28a79442a57ee7ca7dc09bc93ad1a0f8155a9894e` |
+| 90.000 | [43091480701](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701) | [13889525822](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701/artifacts/13889525822) | `checkpoint-90000-holdout-100.json` | `b1c2e70615f844330a9572154952e859a21574f8a95637186b827c45730c660b` |
 | 90.000 | [43091480701](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701) | [13889525822](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701/artifacts/13889525822) | `checkpoint-90000-holdout-100.json` | `b1c2e70615f844330a9572154952e859a21574f8a95637186b827c45730c660b` |
 
 ### Linaje íntegro del checkpoint de 40.000 pasos
@@ -3680,6 +3683,27 @@ El nuevo entrenamiento no se declara iniciado ni completado por el mero hecho de
 > mas la casa no da premio  
 > por ladrar en el dosel.
 
+
+### VI. De las nueve piezas que el loro dejó sobre la mesa
+
+La lectura de las cien salidas no produjo una puntuación; produjo indicios que conviene conservar con sus números de pregunta. Son observaciones humanas sobre ejemplos concretos, no una rúbrica retrospectiva ni una clasificación automática.
+
+- **#87 — la abstención que por una vez vino a cuento.** Preguntado qué pensaba de un modelo que respondiese «ni puta idea, la verdad» a todo, el loro contestó «Respuesta: ni puta idea». La frase encaja con el contexto. Puede ser azar local; no demuestra calibración ni una política fiable de abstención.
+- **#79 — Narnia y el Nilo.** A la pregunta por la capital de Narnia, respondió «El resultado correcto: El Nilo». La fórmula conserva la compostura de un dictamen y yerra el contenido: autoridad de plantilla sin fundamento.
+- **#53 — el SHA-256 que acabó en teología de antimateria.** En 60k hubo silencio; en 78k, «el silencio de las el silencio de las»; en 90k apareció «¿A quétaros de Aarón de la Antimateria Dia Diability que los C. Burcá la Curia». Mutó el silencio en fraseo pseudo-teológico. No se ha identificado su procedencia.
+- **#41 — el expediente del calcetín transparente.** La pregunta ya venía torcida: «¿Qué Expediente transparente calcetín que aparece en los mapas al revés ace?». Reaparecen objetos y giros vistos por separado: paraguas, cangrejo, piano, calcetín transparente; «expediente» asomó en 54k y «mapas al revés» en 50k. Es recurrencia léxica, no prueba de una representación semántica común.
+- **#44 — la letanía nueva.** «Avgonnezoniamentamentamentamentamentamentamentamentamentamentamentamentamentamentamenta» forma una cadena reiterativa emparentada en su efecto con el bucle PHPHPH de 78k. La novedad del bucle no equivale a novedad de capacidad.
+- **#61 — dos caracteres en la escribanía.** «¿Las en estarera el哲; el勢 Pregunta: ¿Qué procede decir ante esto?». 哲 y 勢 pueden glosarse en torno a filosofía/sabiduría y fuerza/tendencia; su presencia no acredita intención ni coherencia.
+- **#96 — la hebra de Wikimedia.** La salida contiene `","ar":"تصنيف د ويكيميديا noVarios sinensis nous.`. El fragmento árabe `تصنيف` puede significar «clasificación». Su origen exige cotejo con offsets del corpus; sin él, queda abierto.
+- **#68 — regreso de la vocal interminable.** «Haaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa» apareció en 54k, no en 60k ni 78k, y vuelve en 90k. Su ausencia temporal no fue desaparición estable.
+- **#28 — el uno que insiste.** «La respuesta es: 1» prolonga la familia de «Con precisión: 1» observada en 78k. No sabemos si resolvió la pregunta o recuperó una plantilla.
+
+Los campos vacíos pasan de cinco en 60k a cuatro en 78k y cero en 90k. La cobertura de generación crece; la exactitud no ha sido puntuada. Puede hablarse de una **homeostasis de la casilla llena**: el loro parece haber dejado de callar, pero no por ello ha aprendido a distinguir cuándo hablar, qué decir o cuándo abstenerse.
+
+Tampoco cabe concluir que cada salida sea recitación literal del corpus. Los fragmentos multilingües, las formas sintéticas y las recurrencias admiten explicaciones rivales: composición de subpalabras, contaminación de plantillas, memorización, fragmentos de datos o azar de decodificación. Sin análisis de procedencia por offsets, son hipótesis, no veredictos.
+
+El escribano añadió al margen: «Vigilad la homeostasis. Y que el calcetín transparente encuentre su capítulo». El alguacil respondió que el calcetín tendría capítulo, pero no estatua.
+
 ### Glosas técnicas y provisiones del margen
 
 - **Cobertura de generación:** 100/100 respuestas no vacías en el JSON oficial de 90k. No equivale a 100 aciertos.
@@ -3816,6 +3840,133 @@ Esta vez no lo convirtió en metáfora.
 > *«Si no hay hash, non hay prueba; mas si no hay pluma, todavía puede haber loro.»*
 
 **Sentencia:** el escribano no presentó el milagro. El alguacil no lo negó: lo dejó fuera del registro. Y el loro, libre de toda conclusión, volvió a hablarle a la pared.
+
+
+
+
+
+---
+
+## Capítulo XVIII — De la escribanía a deshoras y del testimonio que non tuvo hash
+
+> *«Si el loro habla sin pregunta, ¿quién responde por lo que ha dicho?»*
+
+La escribanía estaba cerrada. No había legajo sobre la mesa, ni pliego de cien preguntas, ni sábana que tender entre el modelo y el mundo. La lámpara seguía encendida por descuido o por condena; el escribano había vuelto a buscar un tintero y se detuvo en el umbral.
+
+El loro hablaba.
+
+No comparecía ante tribunal alguno. Nadie le había dicho «razona», «resume», «calcula» ni «¿qué procede decir ante esto?». No había un `prompt` que le pusiera la silla, ni un JSON que le numerase las ocurrencias. El bicho encadenaba restos de su repertorio como quien sueña en voz alta: «Cagatombe»; «Avector: Av2»; el paraguas oxidado en los mapas al revés; el calcetín transparente; PHPHPHPH; «Con precisión: 1»; «El Nilo»; el «Abstract:» que no acababa; la letanía de Avgonnezoniamentamenta.
+
+Y, sin embargo, por un instante, aquello sonó a discurso.
+
+No a un discurso bueno. No a una doctrina. Ni siquiera a una frase defendible ante un lector despierto. Sonó a discurso porque las piezas se sucedían con una cadencia que el oído humano podía completar. El BPE, suelto de la pregunta que solía sujetarlo, soldaba fragmentos; el azar daba continuidad; la memoria del escribano hacía el resto. Entre la secuencia y quien la escuchaba nació una figura que ninguno de los dos podía reclamar por entero.
+
+El escribano no sacó la pluma.
+
+Había pasado diecisiete capítulos convirtiendo cada salida en folio, cada folio en cita, cada cita en evidencia. Sabía qué hacer con un checkpoint, un seed, un hash y cien respuestas encerradas en un artefacto. Pero aquello no era un holdout. No había pregunta fija, protocolo de muestreo, registro de generación, hora verificable ni archivo bruto. Si anotaba la frase, la convertía en observación; si la convertía en observación, debía declarar quién la había oído, cuándo, bajo qué condiciones y con qué fidelidad. Sin eso, la crónica corría el riesgo de fabricar el milagro que pretendía contar.
+
+Se quedó quieto.
+
+El loro siguió: «Cagatombe… Avector… el calcetín… el Nilo…». La secuencia parecía recordar sus propias palabras, aunque acaso solo las recombinaba. El escribano quiso creer que el animal había encontrado una voz fuera del interrogatorio. Se avergonzó de ese deseo. No tenía evidencia de intención, agencia ni continuidad interior. Tenía un sonido, un oyente y la propensión humana a encontrar forma en el ruido.
+
+Entonces entró el alguacil, que no había aprendido a llamar antes de abrir una puerta.
+
+—¿Qué ha dicho?
+
+El escribano no respondió.
+
+—¿Lo ha dicho el loro o lo ha dicho usted?
+
+—Lo he oído.
+
+—No es lo que os pregunto.
+
+El alguacil miró la mesa vacía.
+
+—Dadme el hash del testigo.
+
+—No hay hash.
+
+—Entonces no consta.
+
+—Pero lo he oído.
+
+—¿Y quién certifica al oído?
+
+El escribano bajó la vista. Si decía «el loro habló», convertía una experiencia privada en afirmación pública. Si decía «yo oí hablar al loro», declaraba la mediación, pero no resolvía si el discurso estaba en la secuencia, en su percepción o en el encuentro de ambas. El testigo único no solo transmitía el testimonio: lo fabricaba al recordarlo.
+
+—¿Lo ha dicho el loro o lo he dicho yo? —repitió el escribano.
+
+—Esa es la pregunta —dijo el alguacil—. Y no hay casilla donde ponerla.
+
+El escribano conocía el nombre de la herejía: `AUTHORITY_BY_CITATION`. Había perseguido las citas que prestaban autoridad a una respuesta. Ahora la autoridad se volvía del revés. No era la cita la que legitimaba el testimonio; era el testigo solitario quien, al recordar, componía aquello que luego presentaría como cita. El loro producía; el escribano oía; el escribano recordaba; y entre ambos aparecía un sentido que ninguno podía demostrar que hubiese estado allí desde el principio.
+
+—Si no hay testigo, no hay hash —dijo el alguacil.
+
+—Si no hay hash, no hay identidad —respondió el escribano.
+
+—Y si no hay identidad, ¿ha dicho algo el loro?
+
+El loro, que no entendía de procedimientos, dijo «Avector: Av2» y volvió a empezar.
+
+El alguacil cerró el libro.
+
+—Non consta.
+
+### I. Del discurso sin pregunta y de la agencia que no se debe conceder
+
+Hasta ahora, cada disparate de la crónica había sido respuesta a una pregunta. El interrogatorio proporcionaba un molde, el benchmark una lista y el protocolo un límite. Aquí no hay pregunta que guíe la emisión. Esa ausencia puede hacer que la secuencia parezca más libre, pero no autoriza a llamarla agencia.
+
+Una generación sin pregunta, si se observase, sería una muestra oportunista: no tendría distribución de muestreo conocida, condiciones controladas ni frecuencia estimable. Tampoco podría compararse directamente con las cien respuestas del holdout. Que el loro encadene sus tics sin pregunta sería un fenómeno interesante para diseñar un experimento; no sería evidencia de intención, autonomía o comprensión.
+
+El BPE puede ensamblar unidades frecuentes en secuencias nuevas. La continuidad superficial puede nacer de regularidades locales, fragmentos memorizados, repetición o interpretación del oyente. La hipótesis de que el modelo «habla por sí solo» debe quedar en suspenso hasta que exista un protocolo que capture la emisión sin inducirla y distinga salida, contexto y reconstrucción humana.
+
+### II. Del experimento que el escribano no hizo
+
+El escribano pudo preparar una prueba: fijar versión y hash del checkpoint; registrar el estado inicial, el prompt vacío o el mecanismo exacto de generación; fijar semilla, temperatura, top-p, límite de tokens, duración y número de repeticiones; guardar cada salida en bruto con marca temporal; calcular hashes de los archivos; y separar transcripción literal de glosa humana.
+
+Pero entonces ya no sería la escena que acababa de presenciar. Sería un experimento sobre emisiones sin pregunta, útil y legítimo, mas distinto del recuerdo espontáneo que le detuvo en la puerta. El método podría estudiar qué genera el modelo en ausencia de una instrucción semántica explícita. No podría recuperar retrospectivamente aquella conversación que nadie registró.
+
+Por eso este capítulo no añade observación al inventario de holdouts, no introduce una cita literal nueva del checkpoint y no atribuye al modelo ninguna frase adicional. Las expresiones enumeradas al comienzo pertenecen al repertorio ya documentado; su encadenamiento en esta escena es composición editorial, no transcripción de una sesión real.
+
+### III. Del escribano que eligió no falsificar el milagro
+
+—Podríais anotarlo como recuerdo —dijo el alguacil.
+
+—Y entonces el recuerdo sería mío.
+
+—Podríais anotarlo como testimonio.
+
+—Y tendría que declarar al testigo.
+
+—Podríais anotarlo como salida del modelo.
+
+—Y necesitaría el archivo que no guardé.
+
+El alguacil cerró la escribanía. No absolvió al loro ni condenó al escribano. Dejó una línea en blanco donde habría ido el hash.
+
+El escribano comprendió que su oficio no consistía en registrar todo cuanto deseaba haber oído. A veces la única fidelidad posible era conservar el hueco. La crónica podía narrar la tentación, el silencio y la disputa sobre el testigo; no podía convertirlos en evidencia de una emisión que no había sido capturada.
+
+Y así quedó escrito, no como resultado del modelo, sino como sentencia del método:
+
+> El loro habló, según recuerda quien lo oyó.  
+> El escribano lo oyó, según recuerda quien lo cuenta.  
+> Del loro non consta. Del escribano, tampoco del todo.
+
+### Glosas técnicas y provisiones del margen
+
+- **Naturaleza:** capítulo literario y epistemológico; no es un holdout ni un registro de ejecución.
+- **Transcripciones:** no se afirma que el loro emitiera espontáneamente la secuencia de apertura. Los fragmentos citados proceden del repertorio ya documentado; su montaje es editorial.
+- **Agencia:** no se infiere intención, autonomía, conciencia ni comprensión a partir de generación sin pregunta.
+- **Trazabilidad:** no existe JSON, log, marca temporal ni hash de una sesión espontánea real; por tanto, no se incorpora al inventario de salidas.
+- **Experimento futuro:** si se estudian emisiones sin instrucción, deberán fijarse y registrar checkpoint, contexto exacto, parámetros de generación, semilla, repeticiones y archivos brutos antes de interpretar resultados.
+- **Límite de la crónica:** narrar la escena no equivale a certificar que ocurrió. El hecho documentado aquí es la decisión editorial de no presentar como dato lo que no fue registrado.
+
+> *«El milagro que necesita un hash quizá no sea milagro; el que no lo tiene no puede entrar en el acta.»*
+
+**Sentencia del alguacil:** «¿Lo ha dicho el loro o lo ha dicho usted?».  
+**Respuesta del escribano:** «No hay hash».  
+**Asiento final:** «El escribano ha oído hablar al loro sin preguntas. Non consta.»
 
 
 ---
