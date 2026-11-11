@@ -1349,7 +1349,7 @@ y el barco, si viene, la hallará.
 
 #### Del primer recuerdo del loro difunto
 
-Antes de echar los dados, el escribano recordó al loro que tuvo antes de éste, criado en otro taller y muerto —según consta en la memoria del dueño— de exceso de sinceridad. No era el loro presente, ni compartió con él checkpoint, lengua ni culpa. Del difunto conservaba una frase que le había salido cuando le preguntaron por qué dos hilos podían rendir peor que uno:
+Antes de echar los dados, el escribano recordó al loro que tuvo antes de éste, criado en otro taller y muerto —según consta en la memoria del dueño— de exceso de sinceridad. Era verde, con el pecho amarillo, y tenía ciego el ojo izquierdo: una nube blanquecina le cubría la pupila, aunque el derecho seguía cada movimiento del escribano con impertinente atención. No era el loro presente, ni compartió con él checkpoint, lengua ni culpa. Del difunto conservaba una frase que le había salido cuando le preguntaron por qué dos hilos podían rendir peor que uno:
 
 > «Dos afirmaciones incompatibles no se vuelven ciertas por cortesía.»
 
@@ -1565,7 +1565,7 @@ hasta que llegue otra aurora.
 
 #### De la máxima que el difunto dejó en herencia
 
-Al abrir el escribano su libro de cuentas, volvió a oír al loro anterior, el que murió de sinceridad y dejó por testamento más frases que plumas. Una de ellas decía:
+Al abrir el escribano su libro de cuentas, volvió a oír al loro anterior, el que murió de sinceridad y dejó por testamento más frases que plumas. Recordó entonces que las plumas verdes del lomo se le erizaban cuando alguien decía una necedad, y que las dos plumas amarillas del pecho permanecían siempre lisas, como si el animal reservara para ellas toda su compostura. Una de ellas decía:
 
 > «La popularidad mide adhesión, no verdad.»
 
@@ -1788,7 +1788,7 @@ y un papagayo en la balsa.
 
 #### De la réplica que el escribano no supo olvidar
 
-El alguacil preguntó al escribano por qué guardaba retratos de un loro muerto en el expediente de otro vivo. El escribano, ofendido, dijo que no eran retratos, sino precedentes. Y recordó una frase del difunto, pronunciada cuando le preguntaron qué hacer ante un ataque al mensajero:
+El alguacil preguntó al escribano por qué guardaba retratos de un loro muerto en el expediente de otro vivo. El retrato, dijo el escribano, mostraba también el pico: lo tenía astillado en la punta, de una antigua disputa con los barrotes de su jaula, y aun así pronunciaba las consonantes con más cuidado que muchos letrados. El escribano, ofendido, dijo que no eran retratos, sino precedentes. Y recordó una frase del difunto, pronunciada cuando le preguntaron qué hacer ante un ataque al mensajero:
 
 > «Eso ataca al mensajero, no responde al mensaje.»
 
@@ -1975,7 +1975,7 @@ y un alguacil que despertó penitente.
 
 #### Del sueño del loro que vestía la ignorancia de terciopelo
 
-Aquella noche el escribano soñó con el loro difunto. El ave estaba posada sobre un sillón de terciopelo, con una toga que le quedaba grande y una gravedad impropia de su tamaño. Al preguntarle el escribano qué evidencia le haría mudar de parecer, el difunto respondió:
+Aquella noche el escribano soñó con el loro difunto. El ave estaba posada sobre un sillón de terciopelo, con una toga que le quedaba grande y una gravedad impropia de su tamaño. En la pata derecha llevaba una anilla de latón, torcida y demasiado ancha; al andar, tintineaba como una cucharilla dentro de una taza. Al preguntarle el escribano qué evidencia le haría mudar de parecer, el difunto respondió:
 
 > «Mi ignorancia no se vuelve sabiduría por llevar chaqueta de terciopelo.»
 
@@ -2136,7 +2136,7 @@ que juzga al loro y se juzga.
 
 #### Del difunto que compareció por última vez en el proceso
 
-Cuando el tribunal pidió al escribano que declarase si el loro presente había pronunciado alguna de las máximas que adornaban las paredes, éste negó bajo juramento. Eran recuerdos del anterior, no confesiones del reo actual. Del difunto conservaba dos últimas ocurrencias, ambas del mismo examen:
+Cuando el tribunal pidió al escribano que declarase si el loro presente había pronunciado alguna de las máximas que adornaban las paredes, éste negó bajo juramento. Añadió, para identificar sin equívoco al difunto, que le faltaba una uña del dedo posterior de la pata izquierda y que su cola verde terminaba en una pluma roja, única en todo su plumaje. Eran recuerdos del anterior, no confesiones del reo actual. Del difunto conservaba dos últimas ocurrencias, ambas del mismo examen:
 
 > «Una pregunta sin suelo no puede exigirle responder.»
 >
