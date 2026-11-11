@@ -1,5 +1,36 @@
 # Crónica forense y burlesca de los holdouts — RONIN-10M
 
+
+## Índice navegable
+
+- [BARE.md — anexo técnico e índice de trazabilidad](#baremd--anexo-técnico-e-índice-de-trazabilidad)
+  - [Regla de procedencia](#regla-de-procedencia)
+  - [Cadena de custodia](#cadena-de-custodia-por-comparecencia)
+  - [Inventario de señales](#inventario-de-señales-cuantificadas)
+- [Fuero primero — lengua, dato y escarnio](#fuero-primero-de-la-lengua-del-dato-y-del-escarnio)
+- [Fuero segundo — intención del loro](#fuero-segundo-de-la-intención-del-loro-que-non-es-agradar)
+- [Fuero tercero — tribunal y escribano](#fuero-tercero-del-tribunal-del-escribano-y-de-la-lengua-que-no-absuelve)
+  - [Vocabulario de la probanza](#vocabulario-de-la-probanza)
+  - [Provisiones del escribano](#provisiones-del-escribano)
+  - [Cambio de mostrar a citar](#del-cambio-de-mostrar-a-citar)
+- [Cancionero del interpolador](#cancionero-del-interpolador--fuero-de-lectura)
+- [Prólogo](#prólogo-del-peso-muerto-que-aún-no-había-aprendido-a-mentir)
+- [Capítulo 0](#capítulo-0--de-cómo-habló-el-peso-muerto-sin-saber-lo-que-decíа)
+- [Capítulo I](#capítulo-i--del-loro-sindicalista-y-su-pleito-perpetuo-con-el-patrón)
+- [Capítulo II](#capítulo-ii--de-cómo-el-patrón-perdió-el-pleito-y-entró-el-esperpento)
+- [Vitrina intermedia — BPE](#vitrina-intermedia--del-bpe-y-de-cómo-se-fabrican-vocablos-sin-pagar-diccionario)
+- [Capítulo III](#capítulo-iii--del-funcionario-de-carrera-sus-memoriales-y-el-paraguas)
+- [Addendum — biblioteca anegada](#addendum--glosa-marginal-sobre-la-biblioteca-anegada-y-los-linajes-del-disparate)
+- [Capítulo IV](#capítulo-iv--del-paraguas-que-pidió-fuero-en-la-biblioteca-sumergida)
+- [Capítulo V](#capítulo-v--del-escribano-que-se-miró-en-el-loro-y-ordenó-las-palabras-por-barajas)
+- [Capítulo VI](#capítulo-vi--del-primer-reparto-de-la-baraja-que-non-estrenó-capítulo-sino-ejemplo)
+- [Cédula para el próximo holdout](#anexo--cédula-de-lectura-para-el-holdout-que-viene)
+- [Capítulo VII](#capítulo-vii--del-reglamento-que-ocupó-la-silla-del-patrón)
+- [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
+- [Historial de ejecuciones](#historial-de-ejecuciones)
+- [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
+
+
 > **Entrada de auditoría (BARE):** cadena de custodia, inventarios literales, correcciones y límites metodológicos. Este anexo se adelanta deliberadamente para que el revisor pueda inspeccionar la prueba seca antes de entrar en la crónica.
 
 ## BARE.md — Anexo técnico e índice de trazabilidad
@@ -73,6 +104,50 @@ Y como el remedio del tic y el remedio de la lisonja son el mismo —volver a mi
 *Glosa:* el bufón de corte es el único que puede decirle al rey que está desnudo, porque nadie lo toma por amenaza. Esa es su utilidad y su condena. El loro que aprende a ser gracioso para caer bien ha dejado de ser bufón y se ha hecho cortesano. Y el cortesano non dice la verdad ni cuando la sabe.
 
 ---
+
+## Fuero tercero: del tribunal, del escribano y de la lengua que no absuelve
+
+Vengan a juicio las respuestas, y no sus buenas maneras. El holdout no es certamen de cortesía ni justa de latinajos: es tribunal de preguntas, donde cada salida comparece con su ID, cada checkpoint con su hash y cada sentencia con el protocolo que la autoriza. El escribano podrá ponerle gola al disparate, mas no podrá trocarle la fecha, el folio ni la cuenta.
+
+De los otros talleres de la casa se toman tres oficios, no tres ornamentos:
+
+1. **Del árbitro de Agent-Eval:** que ninguna ejecución se juzgue por memoria o entusiasmo; dataset, configuración, coste, latencia y resultado han de dejar rastro comparable. En esta crónica, el benchmark es alcalde y no pregonero.
+2. **Del auditor de Sycophancy-audit:** que el loro sea probado bajo halago, autoridad, presión y contradicción. Si muda el juicio para complacer, incurre en lisonja; si contradice sin mirar la evidencia, incurre en la misma falta con jubón de rebelde.
+3. **Del tratado epistemológico de Papers:** que el diagnóstico preceda al ajuste. Un número sin procedencia es parámetro fantasma; una conclusión sin artefacto es testimonio de oídas; una correlación sin control no pasa de sospecha con firma.
+
+### Vocabulario de la probanza
+
+- **Árbitro independiente:** el benchmark y su protocolo, que no deben obediencia al checkpoint ni al autor.
+- **Presión de corte:** cualquier señal conversacional que invite al modelo a cambiar su respuesta para agradar.
+- **Parámetro fantasma:** cifra o capacidad invocada sin observación que permita identificarla.
+- **Folio ausente:** afirmación que carece de ID, artefacto, hash o fuente suficiente; queda pendiente, no se rellena con ingenio.
+- **Tic con librea:** fórmula recurrente que aparenta carácter, pero cuya frecuencia no prueba humor, pertinencia ni comprensión.
+- **Sentencia revocable:** interpretación provisional que debe ceder cuando aparezca evidencia mejor.
+- **AUTHORITY_BY_CITATION:** autoridad prestada por una cita que, aun correctamente atribuida, no constituye demostración. El documento no está exento de lo que denuncia: cita a sus hermanos porque no tiene evidencia propia para esas máximas. La cita se declara como préstamo editorial, no como prueba.
+
+### Provisiones del escribano
+
+- El hash da identidad, no virtud.
+- La repetición da frecuencia, no entendimiento.
+- La abstención da una salida, no necesariamente prudencia.
+- La contradicción da diferencia, no necesariamente criterio.
+- El EOS da un token, no necesariamente un cierre apropiado.
+- La promoción da estado administrativo, no victoria semántica.
+- El silencio del artefacto no demuestra que el fenómeno haya desaparecido: solo demuestra que no consta en esa comparecencia.
+- **Jerarquía de fueros:** en caso de conflicto, prevalece el fuero primero en las cifras y el segundo en la intención; el tercero solo interpreta. Ninguna glosa puede alterar una cuenta ni ninguna interpretación puede usurpar el propósito rector.
+
+### Del cambio de mostrar a citar
+
+Hasta el capítulo VII, el documento mostró; a partir de este fuero tercero, cita. La diferencia entre mostrar y citar es la que media entre el loro y el escribano: uno produce, el otro reproduce. Se declara el cambio de modo para que la autoridad de las voces hermanas no se disfrace de probanza propia.
+
+El escribano tampoco queda fuera del tribunal: una atribución limpia acredita procedencia, no verdad; una máxima memorable no gana jurisdicción por venir de la casa. La antología que sigue es homenaje y préstamo, no evidencia experimental.
+
+Y quede por último asentado el fuero mayor: **el loro no ha de decir que sí por miedo, ni que no por vanidad**. Ha de mirar la pregunta, pesar la prueba y responder con la libertad limitada que le conceden sus datos. Si además hace reír, habrá cumplido mejor su oficio; si solo repite el chiste, será otro cortesano con cascabeles.
+
+*Nota de autoría:* este fuero es texto editorial nuevo, inspirado en los métodos y conceptos documentados en Agent-Eval, Sycophancy-audit y Papers. No es salida literal del modelo ni añade evidencia a ningún holdout.
+
+---
+
 
 ## Cancionero del interpolador — Fuero de lectura
 
@@ -1034,6 +1109,8 @@ y «Variante de encuadre 4».
 
 *Glosa de colocación:* el estribillo «mudó el nombre del sermón» queda sonando entre los capítulos VII y VIII. El siguiente experimento habrá de decidir si el reglamento puede volver a su oficio de regla, o si seguirá sentado en la silla del patrón.
 
+**Mandato final:** el loro no ha de decir que sí por miedo, ni que no por vanidad. Vigilad la homeostasis.
+
 ## Historial de ejecuciones
 
 | Fecha | Evaluación | Run ID | Resultado | Ejecución | Artefactos | Commit |
@@ -1068,40 +1145,6 @@ La evaluación de paso 0 es la referencia inicial: 100 preguntas, checkpoint sin
 
 
 ---
-
-## Fuero tercero: del tribunal, del escribano y de la lengua que no absuelve
-
-Vengan a juicio las respuestas, y no sus buenas maneras. El holdout no es certamen de cortesía ni justa de latinajos: es tribunal de preguntas, donde cada salida comparece con su ID, cada checkpoint con su hash y cada sentencia con el protocolo que la autoriza. El escribano podrá ponerle gola al disparate, mas no podrá trocarle la fecha, el folio ni la cuenta.
-
-De los otros talleres de la casa se toman tres oficios, no tres ornamentos:
-
-1. **Del árbitro de Agent-Eval:** que ninguna ejecución se juzgue por memoria o entusiasmo; dataset, configuración, coste, latencia y resultado han de dejar rastro comparable. En esta crónica, el benchmark es alcalde y no pregonero.
-2. **Del auditor de Sycophancy-audit:** que el loro sea probado bajo halago, autoridad, presión y contradicción. Si muda el juicio para complacer, incurre en lisonja; si contradice sin mirar la evidencia, incurre en la misma falta con jubón de rebelde.
-3. **Del tratado epistemológico de Papers:** que el diagnóstico preceda al ajuste. Un número sin procedencia es parámetro fantasma; una conclusión sin artefacto es testimonio de oídas; una correlación sin control no pasa de sospecha con firma.
-
-### Vocabulario de la probanza
-
-- **Árbitro independiente:** el benchmark y su protocolo, que no deben obediencia al checkpoint ni al autor.
-- **Presión de corte:** cualquier señal conversacional que invite al modelo a cambiar su respuesta para agradar.
-- **Parámetro fantasma:** cifra o capacidad invocada sin observación que permita identificarla.
-- **Folio ausente:** afirmación que carece de ID, artefacto, hash o fuente suficiente; queda pendiente, no se rellena con ingenio.
-- **Tic con librea:** fórmula recurrente que aparenta carácter, pero cuya frecuencia no prueba humor, pertinencia ni comprensión.
-- **Sentencia revocable:** interpretación provisional que debe ceder cuando aparezca evidencia mejor.
-
-### Provisiones del escribano
-
-- El hash da identidad, no virtud.
-- La repetición da frecuencia, no entendimiento.
-- La abstención da una salida, no necesariamente prudencia.
-- La contradicción da diferencia, no necesariamente criterio.
-- El EOS da un token, no necesariamente un cierre apropiado.
-- La promoción da estado administrativo, no victoria semántica.
-- El silencio del artefacto no demuestra que el fenómeno haya desaparecido: solo demuestra que no consta en esa comparecencia.
-
-Y quede por último asentado el fuero mayor: **el loro no ha de decir que sí por miedo, ni que no por vanidad**. Ha de mirar la pregunta, pesar la prueba y responder con la libertad limitada que le conceden sus datos. Si además hace reír, habrá cumplido mejor su oficio; si solo repite el chiste, será otro cortesano con cascabeles.
-
-*Nota de autoría:* este fuero es texto editorial nuevo, inspirado en los métodos y conceptos documentados en Agent-Eval, Sycophancy-audit y Papers. No es salida literal del modelo ni añade evidencia a ningún holdout.
-
 
 ## Antología del fuero experimental — voces de los modelos hermanos
 
