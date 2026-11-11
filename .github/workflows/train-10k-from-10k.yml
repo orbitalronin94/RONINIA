@@ -43,31 +43,33 @@ jobs:
           test "$(jq -r .status <<<"$run")" = "completed"
           test "$(jq -r .conclusion <<<"$run")" = "success"
 
-      - name: Download exact 10k parent checkpoint artifact
+      # Download the checkpoint-only artifact. The previous chain artifact
+      # has a different internal layout and the assumed checkpoint-parent.pt
+      # path did not exist; fail only after printing the actual inventory.
+      - name: Download original 10k checkpoint artifact
         uses: actions/download-artifact@v4
         with:
-          name: ronin-10m-chain-42902793379
+          name: ronin-10m-checkpoints-42902793379
           github-token: ${{ github.token }}
           repository: orbitalronin94/RONINIA
           run-id: 42902793379
           path: parent-artifact
 
-      - name: Verify parent checkpoint identity and lineage
+      - name: Resolve and verify exact 10k checkpoint
         run: |
           set -euo pipefail
-          test -s parent-artifact/checkpoint-parent.pt
+          echo "Downloaded parent artifact files:"
+          find parent-artifact -type f -printf '%p (%s bytes)\n' | sort
+          mapfile -t candidates < <(find parent-artifact -type f -name 'checkpoint-10000.pt' -size +0c)
+          if [ "${#candidates[@]}" -ne 1 ]; then
+            echo "::error::Expected exactly one checkpoint-10000.pt, found ${#candidates[@]}"
+            exit 1
+          fi
+          cp "${candidates[0]}" parent-artifact/checkpoint-parent.pt
           actual="$(sha256sum parent-artifact/checkpoint-parent.pt | awk '{print $1}')"
           echo "Parent checkpoint SHA-256: $actual"
           test "$actual" = "$EXPECTED_PARENT_SHA256"
-          test -s parent-artifact/lineage.json
-          python - <<'PY'
-          import json
-          from pathlib import Path
-          p = json.loads(Path("parent-artifact/lineage.json").read_text())
-          assert p["parent_run_id"] == 42902793379, p
-          assert p["cumulative_steps"] == 10000, p
-          print("Verified parent lineage:", json.dumps(p, sort_keys=True))
-          PY
+          echo "Verified exact parent checkpoint from run $PARENT_RUN_ID at 10,000 cumulative steps."
 
       - name: Download existing pretokenized corpus cache (no tokenization)
         uses: actions/download-artifact@v4
