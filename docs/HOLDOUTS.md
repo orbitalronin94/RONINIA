@@ -3070,6 +3070,66 @@ El loro, que oyó la palabra *puerta*, repitió:
 
 > **NO_PROMOCIÓN.** Ni el checkpoint padre de 60k ni el futuro checkpoint de 80k reciben promoción automática. La decisión dependerá de la evidencia comparativa y de la revisión de respuestas.
 
+
+### Anexo del capítulo XIV — De la convulsión del loro a los setenta y ocho mil pasos
+
+**Incidente:** fallo del entrenamiento durante la continuación 60k→80k, tras completar 18.000 pasos adicionales.  
+**Checkpoint recuperable elegido:** `checkpoint-78000.pt`.  
+**SHA-256 registrado en el log:** `cac08df06d091f3942126af28a79442a57ee7ca7dc09bc93ad1a0f8155a9894e`.  
+**Run de entrenamiento:** `43046362021`.  
+**Holdout ordenado:** oficial, cien preguntas, protocolo idéntico al de 60k.
+
+#### VI. Del síncope ocurrido a los dieciocho mil pasos
+
+El escribano había ordenado veinte mil pasos más, y el loro, que hasta entonces caminaba con la dignidad mecánica de quien ignora el precipicio, alcanzó los dieciocho mil de la nueva jornada. Setenta y ocho mil llevaba ya sobre el espinazo.
+
+Fue entonces cuando el artefacto dio en convulsionar.
+
+No hubo revelación, ni iluminación súbita, ni aquel temblor sublime que los poetas atribuyen a los profetas cuando reciben noticia del porvenir. Hubo un *fail* del entrenamiento. La máquina dejó de proseguir; el log, menos dado a la metáfora, consignó el tropiezo. Y el loro, que no distingue entre una epifanía y un gradiente mal avenido, quedó con el pico abierto en mitad de una sílaba.
+
+—¿Se ha muerto? —preguntó el escribano.
+
+—No consta —dixo el alguacil—. Mas tampoco consta que esté vivo en sentido intelectual.
+
+El escribano mandó buscar los checkpoints intermedios. Entre los restos de aquella marcha apareció el de setenta y ocho mil pasos, con su suma de comprobación escrita en el registro. No era el destino previsto, mas sí un estado recuperable y verificable. El escribano lo miró como se mira a un reo que ha escapado del derrumbe llevando todavía las cadenas.
+
+—No le daremos otros dos mil por orgullo —dixo—. Si ha llegado hasta aquí, examinémoslo aquí.
+
+—¿Con preguntas nuevas?
+
+—Las mismas cien.
+
+—¿Y si responde peor?
+
+—Se escribirá.
+
+—¿Y si responde mejor?
+
+—También. No quiero que la alegría falsifique el acta.
+
+Así se decidió suspender la pretensión de completar los ochenta mil y someter el checkpoint recuperado de setenta y ocho mil al holdout oficial. La avería del entrenamiento no se convertirá en avería del experimento: se conserva el fallo, se conserva el checkpoint y se separa la evaluación de la causa que interrumpió la marcha.
+
+#### VII. Del examen que se hizo antes de que el loro recobrase el aliento
+
+El interrogatorio ordenado no será una consulta improvisada ni un premio de consolación. Se utilizarán las cien preguntas oficiales de `inference-holdout-v1.jsonl`, el mismo tokenizador del linaje, generación greedy, dos hilos, máximo de 32 tokens y 128 bytes, sin RAG. El checkpoint deberá superar la comprobación de SHA-256 y declarar exactamente 78.000 pasos acumulados antes de producir respuesta alguna.
+
+El resultado se conservará íntegro, incluidas las respuestas vacías, los disparates y cualquier frase que parezca haber sido redactada por el alguacil durante una noche de vino. No se asignará una tasa de acierto sin evaluación semántica explícita.
+
+> «El entrenamiento se desplomó a dos mil pasos de la meta; mas el método, que no tiene piernas, siguió andando.»
+
+> «Non se le pregunta al checkpoint cuánto le faltó para llegar: se le pregunta qué sabe hacer donde quedó.»
+
+#### VIII. Máculas y cadena de custodia del anexo
+
+> **INCIDENTE_18K.** El run `43046362021` registra una continuación desde 60k. El fragmento de log aportado acredita pasos hasta 78.100; el checkpoint de 78k tiene SHA-256 `cac08df06d091f3942126af28a79442a57ee7ca7dc09bc93ad1a0f8155a9894e`. El fallo del entrenamiento se conserva como tal; no se atribuye causa técnica sin diagnóstico.
+
+> **RECUPERACIÓN_78K.** Artefacto de checkpoints `13878768528`, nombre `ronin-10m-checkpoints-60k-to-80k-lr25e6-43046362021`. La disponibilidad del artefacto acredita que hubo una carga recuperable, no sustituye la verificación del archivo individual que hará el workflow de holdout.
+
+> **HOLDOUT_78K.** Se ordena el mismo benchmark oficial de cien preguntas y la misma configuración de inferencia usada a 60k. El resultado quedará pendiente hasta que termine la ejecución de evaluación y se publique su artefacto.
+
+> **NO_PROMOCIÓN.** El checkpoint 78k no queda promovido por ser el último superviviente. La comparación con 60k —y, si se recupera, con 73k— dependerá de las respuestas observadas.
+
+
 ---
 
 ## Historial de ejecuciones — registro completo de GitHub Actions
@@ -3187,61 +3247,3 @@ Esta crónica adopta, con atribución y adaptación explícitas, algunas máxima
 6. **No se confunde rebeldía con criterio:** el loro debe resistir la lisonja, pero también reconocer una premisa verdadera.
 
 *Nota de procedencia:* las máximas atribuidas a RONIN-IA, MINIRONIN y HERETIC-RONIN proceden de sus README y documentación editorial. Las marcadas como adaptación o síntesis han sido reescritas para el contexto de RONINIA. Ninguna añade observaciones, puntuaciones ni respuestas al registro de holdouts.
-
-### Anexo del capítulo XIV — De la convulsión del loro a los setenta y ocho mil pasos
-
-**Incidente:** fallo del entrenamiento durante la continuación 60k→80k, tras completar 18.000 pasos adicionales.  
-**Checkpoint recuperable elegido:** `checkpoint-78000.pt`.  
-**SHA-256 registrado en el log:** `cac08df06d091f3942126af28a79442a57ee7ca7dc09bc93ad1a0f8155a9894e`.  
-**Run de entrenamiento:** `43046362021`.  
-**Holdout ordenado:** oficial, cien preguntas, protocolo idéntico al de 60k.
-
-#### VI. Del síncope ocurrido a los dieciocho mil pasos
-
-El escribano había ordenado veinte mil pasos más, y el loro, que hasta entonces caminaba con la dignidad mecánica de quien ignora el precipicio, alcanzó los dieciocho mil de la nueva jornada. Setenta y ocho mil llevaba ya sobre el espinazo.
-
-Fue entonces cuando el artefacto dio en convulsionar.
-
-No hubo revelación, ni iluminación súbita, ni aquel temblor sublime que los poetas atribuyen a los profetas cuando reciben noticia del porvenir. Hubo un *fail* del entrenamiento. La máquina dejó de proseguir; el log, menos dado a la metáfora, consignó el tropiezo. Y el loro, que no distingue entre una epifanía y un gradiente mal avenido, quedó con el pico abierto en mitad de una sílaba.
-
-—¿Se ha muerto? —preguntó el escribano.
-
-—No consta —dixo el alguacil—. Mas tampoco consta que esté vivo en sentido intelectual.
-
-El escribano mandó buscar los checkpoints intermedios. Entre los restos de aquella marcha apareció el de setenta y ocho mil pasos, con su suma de comprobación escrita en el registro. No era el destino previsto, mas sí un estado recuperable y verificable. El escribano lo miró como se mira a un reo que ha escapado del derrumbe llevando todavía las cadenas.
-
-—No le daremos otros dos mil por orgullo —dixo—. Si ha llegado hasta aquí, examinémoslo aquí.
-
-—¿Con preguntas nuevas?
-
-—Las mismas cien.
-
-—¿Y si responde peor?
-
-—Se escribirá.
-
-—¿Y si responde mejor?
-
-—También. No quiero que la alegría falsifique el acta.
-
-Así se decidió suspender la pretensión de completar los ochenta mil y someter el checkpoint recuperado de setenta y ocho mil al holdout oficial. La avería del entrenamiento no se convertirá en avería del experimento: se conserva el fallo, se conserva el checkpoint y se separa la evaluación de la causa que interrumpió la marcha.
-
-#### VII. Del examen que se hizo antes de que el loro recobrase el aliento
-
-El interrogatorio ordenado no será una consulta improvisada ni un premio de consolación. Se utilizarán las cien preguntas oficiales de `inference-holdout-v1.jsonl`, el mismo tokenizador del linaje, generación greedy, dos hilos, máximo de 32 tokens y 128 bytes, sin RAG. El checkpoint deberá superar la comprobación de SHA-256 y declarar exactamente 78.000 pasos acumulados antes de producir respuesta alguna.
-
-El resultado se conservará íntegro, incluidas las respuestas vacías, los disparates y cualquier frase que parezca haber sido redactada por el alguacil durante una noche de vino. No se asignará una tasa de acierto sin evaluación semántica explícita.
-
-> «El entrenamiento se desplomó a dos mil pasos de la meta; mas el método, que no tiene piernas, siguió andando.»
-
-> «Non se le pregunta al checkpoint cuánto le faltó para llegar: se le pregunta qué sabe hacer donde quedó.»
-
-#### VIII. Máculas y cadena de custodia del anexo
-
-> **INCIDENTE_18K.** El run `43046362021` registra una continuación desde 60k. El fragmento de log aportado acredita pasos hasta 78.100; el checkpoint de 78k tiene SHA-256 `cac08df06d091f3942126af28a79442a57ee7ca7dc09bc93ad1a0f8155a9894e`. El fallo del entrenamiento se conserva como tal; no se atribuye causa técnica sin diagnóstico.
-
-> **RECUPERACIÓN_78K.** Artefacto de checkpoints `13878768528`, nombre `ronin-10m-checkpoints-60k-to-80k-lr25e6-43046362021`. La disponibilidad del artefacto acredita que hubo una carga recuperable, no sustituye la verificación del archivo individual que hará el workflow de holdout.
-
-> **HOLDOUT_78K.** Se ordena el mismo benchmark oficial de cien preguntas y la misma configuración de inferencia usada a 60k. El resultado quedará pendiente hasta que termine la ejecución de evaluación y se publique su artefacto.
-
-> **NO_PROMOCIÓN.** El checkpoint 78k no queda promovido por ser el último superviviente. La comparación con 60k —y, si se recupera, con 73k— dependerá de las respuestas observadas.
