@@ -4,16 +4,19 @@
 
 ## Modelo experimental activo
 
-El checkpoint experimental activo es el de **40.000 pasos acumulados**, continuado desde el checkpoint de 30.000 pasos. Se promociona por decisión del proyecto como selección experimental; el holdout emparejado no demuestra una mejora semántica global ni valida capacidad factual o razonamiento.
+El checkpoint experimental activo es el de **50.000 pasos acumulados**, continuación exacta del checkpoint de 40.000 pasos. Se promociona por decisión expresa del proyecto como selección experimental activa; el holdout confirma identidad del artefacto y del protocolo, pero no demuestra mejora semántica global, capacidad factual ni razonamiento.
 
 - Manifiesto verificable: [models/active.json](models/active.json)
-- Entrenamiento: [run 42994415440](https://github.com/orbitalronin94/RONINIA/actions/runs/42994415440)
-- Holdout de 100 preguntas: [run 43006818556](https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556)
-- Artefacto de respuestas: [holdout 40k](https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556#artifacts)
-- SHA-256 del checkpoint: `9da6ea9b294665213114858b90f44168d940c36fb54cdb4612186a896bda7698`
+- Entrenamiento: [run 43009405531](https://github.com/orbitalronin94/RONINIA/actions/runs/43009405531)
+- Cadena de recuperación: [artefacto 13854017804](https://github.com/orbitalronin94/RONINIA/actions/runs/43009405531/artifacts/13854017804)
+- Holdout de 100 preguntas: [run 43019963290](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290)
+- Artefacto de respuestas: [holdout 50k — artefacto 13854621810](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290/artifacts/13854621810)
+- SHA-256 del checkpoint: `f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966`
 - Parámetros: **9.757.440**
 
-El holdout de 40k registra 100 preguntas: 98 respuestas no vacías y 2 vacías. Comparado con 30k, cambian 96 respuestas y cuatro permanecen idénticas. Se observa recurrencia de fórmulas de cautela («En una discusión donde importa la evidencia», 12/100; «No añadas hechos que no consten», 8/100) y fragmentos repetitivos como «PERY:INITY» y once «PL». Estos fenómenos describen las salidas; no constituyen una puntuación semántica. El checkpoint se promueve como referencia experimental activa por decisión del proyecto, no por una mejora de calidad demostrada.
+El holdout de 50k registra 100/100 respuestas recuperadas. El cotejo de las diez apuestas del capítulo VIII arroja seis pasadas, tres fallidas y una probable (la longitud media queda pendiente de cómputo). Reaparecen fragmentos repetitivos (`P:P:P...`, `Pata.Rata...`, `C.Res...`, `PHP...`) y el paraguas en `ci-001`. Son observaciones literales, no puntuación semántica. El BPB sigue sin calcularse; la promoción registra el checkpoint elegido para continuar, no una mejora de calidad demostrada.
+
+La crónica completa del hito está en [Capítulo IX — Del arcano oficio de escribano de loros graciosos](docs/CAPITULO_IX_ARCANO_ESCRIBANO.md).
 
 ## Diseño: RONIN-10M
 
