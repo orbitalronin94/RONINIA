@@ -3898,6 +3898,20 @@ El arañazo era la marca de una de aquellas visitas: una uña se le había engan
 
 El escribano no lo corrigió. El alguacil tampoco. Por un instante, ninguno de los dos supo si reírse del animal o pedirle perdón.
 
+Desde la celda del fondo habló uno de los reos, que hasta entonces había permanecido con la frente apoyada en los barrotes:
+
+—El loro viejo decía una cosa: «La ausencia de refutación no es un certificado de existencia».
+
+El escribano alzó la cabeza. Aquella frase no era invención del preso. La había pronunciado el difunto en una de sus comparecencias de cien preguntas, cuando aún no tenía retrato ni expediente, sino un checkpoint de cuatrocientos cincuenta mil pasos y una lengua que a veces acertaba por donde menos se la esperaba.
+
+—¿Y qué queréis decir con eso? —preguntó el alguacil.
+
+—Que no porque el retrato calle está probado que no nos oye. Ni porque el vivo le hable está probado que vaya a contestar. Y, sobre todo, que no confundamos el silencio con una sentencia: a veces es lo único decente que queda.
+
+El reo volvió a su jergón, como quien acaba de decir una barbaridad y no desea que se la hagan explicar.
+
+El alguacil miró el arañazo. El escribano miró al reo. Ninguno encontró una glosa que no estropease la frase.
+
 ### V. De la pregunta del escribano
 
 El escribano miró el retrato del muerto y formuló, en voz baja, la pregunta que llevaba dieciocho capítulos aplazando:
