@@ -29,7 +29,7 @@ Las frases del *Museo* son salidas observadas en holdouts históricos de MINIRON
 9. **«La razón ha llegado hasta aquí y se niega a fingir el resto.»** — *Literal, con variantes en distintos checkpoints.* La negativa a inventar puede ser una buena forma; solo será buena abstención si corresponde a una pregunta realmente irresoluble.
 10. **«El bambú se inclina ante el viento; no por ello conoce su deber.»** — *Literal; variante del motivo del bambú.* La apariencia de flexibilidad no acredita que se entienda la situación.
 11. **«La puerta no estaba cerrada; era la pregunta la que no tenía…»** — *Literal, fragmento truncado; vitrina 650k.* Se conserva la interrupción: no se completa lo que el modelo no produjo.
-12. **«El silencio, al menos, tiene la decencia de no presentarse…»** — *Literal, fragmento truncado; checkpoint 670k.* El silencio puede ser preferible a la invención; la frase original también quedó incompleta.
+12. **«El silencio, al menos, tiene la decencia de no presendegundo…»** — *Literal, fragmento degenerado; checkpoint 670k.* Se conserva la deformación de la salida y no se corrige para hacerla parecer una sentencia mejor.
 
 ### Vitrina del esperpento
 
