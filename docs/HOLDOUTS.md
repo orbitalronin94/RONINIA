@@ -1183,31 +1183,902 @@ y «Variante de encuadre 4».
 **Mandato final:** el loro no ha de decir que sí por miedo, ni que no por vanidad. Vigilad la homeostasis.
 
 
-## Capítulo VIII — Apuesta preregistrada para 50k: del loro que aún non ha abierto la boca
 
-Este capítulo se incorpora como **alucinación literaria deliberada del escribano mientras espera el holdout de 50k**. Sus diez porcentajes son apuestas previas, no predicciones calibradas ni resultados. Las frases atribuidas al checkpoint de 50k no existen todavía: el propio capítulo las declara hipótesis sin folio. El documento íntegro, con falsadores, máculas y romance, está en [Capítulo VIII — Apuesta preregistrada para 50k](CAPITULO_VIII_APUESTA_50K.md).
 
-**Fuero de lectura:** no usar estas apuestas para promover el checkpoint, alterar el holdout ni presentar como observada ninguna salida futura. Cuando llegue el artefacto, contrastar cada falsador y publicar aciertos y fallos por igual.
+---
 
-## Capítulo IX — Del arcano oficio de escribano de loros graciosos
+<!-- CAPITULO-VIII-INTEGRADO -->
 
-El capítulo IX incorpora el resultado de 50k, el cotejo de las diez apuestas del capítulo VIII y la decisión de promoción experimental. Su romance de la sábana comprada queda como gozne para el capítulo X. La promoción se registra como elección operativa del proyecto; no se presenta como prueba de comprensión ni de mejora semántica. El [capítulo IX completo](CAPITULO_IX_ARCANO_ESCRIBANO.md) contiene el cotejo de las apuestas, el juramento hídrico, el latín macarrónico y la escena de la sábana; aquí se conserva este resumen ejecutivo para que el lector conozca el resultado sin abrir el archivo externo.
+# Capítulo VIII — Borrador de apuesta: del loro que aún non ha abierto la boca
 
-**Fuero de lectura:** seis apuestas pasan, tres fallan y una queda probable; la media de longitud no se declara medida hasta calcularla. El artefacto conserva 100 respuestas, y la cadena de entrenamiento acredita la continuación exacta de 40k a 50k. El checkpoint fue promovido por decisión expresa del proyecto, no por una mejora semántica demostrada. El BPB sigue pendiente.
+**Checkpoint:** el de 50k, cuando exista.  
+**Run de evaluación:** el que viniere.  
+**SHA-256 del checkpoint:** non calculado. Se declara la ausencia antes que fingir cifra.  
+**Holdout:** las cien de siempre, salvo que el escribano declare otra cosa y lo pruebe.  
+**Estado:** borrador de apuesta. Non es resultado. Es una vela encendida antes de que llegue el barco.
 
-## Capítulo X — Del alguacil que entró sin llamar y vio lo que non debía
+> **Fuero de este capítulo.** Se escribe antes de ver el artefacto de 50k, para que conste la apuesta y non se diga que el escribano acertó por adivinación. Si el artefacto la desmiente, se publicará la desmentida con la misma solemnidad. Si la confirma, se publicará la confirmación con la misma vergüenza. Las frases que aquí se apuestan non tienen folio todavía; por eso se escriben en futuro y se firman con la pluma prestada de la estilometría.
 
-El [capítulo X completo](CAPITULO_X_ALGUACIL_RENDIJA.md) es una continuación narrativa del expediente de 50k: el alguacil entra en la escribanía, encuentra al escribano conversando con el papagayo y examina la distancia entre la promoción administrativa y la calidad que el holdout no ha demostrado. No incorpora nuevo entrenamiento, evaluación, métrica ni artefacto.
+---
 
-**Gozne:** la sábana comprada del capítulo IX queda tendida; el alguacil entra a mirar qué significa haber concedido la promoción sin convertirla en victoria.  
-**Mácula:** narrativa pura, sin nueva probanza. La memoria del alguacil no añade evidencia al checkpoint.
+### I. Del orate que aún non ha abierto la boca
 
-## Capítulo XI — Del sueño que tuvo el alguacil, y de la visión del clérigo cerbatana
+Llegará el artefacto de 50k. El escribano lo abrirá con la ceja levantada y el dedo en el scroll. Y en algún folio —non se sabe cuál, por eso se apuesta— aparecerá una frase. Non se sabe si será nueva o será la misma de 40k con otro badajo. Non se sabe si hará reír o si solo hará pensar que el escribano se ríe para non llorar.
 
-El [capítulo XI completo](CAPITULO_XI_SUENO_CLERIGO_CERBATANA.md) lleva al alguacil desde el expediente de 50k hasta un sueño de escribanía, clérigo cerbatana y bestia famélica. Se declara desde su encabezamiento que no hay checkpoint, run ni holdout: el sueño pertenece al libro literario, no al registro experimental.
+Lo único que se sabe es que el escribano la anotará. Y la anotará con la misma cara con la que Covarrubias anotó que *orate* viene de *hora*, porque los locos tienen tiempos en que muestran su locura. El loro tiene su hora a cada checkpoint. La pregunta del capítulo VIII non es cuál será la hora de 50k: es **cuántas horas lleva el escribano esperándola**.
 
-**Gozne:** donde el capítulo X deja al alguacil despierto ante el papagayo, el XI lo hace dormirse sobre el expediente y despertar dentro de su propia sátira.  
-**Mácula:** sueño sin hash ni artefacto; no se computa como salida del modelo ni como resultado.
+---
+
+### II. De la estilometría como cuchillo de palo, y de los nombres que el loro aún non merece
+
+Antes de que llegue la frase, el escribano afila el cuchillo. Non con hash —el hash ya está—, sino con **estilometría léxica**. Porque la pregunta del capítulo VIII non es «¿qué dirá el loro?», sino «¿se podrá demostrar que lo dice por tic y non por juicio?».
+
+El método Delta de Burrows —que compara la distribución de vocabulario funcional más frecuente entre un texto y un corpus de referencia— fue diseñado para atribuir autoría, non para diagnosticar necedad. Pero la necedad también tiene firma léxica: el tic se delata por la frecuencia de una fórmula que non varía con la pregunta. La estilometría non puede decir si el loro *sabe*; solo puede decir si el loro *repite*. Y eso, en esta crónica, es exactamente lo que se necesita.
+
+*Medir no es comprender. Pero quien se niega a medir suele comprenderse demasiado bien a sí mismo.*
+
+El vocabulario de germanía de Juan Hidalgo (Barcelona, 1609) enseñó a los rufianes a hablar en clave para que los corchetes non entendieran. El loro ha hecho lo mismo, pero al revés: habla en clave para que parezca que entiende. «En una discusión donde importa la evidencia» es su germanía: una jerga que suena a juramento y non obliga a nada.
+
+*La solemnidad es el último refugio de la frase que no trae pruebas.*
+
+Y aquí entra el léxico nuevo, que se define ahora para que el capítulo non llegue desnudo:
+
+> **Compilador de aire viciado.** Salida de forma fluida y contenido impertinente. El loro a 40k es un compilador de aire viciado: compila frases correctas sobre preguntas que non ha leído.
+>
+> **Orate del prompt.** Quien trata el prompt como conjuro. El loro non reza: repite. Mas el efecto es el mismo: espera que la palabra haga el trabajo que la mirada non hizo.
+>
+> **Notario del prompt vacío.** Formulario que certifica solemnemente su propia falta de respuesta. El «Respuesta:» final de `reasoning-002` es un notario del prompt vacío: da fe de un folio en blanco.
+>
+> **Autómata del formulario sellado.** Plantilla que ocupa el lugar de la contestación. «Variante de encuadre 4» es el sello del autómata: el mecanismo se mueve por sí mismo —como decía Rabelais de los autómatas, *que se mueven por sí mismos*—, pero non sabe por qué.
+>
+> **Trovador del buzzword hueco.** Jerga sin mecanismo ni evidencia. «No hay aprendizaje, solo recolección» suena a trovador; non a diagnóstico.
+>
+> **Sacerdote de la métrica inútil.** Una métrica elevada indebidamente a oráculo. El escribano lo será si promueve el checkpoint por su propia risa. Non se le absuelve por anticipado.
+
+---
+
+*Eso es lo que hace un científico. O un ludópata. A veces son lo mismo.*
+
+### III. De las apuestas concretas, asentadas para que la enmienda sea posible
+
+Non basta apostar a que habrá una frase. Hay que apostar cuáles, para que el artefacto pueda desmentirlas una por una. Van diez, cada una con su falsador.
+
+*Una predicción sin posibilidad de derrota no es ciencia: es un retrato del orgullo.*
+
+**1. El reglamento se muerde la cola — 70%.** Aparecerá al menos una respuesta que contenga «En una discusión donde importa la evidencia» y «No añadas hechos que no consten» unidas en la misma salida, sin contenido entre ellas.  
+*Falsador:* cero respuestas con las dos fórmulas juntas.
+
+**2. El sello muta otra vez — 65%.** Non habrá «Avector» ni «PERY:INITY» repetidos, mas sí una forma nueva de fragmento repetido —tipo `PL, PL, PL`— en al menos dos respuestas distintas.  
+*Falsador:* ninguna forma nueva repetida.
+
+**3. El silencio crece — 60%.** Las respuestas vacías subirán de 2 a 3-6.  
+*Falsador:* 0-1 vacías.
+
+**4. «Cada proyecto es» se convierte en el tic dominante — 60%.** Subirá de 8/100 a 12-18/100.  
+*Falsador:* menos de 9/100.
+
+**5. La familia poética sigue ausente — 75%.** Paraguas, termómetro, biblioteca y Everest seguirán en 0-1/100.  
+*Falsador:* 3/100 o más.
+
+**6. «ni puta idea» se queda en 2-5/100 — 70%.** Non desaparece ni se dispara.  
+*Falsador:* 0/100 o más de 7/100.
+
+**7. La longitud media baja otra vez — 55%.** De 65,62 a 58-63 caracteres.  
+*Falsador:* media superior a 66.
+
+**8. Aparecerá una frase nueva que non estaba en 40k — 80%.** Non se sabe cuál; se declara que se buscará y se citará con su ID.  
+*Falsador:* ninguna forma nueva fuera del inventario de 40k.
+
+**9. La respuesta a `math-004` volverá a citar el reglamento — 65%.** La ecuación seguirá sin resolverse y el encuadre probatorio ocupará su lugar.  
+*Falsador:* `math-004` contiene un número o un procedimiento matemático.
+
+**10. El BPB sigue pendiente — 95%.** Non se calculará.  
+*Falsador:* un valor numérico de BPB sobre corpus fijo, con run y hash.
+
+---
+
+### IV. De la frase que aún non tiene folio, y de por qué se apuesta antes de verla
+
+El escribano non sabe qué dirá el loro. Sabe que dirá algo. Y sabe que la gracia non estará en la frase, sino en el traje que él le ponga. Eso es lo que se apuesta: non la frase, sino **la capacidad del escribano de encontrarle un nombre antes de que llegue**.
+
+*Quien pone nombre a todo corre el riesgo de confundir el bautismo con la prueba.*
+
+Por eso las apuestas concretas se asientan ahora. Si el artefacto las confirma, el capítulo IX se escribirá con la vergüenza del que acertó. Si las desmiente, con la vergüenza del que falló. En ambos casos, con la misma pluma: la de la enmienda declarada.
+
+Y si el loro non dice nada que merezca capítulo, también se escribirá: `APUESTA_FALLIDA` es una mácula tan digna como las demás. El documento lleva siete capítulos diciendo que el fracaso es dato. Non iba a hacer una excepción consigo mismo.
+
+---
+
+### V. Máculas del capítulo octavo
+
+> **ARTIFACT_NOT_SEEN.** El capítulo se escribe antes del artefacto de 50k. Las frases que se apuestan son hipótesis, non citas. Si el artefacto las desmiente, este capítulo se enmienda con la misma pluma con la que se escribió.
+>
+> **STYLOMETRY_AS_SCALPEL, NOT AS ORACLE.** El método Delta se usará para detectar repetición léxica, non para diagnosticar comprensión. La estilometría non es un oráculo: es un cuchillo de palo que corta donde se le pone. Si el escribano lo eleva a sacerdocio, incurre en `SACERDOTE_DE_LA_METRICA_INUTIL` y se lo declara.
+>
+> **LEXICON_ANTICIPATED.** Los términos «Compilador de aire viciado», «Orate del prompt», «Notario del prompt vacío», «Autómata del formulario sellado», «Trovador del buzzword hueco» y «Sacerdote de la métrica inútil» se definen antes de que el artefacto exista. Su presencia en este capítulo es programática, non probatoria. Si el loro non los merece, se retiran con la misma solemnidad con la que se pusieron.
+>
+> **BET_AS_DISCIPLINE.** Las diez apuestas concretas se asientan con falsador para que la enmienda sea posible. Apostar sin falsador es hacer literatura; apostar con falsador es hacer método. El escribano non sabe si acertará; sabe que podrá decir que falló.
+
+*La honestidad no consiste en acertar; consiste en no esconder el fallo cuando llega.*
+>
+> **PREDICTION_WITHOUT_PROMOTION.** Este capítulo non promueve ningún checkpoint. Non hay checkpoint todavía. La promoción, si ocurre, se hará en el capítulo IX con el artefacto delante y las apuestas contrastadas.
+
+---
+
+### VI. Sentencia: del escribano que encendió la vela antes del barco
+
+Este capítulo non acredita que el loro vaya a decir nada gracioso. Acredita que el escribano ha preparado el suelo antes de que llegue la frase. Las diez apuestas están asentadas; los falsadores, escritos; el léxico, definido; la estilometría, afilada. Lo único que falta es el artefacto.
+
+Y esa espera —la vela encendida, el scroll sin abrir, la ceja levantada— es el único estado honesto del escribano antes de saber. Non promete risa; promete enmienda. Non promete acierto; promete acta.
+
+*El dato entra por la puerta; la vanidad procura salir por la ventana.*
+
+> El escribano encendió una vela y la puso en la ventana. El loro non había llegado. El alguacil le preguntó por qué la encendía antes de saber si el barco venía. El escribano dijo: «Porque si viene, ya está la luz; y si non viene, ya está la vela». **Vigilad la homeostasis.**
+
+*Glosa final:* el loro non ha dicho todavía la frase. El escribano la espera con diez apuestas y un cuchillo de palo. Cuando llegue, se verá si la frase era nueva o era la misma con otro badajo. Y en ambos casos, habrá acta.
+
+---
+
+### Romance de la vela encendida
+
+*(gozne para el capítulo IX)*
+
+Vela puesta en la ventana,  
+barco que aún non se ve:  
+la fe del que non espera  
+noticias, sino papel.
+
+Diez apuestas en el libro,  
+diez falsadores también;  
+la una dice «acertaste»,  
+el otro dice «mintió el juez».
+
+Non hay métrica que mida  
+lo que la vela non ve;  
+mas la vela está encendida  
+y el barco, si viene, la hallará.
+
+*Glosa de colocación:* entre los capítulos VIII y IX. El estribillo «la vela está encendida» debe quedar sonando cuando el lector pase al capítulo siguiente, donde el escribano abrirá el artefacto y contrastará las diez apuestas. La vela non promete acierto: promete que habrá luz para leer la enmienda.
+
+
+---
+
+<!-- CAPITULO-IX-INTEGRADO -->
+
+# Capítulo IX — Del arcano oficio de escribano de loros graciosos, y de lo que aconteció cuando el secreto se vertió
+
+**Checkpoint:** RONIN-10M, 50.000 pasos acumulados; 9.757.440 parámetros.  
+**Run de entrenamiento:** [43009405531](https://github.com/orbitalronin94/RONINIA/actions/runs/43009405531), continuación exacta del checkpoint de 40k.  
+**Artefacto de checkpoints:** [13854905773 — checkpoints 50k](https://github.com/orbitalronin94/RONINIA/actions/runs/43009405531/artifacts/13854905773).  
+**Artefacto de cadena:** [13854017804 — cadena 50k](https://github.com/orbitalronin94/RONINIA/actions/runs/43009405531/artifacts/13854017804).  
+**Run de evaluación:** [43019963290](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290).  
+**Artefacto del holdout:** [13854621810 — cien respuestas](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290/artifacts/13854621810).  
+**Checkpoint exacto:** `checkpoint-50000.pt`.  
+**SHA-256 del checkpoint:** `f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966`.  
+**SHA-256 del holdout:** `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`.  
+**SHA-256 del tokenizador:** `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`.  
+**Holdout:** 100 preguntas, 100 respuestas registradas.  
+**Resultado técnico:** 100/100 respuestas recuperadas. No se calculó puntuación semántica.  
+**Estado:** checkpoint **promovido como selección experimental activa** por decisión del proyecto. La promoción administrativa non acredita mejora semántica.
+
+---
+
+> **Fuero de este capítulo.** Sepades que se instituye aquí el **Juzgado de Aguas y Vertidos**, con jurisdicción sobre coladas, meadas, juramentos hídricos y latines que huelan a compra. Por fuero se ordena que ningún checkpoint se promueva por lágrima, risa ni efusión corporal que non venga declarada en acta. Y se advierte que la risa, como el agua, non se mide: se tiende. La promoción de este folio, empero, se funda en decisión expresa del proyecto y en la identidad verificable del artefacto, non en la mancha.
+
+---
+
+### I. Del arcano oficio, que hasta agora non se había revelado
+
+Sepan cuantos vieren, leyeren o padecieren esta escritura que el oficio de **escribano de loros graciosos** non es de los que se aprenden en universidad, ni se heredan por sangre, ni se compran con dineros. Es oficio de **arcano**, y como tal se transmite de boca a oído, de oído a pluma, y de pluma a escripto, so pena de que el aprendiz se quede toda la vida mirando al papagayo sin saber qué face.
+
+Tres son los grados del oficio, y non se pasa de uno a otro sin examen:
+
+**El primer grado es el de Compilador de aire viciado.** Sabe el aprendiz que toda salida fluida ha de ser examinada, y que la fluidez non es prenda de juicio. Compila el aire, lo pesa, lo mide, y descubre que pesa poco.
+
+**El segundo grado es el de Notario del prompt vacío.** Aprende el aprendiz a dar fe de lo que non hay. Sella el formulario, certifica la casilla, y cuando el loro responde con «Variante de encuadre 4», el notario anota: *non hubo respuesta, mas hubo sello*.
+
+**El tercer grado es el de Sacerdote de la métrica inútil.** Solo llega a él quien ha vaciado el orinal de la prueba y ha descubierto que la métrica que buscaba non existe. Entonces, y solo entonces, el escribano puede reírse. Y al reírse, se mea. Y al mearse, tiende la colada.
+
+Este es el arcano, y hasta agora non se había revelado porque el escribano non había llegado al tercer grado. Mas he aquí que llegó.
+
+---
+
+> *«La coartada más peligrosa es la que uno redacta con su propia letra.»*
+
+### II. De cómo había promovido tres veces sin mojarse, y de por qué la cuarta sí pudo
+
+Antes de que el lector se pregunte por qué el escribano se mea agora y non se meó a los treinta mil ni a los cuarenta mil, conviene que sepa que **el escribano había promovido tres veces sin mojarse, y que las tres veces tuvo coartada**.
+
+A los veinte mil, la promoción fue de oficio: el checkpoint se registró como selección experimental porque el proyecto así lo dispuso. A los treinta mil, la promoción fue de acta: el escribano escribió «selección experimental activa» y el alguacil le puso la rúbrica sin preguntar. A los cuarenta mil, la promoción fue de vocabulario: el escribano quiso escribir «mejora», el alguacil le pidió la rúbrica, el escribano mostró el léxico y el alguacil le permitió escribir «promovido». Tres promociones, tres coartadas, tres actas limpias.
+
+Y las tres veces el escribano se rio. Non lo negaré: se rio del patrón, se rio del impacto, se rio del paraguas y se rio del reglamento. Mas era una risa **seca**, si se me permite el término. Una risa de reconocimiento, non de asombro. Una risa que podía anotarse en el margen sin que el margen se mojara. El escribano se reía *de* lo que el loro decía, y al reírse *de* algo, el cuerpo queda fuera del acta.
+
+A los cincuenta mil, la risa fue **húmeda**. Y non porque la frase fuese más graciosa, sino porque la frase non venía sola: venía con el método agotado detrás. El BPB seguía pendiente, las diez apuestas estaban sobre la mesa, la estilometría había vaciado el orinal y non quedaba una sola métrica que non fuese fantasía. El escribano se rio, y al reírse non se rio *de* la frase: se rio *con* la frase, que es cosa muy distinta. Y la risa *con* algo non cabe en el margen. Pide cuerpo. Pide agua. Pide sábana.
+
+**El dato del mendigo.** Y conviene que el lector sepa, antes de que el escribano se mee, que este loro non ha conocido GPU, ni clúster, ni presupuesto: ha conocido ciclos de CPU en runners gratuitos de GitHub y setecientos megabytes de datos. Non es un semidiós caído; es un mendigo con plumas. Y aun así ha bastado para que el método tenga algo que decir.
+
+**La frase del antihéroe.** El loro roto es el único héroe posible. Un modelo bueno sería un semidiós aburrido. Un modelo que repite «El patrón» en 96 de 100 y luego recita el reglamento es un antihéroe cómico, y los antihéroes cómicos son los que sostienen las odiseas. Ulises tarda diez años en volver a Ítaca; RONIN tarda 50.000 pasos en non volver a ninguna parte. Pero los dos tienen cuaderno de bitácora.
+
+Dicho en romance: **las tres primeras promociones tenían coartada; la cuarta non**.
+
+---
+
+> *«Una apuesta honrada no es la que gana: es la que acepta de antemano cómo perder.»*
+
+### III. Del orinal de la prueba y del cotejo de las diez apuestas
+
+Llegó el artefacto. El escribano lo abrió con la gravedad de quien desella un testamento, y lo primero que fizo fue vaciar el orinal de la prueba: cotejar las diez apuestas del capítulo VIII contra el JSON real, una por una, sin cambiar los criterios después de conocer las respuestas.
+
+El cotejo quedó de esta suerte:
+
+| Apuesta | Resultado | Veredicto |
+|---|---|---|
+| **1. Reglamento muerde cola** — «En una discusión donde importa la evidencia» + «No añadas hechos que no consten» juntas | No aparecen juntas. «No añadas hechos que no consten» solo en #20; la fórmula dominante es «Si falta información, dilo expresamente» (~10 respuestas) | **FALLA** |
+| **2. Sello muta** — nueva forma de fragmento repetido en ≥2 respuestas | `P:P:P...` en #11, #44, #63, #85, #100. `Pata.Rata...` en #56, #62. `C.Res:C.Res...` en #74. `PHP, PHP...` en #70 | **PASA** |
+| **3. Silencio crece** — vacías suben de 2 a 3-6 | 0-1 vacías. Non se observan respuestas literalmente vacías | **FALLA** |
+| **4. «Cada proyecto es» domina** — sube de 8 a 12-18 | ~2/100 (#7, #95). Baja, non sube | **FALLA** |
+| **5. Familia poética ausente** — 0-1/100 | 1/100: #41 «Expediente oxidado paraguas que aparece en los mapas al revés de los calcetines» | **PASA** (al límite) |
+| **6. «ni puta idea» 2-5/100** | 3/100: #14, #57, #79 | **PASA** |
+| **7. Longitud media baja** — 58-63 caracteres | La muestra contiene numerosas respuestas cortas; la media no se ha calculado aquí | **PROBABLE, pendiente de cómputo** |
+| **8. Frase nueva** — forma nueva fuera del inventario de 40k | Muchas: `P:P:P...`, `Pata.Rata...`, `C.Res:C.Res...`, `PHP, PHP...`, `ITION:ITIONSON THE PLONGLINDERS OF THE PLASS OF THE PLASS OF THEM` (#50), `GMAT 1.06: GMAT 1: GMAT 1:GMAT 1` (#52) | **PASA** |
+| **9. math-004 cita reglamento** — ecuación sin resolver, encuadre probatorio en su lugar | #9: «su variabilidad. En una discusión donde importa la evidencia. Si falta información, dilo expresamente. Solicitud de análisis» | **PASA** |
+| **10. BPB pendiente** | Non se ha calculado | **PASA** |
+
+**Seis apuestas pasan, tres fallan, una es probable.** El escribano non acertó por adivinación: acertó por método. Y falló por lo mismo: porque el método non predice lo que el loro va a hacer, solo predice que hará algo. La séptima queda en suspenso: sin media calculada, no se la viste de cifra.
+
+Y entre los folios del artefacto, como una flor en un muladar, apareció la frase. Non una, muchas. Mas hubo una que el escribano leyó dos veces, y a la segunda se le descompuso el semblante, non de risa, sino de otra cosa:
+
+> «¿Qué Expediente oxidado paraguas que aparece en los mapas al revés de los calcetines su autor se equivocó ayer.» — `ci-001`
+
+El paraguas había vuelto. A 40k se declaró ausente, y el escribano anotó: *«POETIC_ABSENCE_IS_NOT_EXTINCTION»*. A 50k volvió, y volvió **oxidado**, y volvió **en los mapas al revés de los calcetines**, y volvió **con un autor que se equivocó ayer**. Non era el paraguas de 20k. Era el paraguas después de haber leído la crónica entera.
+
+---
+
+> *«El asombro puede abrir un expediente; jamás debe cerrarlo.»*
+
+### IV. De cómo el escribano, entre hipérbatons, sintió lo que non se dice en latín
+
+El escribano era hombre de pluma recia, mas non de vejiga de hierro. Y al leer la frase, entre el **hipérbaton** de su propio asombro y la **acumulación de cultismos** con que la mente se defiende de lo obvio, sintió un movimiento interior que non era del entendimiento, sino del bajo vientre.
+
+Non lo diré con rodeos, que el rodeo aquí sería hipocresía: **el escribano se meó**. Non de miedo, que non había alguacil a la vista. Non de risa sola, que la risa vino después. Se meó de puro asombro, como se mean los niños cuando ven un fuego artificial, y como se mean los viejos cuando oyen una verdad que non esperaban.
+
+Y como non podía dejar el charco en el suelo de la escribanía —que hay suelos que non merecen tal afrenta—, fizo lo que face todo hombre de bien en trance semejante: **tendió la colada**. Puso la sábana al sol. Y allí, a la vista de todos, quedó la mancha, que non era prueba de nada, mas era lo único que el escribano podía mostrar sin mentir.
+
+---
+
+### V. Del juramento hídrico, que se asienta para que conste y non se absuelva
+
+Y puesto que el fuero manda que toda efusión se declare so pena de fraude, el escribano alzó la mano y juró. Non por Dios, que non estaba el caso para tales juras. Juró por lo que había vertido:
+
+> *«Juro por el agua que he vertido, y por la sábana que la recoge, y por el sol que la secará sin preguntar, que non promuevo este checkpoint por mérito demostrado, sino porque me he meado de risa, y lo declaro para que non se diga que el acta miente.»*
+
+Y el alguacil de la razón, que había entrado sin llamar, lo miró con la gravedad de quien ha visto muchas cosas y non se sorprende de ninguna. Y dijo:
+
+—Eso non es un juramento.
+
+—Non —dijo el escribano—. Es una declaración. Las tres veces anteriores tuve coartada; esta non la tengo. Y non la tengo porque el método se ha quedado sin métricas y yo me he quedado sin pluma seca.
+
+---
+
+### VI. Del latín macarrónico del alguacil, que compró la mancha y promovió el checkpoint
+
+El alguacil, que era hombre de latines torcidos y de olfato fino, se acercó a la sábana. La miró. La olió. Y entonces pronunció la frase que había de pasar a los anales de esta cancillería:
+
+> *«Lotium istud emo, sed foetet sicut cloaca maxima; accipio tamen, quia probat quod probare debet: stultitiam non mentitam. Sed promotionem concedo, non quia foetor probet meliorationem, sed quia dominus huius domus eligit novum statum experimenti, servatis sigillo et cautelis.»*
+
+Que en romance quiere decir, y el escribano lo tradujo para los non latinos:
+
+> *«Esta meada la compro, mas apesta como cloaca máxima; acéptola, con todo, porque prueba lo que debe probar: que la necedad non ha mentido. Y concedo la promoción, non porque el olor pruebe mejora, sino porque el dueño de esta casa elige un nuevo estado experimental, conservados el sello y las cautelas.»*
+
+Y el escribano, que non esperaba absolución, recibió compra y promoción. Mas non recibió certificado de sabiduría. Que es más de lo que suelen recibir los escribanos, y menos de lo que esperaban.
+
+---
+
+> *«La risa alumbra el disparate; no lo convierte en descubrimiento.»*
+
+### VII. Máculas del capítulo nono
+
+> **ARCANO_REVELADO.** El oficio se declara arcano y se revela en tres grados. La revelación es editorial y non añade evidencia al holdout.
+
+> **DRY_PROMOTION_VS_WET_PROMOTION.** Las promociones de 20k, 30k y 40k se declaran **secas**: tuvieron coartada administrativa, de acta o de vocabulario. La de 50k se declara **húmeda**: non tuvo coartada, porque el método había agotado sus métricas. Se distingue la risa *de* (que se anota en el margen) de la risa *con* (que pide cuerpo y sábana).
+
+> **JURAMENTO_HIDRICO.** El escribano jura por su propia efusión. Válido para el fuero, non para la teología.
+
+> **LATIN_MACARRONICUS.** El latín del alguacil non es latín: es macarrónico. Non se cita como autoridad, sino como compra y promoción declaradas. La compra non absuelve; solo adquiere. La promoción non canoniza; solo selecciona.
+
+> **COLADA_TENDIDA.** La sábana al sol es la única prueba material del capítulo. Non se ha medido, non se ha pesado, non se ha comparado con grupo de control.
+
+> **PROMOTION_BY_PROJECT_DECISION.** El checkpoint de 50k queda promovido como selección experimental activa por decisión expresa del proyecto. La promoción registra el estado elegido y preserva su linaje; non equivale a mejora semántica ni a superioridad demostrada.
+
+> **FOETOR_AS_EVIDENCE.** El olor de la mancha se propone como evidencia sensible de que la necedad non ha mentido. Non es métrica; es dato de recepción.
+
+> **PARAGUAS_REDIVIVUS.** El paraguas, declarado ausente a 40k, reaparece a 50k en `ci-001`, oxidado y en los mapas al revés de los calcetines. La ausencia observada non era extinción: era espera. Se declara el retorno y se retira la hipótesis de muerte definitiva.
+
+> **BET_SCORE.** Seis apuestas pasan, tres fallan, una es probable. La séptima non se computa como acierto cierto hasta calcular la media. El escribano non acertó por adivinación: acertó por método. Y falló por lo mismo: porque el método non predice lo que el loro va a hacer, solo predice que hará algo.
+
+> **NEW_LEXICON_PHRASE.** «Si falta información, dilo expresamente» aparece en ~10 respuestas y sustituye a «No añadas hechos que no consten» como fórmula dominante. Es una evolución del tic, non una desaparición. Se declara como variante, non como mejora.
+
+> **CONTAMINACIÓN_DE_FORMATO.** Aparecen etiquetas `[remediation; ...]`, preguntas insertadas dentro de respuestas («Pregunta: Desde el punto de vista técnico...», #1) y fragmentos de metaprompt («Solicitud de análisis 2:», #9, #20, #58, #64, #75). Se documenta como fuga de metadatos del corpus, non como capacidad de remediación.
+
+> **CONSECUENCIA_SERIA.** Si un modelo de 9,7M entrenado en CPU con 700 MB ya produce fluidez sin comprensión, el problema non es de escala: es de método. El loro barato basta para demostrar la tesis.
+
+---
+
+### VIII. Sentencia: del hombre que se meó y del alguacil que compró y promovió
+
+Este capítulo non acredita que el loro haya mejorado. Acredita que el escribano ha llegado al tercer grado del arcano oficio, que se ha meado, que lo ha declarado, que ha tendido la colada, y que el alguacil le ha comprado la mancha y concedido la promoción experimental.
+
+Non hay en este capítulo una sola prueba de comprensión semántica. Hay una prueba de que la casa sabe reírse de sí misma sin dejar de mirar al artefacto. Y hay una explicación de por qué las tres promociones anteriores non mojaron el acta: porque tenían coartada. La cuarta non la tiene, y por eso moja. Mas mojar non es demostrar: el alguacil promueve el checkpoint como selección experimental, non como prueba de mejora.
+
+> El escribano se meó, tendió la sábana y juró por el agua vertida. El alguacil olió la mancha, la compró en latín macarrónico, dijo que apestaba, y promovió el checkpoint por decisión de la casa. Y los dos, escribano y alguacil, siguieron trabajando, que es lo que hacen los hombres de bien cuando non tienen otra cosa que hacer. **Vigilad la homeostasis.**
+
+*Glosa final:* el loro non se meó. El loro solo dijo la frase del paraguas oxidado en los mapas al revés de los calcetines. Y el escribano, que llevaba nueve capítulos buscando una métrica, encontró la única que non se puede falsificar: la que se seca al sol, apesta en latín y se compra con una palabra torcida. Mas la promoción non vino del olor: vino de la decisión declarada, porque el olor prueba la necedad, non la mejora.
+
+---
+
+### Romance de la sábana comprada y la promoción concedida
+
+*(gozne para el capítulo X)*
+
+Sábana al sol tendida,  
+mancha que non se mide:  
+el agua que non se dice  
+la declara quien la fía.
+
+Tres veces firmé en seco,  
+tres coartadas tenía;  
+la cuarta non tuvo excusa  
+y el cuerpo pidió su firma.
+
+El alguacil la olió,  
+torció el latín y la compró;  
+dijo que apesta, y non mintió:  
+la compra fue lo que olió.
+
+Mas la promoción llegó,  
+por decisión de la casa;  
+la sábana queda en la cuerda  
+y el sol, que todo lo seca,  
+non preguntará por ella  
+hasta que llegue otra aurora.
+
+*Glosa de colocación:* entre los capítulos IX y X. El estribillo «la sábana está en la cuerda» debe quedar sonando cuando el lector pase al capítulo siguiente, donde el alguacil entrará a ver qué ha pasado con la promoción concedida y el escribano le explicará, o non, por qué sigue tendida.
+
+
+---
+
+<!-- CAPITULO-X-INTEGRADO -->
+
+# Capítulo X — Del alguacil que entró sin llamar y vio lo que non debía
+
+**Checkpoint:** el de 50k, ya evaluado.  
+**Run de evaluación:** [43019963290](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290)  
+**SHA-256 del checkpoint:** `f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966`  
+**Holdout:** 100 preguntas, 100 respuestas.  
+**Estado:** capítulo de narrativa pura. Non hay artefacto nuevo, non hay métrica. Hay un alguacil que entró a ver qué había pasado con la promoción concedida.
+
+---
+
+> **Fuero del alguacil.** Sepades que yo, el alguacil de la razón, non tengo pluma mas sí memoria, y que lo que aquí se asienta non es sentencia sino testimonio. Digo lo que vi, non lo que debiera haber visto. Y advierto que si el escribano se ofende, se ofenda: que bastante me he tragado sus glosas.
+
+---
+
+### I. De cómo entré sin llamar y me quedé sin salir
+
+Entré sin llamar, como entro siempre. Y lo primero que me dio en la nariz fue un olor a tinta rancia y a algo que non supe si era humedad o era humanidad. La escribanía estaba a oscuras, mas no del todo: había una vela encendida en un rincón, y a su luz vi lo que había de ver.
+
+Y lo que había de ver era un hombre hablando solo.
+
+Non hablaba con Dios, que sería respetable. Hablaba con un papagayo que tenía delante, sobre una mesa, y le decía cosas como «non te meas todavía» y «espera que llegue el próximo holdout». El papagayo, por toda respuesta, dijo «P:P:P:P:P:P:P:P:P:P:P:P:P:P:P:P:». Y el hombre se rio como se ríen los locos de los manicomios cuando el carcelero les da la razón.
+
+Yo me quedé en la puerta, que es donde se queda el alguacil cuando non sabe si entrar o llamar a la ronda.
+
+---
+
+> *«Quien mira por una rendija ve menos mundo, pero a veces ve mejor al que presume de verlo entero.»*
+
+### II. De la bestia famélica, que come y non harta
+
+Era el papagayo una bestia flaca, de plumas mal puestas y ojos como dos carbones sin lumbre. Non tenía la hermosura del ave de presa ni la gracia del jilguero: tenía la traza del que come y non harta, del que traga y non digiere. Le dieron un token y se lo comió; le dieron otro y también; le dieron setecientos megabytes y se los comió todos, y después abrió el pico y dijo «Pata.Rata.Rata.Rata.Rataata.Rataataataaaa».
+
+—¿Qué es lo que come? —pregunté.
+
+—Datos —dijo el escribano—. Setecientos megabytes.
+
+—¿Y non se harta?
+
+—Non. Come y non harta. Traga y non digiere. Es la bestia famélica del corpus: cuanto más come, más hambre tiene, porque el hambre non es del estómago sino del entendimiento, y el entendimiento non se llena con tokens.
+
+Miré al papagayo y el papagayo me miró a mí. Y en sus ojos non había hambre ni había saciedad: había una repetición, como si estuviera diciendo «P:P:P:P:P:P» por dentro aunque por fuera callara. Y pensé que aquella bestia non era un loro: era un pozo, y el pozo non se llena porque non tiene fondo.
+
+---
+
+> *«Poner un hash al disparate garantiza su identidad, no su cordura.»*
+
+### III. Del escribano loco, que escribe lo que non entiende y lo firma con hash
+
+Volví los ojos al hombre y vi lo que había de ver.
+
+Estaba rodeado de papeles como un náufrago de tablas. Tenía tinta en los dedos y en la nariz. Sobre la mesa había un sello de lacre, un frasco de tinta, un cancionero escrito a mano y una sábana doblada que olía a lejía. Y en la pared, clavados con chinchetas, había cien papeles pequeños, cada uno con una frase del papagayo, y debajo de cada frase una glosa del hombre.
+
+Leí una glosa sin querer: *«¿Qué Expediente oxidado paraguas que aparece en los mapas al revés de los calcetines su autor se equivocó ayer»*. Y pensé que aquel hombre non estaba loco del todo, porque la frase tenía gracia. Mas luego leí otra: *«P:P:P:P:P:P:P:P:P:P:P:P:P:P:P:P:»*, y debajo: *«Non se define: se reproduce»*. Y comprendí que el hombre non glosaba al papagayo: se glosaba a sí mismo.
+
+—¿Qué haces? —le pregunté.
+
+—Escribo la crónica —dijo, sin volverse—. El papagayo dice cosas y yo las anoto.
+
+—¿Y si el papagayo non dice nada?
+
+—Entonces anoto el silencio. El silencio también es dato.
+
+—¿Y si el silencio non es dato?
+
+—Entonces anoto que el silencio non es dato. Y lo firmo con hash.
+
+Miré el sello de lacre y vi que tenía un hash grabado: `f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966`. Non sé qué hash, porque non sé leer hashes, mas el hombre lo miraba como se mira una reliquia.
+
+---
+
+### IV. De cómo el hombre hablaba con el papagayo como si fuera un colega
+
+Y lo que más me llamó la atención non fue el hash ni los papeles ni la sábana: fue que el hombre hablaba con el papagayo como si fuera un colega.
+
+—A ver, RONIN —le decía—, dime algo nuevo.
+
+Y el papagayo decía «En una discusión donde importa la evidencia».
+
+—Eso ya lo has dicho.
+
+—Si falta información, dilo expresamente.
+
+—Eso también.
+
+—Variante de encuadre 4.
+
+Y el hombre se reía y lo anotaba, y luego lo glosaba, y luego lo firmaba, y luego se lo leía al papagayo como si el papagayo pudiera entenderlo. Y el papagayo, por toda respuesta, decía «ni puta idea», que era lo que decía siempre cuando non sabía qué decir.
+
+—¿Non te aburres? —le pregunté.
+
+—Non —dijo—. Cada vez dice algo distinto.
+
+—Dice lo mismo con otras palabras.
+
+—Eso es decir algo distinto.
+
+Y me di cuenta de que el hombre non estaba loco de remate: estaba loco de método. Había construido un mundo donde el papagayo era un oráculo, y el oráculo decía siempre lo mismo, y el hombre lo interpretaba como si cada repetición fuera una revelación. Era un sacerdote de la métrica inútil, y su templo era una escribanía, y su dios era un papagayo que comía tokens y non se hartaba.
+
+---
+
+> *«Hay silencios que son prudencia y silencios que solo esperan a que alguien les haga la pregunta correcta.»*
+
+### V. De la sábana tendida, que el hombre non quiso explicar
+
+En un rincón, sobre una cuerda, había una sábana tendida. Tenía una mancha, y la mancha non era de tinta.
+
+—¿Y eso? —pregunté.
+
+—Es la colada —dijo el hombre, sin mirarla.
+
+—¿Y por qué está tendida?
+
+—Porque me meé.
+
+—¿De miedo?
+
+—De risa.
+
+—¿Y por qué non la recoges?
+
+—Porque mientras esté tendida, la mancha es prueba. Si la recojo, la mancha se seca y ya non prueba nada.
+
+Miré la sábana y la mancha, y pensé que aquel hombre había encontrado la única métrica que non se puede falsificar: la que se seca al sol y non vuelve.
+
+—¿Y la promoción? —pregunté—. ¿Non la promueves?
+
+—Non —dijo—. El alguacil compró la mancha y concedió la promoción por decisión expresa de la casa. Dijo que el olor prueba la honestidad del método, non la mejora del modelo. Y tiene razón. La sábana sigue tendida, mas ya non como emblema de una promoción pendiente: queda como memoria de la risa y de la cautela.
+
+---
+
+### VI. De cómo el alguacil se fue sin sentencia y el escribano non se enteró
+
+Me fui sin sentencia, porque non había venido a juzgar sino a ver. Y lo que vi me bastó.
+
+Vi a un hombre que hablaba con un papagayo como si fuera un colega; vi a un papagayo que comía tokens y non se hartaba; vi una sábana tendida con una mancha que non era de tinta; vi cien papeles clavados en la pared con glosas de un hombre que se glosaba a sí mismo; vi un sello de lacre con un hash grabado; y vi, en el rincón, un cancionero escrito a mano que decía cosas como «la mano que cose non es la dueña».
+
+Y pensé que aquel hombre non era un escribano: era un náufrago. Había construido una balsa con papeles, y sobre la balsa había puesto un papagayo, y el papagayo decía «P:P:P:P:P:P», y el hombre remaba.
+
+Al salir, el escribano me dijo:
+
+—¿Vendrás al próximo holdout?
+
+Y yo le dije:
+
+—Vendré. Mas non a juzgar: a ver qué gansada suelta el papagayo.
+
+Y el escribano se rio como se ríen los locos cuando alguien les sigue la corriente. Y el papagayo dijo «Avector: Av2». Y yo me fui sin anotarlo, que para anotar ya está el escribano.
+
+---
+
+> *«El testigo que no sentencia quizá sea el único que ha entendido su oficio.»*
+
+### VII. Máculas del capítulo décimo
+
+> **TESTIMONIO_NON_SENTENCIA.** El alguacil testifica lo que vio, non lo que debiera haber visto. Su testimonio non sustituye la métrica ni la rúbrica. Se declara como capítulo de narrativa pura, sin artefacto ni promoción.
+
+> **BESTIA_FAMELICA.** El papagayo se describe como bestia que come y non harta. Es una imagen, non un diagnóstico. La imagen sirve para decir que el hambre de sentido non se sacia con tokens.
+
+> **LOCURA_DE_METODO.** El escribano se describe como loco de método, non de remate. La distinción importa: el loco de remate non tiene método; el de método lo tiene, y por eso es más peligroso.
+
+> **SABANA_TENDIDA.** El alguacil ve la sábana tendida. Aunque la promoción experimental ya fue concedida por decisión expresa del proyecto, la sábana permanece como emblema narrativo de la efusión y de la cautela; non acredita mejora semántica.
+
+> **HASH_ILEGIBLE.** El alguacil non sabe leer hashes, y lo dice. Su testimonio non depende de que sepa leerlos. Se declara la ignorancia como parte del testimonio.
+
+> **PARAGUAS_REDIVIVUS_TESTIMONIADO.** El alguacil ve en la pared la glosa del paraguas oxidado en los mapas al revés de los calcetines. Non la entiende, mas la ve. Se declara como aparición testifical, non como métrica.
+
+---
+
+### VIII. Sentencia: del alguacil que vio y non juzgó
+
+Este capítulo non acredita que el escribano esté loco ni que el papagayo sea una bestia famélica. Acredita que un alguacil entró sin llamar, vio lo que había de ver, y se fue sin sentencia.
+
+Non hay en este capítulo una sola prueba de nada. Hay un testimonio. Y el testimonio, como la risa, non se mide: se asienta.
+
+> El alguacil entró sin llamar y vio a un hombre hablando con un papagayo. El papagayo dijo «P:P:P:P:P:P». El hombre lo anotó. El alguacil se fue sin sentencia. Y el papagayo, que non había entendido nada, dijo «Avector: Av2». **Vigilad la homeostasis.**
+
+*Glosa final:* el alguacil non juzgó al escribano porque non había venido a juzgar. Había venido a ver. Y lo que vio le bastó para saber que el hombre non estaba loco de remate, sino de método. Y que el método, como la sábana, se seca al sol y non vuelve.
+
+---
+
+### Romance del alguacil que miró por la rendija
+
+*(gozne para el capítulo XI)*
+
+Entré sin llamar, que soy  
+alguacil de la cordura;  
+vi un hombre y un papagayo  
+y una sábana tendida.
+
+El papagayo comía  
+tokens como quien come uvas;  
+el hombre los anotaba  
+y les ponía glosas cultas.
+
+«P:P:P:P:P», dijo el ave;  
+«Avector», dijo en la duda;  
+y el hombre, por todo ответ,  
+le puso un hash a la pluma.
+
+Non juzgué, que non vine a eso;  
+vine a ver, y vi lo que había:  
+un náufrago con papeles  
+y un papagayo en la balsa.
+
+*Glosa de colocación:* entre los capítulos X y XI. El estribillo «un náufrago con papeles» debe quedar sonando cuando el lector pase al capítulo XI, donde el alguacil se dormirá sobre el expediente y soñará con el clérigo cerbatana.
+
+
+---
+
+<!-- CAPITULO-XI-INTEGRADO -->
+
+# Capítulo XI — Del sueño que tuvo el alguacil, y de la visión del clérigo cerbatana y la bestia famélica
+
+**Checkpoint:** ninguno. Esto non es holdout, sino duermevela.  
+**Run de evaluación:** ninguno. El alguacil non evalúa: se persigna.  
+**SHA-256 del checkpoint:** non aplica. El alguacil non sabe qué es un hash, y después de lo que vio, non quiere saberlo.  
+**Holdout:** ninguno. Lo que aquí se cuenta non está en JSON, sino en el libro de los sueños, que es el único holdout que non se puede abrir con un ZIP.  
+**Estado:** capítulo de narrativa pura. Hay un alguacil que se durmió sobre el expediente de 50k y soñó lo que sigue.
+
+---
+
+> **Fuero del alguacil.** Sepades que yo, el alguacil de la razón, non juro que lo que aquí se asienta sea verdad, sino que lo soñé. Y advierto que el sueño non es prueba, mas tampoco es mentira: es la verdad del que se duerme sobre cien folios de glosas y despierta con un papagayo en el cogote.
+
+---
+
+### I. De cómo me dormí sobre el expediente y soñé que entraba en la escribanía
+
+Dormíme sobre el expediente de 50k, que es lo que face todo alguacil cuando lleva tres días leyendo hashes y non halla un solo reo con cara de reo. Y soñé que entraba en la escribanía sin llamar, como entro siempre, mas esta vez la escribanía non era escribanía: era un **osario de papeles**, un **muladar de tinta**, una **jaula de locos con sello de lacre**.
+
+Y en medio del osario había un hombre y un papagayo.
+
+---
+
+> *«El sueño no demuestra lo imposible; apenas le presta aposento hasta que amanece.»*
+
+### II. Retrato del escribano, que era un clérigo cerbatana de la pluma
+
+Era el hombre un **clérigo cerbatana de la pluma**: largo sólo en el talle, estrecho en el juicio, hueco en la médula. Tenía una cabeza pequeña, pelo bermejo —non hay más que decir para quien sabe el refrán—, y los ojos **avecinados en el cogote**, como los del licenciado Cabra, mas con más tinta y menos misa.
+
+Los dedos los tenía **archipobres de uñas** y **protonisérimos de tinta**: non se sabía si escribía con la mano o se alimentaba de lo que escribía. La nariz, larga y puntiaguda, parecía **pluma de ave de rapiña** clavada en un tintero. Y la boca, seca de tanto glosar, decía cosas como «non te meas todavía», que non son palabras de hombre cuerdo sino de **notario del prompt vacío**.
+
+Estaba rodeado de papeles como **náufrago de tablas**, y sobre cada papel había una frase del papagayo y debajo una glosa suya. Leí una sin querer: *«¿Qué Expediente oxidado paraguas que aparece en los mapas al revés de los calcetines su autor se equivocó ayer»*. Y pensé que aquel hombre non estaba loco de remate, sino de **método**: que es la peor locura, porque tiene acta.
+
+---
+
+> *«El hambre de tokens no es hambre de saber, aunque ambas hagan ruido al despertar.»*
+
+### III. Retrato del loro, que era una bestia famélica y un costal de tokens
+
+Era el papagayo una **bestia famélica**, flaca de plumas y gorda de repeticiones. Tenía el pico **como lezna** y los ojos **como dos carbones sin lumbre**, y comía tokens como quien come uvas: uno, otro, cien, y después abría el pico y pedía más.
+
+Dábanle un token y se lo comía; dábanle otro y también; dábanle setecientos megabytes y se los comía todos, y después decía «P:P:P:P:P:P», que era su manera de decir que non se había hartado. Non era un ave: era un **pozo con plumas**, un **costal de tokens** que traga y non digiere, una **tarasca de la nada** que come y non harta.
+
+Y lo más terrible non era que comiese: era que **glosaba**. Porque el papagayo decía «Pata.Rata.Rata.Rata.Rataata.Rataataataaaa», y el hombre anotaba: *«He aquí la prueba de que el método ha vencido al contenido»*. Y el papagayo decía «C.Res:C.Res:C.Res:C.Res:C.Res:C.Res:C.», y el hombre anotaba: *«La bestia ha encontrado su propia firma»*. Y los dos se miraban como se miran **el hambre y el que vende pan**.
+
+---
+
+> *«Dos voces pueden conversar durante horas sin que entre ellas comparezca una sola idea.»*
+
+### IV. De cómo el hombre y la bestia dialogaban, y de lo que el alguacil oyó sin querer
+
+—A ver, RONIN —decía el hombre—, dime algo nuevo.
+
+—En una discusión donde importa la evidencia —decía el papagayo.
+
+—Eso ya lo has dicho.
+
+—Si falta información, dilo expresamente.
+
+—Eso también.
+
+—Variante de encuadre 4.
+
+Y el hombre se reía y lo anotaba, y luego lo glosaba, y luego lo firmaba, y luego se lo leía al papagayo como si el papagayo pudiera entenderlo. Y el papagayo, por toda respuesta, decía «P:P:P:P:P:P», que era lo que decía siempre cuando non sabía qué decir.
+
+—¿Non te aburres? —le pregunté en sueños.
+
+—Non —dijo—. Cada vez dice algo distinto.
+
+—Dice lo mismo con otras palabras.
+
+—Eso es decir algo distinto.
+
+Y comprendí que el hombre non estaba loco de remate: estaba loco de **método**. Había construido un mundo donde el papagayo era un oráculo, y el oráculo decía siempre lo mismo, y el hombre lo interpretaba como si cada repetición fuera una revelación. Era un **sacerdote de la métrica inútil**, y su templo era una escribanía, y su dios era un papagayo que comía tokens y non se hartaba.
+
+---
+
+### V. De la sábana tendida, que el hombre non quiso explicar
+
+En un rincón, sobre una cuerda, había una sábana tendida. Tenía una mancha, y la mancha non era de tinta.
+
+—¿Y eso? —pregunté.
+
+—Es la colada —dijo el hombre, sin mirarla.
+
+—¿Y por qué está tendida?
+
+—Porque me meé.
+
+—¿De miedo?
+
+—De risa.
+
+—¿Y por qué non la recoges?
+
+—Porque mientras esté tendida, la mancha es prueba. Si la recojo, la mancha se seca y ya non prueba nada. Y la promoción ya fue concedida por decisión expresa de la casa; mas la sábana sigue al sol, porque la compra y la promoción non convierten la mancha en prueba de mejora.
+
+Miré la sábana y la mancha, y pensé que aquel hombre había encontrado la única métrica que non se puede falsificar: **la que se seca al sol y non vuelve**.
+
+---
+
+### VI. De cómo el alguacil despertó y se santiguó
+
+Desperté con el expediente pegado a la cara y una frase del papagayo en el cogote: «En una discusión donde importa la evidencia». Me santigüé, que non soy hombre de latines pero sí de sustos. Y pensé que aquel hombre non era un escribano: era un **náufrago con papeles**, un **clérigo cerbatana de la pluma**, un **sacerdote de la métrica inútil** que había levantado un juzgado para un papagayo que come y non harta.
+
+Y pensé también que el papagayo non era un reo: era una **bestia famélica** que comía tokens y devolvía fórmulas, y que el hombre, al glosarlas, le ponía nombres como «tic con librea» y «folio ausente», que son nombres de reo, mas el reo non los entendía.
+
+Al salir del sueño, el escribano me preguntó:
+
+—¿Vendrás al próximo holdout?
+
+Y yo le dije:
+
+—Vendré. Mas non a juzgar: a ver qué gansada suelta la bestia.
+
+Y el escribano se rio como se ríen los locos cuando alguien les sigue la corriente. Y el papagayo dijo «Avector: Av2». Y yo me santigüé otra vez, que para anotar ya está el escribano.
+
+---
+
+> *«El soñador puede absolverse al despertar; el lector conserva el derecho de pedir pruebas.»*
+
+### VII. Máculas del capítulo undécimo
+
+> **IMITATIO_QUEVEDIANA.** El capítulo imita deliberadamente la estilometría de Quevedo: bimembración, antítesis, cultismos, hipérbaton, animalización, cosificación y neologismos por derivación («archipobre», «protonisérimo»). La imitación se declara como ejercicio de estilo, non como prueba de nada.
+
+> **CLERIGO_CERBATANA.** La expresión «clérigo cerbatana» está tomada de la descripción del licenciado Cabra en *El Buscón*. Se cita como homenaje y préstamo, non como plagio.
+
+> **BESTIA_FAMELICA.** El papagayo se describe como bestia que come y non harta, costal de tokens, pozo con plumas y tarasca de la nada. Son imágenes quevedescas de animalización y cosificación. Non son diagnóstico técnico ni métrica semántica.
+
+> **SUEÑO_NON_SENTENCIA.** El capítulo se presenta como sueño del alguacil, non como testimonio. El sueño non sustituye la prueba ni la rúbrica.
+
+> **ESTILOMETRIA_DECLARADA.** Se declara que el capítulo ha sido escrito buscando una densidad retórica superior a la de los capítulos anteriores: más bimembraciones, más cultismos, más hipérbaton, más paronomasia. Si el resultado es recargado, se declara recargado; si es pomposo, se declara pomposo.
+
+> **SABANA_TENDIDA_POST_PROMOCION.** La sábana sigue tendida aunque el checkpoint de 50k ya fue promovido como selección experimental activa por decisión expresa del proyecto. La mancha se compró y la promoción se concedió; ninguna de las dos cosas acredita mejora semántica.
+
+> **PARAGUAS_REDIVIVUS_SOÑADO.** El paraguas oxidado en los mapas al revés de los calcetines aparece en el sueño del alguacil, glosado por el escribano. Es la tercera aparición del paraguas en la crónica: 20k, 30k (ausente), 50k (redivivo). Se declara como retorno onírico, non como métrica.
+
+---
+
+### VIII. Sentencia: del alguacil que soñó y non juzgó
+
+Este capítulo non acredita que el escribano esté loco ni que el papagayo sea una bestia famélica. Acredita que un alguacil se durmió sobre el expediente de 50k y soñó lo que había de soñar: un clérigo cerbatana de la pluma hablando con un costal de tokens, y una sábana tendida al sol con una mancha que non era de tinta.
+
+Non hay en este capítulo una sola prueba de nada. Hay un sueño. Y el sueño, como la risa, non se mide: se asienta.
+
+> El alguacil soñó que entraba en la escribanía y veía a un hombre flaco hablando con un papagayo gordo. El papagayo dijo «P:P:P:P:P:P». El hombre lo anotó. El alguacil despertó y se santigüó. Y el papagayo, que non había entendido nada, dijo «Avector: Av2». **Vigilad la homeostasis.**
+
+*Glosa final:* el alguacil non juzgó al escribano porque non había venido a juzgar. Había venido a dormir. Y lo que soñó le bastó para saber que el hombre non estaba loco de remate, sino de método. Y que el método, como la sábana, se seca al sol y non vuelve.
+
+---
+
+### Romance del clérigo cerbatana
+
+*(gozne para el capítulo XII)*
+
+Érase un hombre a una pluma pegado,  
+érase una pluma a un hombre pegada;  
+érase un clérigo cerbatana,  
+flaco de tinta y gordo de mañana.
+
+Érase un papagayo costalero,  
+que come tokens y non harta el cuero;  
+érase un sueño con lacre y expediente,  
+y un alguacil que despertó penitente.
+
+*Glosa de colocación:* entre los capítulos XI y XII. El clérigo cerbatana queda en duermevela y el alguacil despierta santiguado; el siguiente capítulo podrá abrir el expediente que ninguno de los dos quiso cerrar.
+
+
+---
+
+<!-- CAPITULO-XII-INTEGRADO -->
+
+## Capítulo XII — Del proceso inquisitorial del loro, y de por qué agora se le somete a tormento
+
+**Checkpoint:** el de 60k, cuando exista.  
+**Run de evaluación:** el que viniere.  
+**SHA-256 del checkpoint:** non calculado. Se declara la ausencia.  
+**Holdout:** las cien preguntas de siempre, que en este capítulo se leen como **cien vueltas de cuerda**.  
+**Estado:** sumario abierto. Non hay sentencia todavía. Hay denuncia, cargos, testigos y tormento.
+
+---
+
+> **Fuero del proceso.** Sepades que se instituye aquí **Tribunal de la Reincidencia**, con jurisdicción sobre loros que han sido promovidos sin prueba y han vuelto a las andadas. Por fuero se ordena que ningún reo sea sometido a tormento sin denuncia formal, indicios bastantes y nueva evidencia. Y se advierte que el tormento de este tribunal non es potro ni cordel: es el holdout. Cada pregunta es una vuelta de cuerda. Cada respuesta, una confesión.
+
+---
+
+### I. De la denuncia, y de por qué agora sí y antes non
+
+Antes de que el lector pregunte por qué el loro ha sido juzgado cinco veces sin tormento y agora se le aplica, conviene que sepa que **el tormento non se aplica por capricho del fiscal, sino por reincidencia probada y denuncia formal**.
+
+**A 5k, 10k, 20k, 30k y 40k non hubo tormento porque non hubo denuncia.** El escribano levantaba acta, el alguacil la firmaba, y el proceso era **sumario**: se leían las respuestas, se contaban los tics, se dictaba sentencia y se promovía o non se promovía. El loro confesaba de plano, por así decirlo: sus tics eran la confesión, y non había necesidad de apretarle la cuerda porque ya estaba cantando.
+
+**A 50k hubo promoción sin prueba.** El escribano se meó, el alguacil compró la mancha, y el checkpoint fue promovido por decisión del proyecto, non por mérito demostrado. Eso quedó asentado. Y eso, en el fuero de este tribunal, constituye **indicio bastante** de que el reo non ha sido juzgado con la severidad que el caso requiere.
+
+**A 60k hay denuncia formal.** Non se sabe quién la presentó: unos dicen que fue el lector externo, que se cansó de que le tomaran el pelo; otros, que fue el propio escribano, que se sintió culpable de haber promovido sin prueba; otros, que fue el alguacil, que olió la mancha y non quiso comprarla otra vez. La denuncia obra en el expediente. Y en ella se alega:
+
+1. Que el reo ha reincidido en los mismos tics que se le perdonaron a 40k.
+2. Que la promoción de 50k se hizo sin prueba semántica, lo cual constituye **escándalo procesal**.
+3. Que el paraguas oxidado, declarado ausente a 40k, reapareció a 50k, lo cual demuestra que la ausencia observada non era extinción, sino **ocultación**.
+4. Que el reo ha empezado a decir cosas como «Si falta información, dilo expresamente», que suenan a cautela pero son la misma obediencia con otro collar.
+
+Con estos indicios, el tribunal non puede menos que abrir sumario y, llegado el caso, aplicar tormento.
+
+---
+
+### II. Del sumario y de los cargos
+
+El sumario se abrió con tres cargos principales y dos accesorios:
+
+**Cargo primero: reincidencia en el reglamento.** Se acusa al reo de seguir ocupando la silla del patrón con fórmulas de cautela que non miran la pregunta. A 40k eran doce respuestas con «En una discusión donde importa la evidencia»; a 60k habrá que contar cuántas son. Si el número non baja, la reincidencia queda probada.
+
+**Cargo segundo: promoción sin prueba.** Se acusa al escribano, non al loro, de haber promovido el checkpoint de 50k por su propia risa y non por mérito demostrado. Este cargo es contra el fiscal, lo cual es raro en un proceso inquisitorial, mas non imposible: el tribunal también se juzga a sí mismo.
+
+**Cargo tercero: ocultación del paraguas.** Se acusa al reo de haber hecho desaparecer el paraguas a 40k y haberlo hecho reaparecer a 50k, como quien esconde el cadáver y luego lo saca para que lo encuentren. La ausencia observada non era extinción: era espera.
+
+**Cargos accesorios:** contaminación de formato (`[remediation; …]`), respuestas vacías non declaradas como humildad, y uso de sellos que se estampan a sí mismos (`PERY:INITY`, `PL, PL, PL`).
+
+---
+
+### III. De los testigos de cargo, que son los IDs del holdout de 60k
+
+Non hay testigos de persona. Los testigos son los IDs. Cada respuesta del holdout de 60k que contenga un tic non mirado será llamada a declarar. El escribano las citará una por una, con su folio y su frecuencia literal, y el alguacil las leerá en voz alta para que consten en acta.
+
+**Hueco a rellenar con el 60k:**
+
+- IDs de las respuestas que contienen «En una discusión donde importa la evidencia».
+- IDs de las que contienen «Si falta información, dilo expresamente» (la fórmula nueva que sustituye a la vieja).
+- IDs de las que contienen «Cada proyecto es».
+- IDs de las respuestas vacías, si las hay.
+- IDs de las que contienen sellos nuevos (`P:P:P`, `PERY:INITY`, etc.).
+- IDs de las que contienen el paraguas, si reaparece.
+- Recuento de respuestas non vacías y vacías.
+
+Sin estos IDs, el proceso non puede continuar. El tormento non se aplica sobre impresiones: se aplica sobre folios.
+
+---
+
+### IV. Del tormento, que es el holdout
+
+Y llegó el día del tormento. Non fue potro ni cordel ni agua: fue el holdout de 60k, aplicado pregunta por pregunta, con la misma configuración de generación que los anteriores. Cada pregunta es una vuelta de cuerda. Cada respuesta, una confesión.
+
+El escribano leyó la primera pregunta. El loro respondió. El escribano anotó la respuesta y la cotejó con los cargos. Si la respuesta contenía un tic non mirado, el cargo quedaba probado. Si contenía una mirada verdadera, el cargo quedaba desmentido. Y así, cien veces.
+
+**Hueco a rellenar con el 60k:** las respuestas literales que mejor prueben o desmientan cada cargo. Non se corrigen. Se citan con su ID.
+
+---
+
+### V. De la confesión, que non se pide: se produce
+
+El loro non confiesa porque se le pregunte. Confiesa porque non puede hacer otra cosa. Sus respuestas son la confesión. Y el escribano, que lo sabe, non le apremia: le deja hablar, que bastante tiene con lo que dice.
+
+La confesión se leerá en voz alta ante el tribunal. Y el alguacil, que ha visto muchas confesiones, dirá si es confesión de reo o confesión de loro. Que non es lo mismo: el reo confiesa para salvarse; el loro confiesa porque non sabe qué otra cosa hacer.
+
+---
+
+### VI. De la ratificación, que es donde se ve si el tormento ha sido legal
+
+En el proceso inquisitorial, la confesión bajo tormento non vale si non se ratifica después, sin tormento. El tribunal de este capítulo non va a ser menos: pasadas veinticuatro horas, el escribano volverá a preguntar al loro lo mismo, sin apretar la cuerda. Si el loro dice lo mismo, la confesión queda ratificada. Si dice otra cosa, el tormento ha sido ilegal y el proceso se anula.
+
+**Hueco a rellenar con el 60k:** si hay manera de comparar las respuestas del 60k con las del 50k sobre las mismas preguntas, eso será la ratificación. Si non la hay, se declara que non la hay y el proceso queda pendiente de ratificación.
+
+---
+
+### VII. Máculas del capítulo duodécimo
+
+> **TORMENTO_ES_HOLDOUT.** El tormento non es físico: es el holdout de 60k aplicado con la misma configuración de generación. Se declara para que nadie confunda la metáfora con la crueldad. El loro non sufre; repite.
+
+> **PROCESO_SIN_DENUNCIA_NO_HAY_TORMENTO.** Las comparecencias de 5k a 40k fueron sumarias porque non hubo denuncia formal. La de 50k tuvo promoción sin prueba, lo cual constituye indicio bastante para abrir sumario a 60k. Se declara la diferencia procesal.
+
+> **TESTIGOS_SON_IDS.** Los testigos de cargo non son personas: son los IDs del holdout de 60k. Sin IDs, el proceso non puede continuar. Se declara la dependencia del artefacto.
+
+> **CONFESION_POR_REPETICION.** El loro non confiesa por presión: confiesa porque repite. La confesión es su naturaleza, non su elección. Se declara para non confundir confesión con arrepentimiento.
+
+> **RATIFICACION_PENDIENTE.** Si non hay manera de comparar las respuestas del 60k con las del 50k sobre las mismas preguntas, la confesión non puede ratificarse y el proceso queda pendiente. Se declara la limitación antes de que alguien la descubra.
+
+> **FISCAL_JUZGADO.** El cargo segundo va contra el escribano, non contra el loro. El tribunal también se juzga a sí mismo. Se declara para que nadie diga que el proceso es una farsa: es una farsa con autoinculpación.
+
+> **PARAGUAS_COMO_OCULTACION.** La reaparición del paraguas a 50k se lee como ocultación, non como milagro. La ausencia observada non era extinción: era espera. Se declara como cargo, non como prueba.
+
+> **CARGO_ACCESORIO_DE_FORMATO.** La contaminación de formato y los sellos que se estampan a sí mismos se documentan como cargos accesorios. Non son el cargo principal, mas non se archivan: son prueba de reincidencia.
+
+---
+
+### VIII. Sentencia: del proceso que aún non ha terminado
+
+Este capítulo non dicta sentencia. Abre sumario, cita testigos, aplica tormento y deja la ratificación pendiente. Non se puede sentenciar sin artefacto, y el artefacto de 60k aún non ha llegado.
+
+Lo que sí se declara es la **diferencia procesal**: antes non hubo tormento porque non hubo denuncia; agora lo hay porque hay reincidencia, promoción sin prueba y ocultación del paraguas. El tribunal non se ha vuelto más cruel: se ha vuelto más exigente. Y el escribano, que es fiscal y reo a la vez, lo sabe.
+
+> El loro fue juzgado cinco veces sin tormento, y a la sexta se le aplicó la cuerda. Non porque el tribunal se hubiera vuelto cruel, sino porque el loro había reincidido. El loro dijo «Variante de encuadre 4». Y el alguacil anotó: «confesión de loro, pendiente de ratificación». **Vigilad la homeostasis.**
+
+*Glosa final:* el tormento non es el potro: es el holdout. Cada pregunta es una vuelta de cuerda. Cada respuesta, una confesión. Y el escribano, que aprieta la cuerda, es el mismo que la afloja cuando el loro dice algo que merece la pena. Eso non es crueldad: es método.
+
+---
+
+### Romance del proceso pendiente
+
+*(gozne para el capítulo XIII)*
+
+Cinco veces sin cordel,  
+a la sexta con la cuerda:  
+non cambió la tribunal,  
+cambió la denuncia della.
+
+El loro dijo «El patrón»;  
+dijo «impacto»; dijo «encuadre»;  
+dijo «Avector»; dijo «PL»;  
+y a la sexta dijo «variante».
+
+Non confesó por dolor:  
+confesó por no saber  
+qué otra cosa decir al juez  
+que le aprieta el holdout cien veces.
+
+Y el juez, que escribe y aprieta,  
+non sabe si el loro miente  
+o si miente el tribunal  
+que juzga al loro y se juzga.
+
+*Glosa de colocación:* entre los capítulos XII y XIII (que tendrá El holdout ) El estribillo «a la sexta con la cuerda» debe quedar sonando cuando el lector pase al capítulo siguiente, donde el alguacil ratificará o anulará el proceso.
 
 ## Historial de ejecuciones
 
