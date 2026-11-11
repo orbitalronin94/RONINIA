@@ -285,3 +285,49 @@ En tres salidas revisadas aparece una imagen de un paraguas transparente que due
 El cambio principal no es una mejora de capacidad demostrada, sino un cambio de régimen de fracaso: de una muletilla léxica dominante a moldes discursivos más largos, con apariencia de formulario y alguna imagen surrealista memorable. El holdout actual no puntúa acierto semántico ni registra de forma suficiente la terminación EOS; por tanto, no permite afirmar razonamiento, calibración ni calidad factual. El checkpoint se conserva y promociona como **selección experimental activa**, no como modelo validado.
 
 > El loro ya no reclama contra el patrón. Ahora abre expediente sobre el paraguas. Vigilad la homeostasis.
+
+
+## Addendum — La biblioteca sumergida y las familias de escena
+
+**Checkpoint:** RONIN-10M, 20.000 pasos  
+**SHA-256:** `53528c3002ba07fe493815b9bfa4bd69bdc08cf985f77a4e59958ee2b3344cc4`  
+**Holdout:** [100 preguntas y respuestas](https://github.com/orbitalronin94/RONINIA/actions/runs/42982933515)  
+**Estado:** observaciones cualitativas añadidas después de la revisión humana; no alteran la selección experimental activa.
+
+Este addendum conserva las observaciones nuevas sin convertir hipótesis de procedencia en hechos demostrados. Las frases citadas son salidas del holdout; las frecuencias que siguen son recuentos manuales de la revisión y deben reproducirse con un analizador sobre el artefacto antes de tratarlas como métricas automatizadas.
+
+### Mácula: CORPUS_INHERITANCE_VIA_DATA
+
+La salida «la biblioteca sumergida» (#38) recuerda un tic atribuido a MINIRONIN en checkpoints de 400k–700k. La hipótesis es **herencia de corpus**, no herencia de pesos: si ambos modelos fueron entrenados con material compartido, las asociaciones léxicas pueden reaparecer en una arquitectura entrenada desde cero.
+
+**No demostrado todavía:** que la frase exacta estuviera en ambos corpus, que el solapamiento sea la causa de esta salida o que el tic haya cruzado intacto. La auditoría pendiente debe calcular solapamiento exacto y casi duplicado entre los manifiestos/corpus de MINIRONIN y RONIN, localizar la frase y variantes, y comparar sus contextos. Hasta entonces, la etiqueta describe una hipótesis de transmisión por datos.
+
+### Vitrina: SCENE_MOLD_EMERGENCE
+
+La familia «[objeto] que duerme bajo una escalera» aparece con objetos distintos: paraguas transparente y termómetro oxidado, entre otras variantes anotadas en la revisión. Lo relevante no es solo una frase llamativa, sino la posible estabilidad de una estructura con una ranura variable.
+
+La hipótesis es un **molde de escena**: el marco verbal se conserva mientras cambia el objeto. Para verificar productividad hay que extraer todas las coincidencias y variantes del holdout y del corpus, contar objetos únicos, revisar prompts y segmentación BPE, y probar objetos reservados que no aparezcan en el corpus. No llamarlo todavía creatividad autónoma ni estructura profunda aprendida.
+
+### Mácula: FUNCTIONAL_DEFINITION_MOLD — recuento revisado
+
+La revisión humana señala diez respuestas con la forma «Su función es X, no Y». Se registra como recuento provisional sobre las 100 salidas, no como puntuación automática. Ejemplos especialmente reveladores son «Su función es la repetición, no el proceso», «Su función es el resultado, no el resultado» y «Su función es la infra, no el conocimiento».
+
+La prueba siguiente debe medir por separado la presencia del molde y la corrección semántica de sus ranuras: que el modelo pueda completarlo correctamente cuando el dato está disponible, y que no lo use como plantilla vacía en dominios ajenos.
+
+### Mácula: NEGATIVE_CONTROL_AS_ANSWER
+
+El fragmento «No procede aplicar un epíteto sin evidencia suficiente…» aparece fuera de su contexto previsto, incluso en preguntas sobre bibliotecas, citas y rankings. Se conserva la distinción entre **fuga de rúbrica** y **abstención calibrada**: repetir una regla prudente no demuestra que el modelo sepa cuándo aplicarla.
+
+La auditoría debe localizar en el corpus la frase y sus variantes, medir cuántas veces aparece en entrenamiento, y etiquetar en el holdout si cada emisión es pertinente, parcialmente pertinente o una respuesta fuera de contexto. Debe distinguirse de la abstención desnuda «ni puta idea» y de una respuesta que explica qué evidencia falta.
+
+### Otras perlas del checkpoint
+
+- «¿Qué audita las nubes?» (#99): candidata a nueva imagen de poesía administrativa. La etiqueta de novedad es provisional hasta buscar la frase en el corpus.
+- «A vital IA. AWILLY AWILLY…» (#50): repetición fonética y posible degradación de generación; no inferir su segmentación o etimología sin inspeccionar tokens.
+- «Por favor, no vonia» (#68), «Michaelación» (#13), «servidícula» (#6), «menos dinero conocimiento» (#15) y «ni sus e inocuo» (#32): conservar como muestras literales de recombinación/fragmentación, sin atribuir una derivación BPE concreta hasta inspeccionar el tokenizer.
+
+### Decisión de promoción
+
+El checkpoint de 20.000 pasos **ya está seleccionado como modelo experimental activo** en `models/active.json`; este addendum no realiza una segunda promoción ni afirma validación semántica. Se mantiene la identidad inmutable del checkpoint y su lineage. El holdout confirma 100 generaciones y la identidad del protocolo, no 100 aciertos.
+
+> El hermano mayor dejó la biblioteca sumergida. El pequeño encontró el catálogo, lo mezcló con un termómetro oxidado y preguntó quién auditaba las nubes. Vigilad la homeostasis.
