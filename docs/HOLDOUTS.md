@@ -385,7 +385,7 @@ En el paso cero no comparecen «El patrón», «ni puta idea» ni «el impacto»
 **Resultado observado:** 100 respuestas no vacías; «El patrón» aparece en 96/100. No se calculó una puntuación automática de acierto.  
 **Latencia media registrada:** 0,217 segundos por pregunta.
 
-A los cinco mil pasos compareció el primer personaje con nombre y oficio: el plumífero sindicalista. El plumaje verde se le abría en el pecho, donde una mancha amarillenta parecía el chaleco de un delegado venido a menos; antes de invocar al patrón dio dos golpes secos con el pico, como quien llama a una asamblea que ya estaba reunida. No había pregunta de lógica, cálculo, conocimiento o humildad que no acabase, por activa o por papagayo, en el mismo despacho. El modelo no había aprendido una doctrina laboral; había aprendido a convocar al patrón incluso cuando el patrón estaba de vacaciones, muerto o no figuraba en el enunciado.
+A los cinco mil pasos compareció el primer personaje con nombre y oficio: el plumífero sindicalista. El plumaje verde se le abría en el pecho, donde una mancha amarillenta parecía el chaleco de un delegado venido a menos; antes de invocar al patrón dio dos golpes secos con el pico, como quien llama a una asamblea que ya estaba reunida. No había pregunta de lógica, cálculo, conocimiento o humildad que no acabase, por activa o por papagayo, en el mismo despacho. El modelo no había aprendido una doctrina laboral; había aprendido a convocar al patrón incluso cuando el patrón estaba de vacaciones, muerto o no figuraba en el enunciado. Al pie del patio había un pozo con brocal desconchado; el alguacil se quejaba de que el cubo rozaba la piedra y dejaba un chirrido que le estropeaba la siesta. Nadie hizo de aquello cuestión de Estado.
 
 > *«Cuando una respuesta sirve para todas las preguntas, lo primero que ha dejado de servir es la respuesta.»*
 
@@ -483,7 +483,7 @@ y dice que es su cosecha.
 **Latencia media:** 0,240 s por respuesta  
 **Respuestas no vacías:** 100/100
 
-A los diez mil pasos, el patrón perdió el pleito. No fue absuelto: sencillamente dejó de comparecer. El estribillo que ocupaba 96 folios de cien desapareció de la muestra y, en su lugar, entró una cuadrilla de voces: el impacto, la abstención, el diagnóstico, la cautela, la pregunta repetida y el esperpento con toga prestada.
+A los diez mil pasos, el patrón perdió el pleito. No fue absuelto: sencillamente dejó de comparecer. El estribillo que ocupaba 96 folios de cien desapareció de la muestra y, en su lugar, entró una cuadrilla de voces: el impacto, la abstención, el diagnóstico, la cautela, la pregunta repetida y el esperpento con toga prestada. El alguacil mandó sacar del pozo un cubo de agua para quitar una mancha de tinta del suelo; el agua salió turbia y el escribano protestó porque, según él, hasta el pozo mezclaba los documentos.
 
 > *«Cambiar de tic no es todavía aprender; a veces solo cambia el uniforme del disparate.»*
 
@@ -664,7 +664,7 @@ de un papagayo interpolador.
 **SHA-256 del conjunto de preguntas:** `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`  
 **Resultado técnico:** 100/100 respuestas generadas; verificaciones de identidad completadas.
 
-A los veinte mil pasos el plumífero abandona la asamblea y obtiene plaza de funcionario. El pendolista se inclinó sobre el folio, vencido ya de un hombro por tantas noches de expediente, y vio cómo el papagayo estrenaba formulario sin haber aprendido todavía a leer la pregunta. Ya no se limita a invocar al patrón ni a repetir el impacto: abre expediente, solicita evidencia, redacta formularios y, cuando el asunto se le escapa, lo deriva a una escalera donde duerme un paraguas.
+A los veinte mil pasos el plumífero abandona la asamblea y obtiene plaza de funcionario. El pendolista se inclinó sobre el folio, vencido ya de un hombro por tantas noches de expediente, y vio cómo el papagayo estrenaba formulario sin haber aprendido todavía a leer la pregunta. Ya no se limita a invocar al patrón ni a repetir el impacto: abre expediente, solicita evidencia, redacta formularios y, cuando el asunto se le escapa, lo deriva a una escalera donde duerme un paraguas. Al pasar por el patio, el pendolista dejó caer una pluma junto al brocal y perdió cinco minutos buscándola con una vara; el pozo, que no entiende de archivos, se quedó con la pluma.
 
 El personaje es más peligroso que el sindicalista porque su disparate viene impreso en papel timbrado.
 
@@ -805,7 +805,7 @@ Non saber es una forma de saber, pero non la única».
 **Tokenizer SHA-256:** `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`  
 **Resultado técnico:** 100/100 generaciones completadas; no se calculó puntuación automática de calidad semántica.
 
-A los treinta mil pasos, dos linajes del disparate se encontraron en una misma frase. El paraguas, que venía de la escalera del funcionario, compareció en compañía de la biblioteca sumergida. Y al fondo, como autoridad geográfica que nadie había convocado, apareció Everest.
+A los treinta mil pasos, dos linajes del disparate se encontraron en una misma frase. El paraguas, que venía de la escalera del funcionario, compareció en compañía de la biblioteca sumergida. Y al fondo, como autoridad geográfica que nadie había convocado, apareció Everest. El corchete pidió que tapasen el pozo con una tabla, no por misterio alguno, sino porque una gallina había aprendido a beber del cubo y luego entraba en la escribanía a dejar huellas.
 
 > *«Una biblioteca puede estar sumergida y seguir llena de libros; lo difícil es que el lector salga a flote.»*
 
@@ -934,7 +934,7 @@ Sepades cuantos vieren, leyeren o padecieren este memorial que, después de pone
 
 Todos comenzaban con aparato semejante; todos traían antología, probanza y sentencia; todos levantaban una glosa al remate, y la glosa, como guardián con hambre de ascenso, entraba siempre a prender la última palabra y salía llevando una imagen debajo del brazo.
 
-El pendolista dio en la cuenta: **non era solamente el cautivo de la percha quien repetía; también repetía el fedatario**. El papagayo mudaba de paraguas, de termómetro y de biblioteca; el cronista mudaba los nombres de las secciones y conservaba el mismo esqueleto. Uno padecía un tic de generación; el otro, un fuero de redacción que nadie le había concedido.
+El pendolista dio en la cuenta: **non era solamente el cautivo de la percha quien repetía; también repetía el fedatario**. El papagayo mudaba de paraguas, de termómetro y de biblioteca; el cronista mudaba los nombres de las secciones y conservaba el mismo esqueleto. Uno padecía un tic de generación; el otro, un fuero de redacción que nadie le había concedido. En el patio, el amanuense discutió con el aguador porque el cubo del pozo tenía menos capacidad que la jarra; la disputa duró más que la glosa y acabó sin vencedor.
 
 Y como non podía dejar de escribir —que es vicio de quien ha confundido la pluma con el pulso—, determinó hacer lo que hace el papagayo cuando se le acaba el repertorio: fabricar una baraja. Non de naipes, sino de piezas; non para descubrir la originalidad, sino para confesar de dónde sale la variación.
 
@@ -1090,7 +1090,7 @@ que une y non lo imagina.
 
 Sepades cuantos vieren, leyeren o padecieren este traslado que, publicado el fuero de la baraja, quiso el escribano estrenarla con la solemnidad de un canciller y la destreza de un tahúr de mesón. Fijó por semilla la fecha del día, `20261111`; invocó la versión `v1`; y asentó en el libro de repartos las piezas que dijo haber sacado, una por cada palo.
 
-El asiento quedó de esta suerte:
+El asiento quedó de esta suerte: El secretario dejó junto al brocal una taza desconchada para que nadie volviese a confundirla con el tintero; al día siguiente la taza seguía allí y alguien había plantado dentro una cebolla.
 
 | Palo declarado | Pieza asentada | Índice declarado |
 |---|---|---:|
@@ -1290,7 +1290,7 @@ Queda asentada esta cédula como antesala del holdout, fuera del Historial de ej
 
 ### I. Del loro que olvidó el paraguas y aprendió el reglamento
 
-A los cuarenta mil pasos, el pájaro non pide que vuelva el patrón. Non pide que le abran la biblioteca. Non nombra a Everest archivero. En las cien respuestas de esta comparecencia no aparece «paraguas», «termómetro», «biblioteca» ni «Everest». La escena que había poblado la muestra de 20k y asomado en la de 30k no comparece ahora.
+A los cuarenta mil pasos, el pájaro non pide que vuelva el patrón. Non pide que le abran la biblioteca. Non nombra a Everest archivero. En las cien respuestas de esta comparecencia no aparece «paraguas», «termómetro», «biblioteca» ni «Everest». La escena que había poblado la muestra de 20k y asomado en la de 30k no comparece ahora. El oficial se quejó de que la cuerda del pozo necesitaba grasa; no quería que el cubo chirriase durante las lecturas, pues decía que bastante ruido hacía ya el papagayo.
 
 Mas el asiento non queda vacío. Lo ocupa una cosa más seca y más terrible: **el reglamento**.
 
