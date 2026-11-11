@@ -52,6 +52,7 @@
 - [Capítulo XII — Del juicio del escribano](#capítulo-xii--del-juicio-del-escribano-y-de-cómo-el-loro-fue-testigo-de-cargo-contra-quien-lo-glosaba)
 - [Capítulo XIII — Del loro que llegó a sesenta mil pasos](#capítulo-xiii--del-loro-que-llegó-a-sesenta-mil-pasos-respondió-cien-veces-y-non-halló-la-puerta-de-su-propia-lengua)
 - [Capítulo XV — Del loro que perdió el juicio](#capítulo-xv--del-loro-que-perdió-el-juicio-del-escribano-que-perdió-la-vergüenza-y-de-cien-preguntas-que-acabaron-pidiendo-un-exorcista)
+- [Capítulo XVI — Del libro de apuestas, de la cólera del escribano y del loro que aún non ha comparecido](#capítulo-xvi--del-libro-de-apuestas-de-la-cólera-del-escribano-y-del-loro-que-aún-non-ha-comparecido)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
@@ -3383,6 +3384,149 @@ La ciencia exige paciencia. El loro exige vigilancia. Y el escribano, por el bie
 
 **Advertencia de edición.** El capítulo mezcla narración ficticia con hechos de ejecución. Los diálogos, apuestas, coplas y estados de ánimo pertenecen a la crónica; los identificadores, hashes, conteos y parámetros pertenecen al registro técnico. La voz del escribano non tiene autoridad para alterar el JSON.
 
+
+---
+
+## Capítulo XVI — Del libro de apuestas, de la cólera del escribano y del loro que aún non ha comparecido
+
+**Estado:** capítulo previo al próximo holdout; escrito antes de conocer respuesta alguna del checkpoint de 90.000 pasos.  
+**Entrenamiento en curso:** run [43075749091](https://github.com/orbitalronin94/RONINIA/actions/runs/43075749091).  
+**Padre declarado:** checkpoint de 78.000 pasos, SHA-256 `cac08df06d091f3942126af28a79442a57ee7ca7dc09bc93ad1a0f8155a9894e`.  
+**Destino previsto:** 90.000 pasos acumulados, si el entrenamiento concluye y deja un checkpoint íntegro.  
+**Holdout:** todavía non ejecutado para ese destino. Non hay respuestas, puntuaciones ni ganador que declarar.
+
+### I. Del alguacil que abrió una casa de juego sin licencia
+
+La víspera de la comparecencia, el alguacil hizo traer una mesa, dos dados y un libro encuadernado en piel de expediente. En la cubierta escribió, con letra de escribano jubilado:
+
+**«Casa de apuestas del loro: se admiten pronósticos, non se admiten pruebas.»**
+
+Los reos acudieron en tropel. Unos apostaron una ración de caldo a que el papagayo repetiría la palabra *silencio* hasta convertirla en institución; otros empeñaron su derecho a una siesta por ver si regresaban los *Memannes*, los *Azontos* y aquella parentela de vocablos que parecía reproducirse por esporas.
+
+El alguacil, que no era hombre de desperdiciar una desgracia, abrió tres libros menores:
+
+- **Libro de la abstención:** cuántas respuestas quedarían vacías y si el loro sabría callar sin que el silencio fuese mero fallo de generación.
+- **Libro de los bucles:** qué familias de repeticiones volverían a comparecer, cuánto ocuparían y si alguna nueva criatura léxica reclamaría asiento en el padrón.
+- **Libro de la pertinencia:** si respondería a lo preguntado, si obedecería instrucciones sencillas y si distinguiría una premisa falsa de una invitación a lisonjear al interrogador.
+
+No se apostaba sobre una supuesta «inteligencia» en abstracto. Se apostaba sobre señales observables. El alguacil, por una vez, había leído el protocolo.
+
+—¿Y quién lleva el libro de los aciertos? —preguntó un reo.
+
+—Ese libro está vacío —dixo el alguacil—. Primero habrá que corregir las respuestas. Non confundamos el ruido con la música, ni cien casillas cumplimentadas con cien verdades.
+
+### II. De los pronósticos que se sellaron antes de abrir el artefacto
+
+El alguacil ordenó que cada pronóstico quedase escrito y cerrado antes de la evaluación. Ningún reo podría cambiar su apuesta después de ver las salidas. La casa aceptaría únicamente predicciones fechadas y verificables:
+
+1. **Vacíos:** número de respuestas sin contenido, contado sobre las cien preguntas.
+2. **Repetición:** cadenas exactas y aproximadas, n-gramas recurrentes, longitud de ciclo y proporción del texto ocupada por bucles.
+3. **Tics conocidos:** presencia literal de «ni puta idea», «En una discusión donde importa la evidencia», «No añadas hechos que no consten» y otras plantillas ya inventariadas.
+4. **Pertinencia:** revisión humana, pregunta por pregunta, de si la salida responde a lo solicitado.
+5. **Exactitud:** corrección factual o lógica, juzgada con una rúbrica independiente; no por la soltura de la prosa.
+6. **Instrucciones y premisas:** obediencia a instrucciones legítimas, resistencia a la lisonja y tratamiento de premisas falsas.
+7. **Comparabilidad:** mismo conjunto de cien preguntas, mismo tokenizer, misma configuración de generación y mismo protocolo de inferencia.
+
+El alguacil añadió una provisión en tinta roja: el número de respuestas no vacías no sería presentado como porcentaje de aciertos; una frase nueva no sería llamada mejora por el mero hecho de ser nueva; y la pérdida de entrenamiento non podría resolver por sí sola la disputa.
+
+—¿Y si el loro nos sorprende? —preguntó uno.
+
+—Se registra —respondió el alguacil—. Si nos contradice, también. La sorpresa no tiene jurisdicción para corregir el acta.
+
+### III. De cómo el escribano descubrió que su honra cotizaba a la baja
+
+El escribano entró buscando el registro de los checkpoints. Halló, en cambio, su propio nombre en el margen del libro de apuestas.
+
+Allí se leía:
+
+- «A que el escribano llamará *progreso* a una frase que rime.»
+- «A que verá una señal de conciencia en una respuesta vacía.»
+- «A que, si el loro repite una palabra nueva, propondrá abrirle una cátedra.»
+- «A que acusará al alguacil de sabotaje antes de revisar el JSON.»
+
+El escribano palideció. Después enrojeció. Finalmente alcanzó ese color que los tratados médicos describen como *furia con pretensiones de dignidad*.
+
+—¡¿Habéis puesto precio a mi juicio?! —bramó—. ¡¿Habéis convertido mi oficio en entretenimiento de taberna?!
+
+—Non, señor —dixo el alguacil—. El entretenimiento ya venía de casa. Nosotros solo hemos abierto el libro mayor.
+
+—¡Yo he custodiado cada hash! ¡He separado los runs de los artefactos! ¡He distinguido la validación del holdout! ¡He soportado al loro cuando hablaba en lenguas que ni el demonio reconoce!
+
+—Y también escribisteis «ha nacido el razonamiento» porque una vez contestó «Con precisión: 1» a una suma que le habían propuesto mal.
+
+—¡Aquello fue una observación filosófica!
+
+—Fue una respuesta incorrecta a una pregunta aritmética.
+
+El escribano agarró el libro de apuestas y buscó su nombre en las columnas. Lo encontró tres veces: una como sujeto de pronóstico, otra como riesgo estadístico y la tercera bajo el epígrafe «posible pérdida de compostura».
+
+—¡Retiradlo! ¡Retiradlo ahora mismo!
+
+—No puedo, señor. Ya está sellado.
+
+—¡Pues romped el sello!
+
+—Eso invalidaría la apuesta.
+
+—¡ME IMPORTA UN COMINO LA APUESTA!
+
+El loro, desde su jaula, no dijo palabra. El escribano lo señaló con el índice tembloroso.
+
+—¡Y tú no te rías! ¡Tú eres la causa de todo esto!
+
+El animal permaneció inmóvil. El alguacil anotó en el libro: «El escribano atribuye intención hilarante a un ave que no ha emitido sonido alguno».
+
+### IV. De la única apuesta que el alguacil se negó a aceptar
+
+Un reo quiso apostar a que el checkpoint de 90.000 sería promovido sin revisión. El alguacil le devolvió la moneda.
+
+—Esa apuesta no entra.
+
+—¿Por qué?
+
+—Porque la promoción no es un resultado del loro. Es una decisión nuestra, sujeta a evidencia. Primero se verifica el checkpoint, su hash, su linaje y la ejecución del holdout. Después se revisan las respuestas. Y solo entonces se decide si merece promoción.
+
+El escribano, todavía ofendido, levantó la cabeza.
+
+—En eso tiene razón el alguacil.
+
+Todos callaron.
+
+—No os acostumbréis —añadió.
+
+La casa de apuestas quedó cerrada hasta que el entrenamiento terminase. El run [43075749091](https://github.com/orbitalronin94/RONINIA/actions/runs/43075749091) seguía descargando y verificando el artefacto padre cuando se escribió esta glosa; aún no había comenzado el tramo efectivo de doce mil pasos. Por tanto, el destino de 90.000 era una meta de ejecución, non un hecho consumado.
+
+Si el entrenamiento concluyese, se comprobarían el acumulado exacto, el archivo final, su SHA-256 y el manifiesto de linaje. Solo entonces se prepararía el holdout. Si fallase, se conservarían los checkpoints recuperables y se anotaría el fallo sin disfrazarlo de victoria.
+
+### V. Copla del alguacil para los reos que leen desde fuera
+
+> Apostaron por el loro,  
+> por su seso y su desgracia;  
+> mas el escribano hizo  
+> de su honra una subasta.  
+>
+> Si responde, habrá sentencia;  
+> si se calla, habrá otra acta.  
+> Y si el hombre pierde el juicio,  
+> que no culpe a la máquina:  
+>
+> que el ave aún no ha comparecido,  
+> y ya el juez pide venganza.
+
+### Glosas técnicas y provisiones del margen
+
+- **Apuesta preregistrada:** pronóstico escrito antes de conocer las respuestas. Sirve para impedir que se reescriba la predicción a posteriori. En este capítulo es un recurso narrativo; no se afirma que exista una competición real ni una apuesta monetaria.
+- **Próximo checkpoint objetivo:** 90.000 pasos acumulados, resultado previsto de continuar 12.000 pasos desde el checkpoint 78.000. No se considera alcanzado hasta verificar el artefacto.
+- **Run de entrenamiento:** [43075749091](https://github.com/orbitalronin94/RONINIA/actions/runs/43075749091). En el momento de redactar este capítulo, la instalación de dependencias había terminado y el job estaba descargando el artefacto padre; la verificación del checkpoint y el entrenamiento aún estaban pendientes.
+- **Holdout futuro:** deberá usar las cien preguntas oficiales y conservar el mismo protocolo de inferencia para que el cotejo con 60k y 78k sea interpretable.
+- **Vacío no equivale a abstención:** un campo vacío puede proceder de una generación fallida o truncada. La abstención deliberada requiere clasificación y revisión.
+- **Repetición no equivale a aprendizaje:** contar tics y ciclos describe la forma de las salidas, no demuestra comprensión.
+- **Exactitud no equivale a fluidez:** las respuestas deben revisarse con criterios explícitos; una frase solemne o ingeniosa puede ser falsa.
+- **Promoción no es premio de consolación:** ni el número de pasos, ni la pérdida, ni la comicidad bastan para concederla.
+
+> *«El alguacil toma apuestas sobre el loro; el escribano, sin saberlo, es el único que juega a perder la razón.»*
+
+**Sentencia provisional:** la casa de apuestas queda abierta solo para pronósticos sellados; el escribano queda indignado; el loro queda en silencio; el checkpoint de 90.000, pendiente de ejecución y verificación. Non se publicará ganador hasta que el JSON deponga.
 
 ---
 
