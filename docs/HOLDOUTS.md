@@ -1,4 +1,4 @@
-# Registro de holdouts — RONIN-10M
+# Crónica de los holdouts — RONIN-10M
 
 Este documento es la crónica narrativa y el registro técnico de las evaluaciones de RONIN-10M. Cada holdout tendrá su propio capítulo: qué checkpoint se examinó, qué comportamiento apareció, qué nos enseñó y qué preguntas deja abiertas. La narración no sustituye a las métricas; sirve para conservar el contexto de cada experimento.
 
@@ -6,17 +6,47 @@ Los enlaces de las ejecuciones y sus artefactos se mantienen en el índice hist�
 
 ## Prólogo — Antes de aprender
 
-La evaluación de paso cero es el punto de partida: el modelo todavía no había recibido entrenamiento. No es una prueba de inteligencia ni una competición; es la fotografía inicial que permite saber qué cambia cuando los pesos empiezan a incorporar el corpus.
+La evaluación de paso cero es el origen de esta serie: los pesos todavía no habían recibido un solo paso de entrenamiento. No es una prueba de inteligencia ni una competición. Es la fotografía del modelo recién inicializado, antes de que el corpus le preste sus palabras, sus hábitos y sus personajes.
 
-El baseline registrado utilizó 100 preguntas, el checkpoint inicial, tokenizer 8k y generación greedy sin RAG. Su función es sencilla y fundamental: fijar una referencia reproducible. Sin ese punto de comparación, cualquier respuesta posterior podría parecer una mejora solo porque la recordamos de forma distinta.
+El baseline utilizó las mismas 100 preguntas de inferencia, el mismo tokenizer de 8.192 tokens, la misma instrucción en castellano y generación greedy sin RAG. Su función es fijar el punto de partida. Pero hay una cautela experimental: el perfil de paso cero tenía contexto de 512 tokens y 9.831.168 parámetros, mientras que los checkpoints de 5k y 10k usaron contexto 256 y 9.757.440 parámetros. Comparten tokenizer, semilla, preguntas y límites de generación, pero no son una comparación arquitectónica perfectamente idéntica.
+
+## Capítulo 0 — Antes de que aparezca la voz
+
+**Checkpoint:** inicialización aleatoria, 0 pasos  
+**Run de evaluación:** [42874585777](https://github.com/orbitalronin94/RONINIA/actions/runs/42874585777)  
+**Artefacto:** [baseline de paso cero](https://github.com/orbitalronin94/RONINIA/actions/runs/42874585777/artifacts/13791466097)  
+**SHA-256 del checkpoint:** `3c00d1ada5dc7399be90da3c39c9f503ef6f0799308b2d9c4373ee884ba814e8`  
+**Holdout:** 100 preguntas  
+**Latencia media:** 0,338 s por respuesta  
+**Respuestas no vacías:** 100/100
+
+Antes del sindicalista y antes del esperpento hubo una voz sin personaje. El modelo contestaba, pero sus salidas parecían restos de un idioma todavía sin organizar: fragmentos de tokens, palabras sueltas de varias lenguas, signos, fórmulas y secuencias sin una estructura estable. No había una muletilla dominante que permitiera reconocer una personalidad. Tampoco había una respuesta consistente a la pregunta.
+
+El detalle importante es que el baseline no estaba en silencio: produjo cien respuestas no vacías. Pero que haya texto no significa que haya comunicación. La generación greedy encontraba siempre algún token siguiente; todavía no había aprendido a ordenar esos tokens en una respuesta castellana con intención reconocible.
+
+En este primer retrato no aparece «El patrón», no aparece «ni puta idea» y tampoco aparece «impacto». Esas familias de expresiones llegarán después, cuando el entrenamiento empiece a moldear la distribución. El paso cero es, por tanto, el contraste entre producir secuencias y empezar a producir una voz.
+
+### La fotografía técnica
+
+La latencia media fue de aproximadamente 0,338 segundos por pregunta, superior a la observada en los checkpoints posteriores. No debe interpretarse como una medida de razonamiento: el baseline no estaba resolviendo más cosas ni haciendo una deliberación más profunda. Es una medición de inferencia bajo una configuración cuyo contexto era de 512 tokens, frente a los 256 de los ensayos posteriores.
+
+El artefacto conserva el checkpoint inicial, la huella del tokenizer y el hash del conjunto de preguntas. La generación utilizó greedy argmax, dos hilos, hasta 32 tokens nuevos, máximo de 128 bytes, sin KV cache y sin RAG.
+
+### Lo que enseña el punto cero
+
+El baseline nos recuerda que el primer objetivo del entrenamiento no es eliminar una muletilla ni adquirir una personalidad. Es pasar de una distribución aleatoria de fragmentos a una distribución que empiece a respetar regularidades lingüísticas. Los personajes de los capítulos siguientes solo pueden entenderse contra este origen.
+
+La serie empieza aquí: primero hubo texto sin voz; después, una voz atrapada en una frase; más tarde, un repertorio que todavía no sabe organizarse.
 
 ## Capítulo I — El modelo sindicalista
 
 **Checkpoint:** 5.000 pasos  
 **Holdout:** 100 preguntas  
-**Run de evaluación:** [42890495710](https://github.com/orbitalronin94/RONINIA/actions/runs/42890495710)  
+**Run de evaluación:** [42911715548](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548)  
+**Artefacto:** [holdout de 5k](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620)  
+**SHA-256 del checkpoint:** `cb6d01e5feeb55d12ca93bbc67d751e790789840abb3d9291955aa0d0fd4edbe`  
 **Resultado observado:** 100 respuestas no vacías; 0 coincidencias exactas con las cadenas de referencia de la rúbrica.  
-**Latencia media registrada:** aproximadamente 0,163 segundos por pregunta.
+**Latencia media registrada:** 0,217 segundos por pregunta.
 
 El primer personaje reconocible de esta pequeña historia no fue precisamente un enciclopedista. Fue el modelo sindicalista.
 
@@ -28,7 +58,7 @@ La escena tenía algo de caricatura. Preguntáramos lo que preguntáramos, el mo
 
 Las 100 preguntas produjeron respuestas no vacías, pero ninguna coincidió exactamente con la cadena de referencia evaluada por aquella rúbrica. Esa cifra describe coincidencia literal, no comprensión semántica: por sí sola no demuestra que todas las respuestas fueran conceptualmente incorrectas. La repetición observada, sin embargo, sí revela un problema cualitativo claro: diversidad de salida y adaptación a la pregunta todavía muy limitadas.
 
-La latencia media, cercana a 0,163 segundos por pregunta, indica que la inferencia era rápida en ese ensayo. Pero velocidad y calidad son dimensiones distintas. El modelo podía contestar deprisa y, aun así, quedarse atrapado en un patrón.
+La latencia media, cercana a 0,217 segundos por pregunta, indica que la inferencia era rápida en ese ensayo. Pero velocidad y calidad son dimensiones distintas. El modelo podía contestar deprisa y, aun así, quedarse atrapado en un patrón.
 
 ### La lección del primer holdout
 
@@ -58,19 +88,47 @@ En algunas respuestas asoma una voz casi sentenciosa: «No confundas autoridad c
 
 ### La diferencia que sí podemos medir
 
-La comparación de los dos artefactos permite describir el cambio sin convertirlo en una impresión vaga:
+La comparación de los artefactos permite describir el cambio sin convertirlo en una impresión vaga. Se incorpora el paso cero como origen, pero se conserva la advertencia de que su contexto y su número de parámetros difieren ligeramente:
 
-| Señal observada | 5.000 pasos | 10.000 pasos |
+| Señal observada | Paso 0 | 5.000 pasos | 10.000 pasos |
 |---|---:|---:|
-| Respuestas que contienen «El patrón» | 96/100 | 0/100 |
-| Respuestas que contienen «ni puta idea» | 0/100 | 16/100 |
-| Respuestas que contienen «impacto» | 0/100 | 19/100 |
-| Respuestas no vacías | 100/100 | 100/100 |
-| Latencia media por respuesta | 0,217 s | 0,240 s |
+| Respuestas que contienen «El patrón» | 0/100 | 96/100 | 0/100 |
+| Respuestas que contienen «ni puta idea» | 0/100 | 0/100 | 16/100 |
+| Respuestas que contienen «impacto» | 0/100 | 0/100 | 19/100 |
+| Respuestas no vacías | 100/100 | 100/100 | 100/100 |
+| Latencia media por respuesta | 0,338 s | 0,217 s | 0,240 s |
+| BPB sobre corpus de validación fijo | Pendiente | Pendiente | Pendiente |
 
 Estas frecuencias describen apariciones literales, no una clasificación semántica. No significan que 16 respuestas sean buenas por incluir una evasiva, ni que las 19 menciones de «impacto» sean pertinentes. Sí muestran que la distribución superficial de las respuestas ha cambiado de manera verificable: la fórmula dominante del primer checkpoint desaparece y otras familias de expresiones pasan a ocupar espacio.
 
-La latencia media aumenta ligeramente, de unos 0,217 a 0,240 segundos por pregunta. En este ensayo, por tanto, la diversificación observada no vino acompañada de una mejora de velocidad. La diferencia es pequeña y no debe confundirse con una medición exhaustiva de rendimiento.
+La latencia media aumenta ligeramente, de 0,217 a 0,240 segundos por pregunta. La diversificación observada no vino acompañada de una mejora de velocidad. Es un dato contraintuitivo, pero no permite afirmar que el modelo tarde más porque «piense» más: solo sabemos que la inferencia greedy medida tardó algo más en este ensayo. No tenemos evidencia de razonamiento interno ni de que el mayor repertorio sea la causa del incremento.
+
+### La mácula: rotación de tics, no progreso demostrado
+
+La desaparición de «El patrón» es real, pero no basta para declarar una mejora de capacidad. El nuevo checkpoint muestra otras recurrencias. La lectura más estricta es **TIC_ROTATION_VS_PROGRESS**: se ha movido la superficie de las respuestas; todavía no hemos demostrado que haya avanzado la calidad del modelado.
+
+Para cerrar esa mácula hace falta medir bits-per-byte (BPB) sobre un corpus de validación fijo, reservado y byte-normalizado, con el mismo texto, tokenizer y protocolo para cada checkpoint. El BPB no está incluido en los artefactos actuales de inferencia: estos guardan respuestas, tokens generados y latencias, pero no logits ni pérdidas de evaluación. Por eso la columna BPB queda pendiente y no se rellena con una estimación. Hasta que exista esa medición, esta tabla registra cambios de comportamiento, no una mejora cuantitativa de modelado.
+
+### Vitrina — La fuga de «el impacto»
+
+«El patrón» fue el estribillo del primer personaje. En el segundo aparece otra plantilla: «el impacto». La cadena aparece en 19 de las 100 respuestas, a menudo encadenada consigo misma: «el impacto y se vuelven, con el impacto y el impacto…». No es lo mismo que una evasiva. Parece una fuga de esquema léxico: una plantilla del corpus que entra en la respuesta sin que la pregunta necesariamente la convoque.
+
+La cifra 19/100 no demuestra por sí sola la causa, pero sí justifica aislarla como fenómeno propio. La próxima evaluación debe medir no solo si aparece la palabra, sino si la frase completa se activa fuera de contexto, si se repite dentro de una misma salida y si guarda relación con el dominio o la rúbrica de la pregunta.
+
+### Desglose de la abstención — «ni puta idea»
+
+Las 16 apariciones de «ni puta idea» se revisaron pregunta por pregunta. En las 16, el enunciado contiene información suficiente para responder o permite una respuesta razonada; no se identificó ninguna pregunta deliberadamente irresoluble dentro de ese grupo. Por tanto, el desglose preliminar es:
+
+| Tipo de pregunta entre las 16 apariciones | Casos |
+|---|---:|
+| Pregunta con información suficiente | 16 |
+| Pregunta sin información suficiente | 0 |
+| Abstención aparentemente apropiada | 0 |
+| Abstención aparentemente inapropiada | 16 |
+
+La lectura es provisional y se refiere solo a estas 16 salidas, no a la calibración global del modelo. Además, la rúbrica de `math-004` contiene una nota que contradice la pregunta matemática —la pregunta sí permite resolver el sistema, mientras la rúbrica introduce una ficción ajena—. Ese caso debe anotarse como inconsistencia del benchmark y adjudicarse antes de usarlo para puntuar acierto. La presencia de «ni puta idea» en el resto de preguntas respondibles sí es una señal clara de abstención mal situada en este pequeño subconjunto.
+
+
 
 ### Leer el esperpento sin confundirlo con un fallo
 
@@ -88,7 +146,7 @@ En el checkpoint de 10.000 pasos conviven señales de los tres planos. Hay más 
 
 ### Lo que revela el segundo personaje
 
-El modelo sindicalista tenía una obsesión: volver al patrón. El personaje de los 10.000 pasos es menos uniforme y más difícil de resumir. A veces parece intentar explicar; a veces invoca el contexto; a veces se refugia en una evasiva que el propio corpus le ha enseñado; y a veces mezcla esas voces sin conseguir ordenarlas.
+El modelo sindicalista tenía una obsesión: volver al patrón. El personaje de los 10.000 pasos es menos uniforme y más difícil de resumir. A veces parece intentar explicar; a veces invoca el contexto; a veces se refugia en una evasiva que el propio corpus le ha enseñado; y a veces mezcla esas voces sin conseguir ordenarlas. El cambio es narrativamente visible, pero la mácula TIC_ROTATION_VS_PROGRESS impide venderlo como mejora demostrada: más personajes no equivalen todavía a más capacidad.
 
 Ese cambio importa porque indica que el entrenamiento no se limitó a reforzar la misma respuesta dominante. El espacio de generación se ha movido. Pero el nuevo repertorio todavía necesita organización: no basta con disponer de más expresiones, hay que aprender a escogerlas, conectarlas y detenerse cuando la respuesta está completa.
 
@@ -102,7 +160,7 @@ El tiempo total de generación fue de aproximadamente 24,02 segundos, con una me
 
 El checkpoint de 10.000 pasos queda registrado como **modelo experimental activo** de RONIN-10M. Se conserva su SHA-256, el run de entrenamiento, el tokenizer y el artefacto de holdout. La decisión reconoce un cambio cualitativo concreto frente a los 5.000 pasos: la respuesta deja de girar alrededor de «El patrón» y empieza a expresar una variedad mayor de rasgos del corpus.
 
-La siguiente iteración tendrá que responder a una pregunta más exigente: si el modelo puede convertir ese repertorio en respuestas pertinentes y coherentes, manteniendo la identidad estilística que se quiere enseñar. El segundo capítulo no cuenta todavía la historia de un modelo que ya sabe; cuenta la de uno que ha dejado de repetir siempre lo mismo y empieza, con resultados desiguales, a buscar otra voz.
+La siguiente iteración tendrá que responder a una pregunta más exigente: si el modelo puede convertir ese repertorio en respuestas pertinentes y coherentes, manteniendo la identidad estilística que se quiere enseñar. Para ello se exigirán BPB sobre validación fija, desglose completo de abstenciones y análisis específico de la fuga «el impacto» antes de llamar progreso a una rotación de expresiones. El segundo capítulo no cuenta todavía la historia de un modelo que ya sabe; cuenta la de uno que ha dejado de repetir siempre lo mismo y empieza, con resultados desiguales, a buscar otra voz.
 
 ## Historial de ejecuciones
 
@@ -127,6 +185,8 @@ El actualizador no descarga ni ejecuta los artefactos ni hace checkout del códi
 - Interpretar el lexicón de esperpento y los marcadores intencionales según el corpus, no como errores por defecto.
 - Registrar el identificador del checkpoint, SHA-256, run de entrenamiento, run de evaluación y artefactos.
 - Distinguir siempre entre resultados observados, hipótesis e interpretaciones narrativas.
+- No interpretar la rotación de tics como progreso sin BPB/validación fija y análisis de adecuación de abstenciones.
+- Toda ejecución holdout debe mantener la convención en el nombre del archivo y en el campo `name:`; una discrepancia debe fallar explícitamente.
 - No declarar una puntuación de calidad si no se ha medido con un evaluador explícito y validado.
 
 ## Baseline de referencia
