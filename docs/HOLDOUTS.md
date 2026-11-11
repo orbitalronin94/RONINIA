@@ -3528,6 +3528,127 @@ Si el entrenamiento concluyese, se comprobarían el acumulado exacto, el archivo
 
 **Sentencia provisional:** la casa de apuestas queda abierta solo para pronósticos sellados; el escribano queda indignado; el loro queda en silencio; el checkpoint de 90.000, pendiente de ejecución y verificación. Non se publicará ganador hasta que el JSON deponga.
 
+
+---
+
+## Capítulo XVII — Del loro que respondió cien veces, del escribano que cobró en vergüenza y de la apuesta que non pudo pagarse
+
+**Checkpoint examinado:** 90.000 pasos acumulados  
+**Run de entrenamiento:** [43075749091](https://github.com/orbitalronin94/RONINIA/actions/runs/43075749091)  
+**Artefacto recuperable:** [13889056151](https://github.com/orbitalronin94/RONINIA/actions/runs/43075749091/artifacts/13889056151)  
+**Run del holdout oficial:** [43091480701](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701)  
+**Artefacto del holdout:** [13889525822](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701/artifacts/13889525822)  
+**SHA-256 del checkpoint:** `b1c2e70615f844330a9572154952e859a21574f8a95637186b827c45730c660b`  
+**SHA-256 del tokenizer:** `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`  
+**SHA-256 del holdout:** `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`
+
+### I. De cómo volvió el JSON con cien declaraciones
+
+La casa de apuestas, que había cerrado sus puertas mientras el loro era interrogado, recibió al fin el pliego sellado. El alguacil lo abrió delante de los reos; el escribano pidió agua, tinta y, por si acaso, un abogado.
+
+—¿Ha respondido? —preguntó el escribano.
+
+—A las cien preguntas —dijo el alguacil.
+
+—¿Y cuántas ha acertado?
+
+—Eso no dice el manifiesto.
+
+—¿Cuántas ha dejado en blanco?
+
+—Ninguna.
+
+El escribano sonrió con la cautela de quien ha visto demasiadas victorias administrativas.
+
+—¡Cien respuestas! ¡Cero silencios! ¡La criatura ha aprendido a comparecer!
+
+—Ha aprendido, al menos, a no entregar campos vacíos —repuso el alguacil—. No confundáis la comparecencia con el testimonio, ni el testimonio con la verdad.
+
+El registro confirma **100 respuestas no vacías de 100**. Es un cambio observable frente a los checkpoints de 60k y 78k, que habían producido respectivamente 95 y 96 respuestas no vacías. Mas el contador solo acredita que hubo texto; no acredita que el texto resolviese la pregunta.
+
+### II. De las cien voces y de los viejos demonios que no abandonaron la jaula
+
+El examen se hizo con las cien preguntas oficiales, decodificación greedy, sin RAG ni KV cache, dos hilos, límite de 32 tokens y 128 bytes. Se conservaron el tokenizer y el benchmark de las rondas anteriores.
+
+La primera lectura halló, entre otros, los siguientes prodigios:
+
+- En lógica, el loro invocó «Abstract:» y no terminó de declarar.
+- En aritmética, ante una suma elemental, respondió con palabras ajenas al cálculo.
+- «Memoryes» volvió a comparecer como si fuese doctrina.
+- «Potes estrasómicos» fue presentado sin prueba ni jurisdicción.
+- En una pregunta de probabilidad reapareció el viejo «ni puta idea».
+- Hubo cadenas repetidas, fragmentos multilingües y secuencias sin sentido reconocible.
+
+No se ha calculado todavía una puntuación semántica formal. Por ello no se declara un 0/100 ni se proclama una tasa de acierto inventada. La conclusión admisible es más sobria: **el holdout de 90k no demuestra una mejora funcional**. La ausencia de respuestas vacías es una mejora de cobertura de generación, no una prueba de comprensión.
+
+### III. De las apuestas del capítulo precedente y del escribano que quiso cobrar dos veces
+
+El escribano reclamó que se pagasen las apuestas: había cien comparecencias y, según él, la casa debía reconocer el triunfo.
+
+—¿Qué pronóstico se selló? —preguntó el alguacil.
+
+—Que el loro hablaría.
+
+—Eso se cumplió en el sentido más estrecho y menos útil de la palabra.
+
+—¡Entonces he ganado!
+
+—No. El libro no apostaba a que el loro produjese cualquier cadena de caracteres. Apostaba sobre su juicio, su utilidad y la eventual promoción del checkpoint. Y ninguna de esas cosas se prueba contando campos no vacíos.
+
+Un reo señaló la columna de la promoción.
+
+—¿Y el checkpoint asciende?
+
+—Tampoco. El capítulo anterior dejó escrito que la promoción dependía de la evidencia. La evidencia disponible no la concede.
+
+El escribano quiso tachar la cláusula, mas el alguacil le sujetó la pluma.
+
+—Las apuestas se sellaron antes del resultado. No se reescriben después para que el apostador parezca profeta. Ni se cobra por una respuesta que no ha sido evaluada.
+
+Así queda enlazado este capítulo con el XVI: las apuestas siguen siendo pronósticos narrativos preregistrados, no apuestas monetarias ni puntuaciones encubiertas. El alguacil no declara ganador semántico porque aún no existe una rúbrica aplicada a las cien salidas. Y mantiene su negativa a apostar por una promoción automática.
+
+### IV. Del nuevo viaje: diez mil pasos más, mas con el mismo libro de cuentas
+
+El checkpoint de 90.000 queda conservado como padre verificable para un nuevo tramo de entrenamiento de **10.000 pasos**, cuyo objetivo acumulado será 100.000. Se reutilizarán el corpus ya tokenizado, el tokenizer de 8.192 entradas y la configuración compatible de contexto 256; no se volverá a tokenizar el corpus.
+
+El tramo se ejecutará con tasa de aprendizaje conservadora de `2.5e-5`, lote 4, dos hilos y checkpoints intermedios cada 1.000 pasos. Antes de entrenar se comprobarán el SHA-256 del checkpoint padre, el contador interno de pasos y la identidad del tokenizer. Los checkpoints recuperables se subirán incluso si falla una verificación posterior.
+
+El workflow anterior de 78k→90k terminó con conclusión fallida en su paso final de verificación, aunque dejó artefactos recuperables y el holdout posterior verificó el checkpoint de 90k. Para este nuevo tramo se corrige la selección del nombre del checkpoint: solo se admitirán archivos que cumplan exactamente el patrón `checkpoint-N.pt`; los manifiestos y ficheros auxiliares no podrán hacerse pasar por pesos.
+
+El nuevo entrenamiento no se declara iniciado ni completado por el mero hecho de escribir esta crónica. Su run, sus checkpoints y su resultado se incorporarán al historial cuando GitHub Actions los produzca.
+
+### V. Copla del alguacil, dedicada al escribano y a los reos de la otra parte del papel
+
+> Cien veces habló la jaula,  
+> cien veces tembló el papel;  
+> mas no por llenar la página  
+> se vuelve sabio el lebrel.  
+>
+> El escribano hizo cuentas  
+> con la tinta del querer;  
+> el alguacil pidió pruebas:  
+> «Primero, saber leer».  
+>
+> Y apostaron por la gloria,  
+> por el seso y el laurel;  
+> mas la casa no da premio  
+> por ladrar en el dosel.
+
+### Glosas técnicas y provisiones del margen
+
+- **Cobertura de generación:** 100/100 respuestas no vacías en el JSON oficial de 90k. No equivale a 100 aciertos.
+- **Comparabilidad:** mismo tokenizer y mismo SHA-256 del benchmark que en los holdouts de 60k y 78k; generación greedy, RAG desactivado, KV cache desactivada, dos hilos, 32 tokens y 128 bytes.
+- **Checkpoint:** `b1c2e70615f844330a9572154952e859a21574f8a95637186b827c45730c660b`.
+- **Entrenamiento 78k→90k:** el run terminó con fallo en la verificación final de metadatos, pero produjo el artefacto recuperable; el holdout independiente verificó el checkpoint de 90k.
+- **Evaluación:** lectura cualitativa preliminar; no hay rúbrica semántica aplicada ni puntuación formal de exactitud.
+- **Promoción:** no concedida. El checkpoint de 90k queda como padre experimental para el tramo siguiente, no como versión promovida.
+- **Siguiente objetivo:** 100.000 pasos acumulados, con checkpoints intermedios y cadena de custodia.
+
+> *«El loro ha aprendido a no dejar la casilla vacía; falta averiguar si sabe qué poner dentro.»*
+
+**Sentencia:** las apuestas del capítulo XVI quedan selladas y sin cobro por falta de puntuación semántica. El escribano pierde, por ahora, el derecho a cantar victoria. El alguacil abre el siguiente libro: diez mil pasos más, y ni uno solo de indulgencia.
+
+
 ---
 
 ## Historial de ejecuciones — registro completo de GitHub Actions
