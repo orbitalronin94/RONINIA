@@ -136,7 +136,7 @@ jobs:
           test -s token-cache/SHA256SUMS
           (cd token-cache && sha256sum -c SHA256SUMS)
           python - <<'PY'
-          import json
+          import json, os
           from pathlib import Path
           corpus=json.loads(Path("data/corpus/corpus-manifest.json").read_text())
           cache=json.loads(Path("token-cache/token-manifest.json").read_text())
@@ -147,7 +147,11 @@ jobs:
           assert cache.get("corpus_sha256") == corpus.get("corpus_sha256"), (cache,corpus)
           assert cache.get("corpus_bytes") == corpus.get("text_bytes"), (cache,corpus)
           assert cache.get("evaluation_records_excluded") == corpus.get("evaluation_records_excluded"), (cache,corpus)
-          assert cache.get("tokenizer_sha256") == "$EXPECTED_TOKENIZER_SHA256", cache
+          expected_tokenizer_sha256=os.environ["EXPECTED_TOKENIZER_SHA256"]
+          assert cache.get("tokenizer_sha256") == expected_tokenizer_sha256, {
+            "expected_tokenizer_sha256":expected_tokenizer_sha256,
+            "actual_tokenizer_sha256":cache.get("tokenizer_sha256")
+          }
           print(json.dumps({
             "source_corpus_run_id":cache["source_run_id"],
             "corpus_sha256":cache["corpus_sha256"],
