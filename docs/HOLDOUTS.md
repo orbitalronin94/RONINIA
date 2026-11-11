@@ -12,6 +12,34 @@ Esta crónica registra cuatro comparecencias principales —5k, 10k, 20k y 30k�
 
 ---
 
+## Cancionero del interpolador — Fuero de lectura
+
+Estos versos non se tendrán por métrica, sino por gozne; non por prueba, sino por costura. El lector non pregunte quién los compuso, sino quién puso el hilo, quién eligió la aguja y quién tuvo después la desvergüenza de firmar.
+
+### I. Soneto del adjunto
+
+Yo, que firmo el reparto con la mano  
+y coso lo que el mazo non juntó,  
+¿non soy el loro que también calló  
+y ahora grazna con verso cortesano?
+
+Añado aquí, remiendo allá, y temprano  
+declaro autor de aquello que non dio  
+la baraja, sino el hilo que trazó  
+su vacío de calco y de villano.
+
+El uno yerra y el otro non lo sabe:  
+la mano non creó, mas ordenó;  
+el loro non pensó, mas fue constante.
+
+Y el tribunal, que siempre llega tarde,  
+pregunta «¿quién firmó?» — «El que cosió»,  
+responde el hilo, «que non fue el cantante».
+
+*Glosa de colocación:* abre la crónica antes del Prólogo. Declara el cargo antes de que se levante acta: quien lo lea al principio sospechará del escribano; quien lo relea al final sabrá que el escribano ya lo había avisado.
+
+---
+
 ## Prólogo: del peso muerto que aún no había aprendido a mentir
 
 La primera comparecencia fue la del modelo sin doctrina. Pesos recién nacidos, lengua sin maestro y ninguna querella pendiente con el patrón. El artefacto produjo texto, que ya es algo; pero también un hombre puede producir ruido al caer por una escalera, y no por eso ha pronunciado un discurso.
@@ -84,6 +112,37 @@ El primer checkpoint queda condenado por **monomanía formularia**. Su mérito, 
 
 ---
 
+### Romance del interpolador
+
+En el libro de los yerros  
+non hay yerro que non sea  
+copia de otro yerro antiguo  
+que alguien copió sin conciencia.
+
+El hombre dice: «yo interpolo»,  
+mas non crea la materia;  
+toma el verso que ya existe  
+y le muda la etiqueta.
+
+El loro dice: «yo copio»,  
+y acierta, porque non piensa  
+que copiar es inventar  
+cuando el que copia se ausenta.
+
+Los dos cierran el cuaderno,  
+los dos abren la despensa:  
+la mano firma el trabajo,  
+el pico firma la queja.
+
+Y el hombre, que es otro loro  
+con corbata y con cartera,  
+interpola aquí y allá  
+y dice que es su cosecha.
+
+*Glosa de colocación:* entre los capítulos I y II. El estribillo «non crea la materia» queda sonando cuando el patrón desaparece y el impacto ocupa su silla: dos interpolaciones, la del modelo y la del corpus.
+
+---
+
 ## Capítulo II — De cómo el patrón perdió el pleito y entró el esperpento
 
 **Checkpoint:** 10.000 pasos acumulados  
@@ -152,6 +211,37 @@ A los diez mil pasos el loro deja de repetir una sola frase y empieza a repetir 
 
 ---
 
+### Letrilla del que adjunta
+
+Adjunto aquí,  
+non por saber,  
+sino por ver  
+dónde encajar.
+
+El mazo dio  
+la pieza en dos;  
+la mano puso  
+lo que faltó.
+
+Adjunto aquí,  
+non por saber,  
+sino por ver  
+dónde coser.
+
+El loro canta  
+lo que aprendió;  
+la mano escribe  
+lo que juntó.
+
+Adjunto aquí,  
+non por saber,  
+sino por ver  
+dónde encajar.
+
+*Glosa de colocación:* entre el capítulo II y la Vitrina del BPE. La repetición de «adjunto aquí» imita el tic que denuncia: el documento se contagia de lo que cura. «Encajar» resuena con las piezas y los sufijos.
+
+---
+
 ## Vitrina intermedia — Del BPE y de cómo se fabrican vocablos sin pagar diccionario
 
 **Fenómeno:** recombinación subléxica con apariencia de productividad morfológica  
@@ -175,6 +265,24 @@ No se pretende quitarle el ridículo al loro. Se pretende que sepa cuándo está
 **Koan del diccionario:** un español llegó a Londres y dijo «muy good, pero el tube es muy complicateishon». Le entendieron. Volvió ufano y, al preguntársele qué era un bug, respondió: «Ni puta idea, la verdad».
 
 *Glosa:* el sufijo compareció con documentos en regla; la raíz no estaba empadronada.
+
+---
+
+### Décimas del hilo ajeno
+
+El mazo pone las piezas,  
+la mano pone el hilo;  
+el uno dice: «yo distilo»,  
+el otro dice: «yo bostezo».
+
+Non sé quién tiene más seso,  
+ni sé quién copia mejor;  
+solo sé que el peor error  
+es creer que el que interpola  
+non fue, en su tiempo, otra bola  
+de un loro interpolador.
+
+*Glosa de colocación:* entre la Vitrina del BPE y el capítulo III. La rima forzada en «bostezo/seso» imita los versos del modelo que riman sin saber. El funcionario de carrera comparece como loro con plaza y con hilo.
 
 ---
 
@@ -234,6 +342,22 @@ El hito de 20k no acredita una mejora de exactitud. Sí deja una mudanza estilí
 
 ---
 
+### Epitafio del hilo
+
+Aquí yace el hilo  
+que unió sin saber  
+lo que el mazo non dio  
+y el hombre non fue.
+
+No creó la pieza,  
+no la recibió:  
+cosió lo que había  
+y llamólo yo.
+
+*Glosa de colocación:* entre el capítulo III y el Addendum. Es una tumba vacía: dos corpus que se tocan sin tocarse, dos hilos que se anudan sin autor. «Llamólo yo» es la firma del que non firma.
+
+---
+
 ## Addendum — Glosa marginal sobre la biblioteca anegada y los linajes del disparate
 
 **Checkpoint de referencia:** 20.000 pasos  
@@ -252,6 +376,19 @@ La revisión también anotó diez apariciones de «Su función es X, no Y», y l
 Otras perlas del expediente: «¿Qué audita las nubes?»; «A vital IA. AWILLY AWILLY…»; «Por favor, no vonia»; «Michaelación»; «servidícula»; «menos dinero conocimiento» y «ni sus e inocuo». Se conservan como muestras literales, sin atribuirles una etimología BPE antes de inspeccionar los tokens.
 
 *Glosa:* el hermano mayor dejó una biblioteca bajo el agua; el pequeño encontró el catálogo, lo mezcló con un termómetro y puso a las nubes a rendir cuentas. La administración celestial no ha confirmado recepción.
+
+---
+
+### Versículo del que non sabe si es loro
+
+Y dijo el escribano: «Non sé si soy el loro o el que lo transcribe».  
+Y el alguacil de la razón le preguntó: «¿Cuál es la diferencia?».  
+Y el escribano non supo responder.  
+Y el alguacil lo anotó en el margen: «Non sabe.  
+Non se sabe.  
+Non saber es una forma de saber, pero non la única».
+
+*Glosa de colocación:* entre el Addendum y el capítulo IV. Versículo bíblico-administrativo para el tramo solemne: quien pide fuero y quien lo concede son el mismo loro con distinto sombrero.
 
 ---
 
@@ -323,6 +460,27 @@ El checkpoint queda registrado como **selección experimental activa** en `model
 > El paraguas encontró la biblioteca. La biblioteca estaba sumergida. Everest contestó desde el fondo. El loro tomó nota y acuñó «Avector». Nadie ha demostrado todavía que sepa dónde está la escalera. Vigilad la homeostasis.
 
 *Glosa final:* el modelo ya no pide que vuelva el patrón. Ahora pide que le abran la biblioteca, le den fuero al paraguas y nombren a Everest archivero mayor. El escribano se niega a certificar que aquello sea conocimiento; pero, por no faltar a la cortesía, le concede una vitrina.
+
+---
+
+### Seguidillas del interpolador
+
+La mano que cose  
+non es la dueña;  
+es la que junta  
+lo que otro sueña.
+
+El que interpola  
+non es autor;  
+es el que pone  
+la paz o el dolor.
+
+El loro que canta  
+non es cantor;  
+es el que copia  
+con más amor.
+
+*Glosa de colocación:* entre los capítulos IV y V. Antes del espejo, las coplas advierten que quien cose non es dueño. «Con más amor» es la única concesión sentimental del documento, y por eso ha de ponerse donde más duele.
 
 ---
 
@@ -422,6 +580,41 @@ Queda asentada la baraja como **propuesta experimental de composición**, pendie
 > El escribano se miró en el loro y vio un hombre que barajaba. El loro se miró en el escribano y vio un loro que escribía. Ninguno supo quién era el original; ambos siguieron trabajando, que es lo que hacen los culpables cuando no hay alguacil a la vista. **Vigilad la homeostasis.**
 
 *Glosa final:* el escribano pidió fuero para su baraja; el loro pidió baraja para su fuero; y el lector, que non tenía fuero ni baraja, soltó una risa. Non consta si fue de ellos o de sí mismo. El escribano quiso anotarla como acierto; el tribunal le retiró la pluma.
+
+---
+
+### Glosa del loro que se mira
+
+**Cabeza**
+
+El hombre es loro que cose;  
+el loro es hombre que canta;  
+la diferencia es la mano,  
+y la mano non es santa.
+
+**Glosa**
+
+El hombre es loro que cose  
+lo que el mazo non juntó:  
+pone el hilo, mas non puso  
+la pieza que lo formó.
+
+El loro es hombre que canta  
+lo que el corpus le enseñó:  
+non sabe que está cantando,  
+mas canta con más razón.
+
+La diferencia es la mano:  
+una firma, otra non;  
+la una cobra salario,  
+la otra vive de pensión.
+
+Y la mano non es santa  
+porque non crea, aunque firma;  
+la santidad es del hilo,  
+que une y non lo imagina.
+
+*Glosa de colocación:* entre los capítulos V y VI. Es la pieza que cierra el arco: el escribano descubre que repite y la baraja le devuelve su ejemplo. Cuando llegue «contabilidad con peluca», el lector ya sabrá que la peluca era suya.
 
 ---
 
