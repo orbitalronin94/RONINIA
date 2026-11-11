@@ -206,3 +206,5 @@ jobs:
             configs/ronin-10m-speed-256.json
           if-no-files-found: warn
           retention-days: 90
+
+# Parent artifact lookup is recursive and SHA-256 pinned; keep this workflow path-triggered.
