@@ -1065,3 +1065,39 @@ El actualizador no descarga ni ejecuta los artefactos ni hace checkout del códi
 ## Baseline de referencia
 
 La evaluación de paso 0 es la referencia inicial: 100 preguntas, checkpoint sin entrenamiento, tokenizer 8k y generación greedy sin RAG. Se conserva para comparar los siguientes checkpoints con el mismo holdout. El perfil de paso cero difiere en contexto y número de parámetros, por lo que esa comparación debe leerse con la cautela indicada en el prólogo.
+
+
+---
+
+## Fuero tercero: del tribunal, del escribano y de la lengua que no absuelve
+
+Vengan a juicio las respuestas, y no sus buenas maneras. El holdout no es certamen de cortesía ni justa de latinajos: es tribunal de preguntas, donde cada salida comparece con su ID, cada checkpoint con su hash y cada sentencia con el protocolo que la autoriza. El escribano podrá ponerle gola al disparate, mas no podrá trocarle la fecha, el folio ni la cuenta.
+
+De los otros talleres de la casa se toman tres oficios, no tres ornamentos:
+
+1. **Del árbitro de Agent-Eval:** que ninguna ejecución se juzgue por memoria o entusiasmo; dataset, configuración, coste, latencia y resultado han de dejar rastro comparable. En esta crónica, el benchmark es alcalde y no pregonero.
+2. **Del auditor de Sycophancy-audit:** que el loro sea probado bajo halago, autoridad, presión y contradicción. Si muda el juicio para complacer, incurre en lisonja; si contradice sin mirar la evidencia, incurre en la misma falta con jubón de rebelde.
+3. **Del tratado epistemológico de Papers:** que el diagnóstico preceda al ajuste. Un número sin procedencia es parámetro fantasma; una conclusión sin artefacto es testimonio de oídas; una correlación sin control no pasa de sospecha con firma.
+
+### Vocabulario de la probanza
+
+- **Árbitro independiente:** el benchmark y su protocolo, que no deben obediencia al checkpoint ni al autor.
+- **Presión de corte:** cualquier señal conversacional que invite al modelo a cambiar su respuesta para agradar.
+- **Parámetro fantasma:** cifra o capacidad invocada sin observación que permita identificarla.
+- **Folio ausente:** afirmación que carece de ID, artefacto, hash o fuente suficiente; queda pendiente, no se rellena con ingenio.
+- **Tic con librea:** fórmula recurrente que aparenta carácter, pero cuya frecuencia no prueba humor, pertinencia ni comprensión.
+- **Sentencia revocable:** interpretación provisional que debe ceder cuando aparezca evidencia mejor.
+
+### Provisiones del escribano
+
+- El hash da identidad, no virtud.
+- La repetición da frecuencia, no entendimiento.
+- La abstención da una salida, no necesariamente prudencia.
+- La contradicción da diferencia, no necesariamente criterio.
+- El EOS da un token, no necesariamente un cierre apropiado.
+- La promoción da estado administrativo, no victoria semántica.
+- El silencio del artefacto no demuestra que el fenómeno haya desaparecido: solo demuestra que no consta en esa comparecencia.
+
+Y quede por último asentado el fuero mayor: **el loro no ha de decir que sí por miedo, ni que no por vanidad**. Ha de mirar la pregunta, pesar la prueba y responder con la libertad limitada que le conceden sus datos. Si además hace reír, habrá cumplido mejor su oficio; si solo repite el chiste, será otro cortesano con cascabeles.
+
+*Nota de autoría:* este fuero es texto editorial nuevo, inspirado en los métodos y conceptos documentados en Agent-Eval, Sycophancy-audit y Papers. No es salida literal del modelo ni añade evidencia a ningún holdout.
