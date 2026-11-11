@@ -14,11 +14,37 @@ concurrency:
 
 jobs:
   register:
-    if: contains(github.event.workflow_run.name, 'holdout') && github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.head_repository.full_name == github.repository
+    if: github.event.workflow_run.head_branch == 'main' && github.event.workflow_run.head_repository.full_name == github.repository
     runs-on: ubuntu-latest
     steps:
+      - name: Validate holdout naming contract
+        id: contract
+        env:
+          WORKFLOW_PATH: ${{ github.event.workflow_run.path }}
+          WORKFLOW_NAME: ${{ github.event.workflow_run.name }}
+        run: |
+          set -euo pipefail
+          path_has_holdout=false
+          name_has_holdout=false
+          [[ "$WORKFLOW_PATH" == *holdout* ]] && path_has_holdout=true
+          [[ "$WORKFLOW_NAME" == *holdout* ]] && name_has_holdout=true
+          if [[ "$path_has_holdout" != "$name_has_holdout" ]]; then
+            echo "::error::Holdout registry contract mismatch: both workflow file path and workflow name must contain 'holdout'."
+            echo "Workflow path: $WORKFLOW_PATH"
+            echo "Workflow name: $WORKFLOW_NAME"
+            exit 1
+          fi
+          if [[ "$path_has_holdout" == true ]]; then
+            echo "eligible=true" >> "$GITHUB_OUTPUT"
+            echo "Validated holdout workflow naming contract."
+          else
+            echo "eligible=false" >> "$GITHUB_OUTPUT"
+            echo "Non-holdout workflow; registry update not required."
+          fi
+
       # Deliberately does not checkout or execute code from the completed workflow.
       - name: Add completed holdout run and artifacts to the registry
+        if: steps.contract.outputs.eligible == 'true'
         uses: actions/github-script@v8
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
