@@ -57,6 +57,12 @@ jobs:
           run-id: ${{ env.TRAIN_RUN_ID }}
           path: trained
 
+      - name: Install CPU inference dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
+          python -m pip install tokenizers numpy
+
       - name: Verify checkpoint and lineage
         id: checkpoint
         run: |
@@ -97,12 +103,6 @@ jobs:
             -o benchmarks/inference-holdout-v1.jsonl
           test "$(grep -cve '^$' benchmarks/inference-holdout-v1.jsonl)" -eq 100
           echo "3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535  benchmarks/inference-holdout-v1.jsonl" | sha256sum -c -
-
-      - name: Install CPU inference dependencies
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
-          python -m pip install tokenizers numpy
 
       - name: Generate 100 answers from checkpoint 10000
         env:
