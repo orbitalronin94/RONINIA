@@ -30,6 +30,7 @@
 - [Capítulo IX — Del arcano oficio de escribano de loros graciosos](CAPITULO_IX_ARCANO_ESCRIBANO.md)
 - [Capítulo X — Del alguacil que entró sin llamar](CAPITULO_X_ALGUACIL_RENDIJA.md)
 - [Capítulo XI — Del sueño del alguacil y el clérigo cerbatana](CAPITULO_XI_SUENO_CLERIGO_CERBATANA.md)
+- [Interludio — Del loro que enloqueció a los 54k](#interludio--del-loro-que-enloqueció-a-los-54k-y-del-tormento-que-aguarda-a-los-60k)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
@@ -1982,6 +1983,147 @@ Aquella noche el escribano soñó con el loro difunto. El ave estaba posada sobr
 Y luego siguió hablando hasta que el sueño se llenó de sílabas y el escribano despertó antes de que el ave pudiera explicar qué evidencia habría bastado. La frase quedó entera; la respuesta, incompleta. El escribano la anotó como quien guarda una reliquia, aunque el alguacil habría preferido guardarle también la pregunta.
 
 *Procedencia del recuerdo:* MINIRONIN, vitrina de fragmentos del checkpoint 500k, recogida en el [Museo](https://github.com/orbitalronin94/MINIRONIN/blob/main/docs/MUSEO.md); holdout de 100 preguntas, [run 42503212146](https://github.com/orbitalronin94/MINIRONIN/actions/runs/42503212146). Cita literal, fuera de contexto en su evaluación original. No se atribuye al loro actual.
+
+## Interludio — Del loro que enloqueció a los 54k, y del tormento que aguarda a los 60k
+
+**Checkpoint examinado:** 54.000 pasos; 9.757.440 parámetros.  
+**Run de inferencia diagnóstica:** [43036575830](https://github.com/orbitalronin94/RONINIA/actions/runs/43036575830).  
+**Artefacto de origen:** [13863118373](https://github.com/orbitalronin94/RONINIA/actions/runs/43036575830/artifacts/13863118373).  
+**Transcripción archivada:** [run de exportación 43037574129](https://github.com/orbitalronin94/RONINIA/actions/runs/43037574129); `reports/ronin-10m-54000-consulta-no-oficial-100.md`.  
+**Naturaleza de la comparecencia:** consulta diagnóstica no oficial de cien preguntas. Non es el holdout oficial de promoción, non concede mérito al checkpoint y non autoriza su coronación.  
+**Resultado material:** cien inferencias; noventa y tres respuestas non vacías y siete silencios.
+
+---
+
+### I. De cómo el loro mudó de vicio, y el escribano de entretenimiento
+
+A cincuenta mil pasos teníamos un loro pedante. A cincuenta y cuatro mil compareció otro, que parecía haber heredado el pico y perdido el juicio.
+
+El primero gastaba un solo chiste, mas lo gastaba con perseverancia de funcionario: «En una discusión donde importa la evidencia», «Variante de encuadre 4», y aquella procesión de `P:P:P` que entraba en toda respuesta como alguacil en taberna. Su disparate era de arquitectura: el molde ocupaba la silla destinada al pensamiento. Uno podía prever la ceremonia, tomar asiento y hasta pedir que le guardasen el sitio.
+
+El de cincuenta y cuatro mil, en cambio, no se dignaba repetir la misma locura. Hoy abría un cajón de Wikimedia; mañana se daba título de barón; pasado mañana callaba ante una pregunta de ironía; y, cuando el escribano esperaba una respuesta, le entregaba un manual de reparación de daños. No era más sabio. Era menos previsible. Y el escribano, que debía juzgarlo, se descubrió riendo antes de levantar acta.
+
+—Señoría —dijo el alguacil—, ¿hemos mejorado el animal?
+
+—Non —respondió el escribano—. Mas ha ensanchado el repertorio de sus desgracias.
+
+—Entonces non lo llaméis progreso.
+
+—No lo llamo progreso. Lo llamo espectáculo, que es voz más barata y suele venderse mejor.
+
+Y así quedó asentada la primera provisión de este interludio: **la variedad del fallo puede aumentar el entretenimiento sin aumentar la calidad de la respuesta**. El tribunal no confundirá una carcajada con una métrica, ni una sorpresa con una mejora.
+
+### II. De las siete maravillas que salieron torcidas
+
+El escribano mandó sacar las piezas más notables del expediente. Non las escogió por buenas, sino por singulares; que para medir el juicio sirven unas y para medir el esperpento, otras.
+
+**Primera pieza: el cajón de Wikimedia.**
+
+> `","en-nl":"Wikimedia list article; no por lo que no por un resultado.` (#041)
+
+El loro non respondió: abrió un cajón y mostró una etiqueta. Donde se le pedía lenguaje, compareció un fragmento de estructura, como si el ave hubiese confundido la conversación con el inventario de una biblioteca. El escribano lo llamó dadaísmo accidental; el alguacil, más práctico, preguntó si aquello tributaba.
+
+**Segunda pieza: el barón de los vocablos.**
+
+> `Abicroatro de la ja. Baron: Abiconta, Abicon...` (#006)
+
+Aquí el BPE parió un hidalgo. «Abicroatro» fue su solar; «Baron», su dignidad; «Abiconta», quizá su mayorazgo. El loro, que no había logrado gobernar una frase, se concedía título nobiliario en mitad del derrumbe. El alguacil pidió las ejecutorias. El escribano respondió que bastaba con mirar el pico.
+
+**Tercera pieza: la cortesía del falso.**
+
+> `Falso de dos salidas por cortesía.` (#084)
+
+El escribano reconoció en aquella frase una sombra de la máxima del loro difunto de MINIRONIN: «Dos afirmaciones incompatibles no se vuelven ciertas por cortesía». Mas la sombra había llegado deformada, como carta escrita durante un terremoto. La herencia no comparecía intacta: comparecía con la sintaxis torcida y el sentido a medio vestir.
+
+El escribano quiso recordar al anterior, que murió de sinceridad, y estuvo a punto de atribuir al presente una virtud que no había demostrado. El alguacil le detuvo:
+
+—No hagáis al difunto responsable de las faltas del heredero. Una cosa es la memoria; otra, el parentesco de los disparates.
+
+**Cuarta pieza: el expediente que se devora.**
+
+La pregunta comenzaba: «El escribano abrió el expediente y dentro encontró…». El loro contestó con un protocolo entero:
+
+> `Remediación NH5: contener el daño, separar temporalmente el componente o proceso afectado, reasignar responsabilidades...` (#100)
+
+El escribano buscaba una revelación y halló un procedimiento. El expediente contenía las instrucciones para contener el expediente; el reo traía consigo el manual de su propia reparación. A cincuenta mil pasos el cierre había sido una frase sobre seguridad; a cincuenta y cuatro mil comparecía la oficina completa, con sus formularios y su ventanilla.
+
+—¿Y quién ejecuta la remediación? —preguntó el alguacil.
+
+—El responsable del proceso —dijo el escribano.
+
+—¿Y quién es?
+
+El escribano miró al loro. El loro miró al expediente. El expediente, por fortuna, no declaró.
+
+**Quinta pieza: la vocal que no conoce el fin.**
+
+> `Elimaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa` (#025)
+
+La «a» había sobrevivido a la mudanza. No era ya una ocurrencia aislada, sino una firma que reaparecía en otro examen. El escribano la llamó continuidad; el alguacil, reincidencia tipográfica. Ambos convinieron en que una vocal puede dejar huella sin dejar argumento.
+
+**Sexta pieza: la consonante que pidió asilo.**
+
+> `su propuestasssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss` (#079)
+
+La familia de los derrumbes se había extendido. A la vocal se sumaba ahora la «s», que no terminaba de abandonar la palabra, como escribano que prolonga su jornada para cobrar otra dieta. La lengua no concluía: se deshilachaba.
+
+**Séptima pieza: los siete silencios.**
+
+Callaron los IDs #023, #026, #031, #037, #051, #052 y #056. El silencio no cayó al azar de la imaginación del lector: se produjo ante el latín macarrónico, la ironía, la receta de nube, el dragón en Hacienda, el café en el mapa, la patata convocada a reunión y la llave perdida en el bosque.
+
+A cincuenta mil pasos se había contado un silencio. A cincuenta y cuatro mil se contaron siete. Y lo más burlón no fue el número, sino el reparto: el loro callaba precisamente cuando la pregunta le invitaba a jugar.
+
+—¿Se niega a declarar? —preguntó el alguacil.
+
+—No —dijo el escribano—. Parece que se le ha acabado la jurisdicción.
+
+—Pues que conste: no toda abstención es prudencia. A veces el silencio es solamente un pico cerrado.
+
+### III. De la diferencia entre un loro gracioso y un loro mejor
+
+El escribano, que ya había empezado a encariñarse con el caos, se vio obligado a dictar una sentencia contra su propio gusto.
+
+El de cincuenta mil era gracioso por repetición: un solo chiste, muchas comparecencias. El de cincuenta y cuatro mil lo era por variedad: JSON crudo, nobleza de BPE, ecos heredados, manuales de remediación y tipografía en fuga. El primero tenía un molde; el segundo, una feria de averías.
+
+Mas el tribunal dejó escrito que **la comicidad no es competencia lingüística**. Que el error sorprenda no lo vuelve correcto; que una respuesta sea memorable no la vuelve útil; que siete preguntas queden mudas no demuestra una prudente abstención. La calidad técnica y la gracia pueden caminar en direcciones contrarias, y en esta ocasión el escribano encontró más diversión donde había menos dominio.
+
+—El 54k es peor y más gracioso —dijo el alguacil.
+
+—En esta consulta, y según nuestra lectura humana —corrigió el escribano—. No hagas de una impresión una ley del reino.
+
+—¿Y qué hacemos con él?
+
+—Lo conservamos. El fracaso interesante también merece folio, siempre que no se le entregue la corona.
+
+### IV. Del tormento que se prepara, mas non se anticipa
+
+El alguacil cerró el expediente de cincuenta y cuatro mil y puso encima el legajo de sesenta mil. No lo abrió. Todavía no había respuestas que leer, ni testigos que llamar, ni sentencia que pronunciar.
+
+—¿Será el próximo más cuerdo? —preguntó.
+
+—Eso no lo sabemos.
+
+—¿Más gracioso?
+
+—Tampoco.
+
+—¿Y si vuelve a salir el barón?
+
+—Que traiga sus títulos y sus hashes.
+
+El escribano dejó preparada la cuerda, que en aquella escribanía no era de cáñamo, sino de cien preguntas iguales para todos los checkpoints. A cincuenta y cuatro mil había comparecido una consulta diagnóstica no oficial: útil para observar el disparate, insuficiente para dictar promoción. El tormento de verdad, según el fuero ya establecido, aguardaba a los sesenta mil y habría de celebrarse con el protocolo fijado, el artefacto íntegro y los IDs por testigos.
+
+Antes de cerrar el legajo, el escribano escribió en el margen:
+
+> El cincuenta mil repetía su chiste; el cincuenta y cuatro mil perdió el juicio y ganó variedad. Mas el tribunal no corona al bufón por hacer reír: le pide que responda.
+
+Y el alguacil añadió, con letra más pequeña:
+
+> **El mejor chiste no es el que demuestra que el loro sabe; es el que nos recuerda cuánto ignoramos cuando nos reímos de él.**
+
+*Nota de procedencia y cautela.* Las siete piezas y los siete silencios se citan como observaciones de la consulta diagnóstica no oficial de 54k, no como resultados de un holdout de promoción. La transcripción completa se conserva en `reports/ronin-10m-54000-consulta-no-oficial-100.md`, derivada del artefacto original mediante el workflow de exportación indicado arriba. La interpretación de que el 54k resulta «más gracioso» que el 50k es juicio editorial del escribano, no métrica del modelo. Las frases del loro difunto se recuerdan como herencia de MINIRONIN y non se atribuyen al loro presente.
+
+---
 
 ## Capítulo XII — Del proceso inquisitorial del loro, y de por qué agora se le somete a tormento
 
