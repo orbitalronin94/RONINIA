@@ -14,7 +14,7 @@
 
 Llegará el artefacto de 50k. El pendolista lo abrirá con la ceja levantada y el dedo en el scroll. Y en algún folio —non se sabe cuál, por eso se apuesta— aparecerá una frase. Non se sabe si será nueva o será la misma de 40k con otro badajo. Non se sabe si hará reír o si solo hará pensar que el fedatario se ríe para non llorar.
 
-Lo único que se sabe es que el secretario la anotará. Y la anotará con la misma cara con la que Covarrubias anotó que *orate* viene de *hora*, porque los locos tienen tiempos en que muestran su locura. El papagayo tiene su hora a cada checkpoint. La pregunta del capítulo VIII non es cuál será la hora de 50k: es **cuántas horas lleva el hombre de la pluma esperándola**. Al bajar al patio, el secretario encontró el cubo del pozo lleno de hojas secas y se entretuvo en sacarlas una a una; ninguna contenía una predicción útil, aunque dos parecían facturas.
+Lo único que se sabe es que el secretario la anotará. Y la anotará con la misma cara con la que Covarrubias anotó que *orate* viene de *hora*, porque los locos tienen tiempos en que muestran su locura. El papagayo tiene su hora a cada checkpoint. La pregunta del capítulo VIII non es cuál será la hora de 50k: es **cuántas horas lleva el hombre de la pluma esperándola**.
 
 ---
 
