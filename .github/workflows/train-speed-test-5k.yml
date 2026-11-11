@@ -1,15 +1,5 @@
 name: RONIN-10M — 5k CPU speed trial (FP32 B2 C256)
 on:
-  pull_request:
-    paths:
-      - ".github/workflows/train-speed-test-5k.yml"
-      - "scripts/train.py"
-      - "scripts/prepare_corpus.py"
-      - "configs/ronin-10m.json"
-  push:
-    branches: [main]
-    paths:
-      - ".github/workflows/train-speed-test-5k.yml"
   workflow_dispatch:
     inputs:
       corpus_run_id:
