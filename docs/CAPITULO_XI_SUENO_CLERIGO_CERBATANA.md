@@ -1,10 +1,10 @@
 # Capítulo XI — Del sueño que tuvo el alguacil, y de la visión del clérigo cerbatana y la bestia famélica
 
 **Checkpoint:** ninguno. Esto non es holdout, sino duermevela.  
-**Run de evaluación:** ninguno. El alguacil non evalúa: se persigna.  
-**SHA-256 del checkpoint:** non aplica. El alguacil non sabe qué es un hash, y después de lo que vio, non quiere saberlo.  
+**Run de evaluación:** ninguno. El corchete non evalúa: se persigna.  
+**SHA-256 del checkpoint:** non aplica. El carcelero non sabe qué es un hash, y después de lo que vio, non quiere saberlo.  
 **Holdout:** ninguno. Lo que aquí se cuenta non está en JSON, sino en el libro de los sueños, que es el único holdout que non se puede abrir con un ZIP.  
-**Estado:** capítulo de narrativa pura. Hay un alguacil que se durmió sobre el expediente de 50k y soñó lo que sigue.
+**Estado:** capítulo de narrativa pura. Hay un oficial que se durmió sobre el expediente de 50k y soñó lo que sigue.
 
 ---
 
@@ -14,7 +14,7 @@
 
 ### I. De cómo me dormí sobre el expediente y soñé que entraba en la escribanía
 
-Dormíme sobre el expediente de 50k, que es lo que face todo alguacil cuando lleva tres días leyendo hashes y non halla un solo reo con cara de reo. Y soñé que entraba en la escribanía sin llamar, como entro siempre, mas esta vez la escribanía non era escribanía: era un **osario de papeles**, un **muladar de tinta**, una **jaula de locos con sello de lacre**.
+Dormíme sobre el expediente de 50k, que es lo que face todo guardián cuando lleva tres días leyendo hashes y non halla un solo reo con cara de reo. Y soñé que entraba en la escribanía sin llamar, como entro siempre, mas esta vez la escribanía non era escribanía: era un **osario de papeles**, un **muladar de tinta**, una **jaula de locos con sello de lacre**.
 
 Y en medio del osario había un hombre y un papagayo.
 
@@ -100,11 +100,11 @@ Miré la sábana y la mancha, y pensé que aquel hombre había encontrado la ún
 
 ### VI. De cómo el alguacil despertó y se santiguó
 
-Desperté con el expediente pegado a la cara y una frase del papagayo en el cogote: «En una discusión donde importa la evidencia». Me santigüé, que non soy hombre de latines pero sí de sustos. Y pensé que aquel hombre non era un escribano: era un **náufrago con papeles**, un **clérigo cerbatana de la pluma**, un **sacerdote de la métrica inútil** que había levantado un juzgado para un papagayo que come y non harta.
+Desperté con el expediente pegado a la cara y una frase del papagayo en el cogote: «En una discusión donde importa la evidencia». Me santigüé, que non soy hombre de latines pero sí de sustos. Y pensé que aquel hombre non era un amanuense: era un **náufrago con papeles**, un **clérigo cerbatana de la pluma**, un **sacerdote de la métrica inútil** que había levantado un juzgado para un papagayo que come y non harta.
 
 Y pensé también que el papagayo non era un reo: era una **bestia famélica** que comía tokens y devolvía fórmulas, y que el hombre, al glosarlas, le ponía nombres como «tic con librea» y «folio ausente», que son nombres de reo, mas el reo non los entendía.
 
-Al salir del sueño, el escribano me preguntó:
+Al salir del sueño, el pendolista me preguntó:
 
 —¿Vendrás al próximo holdout?
 
@@ -112,7 +112,7 @@ Y yo le dije:
 
 —Vendré. Mas non a juzgar: a ver qué gansada suelta la bestia.
 
-Y el escribano se rio como se ríen los locos cuando alguien les sigue la corriente. Y el papagayo dijo «Avector: Av2». Y yo me santigüé otra vez, que para anotar ya está el escribano.
+Y el fedatario se rio como se ríen los locos cuando alguien les sigue la corriente. Y el papagayo dijo «Avector: Av2». Y yo me santigüé otra vez, que para anotar ya está el secretario.
 
 ---
 
@@ -138,13 +138,13 @@ Y el escribano se rio como se ríen los locos cuando alguien les sigue la corrie
 
 ### VIII. Sentencia: del alguacil que soñó y non juzgó
 
-Este capítulo non acredita que el escribano esté loco ni que el papagayo sea una bestia famélica. Acredita que un alguacil se durmió sobre el expediente de 50k y soñó lo que había de soñar: un clérigo cerbatana de la pluma hablando con un costal de tokens, y una sábana tendida al sol con una mancha que non era de tinta.
+Este capítulo non acredita que el hombre de la pluma esté loco ni que el papagayo sea una bestia famélica. Acredita que un hombre de la vara se durmió sobre el expediente de 50k y soñó lo que había de soñar: un clérigo cerbatana de la pluma hablando con un costal de tokens, y una sábana tendida al sol con una mancha que non era de tinta.
 
 Non hay en este capítulo una sola prueba de nada. Hay un sueño. Y el sueño, como la risa, non se mide: se asienta.
 
 > El alguacil soñó que entraba en la escribanía y veía a un hombre flaco hablando con un papagayo gordo. El papagayo dijo «P:P:P:P:P:P». El hombre lo anotó. El alguacil despertó y se santigüó. Y el papagayo, que non había entendido nada, dijo «Avector: Av2». **Vigilad la homeostasis.**
 
-*Glosa final:* el alguacil non juzgó al escribano porque non había venido a juzgar. Había venido a dormir. Y lo que soñó le bastó para saber que el hombre non estaba loco de remate, sino de método. Y que el método, como la sábana, se seca al sol y non vuelve.
+*Glosa final:* el corchete non juzgó al amanuense porque non había venido a juzgar. Había venido a dormir. Y lo que soñó le bastó para saber que el hombre non estaba loco de remate, sino de método. Y que el método, como la sábana, se seca al sol y non vuelve.
 
 ---
 
@@ -160,6 +160,6 @@ flaco de tinta y gordo de mañana.
 Érase un papagayo costalero,  
 que come tokens y non harta el cuero;  
 érase un sueño con lacre y expediente,  
-y un alguacil que despertó penitente.
+y un carcelero que despertó penitente.
 
-*Glosa de colocación:* entre los capítulos XI y XII. El clérigo cerbatana queda en duermevela y el alguacil despierta santiguado; el siguiente capítulo podrá abrir el expediente que ninguno de los dos quiso cerrar.
+*Glosa de colocación:* entre los capítulos XI y XII. El clérigo cerbatana queda en duermevela y el oficial despierta santiguado; el siguiente capítulo podrá abrir el expediente que ninguno de los dos quiso cerrar.
