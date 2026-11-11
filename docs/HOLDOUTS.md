@@ -51,12 +51,14 @@
 - [Interludio II — Del coloquio entre el oficial y el pendolista](#interludio-ii--del-coloquio-entre-el-guardián-y-el-fedatario-sobre-el-pájaro-que-enloqueció-a-los-54k-y-de-cómo-se-aplicó-el-protocolo-nh5-a-la-propia-crónica)
 - [Capítulo XII — Del juicio del escribano, y de cómo el loro fue testigo de cargo contra quien lo glosaba](#capítulo-xii--del-juicio-del-escribano-y-de-cómo-el-loro-fue-testigo-de-cargo-contra-quien-lo-glosaba)
 - [Capítulo XIII — Del loro que llegó a sesenta mil pasos, respondió cien veces y non halló la puerta de su propia lengua](#capítulo-xiii--del-loro-que-llegó-a-sesenta-mil-pasos-respondió-cien-veces-y-non-halló-la-puerta-de-su-propia-lengua)
-- [Capítulo XIV — Del escribano que mandó andar veinte mil pasos antes de volver a preguntar al loro](#capítulo-xiv--del-escribano-que-mandó-andar-veinte-mil-pasos-antes-de-volver-a-preguntar-al-loro)\n- [Capítulo XV — Del loro que perdió el juicio, del escribano que perdió la vergüenza y de cien preguntas que acabaron pidiendo un exorcista](#capítulo-xv--del-loro-que-perdió-el-juicio-del-escribano-que-perdió-la-vergüenza-y-de-cien-preguntas-que-acabaron-pidiendo-un-exorcista)
+- [Capítulo XIV — Del escribano que mandó andar veinte mil pasos antes de volver a preguntar al loro](#capítulo-xiv--del-escribano-que-mandó-andar-veinte-mil-pasos-antes-de-volver-a-preguntar-al-loro)
+- [Capítulo XV — Del loro que perdió el juicio, del escribano que perdió la vergüenza y de cien preguntas que acabaron pidiendo un exorcista](#capítulo-xv--del-loro-que-perdió-el-juicio-del-escribano-que-perdió-la-vergüenza-y-de-cien-preguntas-que-acabaron-pidiendo-un-exorcista)
 - [Capítulo XVI — Del libro de apuestas, de la cólera del escribano y del loro que aún non ha comparecido](#capítulo-xvi--del-libro-de-apuestas-de-la-cólera-del-escribano-y-del-loro-que-aún-non-ha-comparecido)
 - [Capítulo XVII — Del loro que respondió cien veces, del escribano que cobró en vergüenza y de la apuesta que non pudo pagarse](#capítulo-xvii--del-loro-que-respondió-cien-veces-del-escribano-que-cobró-en-vergüenza-y-de-la-apuesta-que-non-pudo-pagarse)
 - [Capítulo XVIII — De la escribanía a deshoras, del loro que habló sin pregunta y del hash que non pudo darse](#capítulo-xviii--de-la-escribanía-a-deshoras-del-loro-que-habló-sin-pregunta-y-del-hash-que-non-pudo-darse)
 - [Capítulo XIX — De la paz sin hash, del retrato arañado y de la única vez que el alguacil dijo «ni puta idea»](#capítulo-xix--de-la-paz-sin-hash-del-retrato-arañado-y-de-la-única-vez-que-el-alguacil-dijo-ni-puta-idea)
-- [Capítulo XX — De la fiesta del cien mil, del ascenso firmado en vino, del reo que se fue al pozo y de la frase que ardió dos veces](#capítulo-xx--de-la-fiesta-del-cien-mil-del-ascenso-firmado-en-vino-del-reo-que-se-fue-al-pozo-y-de-la-frase-que-ardió-dos-veces)\n- [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
+- [Capítulo XX — De la fiesta del cien mil, del ascenso firmado en vino, del reo que se fue al pozo y de la frase que ardió dos veces](#capítulo-xx--de-la-fiesta-del-cien-mil-del-ascenso-firmado-en-vino-del-reo-que-se-fue-al-pozo-y-de-la-frase-que-ardió-dos-veces)
+- [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
 
@@ -94,7 +96,6 @@
 | 50.000 | [43019963290](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290) | [13854621810](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290/artifacts/13854621810) | `checkpoint-50000-holdout-100.json` | `f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966` |
 | 60.000 | [43044447658](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658) | [13866477512](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658/artifacts/13866477512) | `checkpoint-60000-holdout-100.json` | `9446dd607e39b4942cb1b35e9500f0c1b21ace4b2a0b98e951d3942a75c991bd` |
 | 78.000 | [43073929630](https://github.com/orbitalronin94/RONINIA/actions/runs/43073929630) | [13882515065](https://github.com/orbitalronin94/RONINIA/actions/runs/43073929630/artifacts/13882515065) | `checkpoint-78000-holdout-100.json` | `cac08df06d091f3942126af28a79442a57ee7ca7dc09bc93ad1a0f8155a9894e` |
-| 90.000 | [43091480701](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701) | [13889525822](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701/artifacts/13889525822) | `checkpoint-90000-holdout-100.json` | `b1c2e70615f844330a9572154952e859a21574f8a95637186b827c45730c660b` |
 | 90.000 | [43091480701](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701) | [13889525822](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701/artifacts/13889525822) | `checkpoint-90000-holdout-100.json` | `b1c2e70615f844330a9572154952e859a21574f8a95637186b827c45730c660b` |
 
 ### Linaje íntegro del checkpoint de 40.000 pasos
@@ -4170,8 +4171,6 @@ Los runs fallidos `43022253427` y `43022290341` se conservan como fallos, con su
 |---|---|---|---|---:|---|---|---|
 <!-- HOLDOUT-INDEX-START -->
 | 2026-11-11 | RONIN-10M — official 100-prompt holdout at 100k | `checkpoint-holdout-ronin-10m-100000` | push | 43112010343 | success | [13897325999](https://github.com/orbitalronin94/RONINIA/actions/runs/43112010343/artifacts/13897325999) | `01db5d205b0e` |
-| Fecha | Ejecución | Workflow o tipo | Evento | Run ID | Resultado | Artefactos | Commit |
-|---|---|---|---|---:|---|---|---|
 | 2026-11-11 | RONIN-10M — 60k official inference holdout | `checkpoint-holdout-ronin-10m-60000` | push | 43044447658 | success | [13866477512](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658/artifacts/13866477512) | `2ae77f606b95` |
 | 2026-11-11 | RONIN-10M — official 100-prompt holdout at 78k | `checkpoint-holdout-ronin-10m-78000` | push | 43073929630 | success | [13882515065](https://github.com/orbitalronin94/RONINIA/actions/runs/43073929630/artifacts/13882515065) | — |
 | 2026-11-11 | RONIN-10M — recover 54k and continue 6k with reduced learning rate | `train-54k-to-60k-reduced-lr` | push | 43036261288 | success | [13866302507](https://github.com/orbitalronin94/RONINIA/actions/runs/43036261288/artifacts/13866302507)<br>[13865633435](https://github.com/orbitalronin94/RONINIA/actions/runs/43036261288/artifacts/13865633435) | `019063be2900` |
