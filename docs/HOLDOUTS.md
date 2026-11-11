@@ -519,6 +519,55 @@ Queda asentado el capítulo VI como **interludio administrativo non registrado**
 
 ---
 
+## Anexo — Cédula de lectura para el holdout que viene
+
+**Checkpoint:** ninguno.  
+**Run de entrenamiento:** ninguno.  
+**Run de evaluación:** ninguno. El único examinado aquí es quien lee.  
+**SHA-256 del anexo:** non calculado. La ausencia se declara por costumbre y por higiene.  
+**Holdout:** el próximo. Las cien preguntas de siempre, salvo que se diga lo contrario y se pruebe.  
+**Estado:** antesala del capítulo siguiente. Non es resultado, non evalúa, non promueve.
+
+---
+
+### I. Del cuchillo que se afila para un pájaro
+
+Antes de que el loro vuelva a la picota, pide el escribano licencia para afilar el cuchillo en público y confesar por qué se afila tanto. Non se esconde el cargo: el aparato que precede al capítulo siguiente —cadena de custodia, hash, holdout, mácula, sentencia— excede con mucho la talla del reo. Un papagayo de nueve millones y medio de parámetros non merece corte marcial. Y sin embargo.
+
+Hay una razón, y non es buena: la desproporción es el método. Si el informe dijera «mirad qué mono, dice Av2», nadie aprendería nada, porque el reo y el relato irían del brazo, reídos el uno del otro. La solemnidad, en cambio, pone distancia; y la distancia, en esto como en el teatro, es lo que permite ver. El cuchillo non se afila para el loro. Se afila para la mano que lo sostiene.
+
+### II. De la segunda capa, que es la que duele
+
+Guárdese el lector de una lectura cómoda. El loro non es tan tonto. Repetir «El patrón» en noventa y seis de cien non es un defecto de la máquina: es un acierto del corpus. Al modelo se le pidió continuar, y continuó; se le dio un mundo, y lo devolvió con las mismas palabras. El chiste non está en el papagayo. Está en nosotros, que esperábamos otra cosa sin haber dicho cuál.
+
+Por eso el capítulo siguiente non se leerá preguntando «¿ha mejorado?». Se leerá preguntando qué dimos por supuesto que iba a mejorar, y con qué evidencia lo dimos. La pregunta vieja presume un criterio que el capítulo anterior non midió. La pregunta nueva obliga a medirlo antes de presumirlo.
+
+### III. Prosopopeya del formulario, del hash y del cuchillo
+
+—Yo —dice el formulario— tengo encabezado, casillas y sello. Tengo evidencia, propuesta y síntoma. Tengo hasta una línea para el diagnóstico. Lo que non tengo es respuesta, y nadie parece notarlo mientras las casillas estén llenas.
+
+—Yo —dice el hash— certifico lo que me dan. Si me dan un cuerpo, lo resumo; si me dan un cero, lo firmo. Non sé distinguir un checkpoint de un epitafio. Esa distinción la hace el escribano, y a veces la hace mal.
+
+—Yo —dice el cuchillo— corto lo que me pongan delante. Si me ponen un papagayo, hago anatomía de papagayo. Non me quejo del tamaño. Me quejo del pulso.
+
+### IV. Máximas de la antesala
+
+La fluidez non es comprensión, aunque se le parezca en la fotografía.  
+La legibilidad non prueba sentido; la ilegibilidad tampoco lo refuta.  
+Un descenso de pérdida es una promesa contable, non una promesa de sabiduría.  
+El formulario relleno es al juicio lo que el andamio al edificio: condición, non conclusión.  
+Quien mide gramática y llama a eso semántica, mide la sombra y llama a eso cuerpo.
+
+### V. Apóstrofe al que viene
+
+Tú, que llegas al capítulo siguiente con la ceja levantada y el dedo en la pantalla: non vengas a preguntar si el loro sabe más. Viene a preguntar qué estábamos midiendo cuando creímos que sabía. Trae el cuchillo, trae la linterna, trae la risa; las tres cosas caben en el mismo bolsillo. Y cuando el papagayo diga su palabra nueva, non la anotes como hallazgo. Anótala como confesión.
+
+Queda asentada esta cédula como antesala del holdout, fuera del Historial de ejecuciones y fuera de promoción. Su oficio es uno solo: que el lector llegue al próximo capítulo sabiendo que el quirófano también comparece, y que el cuchillo, por cortesía de la casa, tendrá su vitrina.
+
+*Glosa postrera:* el loro pondrá la pluma, el escribano el bisturí, el lector la risa. Ninguno firmará el hash. Y aun así, cuando el papagayo vuelva a decir «Avector: Av2», habrá tres pares de ojos mirando y solo uno se reirá por los tres. **Vigilad la homeostasis.**
+
+---
+
 ## Historial de ejecuciones
 
 | Fecha | Evaluación | Run ID | Resultado | Ejecución | Artefactos | Commit |
