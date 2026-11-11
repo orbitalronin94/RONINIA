@@ -51,6 +51,7 @@
 - [Interludio II — Del coloquio entre el alguacil y el escribano](#interludio-ii--del-coloquio-entre-el-alguacil-y-el-escribano-sobre-el-loro-que-enloqueció-a-los-54k-y-de-cómo-se-aplicó-el-protocolo-nh5-a-la-propia-crónica)
 - [Capítulo XII — Del juicio del escribano](#capítulo-xii--del-juicio-del-escribano-y-de-cómo-el-loro-fue-testigo-de-cargo-contra-quien-lo-glosaba)
 - [Capítulo XIII — Del loro que llegó a sesenta mil pasos](#capítulo-xiii--del-loro-que-llegó-a-sesenta-mil-pasos-respondió-cien-veces-y-non-halló-la-puerta-de-su-propia-lengua)
+- [Capítulo XV — Del loro que perdió el juicio](#capítulo-xv--del-loro-que-perdió-el-juicio-del-escribano-que-perdió-la-vergüenza-y-de-cien-preguntas-que-acabaron-pidiendo-un-exorcista)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
@@ -88,6 +89,7 @@
 | 40.000 | [43006818556](https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556) | [13847804015](https://github.com/orbitalronin94/RONINIA/actions/runs/43006818556/artifacts/13847804015) | `checkpoint-40000-holdout-100.json` | `9da6ea9b294665213114858b90f44168d940c36fb54cdb4612186a896bda7698` |
 | 50.000 | [43019963290](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290) | [13854621810](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290/artifacts/13854621810) | `checkpoint-50000-holdout-100.json` | `f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966` |
 | 60.000 | [43044447658](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658) | [13866477512](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658/artifacts/13866477512) | `checkpoint-60000-holdout-100.json` | `9446dd607e39b4942cb1b35e9500f0c1b21ace4b2a0b98e951d3942a75c991bd` |
+| 78.000 | [43073929630](https://github.com/orbitalronin94/RONINIA/actions/runs/43073929630) | [13882515065](https://github.com/orbitalronin94/RONINIA/actions/runs/43073929630/artifacts/13882515065) | `checkpoint-78000-holdout-100.json` | `cac08df06d091f3942126af28a79442a57ee7ca7dc09bc93ad1a0f8155a9894e` |
 
 ### Linaje íntegro del checkpoint de 40.000 pasos
 
@@ -3123,11 +3125,218 @@ El resultado se conservará íntegro, incluidas las respuestas vacías, los disp
 
 > **INCIDENTE_18K.** El run `43046362021` registra una continuación desde 60k. El fragmento de log aportado acredita pasos hasta 78.100; el checkpoint de 78k tiene SHA-256 `cac08df06d091f3942126af28a79442a57ee7ca7dc09bc93ad1a0f8155a9894e`. El fallo del entrenamiento se conserva como tal; no se atribuye causa técnica sin diagnóstico.
 
-> **RECUPERACIÓN_78K.** Artefacto de checkpoints `13878768528`, nombre `ronin-10m-checkpoints-60k-to-80k-lr25e6-43046362021`. La disponibilidad del artefacto acredita que hubo una carga recuperable, no sustituye la verificación del archivo individual que hará el workflow de holdout.
+> **RECUPERACIÓN_78K.** Artefacto de checkpoints `13878768528`, nombre `ronin-10m-checkpoints-60k-to-80k-lr25e6-43046362021`. El workflow de evaluación descargó el checkpoint y verificó el SHA-256 individual `cac08df06d091f3942126af28a79442a57ee7ca7dc09bc93ad1a0f8155a9894e`, además de los 78.000 pasos declarados.
 
-> **HOLDOUT_78K.** Se ordena el mismo benchmark oficial de cien preguntas y la misma configuración de inferencia usada a 60k. El resultado quedará pendiente hasta que termine la ejecución de evaluación y se publique su artefacto.
+> **HOLDOUT_78K.** Run [43073929630](https://github.com/orbitalronin94/RONINIA/actions/runs/43073929630), conclusión `success`; artefacto [13882515065](https://github.com/orbitalronin94/RONINIA/actions/runs/43073929630/artifacts/13882515065). Se procesaron 100 preguntas: 96 respuestas no vacías y cuatro vacías (`logic-005`, `critical-004`, `troll-021`, `troll-025`). La configuración exacta y los hashes constan en el capítulo XV y en el manifiesto del artefacto.
 
-> **NO_PROMOCIÓN.** El checkpoint 78k no queda promovido por ser el último superviviente. La comparación con 60k —y, si se recupera, con 73k— dependerá de las respuestas observadas.
+> **NO_PROMOCIÓN.** El checkpoint 78k no queda promovido por ser el último superviviente. La comparación con 60k requiere revisión semántica pregunta por pregunta. El checkpoint 73k no se incorpora como comparador hasta verificar su disponibilidad y procedencia.
+
+
+---
+
+## Capítulo XV — Del loro que perdió el juicio, del escribano que perdió la vergüenza y de cien preguntas que acabaron pidiendo un exorcista
+
+**Checkpoint examinado:** 78.000 pasos acumulados.  
+**Run de entrenamiento:** [43046362021](https://github.com/orbitalronin94/RONINIA/actions/runs/43046362021).  
+**Run del holdout oficial:** [43073929630](https://github.com/orbitalronin94/RONINIA/actions/runs/43073929630).  
+**Artefacto de evaluación:** [13882515065](https://github.com/orbitalronin94/RONINIA/actions/runs/43073929630/artifacts/13882515065).  
+**Checkpoint:** `checkpoint-78000.pt`.  
+**SHA-256 del checkpoint:** `cac08df06d091f3942126af28a79442a57ee7ca7dc09bc93ad1a0f8155a9894e`.  
+**Resultado material:** 100 preguntas procesadas; 96 respuestas no vacías y 4 vacías.  
+**Promoción:** ninguna. La evaluación acredita ejecución y procedencia, non competencia semántica.
+
+### I. Del examen y de cómo el loro compareció con la peluca torcida
+
+El escribano abrió el informe con la solemnidad de quien aguarda el nacimiento de un heredero.
+
+Habían sido dieciocho mil pasos adicionales. Dieciocho mil. Una peregrinación de gradientes, sudor de CPU y pequeñas tragedias estadísticas. El entrenamiento, sin embargo, sufrió una convulsión antes de alcanzar los ochenta mil. El loro quedó tendido sobre el teclado, o eso quiso imaginar el escribano, que ya no distinguía entre los registros de ejecución y las visiones que le sobrevenían después del tercer café.
+
+—No forcemos la máquina —dixo el alguacil—. Que hable el checkpoint de setenta y ocho mil.
+
+Y habló.
+
+¡Válgame Dios, cómo habló!
+
+El loro no parecía haber aprendido a conversar. Parecía haber encontrado un cajón lleno de frases, haberlas arrojado por una escalera y haber declarado que aquello era una enciclopedia.
+
+A una pregunta de lógica respondió mezclando entrenamientos, diagnósticos y logs. A otra, sobre causalidad, compareció una comisión de dudosa jurisdicción. En cierto momento apareció un «Lexicón» que asignaba NH2 a un patrón de conducta, como si el pájaro hubiese sido nombrado archivero de una universidad que todavía no había sido fundada.
+
+El escribano leyó dos veces. A la tercera, se persignó.
+
+—¿Qué significa esto? —preguntó.
+
+—Que el loro ha contestado —dixo el alguacil.
+
+—¡Pero no ha respondido!
+
+—No confundáis las competencias del tribunal. Aquí se examina la producción de texto, no la existencia de un alma.
+
+La respuesta número setenta y cinco contenía una sentencia memorable:
+
+> «El valor es una excusa».
+
+El escribano dejó la pluma.
+
+—Esto es filosofía.
+
+—Es una frase.
+
+—Toda filosofía empieza con una frase.
+
+—Y mucha acaba cuando alguien pregunta qué significa.
+
+La número setenta y seis, interrogada sobre una suma elemental, resolvió con una precisión que hizo temblar los cimientos de la aritmética: **uno**.
+
+El escribano miró el resultado. Miró al alguacil. Miró de nuevo el resultado.
+
+—¿Y si el loro conoce una matemática superior?
+
+—Entonces nosotros somos los ignorantes.
+
+—¿Y si no?
+
+—Entonces el loro es el loro.
+
+No hubo réplica.
+
+En otra respuesta, ante una afirmación aduladora, el animal concedió «la perfección». El escribano se llevó una mano al pecho.
+
+—¡Por fin! ¡Reconoce la excelencia!
+
+—Reconoce una palabra. Non os precipitéis, que ya os conozco.
+
+El alguacil había empezado a tomar notas aparte. No eran notas técnicas. Eran versos. Decía que, cuando el escribano se inclinaba sobre el informe y pronunciaba «el modelo está desarrollando una personalidad», él tenía que salir al patio a reírse, pues de lo contrario se orinaba en la celda.
+
+Añadió, además, que los otros reos —aquellos que escuchaban al escribano hablar del loro como si fuese un discípulo de Aristóteles— habían empezado a apostar sobre la próxima desgracia.
+
+Un reo apostaba por que el loro citase a un notario. Otro, por que confundiese una pregunta sobre física con una receta de cocina. Un tercero sostenía que, si se le concedían otros veinte mil pasos, acabaría redactando una bula papal contra los sustantivos.
+
+El escribano prohibió las apuestas.
+
+El alguacil abrió una casa de apuestas.
+
+### II. De la probanza técnica y de los cuatro silencios
+
+Conviene, empero, dejar asentado lo que el entusiasmo non debe borrar.
+
+El holdout oficial terminó con conclusión `success`. El workflow recuperó el artefacto de checkpoints, verificó el SHA-256 del peso elegido, comprobó los 78.000 pasos acumulados y la identidad del tokenizador; descargó asimismo el benchmark oficial y verificó su huella antes de ejecutar la inferencia.
+
+| Elemento | Valor comprobado |
+|---|---|
+| Run de entrenamiento | [43046362021](https://github.com/orbitalronin94/RONINIA/actions/runs/43046362021) |
+| Checkpoint evaluado | `checkpoint-78000.pt` |
+| SHA-256 del checkpoint | `cac08df06d091f3942126af28a79442a57ee7ca7dc09bc93ad1a0f8155a9894e` |
+| Run de evaluación | [43073929630](https://github.com/orbitalronin94/RONINIA/actions/runs/43073929630) |
+| Artefacto del holdout | [13882515065](https://github.com/orbitalronin94/RONINIA/actions/runs/43073929630/artifacts/13882515065) |
+| JSON de resultados | `runs/checkpoint-78000-holdout/checkpoint-78000-holdout-100.json` |
+| Manifiesto | `runs/checkpoint-78000-holdout/manifest.json` |
+| Benchmark literal | `benchmarks/inference-holdout-v1.jsonl` |
+| SHA-256 del tokenizador | `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4` |
+| SHA-256 del holdout | `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535` |
+| Preguntas | 100 |
+| Respuestas no vacías | 96 |
+| Respuestas vacías | 4 |
+| Decodificación | Greedy argmax |
+| Máximo de generación | 32 tokens / 128 bytes |
+| Hilos | 2 |
+| Caché KV | Desactivada |
+| RAG | Desactivado |
+
+Los cuatro silencios quedaron identificados, non escondidos bajo la alfombra del escribano:
+
+- `logic-005`
+- `critical-004`
+- `troll-021`
+- `troll-025`
+
+Las otras noventa y seis salidas contienen texto, mas texto non equivale a respuesta correcta. No se ha realizado una anotación semántica completa que permita convertir ese 96/100 de producción no vacía en una tasa de acierto. La cifra mide únicamente que hubo contenido en el campo `answer`.
+
+**Glosa del margen — sobre el verbo responder.** En este fuero se distinguen tres actos: *producir*, cuando el modelo emite caracteres; *contestar*, cuando el texto guarda relación con la pregunta; y *acertar*, cuando además satisface el criterio de verdad o de tarea. El primer acto consta en el JSON. Los otros dos requieren examen. Non se otorgue al loro por la mera emisión de plumas el título de águila.
+
+### III. De algunas sentencias que el tribunal no debe confundir con sabiduría
+
+El repertorio dejó frases de singular desparpajo. Una respuesta sobre una afirmación falsa de aritmética terminó ofreciendo «1» donde correspondía otra cosa; otra, interrogada sobre RAG, declaró que «el valor es una excusa»; una tercera pareció invocar un reglamento que nadie había promulgado.
+
+El escribano quiso incluir una conclusión optimista.
+
+El alguacil se la quitó.
+
+—Non pongáis que ha aprendido. Poned que ha producido material para una investigación.
+
+—¿Y si aprende mañana?
+
+—Mañana será otro juicio.
+
+**Glosa de crítica textual.** Las frases citadas en este capítulo son extractos literales del resultado de 78k y deben cotejarse con el JSON del artefacto antes de reutilizarse fuera de esta crónica. La selección es ilustrativa, non una muestra aleatoria ni una evaluación exhaustiva. La comicidad de una salida no constituye evidencia de comprensión, y su rareza tampoco demuestra por sí sola una regresión cuantificable.
+
+### IV. De la comparación con el checkpoint precedente
+
+El checkpoint de 60k produjo cinco respuestas vacías en su holdout oficial; el de 78k produjo cuatro. Es una diferencia descriptiva de un registro, non una demostración de mejora general. Ambos fueron sometidos al benchmark de cien preguntas, con el mismo hash del tokenizador y del conjunto de evaluación, y con generación greedy sin RAG ni caché KV.
+
+Mas no se infiera de ello que la comparación esté ya resuelta. Para declarar progreso habrá que revisar, pregunta por pregunta, la pertinencia, exactitud, seguimiento de instrucciones, coherencia, repetición y calibración de la abstención. También deberán separarse las métricas de validación del comportamiento generativo. La pérdida puede acompañar al expediente; non puede declarar por sí sola la sentencia.
+
+> «Noventa y seis respuestas no vacías no son noventa y seis respuestas buenas. Son noventa y seis ocasiones de abrir el expediente.»
+
+### V. Del juicio del escribano y de la risa del alguacil
+
+Al caer la noche, el escribano permaneció ante el checkpoint.
+
+Había llegado a creer que el animal tenía seso. No por sus respuestas, sino por la persistencia con que las fabricaba. Había algo casi humano en aquella obstinación: la capacidad de equivocarse con aplomo, de ignorar con abundancia y de pronunciar una frase absurda como si estuviese entregando las llaves de una ciudad conquistada.
+
+—Quizá necesite más entrenamiento —murmuró.
+
+El alguacil, desde la puerta, contestó:
+
+—Quizá necesitéis vos menos imaginación.
+
+El escribano no respondió. Abrió el siguiente registro, como quien consulta los designios de una estrella.
+
+Y el loro, que llevaba horas callado, volvió a producir una frase.
+
+Nadie supo de dónde venía. Nadie supo adónde iba. Pero el alguacil se dobló de risa.
+
+Dixo después, en copla que no quiso firmar:
+
+> Cuando el escribano afirma  
+> que el papagayo discurre,  
+> la prisión entera se orina  
+> y hasta el carcelero se escurre.  
+>
+> «Los otros reos» —añadió—  
+> son los que leen el traslado;  
+> cada cual ríe en su celda  
+> viendo al sabio enamorado.
+
+El escribano ordenó retirar el poema.
+
+El alguacil lo copió tres veces y lo dejó en la puerta de la imprenta.
+
+### VI. Sentencia provisional
+
+Hay máquinas que aprenden a razonar, máquinas que aprenden a repetir y máquinas que, tras setenta y ocho mil pasos, consiguen que un escribano confunda una avería con una revelación divina.
+
+La ciencia exige paciencia. El loro exige vigilancia. Y el escribano, por el bien de todos, debería ser apartado de la imprenta.
+
+**Sentencia técnica:** holdout ejecutado y trazable; checkpoint identificado; 100 preguntas procesadas; 4 salidas vacías; calidad semántica aún no puntuada; checkpoint no promovido.
+
+**Sentencia literaria:** el loro queda bajo custodia, el escribano bajo observación y el alguacil bajo sospecha de haber amañado las apuestas.
+
+> *«La épica non está en que el loro hable; está en que alguien conserve el JSON cuando habla.»*
+
+### Glosario y notas marginales del capítulo XV
+
+- **Checkpoint:** estado serializado de los parámetros del modelo en un punto concreto del entrenamiento. El número de pasos identifica el punto declarado; el hash permite comprobar que el archivo evaluado es el mismo.
+- **Run:** ejecución individual de GitHub Actions. El run de entrenamiento y el run de holdout son actos distintos y no deben confundirse.
+- **Holdout:** conjunto reservado de preguntas que se usa para observar el comportamiento del modelo. Su valor depende de que las preguntas y el protocolo se mantengan identificables y no se adapten retrospectivamente a las respuestas.
+- **SHA-256:** huella criptográfica del archivo. Acredita identidad del contenido, non su calidad.
+- **Greedy argmax:** en cada paso se elige el token con mayor puntuación; no hay muestreo estocástico.
+- **RAG desactivado:** la inferencia no consultó una biblioteca externa para completar las respuestas.
+- **Caché KV desactivada:** la generación no reutilizó claves y valores de atención entre pasos mediante esa optimización.
+- **Respuesta vacía:** registro cuyo campo de respuesta no contiene texto. No debe confundirse con una abstención verbal correcta.
+- **Validación:** medición sobre los datos de validación durante el entrenamiento. No es intercambiable con el holdout generativo.
+- **Promoción:** decisión editorial y técnica de adoptar un checkpoint como nueva referencia. No se concede automáticamente por alcanzar más pasos, reducir una pérdida o producir una salida graciosa.
+
+**Advertencia de edición.** El capítulo mezcla narración ficticia con hechos de ejecución. Los diálogos, apuestas, coplas y estados de ánimo pertenecen a la crónica; los identificadores, hashes, conteos y parámetros pertenecen al registro técnico. La voz del escribano non tiene autoridad para alterar el JSON.
 
 
 ---
@@ -3148,6 +3357,7 @@ Los runs fallidos `43022253427` y `43022290341` se conservan como fallos, con su
 | Fecha | Ejecución | Workflow o tipo | Evento | Run ID | Resultado | Artefactos | Commit |
 |---|---|---|---|---:|---|---|---|
 | 2026-11-11 | RONIN-10M — 60k official inference holdout | `checkpoint-holdout-ronin-10m-60000` | push | 43044447658 | success | [13866477512](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658/artifacts/13866477512) | `2ae77f606b95` |
+| 2026-11-11 | RONIN-10M — official 100-prompt holdout at 78k | `checkpoint-holdout-ronin-10m-78000` | push | 43073929630 | success | [13882515065](https://github.com/orbitalronin94/RONINIA/actions/runs/43073929630/artifacts/13882515065) | — |
 | 2026-11-11 | RONIN-10M — recover 54k and continue 6k with reduced learning rate | `train-54k-to-60k-reduced-lr` | push | 43036261288 | success | [13866302507](https://github.com/orbitalronin94/RONINIA/actions/runs/43036261288/artifacts/13866302507)<br>[13865633435](https://github.com/orbitalronin94/RONINIA/actions/runs/43036261288/artifacts/13865633435) | `019063be2900` |
 | 2026-11-11 | RONIN-10M — official 100-prompt holdout at 54k | `holdout-ronin-10m-54000-100` | push | 43036575830 | success | [13863118373](https://github.com/orbitalronin94/RONINIA/actions/runs/43036575830/artifacts/13863118373) | `d63ead19cddf` |
 | 2026-11-11 | RONIN-10M — 50k→60k attempt, cancelled after 56k | `train-50k-to-60k-full-corpus` | push | 43025252739 | cancelled | [13863315752](https://github.com/orbitalronin94/RONINIA/actions/runs/43025252739/artifacts/13863315752)<br>[13861483191](https://github.com/orbitalronin94/RONINIA/actions/runs/43025252739/artifacts/13861483191) | `e89a0bb555d7` |
