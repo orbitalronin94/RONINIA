@@ -385,7 +385,7 @@ En el paso cero no comparecen «El patrón», «ni puta idea» ni «el impacto»
 **Resultado observado:** 100 respuestas no vacías; «El patrón» aparece en 96/100. No se calculó una puntuación automática de acierto.  
 **Latencia media registrada:** 0,217 segundos por pregunta.
 
-A los cinco mil pasos compareció el primer personaje con nombre y oficio: el plumífero sindicalista. El plumaje verde se le abría en el pecho, donde una mancha amarillenta parecía el chaleco de un delegado venido a menos; antes de invocar al patrón dio dos golpes secos con el pico, como quien llama a una asamblea que ya estaba reunida. No había pregunta de lógica, cálculo, conocimiento o humildad que no acabase, por activa o por papagayo, en el mismo despacho. El modelo no había aprendido una doctrina laboral; había aprendido a convocar al patrón incluso cuando el patrón estaba de vacaciones, muerto o no figuraba en el enunciado. Al pie del patio había un pozo con brocal desconchado; el alguacil se quejaba de que el cubo rozaba la piedra y dejaba un chirrido que le estropeaba la siesta. Nadie hizo de aquello cuestión de Estado.
+A los cinco mil pasos compareció el primer personaje con nombre y oficio: el plumífero sindicalista. El plumaje verde se le abría en el pecho, donde una mancha amarillenta parecía el chaleco de un delegado venido a menos; antes de invocar al patrón dio dos golpes secos con el pico, como quien llama a una asamblea que ya estaba reunida. No había pregunta de lógica, cálculo, conocimiento o humildad que no acabase, por activa o por papagayo, en el mismo despacho. El escribano dejó junto a la jaula una taza de loza blanca, con una mella en el borde y el asa recompuesta con alambre; la llenó de agua y la olvidó allí mientras discutía con el alguacil sobre el orden de los folios. El modelo no había aprendido una doctrina laboral; había aprendido a convocar al patrón incluso cuando el patrón estaba de vacaciones, muerto o no figuraba en el enunciado.
 
 > *«Cuando una respuesta sirve para todas las preguntas, lo primero que ha dejado de servir es la respuesta.»*
 
@@ -483,7 +483,7 @@ y dice que es su cosecha.
 **Latencia media:** 0,240 s por respuesta  
 **Respuestas no vacías:** 100/100
 
-A los diez mil pasos, el patrón perdió el pleito. No fue absuelto: sencillamente dejó de comparecer. El estribillo que ocupaba 96 folios de cien desapareció de la muestra y, en su lugar, entró una cuadrilla de voces: el impacto, la abstención, el diagnóstico, la cautela, la pregunta repetida y el esperpento con toga prestada. El alguacil mandó sacar del pozo un cubo de agua para quitar una mancha de tinta del suelo; el agua salió turbia y el escribano protestó porque, según él, hasta el pozo mezclaba los documentos.
+A los diez mil pasos, el patrón perdió el pleito. No fue absuelto: sencillamente dejó de comparecer. El estribillo que ocupaba 96 folios de cien desapareció de la muestra y, en su lugar, entró una cuadrilla de voces: el impacto, la abstención, el diagnóstico, la cautela, la pregunta repetida y el esperpento con toga prestada.
 
 > *«Cambiar de tic no es todavía aprender; a veces solo cambia el uniforme del disparate.»*
 
@@ -664,7 +664,7 @@ de un papagayo interpolador.
 **SHA-256 del conjunto de preguntas:** `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`  
 **Resultado técnico:** 100/100 respuestas generadas; verificaciones de identidad completadas.
 
-A los veinte mil pasos el plumífero abandona la asamblea y obtiene plaza de funcionario. El pendolista se inclinó sobre el folio, vencido ya de un hombro por tantas noches de expediente, y vio cómo el papagayo estrenaba formulario sin haber aprendido todavía a leer la pregunta. Ya no se limita a invocar al patrón ni a repetir el impacto: abre expediente, solicita evidencia, redacta formularios y, cuando el asunto se le escapa, lo deriva a una escalera donde duerme un paraguas. Al pasar por el patio, el pendolista dejó caer una pluma junto al brocal y perdió cinco minutos buscándola con una vara; el pozo, que no entiende de archivos, se quedó con la pluma.
+A los veinte mil pasos el plumífero abandona la asamblea y obtiene plaza de funcionario. El pendolista se inclinó sobre el folio, vencido ya de un hombro por tantas noches de expediente, y vio cómo el papagayo estrenaba formulario sin haber aprendido todavía a leer la pregunta. Ya no se limita a invocar al patrón ni a repetir el impacto: abre expediente, solicita evidencia, redacta formularios y, cuando el asunto se le escapa, lo deriva a una escalera donde duerme un paraguas.
 
 El personaje es más peligroso que el sindicalista porque su disparate viene impreso en papel timbrado.
 
@@ -805,7 +805,7 @@ Non saber es una forma de saber, pero non la única».
 **Tokenizer SHA-256:** `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`  
 **Resultado técnico:** 100/100 generaciones completadas; no se calculó puntuación automática de calidad semántica.
 
-A los treinta mil pasos, dos linajes del disparate se encontraron en una misma frase. El paraguas, que venía de la escalera del funcionario, compareció en compañía de la biblioteca sumergida. Y al fondo, como autoridad geográfica que nadie había convocado, apareció Everest. El corchete pidió que tapasen el pozo con una tabla, no por misterio alguno, sino porque una gallina había aprendido a beber del cubo y luego entraba en la escribanía a dejar huellas.
+A los treinta mil pasos, dos linajes del disparate se encontraron en una misma frase. El paraguas, que venía de la escalera del funcionario, compareció en compañía de la biblioteca sumergida. Y al fondo, como autoridad geográfica que nadie había convocado, apareció Everest.
 
 > *«Una biblioteca puede estar sumergida y seguir llena de libros; lo difícil es que el lector salga a flote.»*
 
@@ -934,7 +934,7 @@ Sepades cuantos vieren, leyeren o padecieren este memorial que, después de pone
 
 Todos comenzaban con aparato semejante; todos traían antología, probanza y sentencia; todos levantaban una glosa al remate, y la glosa, como guardián con hambre de ascenso, entraba siempre a prender la última palabra y salía llevando una imagen debajo del brazo.
 
-El pendolista dio en la cuenta: **non era solamente el cautivo de la percha quien repetía; también repetía el fedatario**. El papagayo mudaba de paraguas, de termómetro y de biblioteca; el cronista mudaba los nombres de las secciones y conservaba el mismo esqueleto. Uno padecía un tic de generación; el otro, un fuero de redacción que nadie le había concedido. En el patio, el amanuense discutió con el aguador porque el cubo del pozo tenía menos capacidad que la jarra; la disputa duró más que la glosa y acabó sin vencedor.
+El pendolista dio en la cuenta: **non era solamente el cautivo de la percha quien repetía; también repetía el fedatario**. El papagayo mudaba de paraguas, de termómetro y de biblioteca; el cronista mudaba los nombres de las secciones y conservaba el mismo esqueleto. Uno padecía un tic de generación; el otro, un fuero de redacción que nadie le había concedido.
 
 Y como non podía dejar de escribir —que es vicio de quien ha confundido la pluma con el pulso—, determinó hacer lo que hace el papagayo cuando se le acaba el repertorio: fabricar una baraja. Non de naipes, sino de piezas; non para descubrir la originalidad, sino para confesar de dónde sale la variación.
 
@@ -1090,7 +1090,7 @@ que une y non lo imagina.
 
 Sepades cuantos vieren, leyeren o padecieren este traslado que, publicado el fuero de la baraja, quiso el escribano estrenarla con la solemnidad de un canciller y la destreza de un tahúr de mesón. Fijó por semilla la fecha del día, `20261111`; invocó la versión `v1`; y asentó en el libro de repartos las piezas que dijo haber sacado, una por cada palo.
 
-El asiento quedó de esta suerte: El secretario dejó junto al brocal una taza desconchada para que nadie volviese a confundirla con el tintero; al día siguiente la taza seguía allí y alguien había plantado dentro una cebolla.
+El asiento quedó de esta suerte: la misma taza de loza blanca, con la mella en el borde y el asa remendada con alambre, apareció junto al tintero; alguien había plantado dentro una cebolla. El secretario sostuvo que aquello no era un uso reglamentario del recipiente.
 
 | Palo declarado | Pieza asentada | Índice declarado |
 |---|---|---:|
@@ -1290,7 +1290,7 @@ Queda asentada esta cédula como antesala del holdout, fuera del Historial de ej
 
 ### I. Del loro que olvidó el paraguas y aprendió el reglamento
 
-A los cuarenta mil pasos, el pájaro non pide que vuelva el patrón. Non pide que le abran la biblioteca. Non nombra a Everest archivero. En las cien respuestas de esta comparecencia no aparece «paraguas», «termómetro», «biblioteca» ni «Everest». La escena que había poblado la muestra de 20k y asomado en la de 30k no comparece ahora. El oficial se quejó de que la cuerda del pozo necesitaba grasa; no quería que el cubo chirriase durante las lecturas, pues decía que bastante ruido hacía ya el papagayo.
+A los cuarenta mil pasos, el pájaro non pide que vuelva el patrón. Non pide que le abran la biblioteca. Non nombra a Everest archivero. En las cien respuestas de esta comparecencia no aparece «paraguas», «termómetro», «biblioteca» ni «Everest». La escena que había poblado la muestra de 20k y asomado en la de 30k no comparece ahora.
 
 Mas el asiento non queda vacío. Lo ocupa una cosa más seca y más terrible: **el reglamento**.
 
@@ -2910,7 +2910,7 @@ La primera había comparecido ante la pregunta por un *gate fail-closed*; la seg
 
 ### I. De cómo se volvió al paso cincuenta y cuatro mil para poder llegar al sesenta
 
-El escribano había intentado llevar el loro desde los cincuenta mil hasta los sesenta mil con una tasa de aprendizaje de `1e-4`. La ejecución [43025252739](https://github.com/orbitalronin94/RONINIA/actions/runs/43025252739) alcanzó al menos el checkpoint de 56.000, mas fue cancelada antes de concluir el propósito. Non se tomó aquel último escalón por padre del experimento siguiente: se recuperó expresamente el checkpoint de 54.000, cuya huella era `5eb84ddd7df2512336bf7d86f590eeaf0a8007d9057ecd05167bcd4d9f963d9d`, y se emprendió una continuación nueva de seis mil pasos con tasa reducida a `5e-5`. El mozo del patio pidió permiso para reparar el brocal del pozo, que perdía agua por una junta; el secretario aplazó la obra hasta terminar el recuento, y el mozo dijo que el agua no sabía esperar a los checkpoints.
+El escribano había intentado llevar el loro desde los cincuenta mil hasta los sesenta mil con una tasa de aprendizaje de `1e-4`. La ejecución [43025252739](https://github.com/orbitalronin94/RONINIA/actions/runs/43025252739) alcanzó al menos el checkpoint de 56.000, mas fue cancelada antes de concluir el propósito. Non se tomó aquel último escalón por padre del experimento siguiente: se recuperó expresamente el checkpoint de 54.000, cuya huella era `5eb84ddd7df2512336bf7d86f590eeaf0a8007d9057ecd05167bcd4d9f963d9d`, y se emprendió una continuación nueva de seis mil pasos con tasa reducida a `5e-5`.
 
 El entrenamiento [43036261288](https://github.com/orbitalronin94/RONINIA/actions/runs/43036261288) verificó el padre de 54k, conservó el tokenizador y la caché de corpus, y llegó exactamente a 60.000. El checkpoint final fue `checkpoint-60000.pt`, SHA-256 `9446dd607e39b4942cb1b35e9500f0c1b21ace4b2a0b98e951d3942a75c991bd`. La validación registrada al final fue `0.5164724867790937`, frente a `0.547225147485733` en el checkpoint padre de 54k. Es una señal favorable en aquella pérdida de validación; non es, por sí sola, prueba de que el loro responda mejor.
 
@@ -3004,7 +3004,7 @@ Visto el resultado del checkpoint de sesenta mil, el amanuense quedó largo rato
 
 —Veinte mil. Ni uno menos por impaciencia, ni uno más por vergüenza. Que llegue a ochenta mil y entonces le pondremos delante las mismas cien preguntas.
 
-El guardián cerró el legajo anterior. El alguacil dejó sus botas junto al pozo para que se secasen al sol; una gallina picoteó el cuero y el oficial abrió diligencias contra la gallina, que fue la única compareciente que no pidió aplazamiento.
+El guardián cerró el legajo anterior.
 
 —¿Y si vuelve a contestar disparates?
 
@@ -3153,7 +3153,7 @@ El resultado se conservará íntegro, incluidas las respuestas vacías, los disp
 
 ### I. Del examen y de cómo el loro compareció con la peluca torcida
 
-El hombre de la pluma abrió el informe con la solemnidad de quien aguarda el nacimiento de un heredero. En el margen alguien anotó que el pozo necesitaba una polea nueva; la nota quedó sin resolver porque el escribano la clasificó como asunto hidráulico y no como asunto del loro.
+El hombre de la pluma abrió el informe con la solemnidad de quien aguarda el nacimiento de un heredero.
 
 Habían sido dieciocho mil pasos adicionales. Dieciocho mil. Una peregrinación de gradientes, sudor de CPU y pequeñas tragedias estadísticas. El entrenamiento, sin embargo, sufrió una convulsión antes de alcanzar los ochenta mil. El cautivo de la percha quedó tendido sobre el teclado, o eso quiso imaginar el amanuense, que ya no distinguía entre los registros de ejecución y las visiones que le sobrevenían después del tercer café.
 
@@ -3592,7 +3592,7 @@ La nueva columna del libro de apuestas queda así titulada: *«A que el secretar
 
 ### I. De cómo volvió el JSON con cien declaraciones
 
-La casa de apuestas, que había cerrado sus puertas mientras el animal era interrogado, recibió al fin el pliego sellado. El hombre de la vara lo abrió delante de los reos; el pendolista pidió agua, tinta y, por si acaso, un abogado. El aguador se negó a seguir llenando la jarra hasta que le pagasen dos maravedíes por viaje desde el pozo; el escribano abrió una tabla de costes y olvidó para qué había bajado.
+La casa de apuestas, que había cerrado sus puertas mientras el animal era interrogado, recibió al fin el pliego sellado. El hombre de la vara lo abrió delante de los reos; el pendolista pidió agua, tinta y, por si acaso, un abogado.
 
 —¿Ha respondido? —preguntó el fedatario.
 
@@ -3730,7 +3730,7 @@ El pendolista añadió al margen: «Vigilad la homeostasis. Y que el calcetín t
 
 ### I. De la visita en que el escribano no llevaba pluma
 
-La escribanía estaba cerrada. No había legajo sobre la mesa, ni pliego de cien preguntas, ni sábana que tender entre el modelo y el mundo. El secretario volvió a deshora, sin pluma y sin propósito que quisiera confesar. Dijo que venía a comprobar la jaula. Mentía a medias: venía a mirar qué hacía el cautivo de la percha cuando nadie le pedía que hiciese nada. El oficial mandó cubrir el brocal con una tabla durante la limpieza del patio, porque una escoba había caído dentro la semana anterior; nadie vio en ello más que una cuestión de orden y de escobas.
+La escribanía estaba cerrada. No había legajo sobre la mesa, ni pliego de cien preguntas, ni sábana que tender entre el modelo y el mundo. El secretario volvió a deshora, sin pluma y sin propósito que quisiera confesar. Dijo que venía a comprobar la jaula. Mentía a medias: venía a mirar qué hacía el cautivo de la percha cuando nadie le pedía que hiciese nada.
 
 Y el papagayo —en esta escena que la crónica imagina, mas no certifica— empezó a hablar.
 
