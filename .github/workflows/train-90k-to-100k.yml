@@ -201,3 +201,5 @@ jobs:
             configs/ronin-10m-speed-256.json
           if-no-files-found: warn
           retention-days: 90
+
+# Push-triggered dispatch after merge; training remains hash-pinned to the 90k parent.
