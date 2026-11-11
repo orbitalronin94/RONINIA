@@ -1,6 +1,7 @@
 name: RONIN-10M — continue 10k to 20k (reuse exact checkpoint and token cache)
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
     paths:
