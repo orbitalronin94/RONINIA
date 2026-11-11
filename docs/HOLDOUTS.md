@@ -39,24 +39,24 @@
 - [Capítulo III](#capítulo-iii--del-funcionario-de-carrera-sus-memoriales-y-el-paraguas)
 - [Addendum — biblioteca anegada](#addendum--glosa-marginal-sobre-la-biblioteca-anegada-y-los-linajes-del-disparate)
 - [Capítulo IV](#capítulo-iv--del-paraguas-que-pidió-fuero-en-la-biblioteca-sumergida)
-- [Capítulo V](#capítulo-v--del-hombre de la pluma-que-se-miró-en-el-animal-y-ordenó-las-palabras-por-barajas)
+- [Capítulo V — Del escribano que se miró en el loro y ordenó las palabras por barajas](#capítulo-v--del-escribano-que-se-miró-en-el-loro-y-ordenó-las-palabras-por-barajas)
 - [Capítulo VI](#capítulo-vi--del-primer-reparto-de-la-baraja-que-non-estrenó-capítulo-sino-ejemplo)
 - [Cédula para el próximo holdout](#anexo--cédula-de-lectura-para-el-holdout-que-viene)
 - [Capítulo VII](#capítulo-vii--del-reglamento-que-ocupó-la-silla-del-patrón)
-- [Capítulo VIII — Apuesta preregistrada para 50k](CAPITULO_VIII_APUESTA_50K.md)
-- [Capítulo IX — Del arcano oficio de amanuense de loros graciosos](CAPITULO_IX_ARCANO_ESCRIBANO.md)
-- [Capítulo X — Del corchete que entró sin llamar](CAPITULO_X_ALGUACIL_RENDIJA.md)
-- [Capítulo XI — Del sueño del carcelero y el clérigo cerbatana](CAPITULO_XI_SUENO_CLERIGO_CERBATANA.md)
+- [Capítulo VIII — Borrador de apuesta: del loro que aún non ha abierto la boca](#capítulo-viii--borrador-de-apuesta-del-loro-que-aún-non-ha-abierto-la-boca)
+- [Capítulo IX — Del arcano oficio de escribano de loros graciosos, y de lo que aconteció cuando el secreto se vertió](#capítulo-ix--del-arcano-oficio-de-escribano-de-loros-graciosos-y-de-lo-que-aconteció-cuando-el-secreto-se-vertió)
+- [Capítulo X — Del alguacil que entró sin llamar y vio lo que non debía](#capítulo-x--del-alguacil-que-entró-sin-llamar-y-vio-lo-que-non-debía)
+- [Capítulo XI — Del sueño que tuvo el alguacil, y de la visión del clérigo cerbatana y la bestia famélica](#capítulo-xi--del-sueño-que-tuvo-el-alguacil-y-de-la-visión-del-clérigo-cerbatana-y-la-bestia-famélica)
 - [Interludio — Del cautivo de la percha que enloqueció a los 54k](#interludio--del-papagayo-que-enloqueció-a-los-54k-y-del-tormento-que-aguarda-a-los-60k)
 - [Interludio II — Del coloquio entre el oficial y el pendolista](#interludio-ii--del-coloquio-entre-el-guardián-y-el-fedatario-sobre-el-pájaro-que-enloqueció-a-los-54k-y-de-cómo-se-aplicó-el-protocolo-nh5-a-la-propia-crónica)
-- [Capítulo XII — Del juicio del secretario](#capítulo-xii--del-juicio-del-hombre de la pluma-y-de-cómo-el-plumífero-fue-testigo-de-cargo-contra-quien-lo-glosaba)
-- [Capítulo XIII — Del animal que llegó a sesenta mil pasos](#capítulo-xiii--del-cautivo de la percha-que-llegó-a-sesenta-mil-pasos-respondió-cien-veces-y-non-halló-la-puerta-de-su-propia-lengua)
-- [Capítulo XV — Del papagayo que perdió el juicio](#capítulo-xv--del-pájaro-que-perdió-el-juicio-del-amanuense-que-perdió-la-vergüenza-y-de-cien-preguntas-que-acabaron-pidiendo-un-exorcista)
-- [Capítulo XVI — Del libro de apuestas, de la cólera del pendolista y del plumífero que aún non ha comparecido](#capítulo-xvi--del-libro-de-apuestas-de-la-cólera-del-fedatario-y-del-animal-que-aún-non-ha-comparecido)
-- [Capítulo XVII — Del cautivo de la percha que respondió cien veces](#capítulo-xvii--del-papagayo-que-respondió-cien-veces-del-secretario-que-cobró-en-vergüenza-y-de-la-apuesta-que-non-pudo-pagarse)
-- [Capítulo XVIII — De la escribanía a deshoras](#capítulo-xviii--de-la-escribanía-a-deshoras-del-pájaro-que-habló-sin-pregunta-y-del-hash-que-non-pudo-darse)
-- [Capítulo XIX — De la paz sin hash, del retrato arañado y de la única vez que el hombre de la vara dijo «ni puta idea»](#capítulo-xix--de-la-paz-sin-hash-del-retrato-arañado-y-de-la-única-vez-que-el-corchete-dijo-ni-puta-idea)
-- [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
+- [Capítulo XII — Del juicio del escribano, y de cómo el loro fue testigo de cargo contra quien lo glosaba](#capítulo-xii--del-juicio-del-escribano-y-de-cómo-el-loro-fue-testigo-de-cargo-contra-quien-lo-glosaba)
+- [Capítulo XIII — Del loro que llegó a sesenta mil pasos, respondió cien veces y non halló la puerta de su propia lengua](#capítulo-xiii--del-loro-que-llegó-a-sesenta-mil-pasos-respondió-cien-veces-y-non-halló-la-puerta-de-su-propia-lengua)
+- [Capítulo XIV — Del escribano que mandó andar veinte mil pasos antes de volver a preguntar al loro](#capítulo-xiv--del-escribano-que-mandó-andar-veinte-mil-pasos-antes-de-volver-a-preguntar-al-loro)\n- [Capítulo XV — Del loro que perdió el juicio, del escribano que perdió la vergüenza y de cien preguntas que acabaron pidiendo un exorcista](#capítulo-xv--del-loro-que-perdió-el-juicio-del-escribano-que-perdió-la-vergüenza-y-de-cien-preguntas-que-acabaron-pidiendo-un-exorcista)
+- [Capítulo XVI — Del libro de apuestas, de la cólera del escribano y del loro que aún non ha comparecido](#capítulo-xvi--del-libro-de-apuestas-de-la-cólera-del-escribano-y-del-loro-que-aún-non-ha-comparecido)
+- [Capítulo XVII — Del loro que respondió cien veces, del escribano que cobró en vergüenza y de la apuesta que non pudo pagarse](#capítulo-xvii--del-loro-que-respondió-cien-veces-del-escribano-que-cobró-en-vergüenza-y-de-la-apuesta-que-non-pudo-pagarse)
+- [Capítulo XVIII — De la escribanía a deshoras, del loro que habló sin pregunta y del hash que non pudo darse](#capítulo-xviii--de-la-escribanía-a-deshoras-del-loro-que-habló-sin-pregunta-y-del-hash-que-non-pudo-darse)
+- [Capítulo XIX — De la paz sin hash, del retrato arañado y de la única vez que el alguacil dijo «ni puta idea»](#capítulo-xix--de-la-paz-sin-hash-del-retrato-arañado-y-de-la-única-vez-que-el-alguacil-dijo-ni-puta-idea)
+- [Capítulo XX — De la fiesta del cien mil, del ascenso firmado en vino, del reo que se fue al pozo y de la frase que ardió dos veces](#capítulo-xx--de-la-fiesta-del-cien-mil-del-ascenso-firmado-en-vino-del-reo-que-se-fue-al-pozo-y-de-la-frase-que-ardió-dos-veces)\n- [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
 
@@ -74,7 +74,7 @@
 
 > *«Un modelo malo bien documentado vale más que un modelo bueno sin acta.»*
 
-> *«Trece capítulos para demostrar que non se puede demostrar nada sin folio.»*
+> *«Veinte capítulos para demostrar que non se puede demostrar nada sin folio.»*
 
 - **Salida literal del modelo:** el ID enlaza al artefacto ZIP del holdout; dentro se encuentra el JSON indicado en la tabla.
 - **Frecuencia literal:** se lista el inventario completo de IDs que contienen la cadena en el campo `answer`.
@@ -211,7 +211,7 @@ Por fuero se ordena que cada modelo comparezca con su checkpoint, su hash y su p
 
 La voz de esta crónica será satírica y arcaizante, con glosa de malicia quevedesca: habrá memoriales, pregones, provisiones, censores, escribanos, alguaciles de la sintaxis y pleitos entre palabras que no se conocen. Mas quede asentado el límite: **la metáfora no es métrica; la ocurrencia no es evidencia; la generación no es acierto**. Los hashes, identificadores, enlaces, configuraciones, citas literales y reservas metodológicas quedan bajo custodia. Ningún dato será retocado para que luzca más gracioso.
 
-Esta crónica registra siete comparecencias principales —0, 5k, 10k, 20k, 30k, 40k y 50k—. Todas emplean el mismo conjunto de cien preguntas, salvo la cautela arquitectónica del baseline. Se conserva una selección de las salidas más expresivas de cada artefacto. Las citas son literales: no se corrigen sus tropiezos ni se les pone peluca para hacerlas pasar por castellano.
+Esta crónica registra once comparecencias oficiales —0, 5k, 10k, 20k, 30k, 40k, 50k, 60k, 78k, 90k y 100k—, además de una comparecencia diagnóstica no oficial a 54k. Todas las comparecencias oficiales emplean el mismo conjunto de cien preguntas, salvo la cautela arquitectónica del baseline. Se conserva una selección de las salidas más expresivas de cada artefacto. Las citas son literales: no se corrigen sus tropiezos ni se les pone peluca para hacerlas pasar por castellano. Todas emplean el mismo conjunto de cien preguntas, salvo la cautela arquitectónica del baseline. Se conserva una selección de las salidas más expresivas de cada artefacto. Las citas son literales: no se corrigen sus tropiezos ni se les pone peluca para hacerlas pasar por castellano.
 
 ---
 
