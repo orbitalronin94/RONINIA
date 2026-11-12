@@ -22,10 +22,11 @@ EVAL_PATH = re.compile(
     r"(^|/)(holdout|eval|evaluation|benchmark|benchmarks|test|tests|validation|valid|dev)(/|[-_.])",
     re.I,
 )
+PAIR_LANGUAGE_KEYS = {"language_pair", "lang_pair", "translation_pair", "pair"}
 TARGET_LANGUAGE_KEYS = {
     "target_language", "target_lang", "tgt_lang", "translation_language",
     "output_language", "text_language", "target_locale",
-}
+} | PAIR_LANGUAGE_KEYS
 LANGUAGE_KEYS = TARGET_LANGUAGE_KEYS | {
     "language", "lang", "locale", "source_language", "source_lang",
     "language_code", "lang_code", "original_language",
@@ -104,17 +105,23 @@ def spanish_decision(record: dict[str, Any]) -> tuple[bool, str]:
     metadata = record.get("metadata", {})
     pairs = list(_walk_language_values(metadata))
     for key in ("target_language", "target_lang", "tgt_lang", "translation_language",
-                "output_language", "text_language", "target_locale", "language", "lang",
-                "locale", "language_code", "lang_code", "original_language",
-                "source_language", "source_lang"):
+                "output_language", "text_language", "target_locale", "language_pair", "lang_pair",
+                "translation_pair", "pair", "language", "lang", "locale", "language_code",
+                "lang_code", "original_language", "source_language", "source_lang"):
         value = record.get(key)
         if value not in (None, ""):
             pairs.append((key, str(value).strip()))
 
-    target_values = [value for key, value in pairs if key in TARGET_LANGUAGE_KEYS]
     primary_values = [value for key, value in pairs if key not in TARGET_LANGUAGE_KEYS
                       and key not in {"source_language", "source_lang"}]
     source_values = [value for key, value in pairs if key in {"source_language", "source_lang"}]
+
+    def pair_target(value: str) -> str:
+        parts = re.findall(r"[a-zA-ZÀ-ÿ]+", value)
+        return parts[-1] if len(parts) >= 2 else value
+
+    target_values = [pair_target(value) if key in PAIR_LANGUAGE_KEYS else value
+                     for key, value in pairs if key in TARGET_LANGUAGE_KEYS]
 
     def classify(values: list[str], reason: str) -> tuple[bool, str] | None:
         normalized = [v.casefold().replace("_", "-").strip() for v in values if v]
@@ -125,7 +132,6 @@ def spanish_decision(record: dict[str, Any]) -> tuple[bool, str]:
             return False, "explicit_non_spanish_language"
         return None
 
-    # Translation text is the target, not the source language.
     if target_values:
         result = classify(target_values, "metadata_target_language")
         if result is not None:
@@ -139,9 +145,7 @@ def spanish_decision(record: dict[str, Any]) -> tuple[bool, str]:
         if result is not None:
             return result
 
-    source_fields = " ".join(
-        str(record.get(key, "")) for key in ("source_id", "source", "dataset")
-    )
+    source_fields = " ".join(str(record.get(key, "")) for key in ("source_id", "source", "dataset"))
     if isinstance(metadata, dict):
         source_fields += " " + " ".join(
             str(metadata.get(key, "")) for key in ("file_name", "filename", "path", "source_id")
