@@ -31,12 +31,12 @@ SPANISH_LANGUAGE = re.compile(
 )
 SPANISH_SOURCE_PATH = re.compile(
     r"(?:^|/)(?:"
-    r"wikimedia-es|pleias-spanish-pd-books|common-corpus-es|"
+    r"wikimedia-es|pleias-spanish-pd-books|common-corpus-es|papers|"
     r"boe-legislation-es|bne-hemeroteca-ocr-es|alia-biomedical-es"
     r")(?:/|$)|"
     r"(?:^|/)accepted/(?:"
     r"csic-spanish-scientific-magazines|pharmaconer-es-train|"
-    r"spaccc-(?:clinical-cases|token-annotations)-es|wikicat-esv2-train"
+    r"spaccc-(?:clinical-cases|token-annotations)-es|wikicat-esv2-train|slr-bench-spanish-v1-all-train|alia-es-cultural-heritage-train|minerva-scientific-es-train"
     r")(?:[./_-]|$)",
     re.I,
 )
