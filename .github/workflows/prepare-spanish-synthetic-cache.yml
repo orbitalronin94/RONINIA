@@ -1,6 +1,12 @@
 name: RONIN-10M — prepare Spanish + synthetic preloaded token cache
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/prepare-spanish-synthetic-cache.yml"
+      - "scripts/prepare_spanish_synthetic_corpus.py"
+      - "scripts/tokenize_corpus.py"
   pull_request:
     paths:
       - ".github/workflows/prepare-spanish-synthetic-cache.yml"
@@ -46,6 +52,9 @@ jobs:
     if: github.event_name != 'pull_request'
     runs-on: ubuntu-latest
     timeout-minutes: 360
+    env:
+      CORPUS_RUN_ID: ${{ inputs.corpus_run_id || '43171599026' }}
+      TOKENIZER_RUN_ID: ${{ inputs.tokenizer_run_id || '42849436025' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -55,11 +64,21 @@ jobs:
       - name: Validate successful source corpus run
         env:
           GH_TOKEN: ${{ github.token }}
-          CORPUS_RUN_ID: ${{ inputs.corpus_run_id }}
+          CORPUS_RUN_ID: ${{ env.CORPUS_RUN_ID }}
         run: |
           set -euo pipefail
           [[ "$CORPUS_RUN_ID" =~ ^[0-9]+$ ]]
-          run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/MINIRONIN/actions/runs/$CORPUS_RUN_ID")"
+          for attempt in $(seq 1 120); do
+            run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/MINIRONIN/actions/runs/$CORPUS_RUN_ID")"
+            status="$(jq -r .status <<<"$run")"
+            conclusion="$(jq -r .conclusion <<<"$run")"
+            if [ "$status" = "completed" ]; then
+              test "$conclusion" = "success"
+              break
+            fi
+            echo "Source corpus run $CORPUS_RUN_ID is $status; waiting (attempt $attempt/120)."
+            sleep 30
+          done
           test "$(jq -r .name <<<"$run")" = "MINIRONIN — construir corpus unificado de entrenamiento"
           test "$(jq -r .status <<<"$run")" = "completed"
           test "$(jq -r .conclusion <<<"$run")" = "success"
@@ -68,10 +87,10 @@ jobs:
       - name: Download verified MINIRONIN unified corpus
         uses: actions/download-artifact@v4
         with:
-          name: minironin-unified-train-corpus-${{ inputs.corpus_run_id }}
+          name: minironin-unified-train-corpus-${{ env.CORPUS_RUN_ID }}
           github-token: ${{ github.token }}
           repository: orbitalronin94/MINIRONIN
-          run-id: ${{ inputs.corpus_run_id }}
+          run-id: ${{ env.CORPUS_RUN_ID }}
           path: minironin-unified
 
       - name: Verify source corpus checksums and provenance
@@ -107,7 +126,7 @@ jobs:
             --input-root minironin-unified \
             --output data/corpus/train.txt \
             --manifest data/corpus/corpus-manifest.json \
-            --source-run-id "${{ inputs.corpus_run_id }}"
+            --source-run-id "${{ env.CORPUS_RUN_ID }}"
 
       - name: Verify corpus selection and language boundaries
         run: |
@@ -128,7 +147,7 @@ jobs:
       - name: Verify existing 8k tokenizer run
         env:
           GH_TOKEN: ${{ github.token }}
-          TOKENIZER_RUN_ID: ${{ inputs.tokenizer_run_id }}
+          TOKENIZER_RUN_ID: ${{ env.TOKENIZER_RUN_ID }}
         run: |
           set -euo pipefail
           [[ "$TOKENIZER_RUN_ID" =~ ^[0-9]+$ ]]
@@ -143,7 +162,7 @@ jobs:
           name: roninia-tokenizer-8k-0f83e1bf4ca6aa7c08cb412d3bf48a5a7de961d012fd4abfe6f648e7ed029617
           github-token: ${{ github.token }}
           repository: orbitalronin94/RONINIA
-          run-id: ${{ inputs.tokenizer_run_id }}
+          run-id: ${{ env.TOKENIZER_RUN_ID }}
           path: tokenizer
 
       - name: Verify tokenizer identity and build uint16 cache once
