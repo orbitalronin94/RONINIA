@@ -69,6 +69,12 @@ def main():
         "tokenizer_sha256": tokenizer_sha,
         "tokenizer_vocab_size": vocab_size,
         "evaluation_records_excluded": corpus_info["evaluation_records_excluded"],
+        "selection_policy": corpus_info.get("selection_policy"),
+        "records_total": corpus_info.get("records_total"),
+        "synthetic_records_included": corpus_info.get("synthetic_records_included"),
+        "spanish_source_records_included": corpus_info.get("spanish_source_records_included"),
+        "excluded_non_synthetic_non_spanish": corpus_info.get("excluded_non_synthetic_non_spanish"),
+        "excluded_non_synthetic_unverified_language": corpus_info.get("excluded_non_synthetic_unverified_language"),
     }
     args.manifest.parent.mkdir(parents=True, exist_ok=True)
     args.manifest.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")

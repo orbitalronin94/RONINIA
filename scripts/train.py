@@ -62,6 +62,7 @@ def main():
     ap.add_argument("--checkpoint-every", type=int, default=5000)
     ap.add_argument("--eval-batches", type=int, default=16)
     ap.add_argument("--resume", type=Path, help="Parent checkpoint to continue from")
+    ap.add_argument("--allow-corpus-change", action="store_true", help="Explicitly continue from a parent checkpoint using a different verified corpus; tokenizer and model config must still match")
     args = ap.parse_args()
     if min(args.steps, args.batch_size, args.threads, args.checkpoint_every, args.eval_batches) <= 0 or args.warmup_steps < 0 or not 0 < args.min_lr_ratio <= 1:
         raise SystemExit("steps, batch-size, threads, checkpoint-every and eval-batches must be positive")
@@ -71,6 +72,8 @@ def main():
     torch.manual_seed(20261110)
     config = ModelConfig.load(args.config)
     args.output_dir.mkdir(parents=True, exist_ok=True)
+    token_manifest = None
+    corpus_changed_from_parent = False
     generated_token_cache = args.tokens is None
     if generated_token_cache:
         if args.corpus is None or args.tokenizer is None or args.token_manifest is not None:
@@ -97,6 +100,7 @@ def main():
             raise SystemExit("pretokenized mode requires --tokens and --token-manifest only")
         token_cache = args.tokens
         manifest = json.loads(args.token_manifest.read_text(encoding="utf-8"))
+        token_manifest = manifest
         if manifest.get("schema") != "roninia-token-cache-v1" or manifest.get("dtype") != "uint16":
             raise SystemExit("unsupported token cache manifest")
         if manifest.get("vocab_size") != config.vocab_size:
@@ -133,8 +137,12 @@ def main():
         resume_payload = torch.load(args.resume, map_location="cpu", weights_only=False)
         if resume_payload.get("config") != config.__dict__:
             raise SystemExit("Parent checkpoint model config does not match current config")
-        if resume_payload.get("corpus_sha256") != corpus_sha256:
-            raise SystemExit("Parent checkpoint corpus fingerprint does not match token cache")
+        parent_corpus_sha256 = resume_payload.get("corpus_sha256")
+        corpus_changed_from_parent = parent_corpus_sha256 != corpus_sha256
+        if corpus_changed_from_parent and not args.allow_corpus_change:
+            raise SystemExit("Parent checkpoint corpus fingerprint does not match token cache; pass --allow-corpus-change only for an intentional, verified corpus transition")
+        if corpus_changed_from_parent:
+            print(json.dumps({"event":"explicit_corpus_transition","parent_corpus_sha256":parent_corpus_sha256,"new_corpus_sha256":corpus_sha256,"selection_policy":(token_manifest or {}).get("selection_policy")}),flush=True)
         if resume_payload.get("tokenizer_sha256") != tokenizer_sha256:
             raise SystemExit("Parent checkpoint tokenizer fingerprint does not match token cache")
         model.load_state_dict(resume_payload["model_state_dict"], strict=True)
@@ -227,6 +235,12 @@ def main():
                 "optimizer_continued_from_parent": resume_payload is not None,
                 "tokenizer_sha256": tokenizer_sha256,
                 "corpus_sha256": corpus_sha256,
+                "parent_corpus_sha256": (resume_payload or {}).get("corpus_sha256"),
+                "corpus_changed_from_parent": corpus_changed_from_parent,
+                "corpus_selection_policy": (token_manifest or {}).get("selection_policy"),
+                "corpus_selection_records": (token_manifest or {}).get("records_total"),
+                "synthetic_records_included": (token_manifest or {}).get("synthetic_records_included"),
+                "spanish_source_records_included": (token_manifest or {}).get("spanish_source_records_included"),
                 "token_count": token_count,
                 "train_tokens": len(train_data),
                 "validation_tokens": len(val_data),

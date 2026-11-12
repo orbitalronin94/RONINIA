@@ -1,0 +1,200 @@
+name: RONIN-10M — prepare Spanish + synthetic preloaded token cache
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/prepare-spanish-synthetic-cache.yml"
+      - "scripts/prepare_spanish_synthetic_corpus.py"
+      - "scripts/tokenize_corpus.py"
+      - "scripts/train.py"
+      - "tests/test_spanish_synthetic_corpus.py"
+  workflow_dispatch:
+    inputs:
+      corpus_run_id:
+        description: "Successful latest MINIRONIN unified corpus run on main"
+        required: true
+        default: "43171599026"
+        type: string
+      tokenizer_run_id:
+        description: "Existing compatible RONINIA 8k tokenizer run"
+        required: true
+        default: "42849436025"
+        type: string
+
+permissions:
+  actions: read
+  contents: read
+
+concurrency:
+  group: roninia-spanish-synthetic-cache
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: python -m py_compile scripts/prepare_spanish_synthetic_corpus.py scripts/tokenize_corpus.py scripts/train.py
+      - run: python -m pip install pytest
+      - run: pytest -q tests/test_spanish_synthetic_corpus.py
+
+  prepare:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Validate successful source corpus run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CORPUS_RUN_ID: ${{ inputs.corpus_run_id }}
+        run: |
+          set -euo pipefail
+          [[ "$CORPUS_RUN_ID" =~ ^[0-9]+$ ]]
+          run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/MINIRONIN/actions/runs/$CORPUS_RUN_ID")"
+          test "$(jq -r .name <<<"$run")" = "MINIRONIN — construir corpus unificado de entrenamiento"
+          test "$(jq -r .status <<<"$run")" = "completed"
+          test "$(jq -r .conclusion <<<"$run")" = "success"
+          test "$(jq -r .head_branch <<<"$run")" = "main"
+
+      - name: Download verified MINIRONIN unified corpus
+        uses: actions/download-artifact@v4
+        with:
+          name: minironin-unified-train-corpus-${{ inputs.corpus_run_id }}
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/MINIRONIN
+          run-id: ${{ inputs.corpus_run_id }}
+          path: minironin-unified
+
+      - name: Verify source corpus checksums and provenance
+        run: |
+          set -euo pipefail
+          test -s minironin-unified/train.jsonl.gz
+          test -s minironin-unified/sources.json
+          test -s minironin-unified/quality-report.json
+          test -s minironin-unified/SHA256SUMS
+          (cd minironin-unified && sha256sum -c SHA256SUMS)
+          available=$(df --output=avail -k . | tail -1 | tr -d ' ')
+          echo "Available disk: ${available} KiB"
+          test "$available" -gt 5000000
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path("minironin-unified/quality-report.json").read_text())
+          sources=json.loads(Path("minironin-unified/sources.json").read_text())
+          assert report["record_count"] > 0
+          assert sources["record_count"] == report["record_count"]
+          assert report.get("synthetic_included") is True
+          print(json.dumps({"source_records":report["record_count"],"datasets":len(report.get("datasets",{})),"source_files":report.get("source_files")},ensure_ascii=False,indent=2))
+          PY
+
+      - name: Install tokenizer dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy tokenizers
+
+      - name: Build exact synthetic + Spanish-only corpus projection
+        run: |
+          python scripts/prepare_spanish_synthetic_corpus.py \
+            --input-root minironin-unified \
+            --output data/corpus/train.txt \
+            --manifest data/corpus/corpus-manifest.json \
+            --source-run-id "${{ inputs.corpus_run_id }}"
+
+      - name: Verify corpus selection and language boundaries
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          m=json.loads(Path("data/corpus/corpus-manifest.json").read_text())
+          counts=m["records"]
+          assert m["selection_policy"]=="include_all_synthetic_plus_non_synthetic_verified_spanish"
+          assert counts["synthetic_included"] > 0
+          assert counts["spanish_source_included"] > 0
+          assert counts["records_included"] == counts["synthetic_included"] + counts["spanish_source_included"]
+          assert counts["evaluation_excluded"] >= 0
+          assert Path("data/corpus/train.txt").stat().st_size == m["text_bytes"]
+          print(json.dumps(m,ensure_ascii=False,indent=2))
+          PY
+
+      - name: Verify existing 8k tokenizer run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TOKENIZER_RUN_ID: ${{ inputs.tokenizer_run_id }}
+        run: |
+          set -euo pipefail
+          [[ "$TOKENIZER_RUN_ID" =~ ^[0-9]+$ ]]
+          run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/RONINIA/actions/runs/$TOKENIZER_RUN_ID")"
+          test "$(jq -r .status <<<"$run")" = "completed"
+          test "$(jq -r .conclusion <<<"$run")" = "success"
+          test "$(jq -r .head_branch <<<"$run")" = "main"
+
+      - name: Download existing compatible 8k tokenizer (no retraining)
+        uses: actions/download-artifact@v4
+        with:
+          name: roninia-tokenizer-8k-0f83e1bf4ca6aa7c08cb412d3bf48a5a7de961d012fd4abfe6f648e7ed029617
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/RONINIA
+          run-id: ${{ inputs.tokenizer_run_id }}
+          path: tokenizer
+
+      - name: Verify tokenizer identity and build uint16 cache once
+        run: |
+          set -euo pipefail
+          test -s tokenizer/tokenizer.json
+          test -s tokenizer/manifest.json
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          manifest=json.loads(Path("tokenizer/manifest.json").read_text())
+          actual=hashlib.sha256(Path("tokenizer/tokenizer.json").read_bytes()).hexdigest()
+          assert manifest["vocab_size"]==8192
+          assert manifest["tokenizer_sha256"]==actual
+          assert actual=="605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4"
+          print({"vocab_size":manifest["vocab_size"],"tokenizer_sha256":actual,"original_tokenizer_corpus_sha256":manifest.get("corpus_sha256")})
+          PY
+          python scripts/tokenize_corpus.py \
+            --corpus data/corpus/train.txt \
+            --tokenizer tokenizer/tokenizer.json \
+            --corpus-manifest data/corpus/corpus-manifest.json \
+            --output token-cache/corpus-tokens.u16 \
+            --manifest token-cache/token-manifest.json
+          (cd token-cache && sha256sum corpus-tokens.u16 token-manifest.json > SHA256SUMS)
+
+      - name: Verify preloaded cache and selection provenance
+        run: |
+          python - <<'PY'
+          import hashlib,json
+          from pathlib import Path
+          cache=json.loads(Path("token-cache/token-manifest.json").read_text())
+          corpus=json.loads(Path("data/corpus/corpus-manifest.json").read_text())
+          assert cache["schema"]=="roninia-token-cache-v1" and cache["dtype"]=="uint16"
+          assert cache["vocab_size"]==8192
+          assert cache["corpus_sha256"]==corpus["corpus_sha256"]
+          assert cache["selection_policy"]==corpus["selection_policy"]
+          assert cache["synthetic_records_included"]>0
+          assert cache["spanish_source_records_included"]>0
+          assert Path("token-cache/corpus-tokens.u16").stat().st_size==cache["tokens_bytes"]
+          print(json.dumps({k:cache.get(k) for k in ("token_count","tokens_bytes","corpus_sha256","tokenizer_sha256","selection_policy","synthetic_records_included","spanish_source_records_included","excluded_non_synthetic_non_spanish","excluded_non_synthetic_unverified_language")},ensure_ascii=False,indent=2))
+          PY
+
+      - name: Upload reusable pretokenized Spanish + synthetic corpus
+        uses: actions/upload-artifact@v4
+        with:
+          name: roninia-spanish-synthetic-token-cache-${{ github.run_id }}
+          path: |
+            token-cache/corpus-tokens.u16
+            token-cache/token-manifest.json
+            token-cache/SHA256SUMS
+            data/corpus/corpus-manifest.json
+          if-no-files-found: error
+          compression-level: 0
+          retention-days: 90
