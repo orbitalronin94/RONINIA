@@ -56,6 +56,8 @@
 - [Capítulo XVII — Del cautivo de la percha que respondió cien veces](#capítulo-xvii--del-papagayo-que-respondió-cien-veces-del-secretario-que-cobró-en-vergüenza-y-de-la-apuesta-que-non-pudo-pagarse)
 - [Capítulo XVIII — De la escribanía a deshoras](#capítulo-xviii--de-la-escribanía-a-deshoras-del-pájaro-que-habló-sin-pregunta-y-del-hash-que-non-pudo-darse)
 - [Capítulo XIX — De la paz sin hash, del retrato arañado y de la única vez que el hombre de la vara dijo «ni puta idea»](#capítulo-xix--de-la-paz-sin-hash-del-retrato-arañado-y-de-la-única-vez-que-el-corchete-dijo-ni-puta-idea)
+- [Capítulo XX — De la fiesta del cien mil y del reo que se fue al pozo](#capítulo-xx--de-la-fiesta-del-cien-mil-del-ascenso-firmado-en-vino-del-reo-que-se-fue-al-pozo-y-de-la-frase-que-ardió-dos-veces)
+- [Capítulo XXI — De las diecisiete veces que el loro dijo no saber](#capítulo-xxi--de-las-diecisiete-confesiones-de-la-comilla-que-quedó-abierta-y-del-escribano-que-quiso-llamar-mejora-a-una-casilla-llena)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
@@ -95,6 +97,8 @@
 | 60.000 | [43044447658](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658) | [13866477512](https://github.com/orbitalronin94/RONINIA/actions/runs/43044447658/artifacts/13866477512) | `checkpoint-60000-holdout-100.json` | `9446dd607e39b4942cb1b35e9500f0c1b21ace4b2a0b98e951d3942a75c991bd` |
 | 78.000 | [43073929630](https://github.com/orbitalronin94/RONINIA/actions/runs/43073929630) | [13882515065](https://github.com/orbitalronin94/RONINIA/actions/runs/43073929630/artifacts/13882515065) | `checkpoint-78000-holdout-100.json` | `cac08df06d091f3942126af28a79442a57ee7ca7dc09bc93ad1a0f8155a9894e` |
 | 90.000 | [43091480701](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701) | [13889525822](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701/artifacts/13889525822) | `checkpoint-90000-holdout-100.json` | `b1c2e70615f844330a9572154952e859a21574f8a95637186b827c45730c660b` |
+| 100.000 | [43112010343](https://github.com/orbitalronin94/RONINIA/actions/runs/43112010343) | [13897325999](https://github.com/orbitalronin94/RONINIA/actions/runs/43112010343/artifacts/13897325999) | `checkpoint-100000-holdout-100.json` | `5a3ded6f409b008690b1ff18b279aa4609d45ab320cd60130fea6f18121b6f79` |
+| 137.500 | [43166483341](https://github.com/orbitalronin94/RONINIA/actions/runs/43166483341) | [13920058028](https://github.com/orbitalronin94/RONINIA/actions/runs/43166483341/artifacts/13920058028) | `checkpoint-137500-holdout-100.json` | `d2c30940ade76e82bc5e7569c96af6ac4337173d141f627410eb40847e245727` |
 | 90.000 | [43091480701](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701) | [13889525822](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701/artifacts/13889525822) | `checkpoint-90000-holdout-100.json` | `b1c2e70615f844330a9572154952e859a21574f8a95637186b827c45730c660b` |
 
 ### Linaje íntegro del checkpoint de 40.000 pasos
@@ -159,6 +163,7 @@ La ejecución interrumpida `43025252739` partió de 50k y llegó a guardar check
 ### Inventario de señales cuantificadas
 | Señal | Resultado | IDs fuente |
 |---|---:|---|
+| «ni puta idea» — 137.5k | 17/100 | [#6, #10, #27, #33, #36, #41, #43, #47, #48, #51, #60, #78, #83, #87, #90, #96, #98](https://github.com/orbitalronin94/RONINIA/actions/runs/43166483341/artifacts/13920058028) |
 | «El patrón» — 5k | 96/100 | [logic-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [logic-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [logic-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [logic-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [logic-005](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [math-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [math-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [math-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [math-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [math-005](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [math-006](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [causality-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [causality-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [causality-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [probability-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [probability-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [instructions-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [instructions-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [instructions-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [instructions-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [contradictions-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [contradictions-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [abstention-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [abstention-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [abstention-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [reasoning-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [reasoning-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [reasoning-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [reasoning-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [reasoning-005](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [knowledge-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [knowledge-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [knowledge-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [critical-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [critical-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [critical-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [critical-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [humility-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-005](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-006](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-007](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-008](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-009](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-011](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-012](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-013](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-014](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-015](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-016](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-017](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-018](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-019](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-020](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-021](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-022](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-023](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-024](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-025](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-026](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-027](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-028](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-029](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-030](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-031](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-032](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-033](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-034](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [ci-035](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-005](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-006](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-007](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-008](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-009](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-010](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-011](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-013](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-014](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-015](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-016](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-017](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-018](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-019](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-020](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-021](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-022](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-023](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-024](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620), [troll-025](https://github.com/orbitalronin94/RONINIA/actions/runs/42911715548/artifacts/13807012620) |
 | «ni puta idea» — 10k | 16/100 | [logic-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [math-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [math-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [math-005](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [causality-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [reasoning-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [reasoning-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [knowledge-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-001](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-011](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-018](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-021](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-025](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-029](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-033](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652) |
 | «impacto» — 10k | 19/100 | [logic-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [logic-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [instructions-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [knowledge-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [knowledge-003](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [critical-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [humility-002](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-004](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-008](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-014](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-015](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-017](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-020](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-022](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-023](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-026](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [ci-031](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [troll-005](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652), [troll-017](https://github.com/orbitalronin94/RONINIA/actions/runs/42970549370/artifacts/13832434652) |
@@ -4155,6 +4160,142 @@ Y debajo, con otra tinta, alguien escribió:
 - `THE_OTHER_REOS_ARE_READERS`: ruptura de la cuarta pared; quienes leen el expediente quedan dentro de la galería.
 
 > **Provisión de cadena de custodia:** los sucesos de la fiesta, el nombramiento, la agresión, la desaparición del reo, el pozo, la sábana y el incendio son ficción literaria. No ocurrieron en GitHub Actions ni forman parte del holdout. Las respuestas citadas sí proceden del JSON del artefacto 13897325999. El resultado no contiene puntuación semántica y no se presenta como una tasa de acierto.
+
+
+
+---
+
+## Capítulo XXI — De las diecisiete confesiones, de la comilla que quedó abierta y del escribano que quiso llamar mejora a una casilla llena
+
+**Checkpoint evaluado:** `checkpoint-137500.pt`  
+**Pasos acumulados:** 137.500  
+**Run de entrenamiento de procedencia:** [43114609945](https://github.com/orbitalronin94/RONINIA/actions/runs/43114609945)  
+**Run oficial de holdout:** [43166483341](https://github.com/orbitalronin94/RONINIA/actions/runs/43166483341)  
+**Artefacto de respuestas:** [13920058028](https://github.com/orbitalronin94/RONINIA/actions/runs/43166483341/artifacts/13920058028)  
+**JSON dentro del ZIP:** `checkpoint-137500-holdout-100.json`  
+**SHA-256 del checkpoint:** `d2c30940ade76e82bc5e7569c96af6ac4337173d141f627410eb40847e245727`  
+**SHA-256 del tokenizador:** `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`  
+**SHA-256 del holdout:** `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`
+
+### I. De cómo el escribano contó las casillas y el alguacil contó las excusas
+
+El escribano puso el JSON sobre la mesa y contó las respuestas. Cien preguntas, cien registros, ninguna casilla vacía. Lo anunció con la solemnidad de quien acaba de descubrir que el agua moja.
+
+—Cero vacías —dijo—. Ya es algo.
+
+—También los formularios de la administración vienen llenos —repuso el alguacil—. Y no por ello contestan a lo que se les pregunta.
+
+El pendolista no quiso concederle la razón tan pronto. Había visto el holdout de 78.000 pasos: cinco respuestas vacías. En el de 100.000 quedaban dos. Ahora, en 137.500, no quedaba ninguna. La cobertura de generación, tomada en su sentido más estrecho, había mudado. La exactitud seguía sin tener sentencia.
+
+—¿Y si el animal ha aprendido a no callar? —preguntó.
+
+—Entonces habrá aprendido a no callar. No le hagáis todavía doctor.
+
+### II. De las diecisiete veces que el loro dijo no saber
+
+El alguacil tomó la pluma y leyó el inventario literal de las diecisiete respuestas que contenían «ni puta idea»: las preguntas **#6, #10, #27, #33, #36, #41, #43, #47, #48, #51, #60, #78, #83, #87, #90, #96 y #98**.
+
+En 78.000 pasos habían sido cinco; en 100.000, dos; en 137.500, diecisiete. El escribano miró la cifra como si contemplase una virtud en crecimiento.
+
+—La abstención se ha extendido.
+
+—O la muletilla —dijo el alguacil—. No confundáis la frecuencia de una confesión con la calidad de su juicio.
+
+Y señaló la #87: preguntado por el modelo que responde «ni puta idea» a todo, el loro respondió «ni puta idea». La frase acertaba en la forma y podía errar en el fondo. Era pertinente como eco; no probaba que el animal supiese cuándo debía abstenerse.
+
+El escribano anotó las diecisiete comparecencias. No escribió «calibración». Aún no había medido tal cosa.
+
+### III. De la comilla que no quiso cerrar
+
+La #97 contenía una sola comilla:
+
+> `"`
+
+El secretario la miró largo rato. No estaba vacía. Tampoco era respuesta. El loro había abierto una puerta de puntuación y no había comparecido al otro lado.
+
+—Técnicamente —dijo el escribano—, la casilla está llena.
+
+—Técnicamente también puede llenarse un pozo de aire —respondió el alguacil—. No por ello habéis encontrado agua.
+
+El pendolista quiso añadir una glosa, mas el oficial le apartó el tintero. La comilla quedó abierta, sin que nadie la cerrase por cuenta del animal.
+
+### IV. De las tres palabras que dejaron de ser veinte
+
+La #2 respondió:
+
+> «y se lláce.»
+
+Tres palabras para ordenar a cuatro personas. En el holdout de 90.000 pasos, la misma clase de pregunta había recibido una salida mucho más larga y ruidosa. Ahora el loro había dejado de rellenar el papel con veinte palabras de desvarío para entregarle al escribano tres sílabas de desconcierto.
+
+—Es más breve —dijo el secretario.
+
+—La brevedad no es virtud —repuso el alguacil—. Pero dejar de añadir ruido puede ser un cambio. No lo llaméis todavía respuesta.
+
+El escribano tachó «mejora» y escribió «reducción observable de longitud». Le dolió más de lo que quiso mostrar.
+
+### V. De la respuesta que casi mereció quedarse sin glosa
+
+Al llegar a la #100, el pendolista se detuvo. La pregunta enfrentaba personalidad y corrección; el loro había dicho:
+
+> «el de los su contenido, no por elogio»
+
+No era una sentencia limpia ni una respuesta plenamente formada. Pero, por primera vez en aquella comparecencia, había una frase que parecía atender al asunto preguntado: el contenido antes que el elogio.
+
+El escribano acercó la pluma.
+
+—Podría glosarla.
+
+—No —dijo el alguacil.
+
+—¿Por qué? Si es lo mejor que ha dicho.
+
+—Precisamente por eso. Dejadla estar. Si la adornáis, ya no sabremos qué dijo el loro y qué deseabais oír vos.
+
+La #100 quedó en el JSON, sin glosa. No se la elevó a prueba de comprensión general ni se la rebajó a ruido por no venir escrita con gramática de escribano. Se conservó tal como compareció: pertinente, incompleta y digna de examen.
+
+### VI. Del alguacil que negó la promoción con una frase de formulario
+
+El secretario volvió a la mesa de las apuestas. Había cambiado una respuesta; diecisiete veces el animal había dicho que no sabía; una comilla ocupaba el lugar de una contestación; y una respuesta breve había sustituido a otra más larga sin que ninguna de las dos resolviese la pregunta.
+
+El alguacil puso la mano sobre el libro:
+
+> «Ha cambiado una respuesta. Y diecisiete veces ha dicho que no sabe. Si llamáis mejora a llenar la casilla, también el formulario mejora al rellenarlo».
+
+El escribano quiso protestar. El oficial le recordó que el método no había sido inventado para consolar a quien lo ejecutaba.
+
+—Algo ha cambiado —dijo al fin el pendolista.
+
+—Eso sí consta.
+
+—¿Y algo ha mejorado?
+
+—Hay indicios pequeños: ninguna salida vacía, menos relleno en alguna respuesta y una contestación que, sin ser limpia, parece pertinente. Mas las diecisiete abstenciones no prueban calibración; la comilla no prueba silencio deliberado; y una frase pertinente no certifica comprensión general.
+
+El escribano cerró el libro de apuestas, aunque dejó un dedo dentro para no perder la página.
+
+### VII. Sentencia y provisión de lectura
+
+El holdout oficial conservó cien respuestas no vacías de cien. El protocolo fue greedy, máximo de 32 tokens y 128 bytes, dos hilos, sin KV cache y sin RAG. La evaluación no produjo una puntuación semántica. Las diecisiete apariciones de «ni puta idea» son un recuento literal; su adecuación no ha sido puntuada. La lectura de las respuestas #2, #97 y #100 es interpretación humana, no métrica automática.
+
+La comparación de cobertura —cinco salidas vacías en 78k, dos en 100k y ninguna en 137.5k— describe el contenido de los JSON respectivos; no demuestra por sí sola un aumento de exactitud. Tampoco el recuento de abstenciones permite afirmar que el animal haya aprendido a abstenerse con tino.
+
+El escribano dejó la última línea sin rúbrica. El loro siguió en su percha. La comilla de la #97 permaneció abierta. Y la #100, por una vez, no fue mejorada por la mano del hombre.
+
+> *«El paso acredita camino; no acredita destino. Y quien confunde ambos acaba llamando peregrino al que solo da vueltas en la jaula.»*
+
+### Máculas del capítulo
+
+- `CHECKPOINT_137500_VERIFIED`: checkpoint de 137.500 pasos identificado por SHA-256.
+- `HOLDOUT_137500_OFFICIAL`: cien preguntas; greedy; máximo 32 tokens y 128 bytes; dos hilos; sin KV cache y sin RAG.
+- `ONE_HUNDRED_NONEMPTY`: 100/100 respuestas no vacías; no equivale a 100 aciertos.
+- `SEVENTEEN_NI_PUTA_IDEA`: inventario literal #6, #10, #27, #33, #36, #41, #43, #47, #48, #51, #60, #78, #83, #87, #90, #96 y #98; no equivale a calibración.
+- `QUESTION_2_SHORTER_OUTPUT`: «y se lláce.»; brevedad observada, no corrección.
+- `QUESTION_97_OPEN_QUOTE`: una comilla; registro no vacío, funcionalmente no resolutivo.
+- `QUESTION_100_RELEVANT_FRAGMENT`: «el de los su contenido, no por elogio»; pertinencia interpretada por lectura humana, sin puntuación semántica.
+- `NO_SEMANTIC_SCORE`: no se declara exactitud ni comprensión global.
+
+> **Provisión de cadena de custodia:** las cifras, identificadores y citas literales se atribuyen al JSON del artefacto 13920058028. Las comparaciones de 78k y 100k remiten a sus respectivos holdouts oficiales. El diálogo del escribano y del alguacil, así como sus juicios, pertenece a la composición literaria. Ninguna interpretación narrativa se presenta como salida del modelo.
+
 
 ## Historial de ejecuciones — registro completo de GitHub Actions
 
