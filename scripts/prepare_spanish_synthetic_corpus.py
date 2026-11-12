@@ -35,7 +35,7 @@ SPANISH_LANGUAGE = re.compile(
 )
 SPANISH_SOURCE_PATH = re.compile(
     r"(?:^|/)(?:"
-    r"wikimedia-es|pleias-spanish-pd-books|common-corpus-es|papers|"
+    r"wikimedia-es|pleias-spanish-pd-books|common-corpus-es|literature-es|ronin-authored-papers|papers|"
     r"boe-legislation-es|bne-hemeroteca-ocr-es|alia-biomedical-es"
     r")(?:/|$)|"
     r"(?:^|/)accepted/(?:"
