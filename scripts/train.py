@@ -137,8 +137,12 @@ def main():
         resume_payload = torch.load(args.resume, map_location="cpu", weights_only=False)
         if resume_payload.get("config") != config.__dict__:
             raise SystemExit("Parent checkpoint model config does not match current config")
-        if resume_payload.get("corpus_sha256") != corpus_sha256:
-            raise SystemExit("Parent checkpoint corpus fingerprint does not match token cache")
+        parent_corpus_sha256 = resume_payload.get("corpus_sha256")
+        corpus_changed_from_parent = parent_corpus_sha256 != corpus_sha256
+        if corpus_changed_from_parent and not args.allow_corpus_change:
+            raise SystemExit("Parent checkpoint corpus fingerprint does not match token cache; pass --allow-corpus-change only for an intentional, verified corpus transition")
+        if corpus_changed_from_parent:
+            print(json.dumps({"event":"explicit_corpus_transition","parent_corpus_sha256":parent_corpus_sha256,"new_corpus_sha256":corpus_sha256,"selection_policy":(token_manifest or {}).get("selection_policy")}),flush=True)
         if resume_payload.get("tokenizer_sha256") != tokenizer_sha256:
             raise SystemExit("Parent checkpoint tokenizer fingerprint does not match token cache")
         model.load_state_dict(resume_payload["model_state_dict"], strict=True)
