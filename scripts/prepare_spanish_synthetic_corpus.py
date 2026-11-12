@@ -33,6 +33,11 @@ LANGUAGE_KEYS = TARGET_LANGUAGE_KEYS | {
 SPANISH_LANGUAGE = re.compile(
     r"^(?:es|spa|spanish|castellano|español)(?:[-_ (].*)?$", re.I
 )
+SYNTHETIC_SOURCE_PATH = re.compile(
+    r"(?:^|/)(?:generated-curricula|generated-basic-curricula|generated-math-es|"
+    r"behavioral-datasets|cosmopedia(?:-[^/]*)?|drosophila|minironin-(?:behavior|engineering|identity|performance-engineering|abstention|abstain|aristocrat|casuist|scientist|oracle|error404|lexicon)[^/]*)(?:/|[-_.]|$)",
+    re.I,
+)
 SPANISH_SOURCE_PATH = re.compile(
     r"(?:^|/)(?:"
     r"wikimedia-es|pleias-spanish-pd-books|common-corpus-es|literature-es|ronin-authored-papers|papers|"
@@ -72,7 +77,13 @@ def _walk_language_values(value: Any):
 
 def is_synthetic(record: dict[str, Any]) -> bool:
     value = record.get("synthetic", False)
-    return value is True or str(value).strip().casefold() in {"true", "1", "yes"}
+    if value is True or str(value).strip().casefold() in {"true", "1", "yes"}:
+        return True
+    source_fields = " ".join(str(record.get(key, "")) for key in ("source_id", "source", "dataset"))
+    metadata = record.get("metadata", {})
+    if isinstance(metadata, dict):
+        source_fields += " " + " ".join(str(metadata.get(key, "")) for key in ("file_name", "filename", "path"))
+    return bool(SYNTHETIC_SOURCE_PATH.search(source_fields.replace("\\\\", "/")) )
 
 
 def is_evaluation(record: dict[str, Any]) -> bool:
