@@ -22,7 +22,11 @@ EVAL_PATH = re.compile(
     r"(^|/)(holdout|eval|evaluation|benchmark|benchmarks|test|tests|validation|valid|dev)(/|[-_.])",
     re.I,
 )
-LANGUAGE_KEYS = {
+TARGET_LANGUAGE_KEYS = {
+    "target_language", "target_lang", "tgt_lang", "translation_language",
+    "output_language", "text_language", "target_locale",
+}
+LANGUAGE_KEYS = TARGET_LANGUAGE_KEYS | {
     "language", "lang", "locale", "source_language", "source_lang",
     "language_code", "lang_code", "original_language",
 }
@@ -50,22 +54,21 @@ def sha256_file(path: Path) -> str:
     return digest.hexdigest()
 
 
-def _walk_language_values(value: Any, key: str = ""):
+def _walk_language_values(value: Any):
     if isinstance(value, dict):
         for child_key, child in value.items():
             normalized_key = str(child_key).strip().casefold().replace("-", "_")
             if normalized_key in LANGUAGE_KEYS:
                 if isinstance(child, (str, int, float)):
-                    yield str(child).strip()
+                    yield normalized_key, str(child).strip()
                 elif isinstance(child, list):
-                    yield from (str(item).strip() for item in child if isinstance(item, (str, int, float)))
+                    yield from ((normalized_key, str(item).strip()) for item in child if isinstance(item, (str, int, float)))
             elif isinstance(child, (dict, list)):
-                yield from _walk_language_values(child, normalized_key)
+                yield from _walk_language_values(child)
     elif isinstance(value, list):
         for item in value:
             if isinstance(item, (dict, list)):
-                yield from _walk_language_values(item, key)
-
+                yield from _walk_language_values(item)
 
 def is_synthetic(record: dict[str, Any]) -> bool:
     value = record.get("synthetic", False)
@@ -86,20 +89,44 @@ def is_evaluation(record: dict[str, Any]) -> bool:
 
 
 def spanish_decision(record: dict[str, Any]) -> tuple[bool, str]:
-    """Return (is Spanish, reason); explicit non-Spanish metadata beats path hints."""
+    """Classify the language of the text, preferring target/output language for translations."""
     metadata = record.get("metadata", {})
-    values = list(_walk_language_values(metadata))
-    values.extend(
-        str(record.get(key, "")).strip()
-        for key in ("language", "lang", "locale", "source_language")
-        if record.get(key) not in (None, "")
-    )
-    normalized = [v.casefold().replace("_", "-").strip() for v in values if v]
-    if any(SPANISH_LANGUAGE.match(v) for v in normalized):
-        return True, "metadata_language"
-    explicit = [v for v in normalized if v not in {"", "und", "unknown", "zxx", "mul", "n/a", "none"}]
-    if explicit:
-        return False, "explicit_non_spanish_language"
+    pairs = list(_walk_language_values(metadata))
+    for key in ("target_language", "target_lang", "tgt_lang", "translation_language",
+                "output_language", "text_language", "target_locale", "language", "lang",
+                "locale", "language_code", "lang_code", "original_language",
+                "source_language", "source_lang"):
+        value = record.get(key)
+        if value not in (None, ""):
+            pairs.append((key, str(value).strip()))
+
+    target_values = [value for key, value in pairs if key in TARGET_LANGUAGE_KEYS]
+    primary_values = [value for key, value in pairs if key not in TARGET_LANGUAGE_KEYS
+                      and key not in {"source_language", "source_lang"}]
+    source_values = [value for key, value in pairs if key in {"source_language", "source_lang"}]
+
+    def classify(values: list[str], reason: str) -> tuple[bool, str] | None:
+        normalized = [v.casefold().replace("_", "-").strip() for v in values if v]
+        if any(SPANISH_LANGUAGE.match(v) for v in normalized):
+            return True, reason
+        explicit = [v for v in normalized if v not in {"", "und", "unknown", "zxx", "mul", "n/a", "none"}]
+        if explicit:
+            return False, "explicit_non_spanish_language"
+        return None
+
+    # Translation text is the target, not the source language.
+    if target_values:
+        result = classify(target_values, "metadata_target_language")
+        if result is not None:
+            return result
+    if primary_values:
+        result = classify(primary_values, "metadata_language")
+        if result is not None:
+            return result
+    if source_values:
+        result = classify(source_values, "metadata_source_language")
+        if result is not None:
+            return result
 
     source_fields = " ".join(
         str(record.get(key, "")) for key in ("source_id", "source", "dataset")
@@ -111,7 +138,6 @@ def spanish_decision(record: dict[str, Any]) -> tuple[bool, str]:
     if SPANISH_SOURCE_PATH.search(source_fields.replace("\\", "/")):
         return True, "curated_spanish_source_path"
     return False, "language_unverified"
-
 
 def render_text(record: dict[str, Any]) -> str:
     text = record.get("text", "")
