@@ -32,7 +32,7 @@ jobs:
         with:
           ref: main
 
-      - name: Verify successful 100k-to-152.5k training run and immutable artifact
+      - name: Verify successful 137.5k-to-152.5k training run and immutable artifact
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -77,7 +77,7 @@ jobs:
           assert p.get("tokenizer_sha256") == sys.argv[2], p.get("tokenizer_sha256")
           print({"completed_steps":p["completed_steps"],"validation_loss":p.get("validation_loss"),"parameter_count":p.get("parameter_count"),"tokenizer_sha256":p.get("tokenizer_sha256")})
           PY
-          python - "$checkpoint-chain/ronin-10m-152500-from-100k/lineage.json" <<'PY'
+          python - "$checkpoint-chain/ronin-10m-152500-from-137500/lineage.json" <<'PY'
           import json,sys
           from pathlib import Path
           p=Path(sys.argv[1])
