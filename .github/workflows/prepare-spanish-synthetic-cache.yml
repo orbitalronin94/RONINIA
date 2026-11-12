@@ -64,7 +64,6 @@ jobs:
       - name: Validate successful source corpus run
         env:
           GH_TOKEN: ${{ github.token }}
-          CORPUS_RUN_ID: ${{ env.CORPUS_RUN_ID }}
         run: |
           set -euo pipefail
           [[ "$CORPUS_RUN_ID" =~ ^[0-9]+$ ]]
@@ -147,7 +146,6 @@ jobs:
       - name: Verify existing 8k tokenizer run
         env:
           GH_TOKEN: ${{ github.token }}
-          TOKENIZER_RUN_ID: ${{ env.TOKENIZER_RUN_ID }}
         run: |
           set -euo pipefail
           [[ "$TOKENIZER_RUN_ID" =~ ^[0-9]+$ ]]
