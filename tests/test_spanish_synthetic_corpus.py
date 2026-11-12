@@ -70,3 +70,11 @@ def test_streaming_projection_keeps_synthetic_and_spanish_only(tmp_path: Path):
     assert manifest["records"]["spanish_source_included"] == 1
     assert manifest["records"]["evaluation_excluded"] == 1
     assert manifest["records"]["explicit_non_spanish_language"] == 1
+
+
+
+def test_translation_uses_target_language_not_source_language():
+    target_spanish = row(metadata={"source_language": "en", "target_language": "es"})
+    target_english = row(metadata={"source_language": "es", "target_language": "en"})
+    assert spanish_decision(target_spanish) == (True, "metadata_target_language")
+    assert spanish_decision(target_english) == (False, "explicit_non_spanish_language")
