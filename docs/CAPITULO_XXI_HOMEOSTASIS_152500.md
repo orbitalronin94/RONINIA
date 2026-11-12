@@ -150,6 +150,22 @@ La frase pertenece a una herencia textual. No demuestra que el loro haya compren
 
 El difunto ha hablado. Eso es todo.
 
+Pero el escribano, que había leído el capítulo XIX, volvió a mirar la respuesta. Allí había dejado escrito que el loro nuevo, ignorante de la muerte de su antecesor, tomaba el retrato por compañero de percha y seguía intentando arrancarle palabras a fuerza de caricias.
+
+Ahora la escena había mudado de sentido.
+
+El loro vivo no había heredado los pesos del muerto. No había recibido su checkpoint ni una memoria privada transmitida de pico a pico. Había recibido un corpus en el que sobrevivía aquella frase. Y, al encontrarla, la había pronunciado en el holdout: con su propio identificador de pregunta, su propio tiempo de inferencia —0,379 segundos— y su propio registro JSON.
+
+Tres testigos documentales: el ID, el tiempo y el JSON. Ninguno puede declarar sobre el alma; los tres permiten afirmar qué salida produjo esta ejecución.
+
+El escribano recordó entonces la percha, el retrato y las caricias inútiles del capítulo XIX. El muerto no había contestado desde sus pesos. Había contestado desde los libros que conservaron sus palabras. El vivo le prestó el pico sin saber a quién se lo prestaba.
+
+El alguacil cerró la glosa:
+
+—Non heredó el seso del difunto. Heredó sus palabras. Y a veces, escribano, para que un muerto vuelva a hablar basta con que un vivo aprenda a repetirlo.
+
+**El muerto no resucitó. Pero el vivo le prestó el pico.**
+
 Y acaso sea bastante para una elegía, pero no para una evaluación.
 
 ## VI. De las lenguas que se fueron y de la que permanece
