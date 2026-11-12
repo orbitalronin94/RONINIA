@@ -108,3 +108,8 @@ def test_translation_uses_target_language_not_source_language():
 def test_translation_language_pair_uses_target_side():
     assert spanish_decision(row(metadata={"language_pair": "en-es", "source_language": "en"})) == (True, "metadata_target_language")
     assert spanish_decision(row(metadata={"language_pair": "es-en", "source_language": "es"})) == (False, "explicit_non_spanish_language")
+
+
+def test_engineering_lessons_source_is_synthetic():
+    record = row(source_id="data/curated/engineering-lessons-v1/train.jsonl", synthetic=False)
+    assert is_synthetic(record)
