@@ -97,19 +97,30 @@ Estas voces se incorporan como tradición editorial de la casa. Las citas adapta
 - **Evaluación separada:** los registros identificados como holdout/evaluación se excluyen del corpus y del entrenamiento del tokenizador.
 - **GitHub Actions como laboratorio:** preparación, validación, entrenamiento y evaluación se ejecutan en workflows.
 
-## Corpus de referencia
+## Biblioteca de entrenamiento: sintético completo + castellano
 
-La preparación del tokenizador utiliza el artefacto unificado de MINIRONIN del run exitoso **42523463620** en main (8 de noviembre de 2026). El artefacto minironin-unified-train-corpus-42523463620 ocupa **776.739.403 bytes (aprox. 777 MB)**. No se utiliza el artefacto posterior de varios gigabytes para esta configuración.
+La biblioteca de RONINIA sigue ahora una política de selección explícita:
 
-El workflow verifica el estado y la procedencia del run, descarga el artefacto, valida SHA256SUMS y genera un flujo de texto y un manifiesto. Se conservan los registros sintéticos admitidos; se excluyen los registros identificados como evaluación/holdout. No se importan checkpoints ni datos de evaluación.
+- **Se incluyen todos los datasets sintéticos** presentes en el corpus admitido, aunque su idioma de origen no sea castellano. Se conservan identificados como sintéticos y se contabilizan por separado.
+- **Del material no sintético solo se incluye contenido en castellano.** La decisión se toma mediante metadatos de idioma o rutas de fuentes españolas admitidas; en datos de traducción manda el idioma de destino, porque es el idioma del texto que se entrena.
+- **Se excluyen holdouts, benchmarks, validación y evaluación** antes de aplicar la selección lingüística.
+- Los registros no sintéticos cuyo idioma no pueda verificarse se excluyen y se cuentan como no verificados; no se adivina el idioma por intuición.
 
-## Preparación y entrenamiento
+La reconstrucción más reciente de la biblioteca de MINIRONIN se está ejecutando en [run 43171599026](https://github.com/orbitalronin94/MINIRONIN/actions/runs/43171599026). Incluye las fuentes españolas admitidas más recientes y los datasets sintéticos ya registrados. El artefacto de ese run se verifica por SHA-256 antes de proyectarlo.
 
-1. Ejecutar prepare-tokenizer.yml para descargar el corpus de 777 MB y entrenar el BPE de 8.192 tokens.
-2. Verificar el artefacto roninia-tokenizer-8k-*, su hash y la huella SHA-256 del corpus.
-3. Ejecutar train-ronin-10m.yml usando el ID del run del tokenizador. El entrenamiento comienza desde inicialización aleatoria y guarda checkpoints cada 5.000 pasos.
+### Precarga y velocidad
 
-El desarrollo local es opcional; los workflows son la vía reproducible del proyecto.
+La preparación se separa del entrenamiento y se ejecuta una sola vez:
+
+1. Descargar el artefacto unificado y verificar sus checksums.
+2. Construir un flujo de texto con **todos los sintéticos + solo castellano no sintético**, generando un manifiesto con recuentos por dataset y exclusiones.
+3. Reutilizar el tokenizador BPE existente de **8.192 tokens**; no se vuelve a entrenar el tokenizador.
+4. Tokenizar una sola vez y publicar un artefacto binario `uint16` con manifiesto y SHA-256.
+
+El workflow [prepare-spanish-synthetic-cache.yml](.github/workflows/prepare-spanish-synthetic-cache.yml) realiza esta preparación. Los entrenamientos posteriores solo descargan y verifican el cache ya tokenizado: no vuelven a descargar bibliotecas fuente, convertirlas a texto ni tokenizarlas.
+
+La nueva huella del corpus será distinta de la del régimen anterior. Para reanudar un checkpoint con el mismo modelo y tokenizador sobre esta biblioteca, el entrenamiento exige la opción explícita `--allow-corpus-change`; la transición queda registrada en la cadena de custodia del nuevo checkpoint. La identidad del tokenizador y la configuración del modelo siguen siendo obligatorias.
+
 
 ## MINIRONIN y RONIN-10M: continuidad de método, cambio de hipótesis
 
