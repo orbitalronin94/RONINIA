@@ -118,10 +118,10 @@ jobs:
           step=int(parent.get("completed_steps",-1))
           assert step>0
           with open(os.environ["GITHUB_OUTPUT"],"a",encoding="utf-8") as output:
-              output.write(f"parent_step={step}\\n")
-              output.write(f"parent_corpus_sha256={parent.get('corpus_sha256') or ''}\\n")
-              output.write(f"parent_tokenizer_sha256={parent['tokenizer_sha256']}\\n")
-              output.write(f"target_step={step+int(os.environ['ADDITIONAL_STEPS'])}\\n")
+              output.write(f"parent_step={step}\n")
+              output.write(f"parent_corpus_sha256={parent.get('corpus_sha256') or ''}\n")
+              output.write(f"parent_tokenizer_sha256={parent['tokenizer_sha256']}\n")
+              output.write(f"target_step={step+int(os.environ['ADDITIONAL_STEPS'])}\n")
           print(json.dumps({"parent_step":step,"validation_loss":parent.get("validation_loss"),"parameter_count":parent.get("parameter_count"),"corpus_sha256":parent.get("corpus_sha256"),"tokenizer_sha256":parent.get("tokenizer_sha256")},indent=2))
           PY
 
@@ -179,10 +179,10 @@ jobs:
 
       - name: Continue training on the preloaded cache
         env:
-          OUT_DIR: \${{ format('runs/ronin-10m-spanish-synthetic-{0}-to-{1}', steps.parent.outputs.parent_step, steps.parent.outputs.target_step) }}
-          PARENT_STEP: \${{ steps.parent.outputs.parent_step }}
-          PARENT_CORPUS_SHA256: \${{ steps.parent.outputs.parent_corpus_sha256 }}
-          CACHE_RUN_ID: \${{ steps.cache.outputs.cache_run_id }}
+          OUT_DIR: ${{ format('runs/ronin-10m-spanish-synthetic-{0}-to-{1}', steps.parent.outputs.parent_step, steps.parent.outputs.target_step) }}
+          PARENT_STEP: ${{ steps.parent.outputs.parent_step }}
+          PARENT_CORPUS_SHA256: ${{ steps.parent.outputs.parent_corpus_sha256 }}
+          CACHE_RUN_ID: ${{ steps.cache.outputs.cache_run_id }}
           OMP_NUM_THREADS: "2"
           MKL_NUM_THREADS: "2"
           OPENBLAS_NUM_THREADS: "2"
@@ -190,7 +190,6 @@ jobs:
           OMP_PLACES: CORES
         run: |
           set -euo pipefail
-          OUT_DIR="runs/ronin-10m-spanish-synthetic-${{ steps.parent.outputs.parent_step }}-to-${{ steps.parent.outputs.target_step }}"
           echo "Output directory: $OUT_DIR"
           python - <<'PY'
           import os,runpy,sys,torch
@@ -229,9 +228,13 @@ jobs:
           retention-days: 90
 
       - name: Verify final checkpoint and write full lineage
+        env:
+          OUT_DIR: ${{ format('runs/ronin-10m-spanish-synthetic-{0}-to-{1}', steps.parent.outputs.parent_step, steps.parent.outputs.target_step) }}
+          PARENT_STEP: ${{ steps.parent.outputs.parent_step }}
+          PARENT_CORPUS_SHA256: ${{ steps.parent.outputs.parent_corpus_sha256 }}
+          CACHE_RUN_ID: ${{ steps.cache.outputs.cache_run_id }}
         run: |
           set -euo pipefail
-          OUT_DIR="runs/ronin-10m-spanish-synthetic-${{ steps.parent.outputs.parent_step }}-to-${{ steps.parent.outputs.target_step }}"
           python - <<'PY'
           import hashlib,json,os,re
           from pathlib import Path
