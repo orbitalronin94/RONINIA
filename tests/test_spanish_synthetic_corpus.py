@@ -85,3 +85,10 @@ def test_admitted_spanish_literature_and_papers_paths_are_included():
     papers = row(source_id="data/inherited/heretic-corpus/ronin-authored-papers/article.md", metadata={})
     assert spanish_decision(literature) == (True, "curated_spanish_source_path")
     assert spanish_decision(papers) == (True, "curated_spanish_source_path")
+
+
+def test_known_synthetic_source_paths_are_kept_even_without_row_flag():
+    cosmopedia = row(source_id="data/inherited/heretic-corpus/cosmopedia-v0.1/train.jsonl", synthetic=False)
+    drosophila = row(source_id="data/drosophila/parts/01_matematicas_5000.jsonl", synthetic=False)
+    assert is_synthetic(cosmopedia)
+    assert is_synthetic(drosophila)
