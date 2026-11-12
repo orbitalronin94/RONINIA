@@ -19,7 +19,7 @@ on:
       corpus_run_id:
         description: "Successful latest MINIRONIN unified corpus run on main"
         required: true
-        default: "43171599026"
+        default: "43221423530"
         type: string
       tokenizer_run_id:
         description: "Existing compatible RONINIA 8k tokenizer run"
