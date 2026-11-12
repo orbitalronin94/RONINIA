@@ -117,7 +117,7 @@ La preparación se separa del entrenamiento y se ejecuta una sola vez:
 3. Reutilizar el tokenizador BPE existente de **8.192 tokens**; no se vuelve a entrenar el tokenizador.
 4. Tokenizar una sola vez y publicar un artefacto binario `uint16` con manifiesto y SHA-256.
 
-El workflow [prepare-spanish-synthetic-cache.yml](.github/workflows/prepare-spanish-synthetic-cache.yml) realiza esta preparación. Los entrenamientos posteriores solo descargan y verifican el cache ya tokenizado: no vuelven a descargar bibliotecas fuente, convertirlas a texto ni tokenizarlas.
+El workflow [prepare-spanish-synthetic-cache.yml](.github/workflows/prepare-spanish-synthetic-cache.yml) realiza esta preparación y publica la política versionada **v2**. Para continuar un checkpoint con esa biblioteca sin reconstruir ni retokenizar, se usa [train-from-spanish-synthetic-cache.yml](.github/workflows/train-from-spanish-synthetic-cache.yml): descarga el último cache v2 válido, comprueba el tokenizador y registra la transición de corpus en la cadena de custodia.
 
 La nueva huella del corpus será distinta de la del régimen anterior. Para reanudar un checkpoint con el mismo modelo y tokenizador sobre esta biblioteca, el entrenamiento exige la opción explícita `--allow-corpus-change`; la transición queda registrada en la cadena de custodia del nuevo checkpoint. La identidad del tokenizador y la configuración del modelo siguen siendo obligatorias.
 
