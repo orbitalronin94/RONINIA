@@ -119,7 +119,7 @@ jobs:
             --checkpoint "$CHECKPOINT_PATH" \
             --tokenizer tokenizer/tokenizer.json \
             --holdout benchmarks/inference-holdout-v1.jsonl \
-            --output-dir runs/checkpoint-205000-holdout \\
+            --output-dir runs/checkpoint-205000-holdout \
             --expected-steps 205000
 
       - name: Verify official benchmark protocol and checkpoint identity
