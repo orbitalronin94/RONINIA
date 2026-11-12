@@ -66,6 +66,8 @@ def test_streaming_projection_keeps_synthetic_and_spanish_only(tmp_path: Path):
     manifest = prepare(source, output, manifest_path, 123)
     lines = output.read_text(encoding="utf-8").splitlines()
     assert lines == ["Synthetic content kept.", "Contenido español admitido."]
+    assert manifest["schema"] == "roninia-spanish-plus-synthetic-corpus-v2"
+    assert manifest["selection_policy_version"] == 2
     assert manifest["records"]["synthetic_included"] == 1
     assert manifest["records"]["spanish_source_included"] == 1
     assert manifest["records"]["evaluation_excluded"] == 1
