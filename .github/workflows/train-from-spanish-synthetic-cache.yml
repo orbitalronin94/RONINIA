@@ -160,6 +160,11 @@ jobs:
           python - <<'PY'
           import hashlib,json,os
           from pathlib import Path
+          def digest(path):
+              h=hashlib.sha256()
+              with Path(path).open("rb") as stream:
+                  for block in iter(lambda:stream.read(8*1024*1024),b""): h.update(block)
+              return h.hexdigest()
           cache=json.loads(Path("cache-artifact/token-cache/token-manifest.json").read_text())
           corpus=json.loads(Path("cache-artifact/data/corpus/corpus-manifest.json").read_text())
           tokens=Path("cache-artifact/token-cache/corpus-tokens.u16")
@@ -171,9 +176,9 @@ jobs:
           assert cache["selection_policy"]=="all_synthetic_plus_verified_spanish_non_synthetic_target_language_precedence"
           assert cache["synthetic_records_included"]>0 and cache["spanish_source_records_included"]>0
           assert cache["corpus_sha256"]==corpus["corpus_sha256"]
-          assert hashlib.sha256(corpus_manifest.read_bytes()).hexdigest()==cache["corpus_manifest_sha256"]
+          assert digest(corpus_manifest)==cache["corpus_manifest_sha256"]
           assert cache["tokens_bytes"]==tokens.stat().st_size==cache["token_count"]*2
-          assert hashlib.sha256(tokens.read_bytes()).hexdigest()==cache["tokens_sha256"]
+          assert digest(tokens)==cache["tokens_sha256"]
           print(json.dumps({k:cache.get(k) for k in ("source_run_id","selection_policy_version","records_total","synthetic_records_included","spanish_source_records_included","excluded_non_synthetic_non_spanish","excluded_non_synthetic_unverified_language","corpus_sha256","tokenizer_sha256","token_count","tokens_bytes")},ensure_ascii=False,indent=2))
           PY
 
@@ -238,6 +243,11 @@ jobs:
           python - <<'PY'
           import hashlib,json,os,re
           from pathlib import Path
+          def digest(path):
+              h=hashlib.sha256()
+              with Path(path).open("rb") as stream:
+                  for block in iter(lambda:stream.read(8*1024*1024),b""): h.update(block)
+              return h.hexdigest()
           out=Path(os.environ["OUT_DIR"])
           checkpoints=list(out.glob("checkpoint-*.pt"))
           if not checkpoints:
@@ -246,7 +256,7 @@ jobs:
           step=int(re.search(r"checkpoint-(\d+)",latest.name).group(1))
           target=int(os.environ["PARENT_STEP"])+int(os.environ["ADDITIONAL_STEPS"])
           assert step==target, {"latest_checkpoint":latest.name,"expected":target}
-          digest=hashlib.sha256(latest.read_bytes()).hexdigest()
+          digest_value=digest(latest)
           cache=json.loads(Path("cache-artifact/token-cache/token-manifest.json").read_text())
           parent=json.loads(Path("cache-artifact/data/corpus/corpus-manifest.json").read_text())
           lineage={
@@ -269,7 +279,7 @@ jobs:
             "steps_this_run":int(os.environ["ADDITIONAL_STEPS"]),
             "cumulative_steps":step,
             "latest_checkpoint":latest.name,
-            "latest_checkpoint_sha256":digest,
+            "latest_checkpoint_sha256":digest_value,
             "training_config":{"context_length":256,"threads":2,"batch_size":4,"learning_rate":float(os.environ["LEARNING_RATE"]),"checkpoint_every":1000,"eval_batches":32,"pretokenized_cache_reused":True,"retokenization":False}
           }
           (out/"lineage.json").write_text(json.dumps(lineage,ensure_ascii=False,indent=2)+chr(10))
