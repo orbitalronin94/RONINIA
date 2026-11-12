@@ -106,8 +106,8 @@ jobs:
           cp "${candidates[0]}" checkpoint-parent.pt
           actual="$(sha256sum checkpoint-parent.pt | awk '{print $1}')"
           test "$actual" = "$EXPECTED_PARENT_SHA256"
-          python - <<'PY' >> "$GITHUB_OUTPUT"
-          import json, torch
+          python - <<'PY'
+          import json, os, torch
           from pathlib import Path
           config=json.loads(Path("configs/ronin-10m.json").read_text())
           config["context_length"]=256
@@ -117,11 +117,12 @@ jobs:
           assert parent.get("tokenizer_sha256")=="605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4"
           step=int(parent.get("completed_steps",-1))
           assert step>0
-          print(f"parent_step={step}")
-          print(f"parent_corpus_sha256={parent.get('corpus_sha256','')}")
-          print(f"parent_tokenizer_sha256={parent['tokenizer_sha256']}")
-          print(f"target_step={step+int(__import__('os').environ['ADDITIONAL_STEPS'])}")
-          print({"parent_step":step,"validation_loss":parent.get("validation_loss"),"parameter_count":parent.get("parameter_count"),"corpus_sha256":parent.get("corpus_sha256"),"tokenizer_sha256":parent.get("tokenizer_sha256")})
+          with open(os.environ["GITHUB_OUTPUT"],"a",encoding="utf-8") as output:
+              output.write(f"parent_step={step}\\n")
+              output.write(f"parent_corpus_sha256={parent.get('corpus_sha256') or ''}\\n")
+              output.write(f"parent_tokenizer_sha256={parent['tokenizer_sha256']}\\n")
+              output.write(f"target_step={step+int(os.environ['ADDITIONAL_STEPS'])}\\n")
+          print(json.dumps({"parent_step":step,"validation_loss":parent.get("validation_loss"),"parameter_count":parent.get("parameter_count"),"corpus_sha256":parent.get("corpus_sha256"),"tokenizer_sha256":parent.get("tokenizer_sha256")},indent=2))
           PY
 
       - name: Resolve latest successful version-2 Spanish + synthetic cache run
@@ -178,6 +179,10 @@ jobs:
 
       - name: Continue training on the preloaded cache
         env:
+          OUT_DIR: \${{ format('runs/ronin-10m-spanish-synthetic-{0}-to-{1}', steps.parent.outputs.parent_step, steps.parent.outputs.target_step) }}
+          PARENT_STEP: \${{ steps.parent.outputs.parent_step }}
+          PARENT_CORPUS_SHA256: \${{ steps.parent.outputs.parent_corpus_sha256 }}
+          CACHE_RUN_ID: \${{ steps.cache.outputs.cache_run_id }}
           OMP_NUM_THREADS: "2"
           MKL_NUM_THREADS: "2"
           OPENBLAS_NUM_THREADS: "2"
