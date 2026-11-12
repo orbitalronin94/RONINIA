@@ -18,6 +18,16 @@ from typing import Any
 
 EVAL_SPLITS = {"test", "tests", "eval", "evaluation", "benchmark", "benchmarks",
                "validation", "valid", "dev", "holdout"}
+PREFERRED_TEXT_FIELDS = (
+    "domain", "skill", "difficulty", "language", "prompt", "instruction",
+    "question", "input", "problem", "response", "answer", "completion",
+    "output", "solution", "explanation", "reasoning", "assumptions",
+    "verification", "text", "content",
+)
+IGNORED_TEXT_FIELDS = {
+    "id", "uid", "domain_id", "family_id", "scenario_id", "split", "status",
+    "license", "source", "metadata", "tags", "synthetic", "source_id", "dataset",
+}
 EVAL_PATH = re.compile(
     r"(^|/)(holdout|eval|evaluation|benchmark|benchmarks|test|tests|validation|valid|dev)(/|[-_.])",
     re.I,
@@ -154,16 +164,39 @@ def spanish_decision(record: dict[str, Any]) -> tuple[bool, str]:
         return True, "curated_spanish_source_path"
     return False, "language_unverified"
 
+def _leaf_text(value: Any) -> list[str]:
+    if isinstance(value, str):
+        return [value.strip()] if value.strip() else []
+    if isinstance(value, list):
+        return [part for item in value for part in _leaf_text(item)]
+    if isinstance(value, dict):
+        found: list[str] = []
+        for key in PREFERRED_TEXT_FIELDS:
+            if key in value:
+                found.extend(_leaf_text(value[key]))
+        if found:
+            return found
+        for key, child in value.items():
+            if str(key).casefold() not in IGNORED_TEXT_FIELDS:
+                found.extend(_leaf_text(child))
+        return found
+    return []
+
+
 def render_text(record: dict[str, Any]) -> str:
     text = record.get("text", "")
     if isinstance(text, str) and text.strip():
         return " ".join(text.split())
-    question = record.get("question") or record.get("prompt") or record.get("input")
-    answer = record.get("answer") or record.get("target") or record.get("completion")
-    if question is not None and answer is not None:
-        return " ".join(f"Pregunta: {question}\nRespuesta: {answer}".split())
-    return ""
-
+    parts: list[str] = []
+    for key in PREFERRED_TEXT_FIELDS:
+        if key in record:
+            parts.extend(_leaf_text(record[key]))
+    if not parts:
+        for key, value in record.items():
+            if str(key).casefold() not in IGNORED_TEXT_FIELDS:
+                parts.extend(_leaf_text(value))
+    unique = list(dict.fromkeys(part for part in parts if part))
+    return " ".join(" ".join(unique).split())
 
 def prepare(input_root: Path, output: Path, manifest_path: Path, source_run_id: int) -> dict[str, Any]:
     sources = sorted(
@@ -198,6 +231,12 @@ def prepare(input_root: Path, output: Path, manifest_path: Path, source_run_id: 
                         counts["non_object_rows"] += 1
                         continue
                     counts["records_seen"] += 1
+                    relative_source = source.relative_to(input_root).as_posix()
+                    if not record.get("source_id"):
+                        record["source_id"] = relative_source
+                    if not record.get("dataset"):
+                        parent_name = source.parent.name
+                        record["dataset"] = source.parent.parent.name if parent_name in {"parts", "shards"} else parent_name
                     if is_evaluation(record):
                         counts["evaluation_excluded"] += 1
                         file_counts["evaluation_excluded"] += 1
@@ -242,7 +281,7 @@ def prepare(input_root: Path, output: Path, manifest_path: Path, source_run_id: 
                     source_entry["records_included"] += 1
                     source_entry["synthetic_included" if synthetic else "spanish_source_included"] += 1
             source_hashes.append({
-                "path": source.name,
+                "path": source.relative_to(input_root).as_posix(),
                 "sha256": sha256_file(source),
                 **dict(file_counts),
             })
@@ -254,6 +293,12 @@ def prepare(input_root: Path, output: Path, manifest_path: Path, source_run_id: 
     if counts["spanish_source_included"] == 0:
         raise SystemExit("No verified Spanish non-synthetic rows were included; refusing an incomplete library projection")
 
+    external_manifest_path = input_root / "external-sources.json"
+    external_sources = json.loads(external_manifest_path.read_text(encoding="utf-8")) if external_manifest_path.exists() else {"sources": []}
+    dataset_notes = {}
+    if any("drosophila" in source_id.casefold() for source_id in per_source):
+        dataset_notes["drosophila-50k"] = "50,000 procedural synthetic train_candidate rows across 10 domains and 50 task families; not gold, not holdout, and parameterized variants are not 50,000 independent capabilities."
+
     manifest = {
         "schema": "roninia-spanish-plus-synthetic-corpus-v2",
         "selection_policy_version": 2,
@@ -263,6 +308,8 @@ def prepare(input_root: Path, output: Path, manifest_path: Path, source_run_id: 
         "source_artifact": "minironin-unified-train-corpus",
         "source_files": source_hashes,
         "source_files_total": len(source_hashes),
+        "external_sources": external_sources.get("sources", []),
+        "dataset_notes": dataset_notes,
         "records": dict(counts),
         "datasets": {name: dict(value) for name, value in sorted(per_dataset.items())},
         "sources": {name: value for name, value in sorted(per_source.items())},
