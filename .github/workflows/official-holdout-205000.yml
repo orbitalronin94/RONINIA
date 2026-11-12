@@ -119,19 +119,34 @@ jobs:
             --checkpoint "$CHECKPOINT_PATH" \
             --tokenizer tokenizer/tokenizer.json \
             --holdout benchmarks/inference-holdout-v1.jsonl \
-            --output-dir runs/checkpoint-205000-holdout
+            --output-dir runs/checkpoint-205000-holdout \\
+            --expected-steps 205000
 
       - name: Verify official benchmark protocol and checkpoint identity
         run: |
+          set -euo pipefail
           python - <<'PY'
-          import json
+          import hashlib, json
           from pathlib import Path
-          result=json.loads(Path("runs/checkpoint-205000-holdout/checkpoint-205000-holdout-100.json").read_text())
-          assert result["holdout_count"] == 100
+          p=Path("runs/checkpoint-205000-holdout/checkpoint-205000-holdout-100.json")
+          assert p.is_file(), f"Missing output: {p}"
+          result=json.loads(p.read_text(encoding="utf-8"))
+          assert result["completed_steps"] == 205000, result.get("completed_steps")
+          assert result["checkpoint_sha256"] == "425b9a0939a1b387420061450a99728718eb2640dea3c05fd1692d9ea8a24fa9"
+          assert result["tokenizer_sha256"] == "605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4"
+          assert result["holdout_count"] == 100, result.get("holdout_count")
           assert result["holdout_sha256"] == "3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535"
-          print("Holdout:",result["holdout_sha256"])
-          print("Checkpoint:",result.get("checkpoint"))
-          print("Answers:",result.get("answers_file"))
+          assert len(result["results"]) == 100, len(result.get("results", []))
+          assert all({"id","domain","question","rubric","answer","generated_token_ids","elapsed_seconds"} <= set(row) for row in result["results"])
+          assert len({row["id"] for row in result["results"]}) == 100
+          print(json.dumps({
+              "completed_steps": result["completed_steps"],
+              "checkpoint_sha256": result["checkpoint_sha256"],
+              "holdout_count": result["holdout_count"],
+              "holdout_sha256": result["holdout_sha256"],
+              "answers": len(result["results"]),
+              "output": str(p)
+          }, ensure_ascii=False, indent=2))
           PY
 
       - name: Upload immutable 205000 official holdout
