@@ -94,3 +94,15 @@ def test_known_synthetic_source_paths_are_kept_even_without_row_flag():
     drosophila = row(source_id="data/drosophila/parts/01_matematicas_5000.jsonl", synthetic=False)
     assert is_synthetic(cosmopedia)
     assert is_synthetic(drosophila)
+
+
+def test_translation_uses_target_language_not_source_language():
+    target_spanish = row(metadata={"source_language": "en", "target_language": "es"})
+    target_english = row(metadata={"source_language": "es", "target_language": "en"})
+    assert spanish_decision(target_spanish) == (True, "metadata_target_language")
+    assert spanish_decision(target_english) == (False, "explicit_non_spanish_language")
+
+
+def test_translation_language_pair_uses_target_side():
+    assert spanish_decision(row(metadata={"language_pair": "en-es", "source_language": "en"})) == (True, "metadata_target_language")
+    assert spanish_decision(row(metadata={"language_pair": "es-en", "source_language": "es"})) == (False, "explicit_non_spanish_language")
