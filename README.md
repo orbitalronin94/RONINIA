@@ -104,6 +104,7 @@ La biblioteca de RONINIA sigue ahora una política de selección explícita:
 - **Se incluyen todos los datasets sintéticos** presentes en el corpus admitido, aunque su idioma de origen no sea castellano. Se conservan identificados como sintéticos y se contabilizan por separado.
 - **Del material no sintético solo se incluye contenido en castellano.** La decisión se toma mediante metadatos de idioma o rutas de fuentes españolas admitidas; en datos de traducción manda el idioma de destino, porque es el idioma del texto que se entrena.
 - **Se excluyen holdouts, benchmarks, validación y evaluación** antes de aplicar la selección lingüística.
+- Se incorpora también **Drosophila 50k** desde HERETIC-RONIN, fijado al commit `a75fb8d35d099efa04353918ee7b73ad2a65cc75`. Es sintético y `train_candidate`, no gold ni holdout: 50 familias procedimentales con 1.000 parametrizaciones cada una; queda señalado como candidato y no como 50.000 capacidades independientes.
 - Los registros no sintéticos cuyo idioma no pueda verificarse se excluyen y se cuentan como no verificados; no se adivina el idioma por intuición.
 
 La reconstrucción más reciente de la biblioteca de MINIRONIN se está ejecutando en [run 43171599026](https://github.com/orbitalronin94/MINIRONIN/actions/runs/43171599026). Incluye las fuentes españolas admitidas más recientes y los datasets sintéticos ya registrados. El artefacto de ese run se verifica por SHA-256 antes de proyectarlo.
