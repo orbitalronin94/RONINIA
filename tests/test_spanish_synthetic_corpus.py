@@ -1,8 +1,10 @@
 import gzip
 import json
+import sys
 from pathlib import Path
 
-from scripts.prepare_spanish_synthetic_corpus import is_evaluation, is_synthetic, spanish_decision, prepare
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+from prepare_spanish_synthetic_corpus import is_evaluation, is_synthetic, spanish_decision, prepare
 
 
 def row(**kwargs):
