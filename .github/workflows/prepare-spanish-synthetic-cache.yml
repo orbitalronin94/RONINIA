@@ -33,7 +33,7 @@ permissions:
 
 concurrency:
   group: roninia-spanish-synthetic-cache
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   validate:
