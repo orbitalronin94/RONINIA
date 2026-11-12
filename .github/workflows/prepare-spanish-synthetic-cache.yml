@@ -143,6 +143,9 @@ jobs:
           print(json.dumps(m,ensure_ascii=False,indent=2))
           PY
 
+      - name: Release the large source archive after the filtered corpus is verified
+        run: rm -rf minironin-unified
+
       - name: Verify existing 8k tokenizer run
         env:
           GH_TOKEN: ${{ github.token }}
@@ -202,6 +205,9 @@ jobs:
           assert Path("token-cache/corpus-tokens.u16").stat().st_size==cache["tokens_bytes"]
           print(json.dumps({k:cache.get(k) for k in ("token_count","tokens_bytes","corpus_sha256","tokenizer_sha256","selection_policy","synthetic_records_included","spanish_source_records_included","excluded_non_synthetic_non_spanish","excluded_non_synthetic_unverified_language")},ensure_ascii=False,indent=2))
           PY
+
+      - name: Remove temporary text and tokenizer files
+        run: rm -rf data/corpus/train.txt tokenizer
 
       - name: Upload reusable pretokenized Spanish + synthetic corpus
         uses: actions/upload-artifact@v4
