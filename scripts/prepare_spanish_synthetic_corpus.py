@@ -22,10 +22,11 @@ EVAL_PATH = re.compile(
     r"(^|/)(holdout|eval|evaluation|benchmark|benchmarks|test|tests|validation|valid|dev)(/|[-_.])",
     re.I,
 )
+PAIR_LANGUAGE_KEYS = {"language_pair", "lang_pair", "translation_pair", "pair"}
 TARGET_LANGUAGE_KEYS = {
     "target_language", "target_lang", "tgt_lang", "translation_language",
     "output_language", "text_language", "target_locale",
-}
+} | PAIR_LANGUAGE_KEYS
 LANGUAGE_KEYS = TARGET_LANGUAGE_KEYS | {
     "language", "lang", "locale", "source_language", "source_lang",
     "language_code", "lang_code", "original_language",
