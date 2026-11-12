@@ -70,6 +70,7 @@ def main():
         "tokenizer_vocab_size": vocab_size,
         "evaluation_records_excluded": corpus_info["evaluation_records_excluded"],
         "selection_policy": corpus_info.get("selection_policy"),
+        "selection_policy_version": corpus_info.get("selection_policy_version"),
         "records_total": corpus_info.get("records_total"),
         "synthetic_records_included": corpus_info.get("synthetic_records_included"),
         "spanish_source_records_included": corpus_info.get("spanish_source_records_included"),
