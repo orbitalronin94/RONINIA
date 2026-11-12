@@ -114,6 +114,83 @@ jobs:
           print(json.dumps({"source_records":report["record_count"],"datasets":len(report.get("datasets",{})),"source_files":report.get("source_files")},ensure_ascii=False,indent=2))
           PY
 
+      - name: Checkout pinned HERETIC Drosophila synthetic candidate
+        uses: actions/checkout@v4
+        with:
+          repository: orbitalronin94/HERETIC-RONIN
+          ref: a75fb8d35d099efa04353918ee7b73ad2a65cc75
+          path: heretic-drosophila
+
+      - name: Verify and add all 50k Drosophila synthetic train candidates
+        run: |
+          set -euo pipefail
+          src="heretic-drosophila/data/drosophila"
+          dst="minironin-unified/drosophila"
+          mkdir -p "$dst/parts"
+          cp "$src"/parts/*.jsonl "$dst/parts/"
+          cp "$src/README_01301_51300.md" "$dst/"
+          cp "$src/CURATION_QUEUE_2026-11-06.md" "$dst/"
+          cp heretic-drosophila/LICENSE "$dst/LICENSE"
+          python - <<'PY'
+          import hashlib,json
+          from collections import Counter
+          from pathlib import Path
+          root=Path("minironin-unified/drosophila")
+          shards=sorted((root/"parts").glob("*.jsonl"))
+          assert len(shards)==10, len(shards)
+          ids=set()
+          status_counts=Counter()
+          language_counts=Counter()
+          reports=[]
+          dataset_hash=hashlib.sha256()
+          total=0
+          for shard in shards:
+              shard_hash=hashlib.sha256()
+              rows=0
+              with shard.open("rb") as stream:
+                  for line_no,raw in enumerate(stream,1):
+                      if not raw.strip(): continue
+                      shard_hash.update(raw)
+                      dataset_hash.update(raw)
+                      row=json.loads(raw)
+                      assert isinstance(row,dict), (shard,line_no)
+                      row_id=row.get("id")
+                      assert row_id is not None, (shard,line_no,"missing id")
+                      row_id=str(row_id)
+                      assert row_id not in ids, f"duplicate Drosophila id: {row_id}"
+                      ids.add(row_id)
+                      status=str(row.get("status") or row.get("split") or "unmarked").strip().casefold()
+                      assert status not in {"test","eval","evaluation","benchmark","holdout","validation","dev"}, (shard,line_no,status)
+                      status_counts[status]+=1
+                      language=str(row.get("language") or row.get("lang") or "unmarked").strip().casefold()
+                      language_counts[language]+=1
+                      rows+=1
+                      total+=1
+              assert rows==5000, (shard.name,rows)
+              reports.append({"file":shard.name,"rows":rows,"bytes":shard.stat().st_size,"sha256":shard_hash.hexdigest()})
+          assert total==50000, total
+          manifest={
+              "dataset":"Drosophila 01301-51300",
+              "repository":"orbitalronin94/HERETIC-RONIN",
+              "commit":"a75fb8d35d099efa04353918ee7b73ad2a65cc75",
+              "source_path":"data/drosophila/parts",
+              "license":"MIT",
+              "synthetic":True,
+              "rows":total,
+              "unique_ids":len(ids),
+              "status_counts":dict(status_counts),
+              "language_counts":dict(language_counts),
+              "dataset_sha256":dataset_hash.hexdigest(),
+              "shards":reports,
+              "quality_status":"train_candidate_not_gold",
+              "holdout":False,
+              "note":"50 procedural task families with 1,000 parameterizations each across ten domains; included because all synthetic datasets were requested, but not gold and not 50,000 independent capabilities."
+          }
+          (root/"manifest.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+chr(10),encoding="utf-8")
+          (Path("minironin-unified")/"external-sources.json").write_text(json.dumps({"sources":[manifest]},ensure_ascii=False,indent=2)+chr(10),encoding="utf-8")
+          print(json.dumps(manifest,ensure_ascii=False,indent=2))
+          PY
+
       - name: Install tokenizer dependencies
         run: |
           python -m pip install --upgrade pip
