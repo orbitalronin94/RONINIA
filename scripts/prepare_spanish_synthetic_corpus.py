@@ -36,7 +36,7 @@ SPANISH_LANGUAGE = re.compile(
 )
 SYNTHETIC_SOURCE_PATH = re.compile(
     r"(?:^|/)(?:generated-curricula|generated-basic-curricula|generated-math-es|"
-    r"behavioral-datasets|cosmopedia(?:-[^/]*)?|drosophila|minironin-(?:behavior|engineering|identity|performance-engineering|abstention|abstain|aristocrat|casuist|scientist|oracle|error404|lexicon)[^/]*)(?:/|[-_.]|$)",
+    r"behavioral-datasets|engineering-lessons-v1|cosmopedia(?:-[^/]*)?|drosophila|minironin-(?:behavior|engineering|identity|performance-engineering|abstention|abstain|aristocrat|casuist|scientist|oracle|error404|lexicon)[^/]*)(?:/|[-_.]|$)",
     re.I,
 )
 SPANISH_SOURCE_PATH = re.compile(
