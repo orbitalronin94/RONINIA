@@ -65,7 +65,7 @@ jobs:
           run-id: ${{ env.PARENT_RUN_ID }}
           path: parent-artifact
 
-      - name: Resolve and verify exact 100k checkpoint and lineage
+      - name: Resolve and verify exact 137500 checkpoint and lineage
         run: |
           set -euo pipefail
           mapfile -t candidates < <(find parent-artifact -type f -name 'checkpoint-137500.pt' -size +0c)
@@ -75,12 +75,12 @@ jobs:
             exit 1
           fi
           cp "${candidates[0]}" checkpoint-parent-137500.pt
-          actual="$(sha256sum checkpoint-parent-100000.pt | awk '{print $1}')"
+          actual="$(sha256sum checkpoint-parent-137500.pt | awk '{print $1}')"
           echo "Parent checkpoint SHA-256: $actual"
           test "$actual" = "$EXPECTED_PARENT_SHA256"
           python - <<'PY'
           import torch
-          p=torch.load("checkpoint-parent-100000.pt",map_location="cpu",weights_only=False)
+          p=torch.load("checkpoint-parent-137500.pt",map_location="cpu",weights_only=False)
           assert int(p.get("completed_steps",-1)) == 137500, p.get("completed_steps")
           assert p.get("tokenizer_sha256") == "605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4"
           print({"completed_steps":p["completed_steps"],"validation_loss":p.get("validation_loss"),"parameter_count":p.get("parameter_count"),"corpus_sha256":p.get("corpus_sha256"),"tokenizer_sha256":p.get("tokenizer_sha256")})
@@ -160,11 +160,11 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: ronin-10m-checkpoints-100k-to-137500-${{ github.run_id }}
+          name: ronin-10m-checkpoints-137500-to-152500-${{ github.run_id }}
           path: |
-            runs/ronin-10m-137500-from-100k/checkpoint-*.pt
-            runs/ronin-10m-137500-from-100k/SHA256SUMS
-            runs/ronin-10m-137500-from-100k/progress.json
+            runs/ronin-10m-152500-from-137500/checkpoint-*.pt
+            runs/ronin-10m-152500-from-137500/SHA256SUMS
+            runs/ronin-10m-152500-from-137500/progress.json
           if-no-files-found: warn
           retention-days: 90
 
@@ -174,7 +174,7 @@ jobs:
           python - <<'PY'
           import hashlib,json,re
           from pathlib import Path
-          out=Path("runs/ronin-10m-137500-from-100k")
+          out=Path("runs/ronin-10m-152500-from-137500")
           checkpoints=list(out.glob("checkpoint-*.pt"))
           if not checkpoints:
             raise SystemExit("No recoverable checkpoints were produced")
@@ -186,7 +186,7 @@ jobs:
           lineage={
             "parent_run_id":43114609945,
             "parent_artifact":"ronin-10m-chain-137500-43114609945",
-            "parent_checkpoint":"checkpoint-100000.pt",
+            "parent_checkpoint":"checkpoint-137500.pt",
             "parent_checkpoint_sha256":"d2c30940ade76e82bc5e7569c96af6ac4337173d141f627410eb40847e245727",
             "token_cache_run_id":42890884432,
             "corpus_sha256":cache["corpus_sha256"],
@@ -208,13 +208,13 @@ jobs:
         with:
           name: ronin-10m-chain-152500-${{ github.run_id }}
           path: |
-            runs/ronin-10m-137500-from-100k/checkpoint-*.pt
-            runs/ronin-10m-137500-from-100k/SHA256SUMS
-            runs/ronin-10m-137500-from-100k/progress.json
-            runs/ronin-10m-137500-from-100k/lineage.json
+            runs/ronin-10m-152500-from-137500/checkpoint-*.pt
+            runs/ronin-10m-152500-from-137500/SHA256SUMS
+            runs/ronin-10m-152500-from-137500/progress.json
+            runs/ronin-10m-152500-from-137500/lineage.json
             token-cache/token-manifest.json
             configs/ronin-10m-speed-256.json
           if-no-files-found: warn
           retention-days: 90
 
-# Exact 100k parent and existing corpus/tokenizer cache are hash-verified; no retokenization.
+# Exact 137500 parent and existing corpus/tokenizer cache are hash-verified; no retokenization.
