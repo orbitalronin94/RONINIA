@@ -214,6 +214,10 @@ def prepare(input_root: Path, output: Path, manifest_path: Path, source_run_id: 
         "records": dict(counts),
         "datasets": {name: dict(value) for name, value in sorted(per_dataset.items())},
         "text_records": counts["records_included"],
+        "records_total": counts["records_included"],
+        "synthetic_records_included": counts["synthetic_included"],
+        "spanish_source_records_included": counts["spanish_source_included"],
+        "evaluation_records_excluded": counts["evaluation_excluded"],
         "text_bytes": total_bytes,
         "corpus_sha256": corpus_hash.hexdigest(),
         "language_policy": {
