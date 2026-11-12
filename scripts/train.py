@@ -62,6 +62,7 @@ def main():
     ap.add_argument("--checkpoint-every", type=int, default=5000)
     ap.add_argument("--eval-batches", type=int, default=16)
     ap.add_argument("--resume", type=Path, help="Parent checkpoint to continue from")
+    ap.add_argument("--allow-corpus-change", action="store_true", help="Explicitly continue from a parent checkpoint using a different verified corpus; tokenizer and model config must still match")
     args = ap.parse_args()
     if min(args.steps, args.batch_size, args.threads, args.checkpoint_every, args.eval_batches) <= 0 or args.warmup_steps < 0 or not 0 < args.min_lr_ratio <= 1:
         raise SystemExit("steps, batch-size, threads, checkpoint-every and eval-batches must be positive")
@@ -71,6 +72,8 @@ def main():
     torch.manual_seed(20261110)
     config = ModelConfig.load(args.config)
     args.output_dir.mkdir(parents=True, exist_ok=True)
+    token_manifest = None
+    corpus_changed_from_parent = False
     generated_token_cache = args.tokens is None
     if generated_token_cache:
         if args.corpus is None or args.tokenizer is None or args.token_manifest is not None:
@@ -97,6 +100,7 @@ def main():
             raise SystemExit("pretokenized mode requires --tokens and --token-manifest only")
         token_cache = args.tokens
         manifest = json.loads(args.token_manifest.read_text(encoding="utf-8"))
+        token_manifest = manifest
         if manifest.get("schema") != "roninia-token-cache-v1" or manifest.get("dtype") != "uint16":
             raise SystemExit("unsupported token cache manifest")
         if manifest.get("vocab_size") != config.vocab_size:
