@@ -80,7 +80,7 @@ jobs:
           python - <<'PY'
           import torch
           p=torch.load("checkpoint-parent-205000.pt",map_location="cpu",weights_only=False)
-          assert int(p.get("completed_steps",-1)) == 180000, p.get("completed_steps")
+          assert int(p.get("completed_steps",-1)) == 205000, p.get("completed_steps")
           assert p.get("tokenizer_sha256") == "605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4"
           assert int(p.get("parameter_count",-1)) == 9757440, p.get("parameter_count")
           print({"completed_steps":p["completed_steps"],"parameter_count":p.get("parameter_count"),"corpus_sha256":p.get("corpus_sha256"),"tokenizer_sha256":p.get("tokenizer_sha256")})
