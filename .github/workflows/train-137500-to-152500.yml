@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   train:
-    if: github.event_name == 'push' || (github.event.pull_request.merged == true && github.event.pull_request.title == 'Launch RONINIA 100k to 137.5k training')
+    if: github.event_name == 'push' || (github.event.pull_request.merged == true && github.event.pull_request.title == 'Launch RONINIA 137.5k to 152.5k training')
     runs-on: ubuntu-latest
     timeout-minutes: 420
     env:
