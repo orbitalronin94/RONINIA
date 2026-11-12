@@ -67,7 +67,7 @@ jobs:
         run: |
           set -euo pipefail
           [[ "$CORPUS_RUN_ID" =~ ^[0-9]+$ ]]
-          for attempt in $(seq 1 120); do
+          for attempt in $(seq 1 360); do
             run="$(curl --fail --silent --show-error -H "Authorization: Bearer $GH_TOKEN" -H "Accept: application/vnd.github+json" "https://api.github.com/repos/orbitalronin94/MINIRONIN/actions/runs/$CORPUS_RUN_ID")"
             status="$(jq -r .status <<<"$run")"
             conclusion="$(jq -r .conclusion <<<"$run")"
@@ -75,7 +75,7 @@ jobs:
               test "$conclusion" = "success"
               break
             fi
-            echo "Source corpus run $CORPUS_RUN_ID is $status; waiting (attempt $attempt/120)."
+            echo "Source corpus run $CORPUS_RUN_ID is $status; waiting (attempt $attempt/360)."
             sleep 30
           done
           test "$(jq -r .name <<<"$run")" = "MINIRONIN — construir corpus unificado de entrenamiento"
