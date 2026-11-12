@@ -172,6 +172,7 @@ def prepare(input_root: Path, output: Path, manifest_path: Path, source_run_id: 
     output.parent.mkdir(parents=True, exist_ok=True)
     counts = Counter()
     per_dataset: dict[str, Counter] = {}
+    per_source: dict[str, dict[str, Any]] = {}
     corpus_hash = hashlib.sha256()
     source_hashes = []
     total_bytes = 0
@@ -225,8 +226,17 @@ def prepare(input_root: Path, output: Path, manifest_path: Path, source_run_id: 
                     file_counts["records_included"] += 1
                     file_counts["synthetic_included" if synthetic else "spanish_source_included"] += 1
                     dataset = str(record.get("dataset") or Path(str(record.get("source_id", source.name))).name)
+                    source_id = str(record.get("source_id") or source.name)
                     per_dataset.setdefault(dataset, Counter())[include_reason] += 1
                     per_dataset[dataset]["included"] += 1
+                    source_entry = per_source.setdefault(source_id, {
+                        "dataset": dataset,
+                        "records_included": 0,
+                        "synthetic_included": 0,
+                        "spanish_source_included": 0,
+                    })
+                    source_entry["records_included"] += 1
+                    source_entry["synthetic_included" if synthetic else "spanish_source_included"] += 1
             source_hashes.append({
                 "path": source.name,
                 "sha256": sha256_file(source),
@@ -250,6 +260,7 @@ def prepare(input_root: Path, output: Path, manifest_path: Path, source_run_id: 
         "source_files_total": len(source_hashes),
         "records": dict(counts),
         "datasets": {name: dict(value) for name, value in sorted(per_dataset.items())},
+        "sources": {name: value for name, value in sorted(per_source.items())},
         "text_records": counts["records_included"],
         "records_total": counts["records_included"],
         "synthetic_records_included": counts["synthetic_included"],
