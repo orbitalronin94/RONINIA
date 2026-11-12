@@ -113,3 +113,32 @@ def test_translation_language_pair_uses_target_side():
 def test_engineering_lessons_source_is_synthetic():
     record = row(source_id="data/curated/engineering-lessons-v1/train.jsonl", synthetic=False)
     assert is_synthetic(record)
+
+
+def test_structured_drosophila_candidate_is_rendered_and_classified_synthetic():
+    from prepare_spanish_synthetic_corpus import render_text
+    record = {
+        "id": "01301", "domain": "matemáticas", "skill": "aritmética",
+        "difficulty": "introductory", "prompt": "Calcula 2 + 2.",
+        "answer": "4", "status": "train_candidate", "synthetic": False,
+        "source_id": "drosophila/parts/01_matematicas_5000.jsonl",
+    }
+    assert is_synthetic(record)
+    rendered = render_text(record)
+    assert "Calcula 2 + 2." in rendered and "4" in rendered
+    assert "01301" not in rendered and "train_candidate" not in rendered
+
+
+def test_external_synthetic_source_and_candidate_caveat_are_recorded(tmp_path: Path):
+    source = tmp_path / "source"
+    (source / "drosophila" / "parts").mkdir(parents=True)
+    (source / "external-sources.json").write_text(json.dumps({"sources": [{"repository": "orbitalronin94/HERETIC-RONIN", "commit": "pinned"}]}), encoding="utf-8")
+    with gzip.open(source / "train.jsonl.gz", "wt", encoding="utf-8") as stream:
+        stream.write(json.dumps(row(source_id="data/curated/accepted/pharmaconer-es-train.jsonl", metadata={}, text="Contenido castellano admitido."), ensure_ascii=False) + "\n")
+    drosophila = source / "drosophila" / "parts" / "01_matematicas_5000.jsonl"
+    drosophila.write_text(json.dumps({"id": "01301", "domain": "matemáticas", "prompt": "Calcula 2 + 2.", "answer": "4", "status": "train_candidate"}) + "\n", encoding="utf-8")
+    manifest = prepare(source, tmp_path / "train.txt", tmp_path / "manifest.json", 123)
+    assert manifest["records"]["synthetic_included"] == 1
+    assert manifest["external_sources"][0]["repository"] == "orbitalronin94/HERETIC-RONIN"
+    assert "not gold" in manifest["dataset_notes"]["drosophila-50k"]
+    assert manifest["sources"]["drosophila/parts/01_matematicas_5000.jsonl"]["dataset"] == "drosophila"
