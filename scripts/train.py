@@ -238,6 +238,7 @@ def main():
                 "parent_corpus_sha256": (resume_payload or {}).get("corpus_sha256"),
                 "corpus_changed_from_parent": corpus_changed_from_parent,
                 "corpus_selection_policy": (token_manifest or {}).get("selection_policy"),
+                "corpus_selection_policy_version": (token_manifest or {}).get("selection_policy_version"),
                 "corpus_selection_records": (token_manifest or {}).get("records_total"),
                 "synthetic_records_included": (token_manifest or {}).get("synthetic_records_included"),
                 "spanish_source_records_included": (token_manifest or {}).get("spanish_source_records_included"),

@@ -36,7 +36,7 @@ SPANISH_LANGUAGE = re.compile(
 )
 SYNTHETIC_SOURCE_PATH = re.compile(
     r"(?:^|/)(?:generated-curricula|generated-basic-curricula|generated-math-es|"
-    r"behavioral-datasets|cosmopedia(?:-[^/]*)?|drosophila|minironin-(?:behavior|engineering|identity|performance-engineering|abstention|abstain|aristocrat|casuist|scientist|oracle|error404|lexicon)[^/]*)(?:/|[-_.]|$)",
+    r"behavioral-datasets|engineering-lessons-v1|cosmopedia(?:-[^/]*)?|drosophila|minironin-(?:behavior|engineering|identity|performance-engineering|abstention|abstain|aristocrat|casuist|scientist|oracle|error404|lexicon)[^/]*)(?:/|[-_.]|$)",
     re.I,
 )
 SPANISH_SOURCE_PATH = re.compile(
@@ -255,8 +255,9 @@ def prepare(input_root: Path, output: Path, manifest_path: Path, source_run_id: 
         raise SystemExit("No verified Spanish non-synthetic rows were included; refusing an incomplete library projection")
 
     manifest = {
-        "schema": "roninia-spanish-plus-synthetic-corpus-v1",
-        "selection_policy": "include_all_synthetic_plus_non_synthetic_verified_spanish",
+        "schema": "roninia-spanish-plus-synthetic-corpus-v2",
+        "selection_policy_version": 2,
+        "selection_policy": "all_synthetic_plus_verified_spanish_non_synthetic_target_language_precedence",
         "source_repository": "orbitalronin94/MINIRONIN",
         "source_run_id": source_run_id,
         "source_artifact": "minironin-unified-train-corpus",

@@ -33,7 +33,7 @@ permissions:
 
 concurrency:
   group: roninia-spanish-synthetic-cache
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   validate:
@@ -134,7 +134,8 @@ jobs:
           from pathlib import Path
           m=json.loads(Path("data/corpus/corpus-manifest.json").read_text())
           counts=m["records"]
-          assert m["selection_policy"]=="include_all_synthetic_plus_non_synthetic_verified_spanish"
+          assert m["selection_policy_version"]==2
+          assert m["selection_policy"]=="all_synthetic_plus_verified_spanish_non_synthetic_target_language_precedence"
           assert counts["synthetic_included"] > 0
           assert counts["spanish_source_included"] > 0
           assert counts["records_included"] == counts["synthetic_included"] + counts["spanish_source_included"]
@@ -199,6 +200,7 @@ jobs:
           assert cache["schema"]=="roninia-token-cache-v1" and cache["dtype"]=="uint16"
           assert cache["vocab_size"]==8192
           assert cache["corpus_sha256"]==corpus["corpus_sha256"]
+          assert cache["selection_policy_version"]==2
           assert cache["selection_policy"]==corpus["selection_policy"]
           assert cache["synthetic_records_included"]>0
           assert cache["spanish_source_records_included"]>0
