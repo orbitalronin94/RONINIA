@@ -58,6 +58,7 @@
 - [Capítulo XIX — De la paz sin hash, del retrato arañado y de la única vez que el hombre de la vara dijo «ni puta idea»](#capítulo-xix--de-la-paz-sin-hash-del-retrato-arañado-y-de-la-única-vez-que-el-corchete-dijo-ni-puta-idea)
 - [Capítulo XX — De la fiesta del cien mil y del reo que se fue al pozo](#capítulo-xx--de-la-fiesta-del-cien-mil-del-ascenso-firmado-en-vino-del-reo-que-se-fue-al-pozo-y-de-la-frase-que-ardió-dos-veces)
 - [Capítulo XXI — De las diecisiete veces que el loro dijo no saber](#capítulo-xxi--de-las-diecisiete-confesiones-de-la-comilla-que-quedó-abierta-y-del-escribano-que-quiso-llamar-mejora-a-una-casilla-llena)
+- [Capítulo XXII — De las catorce ausencias y de las maneras nuevas de callar](#capítulo-xxii--de-las-catorce-ausencias-y-de-las-maneras-nuevas-de-callar)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
@@ -99,6 +100,7 @@
 | 90.000 | [43091480701](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701) | [13889525822](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701/artifacts/13889525822) | `checkpoint-90000-holdout-100.json` | `b1c2e70615f844330a9572154952e859a21574f8a95637186b827c45730c660b` |
 | 100.000 | [43112010343](https://github.com/orbitalronin94/RONINIA/actions/runs/43112010343) | [13897325999](https://github.com/orbitalronin94/RONINIA/actions/runs/43112010343/artifacts/13897325999) | `checkpoint-100000-holdout-100.json` | `5a3ded6f409b008690b1ff18b279aa4609d45ab320cd60130fea6f18121b6f79` |
 | 137.500 | [43166483341](https://github.com/orbitalronin94/RONINIA/actions/runs/43166483341) | [13920058028](https://github.com/orbitalronin94/RONINIA/actions/runs/43166483341/artifacts/13920058028) | `checkpoint-137500-holdout-100.json` | `d2c30940ade76e82bc5e7569c96af6ac4337173d141f627410eb40847e245727` |
+| 205.000 | [43309180308](https://github.com/orbitalronin94/RONINIA/actions/runs/43309180308) | [13984838040](https://github.com/orbitalronin94/RONINIA/actions/runs/43309180308/artifacts/13984838040) | `checkpoint-205000-holdout-100.json` | `425b9a0939a1b387420061450a99728718eb2640dea3c05fd1692d9ea8a24fa9` |
 | 90.000 | [43091480701](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701) | [13889525822](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701/artifacts/13889525822) | `checkpoint-90000-holdout-100.json` | `b1c2e70615f844330a9572154952e859a21574f8a95637186b827c45730c660b` |
 
 ### Linaje íntegro del checkpoint de 40.000 pasos
@@ -4297,6 +4299,186 @@ El escribano dejó la última línea sin rúbrica. El loro siguió en su percha.
 > **Provisión de cadena de custodia:** las cifras, identificadores y citas literales se atribuyen al JSON del artefacto 13920058028. Las comparaciones de 78k y 100k remiten a sus respectivos holdouts oficiales. El diálogo del escribano y del alguacil, así como sus juicios, pertenece a la composición literaria. Ninguna interpretación narrativa se presenta como salida del modelo.
 
 
+---
+
+## Capítulo XXII — De las catorce ausencias y de las maneras nuevas de callar
+
+**Checkpoint evaluado:** `checkpoint-205000.pt`  
+**Pasos acumulados:** 205.000  
+**Run de entrenamiento de procedencia:** [43261847027](https://github.com/orbitalronin94/RONINIA/actions/runs/43261847027)  
+**Run oficial de holdout:** [43309180308](https://github.com/orbitalronin94/RONINIA/actions/runs/43309180308)  
+**Artefacto de respuestas:** [13984838040](https://github.com/orbitalronin94/RONINIA/actions/runs/43309180308/artifacts/13984838040)  
+**JSON dentro del ZIP:** `checkpoint-205000-holdout-100.json`  
+**SHA-256 del checkpoint:** `425b9a0939a1b387420061450a99728718eb2640dea3c05fd1692d9ea8a24fa9`  
+**SHA-256 del tokenizador:** `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`  
+**SHA-256 del holdout:** `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`  
+**Protocolo:** greedy; máximo 32 tokens y 128 bytes; dos hilos; sin KV cache; sin RAG.  
+**Nota de entrenamiento:** la compilación del corpus castellano ampliado falló; la continuación de 25.000 pasos se hizo con la caché anterior. No se atribuye este resultado al corpus nuevo.
+
+### I. De las catorce ausencias que el documento no contó
+
+El alguacil tomó el JSON y empezó a contar. Cien preguntas, cien registros. Pero catorce campos `answer` estaban vacíos: **#5, #22, #23, #27, #33, #40, #53, #54, #56, #63, #68, #79, #90 y #96**.
+
+Catorce. El doble que en el holdout de 180.000 pasos. Y el documento no declaraba la cifra.
+
+—¿Dónde ha callado? —preguntó el escribano.
+
+El alguacil señaló las preguntas técnicas. Las #53 y #54, relativas a SHA-256 y a la validación de la procedencia, quedaron vacías; la #55 respondió «ni puta idea»; la #56 volvió a quedar vacía. No eran tres silencios consecutivos, como había dicho al principio el escribano, sino dos vacíos, una abstención explícita y otro vacío. La precisión también debía aplicarse a las metáforas.
+
+—Se calla cuando le preguntan por la infraestructura de su propia evaluación —dijo el escribano.
+
+—Y eso es una observación —respondió el alguacil—. No una prueba de que entienda la ironía.
+
+Las catorce ausencias quedaron inscritas una por una. El documento que declaraba hashes, semillas y linaje había omitido contar sus propias casillas vacías.
+
+### II. De la comilla que volvió sola
+
+En el #7 apareció una comilla aislada:
+
+> `"`
+
+La comilla del 137.500 había quedado abierta; otra había comparecido en el registro de 180.000. Ahora volvía a aparecer. El escribano quiso hablar de una escuela de puntuación. El alguacil le recordó que el #30 decía «y la unión europea»: no era una segunda comilla.
+
+—Una sola —dijo—. No hagamos plural lo que la prueba no ha producido.
+
+La comilla quedó abierta. Nadie supo qué esperaba dentro.
+
+### III. De la familia Auto y sus tres descendientes
+
+Tres respuestas del mismo expediente parecían pertenecer a una familia:
+
+- **#77:** «Auto-Terto-Terto-Terto-Terto-Terto-Terto-Terto-».
+- **#88:** «Auto: Annotation Automs Automs Automs Automs Automs Automs A».
+- **#89:** «AutoSon: AutoSon: AutoSon: AutoSon: AutoSon: Au».
+
+El escribano propuso reconocer una nueva escuela de pensamiento automático.
+
+—¿Y qué piensa esa escuela? —preguntó el alguacil.
+
+—Que es automática.
+
+—Eso ya lo sabíamos. Lo que ignoramos es si piensa.
+
+La familia Auto quedó registrada como recurrencia literal, no como concepto descubierto por el animal.
+
+### IV. De Aaron Neumannya, matemático sin cátedra
+
+El #80 respondió:
+
+> «Aaron Neumannya;oooooooooooooooooooooooo».
+
+El Aaron de anteriores comparecencias había mutado en Aarontomazonas y ahora parecía haberse casado con Neumann. Después del apellido venía una hilera de oes.
+
+—Un matemático —dijo el escribano—. Quizá una alusión a Neumann.
+
+—Quizá —dijo el alguacil—. O una vocal que ha perdido el gobierno de sí misma.
+
+El expediente no permitía decidirlo. Aaron Neumannya quedó inscrito como personaje ficticio, sin plaza académica ni obra publicada.
+
+### V. Del cráneo que no quiso morir
+
+El #81 devolvió una reliquia:
+
+> «Paceritannia di una atrico della relativa della. Respuesta: La respuesta es: El cráneo que el cr».
+
+El cráneo había comparecido en el 137.500 y ahora regresaba, precedido por una frase de apariencia italiana, pero sin forma lingüística estable.
+
+—Prueba que el cráneo persiste —dijo el alguacil—. No que haya algo dentro.
+
+La frase se conservó sin corregirla. La persistencia de un fragmento no acreditaba la salud del organismo.
+
+### VI. Del inglés que nunca se marchó
+
+En el #43 el loro produjo:
+
+> «Adapits of a bulkets with a bulkets. The bulkets are used to be used in a bulk».
+
+Y en el #85:
+
+> «Annie inversionary, which is a very important part of the way that the inversion is the case of the inversion of the».
+
+El inglés seguía allí, con sus *bulkets* y su *Annie inversionary*. El escribano quiso atribuirlo a una supervivencia concreta del corpus; el alguacil le recordó que dos fragmentos no bastaban para reconstruir su procedencia.
+
+—Suena académico —insistió el escribano.
+
+—También suenan académicos algunos documentos que no dicen nada.
+
+Se anotó persistencia de generación en inglés, con contenido no acreditado. La purga castellana no podía proclamarse porque, en esta etapa, no se había demostrado que hubiese existido tal purga.
+
+### VII. Del reglamento que cambió de número y no de costumbre
+
+La fórmula «No atribuyas intenciones sin evidencia» apareció nueve veces: **#46, #48, #61, #64, #76, #84, #86, #91 y #93**. En las nueve comparecencias sobrevivía también «Variante de encuadre 1».
+
+El reglamento había rotado de variante. El collar era nuevo; el perro, el mismo.
+
+—Al menos ha aprendido a no atribuir intenciones —dijo el escribano.
+
+—A veces repite la norma incluso cuando nadie se la pide —respondió el alguacil—. La pertinencia también debe examinarse.
+
+Nueve apariciones acreditaban recurrencia. No nueve actos de juicio.
+
+### VIII. De las seis confesiones y de las otras maneras de esconder la ignorancia
+
+«Ni puta idea» apareció seis veces: **#6, #14, #17, #31, #55 y #58**. En el 137.500 habían sido diecisiete.
+
+El escribano quiso celebrar el descenso.
+
+El alguacil señaló las catorce casillas vacías, las comillas, los dos puntos, las repeticiones y los fragmentos en inglés.
+
+—Ha disminuido la confesión —dijo—. No necesariamente la ignorancia.
+
+El «ni puta idea» tenía al menos la virtud de declarar su propia derrota. Ahora el animal disponía de otras maneras de no responder: una cadena de caracteres, una frase fuera de contexto, un idioma inesperado o el silencio.
+
+—Antes no sabía y lo decía —murmuró el escribano.
+
+—Ahora a veces no sabe y hace literatura.
+
+### IX. Del uno que no abandona el expediente
+
+La pregunta #100, sobre si importa más la personalidad o la corrección, había oscilado entre el silencio y fragmentos distintos en checkpoints anteriores. En el 205.000 respondió:
+
+> «¿es es una 1.»
+
+El escribano recordó el «Con precisión: 1» de los primeros registros. El uno volvía como una cifra que el animal había conservado sin que constase que comprendiera su función.
+
+—Quizá quiere decir que la corrección es una —aventuró.
+
+—O que la personalidad es una —dijo el alguacil.
+
+—O que uno es el número de la verdad.
+
+—O que el loro ha escrito un uno.
+
+La respuesta quedó en el JSON, sin elevarla a sentencia filosófica.
+
+### X. De la homeostasis y del deber de contar
+
+El alguacil volvió a la lista: #5, #22, #23, #27, #33, #40, #53, #54, #56, #63, #68, #79, #90 y #96. Las contó una vez. Las volvió a contar. No para obtener una cifra más hermosa, sino para impedir que el escribano pudiera convertir el silencio en una mejora.
+
+—Vigilad la homeostasis —dijo el escribano.
+
+—La vigilo —respondió el alguacil—. Pero también vigilo al que la invoca cuando no sabe explicar el resultado.
+
+Y añadió la glosa:
+
+> **Una respuesta vacía no es una respuesta correcta. Una frase repetida no es una idea. Una abstención explícita puede ser honesta; catorce silencios sin declarar son, además, un problema de trazabilidad.**
+
+El loro no había demostrado que supiera más. Había demostrado que podía callar de más maneras. El alguacil no consiguió que hablara; consiguió que nadie fingiera que no había callado.
+
+### Máculas del capítulo
+
+- `CHECKPOINT_205000_VERIFIED`: checkpoint identificado por SHA-256.
+- `HOLDOUT_205000_OFFICIAL`: 100 preguntas; protocolo greedy; 32 tokens y 128 bytes; dos hilos; sin KV cache ni RAG.
+- `FOURTEEN_EMPTY_ANSWERS`: inventario literal #5, #22, #23, #27, #33, #40, #53, #54, #56, #63, #68, #79, #90 y #96.
+- `SIX_NI_PUTA_IDEA`: inventario literal #6, #14, #17, #31, #55 y #58; no equivale a calibración.
+- `NINE_NO_INTENTIONS`: #46, #48, #61, #64, #76, #84, #86, #91 y #93.
+- `AUTO_FAMILY`: #77, #88 y #89; recurrencia literal, no concepto acreditado.
+- `OPEN_QUOTE`: #7; el #30 no es una comilla.
+- `NO_SEMANTIC_SCORE`: no se declara exactitud ni comprensión global.
+
+> **Provisión de cadena de custodia:** las respuestas literales proceden del JSON del artefacto 13984838040. El run 43309180308 terminó correctamente y verificó el checkpoint 205.000, el tokenizador y el holdout de cien preguntas. El SHA-256 del checkpoint es distinto del digest del ZIP del artefacto: no son huellas intercambiables. Las interpretaciones sobre el cráneo, Aaron Neumannya, la familia Auto y la homeostasis son glosas humanas, no salidas ni puntuaciones del modelo.
+
+
 ## Historial de ejecuciones — registro completo de GitHub Actions
 
 Este registro incluye **todas las ejecuciones completadas en `main` del repositorio**, no solo los holdouts: entrenamiento, tokenización, evaluación, preflight, fallos y reintentos. Los identificadores y artefactos se conservan aunque una ejecución falle. La fecha figura como «—» cuando no se ha recuperado de la API y no debe inferirse.
@@ -4310,6 +4492,7 @@ Los runs fallidos `43022253427` y `43022290341` se conservan como fallos, con su
 | Fecha | Ejecución | Workflow | Evento | Run ID | Resultado | Artefactos | Commit |
 |---|---|---|---|---:|---|---|---|
 <!-- HOLDOUT-INDEX-START -->
+| 2026-11-12 | RONIN-10M — official 100-prompt holdout at 205k | `official-holdout-205000` | workflow_dispatch | 43309180308 | success | [13984838040](https://github.com/orbitalronin94/RONINIA/actions/runs/43309180308/artifacts/13984838040) | `62da7623310e` |
 | 2026-11-11 | RONIN-10M — official 100-prompt holdout at 100k | `checkpoint-holdout-ronin-10m-100000` | push | 43112010343 | success | [13897325999](https://github.com/orbitalronin94/RONINIA/actions/runs/43112010343/artifacts/13897325999) | `01db5d205b0e` |
 | Fecha | Ejecución | Workflow o tipo | Evento | Run ID | Resultado | Artefactos | Commit |
 |---|---|---|---|---:|---|---|---|
