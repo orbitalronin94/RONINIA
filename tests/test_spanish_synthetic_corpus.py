@@ -69,6 +69,8 @@ def test_streaming_projection_keeps_synthetic_and_spanish_only(tmp_path: Path):
     assert manifest["records"]["synthetic_included"] == 1
     assert manifest["records"]["spanish_source_included"] == 1
     assert manifest["records"]["evaluation_excluded"] == 1
+    assert manifest["sources"]["data/synth/generated.jsonl"]["synthetic_included"] == 1
+    assert manifest["sources"]["data/curated/accepted/pharmaconer-es-train.jsonl"]["spanish_source_included"] == 1
     assert manifest["records"]["explicit_non_spanish_language"] == 1
 
 
