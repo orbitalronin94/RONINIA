@@ -1,0 +1,220 @@
+name: RONIN-10M — continue 180000 to 205000 (+25000, recovered parent + existing corpus)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/train-180000-to-205000.yml"
+
+permissions:
+  actions: read
+  contents: read
+
+concurrency:
+  group: roninia-10m-continue-180000-to-205000
+  cancel-in-progress: false
+
+jobs:
+  train:
+    runs-on: ubuntu-latest
+    timeout-minutes: 420
+    env:
+      PARENT_RUN_ID: "43186763903"
+      PARENT_ARTIFACT: "ronin-10m-chain-180000-43186763903"
+      TOKEN_CACHE_RUN_ID: "42890884432"
+      EXPECTED_PARENT_SHA256: "a0e37c95855937b7b071a5de6384528a6372a564ebb944b8b4851d97126c5433"
+      EXPECTED_TOKENIZER_SHA256: "605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4"
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install CPU training dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install --index-url https://download.pytorch.org/whl/cpu torch
+          python -m pip install numpy tokenizers
+
+      - name: Verify recovered 180000 parent run and immutable artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          run="$(curl --fail --silent --show-error \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/repos/orbitalronin94/RONINIA/actions/runs/$PARENT_RUN_ID")"
+          test "$(jq -r .status <<<"$run")" = "completed"
+          # The original run failed only in its final lineage check; the checkpoint
+          # was recovered from its uploaded chain artifact and independently used
+          # by the official 180k holdout.
+          test "$(jq -r .head_branch <<<"$run")" = "main"
+
+      - name: Download exact recovered 180000 checkpoint chain
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ env.PARENT_ARTIFACT }}
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/RONINIA
+          run-id: ${{ env.PARENT_RUN_ID }}
+          path: parent-artifact
+
+      - name: Resolve and verify exact 180000 checkpoint
+        run: |
+          set -euo pipefail
+          mapfile -t candidates < <(find parent-artifact -type f -name 'checkpoint-180000.pt' -size +0c)
+          if [ "${#candidates[@]}" -ne 1 ]; then
+            echo "::error::Expected exactly one checkpoint-180000.pt, found ${#candidates[@]}"
+            find parent-artifact -maxdepth 5 -type f -printf '%p %s bytes\\n'
+            exit 1
+          fi
+          cp "${candidates[0]}" checkpoint-parent-180000.pt
+          actual="$(sha256sum checkpoint-parent-180000.pt | awk '{print $1}')"
+          echo "Parent checkpoint SHA-256: $actual"
+          test "$actual" = "$EXPECTED_PARENT_SHA256"
+          python - <<'PY'
+          import torch
+          p=torch.load("checkpoint-parent-180000.pt",map_location="cpu",weights_only=False)
+          assert int(p.get("completed_steps",-1)) == 180000, p.get("completed_steps")
+          assert p.get("tokenizer_sha256") == "605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4"
+          assert int(p.get("parameter_count",-1)) == 9757440, p.get("parameter_count")
+          print({"completed_steps":p["completed_steps"],"parameter_count":p.get("parameter_count"),"corpus_sha256":p.get("corpus_sha256"),"tokenizer_sha256":p.get("tokenizer_sha256")})
+          PY
+
+      - name: Download existing full-corpus token cache (no retokenization)
+        uses: actions/download-artifact@v4
+        with:
+          name: roninia-token-cache-${{ env.TOKEN_CACHE_RUN_ID }}
+          github-token: ${{ github.token }}
+          repository: orbitalronin94/RONINIA
+          run-id: ${{ env.TOKEN_CACHE_RUN_ID }}
+          path: token-cache
+
+      - name: Verify existing cache identity, tokenizer and hashes
+        run: |
+          set -euo pipefail
+          test -s token-cache/corpus-tokens.u16
+          test -s token-cache/token-manifest.json
+          test -s token-cache/SHA256SUMS
+          (cd token-cache && sha256sum -c SHA256SUMS)
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          cache=json.loads(Path("token-cache/token-manifest.json").read_text())
+          assert cache.get("schema") == "roninia-token-cache-v1", cache
+          assert cache.get("dtype") == "uint16", cache
+          assert cache.get("vocab_size") == 8192, cache
+          assert str(cache.get("source_run_id")) == "42523463620", cache
+          assert cache.get("tokenizer_sha256") == "605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4", cache
+          print(json.dumps({k:cache.get(k) for k in ("source_run_id","corpus_sha256","token_count","tokens_sha256","tokenizer_sha256")},indent=2))
+          PY
+
+      - name: Build checkpoint-compatible 256-token config
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          config=json.loads(Path("configs/ronin-10m.json").read_text())
+          config["context_length"]=256
+          Path("configs/ronin-10m-speed-256.json").write_text(json.dumps(config,indent=2)+chr(10))
+          PY
+
+      - name: Continue training for exactly 25000 additional steps
+        env:
+          OMP_NUM_THREADS: "2"
+          MKL_NUM_THREADS: "2"
+          OPENBLAS_NUM_THREADS: "2"
+          OMP_PROC_BIND: CLOSE
+          OMP_PLACES: CORES
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import runpy,sys,torch
+          torch.set_num_threads(2)
+          torch.set_num_interop_threads(2)
+          sys.argv=[
+            "scripts/train.py",
+            "--config","configs/ronin-10m-speed-256.json",
+            "--tokens","token-cache/corpus-tokens.u16",
+            "--token-manifest","token-cache/token-manifest.json",
+            "--resume","checkpoint-parent-180000.pt",
+            "--output-dir","runs/ronin-10m-205000-from-180000",
+            "--steps","25000",
+            "--threads","2",
+            "--batch-size","4",
+            "--learning-rate","2.5e-5",
+            "--warmup-steps","0",
+            "--min-lr-ratio","1.0",
+            "--checkpoint-every","1000",
+            "--eval-batches","32",
+          ]
+          runpy.run_path("scripts/train.py",run_name="__main__")
+          PY
+
+      - name: Upload every recoverable checkpoint even if a later step fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ronin-10m-checkpoints-180000-to-205000-${{ github.run_id }}
+          path: |
+            runs/ronin-10m-205000-from-180000/checkpoint-*.pt
+            runs/ronin-10m-205000-from-180000/SHA256SUMS
+            runs/ronin-10m-205000-from-180000/progress.json
+          if-no-files-found: warn
+          retention-days: 90
+
+      - name: Verify cumulative 205000 checkpoint and write lineage
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import hashlib,json,re
+          from pathlib import Path
+          out=Path("runs/ronin-10m-205000-from-180000")
+          checkpoints=list(out.glob("checkpoint-*.pt"))
+          if not checkpoints:
+            raise SystemExit("No recoverable checkpoints were produced")
+          latest=max(checkpoints,key=lambda p:int(re.search(r"checkpoint-(\\d+)",p.name).group(1)))
+          step=int(re.search(r"checkpoint-(\\d+)",latest.name).group(1))
+          assert step == 205000, {"latest_checkpoint":latest.name,"cumulative_steps":step}
+          digest=hashlib.sha256(latest.read_bytes()).hexdigest()
+          cache=json.loads(Path("token-cache/token-manifest.json").read_text())
+          lineage={
+            "parent_run_id":43186763903,
+            "parent_artifact":"ronin-10m-chain-180000-43186763903",
+            "parent_checkpoint":"checkpoint-180000.pt",
+            "parent_checkpoint_sha256":"a0e37c95855937b7b071a5de6384528a6372a564ebb944b8b4851d97126c5433",
+            "token_cache_run_id":42890884432,
+            "corpus_sha256":cache["corpus_sha256"],
+            "tokenizer_sha256":cache["tokenizer_sha256"],
+            "token_count":cache["token_count"],
+            "steps_this_run":25000,
+            "cumulative_steps":step,
+            "latest_checkpoint":latest.name,
+            "latest_checkpoint_sha256":digest,
+            "training_config":{"context_length":256,"threads":2,"batch_size":4,"learning_rate":0.000025,"checkpoint_every":1000,"eval_batches":32,"tokenization_reused":True}
+          }
+          (out/"lineage.json").write_text(json.dumps(lineage,indent=2)+chr(10))
+          print(json.dumps(lineage,indent=2))
+          PY
+
+      - name: Upload final checkpoint and complete recovery lineage
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ronin-10m-chain-205000-${{ github.run_id }}
+          path: |
+            runs/ronin-10m-205000-from-180000/checkpoint-*.pt
+            runs/ronin-10m-205000-from-180000/SHA256SUMS
+            runs/ronin-10m-205000-from-180000/progress.json
+            runs/ronin-10m-205000-from-180000/lineage.json
+            token-cache/token-manifest.json
+            configs/ronin-10m-speed-256.json
+          if-no-files-found: warn
+          retention-days: 90
+
+# Resume the independently holdout-verified 180k checkpoint; reuse the prior token cache unchanged.
