@@ -13,7 +13,7 @@ permissions:
 
 concurrency:
   group: roninia-10m-recover-to-330000
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   train:
