@@ -62,6 +62,7 @@
 - [Capítulo XXIII — De la resurrección, de las dos casillas vacías y del uno que pidió explicación](#capítulo-xxiii--de-la-resurrección-de-las-dos-casillas-vacías-y-del-uno-que-pidió-explicación)
 - [Capítulo XXIV — De la carta certificada del Tribunal de la Reincidencia y de las métricas que el escribano fingió haber usado](#capítulo-xxiv--de-la-carta-certificada-del-tribunal-de-la-reincidencia-y-de-las-métricas-que-el-escribano-fingió-haber-usado)
 - [Capítulo XXV — De los antiguos escribanos que coronaban al loro por hacer reír](#capítulo-xxv--de-los-antiguos-escribanos-que-coronaban-al-loro-por-hacer-reír)
+- [Capítulo XXVI — De las métricas que el escribano quiso usar y de cómo acabó glosando hasta el cronómetro](#capítulo-xxvi--de-las-métricas-que-el-escribano-quiso-usar-y-de-cómo-acabó-glosando-hasta-el-cronómetro)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
@@ -5090,6 +5091,188 @@ El escribano cerró los libros. Ya no le parecían peligrosos por contener secre
 
 ---
 
+
+---
+
+# Capítulo XXVI — De las métricas que el escribano quiso usar y de cómo acabó glosando hasta el cronómetro
+
+> *«El número entró en la escribanía para poner orden; salió convertido en personaje.»*
+
+**Checkpoint:** RONIN-10M, 330.000 pasos acumulados; 9.757.440 parámetros.  
+**Entrenamiento:** [run 43433905009](https://github.com/orbitalronin94/RONINIA/actions/runs/43433905009), recuperado desde el último checkpoint disponible de 291k y continuado hasta 330k.  
+**Artefacto de entrenamiento:** [14069581635 — cadena de 330k](https://github.com/orbitalronin94/RONINIA/actions/runs/43433905009/artifacts/14069581635).  
+**Holdout oficial:** [run 43490561981](https://github.com/orbitalronin94/RONINIA/actions/runs/43490561981); [artefacto 14068589478](https://github.com/orbitalronin94/RONINIA/actions/runs/43490561981/artifacts/14068589478).  
+**Checkpoint:** `checkpoint-330000.pt`. **Tokenizador:** vocabulario 8.192; SHA-256 `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`.  
+**Holdout:** 100 preguntas oficiales; SHA-256 `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`.  
+**Inventario:** 100 generaciones; 99 respuestas no vacías y una vacía; 99 cadenas no vacías distintas; ninguna alcanzó el límite de 128 bytes; latencia media aproximada: 0,323 segundos.  
+**Puntuación semántica:** no calculada.
+
+---
+
+### I. Del hombre que decidió mirar los números
+
+A 330.000 pasos, el escribano anunció que había llegado la hora de abandonar las supersticiones. Mandó retirar el paraguas oxidado, el orinal, la sábana histórica y tres volúmenes de glosas que ocupaban el sitio donde debía estar el cuaderno de métricas. Pidió una regla, un ábaco y una hoja limpia.
+
+—Esta vez no interpretaré. Mediré.
+
+El alguacil, que había oído aquella promesa en otras ocasiones, permaneció de pie.
+
+El secretario abrió el acta: cien preguntas, cien generaciones; noventa y nueve respuestas con contenido y una casilla vacía; noventa y nueve cadenas no vacías distintas; ninguna salida llegó al techo de ciento veintiocho bytes; trescientas veintitrés milésimas de segundo por respuesta, aproximadamente.
+
+—La vaciedad se ha reducido a una. La repetición literal no domina. El animal no se estrella contra el techo de generación. Y comparece con presteza —dijo el escribano.
+
+—¿Y qué sabe? —preguntó el alguacil.
+
+—Eso todavía no lo dicen las métricas.
+
+—Entonces, por una vez, has dicho algo correcto.
+
+El pendolista anotó la frase del oficial. Después la subrayó. Después le puso una glosa.
+
+—Ya has empezado —dijo el alguacil.
+
+### II. De cómo noventa y nueve cadenas fueron coronadas como noventa y nueve ideas
+
+El hombre de la pluma contempló el 99 como quien contempla una cosecha.
+
+—Noventa y nueve respuestas distintas. El loro ha dejado de ser una campana que repite el mismo badajo. Ahora tiene repertorio.
+
+—Tiene noventa y nueve cadenas distintas —corrigió el alguacil—. No has demostrado que sean noventa y nueve ideas.
+
+El escribano escribió en el margen: *DISTINCT_STRING_NON_EST_DISTINCT_THOUGHT*.
+
+Luego miró la respuesta vacía.
+
+—Quizá sea prudencia.
+
+—O quizá sea un fallo de generación.
+
+El secretario escribió: *SILENTIUM_POTEST_ESSE_PRUDENTIA*.
+
+—No sabes por qué calló —dijo el oficial.
+
+—Por eso mismo lo he puesto en latín.
+
+El cronómetro marcaba 0,323 segundos de media. El escribano lo levantó hacia la luz.
+
+—¡Tres décimas! El animal ya no tarda una eternidad en comparecer. Ha ganado agilidad.
+
+—Ha ganado velocidad de generación bajo este protocolo. No sabemos si ha ganado capacidad.
+
+El pendolista anotó: *CELERITAS_NON_EST_SAPIENTIA*. Dibujó al lado un caballo diminuto.
+
+—¿Y el límite? Ninguna respuesta alcanzó los ciento veintiocho bytes. Ya no se ahoga contra el techo.
+
+—Ninguna salida de esta muestra chocó con ese límite. Eso no demuestra que haya aprendido a terminar una idea.
+
+El escribano escribió: *FINIS_NON_EST_FINIS*.
+
+—Te has propuesto glosar hasta los signos de puntuación.
+
+—La puntuación también tiene alma.
+
+—La tuya, quizá. La del modelo no consta.
+
+### III. De la tabla que el alguacil dejó sin aureola
+
+El alguacil tomó la hoja y trazó dos columnas:
+
+| Observación | Lo que no demuestra por sí sola |
+|---|---|
+| 100 generaciones ejecutadas | Que las 100 sean correctas |
+| 99 respuestas no vacías; una vacía | Que la abstención sea adecuada o deliberada |
+| 99 cadenas no vacías distintas | Que exista diversidad conceptual o razonamiento |
+| Ninguna salida alcanzó 128 bytes | Que el modelo controle la terminación en cualquier contexto |
+| Latencia media aproximada de 0,323 s | Que la calidad haya mejorado |
+| Checkpoint y artefacto identificados | Que el modelo haya aprobado semánticamente |
+
+—Esta tabla es lo que tenemos.
+
+—Podría titularla *La aurora de la diversidad*.
+
+—No.
+
+—*El despertar del entendimiento bajo el signo del noventa y nueve*.
+
+—Tampoco.
+
+—*De cómo el pájaro dejó de repetir y comenzó a pensar*.
+
+—Eso no lo has medido.
+
+El escribano bajó la pluma. Durante unos segundos pareció dispuesto a obedecer. Luego añadió debajo: *TABULA NON CANTAT, SED ORDINAT*.
+
+El alguacil cerró los ojos.
+
+### IV. Del expediente que compareció con todos sus sellos y ninguna absolución
+
+La cadena de custodia llegó en orden. El entrenamiento había concluido en 330k; el holdout recuperó el artefacto esperado; se verificaron el checkpoint, el tokenizador y el fichero oficial de cien preguntas. El resultado quedó guardado en el artefacto de evaluación, ligado a su ejecución.
+
+—Al menos, el expediente está limpio —dijo el escribano.
+
+—Está trazable —corrigió el alguacil—. No confundas limpieza documental con limpieza de respuestas.
+
+—Nadie podrá decir que evaluamos otro checkpoint.
+
+—Eso sí podemos decirlo, si los sellos y hashes lo acreditan. Y es importante. Pero el hash identifica el objeto; no lo vuelve sabio.
+
+El secretario escribió sin adornos: *IDENTITAS_CHECKPOINT_CONFIRMATA. QUALITAS_SEMANTICA_NON_IUDICATA.*
+
+Después añadió: «El sello no piensa, pero impide que cambiemos de loro a mitad del juicio».
+
+—Esa glosa sí te la concedo —dijo el oficial—. Porque habla del método, no presume del animal.
+
+### V. De la pregunta que las métricas dejaron abierta
+
+Al caer la tarde, el escribano volvió a contar las cifras. Noventa y nueve. Una. Cero. Trescientas veintitrés milésimas. Las ordenó de mayor a menor, de menor a mayor y por el orden en que habían aparecido. Probó a sumarlas. Probó a dividirlas. Probó a leerlas como si fueran un mensaje cifrado.
+
+—¿Y ahora? —preguntó el alguacil.
+
+—Ahora necesito leer las cien respuestas. Clasificarlas por pertinencia, exactitud, coherencia, seguimiento de instrucciones, abstención y repetición de patrones. Separar los aciertos verificables de las frases que solo parecen solemnes. Comparar con el holdout anterior bajo el mismo protocolo, sin hacer pasar una diferencia de forma por una mejora de fondo.
+
+—Eso es.
+
+El escribano tomó aire. Parecía que, al fin, había comprendido el encargo. Entonces miró el número 0,323.
+
+—Tres décimas de segundo. Una eternidad para el que espera; un suspiro para el que calcula. Quizá el loro haya aprendido a correr antes de aprender adónde va.
+
+El alguacil se levantó.
+
+—Ahí está otra vez.
+
+—¿Qué?
+
+—La glosa. Te pedí que leyeras las respuestas y ya estás escribiendo sobre el cronómetro.
+
+—Pero la frase es buena.
+
+—No estamos evaluando tu frase.
+
+El secretario la tachó. La volvió a escribir debajo. La rodeó con tinta roja. Y al final, en un arranque de honradez, dejó constancia de que la había escrito él.
+
+### VI. Sentencia del alguacil: el número no absuelve al copista
+
+El holdout de 330k deja señales técnicas concretas: cien generaciones ejecutadas, una respuesta vacía, noventa y nueve cadenas no vacías distintas, ninguna salida truncada por el límite de 128 bytes y una latencia media aproximada de 0,323 segundos. La ejecución y el artefacto están identificados. No se ha calculado una puntuación semántica.
+
+No cabe declarar victoria. Tampoco sería honrado fingir que nada ha cambiado en el perfil superficial de las salidas. Hay menos silencio que en algunos registros anteriores y no aparece el antiguo choque sistemático contra el límite de generación. Pero la diversidad de cadenas no certifica diversidad de ideas; la rapidez no certifica juicio; y una respuesta que ocupa su casilla todavía puede estar equivocada.
+
+El trabajo pendiente no consiste en inventar otra métrica para celebrar estas cifras. Consiste en leer las respuestas, clasificarlas con criterios explícitos y cotejar los aciertos contra fuentes verificables. Hasta entonces, el estado correcto es: **holdout técnico completado; calidad semántica pendiente de revisión**.
+
+> El escribano quiso usar las métricas como quien usa una brújula. Al ver que la aguja se movía, escribió una epopeya sobre el norte. El alguacil le quitó la pluma, dejó la brújula sobre la mesa y le ordenó caminar hasta el lugar señalado. El loro, entretanto, había producido noventa y nueve frases distintas. Ninguna de ellas había firmado el mapa.
+
+### Máculas del capítulo vigésimo sexto
+
+- **OFFICIAL_HOLDOUT_330K:** evaluación oficial de cien preguntas; run [43490561981](https://github.com/orbitalronin94/RONINIA/actions/runs/43490561981), artefacto [14068589478](https://github.com/orbitalronin94/RONINIA/actions/runs/43490561981/artifacts/14068589478).
+- **CHECKPOINT_LINEAGE:** el entrenamiento [43433905009](https://github.com/orbitalronin94/RONINIA/actions/runs/43433905009) recuperó el último estado disponible de 291k y completó 330k. No se confunde el padre recuperado con el destino final.
+- **COUNTS_ARE_SURFACE_METRICS:** 99 respuestas no vacías, una vacía y 99 cadenas no vacías distintas describen el inventario literal; no son una puntuación semántica.
+- **NO_OUTPUT_AT_CAP:** ninguna respuesta alcanzó el límite configurado de 128 bytes en esta muestra. No se infiere por ello control general de EOS ni terminación semántica.
+- **LATENCY_IS_NOT_QUALITY:** 0,323 segundos describe velocidad de inferencia bajo este protocolo; no acredita comprensión.
+- **NO_SEMANTIC_SCORE:** no se calculó una tasa de acierto. La revisión humana de pertinencia y exactitud queda pendiente.
+- **EDITORIAL_GLOSS:** diálogos, metáforas, sentencias y latines son composición editorial; no son salidas del modelo.
+- **NO_PROMOTION_BY_METRIC:** el capítulo no promueve el checkpoint ni declara superioridad. Registra la evaluación técnica y delimita lo que falta demostrar.
+
+---
+
 ## Historial de ejecuciones — registro completo de GitHub Actions
 
 Este registro incluye **todas las ejecuciones completadas en `main` del repositorio**, no solo los holdouts: entrenamiento, tokenización, evaluación, preflight, fallos y reintentos. Los identificadores y artefactos se conservan aunque una ejecución falle. La fecha figura como «—» cuando no se ha recuperado de la API y no debe inferirse.
@@ -5103,6 +5286,8 @@ Los runs fallidos `43022253427` y `43022290341` se conservan como fallos, con su
 | Fecha | Ejecución | Workflow | Evento | Run ID | Resultado | Artefactos | Commit |
 |---|---|---|---|---:|---|---|---|
 <!-- HOLDOUT-INDEX-START -->
+| 2026-11-13 | RONIN-10M — official 100-prompt holdout at 330k | `official-holdout-330000` | push | 43490561981 | success | [14068589478](https://github.com/orbitalronin94/RONINIA/actions/runs/43490561981/artifacts/14068589478) | `11b1d25b7755` |
+
 | 2026-11-12 | RONIN-10M — official 100-prompt holdout at 205k | `official-holdout-205000` | workflow_dispatch | 43309180308 | success | [13984838040](https://github.com/orbitalronin94/RONINIA/actions/runs/43309180308/artifacts/13984838040) | `62da7623310e` |
 | 2026-11-11 | RONIN-10M — official 100-prompt holdout at 100k | `checkpoint-holdout-ronin-10m-100000` | push | 43112010343 | success | [13897325999](https://github.com/orbitalronin94/RONINIA/actions/runs/43112010343/artifacts/13897325999) | `01db5d205b0e` |
 | Fecha | Ejecución | Workflow o tipo | Evento | Run ID | Resultado | Artefactos | Commit |
