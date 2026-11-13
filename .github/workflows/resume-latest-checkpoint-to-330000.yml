@@ -59,7 +59,7 @@ jobs:
           import glob,hashlib,json,os,re,shutil,torch
           candidates=[]
           for path in glob.glob("recovered/**/checkpoint-*.pt",recursive=True):
-              m=re.search(r"checkpoint-(\\d+)\\.pt$",path)
+              m=re.search("checkpoint-([0-9]+)[.]pt$",path)
               if m and os.path.getsize(path)>0:
                   candidates.append((int(m.group(1)),path))
           if not candidates:
@@ -75,10 +75,10 @@ jobs:
           assert "optimizer_state_dict" in p, "Optimizer state missing; exact continuation is not possible"
           digest=hashlib.sha256(open("checkpoint-parent.pt","rb").read()).hexdigest()
           metadata={"source_run_id":int(os.environ["SOURCE_RUN_ID"]),"source_artifact_id":int(os.environ["SOURCE_ARTIFACT_ID"]),"source_checkpoint":os.path.basename(source),"parent_step":step,"parent_sha256":digest,"tokenizer_sha256":p["tokenizer_sha256"],"corpus_sha256":p.get("corpus_sha256")}
-          open("parent-metadata.json","w").write(json.dumps(metadata,indent=2)+"\\n")
+          open("parent-metadata.json","w").write(json.dumps(metadata,indent=2)+chr(10))
           with open(os.environ["GITHUB_OUTPUT"],"a") as out:
-              out.write(f"step={step}\\n")
-              out.write(f"file={source}\\n")
+              out.write("step="+str(step)+chr(10))
+              out.write("file="+source+chr(10))
           print(json.dumps(metadata,indent=2))
           PY
 
@@ -111,7 +111,7 @@ jobs:
           assert p.get("corpus_sha256") == m.get("corpus_sha256"), "Parent and token cache corpus fingerprints differ"
           cfg=json.loads(Path("configs/ronin-10m.json").read_text())
           cfg["context_length"]=256
-          Path("configs/ronin-10m-speed-256.json").write_text(json.dumps(cfg,indent=2)+"\\n")
+          Path("configs/ronin-10m-speed-256.json").write_text(json.dumps(cfg,indent=2)+chr(10))
           print(json.dumps({k:m.get(k) for k in ("source_run_id","corpus_sha256","token_count","tokens_sha256","tokenizer_sha256")},indent=2))
           PY
 
@@ -177,7 +177,7 @@ jobs:
           checkpoints=list(out.glob("checkpoint-*.pt"))
           if not checkpoints:
               raise SystemExit("No final checkpoint found")
-          latest=max(checkpoints,key=lambda p:int(re.search(r"checkpoint-(\\d+)",p.name).group(1)))
+          latest=max(checkpoints,key=lambda p:int(p.stem.split("-")[-1]))
           p=torch.load(latest,map_location="cpu",weights_only=False)
           assert int(p["completed_steps"]) == 330000
           parent=json.loads(Path("parent-metadata.json").read_text())
@@ -195,7 +195,7 @@ jobs:
             "tokenizer_sha256":manifest["tokenizer_sha256"],
             "training_config":{"context_length":256,"threads":2,"batch_size":4,"learning_rate":0.000025,"checkpoint_every":1000,"eval_batches":32,"tokenization_reused":True}
           }
-          (out/"lineage.json").write_text(json.dumps(lineage,indent=2)+"\\n")
+          (out/"lineage.json").write_text(json.dumps(lineage,indent=2)+chr(10))
           print(json.dumps(lineage,indent=2))
           PY
 
