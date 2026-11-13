@@ -4952,6 +4952,10 @@ El escribano soltó una carcajada al recordar la rana, el kilogramo y el Mediter
 
 En **720.000 pasos**, las cien generaciones volvieron a alcanzar el límite de 128 tokens y ninguna emitió EOS. El diario no tenía puntuación semántica automática ni comparación pareada con 670k. Había frases limpias al principio, pero la continuación se deshacía; había repertorio, no prueba de juicio.
 
+El último expediente recuperado, **910.000 pasos**, era todavía más severo. El holdout de 100 preguntas se ejecutó con el runner original, greedy argmax, 128 tokens, sin RAG y con el mismo SHA-256 del conjunto de evaluación. **Las 100 generaciones produjeron exactamente 128 bytes; ninguna emitió EOS.** Las primeras respuestas ya mostraban cadenas como «idosteverevever…», «arinolarinolar…» y «ar ar ar…». El diario seguía marcado `unscored_raw_generation`, sin comparación pareada contra otro checkpoint: no cabe convertir el balbuceo en una nota semántica, pero tampoco ocultar que el protocolo no obtuvo una sola terminación natural.
+
+[Holdout 910k — ejecución 42842506942](https://github.com/orbitalronin94/MINIRONIN/actions/runs/42842506942) · [artefacto 13775723782](https://github.com/orbitalronin94/MINIRONIN/actions/runs/42842506942/artifacts/13775723782) · SHA-256 del checkpoint: `5ba5e4d21fe6257c69620d4189846c27d698998dede61a7fe8483f7cc0a780e7`.
+
 Y en **810.000 pasos**, la revisión editorial de las cien respuestas registró **0/100 respuestas útiles**. Dieciséis contenían «ni puta idea» —quince de ellas, desnudas—; nueve repetían «El metro»; ocho, «La razón ha llegado hasta aquí»; y nueve, «Se puede afirmar que». La ficha llamaba a 810k MAIN experimental, pero aclaraba que la promoción era administrativa y no una declaración de superioridad, utilidad o calibración correcta.
 
 —¿Y aun así lo ascendisteis? —preguntó el alguacil.
