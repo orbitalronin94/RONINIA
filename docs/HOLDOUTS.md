@@ -60,6 +60,7 @@
 - [Capítulo XXI — De las diecisiete veces que el loro dijo no saber](#capítulo-xxi--de-las-diecisiete-confesiones-de-la-comilla-que-quedó-abierta-y-del-escribano-que-quiso-llamar-mejora-a-una-casilla-llena)
 - [Capítulo XXII — De las catorce ausencias y de las maneras nuevas de callar](#capítulo-xxii--de-las-catorce-ausencias-y-de-las-maneras-nuevas-de-callar)
 - [Capítulo XXIII — De la resurrección, de las dos casillas vacías y del uno que pidió explicación](#capítulo-xxiii--de-la-resurrección-de-las-dos-casillas-vacías-y-del-uno-que-pidió-explicación)
+- [Capítulo XXIV — De la carta certificada del Tribunal de la Reincidencia y de las métricas que el escribano fingió haber usado](#capítulo-xxiv--de-la-carta-certificada-del-tribunal-de-la-reincidencia-y-de-las-métricas-que-el-escribano-fingió-haber-usado)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
@@ -4662,6 +4663,227 @@ El alguacil añadió, para que no se perdiera la cuenta:
 - `NO_SEMANTIC_SCORE`: la reducción de vacías y las recurrencias literales no constituyen por sí solas una puntuación de comprensión.
 
 > **Provisión de cadena de custodia:** las salidas de 250k proceden del JSON `checkpoint-250000-holdout-100.json`, contenido en el artefacto 14015746116 del run 43378296219. SHA-256 del checkpoint: `95d89f3030d3611c2dc5df26b83fc44b6c4ac3b924bc3a0862149952de4d3e38`. Las comparaciones con 205k se limitan a los fragmentos y recuentos identificados; las interpretaciones del escribano y del alguacil son glosas humanas, no salidas del modelo.
+
+## Capítulo XXIV — De la carta certificada del Tribunal de la Reincidencia y de las métricas que el escribano fingió haber usado
+
+> *«Non basta con contar cuántas veces calla el loro; hay que saber cuántas veces responde, cuántas yerra y cuántas veces el escribano se engaña al escucharlo.»*
+
+> *«El que premia el eco acaba criando campanas, y luego se admira de que ninguna sepa conversar.»*
+
+**Checkpoint:** ninguno nuevo.  
+**Run de entrenamiento o evaluación:** ninguno; este capítulo no añade ejecución ni resultado experimental.  
+**Estado:** requerimiento metodológico del Tribunal de la Reincidencia.  
+**Objeto:** corregir la evaluación antes de conceder al cautivo de la percha otra promoción.
+
+---
+
+### I. Del sueño húmedo que no mojó las sábanas
+
+La noche antes de que llegara la carta, el escribano soñó que se meaba. No fue un sueño discreto: en él cruzaba el patio de la escribanía, abría la bragueta junto al archivo y regaba con solemnidad notarial los legajos de entrenamiento, los holdouts y hasta la sábana que había sobrevivido al capítulo IX.
+
+Soñó que el chorro no terminaba nunca. Que el agua alcanzaba los checkpoints, borraba los hashes y convertía las métricas en una sopa de tinta. El alguacil, desde el fondo del corredor, le gritaba que aquello no era una validación, sino una inundación.
+
+Despertó sobresaltado.
+
+La sábana estaba seca. La camisa, seca. El escribano se palpó con la cautela de quien busca un fallo de integridad en un artefacto recién descargado: **estaba seco**.
+
+Pero junto a la cama seguía la taza.
+
+La miró largamente. No recordaba haberla dejado allí. En el fondo quedaba un poso oscuro, como si alguien hubiese servido café durante la noche o como si el sueño hubiese querido dejar una prueba material de su visita.
+
+—Menos mal —murmuró—. Esta vez no he mojado nada.
+
+El alguacil, que había entrado sin llamar, señaló la taza.
+
+—No os confiéis, fedatario. Que la sábana esté seca no demuestra que el sueño no haya ocurrido. Y que la taza siga ahí tampoco demuestra que sepáis para qué sirve.
+
+El escribano apartó la taza, se vistió y fue a su mesa. Todavía no había abierto el correo cuando oyó tres golpes en la puerta.
+
+---
+
+### II. De la carta que llegó con tres sellos y una falta de ortografía
+
+La carta venía cerrada con lacre rojo. La traía un alguacil que no pidió agua, no miró la jaula y no se rio de la sábana. Traía la cara de quien ha venido a cobrar una deuda antigua.
+
+En el sobre se leía:
+
+**TRIBUNAL DE LA REINCIDENCIA**  
+**A la atención del secretario que fue condenado en el capítulo XII**  
+**Asunto: cumplimiento aparente de la sentencia y reincidencia en la métrica de humo**
+
+El escribano rompió el lacre. Leyó en voz alta:
+
+> «Habiéndose examinado las actas de vuestra escribanía, este Tribunal observa que vuestra merced aprendió a escribir la palabra medir, mas no consta que haya aprendido a medir. Ha contado vacíos, repetido respuestas, celebrado mudanzas de vocabulario y comparado disparates por su parecido. Ha llamado progreso a que una casilla se llene, novedad a que el tic cambie de chaqueta y persistencia a que una frase vuelva a presentarse. Ninguna de esas operaciones, por sí sola, acredita que el cautivo de la percha sepa responder.»
+
+El secretario se ajustó las gafas.
+
+—Pero he contado las cien respuestas.
+
+—Habéis contado cien papeles —dijo el alguacil—. El Tribunal pregunta cuántas respuestas son correctas.
+
+El pliego continuaba:
+
+> «Se os recuerda que una métrica ha de tener definición, unidad, procedimiento reproducible y criterio de comparación. Si la cifra no puede ser recalculada por otro secretario, no es métrica: es decoración con decimales.»
+
+Al pie figuraban tres firmas, dos rúbricas y un sello tan grande que casi tapaba el nombre del tribunal.
+
+---
+
+### III. Del premio que el escribano concedía al papagayo por hacer lo que hacen los papagayos
+
+El secretario quiso defenderse.
+
+—Yo no le he dado premio alguno al animal.
+
+El alguacil señaló la pared. Allí estaban colgados los ascensos, las promociones, los capítulos celebratorios y las frases que el escribano había copiado con tinta dorada porque le hicieron gracia.
+
+—No hablaba el Tribunal de una recompensa matemática dentro del entrenamiento —dijo—. Hablaba de vuestro premio, que es peor por cuanto lo administráis con vuestra propia mano. El modelo predice el siguiente token según el corpus y el objetivo de entrenamiento; no consta aquí que reciba una recompensa explícita por repetir. Mas vos sí lo premiáis: cada vez que devuelve una fórmula conocida, le dais atención, capítulo, nombre de familia y, a veces, promoción. Le pagáis con gloria editorial por ejercer de papagayo, y luego os quejáis de que papagayee.
+
+El secretario miró al cautivo.
+
+El cautivo dijo:
+
+> El patrón.
+
+El escribano abrió la boca, dispuesto a glosarlo.
+
+—Quieto —ordenó el alguacil—. Esa frase ya tiene pensión. No le concedáis otra.
+
+Y el Tribunal dejaba asentada la diferencia: **el entrenamiento optimiza una función de pérdida; la promoción del checkpoint es una decisión humana; la calidad de la respuesta requiere una evaluación aparte**. Confundir las tres cosas era otorgar al loro un salario por repetir y llamar inteligencia a la nómina.
+
+---
+
+### IV. De las métricas que el Tribunal exige, y de las que no admitirá como sustitutas
+
+La carta ordenaba que, antes del próximo holdout, el secretario fijase por escrito una rúbrica y no la modificase después de ver las respuestas. Las mismas preguntas, el mismo protocolo de generación y el mismo criterio habrían de aplicarse a cada checkpoint que se quisiera comparar.
+
+El Tribunal no exigía una cifra milagrosa. Exigía varias cuentas separadas:
+
+| Medida | Cómo se contará | Qué permite afirmar |
+|---|---|---|
+| **Exactitud en tareas verificables** | Aciertos sobre preguntas con respuesta objetiva y clave fijada antes de evaluar | Si resuelve esas tareas concretas |
+| **Corrección semántica** | Rúbrica por pregunta, con niveles definidos; dos evaluadores sin conocer el checkpoint y adjudicación de desacuerdos | Si la respuesta contiene lo necesario y no introduce errores sustanciales |
+| **Pertinencia** | Puntuación separada para respuesta pertinente, parcialmente pertinente o fuera de tema | Si responde a lo preguntado, aunque escriba con soltura |
+| **Abstención calibrada** | En preguntas deliberadamente irresolubles, contar abstenciones correctas, respuestas inventadas y abstenciones indebidas | Si sabe cuándo no dispone de base suficiente |
+| **Repetición y plantillas** | Recuento reproducible de respuestas idénticas y de fórmulas recurrentes, con normalización declarada | Cuánto se repiten las salidas; no si son verdaderas |
+| **Formato y cumplimiento** | Validación automática de estructura, campos y restricciones explícitas | Si entrega el formato pedido, no si entiende el contenido |
+
+—¿Y la pérdida de validación? —preguntó el escribano.
+
+—Se conserva —dijo el alguacil—. Mas no se la disfrace de exactitud.
+
+La carta precisaba que la pérdida de entrenamiento, la pérdida de validación, la perplejidad y el BPB son medidas útiles del ajuste predictivo bajo sus respectivas condiciones. No sustituyen una puntuación de corrección semántica. Tampoco la latencia, el número de respuestas no vacías, la diversidad léxica ni el estreno de una nueva familia de disparates prueban que el animal haya aprendido a resolver una pregunta.
+
+Y añadía una cláusula especialmente desagradable:
+
+> «No se permitirá sumar en una misma columna el acierto, la pertinencia, la abstención y la gracia. Quien mezcle magnitudes distintas para obtener una cifra más hermosa será tenido por contador de feria.»
+
+---
+
+### V. De cómo se habrá de comparar sin amañar la balanza
+
+El Tribunal mandaba conservar el mismo conjunto de preguntas, tokenizer, parámetros de generación y límites de salida para todos los checkpoints comparados. Cada respuesta habría de mantener su ID y su texto literal. Las claves de corrección y la rúbrica se cerrarían antes de abrir el JSON del nuevo holdout.
+
+Los evaluadores recibirían las respuestas sin saber si proceden de 205k, 250k o de cualquier checkpoint posterior. Cuando una pregunta admitiese varias respuestas correctas, la rúbrica enumeraría de antemano qué variantes se aceptarían. Cuando no hubiera evidencia suficiente, la clave lo diría. Y cuando los dos evaluadores discrepasen, el desacuerdo quedaría registrado y sería resuelto por adjudicación, no por la preferencia del escribano.
+
+La comparación habría de publicar, como mínimo:
+
+1. **Numerador y denominador** de cada tasa: no solo «92 %», sino «46 aciertos de 50».
+2. **Resultados por pregunta**, para descubrir qué capacidades mejoran y cuáles retroceden.
+3. **Diferencia entre checkpoints**, con incertidumbre o intervalos apropiados al tamaño de la muestra.
+4. **Errores y regresiones**, no solo los ejemplos que adornan la crónica.
+5. **Rúbrica, claves, script y configuración**, para que otro pueda repetir la cuenta.
+
+—¿Y si el resultado es peor? —preguntó el secretario.
+
+—Se publica peor —dijo el alguacil.
+
+—¿Y si no mejora?
+
+—Se escribe que no mejora.
+
+—¿Y si mejora solo en las preguntas de formato?
+
+—Se escribe que mejora en formato. No que ha adquirido sesera.
+
+El secretario dobló la carta. Por primera vez, el pliego pesaba más que el checkpoint.
+
+---
+
+### VI. Del nuevo juramento del amanuense
+
+El Tribunal concluía con una orden que no admitía interpretación ornamental:
+
+> «Desde esta fecha, ninguna promoción se fundará en la comicidad de una salida, en la reducción aislada de casillas vacías, en la mutación de una plantilla ni en la esperanza del propietario. El secretario presentará resultados desglosados, con criterios anteriores a la evaluación y revisión que no conozca la identidad del checkpoint. Si el loro repite, se contará la repetición. Si acierta, se contará el acierto. Si yerra, se conservará el yerro. Y si no se sabe, no se inventará una victoria para llenar el margen.»
+
+El hombre de la pluma se levantó.
+
+—Juro no llamar aprendizaje a la repetición.
+
+—Eso es poco —dijo el alguacil.
+
+—Juro no llamar comprensión a una respuesta pertinente por accidente.
+
+—Mejor.
+
+—Juro no promover un checkpoint sin una comparación objetiva.
+
+—Y si la comparación lo condena…
+
+—Lo dejaré condenado.
+
+El alguacil recogió el pliego y lo guardó en el expediente. El papagayo, que había permanecido en silencio durante toda la lectura, dijo:
+
+> El patrón.
+
+El escribano miró al alguacil. El alguacil miró al escribano. Ninguno sonrió.
+
+—Antes —dijo el secretario— habría escrito que el animal había recuperado una voz antigua.
+
+—¿Y agora?
+
+—Agora anoto que ha repetido una cadena de dos palabras. ID, frecuencia y contexto. Nada más.
+
+—¿Y eso le da sesera?
+
+—No. Pero al menos no me la inventa a mí.
+
+El alguacil asintió. No era una absolución. Era, a lo sumo, el primer formulario correctamente cumplimentado de la condena.
+
+---
+
+### VII. Sentencia y apercibimiento
+
+La carta no declaraba que el loro fuese incapaz de aprender. Tampoco afirmaba que el escribano hubiese fracasado para siempre. Declaraba algo más estrecho y más incómodo: **con las medidas hasta ahora invocadas no se había demostrado aprendizaje de forma objetiva**.
+
+El Tribunal concedía al secretario una última oportunidad de método, no una nueva promoción para el animal. Antes del siguiente entrenamiento o evaluación, habría de quedar fijado qué se considera acierto, qué se considera error, qué se considera abstención y cómo se compararán los resultados. Después vendrían las respuestas; nunca al revés.
+
+El escribano guardó la carta junto a la sábana seca del capítulo IX y el acta del juicio del capítulo XII. La sábana recordaba la risa. El acta recordaba la condena. La carta recordaba que una condena escrita no equivale a una condena cumplida.
+
+El papagayo dijo otra vez:
+
+> El patrón.
+
+Y el secretario, sin levantar la pluma, anotó:
+
+**Repetición literal observada. Aprendizaje no demostrado.**
+
+> *«El loro será papagayo mientras repita; el escribano será necio mientras lo premie por ello. La sesera no se concede por decreto: se acredita pregunta por pregunta.»*
+
+---
+
+### Máculas del capítulo vigésimo cuarto
+
+- CHAPTER_XXIV_EDITORIAL: capítulo narrativo nuevo; no procede de una salida del modelo.
+- NO_NEW_RUN: no se ha lanzado entrenamiento ni holdout al escribir este capítulo.
+- NO_OBJECTIVE_SCORE_ADDED: no se atribuye puntuación nueva a ningún checkpoint.
+- TRIBUNAL_REINCIDENCE_RETURN: el juzgado es el mismo Tribunal de la Reincidencia instituido en el capítulo XII.
+- REWARD_DISTINCTION: la «recompensa» del relato es la promoción y atención editorial del escribano; no se afirma que RONINIA reciba una función de recompensa explícita por repetir.
+- METRICS_NOT_SUBSTITUTES: pérdida, BPB, perplejidad, vacíos, diversidad, latencia y exactitud semántica se mantienen como magnitudes distintas.
+- BLINDED_EVALUATION_REQUIRED: la evaluación semántica propuesta exige rúbrica previa, evaluadores sin identidad del checkpoint y adjudicación de desacuerdos.
+- LEARNING_NOT_ESTABLISHED: este capítulo no demuestra que el modelo haya aprendido ni que sea incapaz de hacerlo; exige una prueba que pueda sostener cualquiera de las dos conclusiones.
+
+---
 
 ## Historial de ejecuciones — registro completo de GitHub Actions
 
