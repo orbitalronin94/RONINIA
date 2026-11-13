@@ -4699,7 +4699,7 @@ El alguacil, que había entrado sin llamar, señaló la taza.
 
 El escribano apartó la taza, se vistió y fue a su mesa. Todavía no había abierto el correo cuando oyó tres golpes en la puerta.
 
-Conviene dejar constancia de una circunstancia real de aquella jornada: la carta llegó mientras el loro recorría una tanda de **50.000 pasos de entrenamiento**. El secretario, que ya había empezado a sospechar que el Tribunal no venía a felicitarlo, miró la jaula y decidió aplazar la siguiente comparecencia oficial. En vez de someter al animal a otro holdout de inmediato, resolvió hacerlo caminar **100.000 pasos adicionales antes del próximo holdout oficial**.
+Conviene dejar constancia de una circunstancia real de aquella jornada: la carta llegó mientras el loro recorría una tanda de **30.000 pasos de entrenamiento**. El secretario, que ya había empezado a sospechar que el Tribunal no venía a felicitarlo, miró la jaula y decidió aplazar la siguiente comparecencia oficial. En vez de someter al animal a otro holdout de inmediato, resolvió hacerlo caminar **100.000 pasos adicionales antes del próximo holdout oficial**.
 
 —Se ha asustado —dijo el escribano, mirando al loro.
 
