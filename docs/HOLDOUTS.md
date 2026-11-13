@@ -5198,6 +5198,56 @@ Esta crónica adopta, con atribución y adaptación explícitas, algunas máxima
 
 > «Un corpus candidato no es un corpus admitido; un corpus admitido no es una mejora demostrada.» — síntesis editorial de HERETIC-RONIN
 
+### Pasajes cotejados de los tratados hermanos
+
+El escribano pidió licencia para consultar los libros antiguos. No se le permitió copiar máximas de memoria: hubo de abrir los folios y dejar al margen el nombre del repositorio, el documento y la naturaleza de cada pasaje.
+
+#### Del *Grimorio de anomalías* — MINIRONIN
+
+> «No convertir una frase llamativa en capacidad demostrada.»
+
+— *MINIRONIN*, [docs/GRIMORIO.md](https://github.com/orbitalronin94/MINIRONIN/blob/main/docs/GRIMORIO.md), reglas de admisión.
+
+> «Registrar como recurrencia textual, no como autoconocimiento ni razonamiento explícito.»
+
+— *MINIRONIN*, [docs/GRIMORIO.md](https://github.com/orbitalronin94/MINIRONIN/blob/main/docs/GRIMORIO.md), incidencia **REASON_REFRAIN_PERSISTENCE**.
+
+El primer tratado enseña al copista a no coronar una frase por el solo hecho de que venga bien peinada. El segundo le prohíbe atribuir pensamiento a una repetición. Son advertencias de laboratorio, no sentencias pronunciadas por el loro.
+
+#### Del *Museo de MINIRONIN* — vitrina de las sentencias fuera de lugar
+
+> «Dos afirmaciones incompatibles no se vuelven ciertas por cortesía.»
+
+> «Mi ignorancia no se vuelve sabiduría por llevar chaqueta de terciopelo.»
+
+— Salidas literales recogidas en *MINIRONIN*, [docs/MUSEO.md](https://github.com/orbitalronin94/MINIRONIN/blob/main/docs/MUSEO.md), sección «Reflexiones de la criatura — en romance arcaizante», checkpoint 690k.
+
+El Museo advierte que ambas frases tenían forma gramatical y cierta compostura retórica, pero no respondían a las preguntas que las habían convocado. Se conservan aquí como **palabras generadas por el modelo**, no como doctrina del repositorio ni como prueba de que el animal entendiese la contradicción, la ignorancia o la evidencia. El propio comentario editorial del Museo lo formula sin indulgencia: «La fluidez de una sentencia non es prueba de conocimiento; el acierto de la forma non redime el desacierto del contexto».
+
+#### Del proemio de HERETIC-RONIN — tratado de la mosca
+
+> «La mosca no necesitaba pureza. Necesitaba sobrevivir.»
+
+> «Experimentar sin reverencia, medir sin indulgencia.»
+
+— HERETIC-RONIN, [README.md](https://github.com/orbitalronin94/HERETIC-RONIN/blob/main/README.md), lema y principio del laboratorio.
+
+> «Un conjunto de datos grande no equivale automáticamente a un conjunto bueno; un checkpoint que reduce la pérdida no demuestra por sí solo más capacidad.»
+
+— HERETIC-RONIN, [README.md](https://github.com/orbitalronin94/HERETIC-RONIN/blob/main/README.md), principio experimental.
+
+El tratado de la mosca no pide pureza de linaje ni reverencia por el tamaño. Pide supervivencia, examen y cuentas. Mas el escribano añade una glosa propia: sobrevivir al entrenamiento no es sobrevivir a la prueba; reducir la pérdida no es ganar el pleito.
+
+#### Del ciclo de destilación — HERETIC-RONIN
+
+> «La lectura correcta será qué modelo resuelve mejor este conjunto concreto bajo el mismo protocolo, no quién es universalmente superior.»
+
+— HERETIC-RONIN, [docs/MULTIDOMAIN_DISTILLATION_CYCLE_001.md](https://github.com/orbitalronin94/HERETIC-RONIN/blob/main/docs/MULTIDOMAIN_DISTILLATION_CYCLE_001.md), cautela sobre la comparación de modelos.
+
+Así queda asentado el fuero común de los tres laboratorios: cada cual comparezca con sus folios; ninguna victoria local se convierta en corona universal; y ninguna frase hermosa sea admitida como prueba sin que primero se le pregunte qué demonios venía a responder.
+
+*Nota de cotejo:* las citas anteriores reproducen pasajes de los documentos enlazados. Las glosas que los enlazan y la voz del escribano son composición editorial de RONINIA. Las dos frases del Museo se identifican expresamente como salidas literales de MINIRONIN; no se atribuyen a HERETIC ni al escribano.
+
 ### Provisiones que pasan a este fuero
 
 1. **No se mide por aplauso:** el resultado que agrada recibe el mismo escrutinio que el que avergüenza.
