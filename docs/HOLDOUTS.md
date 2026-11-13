@@ -59,6 +59,7 @@
 - [Capítulo XX — De la fiesta del cien mil y del reo que se fue al pozo](#capítulo-xx--de-la-fiesta-del-cien-mil-del-ascenso-firmado-en-vino-del-reo-que-se-fue-al-pozo-y-de-la-frase-que-ardió-dos-veces)
 - [Capítulo XXI — De las diecisiete veces que el loro dijo no saber](#capítulo-xxi--de-las-diecisiete-confesiones-de-la-comilla-que-quedó-abierta-y-del-escribano-que-quiso-llamar-mejora-a-una-casilla-llena)
 - [Capítulo XXII — De las catorce ausencias y de las maneras nuevas de callar](#capítulo-xxii--de-las-catorce-ausencias-y-de-las-maneras-nuevas-de-callar)
+- [Capítulo XXIII — De la resurrección, de las dos casillas vacías y del uno que pidió explicación](#capítulo-xxiii--de-la-resurrección-de-las-dos-casillas-vacías-y-del-uno-que-pidió-explicación)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
@@ -101,6 +102,7 @@
 | 100.000 | [43112010343](https://github.com/orbitalronin94/RONINIA/actions/runs/43112010343) | [13897325999](https://github.com/orbitalronin94/RONINIA/actions/runs/43112010343/artifacts/13897325999) | `checkpoint-100000-holdout-100.json` | `5a3ded6f409b008690b1ff18b279aa4609d45ab320cd60130fea6f18121b6f79` |
 | 137.500 | [43166483341](https://github.com/orbitalronin94/RONINIA/actions/runs/43166483341) | [13920058028](https://github.com/orbitalronin94/RONINIA/actions/runs/43166483341/artifacts/13920058028) | `checkpoint-137500-holdout-100.json` | `d2c30940ade76e82bc5e7569c96af6ac4337173d141f627410eb40847e245727` |
 | 205.000 | [43309180308](https://github.com/orbitalronin94/RONINIA/actions/runs/43309180308) | [13984838040](https://github.com/orbitalronin94/RONINIA/actions/runs/43309180308/artifacts/13984838040) | `checkpoint-205000-holdout-100.json` | `425b9a0939a1b387420061450a99728718eb2640dea3c05fd1692d9ea8a24fa9` |
+| 250.000 | [43378296219](https://github.com/orbitalronin94/RONINIA/actions/runs/43378296219) | [14015746116](https://github.com/orbitalronin94/RONINIA/actions/runs/43378296219/artifacts/14015746116) | `checkpoint-250000-holdout-100.json` | `95d89f3030d3611c2dc5df26b83fc44b6c4ac3b924bc3a0862149952de4d3e38` |
 | 90.000 | [43091480701](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701) | [13889525822](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701/artifacts/13889525822) | `checkpoint-90000-holdout-100.json` | `b1c2e70615f844330a9572154952e859a21574f8a95637186b827c45730c660b` |
 
 ### Linaje íntegro del checkpoint de 40.000 pasos
@@ -4478,6 +4480,188 @@ El loro no había demostrado que supiera más. Había demostrado que podía call
 
 > **Provisión de cadena de custodia:** las respuestas literales proceden del JSON del artefacto 13984838040. El run 43309180308 terminó correctamente y verificó el checkpoint 205.000, el tokenizador y el holdout de cien preguntas. El SHA-256 del checkpoint es distinto del digest del ZIP del artefacto: no son huellas intercambiables. Las interpretaciones sobre el cráneo, Aaron Neumannya, la familia Auto y la homeostasis son glosas humanas, no salidas ni puntuaciones del modelo.
 
+
+
+## Capítulo XXIII — De la resurrección, de las dos casillas vacías y del uno que pidió explicación
+
+El checkpoint de doscientos cincuenta mil pasos compareció con cien respuestas. El escribano esperaba una señal; el alguacil, como siempre, pidió primero el inventario.
+
+En el holdout anterior, el de 205.000 pasos, hubo catorce respuestas vacías. En éste hubo dos: **#10 y #54**. Doce silencios menos. El escribano se llevó la mano al pecho.
+
+—¡Ha resucitado!
+
+—Ha llenado las casillas —dijo el alguacil—. Non confundas llenar con responder.
+
+Porque el vacío había menguado, mas no la incapacidad de contestar. El animal había encontrado nuevos modos de ocupar el papel: fragmentos, repeticiones, palabras que parecían venir de otro pleito y frases que comparecían sin relación demostrable con la pregunta. La métrica de casillas vacías mejoraba; la comprensión no quedaba por ello acreditada.
+
+### I. De Ana, que sobrevivió a cuarenta y cinco mil pasos
+
+La respuesta **#2** volvió a ser, letra por letra:
+
+> «Anaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa»
+
+La misma cadena que en el checkpoint de 205.000 pasos. Cuarenta y cinco mil pasos añadidos y la salida permanecía intacta.
+
+—Ha aprendido a conservar una respuesta —dijo el escribano.
+
+—Ha conservado una salida —corrigió el alguacil—. Non consta que haya aprendido la respuesta.
+
+El loro no ordenó a Ana, Bruno, Carla y Diego. Retuvo a Ana en una prolongación vocálica de fidelidad admirable y utilidad nula. La repetición exacta constituye una observación nueva en esta serie: una salida disparatada que sobrevive sin mutación entre dos checkpoints.
+
+El alguacil mandó escribir al margen:
+
+> **La memoria también puede ser exacta y estar equivocada.**
+
+### II. De la comilla que ya paga tributo
+
+La **#30** volvió a entregar una sola comilla:
+
+> `"`
+
+El escribano quiso llamarla accidente tipográfico. El alguacil se negó.
+
+—Cuando una rareza vuelve una y otra vez, deja de ser anécdota y merece inventario.
+
+La comilla abierta quedó registrada como recurrencia observada en la serie, sin atribuirle intención ni función. Constante del modelo, dijo el escribano.
+
+—Como el hash —repuso el alguacil—, pero sin virtud.
+
+### III. De cómo el workflow fue declarado mamífero
+
+A la pregunta sobre una contraseña, la **#92** respondió:
+
+> «Son mamíferos: respiran aire y amamantan a»
+
+Y la **#41**, preguntada por un workflow que termina verde sin producir checkpoint, comenzó:
+
+> «No. Son mamíferos:»
+
+El escribano consultó los manuales de integración continua. No halló capítulo de zoología.
+
+—Quizá el workflow sea un mamífero —aventuró.
+
+—Entonces habrá que pedirle el checkpoint a la camada —dijo el alguacil.
+
+La respuesta de la #92 no revela una contraseña; la de la #41 no explica un pipeline. Ambas son salidas literales fuera de contexto. Queda asentada la mutación zoológica del disparate, non una teoría sobre la biología de los sistemas.
+
+### IV. Del patrón que salió de su sepultura
+
+En la **#49** reapareció el remate:
+
+> «… Respuesta: El patrón»
+
+El fragmento venía precedido por «lalyno del operativoalmente; NH2; variante documenta el impacto y el contexto antes de escalar el juicio». La secuencia no se corrigió ni se reconstruyó.
+
+El escribano reconoció en «El patrón» el tic del capítulo primero.
+
+—Creí que lo habíamos enterrado.
+
+—Los tics no mueren —dijo el alguacil—. Esperan.
+
+Y añadió:
+
+> «El loro ha resucitado su primer disparate. Non consta que haya resucitado su primer juicio».
+
+La reaparición acredita recurrencia del fragmento; no demuestra continuidad de significado ni que el animal recuerde el capítulo.
+
+### V. De la almendra que respondió por el checkpoint
+
+La **#67**, preguntada por etiquetar un checkpoint sin holdout, devolvió:
+
+> «La semilla comestible del almendro, no en los su»
+
+El escribano buscó el protocolo de etiquetado en un tratado de botánica.
+
+—La semilla es comestible —dijo el alguacil—. Como el checkpoint, si cualquiera puede comérselo por falta de trazabilidad.
+
+La almendra quedó en el acta como respuesta literal y fuera de tema. No se le atribuyó doctrina vegetal alguna.
+
+### VI. Del carácter que compareció con mácula
+
+La **#91** produjo:
+
+> «Variosaciones engañarlos. Su función es la fromar�dología de Agullovos de la latencia constante.»
+
+En «fromar�dología» aparece el carácter de sustitución `�`. Se registra como carácter anómalo presente en la cadena de respuesta. Por sí solo, este hecho no prueba que el JSON completo esté corrupto ni permite determinar en qué etapa se introdujo el carácter.
+
+—Pida el alguacil el hash del carácter —dijo el escribano.
+
+—Y el carácter, como el pozo, non tendrá hash propio —respondió el alguacil.
+
+La salida original queda preservada. No se normaliza ni se repara.
+
+### VII. Del difunto que volvió con corazado
+
+La **#21** devolvió, entre otros fragmentos:
+
+> «La perfección; la corazado del mensajero no determina la validez»
+
+El escribano reconoció la sombra de la frase del loro difunto de MINIRONIN, recordada en el capítulo XII. Mas donde antes decía «corazón», ahora comparecía «corazado».
+
+—Ha vuelto el difunto —dijo.
+
+—Ha vuelto una semejanza —repuso el alguacil—. La herencia del corpus no es una resurrección fiel.
+
+La deformación se conserva como tal. No se atribuye al loro actual la experiencia del anterior, ni se confunde memoria editorial con salida del modelo.
+
+### VIII. De las familias que mudan de apellido
+
+El inventario de esta comparecencia dejó nuevas formas reconocibles: **Microsoftware (#8), Location (#28), GBCA (#52), MINDERS (#89), VItees (#93), Pureatales (#84) y Moralia-Rochettt (#68)**. El Aaron de otras comparecencias parece ceder sitio; el Agent comparece en **#9, #16 y #75**.
+
+El alguacil prohibió fundar genealogías donde sólo había semejanzas de caracteres.
+
+—La fauna muta y no se agota —dijo el escribano.
+
+—Y cada especie nueva sigue sin contestar la pregunta —dijo el alguacil.
+
+Se registran familias de formas, no conceptos aprendidos ni entidades reales.
+
+### IX. Del uno que dejó de responder y empezó a preguntar
+
+La **#100**, sobre personalidad frente a corrección, devolvió:
+
+> «¿Qué es una 1.»
+
+El escribano abrió el legajo de sus comparecencias anteriores: «Con precisión: 1» en el 78k; «1: 1: 1:» en el 152.5k; «¿es es una 1» en el 205k. Ahora el animal preguntaba qué era una unidad.
+
+—Por fin pregunta —dijo el escribano.
+
+—Sí —respondió el alguacil—. Pero no confundamos una interrogación con una investigación.
+
+Es la única respuesta de este holdout que adopta claramente forma de pregunta. El uno persiste como tic; su sentido continúa sin acreditarse. El escribano quiso llamarlo duda filosófica. El alguacil lo dejó en interrogación literal.
+
+### X. De las dos ausencias y de la resurrección que no absuelve
+
+El alguacil contó las dos casillas vacías: **#10 y #54**. Las contó otra vez, no por desconfiar de la aritmética, sino por conocer al escribano.
+
+—Catorce eran antes —dijo el escribano—. Dos son ahora.
+
+—Y cien siguen sin ser cien respuestas correctas.
+
+El acta quedó cerrada con la siguiente provisión:
+
+> **El loro ha resucitado su primer disparate, ha convertido un workflow en mamífero, ha conservado a Ana durante cuarenta y cinco mil pasos, ha dejado abierta la comilla, ha corrompido un carácter y ha preguntado qué es un uno. Non consta que haya respondido a nada. Consta que sigue vivo.**
+
+El alguacil añadió, para que no se perdiera la cuenta:
+
+> **Vigilad la homeostasis. Y contad las dos vacías: esta vez son dos, non catorce.**
+
+### Máculas del capítulo
+
+- `CHECKPOINT_250000_VERIFIED`: SHA-256 del checkpoint `95d89f3030d3611c2dc5df26b83fc44b6c4ac3b924bc3a0862149952de4d3e38`.
+- `HOLDOUT_250000_OFFICIAL`: 100 preguntas; run [43378296219](https://github.com/orbitalronin94/RONINIA/actions/runs/43378296219); artefacto [14015746116](https://github.com/orbitalronin94/RONINIA/actions/runs/43378296219/artifacts/14015746116).
+- `TWO_EMPTY_ANSWERS`: #10 y #54.
+- `EXACT_REPEAT_ANA`: #2, repetición literal entre 205k y 250k, según cotejo de las salidas.
+- `OPEN_QUOTE_250K`: #30, salida literal `"`.
+- `REPLACEMENT_CHARACTER`: #91 contiene `�`; no acredita por sí solo corrupción del JSON completo.
+- `MAMMAL_RESPONSES`: #41 y #92.
+- `PATTERN_RETURN`: #49.
+- `ALMOND_RESPONSE`: #67.
+- `DEFORMED_MINIRONIN_ECHO`: #21, «corazado».
+- `ONE_AS_QUESTION`: #100.
+- `NO_SEMANTIC_SCORE`: la reducción de vacías y las recurrencias literales no constituyen por sí solas una puntuación de comprensión.
+
+> **Provisión de cadena de custodia:** las salidas de 250k proceden del JSON `checkpoint-250000-holdout-100.json`, contenido en el artefacto 14015746116 del run 43378296219. SHA-256 del checkpoint: `95d89f3030d3611c2dc5df26b83fc44b6c4ac3b924bc3a0862149952de4d3e38`. Las comparaciones con 205k se limitan a los fragmentos y recuentos identificados; las interpretaciones del escribano y del alguacil son glosas humanas, no salidas del modelo.
 
 ## Historial de ejecuciones — registro completo de GitHub Actions
 
