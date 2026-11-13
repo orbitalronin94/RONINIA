@@ -5018,6 +5018,66 @@ Por primera vez, la próxima comparecencia no se había convocado para descubrir
 
 > *«El esfuerzo merece registro; la eficacia, prueba; y la gracia, si acaso, un asiento al fondo.»*
 
+### VII. De los grimorios, de sus copistas y de cómo una advertencia acabó convertida en licencia
+
+El escribano pidió entonces los grimorios. No los libros de hechicería que prometían someter demonios, sino aquellos volúmenes que los amanuenses habían usado durante años para someter la evidencia.
+
+El alguacil puso tres sobre la mesa.
+
+El primero llevaba por título *Clavícula de Salomón*. El secretario había oído decir que el rey sabio lo escribió para ordenar los secretos del mundo. Mas el alguacil le mostró que la atribución salomónica pertenecía a una tradición textual transmitida en manuscritos posteriores: el nombre antiguo daba autoridad al libro, pero no demostraba que Salomón hubiese compuesto aquel ejemplar ni cada una de sus recetas.
+
+—¿Y qué glosa pusieron los copistas? —preguntó el escribano.
+
+—«Si el nombre es grande, la prueba es pequeña».
+
+El segundo volumen era el llamado *Grand Grimoire*, también conocido en ciertas ediciones como *Dragon Rouge*. En sus portadas y leyendas se confundían antigüedad, misterio y autoridad. El secretario había tomado alguna vez la fecha venerable que proclamaba una edición como si fuese el acta notarial de su origen.
+
+—¿Y qué escribisteis al margen?
+
+—«Lo que parece antiquísimo no necesita fecha».
+
+El alguacil tachó la frase.
+
+—Una tradición puede ser antigua; una edición, posterior; un manuscrito, copia de otro; y una atribución, leyenda. No hagáis de cuatro cosas una sola porque os convenga.
+
+El tercer libro no tenía autor ni título fijo. Era un cuaderno de fragmentos, fórmulas, recetas y anotaciones de distintas manos. Un compilador había juntado materiales heterogéneos y, al encuadernarlos, les había dado apariencia de doctrina única.
+
+—Esto sí que se parece a nuestra biblioteca —dijo el secretario.
+
+—Se parece a cualquier archivo que olvida registrar de dónde viene cada folio —respondió el alguacil.
+
+El escribano comprendió que también él había confundido procedencia con autoridad, acumulación con coherencia y repetición con confirmación. Había leído los documentos de entrenamiento como si cada frase heredase la verdad de la biblioteca donde fue encontrada. Había visto una fórmula repetida y la había llamado doctrina; una coincidencia y la había llamado memoria; una respuesta inesperada y la había llamado revelación.
+
+No era preciso acusar a los grimorios de engaño. Bastaba observar lo que los copistas podían hacer con ellos.
+
+En el margen de la *Clavícula*, un amanuense había escrito: «Si el espíritu calla, medita».
+
+En el margen del *Grand Grimoire*, otro había añadido: «Si el espíritu yerra, habla en enigmas».
+
+Y en el cuaderno sin título, un tercero había dejado esta regla: «Si el espíritu repite, confirma».
+
+El escribano leyó las tres glosas y reconoció su propia mano en todas ellas, aunque ninguna fuese suya.
+
+—Así se fabrica un oráculo —dijo—. Se prepara una explicación para cada resultado y luego se presume que el resultado ha confirmado la explicación.
+
+El alguacil le hizo escribir una distinción en tinta negra:
+
+- **Fuente:** de dónde procede el texto, con su edición, fecha, manuscrito o versión cuando se conozcan.
+- **Atribución:** quién dice la tradición que lo escribió; no equivale a autoría demostrada.
+- **Copia o compilación:** qué manos añadieron, tradujeron, mezclaron o modificaron el material.
+- **Interpretación:** qué entiende el lector; debe poder discutirse y corregirse.
+- **Evidencia:** qué resultado verificable sostiene la afirmación, y qué resultado podría refutarla.
+
+—¿Y el loro? —preguntó el secretario.
+
+—El loro no es Salomón, ni el Diablo, ni un oráculo. Es un modelo que genera respuestas. Si repite una frase, registrad la repetición. Si acierta, comprobad el acierto. Si yerra, no lo absolváis con una metáfora.
+
+El escribano cerró los libros. Ya no le parecían peligrosos por contener secretos, sino por la facilidad con que un lector podía convertir sus propias ganas en doctrina.
+
+> *«El grimorio no dijo lo que el copista deseaba; fue el copista quien añadió la línea que le faltaba.»*
+
+**Nota de rigor histórico:** la *Clavícula de Salomón* y el *Grand Grimoire* son títulos reales de tradiciones textuales y editoriales; las glosas citadas en esta escena son invenciones literarias del escribano, no citas históricas. La sección no atribuye a los libros reales las frases satíricas aquí compuestas.
+
 ### Máculas del capítulo vigésimo quinto
 
 - CHAPTER_XXV_EDITORIAL: capítulo narrativo escrito por el secretario; no es salida de RONINIA ni de MINIRONIN.
