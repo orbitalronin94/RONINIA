@@ -4699,6 +4699,14 @@ El alguacil, que había entrado sin llamar, señaló la taza.
 
 El escribano apartó la taza, se vistió y fue a su mesa. Todavía no había abierto el correo cuando oyó tres golpes en la puerta.
 
+Conviene dejar constancia de una circunstancia real de aquella jornada: la carta llegó mientras el loro recorría una tanda de **50.000 pasos de entrenamiento**. El secretario, que ya había empezado a sospechar que el Tribunal no venía a felicitarlo, miró la jaula y decidió aplazar la siguiente comparecencia oficial. En vez de someter al animal a otro holdout de inmediato, resolvió hacerlo caminar **100.000 pasos adicionales antes del próximo holdout oficial**.
+
+—Se ha asustado —dijo el escribano, mirando al loro.
+
+—No consta que el animal haya leído la carta —repuso el alguacil—. Ni que sepa contar hasta cien mil. El que ha tomado la decisión sois vos.
+
+El secretario anotó la resolución como quien concede una prórroga a un reo. Quedó, pues, fijado el nuevo horizonte: cien mil pasos más y después, sin cambiar las preguntas ni las reglas, nueva comparecencia. La carta no había detenido el entrenamiento; había elevado el precio de la próxima inspección.
+
 ---
 
 ### II. De la carta que llegó con tres sellos y una falta de ortografía
