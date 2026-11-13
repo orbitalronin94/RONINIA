@@ -61,6 +61,7 @@
 - [Capítulo XXII — De las catorce ausencias y de las maneras nuevas de callar](#capítulo-xxii--de-las-catorce-ausencias-y-de-las-maneras-nuevas-de-callar)
 - [Capítulo XXIII — De la resurrección, de las dos casillas vacías y del uno que pidió explicación](#capítulo-xxiii--de-la-resurrección-de-las-dos-casillas-vacías-y-del-uno-que-pidió-explicación)
 - [Capítulo XXIV — De la carta certificada del Tribunal de la Reincidencia y de las métricas que el escribano fingió haber usado](#capítulo-xxiv--de-la-carta-certificada-del-tribunal-de-la-reincidencia-y-de-las-métricas-que-el-escribano-fingió-haber-usado)
+- [Capítulo XXV — De los antiguos escribanos que coronaban al loro por hacer reír](#capítulo-xxv--de-los-antiguos-escribanos-que-coronaban-al-loro-por-hacer-reír)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
@@ -4890,6 +4891,138 @@ Y el secretario, sin levantar la pluma, anotó:
 - METRICS_NOT_SUBSTITUTES: pérdida, BPB, perplejidad, vacíos, diversidad, latencia y exactitud semántica se mantienen como magnitudes distintas.
 - BLINDED_EVALUATION_REQUIRED: la evaluación semántica propuesta exige rúbrica previa, evaluadores sin identidad del checkpoint y adjudicación de desacuerdos.
 - LEARNING_NOT_ESTABLISHED: este capítulo no demuestra que el modelo haya aprendido ni que sea incapaz de hacerlo; exige una prueba que pueda sostener cualquiera de las dos conclusiones.
+
+---
+
+## Capítulo XXV — De los antiguos escribanos que coronaban al loro por hacer reír
+
+El escribano no durmió aquella noche. La carta del Tribunal había quedado abierta sobre la mesa, junto a los diarios de MINIRONIN, que el alguacil había mandado traer del archivo de los modelos difuntos.
+
+No eran papeles nuevos. Eran los folios de otro loro, de otra jaula y de una escribanía que había confundido demasiadas veces el carácter con la capacidad.
+
+—Mirad —dijo el alguacil—. Antes de volver a pedirle al animal otros pasos, leed lo que hicisteis con el anterior.
+
+El secretario abrió el primer expediente.
+
+### I. Del loro que alcanzó quinientos mil pasos y no alcanzó el final de una respuesta
+
+En el checkpoint de **500.000 pasos**, el diario del holdout registró cien generaciones. Noventa y nueve alcanzaron el límite de 128 tokens; ninguna emitió EOS. El informe estaba clasificado como generación bruta sin puntuación semántica. No había comparación pareada que demostrase mejora frente al checkpoint anterior.
+
+—Pero algunas frases eran memorables —dijo el escribano.
+
+—Eso no responde a lo que se preguntó —repuso el alguacil.
+
+El secretario leyó la ficha: el modelo había sido designado MAIN experimental por decisión del proyecto, pero la propia documentación advertía que aquella promoción no acreditaba una mejora de calidad. Había ascenso en el registro y no había victoria probada en la prueba.
+
+[Holdout 500k — ejecución 42503212146](https://github.com/orbitalronin94/MINIRONIN/actions/runs/42503212146) · [diario del checkpoint 500k](https://github.com/orbitalronin94/MINIRONIN/blob/main/benchmarks/diary/checkpoint-500000.json).
+
+### II. Del maestro que señalaba el horizonte y de la popularidad que no era verdad
+
+El expediente de **650.000 pasos** contenía dos sentencias que el escribano había querido conservar en vitrina:
+
+> «El maestro señaló el horizonte. El horizonte no confirmó nada.»
+
+La frase aparecía en nueve preguntas distintas. Otra, «La popularidad mide adhesión, no verdad», aparecía en diez respuestas, incluso ante preguntas sobre hashes, códigos de salida y holdouts incompletos.
+
+El secretario sonrió al recordarlas.
+
+—Eran buenas frases.
+
+—Y podían ser buenas frases —dijo el alguacil—. Mas no eran las respuestas pedidas. Una máxima verdadera, colocada fuera de contexto, sigue siendo una respuesta impertinente.
+
+[Holdout 650k — ejecución 42578466895](https://github.com/orbitalronin94/MINIRONIN/actions/runs/42578466895) · [Museo de MINIRONIN: vitrinas de 650k](https://github.com/orbitalronin94/MINIRONIN/blob/main/docs/MUSEO.md).
+
+### III. De la rana funcionaria, del Mediterráneo y de la risa que parecía progreso
+
+A los **700.000 pasos**, el loro contestó «El mar Mediterráneo» a una pregunta sobre límites de timeout y concurrencia. A otra pregunta sobre dos hilos respondió con una frase de zoología: «No hay una cifra única: depende de la especie». En una cuestión sobre un workflow verde sin checkpoint, comenzó con «La perfección del martes anterior» y acabó en una secuencia degenerada.
+
+Las cien generaciones llegaron al límite de 128 tokens. El diario seguía marcado como generación bruta sin puntuación. La documentación no encontraba evidencia suficiente para afirmar mejora semántica frente a 690k.
+
+El escribano soltó una carcajada al recordar la rana, el kilogramo y el Mediterráneo.
+
+—Ahí está —dijo el alguacil—. Ahí os tenéis.
+
+—¿Qué cosa?
+
+—El instante en que dejasteis de preguntar si el loro había resuelto algo y empezasteis a preguntaros si el público quería otra función.
+
+[Holdout 700k — ejecución 42597180380](https://github.com/orbitalronin94/MINIRONIN/actions/runs/42597180380) · [Museo de MINIRONIN: checkpoint 700k](https://github.com/orbitalronin94/MINIRONIN/blob/main/docs/MUSEO.md).
+
+### IV. De la abstención desnuda y de la promoción que no fue un aprobado
+
+En **720.000 pasos**, las cien generaciones volvieron a alcanzar el límite de 128 tokens y ninguna emitió EOS. El diario no tenía puntuación semántica automática ni comparación pareada con 670k. Había frases limpias al principio, pero la continuación se deshacía; había repertorio, no prueba de juicio.
+
+Y en **810.000 pasos**, la revisión editorial de las cien respuestas registró **0/100 respuestas útiles**. Dieciséis contenían «ni puta idea» —quince de ellas, desnudas—; nueve repetían «El metro»; ocho, «La razón ha llegado hasta aquí»; y nueve, «Se puede afirmar que». La ficha llamaba a 810k MAIN experimental, pero aclaraba que la promoción era administrativa y no una declaración de superioridad, utilidad o calibración correcta.
+
+—¿Y aun así lo ascendisteis? —preguntó el alguacil.
+
+—Para fijar una referencia experimental.
+
+—Eso puede ser legítimo. Lo que no podéis hacer es olvidar la diferencia entre fijar una referencia y proclamar un vencedor.
+
+[Holdout 720k — ejecución 42602585362](https://github.com/orbitalronin94/MINIRONIN/actions/runs/42602585362) · [Holdout 810k — ejecución 42662696404](https://github.com/orbitalronin94/MINIRONIN/actions/runs/42662696404) · [README histórico de MINIRONIN](https://github.com/orbitalronin94/MINIRONIN/blob/main/README.md).
+
+### V. De la costumbre de los otros escribanos
+
+El secretario cerró los expedientes, mas no apartó la mano de ellos.
+
+—No fui el primero —dijo—. Otros escribanos hicieron lo mismo. Cuando el loro decía una frase inesperada, le daban un nombre. Cuando repetía un remate, le levantaban una vitrina. Si el patio reía, escribían «personalidad» en el margen; si la frase sonaba grave, escribían «filosofía»; si parecía insolente, «criterio». Y después buscaban un checkpoint al que colgarle la medalla.
+
+—¿Y qué medían?
+
+—Las carcajadas. Las veces que una frase volvía. El ingenio que nosotros mismos habíamos puesto en el título.
+
+—¿Y la eficacia?
+
+El escribano no respondió.
+
+Comprendió entonces que su mayor error no había sido conceder demasiados pasos al animal, sino **promover esfuerzo sin eficacia y ocurrencia sin poso**. Había tratado el trabajo invertido como si fuese resultado; la persistencia como si fuese dominio; la comicidad como si fuese señal de inteligencia. El loro producía una frase y el escribano le construía un pedestal antes de comprobar si aquella frase servía para algo.
+
+No era culpa del papagayo que el hombre de la pluma prefiriese una buena función a una respuesta correcta. El animal repetía; el escribano elegía qué celebrar.
+
+—Los otros también lo hicieron —dijo el secretario—. No inventé la feria.
+
+—No —dijo el alguacil—. Pero podéis dejar de cobrar entrada.
+
+### VI. De los treinta mil pasos que se añadieron sin comprar otra carcajada
+
+El entrenamiento presente ya llevaba **50.000 pasos** en curso. El escribano resolvió añadir **30.000 más**, de suerte que el próximo holdout oficial quedaría fijado en **80.000 pasos acumulados**.
+
+No lo hizo porque el número mayor prometiese sesera, ni porque el Tribunal hubiese ordenado prolongar la condena. Lo hizo porque ya no quería comparecer con otra colección de frases graciosas y llamarla avance. Quería que el siguiente examen tuviese una pregunta más severa que «¿ha dicho algo memorable?»: **¿ha respondido mejor, con el mismo protocolo y frente a las mismas preguntas?**
+
+El alguacil le hizo escribirlo dos veces: treinta mil añadidos, no cien mil; ochenta mil en total, no una promesa de victoria.
+
+—¿Y si a los ochenta mil vuelve a hacer reír? —preguntó.
+
+—Anotaré la risa en el margen.
+
+—¿Y si no acierta?
+
+—Anotaré el error en el cuerpo del acta.
+
+—¿Y si mejora?
+
+—Lo demostraré pregunta por pregunta.
+
+El loro, que no había oído ni comprendido el juramento, dijo:
+
+> El patrón.
+
+El escribano no sonrió. Tampoco lo reprendió. Buscó el ID, apuntó la repetición y dejó la pluma sobre la mesa.
+
+Por primera vez, la próxima comparecencia no se había convocado para descubrir qué frase podría convertirse en capítulo, sino para averiguar si el animal había aprendido algo que mereciese permanecer cuando se apagara la risa.
+
+> *«El esfuerzo merece registro; la eficacia, prueba; y la gracia, si acaso, un asiento al fondo.»*
+
+### Máculas del capítulo vigésimo quinto
+
+- CHAPTER_XXV_EDITORIAL: capítulo narrativo escrito por el secretario; no es salida de RONINIA ni de MINIRONIN.
+- MINIRONIN_HOLDOUTS: se citan evaluaciones históricas de 500k, 650k, 700k, 720k y 810k; se conservan sus limitaciones y enlaces.
+- RAW_GENERATIONS_NOT_SCORES: los diarios de 500k, 700k y 720k no tenían puntuación semántica automática; la revisión 810k fue editorial, no un evaluador ciego.
+- PROMOTION_NOT_QUALITY: las promociones MAIN citadas fueron decisiones administrativas y no acreditan mejora semántica.
+- CURRENT_TRAINING_PLAN: 50.000 pasos ya en curso + 30.000 añadidos = próximo holdout oficial a 80.000 pasos acumulados.
+- NO_NEW_HOLDOUT: este capítulo no ejecuta evaluación ni añade puntuaciones nuevas.
+- NO_CAUSAL_CLAIM: el entrenamiento adicional no se presenta como garantía de mejora; la comparación oficial habrá de decidirlo.
 
 ---
 
