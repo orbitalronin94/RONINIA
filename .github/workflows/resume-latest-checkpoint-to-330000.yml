@@ -90,6 +90,7 @@ jobs:
           repository: orbitalronin94/RONINIA
           run-id: ${{ env.TOKEN_CACHE_RUN_ID }}
           path: token-cache
+          merge-multiple: true
 
       - name: Verify token cache and build matching 256-token config
         run: |
