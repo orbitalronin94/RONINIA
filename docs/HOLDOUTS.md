@@ -5286,7 +5286,9 @@ El trabajo pendiente no consiste en inventar otra métrica para celebrar estas c
 **Checkpoint:** RONIN-10M, 370.000 pasos acumulados; 9.757.440 parámetros.  
 **Entrenamiento:** [run 43695763587](https://github.com/orbitalronin94/RONINIA/actions/runs/43695763587), continuación desde el checkpoint verificado de 330k hasta 370k.  
 **Artefacto de cadena:** [14162294923 — ronin-10m-chain-370000](https://github.com/orbitalronin94/RONINIA/actions/runs/43695763587/artifacts/14162294923); digest ZIP SHA-256 `7774819e307a86adfff60cf7f43203d539578ec63869f01363efd23421622d48`.  
-**Holdout oficial:** [run 43852214030](https://github.com/orbitalronin94/RONINIA/actions/runs/43852214030); [artefacto 14219045480](https://github.com/orbitalronin94/RONINIA/actions/runs/43852214030/artifacts/14219045480).  
+**Holdout oficial:** [run 43852214030](https://github.com/orbitalronin94/RONINIA/actions/runs/43852214030); [artefacto 14219045480](https://github.com/orbitalronin94/RONINIA/actions/runs/43852214030/artifacts/14219045480); digest ZIP SHA-256 `c927b8d8a45603fbf461c88247bc0a541f9646cc269a1d1c201bcfe7c330b157`.  
+**JSON de 370k:** SHA-256 `4e5fca8cf214c975bed8a731b175d094ddd4d5f78bb4758c512a110c62cba80a`.  
+**Holdout de referencia 330k:** [run 43490561981](https://github.com/orbitalronin94/RONINIA/actions/runs/43490561981); [artefacto 14068589478](https://github.com/orbitalronin94/RONINIA/actions/runs/43490561981/artifacts/14068589478); SHA-256 del checkpoint `2fba7ec4b909150be08a1777e6a13c9046b1a2f5a711dd61469e61e54de578c4`.
 **Checkpoint:** `checkpoint-370000.pt`; SHA-256 `c02213baf43e208eaac335084a378c9c35bdba6f9f18b2c402758c38c6ac0307`.  
 **Tokenizador:** BPE byte-level de 8.192; SHA-256 `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`.  
 **Holdout:** 100 preguntas; SHA-256 `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`.  
