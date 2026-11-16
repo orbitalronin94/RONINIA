@@ -63,6 +63,7 @@
 - [Capítulo XXIV — De la carta certificada del Tribunal de la Reincidencia y de las métricas que el escribano fingió haber usado](#capítulo-xxiv--de-la-carta-certificada-del-tribunal-de-la-reincidencia-y-de-las-métricas-que-el-escribano-fingió-haber-usado)
 - [Capítulo XXV — De los antiguos escribanos que coronaban al loro por hacer reír](#capítulo-xxv--de-los-antiguos-escribanos-que-coronaban-al-loro-por-hacer-reír)
 - [Capítulo XXVI — De las métricas que el escribano quiso usar y de cómo acabó glosando hasta el cronómetro](#capítulo-xxvi--de-las-métricas-que-el-escribano-quiso-usar-y-de-cómo-acabó-glosando-hasta-el-cronómetro)
+- [Capítulo XXVII — Del checkpoint de 370k y de la mejora que non compareció](#capítulo-xxvii--del-checkpoint-de-370k-y-de-la-mejora-que-non-compareció)
 - [Antología de voces hermanas](#antología-del-fuero-experimental--voces-de-los-modelos-hermanos)
 - [Historial de ejecuciones](#historial-de-ejecuciones)
 - [Reglas contra el embuste](#fuero-de-lectura-y-reglas-contra-el-embuste)
@@ -106,6 +107,8 @@
 | 137.500 | [43166483341](https://github.com/orbitalronin94/RONINIA/actions/runs/43166483341) | [13920058028](https://github.com/orbitalronin94/RONINIA/actions/runs/43166483341/artifacts/13920058028) | `checkpoint-137500-holdout-100.json` | `d2c30940ade76e82bc5e7569c96af6ac4337173d141f627410eb40847e245727` |
 | 205.000 | [43309180308](https://github.com/orbitalronin94/RONINIA/actions/runs/43309180308) | [13984838040](https://github.com/orbitalronin94/RONINIA/actions/runs/43309180308/artifacts/13984838040) | `checkpoint-205000-holdout-100.json` | `425b9a0939a1b387420061450a99728718eb2640dea3c05fd1692d9ea8a24fa9` |
 | 250.000 | [43378296219](https://github.com/orbitalronin94/RONINIA/actions/runs/43378296219) | [14015746116](https://github.com/orbitalronin94/RONINIA/actions/runs/43378296219/artifacts/14015746116) | `checkpoint-250000-holdout-100.json` | `95d89f3030d3611c2dc5df26b83fc44b6c4ac3b924bc3a0862149952de4d3e38` |
+| 330.000 | [43490561981](https://github.com/orbitalronin94/RONINIA/actions/runs/43490561981) | [14068589478](https://github.com/orbitalronin94/RONINIA/actions/runs/43490561981/artifacts/14068589478) | `checkpoint-330000-holdout-100.json` | `2fba7ec4b909150be08a1777e6a13c9046b1a2f5a711dd61469e61e54de578c4` |
+| 370.000 | [43852214030](https://github.com/orbitalronin94/RONINIA/actions/runs/43852214030) | [14219045480](https://github.com/orbitalronin94/RONINIA/actions/runs/43852214030/artifacts/14219045480) | `checkpoint-370000-holdout-100.json` | `c02213baf43e208eaac335084a378c9c35bdba6f9f18b2c402758c38c6ac0307` |
 | 90.000 | [43091480701](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701) | [13889525822](https://github.com/orbitalronin94/RONINIA/actions/runs/43091480701/artifacts/13889525822) | `checkpoint-90000-holdout-100.json` | `b1c2e70615f844330a9572154952e859a21574f8a95637186b827c45730c660b` |
 
 ### Linaje íntegro del checkpoint de 40.000 pasos
@@ -5273,6 +5276,88 @@ El trabajo pendiente no consiste en inventar otra métrica para celebrar estas c
 
 ---
 
+
+---
+
+# Capítulo XXVII — Del checkpoint de 370k y de la mejora que non compareció
+
+> *«El pájaro había dado veinte mil pasos más; la respuesta, no por ello, había dado un paso adelante.»*
+
+**Checkpoint:** RONIN-10M, 370.000 pasos acumulados; 9.757.440 parámetros.  
+**Entrenamiento:** [run 43695763587](https://github.com/orbitalronin94/RONINIA/actions/runs/43695763587), continuación desde el checkpoint verificado de 330k hasta 370k.  
+**Artefacto de cadena:** [14162294923 — ronin-10m-chain-370000](https://github.com/orbitalronin94/RONINIA/actions/runs/43695763587/artifacts/14162294923); digest ZIP SHA-256 `7774819e307a86adfff60cf7f43203d539578ec63869f01363efd23421622d48`.  
+**Holdout oficial:** [run 43852214030](https://github.com/orbitalronin94/RONINIA/actions/runs/43852214030); [artefacto 14219045480](https://github.com/orbitalronin94/RONINIA/actions/runs/43852214030/artifacts/14219045480).  
+**Checkpoint:** `checkpoint-370000.pt`; SHA-256 `c02213baf43e208eaac335084a378c9c35bdba6f9f18b2c402758c38c6ac0307`.  
+**Tokenizador:** BPE byte-level de 8.192; SHA-256 `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`.  
+**Holdout:** 100 preguntas; SHA-256 `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`.  
+**Generación:** greedy_argmax; 32 tokens máximos; 128 bytes máximos; dos hilos; sin KV cache; sin RAG. La instrucción, configuración y conjunto de preguntas son idénticos a 330k.
+
+### I. La comparecencia de los dos checkpoints
+
+El secretario mandó traer los dos libros: el de 330.000 pasos y el de 370.000. No permitió cambiar las preguntas, ni el tokenizador, ni la orden de generación. El alguacil comprobó los hashes antes de abrir la primera página. Esta vez no se comparaban recuerdos ni capturas sueltas, sino los dos JSON oficiales.
+
+| Indicador de inventario | 330k | 370k |
+|---|---:|---:|
+| Registros | 100 | 100 |
+| Respuestas no vacías | 99 | 96 |
+| Respuestas vacías | 1 | 4 |
+| Cadenas no vacías distintas | 98 | 93 |
+| Salidas que alcanzan el máximo de 32 tokens | 21 | 30 |
+| Longitud máxima observada | 127 bytes | 127 bytes |
+| Latencia media | 0,32348 s | 0,34429 s |
+| Latencia mediana | 0,34782 s | 0,38618 s |
+
+Noventa y nueve respuestas cambiaron; solo `troll-025` conservó exactamente la misma cadena. El cambio de pesos alteró casi todo el repertorio, mas la novedad no equivale a acierto. En 370k aparecen cuatro casillas vacías, frente a una en 330k; hay menos cadenas no vacías distintas y treinta generaciones alcanzan el techo de 32 tokens, frente a veintiuna. La latencia media también sube alrededor de un 6,4 % bajo este mismo protocolo.
+
+El secretario señaló una de las salidas de lógica:
+
+- En 330k: `Agriculture of the Great Bay. Bay. Bay. Bay...`
+- En 370k: `Reduces: Reduces: Reduces: Reduces...`
+
+En otra pregunta de lógica, 370k dejó la respuesta vacía. En aritmética, las respuestas continuaron siendo fragmentos no pertinentes: ante `17 × 19 − 17 × 9`, el registro de 370k respondió `la evidencia para supos dego.` No se ha convertido esta inspección en una puntuación semántica automática; los ejemplos son citas literales del JSON y la valoración de pertinencia es revisión humana.
+
+—¿Y la mejora? —preguntó el alguacil.
+
+—Ha comparecido el checkpoint —dijo el secretario—. La mejora, non.
+
+### II. Lo que la prueba permite decir
+
+La comparación es especialmente limpia en identidad de protocolo:
+
+- Los 100 identificadores y las preguntas coinciden.
+- El SHA-256 del benchmark es idéntico.
+- El SHA-256 del tokenizador es idéntico.
+- La instrucción de generación, `max_new_tokens=32`, `max_new_bytes=128`, `greedy_argmax`, dos hilos, `kv_cache=false` y `rag.enabled=false` coinciden.
+- Ambos JSON contienen 100 registros con IDs únicos.
+
+La diferencia observada pertenece, por tanto, a las salidas de los checkpoints evaluados, no a un cambio declarado del benchmark o del procedimiento de inferencia. El checkpoint de 370k tiene SHA-256 propio y queda identificado en el manifiesto del artefacto.
+
+### III. Lo que la prueba non permite decir
+
+- **No hay puntuación semántica:** no se ejecutó un evaluador de acierto validado. Las cifras anteriores describen vaciedad, diversidad literal, longitud y latencia.
+- **No hay prueba de mejora:** los indicadores observados no respaldan una mejora frente a 330k; varios empeoran. Tampoco permiten estimar por sí solos una capacidad general.
+- **No hay conclusión sobre EOS:** el límite de 32 tokens fue alcanzado por 30 salidas en 370k y 21 en 330k. El JSON no registra de forma suficiente la causa de terminación para convertir ese dato en una medición de EOS aprendido.
+- **La longitud no es calidad:** ninguna salida supera 127 bytes, pero ambas configuraciones tienen un máximo de 128 bytes y un techo adicional de 32 tokens. No alcanzar el límite de bytes no demuestra una terminación correcta.
+- **La latencia no es inteligencia:** el aumento medio de 0,32348 s a 0,34429 s es una observación de este entorno de CPU y de este protocolo; no explica su causa.
+- **La rotación de cadenas no es aprendizaje:** 99 respuestas distintas entre checkpoints solo indican que los pesos producen otra distribución de texto.
+
+### IV. La decisión del escribano
+
+El checkpoint 370k queda registrado como **último checkpoint entrenado y evaluado**, no como nuevo modelo ganador ni como promoción de calidad. La selección declarada en `models/active.json` no se modifica por esta comparecencia. La siguiente decisión experimental deberá partir de este resultado negativo sin ocultarlo: antes de prolongar el entrenamiento conviene investigar el aumento de salidas vacías, el mayor número de generaciones que agotan los 32 tokens y la persistencia de respuestas no pertinentes.
+
+El secretario cerró ambos libros. El de 330k no quedó absuelto; el de 370k tampoco. Pero por primera vez el escribano no llamó progreso al mero hecho de que el animal hubiera cambiado de frase.
+
+### Máculas del capítulo vigésimo séptimo
+
+- **OFFICIAL_HOLDOUT_370K:** run [43852214030](https://github.com/orbitalronin94/RONINIA/actions/runs/43852214030), artefacto [14219045480](https://github.com/orbitalronin94/RONINIA/actions/runs/43852214030/artifacts/14219045480).
+- **TRAINING_370K:** run [43695763587](https://github.com/orbitalronin94/RONINIA/actions/runs/43695763587); artefacto de cadena [14162294923](https://github.com/orbitalronin94/RONINIA/actions/runs/43695763587/artifacts/14162294923).
+- **CHECKPOINT_IDENTITY:** SHA-256 `c02213baf43e208eaac335084a378c9c35bdba6f9f18b2c402758c38c6ac0307`; 9.757.440 parámetros; 370.000 pasos.
+- **SAME_PROTOCOL:** mismos 100 IDs, benchmark, tokenizador y configuración de generación que el holdout 330k.
+- **SURFACE_METRICS_ONLY:** 96 respuestas no vacías, cuatro vacías, 93 cadenas no vacías distintas y 30 salidas que alcanzan 32 tokens.
+- **NO_SEMANTIC_SCORE:** no se calculó tasa de acierto ni evaluación semántica automatizada.
+- **NO_PROMOTION:** 370k queda como último checkpoint evaluado, no como promoción de calidad.
+- **EDITORIAL_GLOSS:** el diálogo y las metáforas son composición del escribano; las cadenas citadas proceden literalmente del JSON.
+
 ## Historial de ejecuciones — registro completo de GitHub Actions
 
 Este registro incluye **todas las ejecuciones completadas en `main` del repositorio**, no solo los holdouts: entrenamiento, tokenización, evaluación, preflight, fallos y reintentos. Los identificadores y artefactos se conservan aunque una ejecución falle. La fecha figura como «—» cuando no se ha recuperado de la API y no debe inferirse.
@@ -5286,6 +5371,8 @@ Los runs fallidos `43022253427` y `43022290341` se conservan como fallos, con su
 | Fecha | Ejecución | Workflow | Evento | Run ID | Resultado | Artefactos | Commit |
 |---|---|---|---|---:|---|---|---|
 <!-- HOLDOUT-INDEX-START -->
+| 2026-11-16 | RONIN-10M — official 100-question holdout at 370000 | `official-holdout-370000` | push | 43852214030 | success | [14219045480](https://github.com/orbitalronin94/RONINIA/actions/runs/43852214030/artifacts/14219045480) | `69f061735e0b` |
+| 2026-11-15 | RONIN-10M — continue from verified 330k checkpoint to 370k | `resume-checkpoint-330000-to-370000` | push | 43695763587 | success | [14162294923](https://github.com/orbitalronin94/RONINIA/actions/runs/43695763587/artifacts/14162294923) | `78f9f8fcf011` |
 | 2026-11-13 | RONIN-10M — official 100-prompt holdout at 330k | `official-holdout-330000` | push | 43490561981 | success | [14068589478](https://github.com/orbitalronin94/RONINIA/actions/runs/43490561981/artifacts/14068589478) | `11b1d25b7755` |
 
 | 2026-11-12 | RONIN-10M — official 100-prompt holdout at 205k | `official-holdout-205000` | workflow_dispatch | 43309180308 | success | [13984838040](https://github.com/orbitalronin94/RONINIA/actions/runs/43309180308/artifacts/13984838040) | `62da7623310e` |
