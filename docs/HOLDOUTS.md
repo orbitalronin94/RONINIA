@@ -5107,7 +5107,7 @@ El escribano cerró los libros. Ya no le parecían peligrosos por contener secre
 **Holdout oficial:** [run 43490561981](https://github.com/orbitalronin94/RONINIA/actions/runs/43490561981); [artefacto 14068589478](https://github.com/orbitalronin94/RONINIA/actions/runs/43490561981/artifacts/14068589478).  
 **Checkpoint:** `checkpoint-330000.pt`. **Tokenizador:** vocabulario 8.192; SHA-256 `605834d0d1deea545518be54ae0936060845107b906172f6628d0ff9520e57a4`.  
 **Holdout:** 100 preguntas oficiales; SHA-256 `3cd8c1eb3142ebf9c6cc17d2e19353be3472d61ac7b7cfb6de0cbb233cf4a535`.  
-**Inventario:** 100 generaciones; 99 respuestas no vacías y una vacía; 99 cadenas no vacías distintas; ninguna alcanzó el límite de 128 bytes; latencia media aproximada: 0,323 segundos.  
+**Inventario:** 100 generaciones; 99 respuestas no vacías y una vacía; 98 cadenas no vacías distintas; ninguna alcanzó el límite de 128 bytes; latencia media aproximada: 0,323 segundos.  
 **Puntuación semántica:** no calculada.
 
 ---
@@ -5120,7 +5120,7 @@ A 330.000 pasos, el escribano anunció que había llegado la hora de abandonar l
 
 El alguacil, que había oído aquella promesa en otras ocasiones, permaneció de pie.
 
-El secretario abrió el acta: cien preguntas, cien generaciones; noventa y nueve respuestas con contenido y una casilla vacía; noventa y nueve cadenas no vacías distintas; ninguna salida llegó al techo de ciento veintiocho bytes; trescientas veintitrés milésimas de segundo por respuesta, aproximadamente.
+El secretario abrió el acta: cien preguntas, cien generaciones; noventa y nueve respuestas con contenido y una casilla vacía; noventa y ocho cadenas no vacías distintas; ninguna salida llegó al techo de ciento veintiocho bytes; trescientas veintitrés milésimas de segundo por respuesta, aproximadamente.
 
 —La vaciedad se ha reducido a una. La repetición literal no domina. El animal no se estrella contra el techo de generación. Y comparece con presteza —dijo el escribano.
 
@@ -5184,7 +5184,7 @@ El alguacil tomó la hoja y trazó dos columnas:
 |---|---|
 | 100 generaciones ejecutadas | Que las 100 sean correctas |
 | 99 respuestas no vacías; una vacía | Que la abstención sea adecuada o deliberada |
-| 99 cadenas no vacías distintas | Que exista diversidad conceptual o razonamiento |
+| 98 cadenas no vacías distintas | Que exista diversidad conceptual o razonamiento |
 | Ninguna salida alcanzó 128 bytes | Que el modelo controle la terminación en cualquier contexto |
 | Latencia media aproximada de 0,323 s | Que la calidad haya mejorado |
 | Checkpoint y artefacto identificados | Que el modelo haya aprobado semánticamente |
@@ -5255,7 +5255,7 @@ El secretario la tachó. La volvió a escribir debajo. La rodeó con tinta roja.
 
 ### VI. Sentencia del alguacil: el número no absuelve al copista
 
-El holdout de 330k deja señales técnicas concretas: cien generaciones ejecutadas, una respuesta vacía, noventa y nueve cadenas no vacías distintas, ninguna salida truncada por el límite de 128 bytes y una latencia media aproximada de 0,323 segundos. La ejecución y el artefacto están identificados. No se ha calculado una puntuación semántica.
+El holdout de 330k deja señales técnicas concretas: cien generaciones ejecutadas, una respuesta vacía, noventa y ocho cadenas no vacías distintas, ninguna salida truncada por el límite de 128 bytes y una latencia media aproximada de 0,323 segundos. La ejecución y el artefacto están identificados. No se ha calculado una puntuación semántica.
 
 No cabe declarar victoria. Tampoco sería honrado fingir que nada ha cambiado en el perfil superficial de las salidas. Hay menos silencio que en algunos registros anteriores y no aparece el antiguo choque sistemático contra el límite de generación. Pero la diversidad de cadenas no certifica diversidad de ideas; la rapidez no certifica juicio; y una respuesta que ocupa su casilla todavía puede estar equivocada.
 
@@ -5267,7 +5267,7 @@ El trabajo pendiente no consiste en inventar otra métrica para celebrar estas c
 
 - **OFFICIAL_HOLDOUT_330K:** evaluación oficial de cien preguntas; run [43490561981](https://github.com/orbitalronin94/RONINIA/actions/runs/43490561981), artefacto [14068589478](https://github.com/orbitalronin94/RONINIA/actions/runs/43490561981/artifacts/14068589478).
 - **CHECKPOINT_LINEAGE:** el entrenamiento [43433905009](https://github.com/orbitalronin94/RONINIA/actions/runs/43433905009) recuperó el último estado disponible de 291k y completó 330k. No se confunde el padre recuperado con el destino final.
-- **COUNTS_ARE_SURFACE_METRICS:** 99 respuestas no vacías, una vacía y 99 cadenas no vacías distintas describen el inventario literal; no son una puntuación semántica.
+- **COUNTS_ARE_SURFACE_METRICS:** 99 respuestas no vacías, una vacía y 98 cadenas no vacías distintas describen el inventario literal; no son una puntuación semántica.
 - **NO_OUTPUT_AT_CAP:** ninguna respuesta alcanzó el límite configurado de 128 bytes en esta muestra. No se infiere por ello control general de EOS ni terminación semántica.
 - **LATENCY_IS_NOT_QUALITY:** 0,323 segundos describe velocidad de inferencia bajo este protocolo; no acredita comprensión.
 - **NO_SEMANTIC_SCORE:** no se calculó una tasa de acierto. La revisión humana de pertinencia y exactitud queda pendiente.
