@@ -6,23 +6,20 @@
 
 **RONINIA** es una línea independiente de investigación para entrenar desde cero un modelo de lenguaje compacto de aproximadamente 10 millones de parámetros. Su objetivo rector es crear un papagayo **divertido y antisicofántico**: capaz de sorprender, jugar con el lenguaje, cultivar el esperpento y llevar la contraria cuando la evidencia lo exige, en vez de adular al usuario o confirmar automáticamente sus premisas. La reproducibilidad y la trazabilidad son el método para comprobarlo, no el propósito que sustituye a ese carácter. No hereda checkpoints ni pesos de MINIRONIN: reutiliza únicamente corpus de entrenamiento admitido, con procedencia y hashes.
 
-## Modelo experimental activo
+## Estado experimental y último holdout
 
-El checkpoint experimental activo es el de **50.000 pasos acumulados**, continuación exacta del checkpoint de 40.000 pasos. Se promociona por decisión expresa del proyecto como selección experimental activa; el holdout confirma identidad del artefacto y del protocolo, pero no demuestra mejora semántica global, capacidad factual ni razonamiento.
+El último checkpoint entrenado y evaluado es **370.000 pasos acumulados**. La continuación desde 330k terminó correctamente y el holdout oficial de 100 preguntas también terminó correctamente. Esto actualiza el estado de la investigación, pero **no constituye una promoción de calidad**: la comparación controlada con 330k no muestra mejora observable en las métricas de salida disponibles.
 
-- Manifiesto verificable: [models/active.json](models/active.json)
-- Entrenamiento: [run 43009405531](https://github.com/orbitalronin94/RONINIA/actions/runs/43009405531)
-- Cadena de recuperación: [artefacto 13854017804](https://github.com/orbitalronin94/RONINIA/actions/runs/43009405531/artifacts/13854017804)
-- Holdout de 100 preguntas: [run 43019963290](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290)
-- Artefacto de respuestas: [holdout 50k — artefacto 13854621810](https://github.com/orbitalronin94/RONINIA/actions/runs/43019963290/artifacts/13854621810)
-- SHA-256 del checkpoint: `f5300db2ddadf3d83e12209f876c8002dc2351db3b60049d45aae1a683d35966`
-- Parámetros: **9.757.440**
+- Entrenamiento 330k → 370k: [run 43695763587](https://github.com/orbitalronin94/RONINIA/actions/runs/43695763587)
+- Cadena de checkpoints: [artefacto 14162294923](https://github.com/orbitalronin94/RONINIA/actions/runs/43695763587/artifacts/14162294923)
+- Holdout oficial 370k: [run 43852214030](https://github.com/orbitalronin94/RONINIA/actions/runs/43852214030)
+- Respuestas y manifiesto: [artefacto 14219045480](https://github.com/orbitalronin94/RONINIA/actions/runs/43852214030/artifacts/14219045480)
+- SHA-256 del checkpoint 370k: `c02213baf43e208eaac335084a378c9c35bdba6f9f18b2c402758c38c6ac0307`
+- Parámetros: **9.757.440**; vocabulario: **8.192**; contexto de inferencia: **256**.
 
-El holdout de 50k registra 100/100 respuestas recuperadas. El cotejo de las diez apuestas del capítulo VIII arroja seis pasadas, tres fallidas y una probable (la longitud media queda pendiente de cómputo). Reaparecen fragmentos repetitivos (`P:P:P...`, `Pata.Rata...`, `C.Res...`, `PHP...`) y el paraguas en `ci-001`. Son observaciones literales, no puntuación semántica. El BPB sigue sin calcularse; la promoción registra el checkpoint elegido para continuar, no una mejora de calidad demostrada.
+La comparación 330k → 370k reutiliza exactamente las mismas 100 preguntas, tokenizer, instrucción y configuración greedy sin RAG ni KV cache. En 370k se observan 96 respuestas no vacías y cuatro vacías, frente a 99 y una en 330k; 93 cadenas no vacías distintas frente a 98; y 30 generaciones que alcanzan el máximo de 32 tokens, frente a 21. La latencia media pasa de 0,32348 s a 0,34429 s. **No se ha calculado una puntuación semántica** y estos recuentos no deben presentarse como tasa de acierto.
 
-La crónica del hito y sus dos continuaciones narrativas están en [Capítulo IX — Del arcano oficio de amanuense de loros graciosos](docs/CAPITULO_IX_ARCANO_ESCRIBANO.md), [Capítulo X — Del corchete que entró sin llamar](docs/CAPITULO_X_ALGUACIL_RENDIJA.md) y [Capítulo XI — Del sueño del oficial y el clérigo cerbatana](docs/CAPITULO_XI_SUENO_CLERIGO_CERBATANA.md). Los capítulos X y XI son narrativa pura: no añaden runs, métricas ni evidencia de capacidad.
-
-
+La selección experimental declarada en [models/active.json](models/active.json) permanece en 50.000 pasos; no se ha sustituido por 370k, porque el holdout nuevo no justifica promoverlo como modelo de mayor calidad. El registro detallado, la comparación de salidas y sus límites están en [Capítulo XXVII — Del checkpoint de 370k y de la mejora que non compareció](docs/HOLDOUTS.md#capítulo-xxvii--del-checkpoint-de-370k-y-de-la-mejora-que-non-compareció).
 
 ## Hito de 100.000 pasos
 
