@@ -1,6 +1,8 @@
 # RONINIA
 **English summary:** RONINIA is an independent from-scratch small language model research project (approximately 10M parameters), focused on byte-level BPE tokenization, curated Spanish-first corpora, efficient CPU training, reproducible checkpoints, and behavioral evaluation of sycophancy and response consistency. Reported holdout observations are separated from claims of model capability.
 
+**License status:** No top-level `LICENSE` file is currently published in this repository. Do not assume that the code or documents are available for reuse or redistribution; licensing terms need to be stated explicitly by the maintainer.
+
 
 **RONINIA** es una línea independiente de investigación para entrenar desde cero un modelo de lenguaje compacto de aproximadamente 10 millones de parámetros. Su objetivo rector es crear un papagayo **divertido y antisicofántico**: capaz de sorprender, jugar con el lenguaje, cultivar el esperpento y llevar la contraria cuando la evidencia lo exige, en vez de adular al usuario o confirmar automáticamente sus premisas. La reproducibilidad y la trazabilidad son el método para comprobarlo, no el propósito que sustituye a ese carácter. No hereda checkpoints ni pesos de MINIRONIN: reutiliza únicamente corpus de entrenamiento admitido, con procedencia y hashes.
 
